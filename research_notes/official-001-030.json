@@ -1,0 +1,4041 @@
+{
+  "batch": "001-030",
+  "accessedAt": "2026-07-15",
+  "researchLane": "OFFICIAL_ONLY",
+  "scopeNoteZhTw": "僅保存 Pokémon GO 官方網站／官方新聞的可追溯證據。本檔不做 PvP/PvE 排名或保留結論；沒有逐物種官方證據者保留 NEEDS_REVIEW，不以模型記憶補值。",
+  "statusDefinitions": {
+    "RELEASED": "官方原始頁面明確列名或明示首次登場已發生。",
+    "RELEASED_BY_EVOLUTION_INFERENCE": "暗影前階已確認，進化後型態依進化鏈推導；仍需人工覆核。",
+    "AVAILABLE_FROM_PURIFICATION": "由已確認暗影型態與官方淨化機制推導。",
+    "ANNOUNCED_NOT_YET_RELEASED": "官方已公告，但以 accessedAt 判斷首次登場日期尚未到。",
+    "NEEDS_REVIEW": "證據缺失、不足或只可間接推導；不可解讀為未推出。"
+  },
+  "sources": [
+    {
+      "id": "OFF-KANTO-2024",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Search biomes for Pokémon first discovered in Kanto during the Rediscover Kanto event!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/rediscover-kanto-2024?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2024-04-22",
+      "sourceSummaryZhTw": "關都寶可夢活動；確認三隻初始夥伴最終進化的社群日招式與 Mega 能量。"
+    },
+    {
+      "id": "OFF-KANTO-2021",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Keep the Kanto celebration going after Pokémon GO Tour: Kanto with a special event!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/kanto-celebration-event-2021?game_client=iOS",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2021-02-12",
+      "sourceSummaryZhTw": "列出妙蛙種子、小火龍、傑尼龜、獨角蟲、皮卡丘、綠毛蟲、波波、烈雀等，並確認三隻初始夥伴最終進化與皮卡丘的活動招式。"
+    },
+    {
+      "id": "OFF-BUG-OUT-2024",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Bug Out",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/bug-out-2024?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2024-04-03",
+      "sourceSummaryZhTw": "列出綠毛蟲、獨角蟲、大針蜂與 Mega Beedrill 能量。"
+    },
+    {
+      "id": "OFF-TCG-2022",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2022-06-10",
+      "sourceSummaryZhTw": "列出 #001～#009 多個進化階段、阿羅拉小拉達及初始夥伴 Mega 團體戰。"
+    },
+    {
+      "id": "OFF-EVOLVING-2022",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Get cosmic with our new Evolving Stars event!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/evolving-stars-2022",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2022-09-28",
+      "sourceSummaryZhTw": "列出鐵殼蛹、比比鳥等進化階段。"
+    },
+    {
+      "id": "OFF-CD-BULBASAUR",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Community Day Classic: Back to Bulbasaur",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/community-day-classic-bulbasaur-jan22?game_client=iOS",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2022-01-04",
+      "sourceSummaryZhTw": "明確說明妙蛙草由妙蛙種子進化，並可進化成學會 Frenzy Plant 的妙蛙花。"
+    },
+    {
+      "id": "OFF-CD-CHARMANDER",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "September 2023 Community Day Classic: Charmander",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2023-08-28",
+      "sourceSummaryZhTw": "明確說明火恐龍由小火龍進化，並可進化成學會 Dragon Breath 與 Blast Burn 的噴火龍。"
+    },
+    {
+      "id": "OFF-CD-DEC-2023",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Catch up with Community Day! Pokémon from 2022 and 2023 Community Days are returning for a year-end catch celebration!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/community-day-december-2023?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2023-11-29",
+      "sourceSummaryZhTw": "確認卡咪龜進化水箭龜的 Hydro Cannon，以及穿山鼠兩種地區型態的活動招式。"
+    },
+    {
+      "id": "OFF-CD-WEEDLE",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "The featured Pokémon for June Community Day is Weedle!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/communityday-jun2020/?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2020-05-20",
+      "sourceSummaryZhTw": "明確說明鐵殼蛹由獨角蟲進化，並可進化成學會 Drill Run 的大針蜂。"
+    },
+    {
+      "id": "OFF-GBL-S4",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "GO Battle League Season 4 begins Monday, September 14, 2020, at 1:00 p.m. PDT (GMT −7)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/gobattleleague-season4/",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2020-09-09",
+      "sourceSummaryZhTw": "明確說明比比鳥由波波進化，並可進化成學會 Gust 的大比鳥。"
+    },
+    {
+      "id": "OFF-CD-PIKACHU",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Introducing Pokémon GO Community Day!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/communityday?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2018-01-12",
+      "sourceSummaryZhTw": "首屆社群日的皮卡丘可學會 Surf。"
+    },
+    {
+      "id": "OFF-CD-SANDSHREW",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2022-02-28",
+      "sourceSummaryZhTw": "明確區分關都與阿羅拉穿山鼠的進化路徑及活動招式。"
+    },
+    {
+      "id": "OFF-MEGA-LAUNCH",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/megaevolution-launch",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2020-08-27",
+      "sourceSummaryZhTw": "確認 Mega Venusaur、Mega Charizard、Mega Blastoise、Mega Beedrill 已推出，並說明 Shadow Pokémon 無法 Mega Evolve。"
+    },
+    {
+      "id": "OFF-JUNE-2022",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "June Content Update: Pokémon GO Fest 2022, Season of GO, Mewtwo returns to raids, and more!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/june-2022-content-update",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2022-05-26",
+      "sourceSummaryZhTw": "分別列出 Mega Charizard X 與 Mega Charizard Y。"
+    },
+    {
+      "id": "OFF-AUG-2021",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Coming in August: Ultra Unlock and more!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/aug-2021-events",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2021-07-26",
+      "sourceSummaryZhTw": "列出 Mega Beedrill 與 Mega Pidgeot 團體戰。"
+    },
+    {
+      "id": "OFF-HOME-2020",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Shiny Slowpoke, Shiny Meltan from the Mystery Box, and more during the Pokémon HOME event!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/pokemonhome-2020-details?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2020-11-16",
+      "sourceSummaryZhTw": "確認 Mega Pidgeot 與其 Mega Energy。"
+    },
+    {
+      "id": "OFF-MEGA-RAICHU-2026",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Sparks fly for Raichu Super Mega Raid Day!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2026-07-07",
+      "sourceSummaryZhTw": "公告 Mega Raichu X/Y 將於 2026-07-18 首次登場；查閱日 2026-07-15 尚未推出。"
+    },
+    {
+      "id": "OFF-GO-BIG",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "GO Big with Dynamax Pokémon in new Max Battles!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/go-big-dynamax?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2024-08-27",
+      "sourceSummaryZhTw": "確認 Dynamax Bulbasaur、Charmander、Squirtle 首次登場，且從 Max Battle 捕捉者及其進化可 Dynamax。"
+    },
+    {
+      "id": "OFF-MAX-MONDAYS",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Introducing Max Mondays to max out every week with Dynamax!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/dynamax-max-mondays?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2024-10-28",
+      "sourceSummaryZhTw": "再次列出 Dynamax Charmander、Bulbasaur、Squirtle。"
+    },
+    {
+      "id": "OFF-GO-BIGGER",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "GO Bigger with Gigantamax Pokémon in new Max Battles!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/go-bigger-gigantamax",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2024-10-14",
+      "sourceSummaryZhTw": "確認 Gigantamax Venusaur、Charizard、Blastoise 於 2024-10-26 至 2024-10-27 首次登場。"
+    },
+    {
+      "id": "OFF-GMAX-BUTTERFREE",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Fly free and battle hard on Gigantamax Butterfree Max Battle Day!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/news/gigantamax-butterfree-max-battle-day?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2025-07-14",
+      "sourceSummaryZhTw": "確認 Gigantamax Butterfree 於 2025-08-03 首次登場。"
+    },
+    {
+      "id": "OFF-GMAX-PIKACHU",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "That’s a big Pikachu! Gigantamax Pikachu strikes during Max Battle Day!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/news/gigantamax-pikachu-max-battle-day-2026",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2026-03-17",
+      "sourceSummaryZhTw": "確認 Gigantamax Pikachu 於 2026-03-28 首次登場，且捕捉到的 Gigantamax Pikachu 無法進化。"
+    },
+    {
+      "id": "OFF-MAX-GUIDE",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "GO Big with Dynamax and Gigantamax!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/max-pokemon-battle",
+      "accessedAt": "2026-07-15",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "官方 Max Pokémon 與 Max Battle 機制說明。"
+    },
+    {
+      "id": "OFF-ALOLA-KANTO",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Alolan Forms of Pokémon Originally Discovered in the Kanto Region Are Coming to Pokémon GO!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/alolakanto-pokemon?hl=es_MX",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2018-05-21",
+      "sourceSummaryZhTw": "官方宣布關都寶可夢的阿羅拉型態將陸續加入 Pokémon GO；非逐物種確認。"
+    },
+    {
+      "id": "OFF-ALOLA-SEASON",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Welcome more Pokémon from Alola with the Season of Alola!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/welcome-the-season-of-alola",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2022-02-28",
+      "sourceSummaryZhTw": "列出阿羅拉雷丘團體戰。"
+    },
+    {
+      "id": "OFF-ALOLA-FINALE",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Celebrate the Season of Alola during the Alola to Alola finale event!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/alola-to-alola?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2022-05-19",
+      "sourceSummaryZhTw": "列出阿羅拉小拉達、阿羅拉雷丘與阿羅拉穿山鼠。"
+    },
+    {
+      "id": "OFF-GREEDY-2022",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "The Greedy Gluttons event and a Team GO Rocket takeover serve up adventure in Pokémon GO this November!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/greedy-gluttons",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2022-11-01",
+      "sourceSummaryZhTw": "列出阿羅拉小拉達與阿羅拉拉達。"
+    },
+    {
+      "id": "OFF-ROCKET-RETREAT",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Salandit, Salazzle, and more debut during the All-Hands Rocket Retreat event",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/team-go-rocket-takeover-rocket-retreat?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2022-03-31",
+      "sourceSummaryZhTw": "明確列出 Shadow Alolan Rattata 與 Shadow Alolan Sandshrew。"
+    },
+    {
+      "id": "OFF-SHADOW-CATERPIE",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Team GO Rocket and Giovanni return—give it your all and rescue Shadow Heatran during Galarian Expedition: Taken Over!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/galarian-expedition-taken-over-by-TGR?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2024-10-02",
+      "sourceSummaryZhTw": "明確公告 Shadow Caterpie 首次登場。"
+    },
+    {
+      "id": "OFF-HALLOWEEN-2019",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Prepare for a ghastly good time during Pokémon GO Halloween 2019!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/halloween2019?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2019-10-14",
+      "sourceSummaryZhTw": "明確列出 Shadow Weedle、Kakuna、Beedrill。"
+    },
+    {
+      "id": "OFF-SHADOW-PIDGEY",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Protect the world from Team GO Rocket and Giovanni—and rescue Shadow Groudon and Shadow Mewtwo during World of Wonders: Taken Over!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/world-taken-over-by-TGR/?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2024-03-21",
+      "sourceSummaryZhTw": "明確公告 Shadow Pidgey 首次登場。"
+    },
+    {
+      "id": "OFF-SHADOW-SANDSHREW",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "The Team GO Rocket Leaders have disrupted Pokémon habitats!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/post/teamgorocketleadersdisruption2019?hl=es",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2019-11-04",
+      "sourceSummaryZhTw": "明確說明 Team GO Rocket 開始使用 Shadow Sandshrew。"
+    },
+    {
+      "id": "OFF-WORLDS-2023",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "A Pokémon GO World Championships Celebration: A Basic Guide to Pokémon GO Battles",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/pokemon-go-world-championship-2023-pvp-basics?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2023-08-10",
+      "sourceSummaryZhTw": "明確敘述 Shadow Alolan Sandshrew 可進化成 Shadow Alolan Sandslash，並說明 Frustration。"
+    },
+    {
+      "id": "OFF-SHADOW-NIDORAN",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Team GO Rocket has taken over the GO Fest Weekly Challenge!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/gofestweeklychallenge-teamgorocket/?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2020-07-09",
+      "sourceSummaryZhTw": "明確列出 Shadow Nidoran♀ 與 Shadow Nidorina。"
+    },
+    {
+      "id": "OFF-NOXIOUS-2023",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Watch your step and get ready for the Noxious Swamp event, featuring Pokémon from Pokémon GO Fest 2023: New York City!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/go-fest-2023-noxious-swamp/?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2023-08-09",
+      "sourceSummaryZhTw": "列出 Shadow Nidoran♀ 團體戰。"
+    },
+    {
+      "id": "OFF-SHADOW-UPDATE",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Team GO Rocket is making Shadow Pokémon stronger!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/shadowpokemonupdate?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2020-03-02",
+      "sourceSummaryZhTw": "官方暗影傷害增減機制。"
+    },
+    {
+      "id": "OFF-ROCKET-INVASION",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Team GO Rocket invades Pokémon GO!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2019-07-25",
+      "sourceSummaryZhTw": "官方暗影與淨化基本機制。"
+    }
+  ],
+  "forms": [
+    {
+      "dexNumber": 1,
+      "pokemonFormId": "001-kanto",
+      "nameEn": "Bulbasaur",
+      "nameZhTw": "妙蛙種子",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-TCG-2022"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-TCG-2022"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIG",
+            "OFF-MAX-MONDAYS"
+          ],
+          "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 2,
+      "pokemonFormId": "002-kanto",
+      "nameEn": "Ivysaur",
+      "nameZhTw": "妙蛙草",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-TCG-2022",
+        "OFF-CD-BULBASAUR"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-TCG-2022",
+            "OFF-CD-BULBASAUR"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIG",
+            "OFF-MAX-MONDAYS"
+          ],
+          "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 3,
+      "pokemonFormId": "003-kanto",
+      "nameEn": "Venusaur",
+      "nameZhTw": "妙蛙花",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-TCG-2022",
+        "OFF-MEGA-LAUNCH"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-TCG-2022",
+            "OFF-MEGA-LAUNCH"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-MEGA-LAUNCH"
+          ],
+          "noteZhTw": "Mega Venusaur 已正式推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIG",
+            "OFF-MAX-MONDAYS"
+          ],
+          "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
+        },
+        "GIGANTAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIGGER"
+          ],
+          "noteZhTw": "Gigantamax Venusaur 已於 2024-10-26 至 2024-10-27 首次登場。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 4,
+      "pokemonFormId": "004-kanto",
+      "nameEn": "Charmander",
+      "nameZhTw": "小火龍",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-TCG-2022"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-TCG-2022"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIG",
+            "OFF-MAX-MONDAYS"
+          ],
+          "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 5,
+      "pokemonFormId": "005-kanto",
+      "nameEn": "Charmeleon",
+      "nameZhTw": "火恐龍",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-TCG-2022",
+        "OFF-CD-CHARMANDER"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-TCG-2022",
+            "OFF-CD-CHARMANDER"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIG",
+            "OFF-MAX-MONDAYS"
+          ],
+          "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 6,
+      "pokemonFormId": "006-kanto",
+      "nameEn": "Charizard",
+      "nameZhTw": "噴火龍",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-TCG-2022",
+        "OFF-MEGA-LAUNCH"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-TCG-2022",
+            "OFF-MEGA-LAUNCH"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-MEGA-LAUNCH",
+            "OFF-JUNE-2022"
+          ],
+          "noteZhTw": "Mega Charizard X 已正式推出。"
+        },
+        "MEGA_Y": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-MEGA-LAUNCH",
+            "OFF-JUNE-2022"
+          ],
+          "noteZhTw": "Mega Charizard Y 已正式推出。"
+        },
+        "DYNAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIG",
+            "OFF-MAX-MONDAYS"
+          ],
+          "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
+        },
+        "GIGANTAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIGGER"
+          ],
+          "noteZhTw": "Gigantamax Charizard 已於 2024-10-26 至 2024-10-27 首次登場。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 7,
+      "pokemonFormId": "007-kanto",
+      "nameEn": "Squirtle",
+      "nameZhTw": "傑尼龜",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-TCG-2022"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-TCG-2022"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIG",
+            "OFF-MAX-MONDAYS"
+          ],
+          "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 8,
+      "pokemonFormId": "008-kanto",
+      "nameEn": "Wartortle",
+      "nameZhTw": "卡咪龜",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-TCG-2022",
+        "OFF-CD-DEC-2023"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-TCG-2022",
+            "OFF-CD-DEC-2023"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIG",
+            "OFF-MAX-MONDAYS"
+          ],
+          "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 9,
+      "pokemonFormId": "009-kanto",
+      "nameEn": "Blastoise",
+      "nameZhTw": "水箭龜",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-TCG-2022",
+        "OFF-MEGA-LAUNCH"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-TCG-2022",
+            "OFF-MEGA-LAUNCH"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-MEGA-LAUNCH"
+          ],
+          "noteZhTw": "Mega Blastoise 已正式推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIG",
+            "OFF-MAX-MONDAYS"
+          ],
+          "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
+        },
+        "GIGANTAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GO-BIGGER"
+          ],
+          "noteZhTw": "Gigantamax Blastoise 已於 2024-10-26 至 2024-10-27 首次登場。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 10,
+      "pokemonFormId": "010-kanto",
+      "nameEn": "Caterpie",
+      "nameZhTw": "綠毛蟲",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-BUG-OUT-2024",
+        "OFF-KANTO-2021"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-BUG-OUT-2024",
+            "OFF-KANTO-2021"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-SHADOW-CATERPIE"
+          ],
+          "noteZhTw": "官方公告 Shadow Caterpie 首次登場。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-SHADOW-CATERPIE",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 11,
+      "pokemonFormId": "011-kanto",
+      "nameEn": "Metapod",
+      "nameZhTw": "鐵甲蛹",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "NEEDS_REVIEW",
+      "releaseSourceIds": [],
+      "variants": {
+        "NORMAL": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+        },
+        "SHADOW": {
+          "status": "RELEASED_BY_EVOLUTION_INFERENCE",
+          "sourceIds": [
+            "OFF-SHADOW-CATERPIE"
+          ],
+          "noteZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-SHADOW-CATERPIE",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": [
+        "普通型態推出狀態需以另一個官方原始頁面重新確認。",
+        "暗影狀態為進化推導，非同頁逐名確認。"
+      ]
+    },
+    {
+      "dexNumber": 12,
+      "pokemonFormId": "012-kanto",
+      "nameEn": "Butterfree",
+      "nameZhTw": "巴大蝶",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-GMAX-BUTTERFREE"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GMAX-BUTTERFREE"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED_BY_EVOLUTION_INFERENCE",
+          "sourceIds": [
+            "OFF-SHADOW-CATERPIE"
+          ],
+          "noteZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-SHADOW-CATERPIE",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GMAX-BUTTERFREE"
+          ],
+          "noteZhTw": "Gigantamax Butterfree 已於 2025-08-03 首次登場。"
+        }
+      },
+      "reviewNotesZhTw": [
+        "暗影狀態為進化推導，非同頁逐名確認。"
+      ]
+    },
+    {
+      "dexNumber": 13,
+      "pokemonFormId": "013-kanto",
+      "nameEn": "Weedle",
+      "nameZhTw": "獨角蟲",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-BUG-OUT-2024"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-BUG-OUT-2024"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-HALLOWEEN-2019"
+          ],
+          "noteZhTw": "官方頁面逐名列出 Shadow Weedle。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-HALLOWEEN-2019",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 14,
+      "pokemonFormId": "014-kanto",
+      "nameEn": "Kakuna",
+      "nameZhTw": "鐵殼蛹",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-CD-WEEDLE",
+        "OFF-EVOLVING-2022"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-CD-WEEDLE",
+            "OFF-EVOLVING-2022"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-HALLOWEEN-2019"
+          ],
+          "noteZhTw": "官方頁面逐名列出 Shadow Kakuna。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-HALLOWEEN-2019",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 15,
+      "pokemonFormId": "015-kanto",
+      "nameEn": "Beedrill",
+      "nameZhTw": "大針蜂",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-BUG-OUT-2024",
+        "OFF-MEGA-LAUNCH"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-BUG-OUT-2024",
+            "OFF-MEGA-LAUNCH"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-HALLOWEEN-2019"
+          ],
+          "noteZhTw": "官方頁面逐名列出 Shadow Beedrill。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-HALLOWEEN-2019",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-MEGA-LAUNCH",
+            "OFF-AUG-2021"
+          ],
+          "noteZhTw": "Mega Beedrill 已正式推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 16,
+      "pokemonFormId": "016-kanto",
+      "nameEn": "Pidgey",
+      "nameZhTw": "波波",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-KANTO-2021",
+        "OFF-SHADOW-PIDGEY"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-KANTO-2021",
+            "OFF-SHADOW-PIDGEY"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-SHADOW-PIDGEY"
+          ],
+          "noteZhTw": "官方公告 Shadow Pidgey 首次登場。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-SHADOW-PIDGEY",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 17,
+      "pokemonFormId": "017-kanto",
+      "nameEn": "Pidgeotto",
+      "nameZhTw": "比比鳥",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-GBL-S4",
+        "OFF-EVOLVING-2022"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GBL-S4",
+            "OFF-EVOLVING-2022"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED_BY_EVOLUTION_INFERENCE",
+          "sourceIds": [
+            "OFF-SHADOW-PIDGEY"
+          ],
+          "noteZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-SHADOW-PIDGEY",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": [
+        "暗影狀態為進化推導，非同頁逐名確認。"
+      ]
+    },
+    {
+      "dexNumber": 18,
+      "pokemonFormId": "018-kanto",
+      "nameEn": "Pidgeot",
+      "nameZhTw": "大比鳥",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-GBL-S4",
+        "OFF-AUG-2021"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GBL-S4",
+            "OFF-AUG-2021"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED_BY_EVOLUTION_INFERENCE",
+          "sourceIds": [
+            "OFF-SHADOW-PIDGEY"
+          ],
+          "noteZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-SHADOW-PIDGEY",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-AUG-2021",
+            "OFF-HOME-2020"
+          ],
+          "noteZhTw": "Mega Pidgeot 已正式推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": [
+        "暗影狀態為進化推導，非同頁逐名確認。"
+      ]
+    },
+    {
+      "dexNumber": 19,
+      "pokemonFormId": "019-alola",
+      "nameEn": "Rattata",
+      "nameZhTw": "小拉達",
+      "formKey": "ALOLA",
+      "formNameEn": "Alola",
+      "formNameZhTw": "阿羅拉",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-ALOLA-FINALE",
+        "OFF-GREEDY-2022"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-ALOLA-FINALE",
+            "OFF-GREEDY-2022"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-ROCKET-RETREAT"
+          ],
+          "noteZhTw": "官方頁面逐名列出 Shadow Alolan Rattata。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-ROCKET-RETREAT",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 19,
+      "pokemonFormId": "019-kanto",
+      "nameEn": "Rattata",
+      "nameZhTw": "小拉達",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-SHADOW-SANDSHREW"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-SHADOW-SANDSHREW"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 20,
+      "pokemonFormId": "020-alola",
+      "nameEn": "Raticate",
+      "nameZhTw": "拉達",
+      "formKey": "ALOLA",
+      "formNameEn": "Alola",
+      "formNameZhTw": "阿羅拉",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-GREEDY-2022"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GREEDY-2022"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED_BY_EVOLUTION_INFERENCE",
+          "sourceIds": [
+            "OFF-ROCKET-RETREAT"
+          ],
+          "noteZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-ROCKET-RETREAT",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": [
+        "暗影狀態為進化推導，非同頁逐名確認。"
+      ]
+    },
+    {
+      "dexNumber": 20,
+      "pokemonFormId": "020-kanto",
+      "nameEn": "Raticate",
+      "nameZhTw": "拉達",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "NEEDS_REVIEW",
+      "releaseSourceIds": [],
+      "variants": {
+        "NORMAL": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": [
+        "普通型態推出狀態需以另一個官方原始頁面重新確認。"
+      ]
+    },
+    {
+      "dexNumber": 21,
+      "pokemonFormId": "021-kanto",
+      "nameEn": "Spearow",
+      "nameZhTw": "烈雀",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-KANTO-2021"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-KANTO-2021"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 22,
+      "pokemonFormId": "022-kanto",
+      "nameEn": "Fearow",
+      "nameZhTw": "大嘴雀",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "NEEDS_REVIEW",
+      "releaseSourceIds": [],
+      "variants": {
+        "NORMAL": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": [
+        "普通型態推出狀態需以另一個官方原始頁面重新確認。"
+      ]
+    },
+    {
+      "dexNumber": 23,
+      "pokemonFormId": "023-kanto",
+      "nameEn": "Ekans",
+      "nameZhTw": "阿柏蛇",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-SHADOW-SANDSHREW"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-SHADOW-SANDSHREW"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 24,
+      "pokemonFormId": "024-kanto",
+      "nameEn": "Arbok",
+      "nameZhTw": "阿柏怪",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "NEEDS_REVIEW",
+      "releaseSourceIds": [],
+      "variants": {
+        "NORMAL": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": [
+        "普通型態推出狀態需以另一個官方原始頁面重新確認。"
+      ]
+    },
+    {
+      "dexNumber": 25,
+      "pokemonFormId": "025-kanto",
+      "nameEn": "Pikachu",
+      "nameZhTw": "皮卡丘",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-KANTO-2021",
+        "OFF-CD-PIKACHU"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-KANTO-2021",
+            "OFF-CD-PIKACHU"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GMAX-PIKACHU"
+          ],
+          "noteZhTw": "Gigantamax Pikachu 已於 2026-03-28 首次登場；官方明示該個體無法進化。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 26,
+      "pokemonFormId": "026-alola",
+      "nameEn": "Raichu",
+      "nameZhTw": "雷丘",
+      "formKey": "ALOLA",
+      "formNameEn": "Alola",
+      "formNameZhTw": "阿羅拉",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-ALOLA-SEASON",
+        "OFF-ALOLA-FINALE"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-ALOLA-SEASON",
+            "OFF-ALOLA-FINALE"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": [
+        "Mega Raichu X/Y 公告未明確說明是否涉及阿羅拉雷丘；不可把關都雷丘公告套用至阿羅拉型態。"
+      ]
+    },
+    {
+      "dexNumber": 26,
+      "pokemonFormId": "026-kanto",
+      "nameEn": "Raichu",
+      "nameZhTw": "雷丘",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-MEGA-RAICHU-2026"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-MEGA-RAICHU-2026"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "PURIFIED": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "ANNOUNCED_NOT_YET_RELEASED",
+          "sourceIds": [
+            "OFF-MEGA-RAICHU-2026"
+          ],
+          "noteZhTw": "預定 2026-07-18 首次登場；本批查閱日 2026-07-15 尚未推出。"
+        },
+        "MEGA_Y": {
+          "status": "ANNOUNCED_NOT_YET_RELEASED",
+          "sourceIds": [
+            "OFF-MEGA-RAICHU-2026"
+          ],
+          "noteZhTw": "預定 2026-07-18 首次登場；本批查閱日 2026-07-15 尚未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 27,
+      "pokemonFormId": "027-alola",
+      "nameEn": "Sandshrew",
+      "nameZhTw": "穿山鼠",
+      "formKey": "ALOLA",
+      "formNameEn": "Alola",
+      "formNameZhTw": "阿羅拉",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-CD-SANDSHREW",
+        "OFF-ALOLA-FINALE"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-CD-SANDSHREW",
+            "OFF-ALOLA-FINALE"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-ROCKET-RETREAT"
+          ],
+          "noteZhTw": "官方頁面逐名列出 Shadow Alolan Sandshrew。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-ROCKET-RETREAT",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 27,
+      "pokemonFormId": "027-kanto",
+      "nameEn": "Sandshrew",
+      "nameZhTw": "穿山鼠",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-CD-SANDSHREW"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-CD-SANDSHREW"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-SHADOW-SANDSHREW"
+          ],
+          "noteZhTw": "官方頁面說明 Team GO Rocket 開始使用 Shadow Sandshrew。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-SHADOW-SANDSHREW",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 28,
+      "pokemonFormId": "028-alola",
+      "nameEn": "Sandslash",
+      "nameZhTw": "穿山王",
+      "formKey": "ALOLA",
+      "formNameEn": "Alola",
+      "formNameZhTw": "阿羅拉",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-CD-SANDSHREW"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-CD-SANDSHREW"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-WORLDS-2023"
+          ],
+          "noteZhTw": "官方頁面明確說明 Shadow Alolan Sandshrew 可進化為 Shadow Alolan Sandslash。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-WORLDS-2023",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 28,
+      "pokemonFormId": "028-kanto",
+      "nameEn": "Sandslash",
+      "nameZhTw": "穿山王",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-CD-SANDSHREW"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-CD-SANDSHREW"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED_BY_EVOLUTION_INFERENCE",
+          "sourceIds": [
+            "OFF-SHADOW-SANDSHREW"
+          ],
+          "noteZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-SHADOW-SANDSHREW",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": [
+        "暗影狀態為進化推導，非同頁逐名確認。"
+      ]
+    },
+    {
+      "dexNumber": 29,
+      "pokemonFormId": "029-kanto",
+      "nameEn": "Nidoran♀",
+      "nameZhTw": "尼多蘭",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-SHADOW-NIDORAN",
+        "OFF-NOXIOUS-2023"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-SHADOW-NIDORAN",
+            "OFF-NOXIOUS-2023"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-SHADOW-NIDORAN",
+            "OFF-NOXIOUS-2023"
+          ],
+          "noteZhTw": "官方頁面逐名列出 Shadow Nidoran♀。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-SHADOW-NIDORAN",
+            "OFF-NOXIOUS-2023",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    },
+    {
+      "dexNumber": 30,
+      "pokemonFormId": "030-kanto",
+      "nameEn": "Nidorina",
+      "nameZhTw": "尼多娜",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-SHADOW-NIDORAN"
+      ],
+      "variants": {
+        "NORMAL": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-SHADOW-NIDORAN"
+          ],
+          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+        },
+        "SHADOW": {
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-SHADOW-NIDORAN"
+          ],
+          "noteZhTw": "官方頁面逐名列出 Shadow Nidorina。"
+        },
+        "PURIFIED": {
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "OFF-SHADOW-NIDORAN",
+            "OFF-ROCKET-INVASION"
+          ],
+          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+        },
+        "MEGA": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_X": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "MEGA_Y": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "DYNAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        },
+        "GIGANTAMAX": {
+          "status": "NEEDS_REVIEW",
+          "sourceIds": [],
+          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+        }
+      },
+      "reviewNotesZhTw": []
+    }
+  ],
+  "evolutionPaths": [
+    {
+      "fromFormId": "001-kanto",
+      "toFormId": "002-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-CD-BULBASAUR"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "002-kanto",
+      "toFormId": "003-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-CD-BULBASAUR"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "004-kanto",
+      "toFormId": "005-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-CD-CHARMANDER"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "005-kanto",
+      "toFormId": "006-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-CD-CHARMANDER"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "007-kanto",
+      "toFormId": "008-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "NEEDS_REVIEW",
+      "sourceIds": [
+        "OFF-TCG-2022"
+      ],
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。"
+    },
+    {
+      "fromFormId": "008-kanto",
+      "toFormId": "009-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-CD-DEC-2023"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "010-kanto",
+      "toFormId": "011-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "NEEDS_REVIEW",
+      "sourceIds": [],
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。"
+    },
+    {
+      "fromFormId": "011-kanto",
+      "toFormId": "012-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "NEEDS_REVIEW",
+      "sourceIds": [],
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。"
+    },
+    {
+      "fromFormId": "013-kanto",
+      "toFormId": "014-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-CD-WEEDLE"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "014-kanto",
+      "toFormId": "015-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-CD-WEEDLE"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "016-kanto",
+      "toFormId": "017-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-GBL-S4"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "017-kanto",
+      "toFormId": "018-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-GBL-S4"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "019-kanto",
+      "toFormId": "020-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "NEEDS_REVIEW",
+      "sourceIds": [],
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。"
+    },
+    {
+      "fromFormId": "019-alola",
+      "toFormId": "020-alola",
+      "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+      "requiresEvent": false,
+      "verificationStatus": "NEEDS_REVIEW",
+      "sourceIds": [
+        "OFF-GREEDY-2022"
+      ],
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。"
+    },
+    {
+      "fromFormId": "021-kanto",
+      "toFormId": "022-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "NEEDS_REVIEW",
+      "sourceIds": [],
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。"
+    },
+    {
+      "fromFormId": "023-kanto",
+      "toFormId": "024-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "NEEDS_REVIEW",
+      "sourceIds": [],
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。"
+    },
+    {
+      "fromFormId": "025-kanto",
+      "toFormId": "026-kanto",
+      "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+      "requiresEvent": false,
+      "verificationStatus": "NEEDS_REVIEW",
+      "sourceIds": [
+        "OFF-GMAX-PIKACHU"
+      ],
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。"
+    },
+    {
+      "fromFormId": "027-kanto",
+      "toFormId": "028-kanto",
+      "evolutionMethodZhTw": "一般進化（關都型態限定路徑）",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-CD-SANDSHREW"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "027-alola",
+      "toFormId": "028-alola",
+      "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "OFF-CD-SANDSHREW"
+      ],
+      "availabilityNotesZhTw": "來源逐步明示進化關係。"
+    },
+    {
+      "fromFormId": "029-kanto",
+      "toFormId": "030-kanto",
+      "evolutionMethodZhTw": "一般進化",
+      "requiresEvent": false,
+      "verificationStatus": "NEEDS_REVIEW",
+      "sourceIds": [
+        "OFF-SHADOW-NIDORAN"
+      ],
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。"
+    },
+    {
+      "fromFormId": "030-kanto",
+      "toFormId": "031-kanto",
+      "evolutionMethodZhTw": "一般進化；終點超出本批資料範圍",
+      "requiresEvent": false,
+      "verificationStatus": "NEEDS_REVIEW",
+      "sourceIds": [],
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。"
+    }
+  ],
+  "importantMoves": [
+    {
+      "pokemonFormId": "003-kanto",
+      "moveNameEn": "Frenzy Plant",
+      "moveNameZhTw": "瘋狂植物",
+      "availabilityType": "COMMUNITY_DAY",
+      "sourceIds": [
+        "OFF-CD-BULBASAUR",
+        "OFF-KANTO-2024"
+      ],
+      "verificationStatus": "VERIFIED_EN_SOURCE",
+      "noteZhTw": "英文招式與取得條件由官方頁面確認；繁中譯名需由 zh-TW 官方頁面再覆核。"
+    },
+    {
+      "pokemonFormId": "006-kanto",
+      "moveNameEn": "Dragon Breath",
+      "moveNameZhTw": "龍息",
+      "availabilityType": "COMMUNITY_DAY",
+      "sourceIds": [
+        "OFF-CD-CHARMANDER"
+      ],
+      "verificationStatus": "VERIFIED_EN_SOURCE",
+      "noteZhTw": "英文招式與取得條件由官方頁面確認；繁中譯名需再覆核。"
+    },
+    {
+      "pokemonFormId": "006-kanto",
+      "moveNameEn": "Blast Burn",
+      "moveNameZhTw": "爆炸烈焰",
+      "availabilityType": "COMMUNITY_DAY",
+      "sourceIds": [
+        "OFF-CD-CHARMANDER",
+        "OFF-KANTO-2024"
+      ],
+      "verificationStatus": "VERIFIED_EN_SOURCE",
+      "noteZhTw": "英文招式與取得條件由官方頁面確認；繁中譯名需再覆核。"
+    },
+    {
+      "pokemonFormId": "009-kanto",
+      "moveNameEn": "Hydro Cannon",
+      "moveNameZhTw": "加農水炮",
+      "availabilityType": "COMMUNITY_DAY",
+      "sourceIds": [
+        "OFF-CD-DEC-2023",
+        "OFF-KANTO-2024"
+      ],
+      "verificationStatus": "VERIFIED_EN_SOURCE",
+      "noteZhTw": "英文招式與取得條件由官方頁面確認；繁中譯名需再覆核。"
+    },
+    {
+      "pokemonFormId": "015-kanto",
+      "moveNameEn": "Drill Run",
+      "moveNameZhTw": "直衝鑽",
+      "availabilityType": "COMMUNITY_DAY",
+      "sourceIds": [
+        "OFF-CD-WEEDLE"
+      ],
+      "verificationStatus": "VERIFIED_EN_SOURCE",
+      "noteZhTw": "英文招式與取得條件由官方頁面確認；繁中譯名需再覆核。"
+    },
+    {
+      "pokemonFormId": "018-kanto",
+      "moveNameEn": "Gust",
+      "moveNameZhTw": "起風",
+      "availabilityType": "EVENT_EVOLUTION",
+      "sourceIds": [
+        "OFF-GBL-S4"
+      ],
+      "verificationStatus": "VERIFIED_EN_SOURCE",
+      "noteZhTw": "英文招式與取得條件由官方頁面確認；繁中譯名需再覆核。"
+    },
+    {
+      "pokemonFormId": "025-kanto",
+      "moveNameEn": "Surf",
+      "moveNameZhTw": "衝浪",
+      "availabilityType": "COMMUNITY_DAY",
+      "sourceIds": [
+        "OFF-CD-PIKACHU",
+        "OFF-KANTO-2021"
+      ],
+      "verificationStatus": "VERIFIED_EN_SOURCE",
+      "noteZhTw": "英文招式與取得條件由官方頁面確認；繁中譯名需再覆核。"
+    },
+    {
+      "pokemonFormId": "028-kanto",
+      "moveNameEn": "Night Slash",
+      "moveNameZhTw": "暗襲要害",
+      "availabilityType": "COMMUNITY_DAY",
+      "sourceIds": [
+        "OFF-CD-SANDSHREW",
+        "OFF-CD-DEC-2023"
+      ],
+      "verificationStatus": "VERIFIED_EN_SOURCE",
+      "noteZhTw": "英文招式與取得條件由官方頁面確認；繁中譯名需再覆核。"
+    },
+    {
+      "pokemonFormId": "028-alola",
+      "moveNameEn": "Shadow Claw",
+      "moveNameZhTw": "暗影爪",
+      "availabilityType": "COMMUNITY_DAY",
+      "sourceIds": [
+        "OFF-CD-SANDSHREW",
+        "OFF-CD-DEC-2023"
+      ],
+      "verificationStatus": "VERIFIED_EN_SOURCE",
+      "noteZhTw": "英文招式與取得條件由官方頁面確認；繁中譯名需再覆核。"
+    }
+  ],
+  "reviewQueue": [
+    {
+      "pokemonFormId": "001-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "001-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "001-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "001-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "001-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "001-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "002-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "002-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "002-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "002-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "002-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "002-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "003-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "003-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "003-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "003-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "004-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "004-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "004-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "004-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "004-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "004-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "005-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "005-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "005-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "005-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "005-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "005-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "006-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "006-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "006-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "007-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "007-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "007-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "007-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "007-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "007-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "008-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "008-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "008-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "008-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "008-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "008-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "009-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "009-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "009-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "009-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "010-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "010-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "010-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "010-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "010-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "011-kanto",
+      "category": "RELEASE_STATUS",
+      "reasonZhTw": "缺少本輪可直接開啟且逐物種列名的官方來源。"
+    },
+    {
+      "pokemonFormId": "011-kanto",
+      "category": "NORMAL",
+      "reasonZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+    },
+    {
+      "pokemonFormId": "011-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+    },
+    {
+      "pokemonFormId": "011-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "011-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "011-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "011-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "011-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "012-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+    },
+    {
+      "pokemonFormId": "012-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "012-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "012-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "012-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "013-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "013-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "013-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "013-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "013-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "014-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "014-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "014-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "014-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "014-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "015-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "015-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "015-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "015-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "016-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "016-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "016-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "016-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "016-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "017-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+    },
+    {
+      "pokemonFormId": "017-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "017-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "017-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "017-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "017-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "018-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+    },
+    {
+      "pokemonFormId": "018-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "018-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "018-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "018-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-alola",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-alola",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-alola",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-alola",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-alola",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "019-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-alola",
+      "category": "SHADOW",
+      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+    },
+    {
+      "pokemonFormId": "020-alola",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-alola",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-alola",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-alola",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-alola",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-kanto",
+      "category": "RELEASE_STATUS",
+      "reasonZhTw": "缺少本輪可直接開啟且逐物種列名的官方來源。"
+    },
+    {
+      "pokemonFormId": "020-kanto",
+      "category": "NORMAL",
+      "reasonZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+    },
+    {
+      "pokemonFormId": "020-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "020-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "021-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "021-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "021-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "021-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "021-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "021-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "021-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "022-kanto",
+      "category": "RELEASE_STATUS",
+      "reasonZhTw": "缺少本輪可直接開啟且逐物種列名的官方來源。"
+    },
+    {
+      "pokemonFormId": "022-kanto",
+      "category": "NORMAL",
+      "reasonZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+    },
+    {
+      "pokemonFormId": "022-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "022-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "022-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "022-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "022-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "022-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "022-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "023-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "023-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "023-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "023-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "023-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "023-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "023-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "024-kanto",
+      "category": "RELEASE_STATUS",
+      "reasonZhTw": "缺少本輪可直接開啟且逐物種列名的官方來源。"
+    },
+    {
+      "pokemonFormId": "024-kanto",
+      "category": "NORMAL",
+      "reasonZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+    },
+    {
+      "pokemonFormId": "024-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "024-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "024-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "024-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "024-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "024-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "024-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "025-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "025-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "025-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "025-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "025-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "025-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-alola",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-alola",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-alola",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-alola",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-alola",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-alola",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-alola",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-kanto",
+      "category": "PURIFIED",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "026-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "027-alola",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "027-alola",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "027-alola",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "027-alola",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "027-alola",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "027-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "027-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "027-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "027-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "027-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "028-alola",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "028-alola",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "028-alola",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "028-alola",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "028-alola",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "028-kanto",
+      "category": "SHADOW",
+      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
+    },
+    {
+      "pokemonFormId": "028-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "028-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "028-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "028-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "028-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "029-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "029-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "029-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "029-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "029-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "030-kanto",
+      "category": "MEGA",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "030-kanto",
+      "category": "MEGA_X",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "030-kanto",
+      "category": "MEGA_Y",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "030-kanto",
+      "category": "DYNAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "030-kanto",
+      "category": "GIGANTAMAX",
+      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+    },
+    {
+      "pokemonFormId": "007-kanto",
+      "category": "EVOLUTION_PATH",
+      "reasonZhTw": "007-kanto → 008-kanto 尚缺逐步官方證據。"
+    },
+    {
+      "pokemonFormId": "010-kanto",
+      "category": "EVOLUTION_PATH",
+      "reasonZhTw": "010-kanto → 011-kanto 尚缺逐步官方證據。"
+    },
+    {
+      "pokemonFormId": "011-kanto",
+      "category": "EVOLUTION_PATH",
+      "reasonZhTw": "011-kanto → 012-kanto 尚缺逐步官方證據。"
+    },
+    {
+      "pokemonFormId": "019-kanto",
+      "category": "EVOLUTION_PATH",
+      "reasonZhTw": "019-kanto → 020-kanto 尚缺逐步官方證據。"
+    },
+    {
+      "pokemonFormId": "019-alola",
+      "category": "EVOLUTION_PATH",
+      "reasonZhTw": "019-alola → 020-alola 尚缺逐步官方證據。"
+    },
+    {
+      "pokemonFormId": "021-kanto",
+      "category": "EVOLUTION_PATH",
+      "reasonZhTw": "021-kanto → 022-kanto 尚缺逐步官方證據。"
+    },
+    {
+      "pokemonFormId": "023-kanto",
+      "category": "EVOLUTION_PATH",
+      "reasonZhTw": "023-kanto → 024-kanto 尚缺逐步官方證據。"
+    },
+    {
+      "pokemonFormId": "025-kanto",
+      "category": "EVOLUTION_PATH",
+      "reasonZhTw": "025-kanto → 026-kanto 尚缺逐步官方證據。"
+    },
+    {
+      "pokemonFormId": "029-kanto",
+      "category": "EVOLUTION_PATH",
+      "reasonZhTw": "029-kanto → 030-kanto 尚缺逐步官方證據。"
+    },
+    {
+      "pokemonFormId": "030-kanto",
+      "category": "EVOLUTION_PATH",
+      "reasonZhTw": "030-kanto → 031-kanto 尚缺逐步官方證據。"
+    }
+  ],
+  "officialResearchGapsZhTw": [
+    "本輪官方來源未覆蓋所有普通型態、暗影型態及進化路徑；空缺均維持 NEEDS_REVIEW。",
+    "官方活動文章可證明某型態曾出現，但通常不能證明目前可取得。資料模型應區分 everReleased 與 currentAvailability。",
+    "未取得逐物種的官方『不存在／未推出』清單，因此未將搜尋不到的 Mega、Dynamax、Gigantamax 或 Shadow 填成 NOT_RELEASED。",
+    "招式繁中名稱尚未逐筆由 zh-TW 官方頁面覆核；英文原名與活動取得條件已留存。",
+    "阿羅拉雷丘在官方頁面以團體戰出現；本輪未找到官方頁面明示其不可由皮卡丘進化，取得方式仍需覆核。",
+    "Mega Raichu X/Y 的 2026-07-18 首次登場晚於本批 2026-07-15 查閱日，因此只能標為 ANNOUNCED_NOT_YET_RELEASED。",
+    "Gigantamax Pikachu 官方明示無法進化；不可把一般皮卡丘的進化路徑套用至該個體。"
+  ]
+}

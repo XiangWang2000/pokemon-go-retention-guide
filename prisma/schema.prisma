@@ -1,0 +1,450 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+enum RegionKey {
+  KANTO
+  ALOLA
+  GALAR
+  HISUI
+  PALDEA
+  OTHER
+}
+
+enum VariantKey {
+  NORMAL
+  SHADOW
+  PURIFIED
+  MEGA
+  MEGA_X
+  MEGA_Y
+  DYNAMAX
+  GIGANTAMAX
+}
+
+enum ReleaseStatus {
+  RELEASED
+  UNRELEASED
+  UNKNOWN
+}
+
+enum EvaluationDataStatus {
+  VERIFIED
+  PARTIALLY_VERIFIED
+  UNRANKED
+  NOT_APPLICABLE
+  DATA_UNAVAILABLE
+  SOURCE_MISSING
+  SOURCE_CONFLICT
+  UNRELEASED
+  UNKNOWN_RELEASE_STATUS
+}
+
+enum InheritanceMode {
+  NONE
+  NORMAL_BASE
+  NORMAL_BASE_WITH_OVERRIDE
+}
+
+enum RocketRating {
+  HIGHLY_RECOMMENDED
+  USEFUL
+  NICHE
+  NOT_RECOMMENDED
+  DATA_UNAVAILABLE
+  NOT_APPLICABLE
+}
+
+enum PvpRankingCategory {
+  OVERALL
+  LEAD
+  CLOSER
+  SWITCH
+  CHARGER
+  ATTACKER
+  CONSISTENCY
+}
+
+enum MoveCategory {
+  FAST
+  CHARGED
+  MAX
+}
+
+enum MoveAvailabilityType {
+  NORMAL
+  LEGACY
+  EVENT_EVOLUTION
+  ELITE_TM
+  RAID_EXCLUSIVE
+  COMMUNITY_DAY
+  UNKNOWN
+}
+
+enum SourceType {
+  OFFICIAL
+  PVP
+  PVE
+  GYM
+  MAX_BATTLE
+  SECONDARY
+  COMMUNITY
+}
+
+enum EvaluationCategory {
+  PVP
+  PVE
+  ROCKET
+  GYM
+  MEGA
+  MAX_BATTLE
+  EVOLUTION_VALUE
+}
+
+enum League {
+  GREAT
+  ULTRA
+  MASTER
+  SPECIAL_CUP
+  NOT_APPLICABLE
+}
+
+enum RetentionDecision {
+  KEEP
+  CONDITIONAL_KEEP
+  TRANSFER_CANDIDATE
+  NEEDS_REVIEW
+}
+
+enum Confidence {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum GymRating {
+  HIGH
+  MEDIUM
+  LOW
+  SPECIAL_CASE
+  NOT_APPLICABLE
+}
+
+enum ReviewIssueType {
+  MATERIAL_DATA_GAP
+  UNKNOWN_RELEASE_STATUS
+  UNREPRODUCIBLE_RANK
+  POSSIBLE_SPECIES_MISMATCH
+  SOURCE_CONFLICT
+  STALE_DATA
+  MISSING_PRIMARY_SOURCE
+  RULE_NOT_COVERED
+  LOW_CONFIDENCE
+  OPTIONAL_DATA_MISSING
+  MISSING_SOURCE
+  STALE_SOURCE
+  UNASSESSED_FORM
+  UNHANDLED_MOVE
+  NEEDS_REVIEW
+  UNREVIEWED
+  LOW_TRUST_SOURCE
+}
+
+enum IssueStatus {
+  OPEN
+  RESOLVED
+  DISMISSED
+}
+
+model PokemonSpecies {
+  id         String        @id
+  dexNumber  Int           @unique
+  nameEn     String
+  nameZhTw   String
+  generation Int
+  familyKey  String
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+  forms      PokemonForm[]
+}
+
+model PokemonForm {
+  id                       String          @id
+  speciesId                String
+  formKey                  String
+  formNameEn               String
+  formNameZhTw             String
+  regionKey                RegionKey
+  types                    String
+  searchAliases            String
+  evolvesFromFormId        String?
+  evolutionFamilyNotesZhTw String
+  isReleasedInPokemonGo    Boolean?
+  releaseStatus            ReleaseStatus   @default(UNKNOWN)
+  releaseVerifiedAt        DateTime?
+  createdAt                DateTime        @default(now())
+  updatedAt                DateTime        @updatedAt
+  species                  PokemonSpecies  @relation(fields: [speciesId], references: [id], onDelete: Cascade)
+  evolvesFrom              PokemonForm?    @relation("FormEvolution", fields: [evolvesFromFormId], references: [id])
+  evolvesInto              PokemonForm[]   @relation("FormEvolution")
+  battleVariants           BattleVariant[]
+  evolutionPathsFrom       EvolutionPath[] @relation("EvolutionFrom")
+  evolutionPathsTo         EvolutionPath[] @relation("EvolutionTo")
+  dataIssues               DataIssue[]
+
+  @@unique([speciesId, formKey])
+  @@index([speciesId])
+}
+
+model BattleVariant {
+  id                       String                @id
+  pokemonFormId            String
+  variantKey               VariantKey
+  isReleased               Boolean?
+  releaseStatus            ReleaseStatus         @default(UNKNOWN)
+  releaseVerifiedAt        DateTime?
+  notesZhTw                String
+  inheritsFromVariantId    String?
+  inheritanceMode          InheritanceMode       @default(NONE)
+  purificationCostModifier Float?
+  hasReturnAccess          Boolean               @default(false)
+  purificationRiskZhTw     String                @default("")
+  purifiedOverrideRequired Boolean               @default(false)
+  pokemonForm              PokemonForm           @relation(fields: [pokemonFormId], references: [id], onDelete: Cascade)
+  inheritsFromVariant      BattleVariant?        @relation("VariantInheritance", fields: [inheritsFromVariantId], references: [id])
+  inheritedByVariants      BattleVariant[]       @relation("VariantInheritance")
+  variantMoves             VariantMove[]
+  rawEvaluationData        RawEvaluationData[]
+  retentionEvaluations     RetentionEvaluation[]
+  dataIssues               DataIssue[]
+  categoryEvaluations      CategoryEvaluation[]
+
+  @@unique([pokemonFormId, variantKey])
+  @@index([pokemonFormId])
+}
+
+model EvolutionPath {
+  id                    String      @id
+  fromFormId            String
+  toFormId              String
+  evolutionMethodZhTw   String
+  availabilityNotesZhTw String
+  requiresEvent         Boolean     @default(false)
+  verifiedAt            DateTime?
+  fromForm              PokemonForm @relation("EvolutionFrom", fields: [fromFormId], references: [id], onDelete: Cascade)
+  toForm                PokemonForm @relation("EvolutionTo", fields: [toFormId], references: [id], onDelete: Cascade)
+
+  @@unique([fromFormId, toFormId, evolutionMethodZhTw])
+}
+
+model Move {
+  id                 String        @id
+  moveKey            String        @unique
+  nameEn             String
+  nameZhTw           String
+  moveType           String
+  moveCategory       MoveCategory
+  isLegacy           Boolean       @default(false)
+  isEliteTmAvailable Boolean       @default(false)
+  notesZhTw          String
+  verifiedAt         DateTime?
+  variantMoves       VariantMove[]
+}
+
+model VariantMove {
+  id               String               @id
+  battleVariantId  String
+  moveId           String
+  availabilityType MoveAvailabilityType
+  sourceNotesZhTw  String
+  verifiedAt       DateTime?
+  battleVariant    BattleVariant        @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
+  move             Move                 @relation(fields: [moveId], references: [id], onDelete: Cascade)
+
+  @@unique([battleVariantId, moveId, availabilityType])
+}
+
+model SourceReference {
+  id                        String                     @id
+  sourceName                String
+  sourceUrl                 String
+  sourceType                SourceType
+  sourceTitleOriginal       String
+  sourceLanguage            String
+  sourceSummaryZhTw         String
+  accessedAt                DateTime
+  publishedAt               DateTime?
+  dataVersion               String?
+  notes                     String
+  createdAt                 DateTime                   @default(now())
+  rawEvaluationData         RawEvaluationData[]
+  changeLogs                ChangeLog[]
+  evaluationSources         EvaluationSource[]
+  categoryEvaluationSources CategoryEvaluationSource[]
+
+  @@unique([sourceUrl, accessedAt])
+}
+
+model RawEvaluationData {
+  id               String               @id
+  battleVariantId  String
+  category         EvaluationCategory
+  status           EvaluationDataStatus @default(PARTIALLY_VERIFIED)
+  league           League
+  cup              String?
+  pvpCategory      PvpRankingCategory?
+  speciesKey       String?
+  formKey          String?
+  variantKey       VariantKey?
+  rank             Int?
+  rating           String?
+  score            Float?
+  tier             String?
+  recommendedMoves String
+  rawNotes         String
+  seasonOrVersion  String
+  extractionMethod String?
+  reproducible     Boolean              @default(false)
+  fastMoveKey      String?
+  chargedMoveKey   String?
+  bossKey          String?
+  simulationLevel  String?
+  weather          String?
+  friendship       String?
+  rankingMethod    String?
+  estimator        Float?
+  timeToWin        Float?
+  deaths           Float?
+  migrationNote    String?
+  sourceId         String
+  checkedAt        DateTime
+  createdAt        DateTime             @default(now())
+  battleVariant    BattleVariant        @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
+  source           SourceReference      @relation(fields: [sourceId], references: [id])
+
+  @@index([battleVariantId, category, league])
+}
+
+model CategoryEvaluation {
+  id                  String                     @id
+  battleVariantId     String
+  category            EvaluationCategory
+  status              EvaluationDataStatus
+  summaryZhTw         String
+  materialToDecision  Boolean                    @default(false)
+  rocketRating        RocketRating?
+  rocketRoles         String                     @default("[]")
+  maxTypeRank         Int?
+  maxTypeTier         String?
+  maxTypeKey          String?
+  maxOverallRating    String?
+  maxInvestmentRating String?
+  maxUseCaseBreadth   String?
+  checkedAt           DateTime
+  createdAt           DateTime                   @default(now())
+  updatedAt           DateTime                   @updatedAt
+  battleVariant       BattleVariant              @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
+  sourceReferences    CategoryEvaluationSource[]
+
+  @@unique([battleVariantId, category])
+  @@index([status, category])
+}
+
+model CategoryEvaluationSource {
+  categoryEvaluationId String
+  sourceId             String
+  usageZhTw            String
+  categoryEvaluation   CategoryEvaluation @relation(fields: [categoryEvaluationId], references: [id], onDelete: Cascade)
+  source               SourceReference    @relation(fields: [sourceId], references: [id])
+
+  @@id([categoryEvaluationId, sourceId])
+}
+
+model RetentionEvaluation {
+  id                        String                @id
+  battleVariantId           String
+  decision                  RetentionDecision
+  pvpSummaryZhTw            String
+  pveSummaryZhTw            String
+  rocketSummaryZhTw         String
+  gymSummaryZhTw            String
+  gymRating                 GymRating
+  megaSummaryZhTw           String
+  maxBattleSummaryZhTw      String
+  evolutionSummaryZhTw      String
+  requiredMovesSummaryZhTw  String
+  recommendedIvStrategyZhTw String
+  reasonZhTw                String
+  confidence                Confidence
+  rulesVersion              String
+  generatedAt               DateTime
+  reviewed                  Boolean               @default(false)
+  reviewedAt                DateTime?
+  reviewNotesZhTw           String
+  battleVariant             BattleVariant         @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
+  ruleTraces                EvaluationRuleTrace[]
+  evaluationSources         EvaluationSource[]
+
+  @@index([battleVariantId, generatedAt])
+}
+
+model EvaluationSource {
+  evaluationId String
+  sourceId     String
+  usageZhTw    String
+  evaluation   RetentionEvaluation @relation(fields: [evaluationId], references: [id], onDelete: Cascade)
+  source       SourceReference     @relation(fields: [sourceId], references: [id])
+
+  @@id([evaluationId, sourceId])
+}
+
+model EvaluationRuleTrace {
+  id              String              @id
+  evaluationId    String
+  ruleKey         String
+  ruleVersion     String
+  priority        Int
+  matched         Boolean
+  resultDecision  RetentionDecision?
+  explanationZhTw String
+  evaluation      RetentionEvaluation @relation(fields: [evaluationId], references: [id], onDelete: Cascade)
+}
+
+model ChangeLog {
+  id               String           @id
+  entityType       String
+  entityId         String
+  fieldName        String
+  previousValue    String?
+  newValue         String?
+  sourceId         String?
+  changeReasonZhTw String
+  changedAt        DateTime
+  rulesVersion     String
+  source           SourceReference? @relation(fields: [sourceId], references: [id])
+
+  @@index([entityType, entityId])
+}
+
+model DataIssue {
+  id                   String          @id
+  pokemonFormId        String?
+  battleVariantId      String?
+  issueType            ReviewIssueType
+  status               IssueStatus     @default(OPEN)
+  batchKey             String
+  messageZhTw          String
+  affectsFinalDecision Boolean         @default(true)
+  suggestedActionZhTw  String          @default("")
+  detectedAt           DateTime        @default(now())
+  resolvedAt           DateTime?
+  pokemonForm          PokemonForm?    @relation(fields: [pokemonFormId], references: [id], onDelete: Cascade)
+  battleVariant        BattleVariant?  @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
+
+  @@index([batchKey, status])
+}

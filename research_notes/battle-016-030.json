@@ -1,0 +1,2733 @@
+{
+  "batch": "016-030",
+  "researchedAt": "2026-07-15",
+  "scope": "third-party battle data only",
+  "rules": [
+    "Ranks are species/form ranks in PvPoke overall files, not individual IV ranks.",
+    "Search snippets were discovery only; evidence was taken from opened pages or direct first-party data files.",
+    "Unverified items are NEEDS_REVIEW and no rank was invented.",
+    "NORMAL, SHADOW, PURIFIED, MEGA_X, MEGA_Y, DYNAMAX and GIGANTAMAX are kept separate."
+  ],
+  "sources": [
+    {
+      "id": "pvpoke-gl-json",
+      "sourceName": "PvPoke",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "rankings-1500.json",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pvpoke.com/data/rankings/all/overall/rankings-1500.json",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+      "sha256": "C6421842994D4DD7738A9EA8B3529F818500B0CC3FD9D724567EC9553A7314F4"
+    },
+    {
+      "id": "pvpoke-ul-json",
+      "sourceName": "PvPoke",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "rankings-2500.json",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pvpoke.com/data/rankings/all/overall/rankings-2500.json",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+      "sha256": "E4C7A8EF9C7F1B04B857562CC5B6CA4CF7618C42024183CFB4F0ECA8046375CD"
+    },
+    {
+      "id": "pvpoke-ml-json",
+      "sourceName": "PvPoke",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "rankings-10000.json",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pvpoke.com/data/rankings/all/overall/rankings-10000.json",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+      "sha256": "8ED9A521AC82BE653906C978D4ADDD941F9395FC04BAC73B516767E7C1EDB16F"
+    },
+    {
+      "id": "pvpoke-method",
+      "sourceName": "PvPoke",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "Great League PvP Rankings | PvPoke",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pvpoke.com/rankings/",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "1.37.3.24",
+      "sourceSummaryZhTw": "說明 overall score 是 0～100 的模擬相對分數，overall 由多種對戰角色分數推導；排名會隨演算法與環境改變。"
+    },
+    {
+      "id": "pvpoke-commit",
+      "sourceName": "PvPoke GitHub",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "Inteleon rankings · pvpoke/pvpoke@86847e5 · GitHub",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/pvpoke/pvpoke/commit/86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2026-07-03T15:07:37Z",
+      "dataVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)"
+    },
+    {
+      "id": "gohub-mega-pidgeot",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Mega Pidgeot: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/18-Mega",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照",
+      "sourceSummaryZhTw": "推薦 Gust*／Brave Bird；稱 Mega Pidgeot 為高階飛行攻擊手，建議培養一隻。"
+    },
+    {
+      "id": "pokebattler-mega-pidgeot-guide",
+      "sourceName": "Pokebattler",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Professor Geekbeak’s Raid Research: Mega Pidgeot - Pokemon GO Pokebattler",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.pokebattler.com/raids/guides/PIDGEOT_MEGA",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2026-06-22",
+      "dataVersion": "文章日期 2026-06-22",
+      "sourceSummaryZhTw": "指出 Mega Pidgeot 相較其他飛行系並非特別強，但能強化一般與飛行隊伍，仍有團體戰支援價值。"
+    },
+    {
+      "id": "gohub-pidgeot",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Pidgeot: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/18",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-shadow-pidgeot",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Pidgeot: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/18-Shadow",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-raticate",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Raticate: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/20",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-raticate-alola",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Alolan Raticate: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/20-Alola",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-fearow",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Fearow: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/22",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-arbok",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Arbok: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/24",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-pikachu",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Pikachu: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/025",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-raichu",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Raichu: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/26",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-raichu-alola",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Alolan Raichu: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/26-Alola",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-mega-raichu-x",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Mega Raichu X: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/26-Mega_X",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-mega-raichu-y",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Mega Raichu Y: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/26-Mega_Y",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "pokebattler-mega-raichu-x",
+      "sourceName": "Pokebattler",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Mega Raichu-X Counters - Pokemon GO Pokebattler",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.pokebattler.com/raids/defenders/RAICHU_MEGA_X/levels/RAID_LEVEL_MEGA/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?aggregation=AVERAGE&attackerTypes=POKEMON_TYPE_ALL&dodgeStrategy=DODGE_REACTION_TIME&includeLegendary=true&includeMegas=true&includeShadow=true&numParty=1&sort=ESTIMATOR&weatherCondition=NO_WEATHER",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "pokebattler-mega-raichu-y",
+      "sourceName": "Pokebattler",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Mega Raichu-Y Counters - Pokemon GO Pokebattler",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.pokebattler.com/raids/defenders/RAICHU_MEGA_Y/levels/RAID_LEVEL_MEGA/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?aggregation=AVERAGE&attackerTypes=POKEMON_TYPE_ALL&dodgeStrategy=DODGE_REACTION_TIME&includeLegendary=true&includeMegas=true&includeShadow=true&numParty=1&sort=ESTIMATOR&weatherCondition=NO_WEATHER",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-sandslash",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Sandslash: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/028",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-shadow-sandslash",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Sandslash: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/28-Shadow",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-sandslash-alola",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Alolan Sandslash: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/28-Alola",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-shadow-sandslash-alola",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Alolan Sandslash: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/28-Alola_Shadow",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-nidorina",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Nidorina: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/30",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-shadow-nidorina",
+      "sourceName": "GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Nidorina: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/30-Shadow",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-gym-defenders",
+      "sourceName": "GO Hub Database",
+      "sourceType": "GYM",
+      "sourceTitleOriginal": "Best Defenders Tier List (Pokémon GO)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/best/gym-defenders",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照",
+      "sourceSummaryZhTw": "以 Defense×Stamina 的 bulk 指標排序，明確說明未納入招式與屬性；因此僅作交叉參考。"
+    },
+    {
+      "id": "gohub-legacy",
+      "sourceName": "GO Hub Database",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Complete Guide to Legacy Moves in Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/tools/legacy-moves",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-gmax-volt-crash",
+      "sourceName": "GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "G-Max Volt Crash in Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/move/1021",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    },
+    {
+      "id": "gohub-gmax-toxtricity",
+      "sourceName": "GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Gigantamax Toxtricity: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/849-Gigantamax",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "頁面未標資料版本；查閱日快照"
+    }
+  ],
+  "rawEvaluationData": {
+    "pvp": [
+      {
+        "speciesId": "pidgey",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgey_shadow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgeotto",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 683,
+        "score": 71.5,
+        "rating": 550,
+        "recommendedMoves": [
+          "WING_ATTACK",
+          "AIR_CUTTER",
+          "TWISTER"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "pidgeotto_shadow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 659,
+        "score": 72.1,
+        "rating": 580,
+        "recommendedMoves": [
+          "WING_ATTACK",
+          "AIR_CUTTER",
+          "TWISTER"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "pidgeot",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 156,
+        "score": 85.3,
+        "rating": 641,
+        "recommendedMoves": [
+          "GUST",
+          "AIR_CUTTER",
+          "BRAVE_BIRD"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "pidgeot_shadow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 289,
+        "score": 81.3,
+        "rating": 640,
+        "recommendedMoves": [
+          "GUST",
+          "AIR_CUTTER",
+          "BRAVE_BIRD"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "rattata",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "rattata_shadow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "rattata_alolan",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "rattata_alolan_shadow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raticate",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 957,
+        "score": 61.2,
+        "rating": 412,
+        "recommendedMoves": [
+          "QUICK_ATTACK",
+          "HYPER_FANG",
+          "DIG"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "raticate_shadow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 998,
+        "score": 59.1,
+        "rating": 384,
+        "recommendedMoves": [
+          "QUICK_ATTACK",
+          "HYPER_FANG",
+          "DIG"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "raticate_alolan",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 355,
+        "score": 79.5,
+        "rating": 559,
+        "recommendedMoves": [
+          "QUICK_ATTACK",
+          "CRUNCH",
+          "RETURN"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "raticate_alolan_shadow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 542,
+        "score": 75,
+        "rating": 531,
+        "recommendedMoves": [
+          "QUICK_ATTACK",
+          "CRUNCH",
+          "HYPER_BEAM"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "spearow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "spearow_shadow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "fearow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 20,
+        "score": 90.7,
+        "rating": 670,
+        "recommendedMoves": [
+          "PECK",
+          "DRILL_PECK",
+          "DRILL_RUN"
+        ],
+        "editorScore": 92,
+        "editorNotes": "Fearow's solid pacing and great offenses bring it to the forefront this season. While its bulk is lacking, its Normal typing is highly valuable against Great League's resident Ghost types.",
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "fearow_shadow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "ekans",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "ekans_shadow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "arbok",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 804,
+        "score": 67.2,
+        "rating": 449,
+        "recommendedMoves": [
+          "ACID",
+          "DARK_PULSE",
+          "SLUDGE_WAVE"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "arbok_shadow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 890,
+        "score": 64.1,
+        "rating": 422,
+        "recommendedMoves": [
+          "ACID",
+          "DARK_PULSE",
+          "SLUDGE_WAVE"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "pikachu",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pikachu_shadow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raichu",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 217,
+        "score": 83.1,
+        "rating": 604,
+        "recommendedMoves": [
+          "THUNDER_SHOCK",
+          "WILD_CHARGE",
+          "TRAILBLAZE"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "raichu_shadow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raichu_alolan",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 415,
+        "score": 77.8,
+        "rating": 587,
+        "recommendedMoves": [
+          "THUNDER_SHOCK",
+          "WILD_CHARGE",
+          "TRAILBLAZE"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "raichu_alolan_shadow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandshrew",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 651,
+        "score": 72.3,
+        "rating": 531,
+        "recommendedMoves": [
+          "SAND_ATTACK",
+          "SAND_TOMB",
+          "ROCK_TOMB"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "sandshrew_shadow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 645,
+        "score": 72.4,
+        "rating": 524,
+        "recommendedMoves": [
+          "SAND_ATTACK",
+          "SAND_TOMB",
+          "ROCK_TOMB"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "sandshrew_alolan",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 343,
+        "score": 79.7,
+        "rating": 644,
+        "recommendedMoves": [
+          "POWDER_SNOW",
+          "NIGHT_SLASH",
+          "GYRO_BALL"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "sandshrew_alolan_shadow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 356,
+        "score": 79.5,
+        "rating": 657,
+        "recommendedMoves": [
+          "POWDER_SNOW",
+          "NIGHT_SLASH",
+          "GYRO_BALL"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "sandslash",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 387,
+        "score": 78.6,
+        "rating": 573,
+        "recommendedMoves": [
+          "SAND_ATTACK",
+          "NIGHT_SLASH",
+          "ROCK_TOMB"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "sandslash_shadow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 463,
+        "score": 76.9,
+        "rating": 588,
+        "recommendedMoves": [
+          "SAND_ATTACK",
+          "NIGHT_SLASH",
+          "ROCK_TOMB"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "sandslash_alolan",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 121,
+        "score": 86.3,
+        "rating": 668,
+        "recommendedMoves": [
+          "POWDER_SNOW",
+          "ICE_PUNCH",
+          "DRILL_RUN"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "sandslash_alolan_shadow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 137,
+        "score": 85.8,
+        "rating": 661,
+        "recommendedMoves": [
+          "POWDER_SNOW",
+          "ICE_PUNCH",
+          "DRILL_RUN"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "nidoran_female",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "nidoran_female_shadow",
+        "league": "GREAT",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "nidorina",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 358,
+        "score": 79.4,
+        "rating": 595,
+        "recommendedMoves": [
+          "POISON_STING",
+          "POISON_FANG",
+          "THUNDERBOLT"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "nidorina_shadow",
+        "league": "GREAT",
+        "status": "RANKED",
+        "rank": 409,
+        "score": 77.9,
+        "rating": 603,
+        "recommendedMoves": [
+          "POISON_STING",
+          "POISON_FANG",
+          "DIG"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-gl-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "pidgey",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgey_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgeotto",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgeotto_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgeot",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 294,
+        "score": 80,
+        "rating": 634,
+        "recommendedMoves": [
+          "WING_ATTACK",
+          "TWISTER",
+          "BRAVE_BIRD"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "pidgeot_shadow",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 315,
+        "score": 79.4,
+        "rating": 640,
+        "recommendedMoves": [
+          "WING_ATTACK",
+          "BRAVE_BIRD",
+          "TWISTER"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "rattata",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "rattata_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "rattata_alolan",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "rattata_alolan_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raticate",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raticate_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raticate_alolan",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 816,
+        "score": 50.5,
+        "rating": 367,
+        "recommendedMoves": [
+          "QUICK_ATTACK",
+          "CRUNCH",
+          "HYPER_FANG"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "raticate_alolan_shadow",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 815,
+        "score": 50.9,
+        "rating": 372,
+        "recommendedMoves": [
+          "QUICK_ATTACK",
+          "CRUNCH",
+          "HYPER_FANG"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "spearow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "spearow_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "fearow",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 351,
+        "score": 78,
+        "rating": 591,
+        "recommendedMoves": [
+          "PECK",
+          "DRILL_PECK",
+          "DRILL_RUN"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "fearow_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "ekans",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "ekans_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "arbok",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 786,
+        "score": 56.3,
+        "rating": 374,
+        "recommendedMoves": [
+          "ACID",
+          "DARK_PULSE",
+          "SLUDGE_WAVE"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "arbok_shadow",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 812,
+        "score": 51.9,
+        "rating": 354,
+        "recommendedMoves": [
+          "ACID",
+          "DARK_PULSE",
+          "SLUDGE_WAVE"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "pikachu",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pikachu_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raichu",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 207,
+        "score": 82.8,
+        "rating": 619,
+        "recommendedMoves": [
+          "THUNDER_SHOCK",
+          "BRICK_BREAK",
+          "WILD_CHARGE"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "raichu_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raichu_alolan",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 245,
+        "score": 81.9,
+        "rating": 594,
+        "recommendedMoves": [
+          "THUNDER_SHOCK",
+          "TRAILBLAZE",
+          "WILD_CHARGE"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "raichu_alolan_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandshrew",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandshrew_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandshrew_alolan",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandshrew_alolan_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandslash",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 205,
+        "score": 82.9,
+        "rating": 582,
+        "recommendedMoves": [
+          "SAND_ATTACK",
+          "NIGHT_SLASH",
+          "ROCK_TOMB"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "sandslash_shadow",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 375,
+        "score": 77.5,
+        "rating": 560,
+        "recommendedMoves": [
+          "MUD_SHOT",
+          "NIGHT_SLASH",
+          "ROCK_TOMB"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "sandslash_alolan",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 93,
+        "score": 87.6,
+        "rating": 663,
+        "recommendedMoves": [
+          "POWDER_SNOW",
+          "ICE_PUNCH",
+          "DRILL_RUN"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "sandslash_alolan_shadow",
+        "league": "ULTRA",
+        "status": "RANKED",
+        "rank": 83,
+        "score": 87.9,
+        "rating": 665,
+        "recommendedMoves": [
+          "POWDER_SNOW",
+          "ICE_PUNCH",
+          "DRILL_RUN"
+        ],
+        "editorScore": null,
+        "editorNotes": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "speciesId": "nidoran_female",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "nidoran_female_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "nidorina",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "nidorina_shadow",
+        "league": "ULTRA",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ul-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgey",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgey_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgeotto",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgeotto_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgeot",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pidgeot_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "rattata",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "rattata_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "rattata_alolan",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "rattata_alolan_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raticate",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raticate_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raticate_alolan",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raticate_alolan_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "spearow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "spearow_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "fearow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "fearow_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "ekans",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "ekans_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "arbok",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "arbok_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pikachu",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "pikachu_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raichu",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raichu_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raichu_alolan",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "raichu_alolan_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandshrew",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandshrew_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandshrew_alolan",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandshrew_alolan_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandslash",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandslash_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandslash_alolan",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "sandslash_alolan_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "nidoran_female",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "nidoran_female_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "nidorina",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      },
+      {
+        "speciesId": "nidorina_shadow",
+        "league": "MASTER",
+        "status": "NOT_LISTED_IN_RANKING_FILE",
+        "rank": null,
+        "score": null,
+        "rating": null,
+        "recommendedMoves": null,
+        "seasonOrVersion": "PvPoke 1.37.3.24; commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7 (2026-07-03T15:07:37Z)",
+        "sourceId": "pvpoke-ml-json",
+        "checkedAt": "2026-07-15",
+        "rawNotes": "Not present in the current overall ranking JSON; do not convert this absence into a fabricated rank."
+      }
+    ],
+    "pveAndMega": [
+      {
+        "battleVariant": "018-kanto:NORMAL",
+        "category": "PVE",
+        "tier": "BUDGET_ONLY",
+        "moves": [
+          "GUST",
+          "BRAVE_BIRD"
+        ],
+        "legacyMoves": [
+          "GUST"
+        ],
+        "rawNotesZhTw": "一般比比鳥最終進化可作飛行系過渡打手，但 GO Hub 明確偏好其 Mega。",
+        "sourceIds": [
+          "gohub-pidgeot"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "018-kanto:SHADOW",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 78,
+        "score": {
+          "dps": 11.01,
+          "tdo": 151.0
+        },
+        "moves": [
+          "GUST",
+          "BRAVE_BIRD"
+        ],
+        "legacyMoves": [
+          "GUST"
+        ],
+        "sourceIds": [
+          "gohub-shadow-pidgeot"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "018-kanto:MEGA",
+        "category": "MEGA",
+        "tier": "TOP_TIER_CLAIM_WITH_CONFLICT",
+        "moves": [
+          "GUST",
+          "BRAVE_BIRD"
+        ],
+        "legacyMoves": [
+          "GUST"
+        ],
+        "rawNotesZhTw": "GO Hub 稱高階且建議培養；Pokebattler 2026-06-22 文章則說相較其他飛行系不特別強，但團隊強化仍有價值。",
+        "sourceIds": [
+          "gohub-mega-pidgeot",
+          "pokebattler-mega-pidgeot-guide"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "020-kanto:NORMAL",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 159,
+        "score": {
+          "dps": 8.62,
+          "tdo": 99.5
+        },
+        "sourceIds": [
+          "gohub-raticate"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "020-alola:NORMAL",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 190,
+        "score": {
+          "dps": 7.79,
+          "tdo": 119.5
+        },
+        "sourceIds": [
+          "gohub-raticate-alola"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "022-kanto:NORMAL",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 93,
+        "score": {
+          "dps": 10.39,
+          "tdo": 127.0
+        },
+        "moves": [
+          "PECK",
+          "FLY"
+        ],
+        "sourceIds": [
+          "gohub-fearow"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "024-kanto:NORMAL",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 90,
+        "score": {
+          "dps": 8.33,
+          "tdo": 110.6
+        },
+        "moves": [
+          "ACID",
+          "GUNK_SHOT"
+        ],
+        "sourceIds": [
+          "gohub-arbok"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "025-kanto:NORMAL",
+        "category": "PVE",
+        "tier": "NOT_RANKED",
+        "score": {
+          "dps": 5.43,
+          "tdo": 35.2
+        },
+        "sourceIds": [
+          "gohub-pikachu"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "026-kanto:NORMAL",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 82,
+        "score": {
+          "dps": 11.18,
+          "tdo": 146.6
+        },
+        "moves": [
+          "THUNDER_SHOCK",
+          "WILD_CHARGE"
+        ],
+        "sourceIds": [
+          "gohub-raichu"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "026-alola:NORMAL",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 68,
+        "score": {
+          "dps": 11.61,
+          "tdo": 155.1
+        },
+        "moves": [
+          "THUNDER_SHOCK",
+          "WILD_CHARGE"
+        ],
+        "sourceIds": [
+          "gohub-raichu-alola"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "026-kanto:MEGA_X",
+        "category": "MEGA",
+        "tier": "NOT_RANKED_NEEDS_REVIEW",
+        "score": {
+          "dps": 15.86,
+          "tdo": 273.2
+        },
+        "moves": [
+          "THUNDER_SHOCK",
+          "WILD_CHARGE"
+        ],
+        "rawNotesZhTw": "GO Hub 已有完整數值頁，但頁面同時顯示團體戰攻擊手未排名；Pokebattler 僅驗證其已進入團體戰模擬，未取得可直接引用的攻擊手總排名。",
+        "sourceIds": [
+          "gohub-mega-raichu-x",
+          "pokebattler-mega-raichu-x"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "026-kanto:MEGA_Y",
+        "category": "MEGA",
+        "tier": "NOT_RANKED_NEEDS_REVIEW",
+        "score": {
+          "dps": 18.64,
+          "tdo": 253.382
+        },
+        "moves": [
+          "THUNDER_SHOCK",
+          "WILD_CHARGE"
+        ],
+        "rawNotesZhTw": "GO Hub 已有完整數值頁，但頁面同時顯示團體戰攻擊手未排名；Pokebattler 僅驗證其已進入團體戰模擬，未取得可直接引用的攻擊手總排名。",
+        "sourceIds": [
+          "gohub-mega-raichu-y",
+          "pokebattler-mega-raichu-y"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "028-kanto:NORMAL",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 72,
+        "score": {
+          "dps": 10.176,
+          "tdo": 175.611
+        },
+        "moves": [
+          "SAND_ATTACK",
+          "SCORCHING_SANDS"
+        ],
+        "sourceIds": [
+          "gohub-sandslash"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "028-kanto:SHADOW",
+        "category": "PVE",
+        "tier": "C",
+        "typeRank": 44,
+        "score": {
+          "dps": 11.91,
+          "tdo": 171.3
+        },
+        "moves": [
+          "SAND_ATTACK",
+          "SCORCHING_SANDS"
+        ],
+        "rawNotesZhTw": "GO Hub 定義為僅在缺少更高階選項時使用。",
+        "sourceIds": [
+          "gohub-shadow-sandslash"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "028-alola:NORMAL",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 76,
+        "score": {
+          "dps": 8.71,
+          "tdo": 166.1
+        },
+        "moves": [
+          "POWDER_SNOW",
+          "BLIZZARD"
+        ],
+        "sourceIds": [
+          "gohub-sandslash-alola"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "028-alola:SHADOW",
+        "category": "PVE",
+        "tier": "D",
+        "typeRank": 57,
+        "score": {
+          "dps": 10.1,
+          "tdo": 160.6
+        },
+        "moves": [
+          "POWDER_SNOW",
+          "BLIZZARD"
+        ],
+        "sourceIds": [
+          "gohub-shadow-sandslash-alola"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "030-kanto:NORMAL",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 141,
+        "score": {
+          "dps": 6.67,
+          "tdo": 78.1
+        },
+        "moves": [
+          "POISON_STING",
+          "SLUDGE_BOMB"
+        ],
+        "sourceIds": [
+          "gohub-nidorina"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "030-kanto:SHADOW",
+        "category": "PVE",
+        "tier": "F",
+        "typeRank": 132,
+        "score": {
+          "dps": 7.46,
+          "tdo": 72.7
+        },
+        "moves": [
+          "POISON_STING",
+          "SLUDGE_BOMB"
+        ],
+        "sourceIds": [
+          "gohub-shadow-nidorina"
+        ],
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "gym": [
+      {
+        "battleVariant": "018-kanto:NORMAL",
+        "rating": "LOW",
+        "rawTier": "D",
+        "bulkMetric": "30.0k",
+        "sourceIds": [
+          "gohub-gym-defenders"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "020-alola:NORMAL",
+        "rating": "LOW",
+        "rawTier": "F",
+        "rawRank": 334,
+        "sourceIds": [
+          "gohub-raticate-alola"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "022-kanto:NORMAL",
+        "rating": "LOW",
+        "rawNotesZhTw": "GO Hub 文字指出身板脆弱、守館不推薦。",
+        "sourceIds": [
+          "gohub-fearow"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "024-kanto:NORMAL",
+        "rating": "LOW",
+        "rawTier": "F",
+        "rawRank": 464,
+        "sourceIds": [
+          "gohub-arbok"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "026-kanto:NORMAL",
+        "rating": "LOW",
+        "rawTier": "F",
+        "rawRank": 474,
+        "sourceIds": [
+          "gohub-raichu"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "026-alola:NORMAL",
+        "rating": "LOW",
+        "rawTier": "F",
+        "rawRank": 455,
+        "sourceIds": [
+          "gohub-raichu-alola"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "028-kanto:NORMAL",
+        "rating": "LOW",
+        "rawTier": "D",
+        "rawRank": 225,
+        "sourceIds": [
+          "gohub-sandslash"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "028-alola:NORMAL",
+        "rating": "LOW",
+        "rawTier": "C",
+        "rawRank": 143,
+        "bulkMetric": "35.3k",
+        "rawNotesZhTw": "雖 bulk 表為 C，但頁面文字明確指出格鬥與火雙重弱點，不建議守館；不可因 C 級改判 KEEP。",
+        "sourceIds": [
+          "gohub-gym-defenders",
+          "gohub-sandslash-alola"
+        ],
+        "checkedAt": "2026-07-15"
+      }
+    ],
+    "maxBattle": [
+      {
+        "battleVariant": "025-kanto:GIGANTAMAX",
+        "category": "MAX_BATTLE",
+        "status": "NEEDS_REVIEW",
+        "rawNotesZhTw": "G-Max Volt Crash 頁面給出 350 基礎威力；Gigantamax Toxtricity 分析稱 GMax Pikachu 是另一個電系 GMax 且輸出較低。但 GO Hub 直接 /pokemon/25-Gigantamax 頁顯示尚未提供、一般 Pikachu 頁又寫不能 Dynamax，來源內部矛盾，不能填精確 tier/rank。",
+        "sourceIds": [
+          "gohub-gmax-volt-crash",
+          "gohub-gmax-toxtricity",
+          "gohub-pikachu"
+        ],
+        "checkedAt": "2026-07-15"
+      },
+      {
+        "battleVariant": "025-kanto:DYNAMAX",
+        "category": "MAX_BATTLE",
+        "status": "NEEDS_REVIEW",
+        "rawNotesZhTw": "本輪未取得能同時證明玩家可用型態與其攻擊／坦克 tier 的一致第三方原始頁；Max Boss counter 頁不能反推玩家持有型態。",
+        "sourceIds": [
+          "gohub-pikachu"
+        ],
+        "checkedAt": "2026-07-15"
+      }
+    ]
+  },
+  "proposedConclusions": [
+    {
+      "dex": "016",
+      "formId": "016-kanto",
+      "nameZhTw": "波波",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "本體未列入 PvPoke 三大聯盟總排名；主要價值是進化為大比鳥並挑選 Mega 候選。一般／暗影／淨化不可合併；暗影進化後 PvE 仍為 F 級。",
+      "variantNotes": {
+        "NORMAL": "只留少量好 IV／15 攻 Mega 候選或 PvP 進化候選。",
+        "SHADOW": "進化後暗影大比鳥 PvE F 級、PvP 也低於普通版，沒有普遍囤積理由。",
+        "PURIFIED": "Return 未被本期主流大比鳥招式採用；仍需以實際招式與 Mega 資格規則審核。"
+      }
+    },
+    {
+      "dex": "017",
+      "formId": "017-kanto",
+      "nameZhTw": "比比鳥",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "GL 普通 #683／暗影 #659，戰鬥本體價值低；主要保留理由同樣是進化為大比鳥／Mega 候選。"
+    },
+    {
+      "dex": "018",
+      "formId": "018-kanto",
+      "nameZhTw": "大比鳥",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "普通 GL #156、UL #294；暗影 GL #289、UL #315。PvP 不是主要開放聯盟核心；Mega 具飛行輸出及團隊增益，建議少量高 IV／15 攻。Gust 與 Wing Attack 為 legacy／Elite TM 類招式。",
+      "variantNotes": {
+        "NORMAL": "條件式保留 PvP 個體及一隻 Mega 候選。",
+        "SHADOW": "PvE 飛行 F#78，非主要暗影打手。",
+        "PURIFIED": "無專屬 PvP 排名；Return 不在本期推薦招式中，需個別審核。",
+        "MEGA": "建議保留一隻高 IV／15 攻；相對飛行系強度來源說法不同，confidence 降為 MEDIUM。"
+      }
+    },
+    {
+      "dex": "019",
+      "formId": "019-kanto",
+      "nameZhTw": "小拉達",
+      "proposedDecision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "本體未列入三大聯盟；進化後關都拉達 GL #957，PvE F 級。一般、暗影及淨化均沒有本輪驗證出的主要戰鬥用途。"
+    },
+    {
+      "dex": "019",
+      "formId": "019-alola",
+      "nameZhTw": "小拉達（阿羅拉）",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "本體未列入三大聯盟；進化後阿羅拉拉達僅 GL 中後段。若目標是淨化後 Return 招式組或特殊盃，可留少量，不宜因普通高 IV 囤積。"
+    },
+    {
+      "dex": "020",
+      "formId": "020-kanto",
+      "nameZhTw": "拉達",
+      "proposedDecision": "TRANSFER_CANDIDATE",
+      "confidence": "HIGH",
+      "summaryZhTw": "普通 GL #957、暗影 #998；UL／ML 未列入，普通 PvE 為一般系 F#159。沒有主要 PvP、PvE、Mega 或道館理由。"
+    },
+    {
+      "dex": "020",
+      "formId": "020-alola",
+      "nameZhTw": "拉達（阿羅拉）",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "普通 GL #355（推薦組含 purified-only Return）、暗影 #542；UL 約 #815。僅淨化 Return／特殊盃可能有條件價值。PvPoke 的 normal speciesId 不等於普通個體能取得 Return，資料匯入時必須拆成 PURIFIED。"
+    },
+    {
+      "dex": "021",
+      "formId": "021-kanto",
+      "nameZhTw": "烈雀",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "HIGH",
+      "summaryZhTw": "本體未列入三大聯盟；主要用途是進化成目前 PvPoke GL #20、editorScore 92 的大嘴雀。只需保留適合進化後 GL 的 PvP IV 個體。"
+    },
+    {
+      "dex": "022",
+      "formId": "022-kanto",
+      "nameZhTw": "大嘴雀",
+      "proposedDecision": "KEEP",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "PvPoke 2026-07-03 排名檔為 GL #20、score 90.7、editorScore 92，推薦 Peck／Drill Peck／Drill Run；UL #351。GO Hub 等級欄也為 S#23，但其敘述仍稱低價值且混入舊招式，構成明顯新舊資料衝突。PvE F#93、道館低，保留理由只來自當季 GL。"
+    },
+    {
+      "dex": "023",
+      "formId": "023-kanto",
+      "nameZhTw": "阿柏蛇",
+      "proposedDecision": "TRANSFER_CANDIDATE",
+      "confidence": "HIGH",
+      "summaryZhTw": "本體未列入三大聯盟；進化後阿柏怪普通 GL #804、暗影 #890，PvE 與道館皆 F。沒有驗證出的主要戰鬥理由。"
+    },
+    {
+      "dex": "024",
+      "formId": "024-kanto",
+      "nameZhTw": "阿柏怪",
+      "proposedDecision": "TRANSFER_CANDIDATE",
+      "confidence": "HIGH",
+      "summaryZhTw": "普通 GL #804／UL #786；暗影 GL #890／UL #812。PvE 毒系 F#90、道館 F#464。一般高 IV 不會改變物種用途。"
+    },
+    {
+      "dex": "025",
+      "formId": "025-kanto",
+      "nameZhTw": "皮卡丘",
+      "proposedDecision": "NEEDS_REVIEW",
+      "confidence": "LOW",
+      "summaryZhTw": "一般本體未列入三大聯盟且團體戰未排名；可進化為雷丘並進一步作 Mega 候選。Gigantamax／Dynamax 的 GO Hub 頁面彼此矛盾，G-Max Volt Crash 只驗證招式數值，不能據此完成型態 tier。普通、Dynamax、Gigantamax 必須獨立。"
+    },
+    {
+      "dex": "026",
+      "formId": "026-kanto",
+      "nameZhTw": "雷丘",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "普通 GL #217、UL #207，具條件式 PvP 用途；PvE 電系 F#82、道館 F#474。Mega X／Y 已有 GO Hub 與 Pokebattler 模擬頁，但總排名未完成：建議暫留一隻高 IV／15 攻 Mega 候選並加入 Review Queue。",
+      "variantNotes": {
+        "NORMAL": "條件式 PvP；普通高 IV不是 PvE保留理由。",
+        "SHADOW": "PvPoke 當期排名檔未列出，推出狀態交由官方來源核對。",
+        "PURIFIED": "無專屬排名；不可把普通 speciesId 自動視作淨化。",
+        "MEGA_X": "GO Hub 15.86 DPS／273.2 TDO，但 tier 未知。",
+        "MEGA_Y": "GO Hub 18.64 DPS／253.382 TDO，但 tier 未知。"
+      }
+    },
+    {
+      "dex": "026",
+      "formId": "026-alola",
+      "nameZhTw": "雷丘（阿羅拉）",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "HIGH",
+      "summaryZhTw": "GL #415、UL #245；GO Hub 明示 Open GL 不佳但有限制盃用途，UL 需大量 XL 且不建議。PvE 電系 F#68、道館 F#455。只留特殊盃或明確 PvP IV 個體。"
+    },
+    {
+      "dex": "027",
+      "formId": "027-kanto",
+      "nameZhTw": "穿山鼠",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "普通 GL #651、暗影 #645；本體價值低。可保留少量進化成穿山王的 UL／暗影過渡地面打手候選，但不宜大量保留。"
+    },
+    {
+      "dex": "027",
+      "formId": "027-alola",
+      "nameZhTw": "穿山鼠（阿羅拉）",
+      "proposedDecision": "KEEP",
+      "confidence": "HIGH",
+      "summaryZhTw": "本體 GL 普通 #343、暗影 #356；更重要的是進化後阿羅拉穿山王在 GL／UL 均有明確競爭力。保留普通與暗影各自的好 PvP IV 進化候選。"
+    },
+    {
+      "dex": "028",
+      "formId": "028-kanto",
+      "nameZhTw": "穿山王",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "普通 GL #387、UL #205；暗影 GL #463、UL #375。普通 PvE F#72；暗影地面 C#44，僅缺更佳地面打手時過渡。Night Slash 為 legacy／Elite TM 類招式。"
+    },
+    {
+      "dex": "028",
+      "formId": "028-alola",
+      "nameZhTw": "穿山王（阿羅拉）",
+      "proposedDecision": "KEEP",
+      "confidence": "HIGH",
+      "summaryZhTw": "普通 GL #121／UL #93；暗影 GL #137／UL #83，兩版均有明確 PvP 價值。PvE 僅 F／D，不是保留主因；道館 bulk C 但有格鬥、火雙重弱點，仍評 LOW。PvP 當期推薦 Powder Snow／Ice Punch／Drill Run，不強制 legacy Shadow Claw。"
+    },
+    {
+      "dex": "029",
+      "formId": "029-kanto",
+      "nameZhTw": "尼多蘭♀",
+      "proposedDecision": "NEEDS_REVIEW",
+      "confidence": "LOW",
+      "summaryZhTw": "本體未列入三大聯盟；可進化為尼多娜，再進化為 #031 尼多后。依批次限制未研究 #031，後續進化價值不可猜測，暫列需要重新確認。"
+    },
+    {
+      "dex": "030",
+      "formId": "030-kanto",
+      "nameZhTw": "尼多娜",
+      "proposedDecision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "summaryZhTw": "普通 GL #358、暗影 #409；PvE 普通毒系 F#141、暗影 F#132。普通 max CP 1480，GO Hub 指定 GL 最佳 IV 為 15/15/15，不能套用典型低攻 IV。另有 #031 後續進化價值尚未於本批研究。"
+    }
+  ],
+  "sourceConflicts": [
+    {
+      "entity": "022-kanto:NORMAL",
+      "category": "PVP",
+      "severity": "HIGH",
+      "summaryZhTw": "PvPoke 當期原始排名與 editor note 把大嘴雀列為 GL #20、當季前線；GO Hub 等級欄近似 S#23，但同頁敘述仍說幾乎沒有競爭力並引用不一致招式。採 PvPoke 原始檔作排名，confidence 降為 MEDIUM，GO Hub 敘述標記疑似未同步。",
+      "sourceIds": [
+        "pvpoke-gl-json",
+        "gohub-fearow"
+      ]
+    },
+    {
+      "entity": "018-kanto:MEGA",
+      "category": "PVE",
+      "severity": "MEDIUM",
+      "summaryZhTw": "GO Hub 稱 top-tier；Pokebattler 文章稱相較其他飛行系不特別強。兩者都支持團隊增益價值，但相對輸出 tier 不一致。",
+      "sourceIds": [
+        "gohub-mega-pidgeot",
+        "pokebattler-mega-pidgeot-guide"
+      ]
+    },
+    {
+      "entity": "025-kanto:GIGANTAMAX",
+      "category": "MAX_BATTLE",
+      "severity": "HIGH",
+      "summaryZhTw": "GO Hub 的 GMax Toxtricity 分析與 G-Max Volt Crash 招式頁暗示 GMax Pikachu 存在，但直接 Gigantamax Pikachu URL 顯示尚未提供、一般 Pikachu 頁寫不能 Dynamax。必須用官方發布與可用玩家型態頁重新核對。",
+      "sourceIds": [
+        "gohub-gmax-toxtricity",
+        "gohub-gmax-volt-crash",
+        "gohub-pikachu"
+      ]
+    },
+    {
+      "entity": "026-kanto:MEGA_X/MEGA_Y",
+      "category": "PVE",
+      "severity": "MEDIUM",
+      "summaryZhTw": "GO Hub 提供招式 DPS/TDO，但攻擊手 tier 顯示未排名；Pokebattler 已有 boss 模擬頁，仍不足以建立攻擊手總排名。",
+      "sourceIds": [
+        "gohub-mega-raichu-x",
+        "gohub-mega-raichu-y",
+        "pokebattler-mega-raichu-x",
+        "pokebattler-mega-raichu-y"
+      ]
+    },
+    {
+      "entity": "020-alola:NORMAL/PURIFIED",
+      "category": "PVP",
+      "severity": "HIGH",
+      "summaryZhTw": "PvPoke 的 raticate_alolan entry 推薦 Return，但 Return 只能來自淨化；不能把該排名原樣寫入普通版。需要將該 raw row 指向 PURIFIED，普通版另跑不含 Return 的模擬。",
+      "sourceIds": [
+        "pvpoke-gl-json"
+      ]
+    }
+  ],
+  "reviewGaps": [
+    "火箭隊用途在 PvPoke、Pokebattler、GO Hub 本輪原始頁中沒有一致的專門排名；所有 #016～#030 ROCKET 欄位應先 NEEDS_REVIEW，而不是從 PvP/PvE 分數直接推算。",
+    "PvPoke 當期 overall 檔未列出的幼體不等於所有特殊盃都無用；僅能記錄 NOT_LISTED，特殊盃另批研究。",
+    "Purified 沒有獨立 speciesId；只有 Return 推薦時可確認招式差異，普通與淨化不能共用結論。",
+    "Max Boss counter 頁只表示該物種可作 Boss 模擬目標，不能證明玩家可持有對應 Dynamax 型態。",
+    "依批次上限未研究 #031 尼多后；#029／#030 的後續進化價值保留 NEEDS_REVIEW。"
+  ]
+}

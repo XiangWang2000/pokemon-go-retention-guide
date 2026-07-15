@@ -1,0 +1,11 @@
+{
+  "lint": "通過（0 errors, 0 warnings）",
+  "typecheck": "通過",
+  "unitTests": "通過（7 files, 43 tests）",
+  "integrationTests": "通過（1 file, 4 tests）",
+  "dataValidation": "通過（30 species, 35 forms, 153 variants, 123 raw records, 1071 category statuses, 107 sources）",
+  "migration": "通過（3 migrations, no pending migrations）",
+  "seed": "通過（既有 30 筆物種時安全略過，不清空歷史資料）",
+  "productionBuild": "通過（Next.js 16.2.10）",
+  "uiSmoke": "通過（首頁中文搜尋、Fearow #20、Review Queue 影響與處理欄、GMax Butterfree 分維度與無衝突狀態）"
+}

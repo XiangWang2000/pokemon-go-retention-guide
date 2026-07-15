@@ -1,0 +1,584 @@
+{
+  "batch": "001-015",
+  "researchType": "LIVE_THIRD_PARTY_BATTLE_RESEARCH",
+  "researchedAt": "2026-07-15",
+  "timezone": "Asia/Taipei",
+  "scope": "PvPoke GL/UL/ML/Little、GO Hub PvE/Mega/Max/道館、Pokebattler 原始頁可用性檢查；普通、暗影、淨化、Mega、Dynamax、Gigantamax 分開。",
+  "methodNotes": [
+    "PvP 精確排名直接讀取 PvPoke 官方 GitHub repository 的 JSON，而非搜尋摘要。",
+    "PvP rank 是物種在指定聯盟資料集中的名次，不是同物種 IV Rank。",
+    "GO Hub 的頁面內容直接開啟後記錄；搜尋摘要僅用來找 URL，不作證據。",
+    "Pokebattler 攻擊手頁為依 Raid Boss/moveset 聚合的動態頁，並非全域攻擊手 tier；本批開啟頁面時表格還出現其他物種資料，因此不把該表格轉成全域排名。",
+    "淨化個體沒有獨立 PvPoke speciesId；generic species entry 可能混入 Return。無法可靠拆分時標記 NEEDS_REVIEW。",
+    "Max 個體與普通舊個體分開；Dynamax 家族的前階價值只可推到同一 Dynamax 進化線，不可推成 Gigantamax。"
+  ],
+  "versions": {
+    "pvpoke": {
+      "repositoryCommit": "caafd09972142cb32bd244dd72957d683d7e56f0",
+      "commitDateUtc": "2026-07-14T01:17:03Z",
+      "commitTitle": "Devon Chrysalis Cup",
+      "webFooterVersionObserved": "1.37.3.23",
+      "seasonOrVersion": "Latest/open leagues; repository master commit caafd09972142cb32bd244dd72957d683d7e56f0"
+    },
+    "goHub": {
+      "seasonOrVersion": "Live database pages accessed 2026-07-15; site footer © 2017-2026",
+      "warning": "GO Hub PvP tier labels are derived from PvPoke but may lag the repository JSON; use raw PvPoke JSON for exact PvP rank."
+    },
+    "pokebattler": {
+      "seasonOrVersion": "Live dynamic attacker pages accessed 2026-07-15",
+      "warning": "No global attacker rank was extracted; only page availability and boss-dependent methodology were verified."
+    }
+  },
+  "sources": [
+    {
+      "id": "GOHUB_001",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Bulbasaur: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/1",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_004",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Charmander: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/4",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_007",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Squirtle: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/7",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_008",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "GYM",
+      "sourceTitleOriginal": "Wartortle: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/8",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "PVP_GL_CAAD",
+      "sourceName": "PvPoke",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "pvpoke/pvpoke - rankings-1500.json",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://raw.githubusercontent.com/pvpoke/pvpoke/caafd09972142cb32bd244dd72957d683d7e56f0/src/data/rankings/all/overall/rankings-1500.json",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2026-07-14T01:17:03Z",
+      "dataVersion": "caafd09972142cb32bd244dd72957d683d7e56f0"
+    },
+    {
+      "id": "PVP_UL_CAAD",
+      "sourceName": "PvPoke",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "pvpoke/pvpoke - rankings-2500.json",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://raw.githubusercontent.com/pvpoke/pvpoke/caafd09972142cb32bd244dd72957d683d7e56f0/src/data/rankings/all/overall/rankings-2500.json",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2026-07-14T01:17:03Z",
+      "dataVersion": "caafd09972142cb32bd244dd72957d683d7e56f0"
+    },
+    {
+      "id": "PVP_ML_CAAD",
+      "sourceName": "PvPoke",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "pvpoke/pvpoke - rankings-10000.json",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://raw.githubusercontent.com/pvpoke/pvpoke/caafd09972142cb32bd244dd72957d683d7e56f0/src/data/rankings/all/overall/rankings-10000.json",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2026-07-14T01:17:03Z",
+      "dataVersion": "caafd09972142cb32bd244dd72957d683d7e56f0"
+    },
+    {
+      "id": "PVP_LITTLE_CAAD",
+      "sourceName": "PvPoke",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "pvpoke/pvpoke - little/overall/rankings-500.json",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://raw.githubusercontent.com/pvpoke/pvpoke/caafd09972142cb32bd244dd72957d683d7e56f0/src/data/rankings/little/overall/rankings-500.json",
+      "accessedAt": "2026-07-15",
+      "publishedAt": "2026-07-14T01:17:03Z",
+      "dataVersion": "caafd09972142cb32bd244dd72957d683d7e56f0"
+    },
+    {
+      "id": "GOHUB_003",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Venusaur: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/3",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_006",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Charizard: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/6",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_009",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Blastoise: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/9",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_012",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Butterfree: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/12",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_015",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Beedrill: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/15",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_SHADOW_003",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Venusaur: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/3-Shadow",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_SHADOW_006",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Charizard: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/6-Shadow",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_SHADOW_009",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Blastoise: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/9-Shadow",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_SHADOW_012",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Butterfree: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/12-Shadow",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_SHADOW_015",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Beedrill: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/15-Shadow",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_MEGA_003",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Mega Venusaur: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/3-Mega",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_MEGA_006_X",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Mega Charizard X: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/6-Mega_X",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_MEGA_006_Y",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Mega Charizard Y: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/6-Mega_Y",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_MEGA_009",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Mega Blastoise: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/9-Mega",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_MEGA_015",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Mega Beedrill: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/15-Mega",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_DMAX_003",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Dynamax Venusaur: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/3-Dynamax",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_DMAX_006",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Dynamax Charizard: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/6-Dynamax",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_DMAX_009",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Dynamax Blastoise: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/9-Dynamax",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_DMAX_012",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Dynamax Butterfree: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/12-Dynamax",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_GMAX_003",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Gigantamax Venusaur: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/3-Gigantamax",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_GMAX_006",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Gigantamax Charizard: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/6-Gigantamax",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_GMAX_009",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Gigantamax Blastoise: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/9-Gigantamax",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_GMAX_012",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Gigantamax Butterfree: Best Moveset, Counters & Max CP | Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/12-Gigantamax",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "GOHUB_DMAX_LIST",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live"
+    },
+    {
+      "id": "POKEBATTLER_003",
+      "sourceName": "Pokebattler",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Venusaur - Raid Attacker Pokemon GO | Pokebattler",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.pokebattler.com/raids/attackers/details/VENUSAUR",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live dynamic page",
+      "notes": "頁面確認為 boss-dependent attacker analysis；開啟時 Available Moves 區出現 Shadow Mamoswine，未用於 Venusaur 全域排名。"
+    },
+    {
+      "id": "POKEBATTLER_006",
+      "sourceName": "Pokebattler",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Charizard - Raid Attacker Pokemon GO | Pokebattler",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.pokebattler.com/raids/attackers/details/CHARIZARD",
+      "accessedAt": "2026-07-15",
+      "dataVersion": "live dynamic page",
+      "notes": "頁面確認為 boss-dependent attacker analysis；開啟時 Available Moves 區出現 Mega Blaziken，未用於 Charizard 全域排名。"
+    }
+  ],
+  "pvpRankings": [
+    {"battleVariantId":"009-kanto:NORMAL","league":"GREAT","rank":51,"score":89.3,"recommendedMoves":["ROLLOUT","HYDRO_CANNON","SKULL_BASH"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"009-kanto:SHADOW","league":"GREAT","rank":181,"score":84.5,"recommendedMoves":["ROLLOUT","HYDRO_CANNON","SKULL_BASH"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"003-kanto:NORMAL","league":"GREAT","rank":248,"score":82.2,"recommendedMoves":["VINE_WHIP","FRENZY_PLANT","SLUDGE"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"008-kanto:NORMAL","league":"GREAT","rank":252,"score":82.1,"recommendedMoves":["WATER_GUN","AQUA_JET","ICE_BEAM"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"003-kanto:SHADOW","league":"GREAT","rank":333,"score":80.0,"recommendedMoves":["VINE_WHIP","FRENZY_PLANT","SLUDGE"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"006-kanto:SHADOW","league":"GREAT","rank":372,"score":79.0,"recommendedMoves":["EMBER","BLAST_BURN","AIR_CUTTER"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"008-kanto:SHADOW","league":"GREAT","rank":374,"score":79.0,"recommendedMoves":["WATER_GUN","AQUA_JET","ICE_BEAM"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"006-kanto:NORMAL","league":"GREAT","rank":432,"score":77.4,"recommendedMoves":["EMBER","BLAST_BURN","AIR_CUTTER"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"015-kanto:NORMAL","league":"GREAT","rank":472,"score":76.6,"recommendedMoves":["POISON_STING","X_SCISSOR","DRILL_RUN"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"015-kanto:SHADOW","league":"GREAT","rank":483,"score":76.3,"recommendedMoves":["POISON_STING","X_SCISSOR","DRILL_RUN"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"005-kanto:SHADOW","league":"GREAT","rank":662,"score":72.0,"recommendedMoves":["EMBER","FIRE_PUNCH","FLAMETHROWER"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"005-kanto:PURIFIED","league":"GREAT","rank":713,"score":70.3,"recommendedMoves":["EMBER","FIRE_PUNCH","RETURN"],"sourceId":"PVP_GL_CAAD","rawNotes":"PvPoke generic charmeleon entry uses Return; this row is mapped to PURIFIED, while a separate NORMAL rank was not available."},
+    {"battleVariantId":"002-kanto:NORMAL","league":"GREAT","rank":716,"score":70.2,"recommendedMoves":["VINE_WHIP","POWER_WHIP","SLUDGE_BOMB"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"002-kanto:SHADOW","league":"GREAT","rank":851,"score":65.4,"recommendedMoves":["VINE_WHIP","POWER_WHIP","SLUDGE_BOMB"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"001-kanto:NORMAL","league":"GREAT","rank":1040,"score":56.9,"recommendedMoves":["VINE_WHIP","POWER_WHIP","SEED_BOMB"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"001-kanto:SHADOW","league":"GREAT","rank":1105,"score":48.6,"recommendedMoves":["VINE_WHIP","POWER_WHIP","SLUDGE_BOMB"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"012-kanto:NORMAL","league":"GREAT","rank":1119,"score":44.7,"recommendedMoves":["CONFUSION","BUG_BUZZ","SIGNAL_BEAM"],"sourceId":"PVP_GL_CAAD"},
+    {"battleVariantId":"012-kanto:SHADOW","league":"GREAT","rank":1120,"score":44.6,"recommendedMoves":["CONFUSION","BUG_BUZZ","SIGNAL_BEAM"],"sourceId":"PVP_GL_CAAD"},
+
+    {"battleVariantId":"009-kanto:NORMAL","league":"ULTRA","rank":22,"score":90.6,"recommendedMoves":["ROLLOUT","HYDRO_CANNON","SKULL_BASH"],"sourceId":"PVP_UL_CAAD"},
+    {"battleVariantId":"009-kanto:SHADOW","league":"ULTRA","rank":77,"score":88.2,"recommendedMoves":["ROLLOUT","HYDRO_CANNON","ICE_BEAM"],"sourceId":"PVP_UL_CAAD"},
+    {"battleVariantId":"006-kanto:NORMAL","league":"ULTRA","rank":206,"score":82.8,"recommendedMoves":["DRAGON_BREATH","BLAST_BURN","AIR_CUTTER"],"sourceId":"PVP_UL_CAAD"},
+    {"battleVariantId":"003-kanto:NORMAL","league":"ULTRA","rank":224,"score":82.5,"recommendedMoves":["VINE_WHIP","FRENZY_PLANT","SLUDGE"],"sourceId":"PVP_UL_CAAD"},
+    {"battleVariantId":"003-kanto:SHADOW","league":"ULTRA","rank":225,"score":82.5,"recommendedMoves":["VINE_WHIP","FRENZY_PLANT","SLUDGE"],"sourceId":"PVP_UL_CAAD"},
+    {"battleVariantId":"006-kanto:SHADOW","league":"ULTRA","rank":239,"score":82.0,"recommendedMoves":["DRAGON_BREATH","BLAST_BURN","AIR_CUTTER"],"sourceId":"PVP_UL_CAAD"},
+    {"battleVariantId":"015-kanto:SHADOW","league":"ULTRA","rank":717,"score":62.2,"recommendedMoves":["POISON_STING","DRILL_RUN","X_SCISSOR"],"sourceId":"PVP_UL_CAAD"},
+    {"battleVariantId":"015-kanto:NORMAL","league":"ULTRA","rank":720,"score":62.0,"recommendedMoves":["POISON_STING","DRILL_RUN","X_SCISSOR"],"sourceId":"PVP_UL_CAAD"},
+
+    {"battleVariantId":"006-kanto:NORMAL","league":"MASTER","rank":187,"score":65.5,"recommendedMoves":["DRAGON_BREATH","BLAST_BURN","AIR_CUTTER"],"sourceId":"PVP_ML_CAAD"},
+    {"battleVariantId":"006-kanto:SHADOW","league":"MASTER","rank":208,"score":62.8,"recommendedMoves":["DRAGON_BREATH","BLAST_BURN","DRAGON_CLAW"],"sourceId":"PVP_ML_CAAD"},
+    {"battleVariantId":"003-kanto:SHADOW","league":"MASTER","rank":263,"score":57.6,"recommendedMoves":["VINE_WHIP","FRENZY_PLANT","SLUDGE"],"sourceId":"PVP_ML_CAAD"},
+    {"battleVariantId":"003-kanto:NORMAL","league":"MASTER","rank":283,"score":56.5,"recommendedMoves":["VINE_WHIP","FRENZY_PLANT","SLUDGE"],"sourceId":"PVP_ML_CAAD"},
+    {"battleVariantId":"009-kanto:NORMAL","league":"MASTER","rank":306,"score":54.0,"recommendedMoves":["ROLLOUT","HYDRO_CANNON","ICE_BEAM"],"sourceId":"PVP_ML_CAAD"},
+    {"battleVariantId":"009-kanto:SHADOW","league":"MASTER","rank":317,"score":52.2,"recommendedMoves":["ROLLOUT","HYDRO_CANNON","ICE_BEAM"],"sourceId":"PVP_ML_CAAD"},
+
+    {"battleVariantId":"007-kanto:NORMAL","league":"SPECIAL_CUP","rank":104,"score":72.6,"recommendedMoves":["BUBBLE","AQUA_TAIL","AQUA_JET"],"seasonOrVersion":"Little Cup generic 500 CP","sourceId":"PVP_LITTLE_CAAD"},
+    {"battleVariantId":"007-kanto:SHADOW","league":"SPECIAL_CUP","rank":146,"score":70.9,"recommendedMoves":["BUBBLE","AQUA_TAIL","AQUA_JET"],"seasonOrVersion":"Little Cup generic 500 CP","sourceId":"PVP_LITTLE_CAAD"},
+    {"battleVariantId":"004-kanto:SHADOW","league":"SPECIAL_CUP","rank":151,"score":70.7,"recommendedMoves":["EMBER","FLAME_CHARGE","FLAMETHROWER"],"seasonOrVersion":"Little Cup generic 500 CP","sourceId":"PVP_LITTLE_CAAD"},
+    {"battleVariantId":"004-kanto:NORMAL","league":"SPECIAL_CUP","rank":213,"score":67.5,"recommendedMoves":["EMBER","FLAME_CHARGE","FLAMETHROWER"],"seasonOrVersion":"Little Cup generic 500 CP","sourceId":"PVP_LITTLE_CAAD"},
+    {"battleVariantId":"001-kanto:NORMAL","league":"SPECIAL_CUP","rank":275,"score":64.3,"recommendedMoves":["VINE_WHIP","SEED_BOMB","SLUDGE_BOMB"],"seasonOrVersion":"Little Cup generic 500 CP","sourceId":"PVP_LITTLE_CAAD"},
+    {"battleVariantId":"001-kanto:SHADOW","league":"SPECIAL_CUP","rank":335,"score":59.5,"recommendedMoves":["VINE_WHIP","POWER_WHIP","SLUDGE_BOMB"],"seasonOrVersion":"Little Cup generic 500 CP","sourceId":"PVP_LITTLE_CAAD"},
+    {"battleVariantId":"013-kanto:SHADOW","league":"SPECIAL_CUP","rank":365,"score":56.4,"recommendedMoves":["BUG_BITE","STRUGGLE","FRUSTRATION"],"seasonOrVersion":"Little Cup generic 500 CP","sourceId":"PVP_LITTLE_CAAD"},
+    {"battleVariantId":"013-kanto:PURIFIED","league":"SPECIAL_CUP","rank":366,"score":56.3,"recommendedMoves":["BUG_BITE","RETURN","STRUGGLE"],"seasonOrVersion":"Little Cup generic 500 CP","sourceId":"PVP_LITTLE_CAAD","rawNotes":"PvPoke generic weedle entry uses Return; mapped to PURIFIED."},
+    {"battleVariantId":"010-kanto:NORMAL","league":"SPECIAL_CUP","rank":371,"score":55.3,"recommendedMoves":["BUG_BITE","STRUGGLE"],"seasonOrVersion":"Little Cup generic 500 CP","sourceId":"PVP_LITTLE_CAAD"}
+  ],
+  "pveFindings": [
+    {"battleVariantId":"003-kanto:NORMAL","category":"PVE","tier":"A","rank":24,"ratingScope":"GRASS_ATTACKER","recommendedMoves":["VINE_WHIP","FRENZY_PLANT"],"rawNotes":"Overall Raid Attacker not ranked; Poison D Tier #51.","sourceId":"GOHUB_003"},
+    {"battleVariantId":"003-kanto:SHADOW","category":"PVE","tier":"S","rank":8,"ratingScope":"GRASS_ATTACKER","recommendedMoves":["VINE_WHIP","FRENZY_PLANT"],"rawNotes":"Overall Raid C Tier #152; Poison A Tier #30. GO Hub says high-IV, especially 15 ATK, is worth investment/Elite Charged TM; lower bulk than Mega.","sourceId":"GOHUB_SHADOW_003"},
+    {"battleVariantId":"003-kanto:MEGA","category":"MEGA","tier":"S","rank":2,"ratingScope":"GRASS_ATTACKER","recommendedMoves":["VINE_WHIP","FRENZY_PLANT"],"rawNotes":"Overall Raid B Tier #123; Poison A+ Tier #18.","sourceId":"GOHUB_MEGA_003"},
+
+    {"battleVariantId":"006-kanto:NORMAL","category":"PVE","tier":"B","rank":36,"ratingScope":"FIRE_ATTACKER","recommendedMoves":["FIRE_SPIN","BLAST_BURN"],"rawNotes":"Overall Raid Attacker shown as not ranked on opened live page; Flying D Tier #53; GO Hub says base Charizard is outclassed by Blaziken in many raids.","sourceId":"GOHUB_006"},
+    {"battleVariantId":"006-kanto:SHADOW","category":"PVE","tier":"A+","rank":12,"ratingScope":"FIRE_ATTACKER","recommendedMoves":["FIRE_SPIN","BLAST_BURN"],"rawNotes":"Overall Raid B Tier #107; Flying B Tier #33.","sourceId":"GOHUB_SHADOW_006"},
+    {"battleVariantId":"006-kanto:MEGA_X","category":"MEGA","tier":"S","rank":6,"ratingScope":"FIRE_ATTACKER","recommendedMoves":["FIRE_SPIN","BLAST_BURN"],"rawNotes":"Overall Raid A Tier #93; Dragon C Tier #41; GO Hub says Mega Charizard Y generally outclasses X as Fire.","sourceId":"GOHUB_MEGA_006_X"},
+    {"battleVariantId":"006-kanto:MEGA_Y","category":"MEGA","tier":"S","rank":1,"ratingScope":"FIRE_ATTACKER","recommendedMoves":["FIRE_SPIN","BLAST_BURN"],"rawNotes":"Overall Raid A+ Tier #48. Page also labels Flying S #7 using Air Slash/Blast Burn, but its prose says it is outclassed as Flying and should not be used for that role.","sourceId":"GOHUB_MEGA_006_Y"},
+
+    {"battleVariantId":"009-kanto:NORMAL","category":"PVE","tier":"D","rank":59,"ratingScope":"WATER_ATTACKER","recommendedMoves":["WATER_GUN","HYDRO_CANNON"],"rawNotes":"Overall Raid Attacker not ranked; base form described as average.","sourceId":"GOHUB_009"},
+    {"battleVariantId":"009-kanto:SHADOW","category":"PVE","tier":"A","rank":27,"ratingScope":"WATER_ATTACKER","recommendedMoves":["WATER_GUN","HYDRO_CANNON"],"rawNotes":"Overall Raid Attacker not ranked.","sourceId":"GOHUB_SHADOW_009"},
+    {"battleVariantId":"009-kanto:MEGA","category":"MEGA","tier":"S","rank":4,"ratingScope":"WATER_ATTACKER","recommendedMoves":["WATER_GUN","HYDRO_CANNON"],"rawNotes":"Overall Raid B Tier #106; below Primal Kyogre, Mega Swampert and Shadow Kyogre on page, still a strong available Water option.","sourceId":"GOHUB_MEGA_009"},
+
+    {"battleVariantId":"012-kanto:NORMAL","category":"PVE","tier":"F","rank":88,"ratingScope":"BUG_ATTACKER","recommendedMoves":["BUG_BITE","BUG_BUZZ"],"rawNotes":"Overall Raid Attacker not ranked; Bug Bite is legacy.","sourceId":"GOHUB_012"},
+    {"battleVariantId":"012-kanto:SHADOW","category":"PVE","tier":"F","rank":66,"ratingScope":"BUG_ATTACKER","recommendedMoves":["BUG_BITE","BUG_BUZZ"],"rawNotes":"Overall Raid Attacker not ranked; remains low-value despite shadow damage.","sourceId":"GOHUB_SHADOW_012"},
+
+    {"battleVariantId":"015-kanto:NORMAL","category":"PVE","tier":"F","rank":92,"ratingScope":"BUG_ATTACKER","recommendedMoves":["BUG_BITE","X_SCISSOR"],"rawNotes":"Poison F Tier #63; overall Raid Attacker not ranked.","sourceId":"GOHUB_015"},
+    {"battleVariantId":"015-kanto:SHADOW","category":"PVE","tier":"C","rank":46,"ratingScope":"POISON_ATTACKER","recommendedMoves":["POISON_JAB","SLUDGE_BOMB"],"rawNotes":"Bug F Tier #73; overall Raid Attacker not ranked.","sourceId":"GOHUB_SHADOW_015"},
+    {"battleVariantId":"015-kanto:MEGA","category":"MEGA","tier":"S","rank":3,"ratingScope":"POISON_ATTACKER","recommendedMoves":["POISON_JAB","SLUDGE_BOMB"],"rawNotes":"Bug S Tier #7; page FAQ says overall Raid #129/niche, while analysis says it shines as a Poison glass cannon and faces steep Bug competition.","sourceId":"GOHUB_MEGA_015"}
+  ],
+  "maxBattleFindings": [
+    {"battleVariantId":"003-kanto:DYNAMAX","tier":"D","rank":6,"ratingScope":"GRASS_MAX_ATTACKER","recommendedMoves":["VINE_WHIP","MAX_OVERGROWTH"],"rawNotes":"Released on GO Hub live page.","sourceId":"GOHUB_DMAX_003"},
+    {"battleVariantId":"003-kanto:GIGANTAMAX","tier":"B","rank":2,"ratingScope":"GRASS_MAX_ATTACKER","recommendedMoves":["VINE_WHIP","G_MAX_VINE_LASH"],"rawNotes":"Outclassed offensively by Gigantamax Rillaboom, but page calls it worthwhile as an alternative and for defensive typing.","sourceId":"GOHUB_GMAX_003"},
+    {"battleVariantId":"006-kanto:DYNAMAX","tier":"B","rank":3,"ratingScope":"FLYING_MAX_ATTACKER","recommendedMoves":["WING_ATTACK","MAX_AIRSTREAM"],"rawNotes":"Wing Attack is legacy. Page separately discusses Fire/Dragon fast-move utility, but only this per-type rank was exposed.","sourceId":"GOHUB_DMAX_006"},
+    {"battleVariantId":"006-kanto:GIGANTAMAX","tier":"A","rank":2,"ratingScope":"FIRE_MAX_ATTACKER","recommendedMoves":["WING_ATTACK","G_MAX_WILDFIRE"],"rawNotes":"Behind Gigantamax Cinderace in raw attack, but stronger than most Max Fire options; Wing Attack or Dragon Breath are legacy and add matchup utility.","sourceId":"GOHUB_GMAX_006"},
+    {"battleVariantId":"009-kanto:DYNAMAX","tier":"F","rank":17,"ratingScope":"WATER_MAX_ATTACKER","recommendedMoves":["WATER_GUN","MAX_GEYSER"],"rawNotes":"Released; offensive value low in current Water Max list.","sourceId":"GOHUB_DMAX_009"},
+    {"battleVariantId":"009-kanto:GIGANTAMAX","tier":"D","rank":7,"ratingScope":"WATER_MAX_ATTACKER","recommendedMoves":["WATER_GUN","G_MAX_CANNONADE"],"rawNotes":"Page says Inteleon and other Dynamax attackers outperform it; Blissey/Zamazenta are better general tanks and Gigantamax Lapras is a better Water tank. Usable only without better alternatives.","sourceId":"GOHUB_GMAX_009"},
+    {"battleVariantId":"012-kanto:DYNAMAX","tier":"C","rank":4,"ratingScope":"BUG_MAX_ATTACKER","recommendedMoves":["STRUGGLE_BUG","MAX_FLUTTERBY"],"rawNotes":"Released; moderate per-type rank but low base stats.","sourceId":"GOHUB_DMAX_012"},
+    {"battleVariantId":"012-kanto:GIGANTAMAX","tier":"S","rank":1,"ratingScope":"BUG_MAX_ATTACKER","recommendedMoves":["STRUGGLE_BUG","G_MAX_BEFUDDLE"],"rawNotes":"Same live page's prose says it may not be worthwhile to build because of low Attack/overall stats and better options. Treat conclusion as source-internal conflict.","sourceId":"GOHUB_GMAX_012"}
+  ],
+  "gymFindings": [
+    {"battleVariantId":"003-kanto:NORMAL","tier":"C","rank":127,"ratingScope":"GYM_DEFENDER","rawNotes":"Solid but not a retention-driving defender.","sourceId":"GOHUB_003"},
+    {"battleVariantId":"006-kanto:NORMAL","tier":"D","rank":211,"ratingScope":"GYM_DEFENDER","rawNotes":"Double Rock weakness and average bulk; page says not respectable for gym defense.","sourceId":"GOHUB_006"},
+    {"battleVariantId":"008-kanto:NORMAL","tier":"F","rank":463,"ratingScope":"GYM_DEFENDER","rawNotes":"No retention value from gym defense.","sourceId":"GOHUB_008"},
+    {"battleVariantId":"009-kanto:NORMAL","tier":"B","rank":80,"ratingScope":"GYM_DEFENDER","rawNotes":"Not terrible, but page explicitly says better options exist. At most a secondary reason for one copy, not a stockpiling reason.","sourceId":"GOHUB_009"}
+  ],
+  "variantAvailabilityThirdParty": {
+    "normalFormIds": ["001-kanto","002-kanto","003-kanto","004-kanto","005-kanto","006-kanto","007-kanto","008-kanto","009-kanto","010-kanto","011-kanto","012-kanto","013-kanto","014-kanto","015-kanto"],
+    "shadowFormIds": ["001-kanto","002-kanto","003-kanto","004-kanto","005-kanto","006-kanto","007-kanto","008-kanto","009-kanto","010-kanto","011-kanto","012-kanto","013-kanto","014-kanto","015-kanto"],
+    "purifiedFormIds": ["001-kanto","002-kanto","003-kanto","004-kanto","005-kanto","006-kanto","007-kanto","008-kanto","009-kanto","010-kanto","011-kanto","012-kanto","013-kanto","014-kanto","015-kanto"],
+    "dynamaxFormIds": ["001-kanto","002-kanto","003-kanto","004-kanto","005-kanto","006-kanto","007-kanto","008-kanto","009-kanto","010-kanto","011-kanto","012-kanto"],
+    "gigantamaxFormIds": ["003-kanto","006-kanto","009-kanto","012-kanto"],
+    "megaVariants": ["003-kanto:MEGA","006-kanto:MEGA_X","006-kanto:MEGA_Y","009-kanto:MEGA","015-kanto:MEGA"],
+    "notShownInGoHubDynamaxList": ["013-kanto","014-kanto","015-kanto"],
+    "sourceIds": ["GOHUB_003","GOHUB_006","GOHUB_009","GOHUB_012","GOHUB_015","GOHUB_DMAX_LIST"],
+    "reviewStatus": "NEEDS_OFFICIAL_RELEASE_VERIFICATION"
+  },
+  "familyConclusions": [
+    {
+      "familyKey": "BULBASAUR",
+      "dexRange": "001-003",
+      "decisionGuidance": "KEEP_FINAL_AND_EVOLUTION_CANDIDATES",
+      "confidence": "HIGH_FOR_PVE_MEGA_MAX__MEDIUM_FOR_PVP",
+      "summaryZhTw": "一般妙蛙花目前 GL #248、UL #224，並非頂尖開放聯盟；但瘋狂植物是必要招式。暗影妙蛙花為草系 S Tier #8，Mega 妙蛙花為草系 S Tier #2；超極巨妙蛙花為草系 Max #2（B Tier），因此前階仍有明確進化用途。普通前階本體戰鬥排名低，不因漂亮高 IV 自動保留大量。",
+      "ivDirectionZhTw": "PvP 候選依實際 GL/UL IV Rank；暗影 PvE 優先高攻、尤其 15 攻；Mega／Max 候選保留少量高 IV／15 攻。",
+      "requiredMovesZhTw": "瘋狂植物（legacy/event/Elite Charged TM）；目前 PvPoke 推薦 Vine Whip/Frenzy Plant/Sludge。",
+      "sourceIds": ["PVP_GL_CAAD","PVP_UL_CAAD","PVP_ML_CAAD","GOHUB_003","GOHUB_SHADOW_003","GOHUB_MEGA_003","GOHUB_DMAX_003","GOHUB_GMAX_003"]
+    },
+    {
+      "familyKey": "CHARMANDER",
+      "dexRange": "004-006",
+      "decisionGuidance": "KEEP_CONDITIONALLY_BY_VARIANT_AND_MOVES",
+      "confidence": "HIGH_FOR_PVE_MEGA_MAX__MEDIUM_FOR_PVP",
+      "summaryZhTw": "一般噴火龍 GL #432、UL #206、ML #187，開放聯盟不屬頂尖；暗影火系 A+ #12。Mega Y 是火系 S Tier #1，Mega X 火系 S Tier #6；超極巨噴火龍為火系 Max #2（A Tier）。前階有進化價值，但需分清普通、暗影、Dynamax 與 Gigantamax 個體。",
+      "ivDirectionZhTw": "PvP 依指定聯盟實際 IV Rank；暗影、Mega、Max 候選優先高攻／15 攻與高整體 IV。",
+      "requiredMovesZhTw": "爆炸烈焰必要；PvP current GL 推薦 Ember/Blast Burn/Air Cutter，UL 推薦 Dragon Breath/Blast Burn/Air Cutter。Wing Attack、Dragon Breath、Ember 在資料頁均標為 legacy；GMax 推薦 Wing Attack/G-Max Wildfire。",
+      "sourceIds": ["PVP_GL_CAAD","PVP_UL_CAAD","PVP_ML_CAAD","GOHUB_006","GOHUB_SHADOW_006","GOHUB_MEGA_006_X","GOHUB_MEGA_006_Y","GOHUB_DMAX_006","GOHUB_GMAX_006"]
+    },
+    {
+      "familyKey": "SQUIRTLE",
+      "dexRange": "007-009",
+      "decisionGuidance": "KEEP_FOR_UL_PVP_MEGA_AND_SELECTED_SHADOW",
+      "confidence": "HIGH",
+      "summaryZhTw": "一般水箭龜是本批最明確的開放聯盟 PvP 個體：GL #51、UL #22；暗影 GL #181、UL #77。普通 PvE 水系僅 D Tier #59，但暗影為水系 A #27，Mega 為水系 S #4。Dynamax #17 F、Gigantamax #7 D，Max 攻擊與坦克均已被更好選擇壓過。卡咪龜 GL #252 可視為較小眾用途。",
+      "ivDirectionZhTw": "GL／UL 依實際 PvP IV Rank；暗影與 Mega 候選優先高攻／15 攻；Max 僅在缺替代品時保留少量高 IV。",
+      "requiredMovesZhTw": "加農水炮必要；現行 GL/UL 一般版推薦 Rollout/Hydro Cannon/Skull Bash。",
+      "sourceIds": ["PVP_GL_CAAD","PVP_UL_CAAD","PVP_ML_CAAD","GOHUB_009","GOHUB_SHADOW_009","GOHUB_MEGA_009","GOHUB_DMAX_009","GOHUB_GMAX_009"]
+    },
+    {
+      "familyKey": "CATERPIE",
+      "dexRange": "010-012",
+      "decisionGuidance": "GMAX_NEEDS_REVIEW__OTHERWISE_EVOLUTION_OR_TRANSFER_CANDIDATE",
+      "confidence": "HIGH_FOR_NORMAL_SHADOW_LOW_VALUE__LOW_FOR_GMAX_CONCLUSION",
+      "summaryZhTw": "普通／暗影巴大蝶在 GL 分別 #1119/#1120，PvE 蟲系 F #88/#66，沒有一般戰鬥保留理由。Dynamax 巴大蝶為蟲系 Max #4 C。GO Hub 同一超極巨巴大蝶頁一方面列蟲系 Max #1 S，另一方面明說低攻低總體數值、可能不值得培養且有更好選擇，必須 NEEDS_REVIEW；不可只因 #1 就直接 KEEP。",
+      "ivDirectionZhTw": "若保留 Gigantamax，僅少量高 IV／15 攻並等待人工確認；普通與暗影漂亮 IV 不是戰鬥保留理由。",
+      "requiredMovesZhTw": "一般 PvE Bug Bite 為 legacy，但即使具備仍是 F Tier；GMax 頁推薦 Struggle Bug/G-Max Befuddle。",
+      "sourceIds": ["PVP_GL_CAAD","PVP_LITTLE_CAAD","GOHUB_012","GOHUB_SHADOW_012","GOHUB_DMAX_012","GOHUB_GMAX_012"]
+    },
+    {
+      "familyKey": "WEEDLE",
+      "dexRange": "013-015",
+      "decisionGuidance": "KEEP_MEGA_CANDIDATE_ONLY__PVP_SPECIALIST_CONDITIONAL",
+      "confidence": "HIGH",
+      "summaryZhTw": "一般／暗影大針蜂 GL #472/#483、UL #720/#717，僅屬條件式或特殊環境用途；PvE 普通蟲/毒 F，暗影毒 C #46。Mega 大針蜂毒系 S #3、蟲系 S #7，是主要保留理由；通常只需少量高品質 Mega 候選。GO Hub Dynamax 清單未列獨角蟲家族。",
+      "ivDirectionZhTw": "Mega 候選優先高 IV／15 攻；若做 GL，依實際 PvP IV Rank，不因普通高 IV 囤積。",
+      "requiredMovesZhTw": "PvP 需要 Poison Sting/X-Scissor/Drill Run；Drill Run 在 GO Hub 標為 legacy。PvE Mega 毒系用 Poison Jab/Sludge Bomb。",
+      "sourceIds": ["PVP_GL_CAAD","PVP_UL_CAAD","PVP_LITTLE_CAAD","GOHUB_015","GOHUB_SHADOW_015","GOHUB_MEGA_015","GOHUB_DMAX_LIST"]
+    }
+  ],
+  "conflicts": [
+    {
+      "conflictKey": "PVP_LITTLE_RANK_DRIFT",
+      "descriptionZhTw": "GO Hub 寶可夢頁顯示的 Little Cup 名次與 PvPoke commit caafd 的 little/overall JSON 大幅不同（例如 Bulbasaur GO Hub #74、current raw JSON #275；Charmander GO Hub #128、raw #213；Squirtle GO Hub #134、raw #104）。可能是賽制或同步版本不同。",
+      "resolution": "精確 current raw rank 優先保存；所有特殊盃保留結論降為條件式或 NEEDS_REVIEW，必須附賽制與版本。",
+      "sourceIds": ["PVP_LITTLE_CAAD","GOHUB_001","GOHUB_004","GOHUB_007"]
+    },
+    {
+      "conflictKey": "GMAX_BUTTERFREE_INTERNAL_CONFLICT",
+      "descriptionZhTw": "同一 GO Hub 頁列 Gigantamax Butterfree 為 Bug Max #1 S Tier，但分析文字又稱低 Attack/總體數值且有更好選項，可能不值得培養。",
+      "resolution": "NEEDS_REVIEW；不得由 #1 直接推成 KEEP。",
+      "sourceIds": ["GOHUB_GMAX_012"]
+    },
+    {
+      "conflictKey": "MEGA_CHARIZARD_Y_FLYING_SCOPE",
+      "descriptionZhTw": "Mega Charizard Y 頁列 Flying-type S #7（Air Slash/Blast Burn），但同頁 prose 明確說作為 Flying attacker 被壓過且不建議使用。",
+      "resolution": "保留價值以 Fire Mega #1 為依據；Flying 定位不作 KEEP 理由。",
+      "sourceIds": ["GOHUB_MEGA_006_Y"]
+    },
+    {
+      "conflictKey": "POKEBATTLER_DYNAMIC_TABLE_MISMATCH",
+      "descriptionZhTw": "直接開啟 Pokebattler Venusaur/Charizard attacker pages 時，Available Moves 區顯示 Shadow Mamoswine/Mega Blaziken；動態內容無法可靠歸因到頁面主體。",
+      "resolution": "不匯入表內 rank/points；Pokebattler boss-dependent 數據須日後以可重現 boss、level、weather、friend bonus、party size 參數逐場擷取。",
+      "sourceIds": ["POKEBATTLER_003","POKEBATTLER_006"]
+    }
+  ],
+  "needsReview": [
+    {
+      "item": "ROCKET_001_015",
+      "reasonZhTw": "未找到可在本批逐物種、逐版本重現的當季火箭隊整體排名。不可用 PvE 或 PvP 排名直接代替。",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "item": "PURIFIED_VARIANTS",
+      "reasonZhTw": "PvPoke generic species 可能包含 Return，但沒有獨立 Purified speciesId；除 Charmeleon/Weedle 明顯由推薦 moveset 使用 Return 外，其餘淨化版與普通版不能可靠拆 rank。",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "item": "OFFICIAL_RELEASE_VERIFICATION",
+      "reasonZhTw": "本檔是第三方戰鬥研究。Shadow/Dynamax/Gigantamax/Mega 是否正式推出仍須由官方研究 lane 確認；第三方家族清單不能取代官方 release source。",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "item": "GYM_ALL_UNLISTED_FORMS",
+      "reasonZhTw": "GO Hub 只對部分本批物種顯示 defender tier。未列出的型態不可自行換算；本批沒有可確認的 HIGH defender。",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "item": "SPECIAL_CUPS",
+      "reasonZhTw": "特殊盃高度依賽制與日期變動，且 GO Hub/PvPoke current raw ranks 已見差異。僅保存 generic Little Cup raw data，不宣稱其他特殊盃最新。",
+      "status": "NEEDS_REVIEW"
+    },
+    {
+      "item": "POKEBATTLER_BOSS_SPECIFIC_PVE",
+      "reasonZhTw": "尚未針對每個 raid boss 固定模擬條件擷取 Pokebattler estimator/TTW/deaths；GO Hub per-type tier 是本批 PvE主要可重現交叉參考。",
+      "status": "NEEDS_REVIEW"
+    }
+  ]
+}
