@@ -4,6 +4,26 @@ Pokémon GO 通用寶可夢保留價值指南。系統以 `PokemonForm × Battle
 
 第一版只處理通用圖鑑資料，不讀取個人背包、不輸入 IV、不比較個體，也不使用付費 API 或任何會操作 Pokémon GO 的功能。
 
+## Sites 遷移（2026-07-16）
+
+網站已改用 Sites 官方 Vinext／Cloudflare Worker 建置流程，同時完整保留本機 Prisma／SQLite 研究資料層。由於第一版沒有帳號、個人背包、線上編輯或任何 runtime 寫入，部署版採用風險較低的唯讀 snapshot，而不引入 D1：
+
+```text
+本機 Prisma + SQLite（研究、匯入、規則、審核的唯一主資料）
+  → npm run sites:snapshot
+  → 受版本控制的 site-data JSON + 預建 XLSX
+  → Sites／Vinext 唯讀網站
+```
+
+- `.openai/hosting.json` 的 `d1`、`r2` 均為 `null`；未使用不必要的雲端儲存。
+- Worker runtime 不載入 Prisma、`better-sqlite3` 或 ExcelJS。
+- `site-data/manifest.json` 保存來源 DB SHA-256、各表筆數、rulesVersion、每個 snapshot 檔與 Excel 的 SHA-256。
+- `npm run build` 會先執行 snapshot 完整性檢查；本機 `dev.db` 若已變更但 snapshot 未更新，建置會停止。
+- Excel 改為建置前產生的靜態資產；舊 `/api/export` 仍保留相容轉址。
+- 遷移前來源基準 commit：`843c74b6b02326d8ec9a72e842aa23e22caae528`；SQLite 備份與 manifest 位於忽略版控的 `backups/pre-sites-migration-20260716/`。
+
+完整說明請見 `docs/sites-migration.md`。
+
 ## #001～#030 類別狀態修正（2026-07-15）
 
 本版以正式 Prisma migration 在既有資料庫上完成修正，保留所有 `SourceReference`、`RawEvaluationData`、舊版 `RetentionEvaluation`、原查閱日期與 `ChangeLog`：
@@ -30,6 +50,7 @@ npm run data:remediate
 npm run data:validate
 npm run review:generate
 npm run review:remediation
+npm run sites:snapshot
 npm run dev
 ```
 
@@ -49,12 +70,12 @@ npm run dev
 - JSON／CSV 匯入、交易式寫入、資料一致性驗證。
 - `review/001-030.md` 與 `review/001-030.json` 批次審核報告。
 
-目前規則引擎產生 19 筆 `KEEP`、6 筆 `CONDITIONAL_KEEP`、2 筆 `TRANSFER_CANDIDATE`、126 筆 `NEEDS_REVIEW`。大量 `NEEDS_REVIEW` 是刻意的保守結果：缺少物種級官方推出證據、Purified 獨立排名、可重現的火箭隊資料或可靠 PvE 交叉資料時，不以推測補值。
+目前規則引擎產生 76 筆 `KEEP`、17 筆 `CONDITIONAL_KEEP`、35 筆 `TRANSFER_CANDIDATE`、25 筆 `NEEDS_REVIEW`。只有推出狀態不明或缺少會實際改變結論的 PvP、PvE、Mega、Max Battle、後續進化關鍵資料時，才維持 `NEEDS_REVIEW`。
 
 ## 本機需求
 
 - Windows、macOS 或 Linux。
-- Node.js 22.12 以上；本專案已以 Node.js 24.15 驗證。
+- Node.js 22.13 以上；本專案已以 Node.js 24.15 驗證。
 - npm 11 以上。
 - 不需要外部資料庫或付費服務。
 
@@ -65,10 +86,11 @@ npm install
 npm run db:generate
 npm run db:deploy
 npm run db:seed
+npm run sites:snapshot
 npm run dev
 ```
 
-開啟 [http://localhost:3000](http://localhost:3000)。
+`npm run dev` 啟動 Sites／Vinext 開發預覽；使用終端機顯示的網址。完成 `npm run build` 後，可用 `npm run start` 透過 Wrangler 啟動與 Sites 部署環境一致的 production 預覽。若需驗證原本的 Next.js Node server，使用 `npm run dev:local`，預設開啟 [http://localhost:3000](http://localhost:3000)。
 
 若要使用不同 SQLite 檔案，先複製 `.env.example` 為 `.env`，再修改：
 
@@ -88,9 +110,13 @@ npm rebuild better-sqlite3
 npm run lint
 npm run typecheck
 npm test
+npm run test:integration
 npm run data:validate
 npm run review:generate
+npm run sites:check
+npm run sites:snapshot:check
 npm run build
+npm run build:local
 ```
 
 測試包含：
@@ -124,7 +150,7 @@ npm run build
 
 ### Excel 匯出
 
-首頁「匯出 Excel」呼叫 `/api/export`，產生：
+首頁「匯出 Excel」下載 `/exports/pokemon-go-retention-001-030.xlsx`；檔案由 `npm run sites:snapshot` 從本機可信資料庫預先產生，舊 `/api/export` 會以 307 轉址到同一檔案。內容包含：
 
 1. 寶可夢型態
 2. 評估總覽
@@ -167,8 +193,9 @@ PvPoke 本機快照版本為 commit `86847e535b7e0a0f4e91f9628b3fc713ae6adca7`�
 6. 將研究 JSON 放入 `research_notes`，或使用匯入工具更新資料表。
 7. 執行 `npm run data:validate`。
 8. 重新執行 seed／規則引擎與 `npm run review:generate`。
-9. 執行 lint、typecheck、tests、production build。
-10. 人工審核後才開始下一批。
+9. 執行 `npm run sites:snapshot`，檢查 `site-data/`、manifest 與預建 Excel 差異。
+10. 執行 lint、typecheck、tests、`npm run sites:snapshot:check` 與 production build。
+11. 人工審核後才開始下一批。
 
 資料新鮮期限集中於 `src/config/freshness.ts`：PvP 90 天、PvE／招式 180 天、型態推出／官方機制／道館 365 天、Max Battle 180 天。
 
@@ -221,6 +248,11 @@ npm run data:import -- data\import\forms.csv --entity PokemonForm
 
 ```text
 Pokemon/
+├─ .openai/hosting.json       # Sites project 與可選 binding；第一版不使用 D1/R2
+├─ build/sites-vite-plugin.ts # 封裝 Sites metadata
+├─ worker/index.ts            # Cloudflare Worker 入口
+├─ site-data/                 # 受版本控制的唯讀網站 snapshot 與 manifest
+├─ public/exports/            # 預建 Excel 靜態資產
 ├─ prisma/
 │  ├─ schema.prisma
 │  ├─ migrations/20260714162646_init/migration.sql
@@ -231,6 +263,8 @@ Pokemon/
 ├─ scripts/
 │  ├─ import-data.ts
 │  ├─ validate-data.ts
+│  ├─ generate-sites-snapshot.ts
+│  ├─ check-sites-snapshot.ts
 │  └─ generate-review.ts
 ├─ src/
 │  ├─ app/                     # Next.js 頁面及 Excel route
@@ -238,23 +272,25 @@ Pokemon/
 │  ├─ config/freshness.ts
 │  ├─ data/                    # 種子、研究整合與匯入 schema
 │  ├─ export/excel.ts
-│  ├─ lib/                     # Prisma、查詢、搜尋正規化
+│  ├─ lib/                     # Sites snapshot、Prisma 本機查詢、搜尋正規化
 │  ├─ locales/zh-TW.ts         # 集中式繁中顯示 mapping
 │  └─ rules/                   # 集中式規則引擎
 ├─ tests/
 ├─ package.json
 ├─ prisma.config.ts
+├─ vite.config.ts
 └─ README.md
 ```
 
 ## 已知限制與待人工確認
 
-- 126 個戰鬥版本維持 `NEEDS_REVIEW`；主要來自推出狀態不明、缺 PvE／Max／Purified 資料。
+- 25 個戰鬥版本維持 `NEEDS_REVIEW`；其中 19 筆為推出狀態不明、3 筆為關鍵 PvE 缺口、3 筆為 #030 後續進化跨批次缺口。
 - 火箭隊目前沒有可靠、逐物種、當季且可重現的完整排名，本批不以其他類別代替。
 - Pokebattler 動態攻擊手表出現物種錯置風險，未匯入不可穩定重現的全域排名。
-- Purified 常與普通版共用基礎排名，但 Return 可能改變招式；因此沒有直接複製普通版結論。
-- GMax 巴大蝶的 GO Hub 頁面曾出現排名與文字建議衝突，保留 `SOURCE_CONFLICT`。
-- 大嘴雀目前 PvPoke GL #20，但 GO Hub 敘述疑似未同步，已降低信心。
+- Purified 以普通版為基礎再套用淨化 modifier／optional override；Return 與失去 Shadow 價值會另外處理。
+- GMax 巴大蝶已將蟲屬性排名與整體投資價值拆成不同維度，不再建立假 `SOURCE_CONFLICT`。
+- 大嘴雀 PvPoke GL Overall #20 已由固定 commit 的完整結構化 JSON 重現並保留。
+- Sites 第一版是唯讀 snapshot；開始實作個人背包、線上審核或 runtime 寫入時，才需要遷移到 D1。
 - Mega 雷丘 X／Y 官方公告首次登場日為 2026-07-18；研究查閱日 2026-07-15，因此記為已公告但尚未推出。
 - #030 尼多娜可進化成 #031 尼多后，但 #031 不在本批；沒有自動延伸研究到 #031～#060。
 - 第一版的人工審核狀態仍全為未簽核；網站及 JSON 報告清楚保留此狀態。

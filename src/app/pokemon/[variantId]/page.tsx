@@ -5,8 +5,6 @@ import { StatusBadge } from "@/components/status-badge";
 import { getDashboardRows, getVariantDetailMeta } from "@/lib/data";
 import { zhTw } from "@/locales/zh-TW";
 
-export const dynamic = "force-dynamic";
-
 export default async function PokemonDetailPage({
   params,
 }: {

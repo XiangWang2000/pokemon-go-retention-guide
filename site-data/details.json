@@ -1,0 +1,5171 @@
+{
+  "001-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-001-kanto-002-kanto",
+        "fromFormId": "001-kanto",
+        "fromNameZhTw": "妙蛙種子",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "002-kanto",
+        "toNameZhTw": "妙蛙草",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-001-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+          "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+        }
+      }
+    ]
+  },
+  "001-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-001-kanto-002-kanto",
+        "fromFormId": "001-kanto",
+        "fromNameZhTw": "妙蛙種子",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "002-kanto",
+        "toNameZhTw": "妙蛙草",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "001-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-001-kanto-002-kanto",
+        "fromFormId": "001-kanto",
+        "fromNameZhTw": "妙蛙種子",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "002-kanto",
+        "toNameZhTw": "妙蛙草",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-001-kanto-purified",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-001-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+          "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+        }
+      }
+    ]
+  },
+  "001-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-001-kanto-002-kanto",
+        "fromFormId": "001-kanto",
+        "fromNameZhTw": "妙蛙種子",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "002-kanto",
+        "toNameZhTw": "妙蛙草",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-001-kanto-shadow",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-001-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+          "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+        }
+      }
+    ]
+  },
+  "002-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-001-kanto-002-kanto",
+        "fromFormId": "001-kanto",
+        "fromNameZhTw": "妙蛙種子",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "002-kanto",
+        "toNameZhTw": "妙蛙草",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-002-kanto-003-kanto",
+        "fromFormId": "002-kanto",
+        "fromNameZhTw": "妙蛙草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "003-kanto",
+        "toNameZhTw": "妙蛙花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-002-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Community Day Classic: Back to Bulbasaur",
+          "url": "https://pokemongo.com/en/post/community-day-classic-bulbasaur-jan22?game_client=iOS"
+        }
+      }
+    ]
+  },
+  "002-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-001-kanto-002-kanto",
+        "fromFormId": "001-kanto",
+        "fromNameZhTw": "妙蛙種子",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "002-kanto",
+        "toNameZhTw": "妙蛙草",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-002-kanto-003-kanto",
+        "fromFormId": "002-kanto",
+        "fromNameZhTw": "妙蛙草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "003-kanto",
+        "toNameZhTw": "妙蛙花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "002-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-001-kanto-002-kanto",
+        "fromFormId": "001-kanto",
+        "fromNameZhTw": "妙蛙種子",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "002-kanto",
+        "toNameZhTw": "妙蛙草",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-002-kanto-003-kanto",
+        "fromFormId": "002-kanto",
+        "fromNameZhTw": "妙蛙草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "003-kanto",
+        "toNameZhTw": "妙蛙花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-002-kanto-purified",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-002-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Community Day Classic: Back to Bulbasaur",
+          "url": "https://pokemongo.com/en/post/community-day-classic-bulbasaur-jan22?game_client=iOS"
+        }
+      }
+    ]
+  },
+  "002-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-001-kanto-002-kanto",
+        "fromFormId": "001-kanto",
+        "fromNameZhTw": "妙蛙種子",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "002-kanto",
+        "toNameZhTw": "妙蛙草",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-002-kanto-003-kanto",
+        "fromFormId": "002-kanto",
+        "fromNameZhTw": "妙蛙草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "003-kanto",
+        "toNameZhTw": "妙蛙花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-002-kanto-shadow",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-002-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Community Day Classic: Back to Bulbasaur",
+          "url": "https://pokemongo.com/en/post/community-day-classic-bulbasaur-jan22?game_client=iOS"
+        }
+      }
+    ]
+  },
+  "003-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-002-kanto-003-kanto",
+        "fromFormId": "002-kanto",
+        "fromNameZhTw": "妙蛙草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "003-kanto",
+        "toNameZhTw": "妙蛙花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-003-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+          "url": "https://pokemongo.com/en/post/megaevolution-launch"
+        }
+      }
+    ]
+  },
+  "003-kanto-gigantamax": {
+    "paths": [
+      {
+        "id": "evo-002-kanto-003-kanto",
+        "fromFormId": "002-kanto",
+        "fromNameZhTw": "妙蛙草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "003-kanto",
+        "toNameZhTw": "妙蛙花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "003-kanto-mega": {
+    "paths": [
+      {
+        "id": "evo-002-kanto-003-kanto",
+        "fromFormId": "002-kanto",
+        "fromNameZhTw": "妙蛙草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "003-kanto",
+        "toNameZhTw": "妙蛙花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "003-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-002-kanto-003-kanto",
+        "fromFormId": "002-kanto",
+        "fromNameZhTw": "妙蛙草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "003-kanto",
+        "toNameZhTw": "妙蛙花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-003-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "CONDITIONAL_KEEP",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+          "url": "https://pokemongo.com/en/post/megaevolution-launch"
+        }
+      }
+    ]
+  },
+  "003-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-002-kanto-003-kanto",
+        "fromFormId": "002-kanto",
+        "fromNameZhTw": "妙蛙草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "003-kanto",
+        "toNameZhTw": "妙蛙花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-003-kanto-purified",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-003-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+          "url": "https://pokemongo.com/en/post/megaevolution-launch"
+        }
+      }
+    ]
+  },
+  "003-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-002-kanto-003-kanto",
+        "fromFormId": "002-kanto",
+        "fromNameZhTw": "妙蛙草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "003-kanto",
+        "toNameZhTw": "妙蛙花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-003-kanto-shadow",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-003-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+          "url": "https://pokemongo.com/en/post/megaevolution-launch"
+        }
+      }
+    ]
+  },
+  "004-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-004-kanto-005-kanto",
+        "fromFormId": "004-kanto",
+        "fromNameZhTw": "小火龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "005-kanto",
+        "toNameZhTw": "火恐龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-004-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+          "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+        }
+      }
+    ]
+  },
+  "004-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-004-kanto-005-kanto",
+        "fromFormId": "004-kanto",
+        "fromNameZhTw": "小火龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "005-kanto",
+        "toNameZhTw": "火恐龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-004-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+          "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+        }
+      }
+    ]
+  },
+  "004-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-004-kanto-005-kanto",
+        "fromFormId": "004-kanto",
+        "fromNameZhTw": "小火龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "005-kanto",
+        "toNameZhTw": "火恐龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "004-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-004-kanto-005-kanto",
+        "fromFormId": "004-kanto",
+        "fromNameZhTw": "小火龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "005-kanto",
+        "toNameZhTw": "火恐龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "005-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-004-kanto-005-kanto",
+        "fromFormId": "004-kanto",
+        "fromNameZhTw": "小火龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "005-kanto",
+        "toNameZhTw": "火恐龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-005-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "September 2023 Community Day Classic: Charmander",
+          "url": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en"
+        }
+      }
+    ]
+  },
+  "005-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-004-kanto-005-kanto",
+        "fromFormId": "004-kanto",
+        "fromNameZhTw": "小火龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "005-kanto",
+        "toNameZhTw": "火恐龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "005-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-004-kanto-005-kanto",
+        "fromFormId": "004-kanto",
+        "fromNameZhTw": "小火龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "005-kanto",
+        "toNameZhTw": "火恐龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-005-kanto-purified",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-005-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "September 2023 Community Day Classic: Charmander",
+          "url": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en"
+        }
+      }
+    ]
+  },
+  "005-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-004-kanto-005-kanto",
+        "fromFormId": "004-kanto",
+        "fromNameZhTw": "小火龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "005-kanto",
+        "toNameZhTw": "火恐龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-005-kanto-shadow",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-005-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "September 2023 Community Day Classic: Charmander",
+          "url": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en"
+        }
+      }
+    ]
+  },
+  "006-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "006-kanto-gigantamax": {
+    "paths": [
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "006-kanto-mega-x": {
+    "paths": [
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "006-kanto-mega-y": {
+    "paths": [
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "006-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "006-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-006-kanto-purified",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-006-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+          "url": "https://pokemongo.com/en/post/megaevolution-launch"
+        }
+      }
+    ]
+  },
+  "006-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-005-kanto-006-kanto",
+        "fromFormId": "005-kanto",
+        "fromNameZhTw": "火恐龍",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "006-kanto",
+        "toNameZhTw": "噴火龍",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-006-kanto-shadow",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-006-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+          "url": "https://pokemongo.com/en/post/megaevolution-launch"
+        }
+      }
+    ]
+  },
+  "007-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-007-kanto-008-kanto",
+        "fromFormId": "007-kanto",
+        "fromNameZhTw": "傑尼龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "008-kanto",
+        "toNameZhTw": "卡咪龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-007-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+          "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+        }
+      }
+    ]
+  },
+  "007-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-007-kanto-008-kanto",
+        "fromFormId": "007-kanto",
+        "fromNameZhTw": "傑尼龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "008-kanto",
+        "toNameZhTw": "卡咪龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-007-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+          "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+        }
+      }
+    ]
+  },
+  "007-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-007-kanto-008-kanto",
+        "fromFormId": "007-kanto",
+        "fromNameZhTw": "傑尼龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "008-kanto",
+        "toNameZhTw": "卡咪龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "007-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-007-kanto-008-kanto",
+        "fromFormId": "007-kanto",
+        "fromNameZhTw": "傑尼龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "008-kanto",
+        "toNameZhTw": "卡咪龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "008-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-007-kanto-008-kanto",
+        "fromFormId": "007-kanto",
+        "fromNameZhTw": "傑尼龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "008-kanto",
+        "toNameZhTw": "卡咪龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "evo-008-kanto-009-kanto",
+        "fromFormId": "008-kanto",
+        "fromNameZhTw": "卡咪龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "009-kanto",
+        "toNameZhTw": "水箭龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-008-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Catch up with Community Day! Pokémon from 2022 and 2023 Community Days are returning for a year-end catch celebration!",
+          "url": "https://pokemongo.com/post/community-day-december-2023?hl=en"
+        }
+      }
+    ]
+  },
+  "008-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-007-kanto-008-kanto",
+        "fromFormId": "007-kanto",
+        "fromNameZhTw": "傑尼龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "008-kanto",
+        "toNameZhTw": "卡咪龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "evo-008-kanto-009-kanto",
+        "fromFormId": "008-kanto",
+        "fromNameZhTw": "卡咪龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "009-kanto",
+        "toNameZhTw": "水箭龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "008-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-007-kanto-008-kanto",
+        "fromFormId": "007-kanto",
+        "fromNameZhTw": "傑尼龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "008-kanto",
+        "toNameZhTw": "卡咪龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "evo-008-kanto-009-kanto",
+        "fromFormId": "008-kanto",
+        "fromNameZhTw": "卡咪龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "009-kanto",
+        "toNameZhTw": "水箭龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-008-kanto-purified",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-008-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Catch up with Community Day! Pokémon from 2022 and 2023 Community Days are returning for a year-end catch celebration!",
+          "url": "https://pokemongo.com/post/community-day-december-2023?hl=en"
+        }
+      }
+    ]
+  },
+  "008-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-007-kanto-008-kanto",
+        "fromFormId": "007-kanto",
+        "fromNameZhTw": "傑尼龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "008-kanto",
+        "toNameZhTw": "卡咪龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "evo-008-kanto-009-kanto",
+        "fromFormId": "008-kanto",
+        "fromNameZhTw": "卡咪龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "009-kanto",
+        "toNameZhTw": "水箭龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-008-kanto-shadow",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-008-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Catch up with Community Day! Pokémon from 2022 and 2023 Community Days are returning for a year-end catch celebration!",
+          "url": "https://pokemongo.com/post/community-day-december-2023?hl=en"
+        }
+      }
+    ]
+  },
+  "009-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-008-kanto-009-kanto",
+        "fromFormId": "008-kanto",
+        "fromNameZhTw": "卡咪龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "009-kanto",
+        "toNameZhTw": "水箭龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-009-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+          "url": "https://pokemongo.com/en/post/megaevolution-launch"
+        }
+      }
+    ]
+  },
+  "009-kanto-gigantamax": {
+    "paths": [
+      {
+        "id": "evo-008-kanto-009-kanto",
+        "fromFormId": "008-kanto",
+        "fromNameZhTw": "卡咪龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "009-kanto",
+        "toNameZhTw": "水箭龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-009-kanto-gigantamax",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+          "url": "https://pokemongo.com/en/post/megaevolution-launch"
+        }
+      }
+    ]
+  },
+  "009-kanto-mega": {
+    "paths": [
+      {
+        "id": "evo-008-kanto-009-kanto",
+        "fromFormId": "008-kanto",
+        "fromNameZhTw": "卡咪龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "009-kanto",
+        "toNameZhTw": "水箭龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "009-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-008-kanto-009-kanto",
+        "fromFormId": "008-kanto",
+        "fromNameZhTw": "卡咪龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "009-kanto",
+        "toNameZhTw": "水箭龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "009-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-008-kanto-009-kanto",
+        "fromFormId": "008-kanto",
+        "fromNameZhTw": "卡咪龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "009-kanto",
+        "toNameZhTw": "水箭龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-009-kanto-purified",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-009-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+          "url": "https://pokemongo.com/en/post/megaevolution-launch"
+        }
+      }
+    ]
+  },
+  "009-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-008-kanto-009-kanto",
+        "fromFormId": "008-kanto",
+        "fromNameZhTw": "卡咪龜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "009-kanto",
+        "toNameZhTw": "水箭龜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-009-kanto-shadow",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-009-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+          "url": "https://pokemongo.com/en/post/megaevolution-launch"
+        }
+      }
+    ]
+  },
+  "010-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-010-kanto-011-kanto",
+        "fromFormId": "010-kanto",
+        "fromNameZhTw": "綠毛蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "011-kanto",
+        "toNameZhTw": "鐵甲蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-010-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-010-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Bug Out",
+          "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+        }
+      }
+    ]
+  },
+  "010-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-010-kanto-011-kanto",
+        "fromFormId": "010-kanto",
+        "fromNameZhTw": "綠毛蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "011-kanto",
+        "toNameZhTw": "鐵甲蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-010-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Bug Out",
+          "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+        }
+      }
+    ]
+  },
+  "010-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-010-kanto-011-kanto",
+        "fromFormId": "010-kanto",
+        "fromNameZhTw": "綠毛蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "011-kanto",
+        "toNameZhTw": "鐵甲蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-010-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Bug Out",
+          "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+        }
+      }
+    ]
+  },
+  "010-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-010-kanto-011-kanto",
+        "fromFormId": "010-kanto",
+        "fromNameZhTw": "綠毛蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "011-kanto",
+        "toNameZhTw": "鐵甲蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-010-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Bug Out",
+          "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+        }
+      }
+    ]
+  },
+  "011-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-010-kanto-011-kanto",
+        "fromFormId": "010-kanto",
+        "fromNameZhTw": "綠毛蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "011-kanto",
+        "toNameZhTw": "鐵甲蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "evo-011-kanto-012-kanto",
+        "fromFormId": "011-kanto",
+        "fromNameZhTw": "鐵甲蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "012-kanto",
+        "toNameZhTw": "巴大蝶",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-011-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-011-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        }
+      }
+    ]
+  },
+  "011-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-010-kanto-011-kanto",
+        "fromFormId": "010-kanto",
+        "fromNameZhTw": "綠毛蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "011-kanto",
+        "toNameZhTw": "鐵甲蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "evo-011-kanto-012-kanto",
+        "fromFormId": "011-kanto",
+        "fromNameZhTw": "鐵甲蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "012-kanto",
+        "toNameZhTw": "巴大蝶",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "011-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-010-kanto-011-kanto",
+        "fromFormId": "010-kanto",
+        "fromNameZhTw": "綠毛蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "011-kanto",
+        "toNameZhTw": "鐵甲蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "evo-011-kanto-012-kanto",
+        "fromFormId": "011-kanto",
+        "fromNameZhTw": "鐵甲蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "012-kanto",
+        "toNameZhTw": "巴大蝶",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-011-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Shadow Pokémon & Purified Pokémon",
+          "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/"
+        }
+      }
+    ]
+  },
+  "011-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-010-kanto-011-kanto",
+        "fromFormId": "010-kanto",
+        "fromNameZhTw": "綠毛蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "011-kanto",
+        "toNameZhTw": "鐵甲蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      },
+      {
+        "id": "evo-011-kanto-012-kanto",
+        "fromFormId": "011-kanto",
+        "fromNameZhTw": "鐵甲蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "012-kanto",
+        "toNameZhTw": "巴大蝶",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-011-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        }
+      }
+    ]
+  },
+  "012-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-011-kanto-012-kanto",
+        "fromFormId": "011-kanto",
+        "fromNameZhTw": "鐵甲蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "012-kanto",
+        "toNameZhTw": "巴大蝶",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-012-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-012-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Fly free and battle hard on Gigantamax Butterfree Max Battle Day!",
+          "url": "https://pokemongo.com/news/gigantamax-butterfree-max-battle-day?hl=en"
+        }
+      }
+    ]
+  },
+  "012-kanto-gigantamax": {
+    "paths": [
+      {
+        "id": "evo-011-kanto-012-kanto",
+        "fromFormId": "011-kanto",
+        "fromNameZhTw": "鐵甲蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "012-kanto",
+        "toNameZhTw": "巴大蝶",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-012-kanto-gigantamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Fly free and battle hard on Gigantamax Butterfree Max Battle Day!",
+          "url": "https://pokemongo.com/news/gigantamax-butterfree-max-battle-day?hl=en"
+        }
+      }
+    ]
+  },
+  "012-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-011-kanto-012-kanto",
+        "fromFormId": "011-kanto",
+        "fromNameZhTw": "鐵甲蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "012-kanto",
+        "toNameZhTw": "巴大蝶",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "012-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-011-kanto-012-kanto",
+        "fromFormId": "011-kanto",
+        "fromNameZhTw": "鐵甲蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "012-kanto",
+        "toNameZhTw": "巴大蝶",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-012-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Fly free and battle hard on Gigantamax Butterfree Max Battle Day!",
+          "url": "https://pokemongo.com/news/gigantamax-butterfree-max-battle-day?hl=en"
+        }
+      }
+    ]
+  },
+  "012-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-011-kanto-012-kanto",
+        "fromFormId": "011-kanto",
+        "fromNameZhTw": "鐵甲蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "012-kanto",
+        "toNameZhTw": "巴大蝶",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "013-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-013-kanto-014-kanto",
+        "fromFormId": "013-kanto",
+        "fromNameZhTw": "獨角蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "014-kanto",
+        "toNameZhTw": "鐵殼蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-013-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-013-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "013-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-013-kanto-014-kanto",
+        "fromFormId": "013-kanto",
+        "fromNameZhTw": "獨角蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "014-kanto",
+        "toNameZhTw": "鐵殼蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-013-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Bug Out",
+          "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+        }
+      }
+    ]
+  },
+  "013-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-013-kanto-014-kanto",
+        "fromFormId": "013-kanto",
+        "fromNameZhTw": "獨角蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "014-kanto",
+        "toNameZhTw": "鐵殼蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-013-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Bug Out",
+          "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+        }
+      }
+    ]
+  },
+  "013-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-013-kanto-014-kanto",
+        "fromFormId": "013-kanto",
+        "fromNameZhTw": "獨角蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "014-kanto",
+        "toNameZhTw": "鐵殼蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-013-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Bug Out",
+          "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+        }
+      }
+    ]
+  },
+  "014-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-013-kanto-014-kanto",
+        "fromFormId": "013-kanto",
+        "fromNameZhTw": "獨角蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "014-kanto",
+        "toNameZhTw": "鐵殼蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-014-kanto-015-kanto",
+        "fromFormId": "014-kanto",
+        "fromNameZhTw": "鐵殼蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "015-kanto",
+        "toNameZhTw": "大針蜂",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-014-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-014-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "014-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-013-kanto-014-kanto",
+        "fromFormId": "013-kanto",
+        "fromNameZhTw": "獨角蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "014-kanto",
+        "toNameZhTw": "鐵殼蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-014-kanto-015-kanto",
+        "fromFormId": "014-kanto",
+        "fromNameZhTw": "鐵殼蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "015-kanto",
+        "toNameZhTw": "大針蜂",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-014-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "The featured Pokémon for June Community Day is Weedle!",
+          "url": "https://pokemongo.com/post/communityday-jun2020/?hl=en"
+        }
+      }
+    ]
+  },
+  "014-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-013-kanto-014-kanto",
+        "fromFormId": "013-kanto",
+        "fromNameZhTw": "獨角蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "014-kanto",
+        "toNameZhTw": "鐵殼蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-014-kanto-015-kanto",
+        "fromFormId": "014-kanto",
+        "fromNameZhTw": "鐵殼蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "015-kanto",
+        "toNameZhTw": "大針蜂",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-014-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "The featured Pokémon for June Community Day is Weedle!",
+          "url": "https://pokemongo.com/post/communityday-jun2020/?hl=en"
+        }
+      }
+    ]
+  },
+  "014-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-013-kanto-014-kanto",
+        "fromFormId": "013-kanto",
+        "fromNameZhTw": "獨角蟲",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "014-kanto",
+        "toNameZhTw": "鐵殼蛹",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-014-kanto-015-kanto",
+        "fromFormId": "014-kanto",
+        "fromNameZhTw": "鐵殼蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "015-kanto",
+        "toNameZhTw": "大針蜂",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-014-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "The featured Pokémon for June Community Day is Weedle!",
+          "url": "https://pokemongo.com/post/communityday-jun2020/?hl=en"
+        }
+      }
+    ]
+  },
+  "015-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-014-kanto-015-kanto",
+        "fromFormId": "014-kanto",
+        "fromNameZhTw": "鐵殼蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "015-kanto",
+        "toNameZhTw": "大針蜂",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-015-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-015-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "015-kanto-mega": {
+    "paths": [
+      {
+        "id": "evo-014-kanto-015-kanto",
+        "fromFormId": "014-kanto",
+        "fromNameZhTw": "鐵殼蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "015-kanto",
+        "toNameZhTw": "大針蜂",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "015-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-014-kanto-015-kanto",
+        "fromFormId": "014-kanto",
+        "fromNameZhTw": "鐵殼蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "015-kanto",
+        "toNameZhTw": "大針蜂",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-015-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Bug Out",
+          "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+        }
+      }
+    ]
+  },
+  "015-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-014-kanto-015-kanto",
+        "fromFormId": "014-kanto",
+        "fromNameZhTw": "鐵殼蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "015-kanto",
+        "toNameZhTw": "大針蜂",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-015-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Bug Out",
+          "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+        }
+      }
+    ]
+  },
+  "015-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-014-kanto-015-kanto",
+        "fromFormId": "014-kanto",
+        "fromNameZhTw": "鐵殼蛹",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "015-kanto",
+        "toNameZhTw": "大針蜂",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-015-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Bug Out",
+          "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+        }
+      }
+    ]
+  },
+  "016-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-016-kanto-017-kanto",
+        "fromFormId": "016-kanto",
+        "fromNameZhTw": "波波",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "017-kanto",
+        "toNameZhTw": "比比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-016-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-016-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "016-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-016-kanto-017-kanto",
+        "fromFormId": "016-kanto",
+        "fromNameZhTw": "波波",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "017-kanto",
+        "toNameZhTw": "比比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-016-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Keep the Kanto celebration going after Pokémon GO Tour: Kanto with a special event!",
+          "url": "https://pokemongo.com/en/post/kanto-celebration-event-2021?game_client=iOS"
+        }
+      }
+    ]
+  },
+  "016-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-016-kanto-017-kanto",
+        "fromFormId": "016-kanto",
+        "fromNameZhTw": "波波",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "017-kanto",
+        "toNameZhTw": "比比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-016-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Keep the Kanto celebration going after Pokémon GO Tour: Kanto with a special event!",
+          "url": "https://pokemongo.com/en/post/kanto-celebration-event-2021?game_client=iOS"
+        }
+      }
+    ]
+  },
+  "016-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-016-kanto-017-kanto",
+        "fromFormId": "016-kanto",
+        "fromNameZhTw": "波波",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "017-kanto",
+        "toNameZhTw": "比比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-016-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Keep the Kanto celebration going after Pokémon GO Tour: Kanto with a special event!",
+          "url": "https://pokemongo.com/en/post/kanto-celebration-event-2021?game_client=iOS"
+        }
+      }
+    ]
+  },
+  "017-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-016-kanto-017-kanto",
+        "fromFormId": "016-kanto",
+        "fromNameZhTw": "波波",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "017-kanto",
+        "toNameZhTw": "比比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-017-kanto-018-kanto",
+        "fromFormId": "017-kanto",
+        "fromNameZhTw": "比比鳥",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "018-kanto",
+        "toNameZhTw": "大比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-017-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-017-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "017-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-016-kanto-017-kanto",
+        "fromFormId": "016-kanto",
+        "fromNameZhTw": "波波",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "017-kanto",
+        "toNameZhTw": "比比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-017-kanto-018-kanto",
+        "fromFormId": "017-kanto",
+        "fromNameZhTw": "比比鳥",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "018-kanto",
+        "toNameZhTw": "大比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-017-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Get cosmic with our new Evolving Stars event!",
+          "url": "https://pokemongo.com/post/evolving-stars-2022"
+        }
+      }
+    ]
+  },
+  "017-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-016-kanto-017-kanto",
+        "fromFormId": "016-kanto",
+        "fromNameZhTw": "波波",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "017-kanto",
+        "toNameZhTw": "比比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-017-kanto-018-kanto",
+        "fromFormId": "017-kanto",
+        "fromNameZhTw": "比比鳥",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "018-kanto",
+        "toNameZhTw": "大比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-017-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Get cosmic with our new Evolving Stars event!",
+          "url": "https://pokemongo.com/post/evolving-stars-2022"
+        }
+      }
+    ]
+  },
+  "017-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-016-kanto-017-kanto",
+        "fromFormId": "016-kanto",
+        "fromNameZhTw": "波波",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "017-kanto",
+        "toNameZhTw": "比比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      },
+      {
+        "id": "evo-017-kanto-018-kanto",
+        "fromFormId": "017-kanto",
+        "fromNameZhTw": "比比鳥",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "018-kanto",
+        "toNameZhTw": "大比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-017-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Get cosmic with our new Evolving Stars event!",
+          "url": "https://pokemongo.com/post/evolving-stars-2022"
+        }
+      }
+    ]
+  },
+  "018-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-017-kanto-018-kanto",
+        "fromFormId": "017-kanto",
+        "fromNameZhTw": "比比鳥",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "018-kanto",
+        "toNameZhTw": "大比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-018-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-018-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "018-kanto-mega": {
+    "paths": [
+      {
+        "id": "evo-017-kanto-018-kanto",
+        "fromFormId": "017-kanto",
+        "fromNameZhTw": "比比鳥",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "018-kanto",
+        "toNameZhTw": "大比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-018-kanto-mega",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Coming in August: Ultra Unlock and more!",
+          "url": "https://pokemongo.com/en/post/aug-2021-events"
+        }
+      }
+    ]
+  },
+  "018-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-017-kanto-018-kanto",
+        "fromFormId": "017-kanto",
+        "fromNameZhTw": "比比鳥",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "018-kanto",
+        "toNameZhTw": "大比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "018-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-017-kanto-018-kanto",
+        "fromFormId": "017-kanto",
+        "fromNameZhTw": "比比鳥",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "018-kanto",
+        "toNameZhTw": "大比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-018-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Coming in August: Ultra Unlock and more!",
+          "url": "https://pokemongo.com/en/post/aug-2021-events"
+        }
+      }
+    ]
+  },
+  "018-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-017-kanto-018-kanto",
+        "fromFormId": "017-kanto",
+        "fromNameZhTw": "比比鳥",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "018-kanto",
+        "toNameZhTw": "大比鳥",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-018-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Coming in August: Ultra Unlock and more!",
+          "url": "https://pokemongo.com/en/post/aug-2021-events"
+        }
+      }
+    ]
+  },
+  "019-alola-dynamax": {
+    "paths": [
+      {
+        "id": "evo-019-alola-020-alola",
+        "fromFormId": "019-alola",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "020-alola",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-019-alola-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-019-alola-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "019-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-019-kanto-020-kanto",
+        "fromFormId": "019-kanto",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "020-kanto",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-019-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-019-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "019-alola-normal": {
+    "paths": [
+      {
+        "id": "evo-019-alola-020-alola",
+        "fromFormId": "019-alola",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "020-alola",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-019-alola-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Season of Alola during the Alola to Alola finale event!",
+          "url": "https://pokemongo.com/post/alola-to-alola?hl=en"
+        }
+      }
+    ]
+  },
+  "019-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-019-kanto-020-kanto",
+        "fromFormId": "019-kanto",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "020-kanto",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-019-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "The Team GO Rocket Leaders have disrupted Pokémon habitats!",
+          "url": "https://pokemongo.com/en/post/teamgorocketleadersdisruption2019?hl=es"
+        }
+      }
+    ]
+  },
+  "019-alola-purified": {
+    "paths": [
+      {
+        "id": "evo-019-alola-020-alola",
+        "fromFormId": "019-alola",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "020-alola",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-019-alola-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Season of Alola during the Alola to Alola finale event!",
+          "url": "https://pokemongo.com/post/alola-to-alola?hl=en"
+        }
+      }
+    ]
+  },
+  "019-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-019-kanto-020-kanto",
+        "fromFormId": "019-kanto",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "020-kanto",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "019-alola-shadow": {
+    "paths": [
+      {
+        "id": "evo-019-alola-020-alola",
+        "fromFormId": "019-alola",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "020-alola",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-019-alola-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Season of Alola during the Alola to Alola finale event!",
+          "url": "https://pokemongo.com/post/alola-to-alola?hl=en"
+        }
+      }
+    ]
+  },
+  "019-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-019-kanto-020-kanto",
+        "fromFormId": "019-kanto",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "020-kanto",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "020-alola-dynamax": {
+    "paths": [
+      {
+        "id": "evo-019-alola-020-alola",
+        "fromFormId": "019-alola",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "020-alola",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-020-alola-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-020-alola-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "020-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-019-kanto-020-kanto",
+        "fromFormId": "019-kanto",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "020-kanto",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-020-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-020-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "020-alola-normal": {
+    "paths": [
+      {
+        "id": "evo-019-alola-020-alola",
+        "fromFormId": "019-alola",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "020-alola",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-020-alola-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "The Greedy Gluttons event and a Team GO Rocket takeover serve up adventure in Pokémon GO this November!",
+          "url": "https://pokemongo.com/en/post/greedy-gluttons"
+        }
+      }
+    ]
+  },
+  "020-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-019-kanto-020-kanto",
+        "fromFormId": "019-kanto",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "020-kanto",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-020-kanto-normal",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-020-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Raticate: Best Moveset, Counters & Max CP | Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon/20"
+        }
+      }
+    ]
+  },
+  "020-alola-purified": {
+    "paths": [
+      {
+        "id": "evo-019-alola-020-alola",
+        "fromFormId": "019-alola",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "020-alola",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-020-alola-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "The Greedy Gluttons event and a Team GO Rocket takeover serve up adventure in Pokémon GO this November!",
+          "url": "https://pokemongo.com/en/post/greedy-gluttons"
+        }
+      }
+    ]
+  },
+  "020-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-019-kanto-020-kanto",
+        "fromFormId": "019-kanto",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "020-kanto",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-020-kanto-purified",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-020-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Shadow Pokémon & Purified Pokémon",
+          "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/"
+        }
+      }
+    ]
+  },
+  "020-alola-shadow": {
+    "paths": [
+      {
+        "id": "evo-019-alola-020-alola",
+        "fromFormId": "019-alola",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "020-alola",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "020-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-019-kanto-020-kanto",
+        "fromFormId": "019-kanto",
+        "fromNameZhTw": "小拉達",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "020-kanto",
+        "toNameZhTw": "拉達",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-020-kanto-shadow",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      }
+    ]
+  },
+  "021-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-021-kanto-022-kanto",
+        "fromFormId": "021-kanto",
+        "fromNameZhTw": "烈雀",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "022-kanto",
+        "toNameZhTw": "大嘴雀",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-021-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-021-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "021-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-021-kanto-022-kanto",
+        "fromFormId": "021-kanto",
+        "fromNameZhTw": "烈雀",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "022-kanto",
+        "toNameZhTw": "大嘴雀",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-021-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Keep the Kanto celebration going after Pokémon GO Tour: Kanto with a special event!",
+          "url": "https://pokemongo.com/en/post/kanto-celebration-event-2021?game_client=iOS"
+        }
+      }
+    ]
+  },
+  "021-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-021-kanto-022-kanto",
+        "fromFormId": "021-kanto",
+        "fromNameZhTw": "烈雀",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "022-kanto",
+        "toNameZhTw": "大嘴雀",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "021-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-021-kanto-022-kanto",
+        "fromFormId": "021-kanto",
+        "fromNameZhTw": "烈雀",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "022-kanto",
+        "toNameZhTw": "大嘴雀",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "022-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-021-kanto-022-kanto",
+        "fromFormId": "021-kanto",
+        "fromNameZhTw": "烈雀",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "022-kanto",
+        "toNameZhTw": "大嘴雀",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-022-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-022-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "022-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-021-kanto-022-kanto",
+        "fromFormId": "021-kanto",
+        "fromNameZhTw": "烈雀",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "022-kanto",
+        "toNameZhTw": "大嘴雀",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-022-kanto-normal",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-022-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Fearow: Best Moveset, Counters & Max CP | Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon/22"
+        }
+      }
+    ]
+  },
+  "022-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-021-kanto-022-kanto",
+        "fromFormId": "021-kanto",
+        "fromNameZhTw": "烈雀",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "022-kanto",
+        "toNameZhTw": "大嘴雀",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "022-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-021-kanto-022-kanto",
+        "fromFormId": "021-kanto",
+        "fromNameZhTw": "烈雀",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "022-kanto",
+        "toNameZhTw": "大嘴雀",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "023-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-023-kanto-024-kanto",
+        "fromFormId": "023-kanto",
+        "fromNameZhTw": "阿柏蛇",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "024-kanto",
+        "toNameZhTw": "阿柏怪",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-023-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-023-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "023-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-023-kanto-024-kanto",
+        "fromFormId": "023-kanto",
+        "fromNameZhTw": "阿柏蛇",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "024-kanto",
+        "toNameZhTw": "阿柏怪",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-023-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "The Team GO Rocket Leaders have disrupted Pokémon habitats!",
+          "url": "https://pokemongo.com/en/post/teamgorocketleadersdisruption2019?hl=es"
+        }
+      }
+    ]
+  },
+  "023-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-023-kanto-024-kanto",
+        "fromFormId": "023-kanto",
+        "fromNameZhTw": "阿柏蛇",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "024-kanto",
+        "toNameZhTw": "阿柏怪",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "023-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-023-kanto-024-kanto",
+        "fromFormId": "023-kanto",
+        "fromNameZhTw": "阿柏蛇",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "024-kanto",
+        "toNameZhTw": "阿柏怪",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "024-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-023-kanto-024-kanto",
+        "fromFormId": "023-kanto",
+        "fromNameZhTw": "阿柏蛇",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "024-kanto",
+        "toNameZhTw": "阿柏怪",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-024-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-024-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "024-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-023-kanto-024-kanto",
+        "fromFormId": "023-kanto",
+        "fromNameZhTw": "阿柏蛇",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "024-kanto",
+        "toNameZhTw": "阿柏怪",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-024-kanto-normal",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-024-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Arbok: Best Moveset, Counters & Max CP | Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon/24"
+        }
+      }
+    ]
+  },
+  "024-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-023-kanto-024-kanto",
+        "fromFormId": "023-kanto",
+        "fromNameZhTw": "阿柏蛇",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "024-kanto",
+        "toNameZhTw": "阿柏怪",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-024-kanto-purified",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      },
+      {
+        "id": "remediation-decision-024-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Shadow Pokémon & Purified Pokémon",
+          "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/"
+        }
+      }
+    ]
+  },
+  "024-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-023-kanto-024-kanto",
+        "fromFormId": "023-kanto",
+        "fromNameZhTw": "阿柏蛇",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "024-kanto",
+        "toNameZhTw": "阿柏怪",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-024-kanto-shadow",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": null
+      }
+    ]
+  },
+  "025-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-025-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-025-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "025-kanto-gigantamax": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-025-kanto-gigantamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Introducing Pokémon GO Community Day!",
+          "url": "https://pokemongo.com/post/communityday?hl=en"
+        }
+      }
+    ]
+  },
+  "025-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-025-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Introducing Pokémon GO Community Day!",
+          "url": "https://pokemongo.com/post/communityday?hl=en"
+        }
+      }
+    ]
+  },
+  "025-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "025-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "026-alola-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-026-alola-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-026-alola-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "026-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-026-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-026-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "026-kanto-mega-x": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-026-kanto-mega-x",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Sparks fly for Raichu Super Mega Raid Day!",
+          "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026"
+        }
+      }
+    ]
+  },
+  "026-kanto-mega-y": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-026-kanto-mega-y",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Sparks fly for Raichu Super Mega Raid Day!",
+          "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026"
+        }
+      }
+    ]
+  },
+  "026-alola-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "026-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "026-alola-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "026-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "026-alola-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "026-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-025-kanto-026-kanto",
+        "fromFormId": "025-kanto",
+        "fromNameZhTw": "皮卡丘",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "026-kanto",
+        "toNameZhTw": "雷丘",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "027-alola-dynamax": {
+    "paths": [
+      {
+        "id": "evo-027-alola-028-alola",
+        "fromFormId": "027-alola",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "028-alola",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-027-alola-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-027-alola-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "027-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-027-kanto-028-kanto",
+        "fromFormId": "027-kanto",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "028-kanto",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化（關都型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-027-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-027-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "027-alola-normal": {
+    "paths": [
+      {
+        "id": "evo-027-alola-028-alola",
+        "fromFormId": "027-alola",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "028-alola",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "027-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-027-kanto-028-kanto",
+        "fromFormId": "027-kanto",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "028-kanto",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化（關都型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-027-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+          "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+        }
+      }
+    ]
+  },
+  "027-alola-purified": {
+    "paths": [
+      {
+        "id": "evo-027-alola-028-alola",
+        "fromFormId": "027-alola",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "028-alola",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-027-alola-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Celebrate the Season of Alola during the Alola to Alola finale event!",
+          "url": "https://pokemongo.com/post/alola-to-alola?hl=en"
+        }
+      }
+    ]
+  },
+  "027-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-027-kanto-028-kanto",
+        "fromFormId": "027-kanto",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "028-kanto",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化（關都型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-027-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+          "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+        }
+      }
+    ]
+  },
+  "027-alola-shadow": {
+    "paths": [
+      {
+        "id": "evo-027-alola-028-alola",
+        "fromFormId": "027-alola",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "028-alola",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "027-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-027-kanto-028-kanto",
+        "fromFormId": "027-kanto",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "028-kanto",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化（關都型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-027-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+          "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+        }
+      }
+    ]
+  },
+  "028-alola-dynamax": {
+    "paths": [
+      {
+        "id": "evo-027-alola-028-alola",
+        "fromFormId": "027-alola",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "028-alola",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-028-alola-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-028-alola-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "028-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-027-kanto-028-kanto",
+        "fromFormId": "027-kanto",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "028-kanto",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化（關都型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-028-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-028-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "028-alola-normal": {
+    "paths": [
+      {
+        "id": "evo-027-alola-028-alola",
+        "fromFormId": "027-alola",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "028-alola",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "028-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-027-kanto-028-kanto",
+        "fromFormId": "027-kanto",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "028-kanto",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化（關都型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "028-alola-purified": {
+    "paths": [
+      {
+        "id": "evo-027-alola-028-alola",
+        "fromFormId": "027-alola",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "028-alola",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-028-alola-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+          "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+        }
+      }
+    ]
+  },
+  "028-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-027-kanto-028-kanto",
+        "fromFormId": "027-kanto",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "028-kanto",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化（關都型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-028-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+          "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+        }
+      }
+    ]
+  },
+  "028-alola-shadow": {
+    "paths": [
+      {
+        "id": "evo-027-alola-028-alola",
+        "fromFormId": "027-alola",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "028-alola",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "一般進化（阿羅拉型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "028-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-027-kanto-028-kanto",
+        "fromFormId": "027-kanto",
+        "fromNameZhTw": "穿山鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "028-kanto",
+        "toNameZhTw": "穿山王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化（關都型態限定路徑）",
+        "availabilityNotesZhTw": "來源逐步明示進化關係。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-14T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-028-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+          "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+        }
+      }
+    ]
+  },
+  "029-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-029-kanto-030-kanto",
+        "fromFormId": "029-kanto",
+        "fromNameZhTw": "尼多蘭",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "030-kanto",
+        "toNameZhTw": "尼多娜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-029-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-029-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "029-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-029-kanto-030-kanto",
+        "fromFormId": "029-kanto",
+        "fromNameZhTw": "尼多蘭",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "030-kanto",
+        "toNameZhTw": "尼多娜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-029-kanto-normal",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Watch your step and get ready for the Noxious Swamp event, featuring Pokémon from Pokémon GO Fest 2023: New York City!",
+          "url": "https://pokemongo.com/post/go-fest-2023-noxious-swamp/?hl=en"
+        }
+      }
+    ]
+  },
+  "029-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-029-kanto-030-kanto",
+        "fromFormId": "029-kanto",
+        "fromNameZhTw": "尼多蘭",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "030-kanto",
+        "toNameZhTw": "尼多娜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-029-kanto-purified",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Watch your step and get ready for the Noxious Swamp event, featuring Pokémon from Pokémon GO Fest 2023: New York City!",
+          "url": "https://pokemongo.com/post/go-fest-2023-noxious-swamp/?hl=en"
+        }
+      }
+    ]
+  },
+  "029-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-029-kanto-030-kanto",
+        "fromFormId": "029-kanto",
+        "fromNameZhTw": "尼多蘭",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "030-kanto",
+        "toNameZhTw": "尼多娜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-decision-029-kanto-shadow",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Watch your step and get ready for the Noxious Swamp event, featuring Pokémon from Pokémon GO Fest 2023: New York City!",
+          "url": "https://pokemongo.com/post/go-fest-2023-noxious-swamp/?hl=en"
+        }
+      }
+    ]
+  },
+  "030-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evo-029-kanto-030-kanto",
+        "fromFormId": "029-kanto",
+        "fromNameZhTw": "尼多蘭",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "030-kanto",
+        "toNameZhTw": "尼多娜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "remediation-release-030-kanto-dynamax",
+        "fieldName": "releaseStatus",
+        "previousValue": "UNKNOWN",
+        "newValue": "UNRELEASED",
+        "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      },
+      {
+        "id": "remediation-decision-030-kanto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "NEEDS_REVIEW",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+        "changedAt": "2026-07-14T18:00:00.000Z",
+        "rulesVersion": "2026.07.15-v2",
+        "source": {
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+        }
+      }
+    ]
+  },
+  "030-kanto-normal": {
+    "paths": [
+      {
+        "id": "evo-029-kanto-030-kanto",
+        "fromFormId": "029-kanto",
+        "fromNameZhTw": "尼多蘭",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "030-kanto",
+        "toNameZhTw": "尼多娜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "030-kanto-purified": {
+    "paths": [
+      {
+        "id": "evo-029-kanto-030-kanto",
+        "fromFormId": "029-kanto",
+        "fromNameZhTw": "尼多蘭",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "030-kanto",
+        "toNameZhTw": "尼多娜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "030-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evo-029-kanto-030-kanto",
+        "fromFormId": "029-kanto",
+        "fromNameZhTw": "尼多蘭",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "030-kanto",
+        "toNameZhTw": "尼多娜",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "一般進化",
+        "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+        "requiresEvent": false,
+        "verifiedAt": null
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  }
+}

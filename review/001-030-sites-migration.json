@@ -1,0 +1,41 @@
+{
+    "migrationDate":  "2026-07-16",
+    "baselineCommit":  "843c74b6b02326d8ec9a72e842aa23e22caae528",
+    "databaseSha256":  "97A4AE6BC3FB420387852B3A7CBE15492654F622DF4813F7DF51AEF8A6F4524F",
+    "snapshotSha256":  "2fd0a31adbe900aa87ea49c6e5ceaa4de2aa622820274928020a32276b4bce82",
+    "rulesVersion":  "2026.07.15-v2",
+    "architecture":  "PRISMA_SQLITE_SOURCE_STATIC_SITES_SNAPSHOT",
+    "bindings":  {
+                     "d1":  null,
+                     "r2":  null
+                 },
+    "counts":  {
+                   "species":  30,
+                   "forms":  35,
+                   "variants":  153,
+                   "details":  153,
+                   "rawEvaluationData":  123,
+                   "categoryEvaluations":  1071,
+                   "sources":  107,
+                   "changeLogs":  303,
+                   "ruleTraces":  1683,
+                   "openReviewIssues":  134
+               },
+    "decisions":  {
+                      "KEEP":  76,
+                      "CONDITIONAL_KEEP":  17,
+                      "TRANSFER_CANDIDATE":  35,
+                      "NEEDS_REVIEW":  25
+                  },
+    "validation":  {
+                       "sitesCompatibility":  "PASS",
+                       "unitTests":  "47/47 PASS",
+                       "integrationTests":  "4/4 PASS",
+                       "dataValidation":  "PASS",
+                       "typecheck":  "PASS",
+                       "lint":  "PASS",
+                       "vinextBuild":  "PASS",
+                       "nextLocalBuild":  "PASS",
+                       "browserSmoke":  "PASS"
+                   }
+}

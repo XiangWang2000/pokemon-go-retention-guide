@@ -2,8 +2,6 @@ import { Database, ExternalLink } from "lucide-react";
 import { getSources } from "@/lib/data";
 import { zhTw } from "@/locales/zh-TW";
 
-export const dynamic = "force-dynamic";
-
 export default async function SourcesPage() {
   const sources = await getSources();
   return (

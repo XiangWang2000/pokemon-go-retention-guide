@@ -1,8 +1,6 @@
 import { ExternalLink, FileClock } from "lucide-react";
 import { getChangeLogs } from "@/lib/data";
 
-export const dynamic = "force-dynamic";
-
 export default async function ChangesPage() {
   const logs = await getChangeLogs();
   return (

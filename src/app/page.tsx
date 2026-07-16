@@ -1,8 +1,6 @@
 import { AlertTriangle, Database, Layers3, ShieldCheck } from "lucide-react";
 import { EvaluationTable } from "@/components/evaluation-table";
-import { getDashboardRows } from "@/lib/data";
-
-export const dynamic = "force-dynamic";
+import { getDashboardRows, siteSnapshotManifest } from "@/lib/data";
 
 export default async function HomePage() {
   const rows = await getDashboardRows();
@@ -49,7 +47,10 @@ export default async function HomePage() {
           ))}
         </div>
       </section>
-      <EvaluationTable rows={rows} referenceDate={new Date().toISOString()} />
+      <EvaluationTable
+        rows={rows}
+        referenceDate={siteSnapshotManifest.dataAsOf ?? "2026-07-15T00:00:00+08:00"}
+      />
     </div>
   );
 }

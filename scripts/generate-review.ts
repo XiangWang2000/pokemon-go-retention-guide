@@ -1,5 +1,5 @@
 import { mkdir, writeFile } from "node:fs/promises";
-import { getDashboardRows, getReviewIssues, getSources } from "../src/lib/data";
+import { getDashboardRows, getReviewIssues, getSources } from "../src/lib/data-prisma";
 import { prisma } from "../src/lib/prisma";
 import { zhTw } from "../src/locales/zh-TW";
 import { RULES_VERSION } from "../src/rules/rules";

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "batch": "001-030",
+  "dataAsOf": "2026-07-14T18:00:00.000Z",
+  "sourceDatabase": {
+    "path": "dev.db",
+    "bytes": 2633728,
+    "sha256": "97a4ae6bc3fb420387852b3a7cbe15492654f622df4813f7df51aef8a6f4524f"
+  },
+  "rulesVersions": [
+    "2026.07.15-v2"
+  ],
+  "counts": {
+    "pokemonSpecies": 30,
+    "pokemonForms": 35,
+    "battleVariants": 153,
+    "evolutionPaths": 20,
+    "moves": 9,
+    "variantMoves": 9,
+    "sourceReferences": 107,
+    "rawEvaluationData": 123,
+    "retentionEvaluations": 306,
+    "evaluationSources": 958,
+    "evaluationRuleTraces": 1683,
+    "changeLogs": 303,
+    "dataIssues": 795,
+    "categoryEvaluations": 1071,
+    "categoryEvaluationSources": 978,
+    "dashboardRows": 153,
+    "openReviewIssues": 134,
+    "detailRecords": 153
+  },
+  "snapshotSha256": "2fd0a31adbe900aa87ea49c6e5ceaa4de2aa622820274928020a32276b4bce82",
+  "files": {
+    "dashboard": {
+      "path": "dashboard.json",
+      "bytes": 2049373,
+      "sha256": "056d5d0fa77fa1ef40977121c1b58753eeddfca62b9e3ada5e6d273d82e56a06"
+    },
+    "review": {
+      "path": "review.json",
+      "bytes": 84372,
+      "sha256": "3e3aa7f7b4e83a6a5ad93ecf2fd0df4a8fa29c41702be713b7c6c7b213f73d0b"
+    },
+    "sources": {
+      "path": "sources.json",
+      "bytes": 72732,
+      "sha256": "2160f21e0e8bd98e545e28eb896f9e423698dbef3d38bc106e26e1b96a698330"
+    },
+    "changes": {
+      "path": "changes.json",
+      "bytes": 186723,
+      "sha256": "b42d4f2076d28695157ff2bdc0c36f6c2402805656cd1445790439f833db2625"
+    },
+    "details": {
+      "path": "details.json",
+      "bytes": 197253,
+      "sha256": "b0bf14a3594f26cea3a291661e02fc18961276a25bd16ef4e6f1f0a30ab5e992"
+    }
+  },
+  "excel": {
+    "path": "public/exports/pokemon-go-retention-001-030.xlsx",
+    "bytes": 122406,
+    "sha256": "f1ac0c2e22e46fa2a223eba85ec8dbf6da7ea4f5efcda082dc653220dd8017ad",
+    "sheets": 10
+  }
+}

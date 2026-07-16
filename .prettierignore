@@ -1,8 +1,12 @@
 .next
+dist
+.wrangler
 node_modules
 generated
 coverage
 prisma/dev.db
+site-data/*.json
+public/exports/*.xlsx
 review/*.json
 research_notes
 data/sources

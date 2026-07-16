@@ -7,5 +7,13 @@ export default defineConfig([
   ...nextVitals,
   ...nextTs,
   prettier,
-  globalIgnores([".next/**", "generated/**", "coverage/**", "prisma/migrations/**"]),
+  globalIgnores([
+    ".next/**",
+    "dist/**",
+    ".wrangler/**",
+    "site-data/**",
+    "generated/**",
+    "coverage/**",
+    "prisma/migrations/**",
+  ]),
 ]);

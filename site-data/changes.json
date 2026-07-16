@@ -1,0 +1,4463 @@
+[
+  {
+    "id": "remediation-release-001-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "001-kanto-shadow",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-001-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "001-kanto-purified",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-002-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "002-kanto-shadow",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-002-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "002-kanto-purified",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-003-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "003-kanto-shadow",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-003-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "003-kanto-purified",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-005-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "005-kanto-shadow",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-005-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "005-kanto-purified",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-006-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "006-kanto-shadow",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-006-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "006-kanto-purified",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-008-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "008-kanto-shadow",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-008-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "008-kanto-purified",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-009-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "009-kanto-shadow",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-009-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "009-kanto-purified",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-010-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "010-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-011-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "011-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-012-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "012-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-013-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "013-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-014-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "014-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-015-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "015-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-016-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "016-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-017-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "017-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-018-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "018-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-019-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "019-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-019-alola-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "019-alola-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-020-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "020-kanto-shadow",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-020-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "020-kanto-purified",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-020-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "020-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-020-alola-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "020-alola-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-021-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "021-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-022-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "022-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-023-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "023-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-024-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "024-kanto-shadow",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-024-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "024-kanto-purified",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-024-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "024-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-025-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "025-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-026-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "026-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-026-alola-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "026-alola-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-027-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "027-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-027-alola-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "027-alola-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-028-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "028-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-028-alola-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "028-alola-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-029-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "029-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-release-030-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "030-kanto-dynamax",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "UNRELEASED",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-return-raw-005-kanto-normal-great",
+    "entityType": "RawEvaluationData",
+    "entityId": "raw-005-kanto-normal-great",
+    "fieldName": "battleVariantId",
+    "previousValue": "005-kanto-normal",
+    "newValue": "005-kanto-purified",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "Return（報恩）是淨化專屬招式，不得歸入普通版；改列為 Purified override。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "remediation-return-raw-020-alola-normal-great",
+    "entityType": "RawEvaluationData",
+    "entityId": "raw-020-alola-normal-great",
+    "fieldName": "battleVariantId",
+    "previousValue": "020-alola-normal",
+    "newValue": "020-alola-purified",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "Return（報恩）是淨化專屬招式，不得歸入普通版；改列為 Purified override。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "remediation-fearow-gl-rank-verification",
+    "entityType": "RawEvaluationData",
+    "entityId": "raw-022-kanto-normal-great",
+    "fieldName": "rankVerification",
+    "previousValue": "候選 #20，重現性未記錄",
+    "newValue": "#20，完整榜單可重現",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "逐列驗證 speciesId=fearow、Open Great League、Overall、固定 commit 與陣列索引；#20 可重現，因此保留而非移除。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "remediation-decision-001-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "001-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-TCG-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+      "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-001-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "001-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-TCG-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+      "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-002-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "002-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-BULBASAUR",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Community Day Classic: Back to Bulbasaur",
+      "url": "https://pokemongo.com/en/post/community-day-classic-bulbasaur-jan22?game_client=iOS"
+    }
+  },
+  {
+    "id": "remediation-decision-002-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "002-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-BULBASAUR",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Community Day Classic: Back to Bulbasaur",
+      "url": "https://pokemongo.com/en/post/community-day-classic-bulbasaur-jan22?game_client=iOS"
+    }
+  },
+  {
+    "id": "remediation-decision-003-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "003-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "CONDITIONAL_KEEP",
+    "newValue": "KEEP",
+    "sourceId": "OFF-MEGA-LAUNCH",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "url": "https://pokemongo.com/en/post/megaevolution-launch"
+    }
+  },
+  {
+    "id": "remediation-decision-003-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "003-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-MEGA-LAUNCH",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "url": "https://pokemongo.com/en/post/megaevolution-launch"
+    }
+  },
+  {
+    "id": "remediation-decision-003-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "003-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-MEGA-LAUNCH",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "url": "https://pokemongo.com/en/post/megaevolution-launch"
+    }
+  },
+  {
+    "id": "remediation-decision-003-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "003-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "KEEP",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-MEGA-LAUNCH",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "url": "https://pokemongo.com/en/post/megaevolution-launch"
+    }
+  },
+  {
+    "id": "remediation-decision-004-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "004-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-TCG-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+      "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-005-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "005-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-CHARMANDER",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "September 2023 Community Day Classic: Charmander",
+      "url": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-005-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "005-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-CHARMANDER",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "September 2023 Community Day Classic: Charmander",
+      "url": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-006-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "006-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-MEGA-LAUNCH",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "url": "https://pokemongo.com/en/post/megaevolution-launch"
+    }
+  },
+  {
+    "id": "remediation-decision-006-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "006-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-MEGA-LAUNCH",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "url": "https://pokemongo.com/en/post/megaevolution-launch"
+    }
+  },
+  {
+    "id": "remediation-decision-007-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "007-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-TCG-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+      "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-008-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "008-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-DEC-2023",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Catch up with Community Day! Pokémon from 2022 and 2023 Community Days are returning for a year-end catch celebration!",
+      "url": "https://pokemongo.com/post/community-day-december-2023?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-008-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "008-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-DEC-2023",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Catch up with Community Day! Pokémon from 2022 and 2023 Community Days are returning for a year-end catch celebration!",
+      "url": "https://pokemongo.com/post/community-day-december-2023?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-009-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "009-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-MEGA-LAUNCH",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "url": "https://pokemongo.com/en/post/megaevolution-launch"
+    }
+  },
+  {
+    "id": "remediation-decision-009-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "009-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-MEGA-LAUNCH",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "url": "https://pokemongo.com/en/post/megaevolution-launch"
+    }
+  },
+  {
+    "id": "remediation-decision-009-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "009-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-MEGA-LAUNCH",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "url": "https://pokemongo.com/en/post/megaevolution-launch"
+    }
+  },
+  {
+    "id": "remediation-decision-009-kanto-gigantamax",
+    "entityType": "BattleVariant",
+    "entityId": "009-kanto-gigantamax",
+    "fieldName": "decision",
+    "previousValue": "KEEP",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-MEGA-LAUNCH",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
+      "url": "https://pokemongo.com/en/post/megaevolution-launch"
+    }
+  },
+  {
+    "id": "remediation-decision-010-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "010-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-BUG-OUT-2024",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Bug Out",
+      "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-010-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "010-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-BUG-OUT-2024",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Bug Out",
+      "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-010-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "010-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-BUG-OUT-2024",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Bug Out",
+      "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-011-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "011-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "remediation-decision-012-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "012-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-GMAX-BUTTERFREE",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Fly free and battle hard on Gigantamax Butterfree Max Battle Day!",
+      "url": "https://pokemongo.com/news/gigantamax-butterfree-max-battle-day?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-013-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "013-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-BUG-OUT-2024",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Bug Out",
+      "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-013-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "013-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-BUG-OUT-2024",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Bug Out",
+      "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-013-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "013-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-BUG-OUT-2024",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Bug Out",
+      "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-013-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "013-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-014-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "014-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-WEEDLE",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "The featured Pokémon for June Community Day is Weedle!",
+      "url": "https://pokemongo.com/post/communityday-jun2020/?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-014-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "014-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-WEEDLE",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "The featured Pokémon for June Community Day is Weedle!",
+      "url": "https://pokemongo.com/post/communityday-jun2020/?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-014-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "014-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-WEEDLE",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "The featured Pokémon for June Community Day is Weedle!",
+      "url": "https://pokemongo.com/post/communityday-jun2020/?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-014-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "014-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-015-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "015-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-BUG-OUT-2024",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Bug Out",
+      "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-015-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "015-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-BUG-OUT-2024",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Bug Out",
+      "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-015-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "015-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-BUG-OUT-2024",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Bug Out",
+      "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-015-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "015-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-016-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "016-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-KANTO-2021",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Keep the Kanto celebration going after Pokémon GO Tour: Kanto with a special event!",
+      "url": "https://pokemongo.com/en/post/kanto-celebration-event-2021?game_client=iOS"
+    }
+  },
+  {
+    "id": "remediation-decision-016-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "016-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-KANTO-2021",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Keep the Kanto celebration going after Pokémon GO Tour: Kanto with a special event!",
+      "url": "https://pokemongo.com/en/post/kanto-celebration-event-2021?game_client=iOS"
+    }
+  },
+  {
+    "id": "remediation-decision-016-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "016-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-KANTO-2021",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Keep the Kanto celebration going after Pokémon GO Tour: Kanto with a special event!",
+      "url": "https://pokemongo.com/en/post/kanto-celebration-event-2021?game_client=iOS"
+    }
+  },
+  {
+    "id": "remediation-decision-016-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "016-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-017-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "017-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-EVOLVING-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Get cosmic with our new Evolving Stars event!",
+      "url": "https://pokemongo.com/post/evolving-stars-2022"
+    }
+  },
+  {
+    "id": "remediation-decision-017-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "017-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-EVOLVING-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Get cosmic with our new Evolving Stars event!",
+      "url": "https://pokemongo.com/post/evolving-stars-2022"
+    }
+  },
+  {
+    "id": "remediation-decision-017-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "017-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-EVOLVING-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Get cosmic with our new Evolving Stars event!",
+      "url": "https://pokemongo.com/post/evolving-stars-2022"
+    }
+  },
+  {
+    "id": "remediation-decision-017-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "017-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-018-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "018-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-AUG-2021",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Coming in August: Ultra Unlock and more!",
+      "url": "https://pokemongo.com/en/post/aug-2021-events"
+    }
+  },
+  {
+    "id": "remediation-decision-018-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "018-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-AUG-2021",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Coming in August: Ultra Unlock and more!",
+      "url": "https://pokemongo.com/en/post/aug-2021-events"
+    }
+  },
+  {
+    "id": "remediation-decision-018-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "018-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-018-kanto-mega",
+    "entityType": "BattleVariant",
+    "entityId": "018-kanto-mega",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-AUG-2021",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Coming in August: Ultra Unlock and more!",
+      "url": "https://pokemongo.com/en/post/aug-2021-events"
+    }
+  },
+  {
+    "id": "remediation-decision-019-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "019-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-SHADOW-SANDSHREW",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "The Team GO Rocket Leaders have disrupted Pokémon habitats!",
+      "url": "https://pokemongo.com/en/post/teamgorocketleadersdisruption2019?hl=es"
+    }
+  },
+  {
+    "id": "remediation-decision-019-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "019-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-019-alola-normal",
+    "entityType": "BattleVariant",
+    "entityId": "019-alola-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-ALOLA-FINALE",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Season of Alola during the Alola to Alola finale event!",
+      "url": "https://pokemongo.com/post/alola-to-alola?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-019-alola-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "019-alola-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-ALOLA-FINALE",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Season of Alola during the Alola to Alola finale event!",
+      "url": "https://pokemongo.com/post/alola-to-alola?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-019-alola-purified",
+    "entityType": "BattleVariant",
+    "entityId": "019-alola-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-ALOLA-FINALE",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Season of Alola during the Alola to Alola finale event!",
+      "url": "https://pokemongo.com/post/alola-to-alola?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-019-alola-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "019-alola-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-020-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "020-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-020-alola-normal",
+    "entityType": "BattleVariant",
+    "entityId": "020-alola-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "OFF-GREEDY-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "The Greedy Gluttons event and a Team GO Rocket takeover serve up adventure in Pokémon GO this November!",
+      "url": "https://pokemongo.com/en/post/greedy-gluttons"
+    }
+  },
+  {
+    "id": "remediation-decision-020-alola-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "020-alola-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-021-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "021-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-KANTO-2021",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Keep the Kanto celebration going after Pokémon GO Tour: Kanto with a special event!",
+      "url": "https://pokemongo.com/en/post/kanto-celebration-event-2021?game_client=iOS"
+    }
+  },
+  {
+    "id": "remediation-decision-021-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "021-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-022-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "022-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-023-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "023-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-SHADOW-SANDSHREW",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "The Team GO Rocket Leaders have disrupted Pokémon habitats!",
+      "url": "https://pokemongo.com/en/post/teamgorocketleadersdisruption2019?hl=es"
+    }
+  },
+  {
+    "id": "remediation-decision-023-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "023-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-024-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "024-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-025-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "025-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-PIKACHU",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Introducing Pokémon GO Community Day!",
+      "url": "https://pokemongo.com/post/communityday?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-025-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "025-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-026-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "026-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-026-alola-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "026-alola-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-027-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "027-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-SANDSHREW",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+      "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-027-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "027-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-SANDSHREW",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+      "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-027-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "027-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-SANDSHREW",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+      "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-027-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "027-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-027-alola-purified",
+    "entityType": "BattleVariant",
+    "entityId": "027-alola-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-ALOLA-FINALE",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Season of Alola during the Alola to Alola finale event!",
+      "url": "https://pokemongo.com/post/alola-to-alola?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-027-alola-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "027-alola-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-028-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "028-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "OFF-CD-SANDSHREW",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+      "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-028-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "028-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-028-alola-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "028-alola-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-029-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "029-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-NOXIOUS-2023",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Watch your step and get ready for the Noxious Swamp event, featuring Pokémon from Pokémon GO Fest 2023: New York City!",
+      "url": "https://pokemongo.com/post/go-fest-2023-noxious-swamp/?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-029-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "029-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-NOXIOUS-2023",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Watch your step and get ready for the Noxious Swamp event, featuring Pokémon from Pokémon GO Fest 2023: New York City!",
+      "url": "https://pokemongo.com/post/go-fest-2023-noxious-swamp/?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-029-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "029-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-NOXIOUS-2023",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Watch your step and get ready for the Noxious Swamp event, featuring Pokémon from Pokémon GO Fest 2023: New York City!",
+      "url": "https://pokemongo.com/post/go-fest-2023-noxious-swamp/?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-029-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "029-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-030-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "030-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle1-GOHUB_DMAX_LIST",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+    }
+  },
+  {
+    "id": "remediation-decision-012-kanto-gigantamax",
+    "entityType": "BattleVariant",
+    "entityId": "012-kanto-gigantamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-GMAX-BUTTERFREE",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Fly free and battle hard on Gigantamax Butterfree Max Battle Day!",
+      "url": "https://pokemongo.com/news/gigantamax-butterfree-max-battle-day?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-025-kanto-gigantamax",
+    "entityType": "BattleVariant",
+    "entityId": "025-kanto-gigantamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-PIKACHU",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Introducing Pokémon GO Community Day!",
+      "url": "https://pokemongo.com/post/communityday?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-026-kanto-mega-x",
+    "entityType": "BattleVariant",
+    "entityId": "026-kanto-mega-x",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "OFF-MEGA-RAICHU-2026",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Sparks fly for Raichu Super Mega Raid Day!",
+      "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026"
+    }
+  },
+  {
+    "id": "remediation-decision-026-kanto-mega-y",
+    "entityType": "BattleVariant",
+    "entityId": "026-kanto-mega-y",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "OFF-MEGA-RAICHU-2026",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Sparks fly for Raichu Super Mega Raid Day!",
+      "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026"
+    }
+  },
+  {
+    "id": "remediation-release-020-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "020-kanto-normal",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-022-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "022-kanto-normal",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-release-024-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "024-kanto-normal",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": null
+  },
+  {
+    "id": "remediation-decision-001-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "001-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-TCG-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+      "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-002-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "002-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-BULBASAUR",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Community Day Classic: Back to Bulbasaur",
+      "url": "https://pokemongo.com/en/post/community-day-classic-bulbasaur-jan22?game_client=iOS"
+    }
+  },
+  {
+    "id": "remediation-decision-004-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "004-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-TCG-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+      "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-005-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "005-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-CHARMANDER",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "September 2023 Community Day Classic: Charmander",
+      "url": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-007-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "007-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-TCG-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+      "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-008-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "008-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-DEC-2023",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Catch up with Community Day! Pokémon from 2022 and 2023 Community Days are returning for a year-end catch celebration!",
+      "url": "https://pokemongo.com/post/community-day-december-2023?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-010-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "010-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-BUG-OUT-2024",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Bug Out",
+      "url": "https://pokemongo.com/post/bug-out-2024?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-011-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "011-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "official-shadow-mechanic-20260715",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Shadow Pokémon & Purified Pokémon",
+      "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/"
+    }
+  },
+  {
+    "id": "remediation-decision-011-kanto-dynamax",
+    "entityType": "BattleVariant",
+    "entityId": "011-kanto-dynamax",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "remediation-decision-012-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "012-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "OFF-GMAX-BUTTERFREE",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Fly free and battle hard on Gigantamax Butterfree Max Battle Day!",
+      "url": "https://pokemongo.com/news/gigantamax-butterfree-max-battle-day?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-020-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "020-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle2-gohub-raticate",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Raticate: Best Moveset, Counters & Max CP | Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon/20"
+    }
+  },
+  {
+    "id": "remediation-decision-020-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "020-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "official-shadow-mechanic-20260715",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Shadow Pokémon & Purified Pokémon",
+      "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/"
+    }
+  },
+  {
+    "id": "remediation-decision-020-alola-purified",
+    "entityType": "BattleVariant",
+    "entityId": "020-alola-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "OFF-GREEDY-2022",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "The Greedy Gluttons event and a Team GO Rocket takeover serve up adventure in Pokémon GO this November!",
+      "url": "https://pokemongo.com/en/post/greedy-gluttons"
+    }
+  },
+  {
+    "id": "remediation-decision-022-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "022-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "battle2-gohub-fearow",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Fearow: Best Moveset, Counters & Max CP | Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon/22"
+    }
+  },
+  {
+    "id": "remediation-decision-024-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "024-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "battle2-gohub-arbok",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Arbok: Best Moveset, Counters & Max CP | Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon/24"
+    }
+  },
+  {
+    "id": "remediation-decision-024-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "024-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "TRANSFER_CANDIDATE",
+    "sourceId": "official-shadow-mechanic-20260715",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "Shadow Pokémon & Purified Pokémon",
+      "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/"
+    }
+  },
+  {
+    "id": "remediation-decision-028-kanto-purified",
+    "entityType": "BattleVariant",
+    "entityId": "028-kanto-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "OFF-CD-SANDSHREW",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+      "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+    }
+  },
+  {
+    "id": "remediation-decision-028-alola-purified",
+    "entityType": "BattleVariant",
+    "entityId": "028-alola-purified",
+    "fieldName": "decision",
+    "previousValue": "NEEDS_REVIEW",
+    "newValue": "KEEP",
+    "sourceId": "OFF-CD-SANDSHREW",
+    "changeReasonZhTw": "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+    "changedAt": "2026-07-14T18:00:00.000Z",
+    "rulesVersion": "2026.07.15-v2",
+    "source": {
+      "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
+      "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en"
+    }
+  },
+  {
+    "id": "change-001-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-001-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-001-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-001-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-001-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-001-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-001-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-001-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-002-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-002-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-002-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-002-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-002-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-002-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-002-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-002-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-003-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-003-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-003-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-003-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-003-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-003-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-003-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-003-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-003-kanto-mega-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-003-kanto-mega-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-003-kanto-gigantamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-003-kanto-gigantamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-004-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-004-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-004-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-004-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-004-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-004-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-004-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-004-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-005-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-005-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-005-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-005-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-005-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-005-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-005-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-005-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-006-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-006-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-006-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-006-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-006-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-006-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-006-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-006-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-006-kanto-mega-x-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-006-kanto-mega-x-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-006-kanto-mega-y-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-006-kanto-mega-y-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-006-kanto-gigantamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-006-kanto-gigantamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-007-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-007-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-007-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-007-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-007-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-007-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-007-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-007-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-008-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-008-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-008-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-008-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-008-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-008-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-008-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-008-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-009-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-009-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-009-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-009-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-009-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-009-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-009-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-009-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-009-kanto-mega-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-009-kanto-mega-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-009-kanto-gigantamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-009-kanto-gigantamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-010-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-010-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-010-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-010-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-010-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-010-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-010-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-010-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-011-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-011-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-011-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-011-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-011-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-011-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-011-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-011-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-012-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-012-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-012-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-012-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-012-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-012-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-012-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-012-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-013-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-013-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-013-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-013-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-013-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-013-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-013-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-013-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-014-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-014-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-014-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-014-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-014-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-014-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-014-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-014-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-015-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-015-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-015-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-015-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-015-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-015-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-015-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-015-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-015-kanto-mega-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-015-kanto-mega-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-016-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-016-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-016-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-016-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-016-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-016-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-016-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-016-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-017-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-017-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-017-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-017-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-017-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-017-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-017-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-017-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-018-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-018-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-018-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-018-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-018-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-018-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-018-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-018-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-018-kanto-mega-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-018-kanto-mega-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-019-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-019-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-019-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-019-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-019-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-019-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-019-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-019-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-019-alola-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-019-alola-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-019-alola-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-019-alola-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-019-alola-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-019-alola-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-019-alola-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-019-alola-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-020-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-020-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-020-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-020-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-020-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-020-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-020-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-020-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-020-alola-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-020-alola-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-020-alola-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-020-alola-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-020-alola-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-020-alola-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-020-alola-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-020-alola-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-021-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-021-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-021-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-021-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-021-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-021-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-021-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-021-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-022-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-022-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-022-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-022-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-022-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-022-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-022-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-022-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-023-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-023-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-023-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-023-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-023-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-023-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-023-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-023-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-024-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-024-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-024-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-024-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-024-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-024-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-024-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-024-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-025-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-025-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-025-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-025-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-025-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-025-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-025-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-025-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-026-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-026-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-026-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-026-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-026-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-026-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-026-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-026-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-026-alola-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-026-alola-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-026-alola-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-026-alola-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-026-alola-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-026-alola-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-026-alola-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-026-alola-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-027-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-027-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-027-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-027-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-027-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-027-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-027-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-027-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-027-alola-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-027-alola-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-027-alola-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-027-alola-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-027-alola-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-027-alola-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-027-alola-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-027-alola-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-028-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-028-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-028-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-028-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-028-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-028-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-028-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-028-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-028-alola-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-028-alola-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-028-alola-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-028-alola-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-028-alola-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-028-alola-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-028-alola-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-028-alola-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-029-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-029-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-029-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-029-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-029-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-029-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-029-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-029-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-030-kanto-normal-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-030-kanto-normal-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-030-kanto-shadow-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-030-kanto-shadow-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
+    "id": "change-030-kanto-purified-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-030-kanto-purified-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  },
+  {
+    "id": "change-030-kanto-dynamax-decision-20260715",
+    "entityType": "RetentionEvaluation",
+    "entityId": "evaluation-030-kanto-dynamax-20260715",
+    "fieldName": "decision",
+    "previousValue": null,
+    "newValue": "NEEDS_REVIEW",
+    "sourceId": null,
+    "changeReasonZhTw": "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
+    "changedAt": "2026-07-14T16:00:00.000Z",
+    "rulesVersion": "2026.07.15-v1",
+    "source": null
+  }
+]

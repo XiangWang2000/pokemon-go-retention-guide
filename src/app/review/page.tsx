@@ -2,8 +2,6 @@ import { ClipboardList } from "lucide-react";
 import { ReviewTable } from "@/components/review-table";
 import { getReviewIssues } from "@/lib/data";
 
-export const dynamic = "force-dynamic";
-
 export default async function ReviewPage() {
   const issues = await getReviewIssues();
   return (
