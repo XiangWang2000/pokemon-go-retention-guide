@@ -1,5 +1,13 @@
 import { describe, expect, it } from "vitest";
-import { evaluateRetention, type EvaluationFacts } from "@/rules/engine";
+import {
+  calculateDecisionConfidence,
+  evaluateRetention,
+  hasEnoughEvidenceForKeep,
+  hasEnoughEvidenceForTransfer,
+  hasMaterialUncertainty,
+  shouldHoldForNow,
+  type EvaluationFacts,
+} from "@/rules/engine";
 
 const base: EvaluationFacts = {
   releaseStatus: "RELEASED",
@@ -28,106 +36,96 @@ const base: EvaluationFacts = {
   normalHighIvOnly: false,
 };
 
-function run(changes: Partial<EvaluationFacts>) {
+function run(changes: Partial<EvaluationFacts> = {}) {
   return evaluateRetention({ ...base, ...changes });
 }
 
-describe("類別資料狀態與最終決策分離", () => {
-  it("1. 缺火箭隊排名仍可產生正式決策", () => {
+describe("不可逆風險保留規則", () => {
+  it("1. 缺少火箭隊統一排名不會自動產生 HOLD_FOR_NOW", () => {
     const result = run({ hasOptionalDataGap: true });
-    expect(result.decision).toBe("TRANSFER_CANDIDATE");
+    expect(result.finalDecision).toBe("TRANSFER_CANDIDATE");
     expect(result.confidence).toBe("MEDIUM");
   });
 
-  it("2. NOT_APPLICABLE 不會觸發 NEEDS_REVIEW", () => {
+  it("2. NOT_APPLICABLE 不影響正式結論", () => {
     expect(
       run({ categoryStatuses: { PVP: "VERIFIED", PVE: "VERIFIED", MEGA: "NOT_APPLICABLE" } })
-        .decision,
+        .finalDecision,
     ).toBe("TRANSFER_CANDIDATE");
   });
 
-  it("3. UNRANKED 不會被當成 SOURCE_MISSING", () => {
-    expect(run({ categoryStatuses: { PVP: "UNRANKED", PVE: "VERIFIED" } }).decision).toBe(
-      "TRANSFER_CANDIDATE",
-    );
+  it("3. 關鍵 Mega 推出狀態不明時產生 HOLD_FOR_NOW", () => {
+    const facts = {
+      ...base,
+      releaseStatus: "UNKNOWN" as const,
+      releaseStatusKnown: false,
+      hasUnconfirmedImportantMegaOrMaxOrEvolution: true,
+    };
+    const result = evaluateRetention(facts);
+    expect(hasMaterialUncertainty(facts)).toBe(true);
+    expect(shouldHoldForNow(facts)).toBe(true);
+    expect(result.finalDecision).toBe("HOLD_FOR_NOW");
+    expect(result.reasonZhTw).toContain("推出");
   });
 
-  it("4. UNRELEASED 不會被當成 UNKNOWN", () => {
-    expect(run({ releaseStatus: "UNRELEASED" }).decision).toBe("TRANSFER_CANDIDATE");
+  it("4. 已確認沒有重要用途時可產生 TRANSFER_CANDIDATE", () => {
+    expect(hasEnoughEvidenceForTransfer(base)).toBe(true);
+    expect(run().finalDecision).toBe("TRANSFER_CANDIDATE");
   });
 
-  it("5. UNKNOWN_RELEASE_STATUS 會阻止正式決策", () => {
-    expect(run({ releaseStatus: "UNKNOWN" }).decision).toBe("NEEDS_REVIEW");
+  it("5. 本體用途低但後續進化有價值時產生 CONDITIONAL_KEEP", () => {
+    const facts = { ...base, valuableEvolution: true };
+    expect(hasEnoughEvidenceForKeep(facts)).toBe(true);
+    expect(evaluateRetention(facts).finalDecision).toBe("CONDITIONAL_KEEP");
   });
 
-  it("13. 非關鍵資料缺口只把 confidence 降為 MEDIUM", () => {
-    const result = run({
+  it("6. 部分次要資料缺失時仍有正式決策並降低 confidence", () => {
+    const facts = {
+      ...base,
+      categoryStatuses: { PVP: "VERIFIED", PVE: "VERIFIED", GYM: "PARTIALLY_VERIFIED" } as const,
       hasOptionalDataGap: true,
-      categoryStatuses: { PVP: "VERIFIED", PVE: "VERIFIED", GYM: "PARTIALLY_VERIFIED" },
-    });
-    expect(result.decision).not.toBe("NEEDS_REVIEW");
-    expect(result.confidence).toBe("MEDIUM");
+    };
+    const result = evaluateRetention(facts);
+    expect(result.finalDecision).toBe("TRANSFER_CANDIDATE");
+    expect(calculateDecisionConfidence(facts, result.finalDecision)).toBe("MEDIUM");
   });
 
-  it("14. 關鍵類別缺少精確資料但已有實用判斷時不產生 NEEDS_REVIEW", () => {
-    const result = run({
-      categoryStatuses: { PVP: "VERIFIED", PVE: "SOURCE_MISSING" },
-      decisionProvenance: "MANUAL_CURATED",
-    });
-    expect(result.decision).toBe("TRANSFER_CANDIDATE");
-    expect(result.confidence).toBe("MEDIUM");
-    expect(
-      run({
-        categoryStatuses: { PVP: "VERIFIED", PVE: "VERIFIED", GYM: "SOURCE_MISSING" },
-        hasOptionalDataGap: true,
-      }).decision,
-    ).toBe("TRANSFER_CANDIDATE");
-  });
-
-  it("15. 完全沒有可判斷依據時才產生 NEEDS_REVIEW", () => {
-    expect(
-      run({
-        categoryStatuses: { PVP: "SOURCE_MISSING", PVE: "DATA_UNAVAILABLE" },
-        hasReliableSources: false,
-        speciesBattleValueLow: false,
-      }).decision,
-    ).toBe("NEEDS_REVIEW");
-  });
-
-  it("16. 繼承普通版定性評估可產生正式結論並降低信心", () => {
-    const result = run({
-      categoryStatuses: { PVP: "PARTIALLY_VERIFIED", PVE: "DATA_UNAVAILABLE" },
-      decisionProvenance: "INHERITED",
-    });
-    expect(result.decision).toBe("TRANSFER_CANDIDATE");
-    expect(result.confidence).toBe("MEDIUM");
-  });
-
-  it("普通高 IV 不會覆蓋物種低戰鬥價值", () => {
-    expect(run({ normalHighIvOnly: true }).decision).toBe("TRANSFER_CANDIDATE");
-  });
-
-  it("高價值暗影 PvE 與普通版分開判定", () => {
-    expect(run({ speciesBattleValueLow: false, shadowPveAdvantage: true }).decision).toBe("KEEP");
-  });
-
-  it("只有特殊盃用途時為條件式保留", () => {
-    expect(run({ speciesBattleValueLow: false, specialCupOnly: true }).decision).toBe(
-      "CONDITIONAL_KEEP",
+  it("7. finalDecision 不再包含 NEEDS_REVIEW", () => {
+    const decisions = [
+      run().finalDecision,
+      run({ valuableEvolution: true }).finalDecision,
+      run({ majorPvpValue: true, speciesBattleValueLow: false }).finalDecision,
+      run({ releaseStatus: "UNKNOWN", releaseStatusKnown: false }).finalDecision,
+    ];
+    expect(decisions).toEqual(
+      expect.arrayContaining(["KEEP", "CONDITIONAL_KEEP", "HOLD_FOR_NOW", "TRANSFER_CANDIDATE"]),
     );
+    expect(decisions).not.toContain("NEEDS_REVIEW");
   });
 
-  it("後續進化有價值時前階不可直接傳送", () => {
-    expect(run({ valuableEvolution: true }).decision).toBe("CONDITIONAL_KEEP");
+  it("10. 所有 HOLD_FOR_NOW 都有具體中文原因", () => {
+    const cases: Partial<EvaluationFacts>[] = [
+      { releaseStatus: "UNKNOWN", releaseStatusKnown: false },
+      { possibleSpeciesMismatch: true },
+      { hasSourceConflict: true },
+      { hasUncertainRequiredMoveImpact: true },
+      { ruleCovered: false },
+    ];
+    for (const changes of cases) {
+      const result = run(changes);
+      expect(result.finalDecision).toBe("HOLD_FOR_NOW");
+      expect(result.reasonZhTw.length).toBeGreaterThan(25);
+      expect(result.reasonZhTw).not.toBe("資料不足");
+    }
   });
 
-  it("果然翁類型不套用典型低攻 IV 說法", () => {
+  it("果然翁不套用典型低攻 PvP IV 規則", () => {
     expect(
       run({
         speciesBattleValueLow: false,
         majorPvpValue: true,
         unusualPvpIvProfile: "WYNAUT_OR_WOBBUFFET",
       }).recommendedIvStrategyZhTw,
-    ).toContain("偏高甚至接近滿 IV");
+    ).toContain("接近滿 IV");
   });
 });

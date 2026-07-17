@@ -1,6 +1,6 @@
-export type RuleDecision = "KEEP" | "CONDITIONAL_KEEP" | "TRANSFER_CANDIDATE" | "NEEDS_REVIEW";
+export type RuleDecision = "KEEP" | "CONDITIONAL_KEEP" | "HOLD_FOR_NOW" | "TRANSFER_CANDIDATE";
 
-export const RULES_VERSION = "2026.07.16-v3";
+export const RULES_VERSION = "2026.07.17-v4";
 
 export interface RuleDefinition {
   ruleKey: string;
@@ -14,58 +14,57 @@ export interface RuleDefinition {
 
 export const retentionRules: readonly RuleDefinition[] = [
   {
-    ruleKey: "MATERIAL_DATA_GAP",
+    ruleKey: "MATERIAL_UNCERTAINTY",
     version: RULES_VERSION,
     priority: 1000,
-    condition: "目前沒有足夠依據合理判斷是否值得保留，或存在尚未解決的關鍵衝突",
-    resultingDecision: "NEEDS_REVIEW",
-    reasonTemplateZhTw: "仍有會影響保留結論的關鍵資料缺口，必須完成指定審核後再判斷。",
+    condition: "存在可能改變保留結論的關鍵不確定性，且目前不足以安全建議傳送",
+    resultingDecision: "HOLD_FOR_NOW",
+    reasonTemplateZhTw: "資料仍有可能改變用途判斷的關鍵缺口；傳送不可逆，補齊前建議暫時保留。",
     enabled: true,
   },
   {
     ruleKey: "UNRELEASED_VARIANT",
     version: RULES_VERSION,
     priority: 950,
-    condition: "已確認此戰鬥版本尚未推出",
+    condition: "已確認此戰鬥版本尚未在 Pokémon GO 推出",
     resultingDecision: "TRANSFER_CANDIDATE",
-    reasonTemplateZhTw: "此戰鬥版本已確認尚未推出，目前不構成一般個體的保留理由。",
+    reasonTemplateZhTw: "此戰鬥版本尚未推出，不適用於現有個體的保留判斷。",
     enabled: true,
   },
   {
     ruleKey: "MAJOR_BATTLE_VALUE",
     version: RULES_VERSION,
     priority: 900,
-    condition: "主要 PvP、PvE、暗影、Mega、Max Battle 或重要道館用途具有高價值",
+    condition: "具有主要 PvP、PvE、暗影、Mega、Max Battle 或高道館價值",
     resultingDecision: "KEEP",
-    reasonTemplateZhTw: "此型態具有明確的主要戰鬥用途，建議依 IV 與招式方向保留少量合適個體。",
+    reasonTemplateZhTw: "目前具有明確戰鬥用途；請依用途保留適合的版本、招式與 IV。",
     enabled: true,
   },
   {
     ruleKey: "VALUABLE_EVOLUTION",
     version: RULES_VERSION,
     priority: 850,
-    condition: "後續進化具有明確主要戰鬥價值",
+    condition: "後續進化具有明確戰鬥價值",
     resultingDecision: "CONDITIONAL_KEEP",
-    reasonTemplateZhTw:
-      "本體用途有限，但後續進化具有明確戰鬥價值；只需保留可進化且符合用途條件的個體。",
+    reasonTemplateZhTw: "本體用途有限，但後續進化具有價值；只保留適合進化用途的個體。",
     enabled: true,
   },
   {
     ruleKey: "CONDITIONAL_USE",
     version: RULES_VERSION,
     priority: 700,
-    condition: "僅特殊盃、限定招式、特定 IV、Mega／Max 候選、少量道館用途或狹窄屬性用途",
+    condition: "僅特殊盃、特定招式或 IV、Mega／Max 候選、少量道館等條件下有用途",
     resultingDecision: "CONDITIONAL_KEEP",
-    reasonTemplateZhTw: "用途受特定條件限制，只需保留符合條件的少量個體。",
+    reasonTemplateZhTw: "只有符合指定用途與條件的個體值得保留，不需囤積一般重複個體。",
     enabled: true,
   },
   {
     ruleKey: "LOW_GENERAL_VALUE",
     version: RULES_VERSION,
     priority: 100,
-    condition: "關鍵類別足以確認低價值，且沒有重要進化、招式或特殊用途",
+    condition: "已有足夠證據確認主要用途低，且沒有重要特殊版本或進化價值",
     resultingDecision: "TRANSFER_CANDIDATE",
-    reasonTemplateZhTw: "目前缺乏明確的主要戰鬥與後續進化用途，一般個體通常可傳送。",
+    reasonTemplateZhTw: "目前缺乏明確戰鬥、特殊版本或後續進化用途，一般重複個體通常可傳送。",
     enabled: true,
   },
 ] as const;

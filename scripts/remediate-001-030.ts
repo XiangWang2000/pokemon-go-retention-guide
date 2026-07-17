@@ -2,12 +2,12 @@ import "dotenv/config";
 import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
-import { PrismaClient } from "../generated/prisma/client";
+import { PrismaClient, type RetentionDecision } from "../generated/prisma/client";
 import { pvpokeSpeciesId } from "../src/data/batch-001-030";
 import { evaluateRetention, type EvaluationFacts } from "../src/rules/engine";
 import { RULES_VERSION } from "../src/rules/rules";
 
-const checkedAt = new Date("2026-07-16T15:00:00+08:00");
+const checkedAt = new Date("2026-07-17T12:00:00+08:00");
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
 });
@@ -123,10 +123,10 @@ async function latestDecisionMap() {
   const evaluations = await prisma.retentionEvaluation.findMany({
     orderBy: { generatedAt: "desc" },
   });
-  const map = new Map<string, string>();
+  const map = new Map<string, RetentionDecision>();
   for (const evaluation of evaluations) {
     if (!map.has(evaluation.battleVariantId))
-      map.set(evaluation.battleVariantId, evaluation.decision);
+      map.set(evaluation.battleVariantId, evaluation.finalDecision);
   }
   return map;
 }
@@ -137,9 +137,20 @@ async function baselineDecisionMap() {
     orderBy: { generatedAt: "desc" },
   });
   const map = new Map<string, string>();
+  const latestEvaluationId = new Map<string, string>();
   for (const evaluation of evaluations) {
-    if (!map.has(evaluation.battleVariantId))
-      map.set(evaluation.battleVariantId, evaluation.decision);
+    if (!map.has(evaluation.battleVariantId)) {
+      map.set(evaluation.battleVariantId, evaluation.finalDecision);
+      latestEvaluationId.set(evaluation.battleVariantId, evaluation.id);
+    }
+  }
+  const migrated = await prisma.changeLog.findMany({
+    where: { id: { startsWith: "migration-hold-" }, previousValue: "NEEDS_REVIEW" },
+    select: { entityId: true },
+  });
+  const migratedIds = new Set(migrated.map((change) => change.entityId));
+  for (const [battleVariantId, evaluationId] of latestEvaluationId) {
+    if (migratedIds.has(evaluationId)) map.set(battleVariantId, "NEEDS_REVIEW");
   }
   return map;
 }
@@ -953,14 +964,29 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
         variant.variantKey === "PURIFIED" && variant.purificationRiskZhTw.includes("不可逆"),
     };
     const result = evaluateRetention(facts);
+    const missingCategories = variant.categoryEvaluations.filter((category) =>
+      [
+        "PARTIALLY_VERIFIED",
+        "DATA_UNAVAILABLE",
+        "SOURCE_MISSING",
+        "SOURCE_CONFLICT",
+        "POSSIBLE_SPECIES_MISMATCH",
+        "UNKNOWN_RELEASE_STATUS",
+        "STALE",
+      ].includes(category.status),
+    );
+    const missingDataSummaryZhTw = missingCategories.length
+      ? `待補資料：${missingCategories.map((category) => `${category.category}（${category.status}）`).join("、")}。${result.finalDecision === "HOLD_FOR_NOW" ? "此缺口可能改變目前結論。" : "這些缺口不會遮蓋目前的可執行建議。"}`
+      : "目前沒有會影響保留建議的資料缺口。";
+    const reviewStatus = missingCategories.length ? "DATA_PENDING" : "NOT_REQUIRED";
     const evaluationId = `evaluation-${sanitize(variant.id)}-${RULES_VERSION}`;
     await prisma.retentionEvaluation.upsert({
       where: { id: evaluationId },
       create: {
         id: evaluationId,
         battleVariantId: variant.id,
-        decision: result.decision,
-        provenance: result.decision === "NEEDS_REVIEW" ? "DATA_UNAVAILABLE" : "MANUAL_CURATED",
+        finalDecision: result.finalDecision,
+        provenance: result.finalDecision === "HOLD_FOR_NOW" ? "DATA_UNAVAILABLE" : "MANUAL_CURATED",
         pvpSummaryZhTw: categorySummary(byCategory, "PVP"),
         pveSummaryZhTw: categorySummary(byCategory, "PVE"),
         rocketSummaryZhTw: categorySummary(byCategory, "ROCKET"),
@@ -991,14 +1017,16 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
         generatedAt: checkedAt,
         reviewed: false,
         reviewedAt: null,
+        reviewStatus,
+        missingDataSummaryZhTw,
         reviewNotesZhTw:
-          result.decision === "NEEDS_REVIEW"
-            ? "目前仍無法合理判斷是否值得保留；只有會阻止實用結論的缺口才使用 NEEDS_REVIEW。"
-            : "人工整理的實用結論；個別類別缺少精確排名時只降低信心並保留審核事項，不會覆蓋最終建議。",
+          result.finalDecision === "HOLD_FOR_NOW"
+            ? "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。"
+            : "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
       },
       update: {
-        decision: result.decision,
-        provenance: result.decision === "NEEDS_REVIEW" ? "DATA_UNAVAILABLE" : "MANUAL_CURATED",
+        finalDecision: result.finalDecision,
+        provenance: result.finalDecision === "HOLD_FOR_NOW" ? "DATA_UNAVAILABLE" : "MANUAL_CURATED",
         pvpSummaryZhTw: categorySummary(byCategory, "PVP"),
         pveSummaryZhTw: categorySummary(byCategory, "PVE"),
         rocketSummaryZhTw: categorySummary(byCategory, "ROCKET"),
@@ -1026,10 +1054,12 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
         reasonZhTw: result.reasonZhTw,
         recommendedIvStrategyZhTw: result.recommendedIvStrategyZhTw,
         generatedAt: checkedAt,
+        reviewStatus,
+        missingDataSummaryZhTw,
         reviewNotesZhTw:
-          result.decision === "NEEDS_REVIEW"
-            ? "目前仍無法合理判斷是否值得保留；只有會阻止實用結論的缺口才使用 NEEDS_REVIEW。"
-            : "人工整理的實用結論；個別類別缺少精確排名時只降低信心並保留審核事項，不會覆蓋最終建議。",
+          result.finalDecision === "HOLD_FOR_NOW"
+            ? "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。"
+            : "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
       },
     });
     await prisma.evaluationRuleTrace.deleteMany({ where: { evaluationId } });
@@ -1062,17 +1092,17 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
         })),
       });
     }
-    if (before.get(variant.id) !== result.decision) {
+    if (before.get(variant.id) !== result.finalDecision) {
       await addChange({
         id: `remediation-decision-${sanitize(variant.id)}-${sanitize(RULES_VERSION)}`,
         entityType: "BattleVariant",
         entityId: variant.id,
         fieldName: "decision",
         previousValue: before.get(variant.id) ?? null,
-        newValue: result.decision,
+        newValue: result.finalDecision,
         sourceId: sourceIds[0] ?? null,
         reasonZhTw:
-          "NEEDS_REVIEW 僅保留給無法合理判斷是否值得保留的情況；個別類別缺口改為降低信心並保留審核事項。",
+          "採用不可逆風險原則重新計算；關鍵不確定性改為 HOLD_FOR_NOW，次要缺口只降低信心並保留資料待補事項。",
       });
     }
   }
@@ -1083,7 +1113,7 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
   const decisions = await latestDecisionMap();
   const variants = await prisma.battleVariant.findMany({ include: { categoryEvaluations: true } });
   for (const variant of variants) {
-    const needsFinalReview = decisions.get(variant.id) === "NEEDS_REVIEW";
+    const holdForNow = decisions.get(variant.id) === "HOLD_FOR_NOW";
     const issues: Array<{
       type:
         | "MATERIAL_DATA_GAP"
@@ -1112,9 +1142,9 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
       issues.push({
         type: "MATERIAL_DATA_GAP",
         message: `${category.category} 類別仍有資料備註，目前狀態為 ${category.status}。${category.summaryZhTw}`,
-        affects: category.status === "SOURCE_CONFLICT" || needsFinalReview,
-        action: needsFinalReview
-          ? `補齊或人工確認 ${category.category}，直到能合理判斷是否值得保留。`
+        affects: category.status === "SOURCE_CONFLICT" || holdForNow,
+        action: holdForNow
+          ? `查找並核對 ${category.category} 的原始資料，重新執行規則引擎以產生正式建議。`
           : `保留目前實用結論，後續補齊 ${category.category} 精確資料並重新評估信心程度。`,
       });
     }
@@ -1126,7 +1156,7 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
         type: "UNREPRODUCIBLE_RANK",
         message:
           "舊 PvPoke 精確名次無法由固定 commit 的完整 Open League／Overall JSON 重現，正式 rank 已清空。",
-        affects: material && needsFinalReview,
+        affects: material && holdForNow,
         action:
           "重新取得完整結構化榜單，核對 species、form、variant、league、cup、category 與 season。",
       });
@@ -1144,12 +1174,12 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
         action: "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
       });
     }
-    if (decisions.get(variant.id) === "NEEDS_REVIEW" && !issues.some((issue) => issue.affects)) {
+    if (holdForNow && !issues.some((issue) => issue.affects)) {
       issues.push({
         type: "RULE_NOT_COVERED",
-        message: "類別狀態不足以匹配現有保留規則，規則引擎無法產生正式結論。",
+        message: "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
         affects: true,
-        action: "人工檢查該型態的價值維度，新增具版本的規則或補充關鍵原始資料。",
+        action: "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。",
       });
     }
     for (const [index, issue] of issues.entries()) {
@@ -1165,7 +1195,10 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
           batchKey: "001-030",
           messageZhTw: issue.message,
           affectsFinalDecision: issue.affects,
+          provisionalDecision: decisions.get(variant.id) ?? "HOLD_FOR_NOW",
           suggestedActionZhTw: issue.action,
+          suggestedResearchActionZhTw: issue.action,
+          lastResearchedAt: checkedAt,
           detectedAt: checkedAt,
         },
         update: {
@@ -1173,7 +1206,10 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
           resolvedAt: null,
           messageZhTw: issue.message,
           affectsFinalDecision: issue.affects,
+          provisionalDecision: decisions.get(variant.id) ?? "HOLD_FOR_NOW",
           suggestedActionZhTw: issue.action,
+          suggestedResearchActionZhTw: issue.action,
+          lastResearchedAt: checkedAt,
         },
       });
     }
@@ -1183,16 +1219,12 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
 async function writeMetrics(before: Map<string, string>) {
   const after = await latestDecisionMap();
   const variants = await prisma.battleVariant.findMany({ include: { categoryEvaluations: true } });
-  const resolvedIds = new Set(
+  const originalNeedsIds = new Set(
     [...before.entries()]
-      .filter(([id, decision]) => decision === "NEEDS_REVIEW" && after.get(id) !== "NEEDS_REVIEW")
+      .filter(([, decision]) => String(decision) === "NEEDS_REVIEW")
       .map(([id]) => id),
   );
-  const resolved = variants.filter((variant) => resolvedIds.has(variant.id));
-  const remainingReview = variants
-    .filter((variant) => after.get(variant.id) === "NEEDS_REVIEW")
-    .map((variant) => variant.id)
-    .sort();
+  const reclassified = variants.filter((variant) => originalNeedsIds.has(variant.id));
   const openMaterialIssues = await prisma.dataIssue.findMany({
     where: { batchKey: "001-030", status: "OPEN", affectsFinalDecision: true },
     select: {
@@ -1202,24 +1234,45 @@ async function writeMetrics(before: Map<string, string>) {
       suggestedActionZhTw: true,
     },
   });
+  const nonImpactingOpenIssueCount = await prisma.dataIssue.count({
+    where: { batchKey: "001-030", status: "OPEN", affectsFinalDecision: false },
+  });
+  const holdForNowReasons = await prisma.retentionEvaluation.findMany({
+    where: {
+      rulesVersion: RULES_VERSION,
+      finalDecision: "HOLD_FOR_NOW",
+      battleVariant: { pokemonForm: { species: { dexNumber: { gte: 1, lte: 30 } } } },
+    },
+    select: { battleVariantId: true, reasonZhTw: true },
+    orderBy: { battleVariantId: "asc" },
+  });
+  const reclassificationCounts = {
+    KEEP: reclassified.filter((variant) => after.get(variant.id) === "KEEP").length,
+    CONDITIONAL_KEEP: reclassified.filter((variant) => after.get(variant.id) === "CONDITIONAL_KEEP")
+      .length,
+    HOLD_FOR_NOW: reclassified.filter((variant) => after.get(variant.id) === "HOLD_FOR_NOW").length,
+    TRANSFER_CANDIDATE: reclassified.filter(
+      (variant) => after.get(variant.id) === "TRANSFER_CANDIDATE",
+    ).length,
+  };
   const metrics = {
     batch: "001-030",
     generatedAt: checkedAt.toISOString(),
     rulesVersion: RULES_VERSION,
-    beforeNeedsReview: [...before.values()].filter((decision) => decision === "NEEDS_REVIEW")
-      .length,
-    afterNeedsReview: [...after.values()].filter((decision) => decision === "NEEDS_REVIEW").length,
-    resolvedNeedsReview: resolvedIds.size,
-    resolvedWithNotApplicable: resolved.filter((variant) =>
+    originalNeedsReviewCount: originalNeedsIds.size,
+    reclassificationCounts,
+    holdForNowReasons,
+    nonImpactingOpenIssueCount,
+    resolvedWithNotApplicable: reclassified.filter((variant) =>
       variant.categoryEvaluations.some((category) => category.status === "NOT_APPLICABLE"),
     ).length,
-    decidedWithDataUnavailable: resolved.filter((variant) =>
+    decidedWithDataUnavailable: reclassified.filter((variant) =>
       variant.categoryEvaluations.some((category) => category.status === "DATA_UNAVAILABLE"),
     ).length,
-    resolvedByPurifiedInheritance: resolved.filter(
+    resolvedByPurifiedInheritance: reclassified.filter(
       (variant) => variant.variantKey === "PURIFIED" && variant.inheritanceMode !== "NONE",
     ).length,
-    resolvedByPracticalDecisionBasis: resolved.filter(
+    resolvedByPracticalDecisionBasis: reclassified.filter(
       (variant) => variant.releaseStatus === "RELEASED",
     ).length,
     purifiedInheritedCategoryCount: variants
@@ -1235,7 +1288,6 @@ async function writeMetrics(before: Map<string, string>) {
     purifiedOverrides: variants.filter(
       (variant) => variant.variantKey === "PURIFIED" && variant.purifiedOverrideRequired,
     ).length,
-    remainingReview,
     remainingMaterialIssues: openMaterialIssues,
   };
   await mkdir("data/remediation", { recursive: true });
@@ -1259,7 +1311,7 @@ async function main() {
   await createReviewIssues(invalidPvpVariants);
   const metrics = await writeMetrics(before);
   console.log(
-    `修正完成：NEEDS_REVIEW ${metrics.beforeNeedsReview} → ${metrics.afterNeedsReview}；既有來源、原始資料、舊評估與變更紀錄均保留。`,
+    `重新分類完成：原 NEEDS_REVIEW ${metrics.originalNeedsReviewCount} 筆；KEEP ${metrics.reclassificationCounts.KEEP}、CONDITIONAL_KEEP ${metrics.reclassificationCounts.CONDITIONAL_KEEP}、HOLD_FOR_NOW ${metrics.reclassificationCounts.HOLD_FOR_NOW}、TRANSFER_CANDIDATE ${metrics.reclassificationCounts.TRANSFER_CANDIDATE}。`,
   );
 }
 

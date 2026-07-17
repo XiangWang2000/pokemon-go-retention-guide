@@ -24,20 +24,21 @@ Pokémon GO 通用寶可夢保留價值指南。系統以 `PokemonForm × Battle
 
 完整說明請見 `docs/sites-migration.md`。
 
-## #001～#030 類別狀態與保留判斷修正（2026-07-16）
+## #001～#030 保留決策與資料待補流程（2026-07-17）
 
 本版以正式 Prisma migration 在既有資料庫上完成修正，保留所有 `SourceReference`、`RawEvaluationData`、舊版 `RetentionEvaluation`、原查閱日期與 `ChangeLog`：
 
 - 每個 BattleVariant 具有七個獨立 `CategoryEvaluation`：PvP、PvE、火箭隊、道館、Mega、Max Battle、後續進化。
-- 類別資料狀態與最終決策分開；`NOT_APPLICABLE`、`UNRANKED`、`DATA_UNAVAILABLE`、`PARTIALLY_VERIFIED` 不會自動產生 `NEEDS_REVIEW`。
-- `NEEDS_REVIEW` 只代表目前無法合理判斷是否值得保留；個別類別缺少精確排名時改為降低信心並加入 Review Queue 備註。
+- `finalDecision` 只包含 `KEEP`、`CONDITIONAL_KEEP`、`HOLD_FOR_NOW`、`TRANSFER_CANDIDATE`；`NEEDS_REVIEW` 不再是使用者建議。
+- 類別資料狀態與最終決策分開；`NOT_APPLICABLE`、`UNRANKED`、`DATA_UNAVAILABLE`、`PARTIALLY_VERIFIED` 等次要缺口只會降低信心或加入資料待補清單。
+- `HOLD_FOR_NOW` 只用於可能改變結論的關鍵不確定性；因傳送不可逆，資料補齊前由系統直接建議暫時保留。
 - 評估依據新增 `SOURCE_VERIFIED`、`MANUAL_CURATED`、`INHERITED`、`DATA_UNAVAILABLE`；人工整理結論不會假裝為完整來源驗證。
 - PokemonForm／BattleVariant 推出狀態改為 `RELEASED`、`UNRELEASED`、`UNKNOWN` 三態。
 - Purified 以 Normal 基礎評估加淨化 modifier／optional override，Return 已由普通版重新歸類。
 - 火箭隊改為定性 `rocketRating`／`rocketRoles`；目前沒有完整可重現排名時使用 `DATA_UNAVAILABLE`。
 - PvPoke 精確名次綁定固定 commit、檔案雜湊、Open／Overall、species／form／variant 與擷取方法。
 - Max 屬性內名次、整體價值、投資優先度與用途廣度分欄保存。
-- 前一版 25 筆 `NEEDS_REVIEW`，本版修正後為 19 筆；剩餘項目皆為推出狀態仍無法確認，並保留具體原因與建議處理方式。
+- 前一版最新評估有 19 筆 `NEEDS_REVIEW`；本版全部重新分類為 19 筆 `HOLD_FOR_NOW`，原因皆為推出狀態仍無法由可靠原始來源確認。原值已寫入 `ChangeLog`。
 
 修正報告：`review/001-030-remediation.md`、`review/001-030-remediation.json`。
 
@@ -67,12 +68,12 @@ npm run dev
 - PvPoke GL／UL／ML 原始排名 JSON 本機快照與 commit 版本。
 - Pokémon GO 官方推出狀態、Mega／Max／暗影／進化／活動招式研究記錄。
 - GO Hub Database 的 PvE、Mega、Max Battle、道館資料與來源衝突記錄。
-- 集中式規則引擎、規則追蹤、審核佇列、來源頁、變更紀錄。
+- 集中式規則引擎、規則追蹤、資料待補清單、來源頁、變更紀錄。
 - 10 張繁體中文工作表的 `.xlsx` 匯出。
 - JSON／CSV 匯入、交易式寫入、資料一致性驗證。
 - `review/001-030.md` 與 `review/001-030.json` 批次審核報告。
 
-目前規則引擎產生 20 筆 `KEEP`、76 筆 `CONDITIONAL_KEEP`、38 筆 `TRANSFER_CANDIDATE`、19 筆 `NEEDS_REVIEW`。後續進化是唯一主要價值時使用條件式保留；只有推出狀態不明、來源存在未解決衝突，或完全沒有足以判斷保留價值的依據時，才維持 `NEEDS_REVIEW`。
+目前規則引擎產生 20 筆 `KEEP`、76 筆 `CONDITIONAL_KEEP`、19 筆 `HOLD_FOR_NOW`、38 筆 `TRANSFER_CANDIDATE`。後續進化是唯一主要價值時使用條件式保留；只有推出狀態不明、物種疑似錯置、關鍵來源衝突、限定招式影響不明或規則未涵蓋等實質不確定性，才暫時保留。
 
 ## 本機需求
 
@@ -125,7 +126,7 @@ npm run build:local
 
 - 同圖鑑多型態、Mega X／Y、普通／Dynamax、招式關聯資料模型。
 - `052`、`52`、全形數字、中英文名稱、地區型態、別名與進化名稱搜尋。
-- 來源缺失不自動覆蓋實用結論、完全無判斷依據才進入 `NEEDS_REVIEW`、漂亮 IV 不覆蓋物種低價值、暗影獨立評估、Mega、特殊盃、果然翁、壺壺、地區型態與後續進化規則。
+- 缺火箭隊排名與 `NOT_APPLICABLE` 不觸發暫時保留、關鍵 Mega 狀態不明才觸發 `HOLD_FOR_NOW`、漂亮 IV 不覆蓋物種低價值、暗影獨立評估、後續進化條件式保留與具體中文理由。
 - Excel 可重新開啟、工作表齊全、中文欄位、超連結、日期格式、凍結列、自動篩選與穩定 ID。
 - 匯入資料的重複 ID、名稱、網址、日期、rank 與 Enum 驗證。
 
@@ -135,7 +136,7 @@ npm run build:local
 
 - 依圖鑑編號、中英文名稱、型態、別名、進化前後名稱搜尋。
 - 忽略英文大小寫、全半形數字、前導零、前後／多餘空白與常見標點差異。
-- 依戰鬥版本、最終分類、PvP／PvE／道館資料、新鮮度與人工審核狀態篩選。
+- 依戰鬥版本、最終分類、PvP／PvE／道館資料、新鮮度與資料維護狀態篩選。
 - 桌面固定表頭與完整欄位；手機使用基本卡片檢視。
 - 展開原始資料、來源與規則引擎追蹤。
 
@@ -143,12 +144,13 @@ npm run build:local
 
 - 基本資料、屬性、所有戰鬥版本。
 - PvP、PvE、火箭隊、道館、Mega、Max Battle、進化、招式與 IV 摘要。
-- 原始資料、來源、規則追蹤與審核狀態。
+- 原始資料、來源、規則追蹤與資料維護狀態。
 
-### 審核佇列
+### 資料待補清單
 
-- 缺少來源、來源衝突、可能過期、推出狀態不明、未經人工確認與 `NEEDS_REVIEW`。
-- 支援研究批次及圖鑑範圍篩選。
+- 供開發者與後續 Codex 研究使用；一般使用者不需要自行判斷 PvP、PvE、Mega、Max 或道館價值。
+- 顯示缺少資料、無法自動確認原因、是否影響目前建議、暫定建議、下一步研究行動、相關來源與最後研究日期。
+- 支援研究批次、圖鑑範圍及是否影響最終建議篩選。
 
 ### Excel 匯出
 
@@ -161,7 +163,7 @@ npm run build:local
 5. 道館與Max Battle
 6. 招式資料
 7. 進化關係
-8. 需要重新確認
+8. 資料待補清單
 9. 資料來源
 10. 變更紀錄
 
@@ -181,7 +183,7 @@ npm run build:local
 
 PvPoke 本機快照版本為 commit `86847e535b7e0a0f4e91f9628b3fc713ae6adca7`。`RawEvaluationData.rank` 保存的是物種在聯盟中的整體排名，不是該物種內部的個體 IV Rank。
 
-每個來源保存原始頁面標題、網址、來源類型、語言、查閱日、發布日（若有）、版本及中文摘要。來源衝突不會靜默覆蓋：系統保存雙方原始資料並建立 `SOURCE_CONFLICT`；尚未解決且會改變保留判斷時才輸出 `NEEDS_REVIEW`。
+每個來源保存原始頁面標題、網址、來源類型、語言、查閱日、發布日（若有）、版本及中文摘要。來源衝突不會靜默覆蓋：系統保存雙方原始資料並建立 `SOURCE_CONFLICT`；尚未解決且可能導致誤傳時輸出 `HOLD_FOR_NOW`，否則保留正式建議並降低信心。
 
 ## 資料更新流程
 
@@ -284,9 +286,10 @@ Pokemon/
 └─ README.md
 ```
 
-## 已知限制與待人工確認
+## 已知限制與資料待補
 
-- 19 個戰鬥版本維持 `NEEDS_REVIEW`，皆為推出狀態仍無法由可靠原始來源確認。
+- 19 個戰鬥版本目前為 `HOLD_FOR_NOW`，皆因推出狀態無法由可靠原始來源確認；每筆均有具體中文原因與研究行動。
+- 另有 112 個不影響正式結論的開放資料待補項目，主畫面仍顯示可執行建議。
 - 火箭隊目前沒有可靠、逐物種、當季且可重現的完整排名，本批不以其他類別代替。
 - Pokebattler 動態攻擊手表出現物種錯置風險，未匯入不可穩定重現的全域排名。
 - Purified 以普通版為基礎再套用淨化 modifier／optional override；Return 與失去 Shadow 價值會另外處理。
@@ -295,6 +298,6 @@ Pokemon/
 - Sites 第一版是唯讀 snapshot；開始實作個人背包、線上審核或 runtime 寫入時，才需要遷移到 D1。
 - Mega 雷丘 X／Y 官方公告首次登場日為 2026-07-18；研究查閱日 2026-07-15，因此記為已公告但尚未推出。
 - #030 尼多娜可進化成 #031 尼多后，先以 `MANUAL_CURATED` 保存條件式保留結論；#031 完整原始排名仍不在本批，也沒有自動延伸研究到 #031～#060。
-- 第一版的人工審核狀態仍全為未簽核；網站及 JSON 報告清楚保留此狀態。
+- 資料維護狀態不代表使用者必須自行判斷；網站、Excel 與 JSON 報告均分開保存 `finalDecision`、`confidence`、`reviewStatus`、`reviewIssues` 與缺失摘要。
 
 所有頁面都使用同一則範圍說明：本結論只針對一般戰鬥及實用價值；異色、特殊造型、活動背卡、紀念與個人收藏價值需另行判斷。

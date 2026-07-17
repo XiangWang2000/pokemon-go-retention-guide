@@ -52,6 +52,15 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
     expect(bulbasaur.decisionReason).toContain("進化");
   });
 
+  it("正式建議不會隱藏同型態內暫時保留的 BattleVariant", () => {
+    const charmander = form("004-kanto");
+    expect(charmander.decision).toBe("CONDITIONAL_KEEP");
+    expect(
+      charmander.variants.filter((variant) => variant.row.decision === "HOLD_FOR_NOW"),
+    ).toHaveLength(2);
+    expect(charmander.decisionReason).toContain("暫時保留");
+  });
+
   it("資料狀態只輸出短版繁體中文，不洩漏內部 Enum 或長說明", () => {
     expect(compactDataStatus("NOT_APPLICABLE")).toBe("—");
     expect(compactDataStatus("DATA_UNAVAILABLE")).toBe("資料有限");

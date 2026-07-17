@@ -148,7 +148,7 @@ async function ensureEvaluation(prisma: PrismaClient, battleVariantId: string, c
     data: {
       id,
       battleVariantId,
-      decision: result.decision,
+      finalDecision: result.finalDecision,
       pvpSummaryZhTw: "尚未取得此戰鬥版本的主要聯盟原始資料。",
       pveSummaryZhTw: "尚未取得此戰鬥版本的團體戰原始資料。",
       rocketSummaryZhTw: "尚未取得可重現的當季逐物種火箭隊資料。",
@@ -163,6 +163,8 @@ async function ensureEvaluation(prisma: PrismaClient, battleVariantId: string, c
       confidence: "LOW",
       rulesVersion: RULES_VERSION,
       generatedAt: checkedAt,
+      reviewStatus: "DATA_PENDING",
+      missingDataSummaryZhTw: "此版本的主要用途資料仍待補齊。",
       reviewed: false,
       reviewNotesZhTw: "由官方型態研究新增；尚待整合戰鬥資料。",
     },
@@ -620,7 +622,7 @@ async function recomputeEvaluations(
     await prisma.retentionEvaluation.update({
       where: { id: evaluation.id },
       data: {
-        decision: result.decision,
+        finalDecision: result.finalDecision,
         pvpSummaryZhTw: summarize(pvp, "尚未取得此版本的主要 PvP 聯盟資料。"),
         pveSummaryZhTw: summarize(pve, "尚未取得可完整驗證的 PvE 原始資料。"),
         gymSummaryZhTw: summarize(gym, "尚未取得足以支持物種級道館結論的資料。"),
@@ -654,7 +656,7 @@ async function recomputeEvaluations(
         recommendedIvStrategyZhTw: result.recommendedIvStrategyZhTw,
         reasonZhTw: result.reasonZhTw,
         confidence:
-          hasConflict || result.decision === "NEEDS_REVIEW"
+          hasConflict || result.finalDecision === "HOLD_FOR_NOW"
             ? "LOW"
             : variant.rawEvaluationData.length > 1
               ? "MEDIUM"
@@ -662,9 +664,14 @@ async function recomputeEvaluations(
         rulesVersion: RULES_VERSION,
         generatedAt: checkedAt,
         reviewed: false,
+        reviewStatus: "DATA_PENDING",
+        missingDataSummaryZhTw:
+          result.finalDecision === "HOLD_FOR_NOW"
+            ? "關鍵資料缺口可能改變保留結論，目前採保守暫時保留。"
+            : "部分次要資料待補，不遮蓋目前正式建議。",
         reviewNotesZhTw: hasConflict
-          ? "來源存在方法或敘述衝突，已降低信心並要求人工處理。"
-          : "第一批研究整合結果，尚未經人工簽核。",
+          ? "來源存在方法或敘述衝突，已降低信心並列入資料待補清單。"
+          : "第一批研究整合結果；資料維護狀態與使用者建議分開。",
       },
     });
     await prisma.evaluationRuleTrace.deleteMany({ where: { evaluationId: evaluation.id } });
@@ -682,7 +689,7 @@ async function recomputeEvaluations(
     });
     await prisma.dataIssue.deleteMany({ where: { battleVariantId: variant.id } });
     const issues = [
-      { type: "UNREVIEWED" as const, message: "第一批結論尚未經人工確認。" },
+      { type: "UNREVIEWED" as const, message: "第一批來源擷取尚待資料維護確認。" },
       ...(variant.isReleased === null
         ? [
             {
@@ -699,8 +706,8 @@ async function recomputeEvaluations(
             },
           ]
         : []),
-      ...(result.decision === "NEEDS_REVIEW"
-        ? [{ type: "NEEDS_REVIEW" as const, message: "資料不足或規則要求人工重新確認。" }]
+      ...(result.finalDecision === "HOLD_FOR_NOW"
+        ? [{ type: "RULE_NOT_COVERED" as const, message: "關鍵資料不足，系統目前採保守暫時保留。" }]
         : []),
       ...(pve.length === 0
         ? [{ type: "MISSING_SOURCE" as const, message: "缺少此版本的可重現 PvE 原始資料。" }]
@@ -715,6 +722,10 @@ async function recomputeEvaluations(
         status: "OPEN",
         batchKey: "001-030",
         messageZhTw: issue.message,
+        affectsFinalDecision: result.finalDecision === "HOLD_FOR_NOW",
+        provisionalDecision: result.finalDecision,
+        suggestedResearchActionZhTw: "查找並核對對應原始來源後重新執行規則引擎。",
+        lastResearchedAt: checkedAt,
         detectedAt: checkedAt,
       })),
     });

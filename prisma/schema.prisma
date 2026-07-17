@@ -41,6 +41,8 @@ enum EvaluationDataStatus {
   DATA_UNAVAILABLE
   SOURCE_MISSING
   SOURCE_CONFLICT
+  POSSIBLE_SPECIES_MISMATCH
+  STALE
   UNRELEASED
   UNKNOWN_RELEASE_STATUS
 }
@@ -124,14 +126,20 @@ enum League {
 enum RetentionDecision {
   KEEP
   CONDITIONAL_KEEP
+  HOLD_FOR_NOW
   TRANSFER_CANDIDATE
-  NEEDS_REVIEW
 }
 
 enum Confidence {
   HIGH
   MEDIUM
   LOW
+}
+
+enum EvaluationReviewStatus {
+  NOT_REQUIRED
+  DATA_PENDING
+  RESOLVED
 }
 
 enum GymRating {
@@ -157,7 +165,6 @@ enum ReviewIssueType {
   STALE_SOURCE
   UNASSESSED_FORM
   UNHANDLED_MOVE
-  NEEDS_REVIEW
   UNREVIEWED
   LOW_TRUST_SOURCE
 }
@@ -374,10 +381,10 @@ model CategoryEvaluationSource {
 }
 
 model RetentionEvaluation {
-  id                        String                @id
+  id                        String                 @id
   battleVariantId           String
-  decision                  RetentionDecision
-  provenance                EvaluationProvenance  @default(MANUAL_CURATED)
+  finalDecision             RetentionDecision      @map("decision")
+  provenance                EvaluationProvenance   @default(MANUAL_CURATED)
   pvpSummaryZhTw            String
   pveSummaryZhTw            String
   rocketSummaryZhTw         String
@@ -392,10 +399,12 @@ model RetentionEvaluation {
   confidence                Confidence
   rulesVersion              String
   generatedAt               DateTime
-  reviewed                  Boolean               @default(false)
+  reviewed                  Boolean                @default(false)
   reviewedAt                DateTime?
+  reviewStatus              EvaluationReviewStatus @default(DATA_PENDING)
+  missingDataSummaryZhTw    String                 @default("")
   reviewNotesZhTw           String
-  battleVariant             BattleVariant         @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
+  battleVariant             BattleVariant          @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
   ruleTraces                EvaluationRuleTrace[]
   evaluationSources         EvaluationSource[]
 
@@ -441,19 +450,22 @@ model ChangeLog {
 }
 
 model DataIssue {
-  id                   String          @id
-  pokemonFormId        String?
-  battleVariantId      String?
-  issueType            ReviewIssueType
-  status               IssueStatus     @default(OPEN)
-  batchKey             String
-  messageZhTw          String
-  affectsFinalDecision Boolean         @default(true)
-  suggestedActionZhTw  String          @default("")
-  detectedAt           DateTime        @default(now())
-  resolvedAt           DateTime?
-  pokemonForm          PokemonForm?    @relation(fields: [pokemonFormId], references: [id], onDelete: Cascade)
-  battleVariant        BattleVariant?  @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
+  id                          String            @id
+  pokemonFormId               String?
+  battleVariantId             String?
+  issueType                   ReviewIssueType
+  status                      IssueStatus       @default(OPEN)
+  batchKey                    String
+  messageZhTw                 String
+  affectsFinalDecision        Boolean           @default(true)
+  provisionalDecision         RetentionDecision @default(HOLD_FOR_NOW)
+  suggestedActionZhTw         String            @default("")
+  suggestedResearchActionZhTw String            @default("")
+  lastResearchedAt            DateTime?
+  detectedAt                  DateTime          @default(now())
+  resolvedAt                  DateTime?
+  pokemonForm                 PokemonForm?      @relation(fields: [pokemonFormId], references: [id], onDelete: Cascade)
+  battleVariant               BattleVariant?    @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
 
   @@index([batchKey, status])
 }

@@ -1,26 +1,23 @@
 import type { DashboardRow } from "@/lib/data";
 import { zhTw } from "@/locales/zh-TW";
-import { EvaluationStatusBadge } from "./evaluation-status-badge";
 
 export function ReviewIssuePanel({ row }: { row: DashboardRow }) {
-  const issues = row.categoryStatuses.filter((item) =>
-    ["DATA_UNAVAILABLE", "SOURCE_MISSING", "SOURCE_CONFLICT", "UNKNOWN_RELEASE_STATUS"].includes(
-      item.status,
-    ),
-  );
-  if (!issues.length && row.reviewed) {
-    return <p className="text-sm text-[var(--muted)]">此版本沒有待處理的關鍵審核問題。</p>;
+  const issues = row.reviewIssues;
+  if (!issues.length) {
+    return <p className="text-sm text-[var(--muted)]">此版本目前沒有資料待補項目。</p>;
   }
   return (
     <div className="rounded-xl border border-amber-600/30 bg-amber-500/5 p-3">
-      <p className="text-sm font-black">需要檢查</p>
-      {!row.reviewed ? <p className="mt-1 text-sm">尚未完成人工確認。</p> : null}
+      <p className="text-sm font-black">部分資料待補</p>
+      <p className="mt-1 text-sm text-[var(--muted)]">
+        這是資料維護事項，不要求使用者自行判斷保留價值。
+      </p>
       <ul className="mt-2 space-y-2">
         {issues.map((issue) => (
-          <li key={issue.category} className="flex flex-wrap items-start gap-2 text-sm">
-            <strong>{zhTw.category[issue.category]}</strong>
-            <EvaluationStatusBadge status={issue.status} />
-            <span className="text-[var(--muted)]">{issue.summaryZhTw}</span>
+          <li key={issue.id} className="flex flex-wrap items-start gap-2 text-sm">
+            <strong>{zhTw.issueType[issue.issueType]}</strong>
+            <span>{issue.affectsFinalDecision ? "會影響目前建議" : "不影響目前建議"}</span>
+            <span className="text-[var(--muted)]">{issue.messageZhTw}</span>
           </li>
         ))}
       </ul>

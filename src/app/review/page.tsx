@@ -9,10 +9,11 @@ export default async function ReviewPage() {
       <header>
         <div className="flex items-center gap-3">
           <ClipboardList aria-hidden size={28} className="text-[var(--primary)]" />
-          <h1 className="text-3xl font-black">資料審核佇列</h1>
+          <h1 className="text-3xl font-black">資料待補清單</h1>
         </div>
         <p className="mt-2 max-w-4xl leading-7 text-[var(--muted)]">
-          每個問題都標示是否會影響最終結論。關鍵資料缺口可能產生「需要重新確認」；火箭隊缺少統一排名等次要缺口則保留正式結論，並列為不影響結論的待補資料。
+          這是供開發者與後續 Codex
+          研究維護資料的管理頁，不要求一般使用者判斷寶可夢價值。每個問題都會說明是否影響目前建議、暫定結論與下一步研究方式。
         </p>
       </header>
       <ReviewTable issues={issues} />

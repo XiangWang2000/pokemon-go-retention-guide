@@ -2,13 +2,14 @@ import { describe, expect, it } from "vitest";
 import { prisma } from "@/lib/prisma";
 
 describe("#001～#030 修正後資料一致性", () => {
-  it("5b. UNKNOWN_RELEASE_STATUS 會出現在 Review Queue 且影響結論", async () => {
+  it("8. UNKNOWN_RELEASE_STATUS 保存在資料待補清單且影響結論", async () => {
     const issue = await prisma.dataIssue.findFirst({
       where: { issueType: "UNKNOWN_RELEASE_STATUS", status: "OPEN" },
     });
     expect(issue).not.toBeNull();
     expect(issue?.affectsFinalDecision).toBe(true);
-    expect(issue?.suggestedActionZhTw.length).toBeGreaterThan(10);
+    expect(issue?.provisionalDecision).toBe("HOLD_FOR_NOW");
+    expect(issue?.suggestedResearchActionZhTw.length).toBeGreaterThan(10);
   });
 
   it("6b. Purified 資料庫記錄指向同型態 Normal", async () => {
@@ -79,11 +80,34 @@ describe("#001～#030 修正後資料一致性", () => {
       }),
     ]);
     expect(evaluation).toMatchObject({
-      decision: "TRANSFER_CANDIDATE",
+      finalDecision: "TRANSFER_CANDIDATE",
       provenance: "MANUAL_CURATED",
       confidence: "MEDIUM",
     });
     expect(issue?.affectsFinalDecision).toBe(false);
+    expect(issue?.provisionalDecision).toBe("TRANSFER_CANDIDATE");
+  });
+
+  it("9. affectsFinalDecision=false 不會覆蓋正式結論", async () => {
+    const evaluation = await prisma.retentionEvaluation.findFirst({
+      where: { battleVariantId: "020-kanto-shadow", rulesVersion: "2026.07.17-v4" },
+    });
+    const issues = await prisma.dataIssue.findMany({
+      where: { battleVariantId: "020-kanto-shadow", status: "OPEN" },
+    });
+    expect(issues.some((issue) => !issue.affectsFinalDecision)).toBe(true);
+    expect(evaluation?.finalDecision).toBe("TRANSFER_CANDIDATE");
+  });
+
+  it("10. 所有資料庫 HOLD_FOR_NOW 都有具體中文理由", async () => {
+    const evaluations = await prisma.retentionEvaluation.findMany({
+      where: { rulesVersion: "2026.07.17-v4", finalDecision: "HOLD_FOR_NOW" },
+    });
+    expect(evaluations.length).toBeGreaterThan(0);
+    for (const evaluation of evaluations) {
+      expect(evaluation.reasonZhTw.length).toBeGreaterThan(25);
+      expect(evaluation.reasonZhTw).not.toBe("資料不足");
+    }
   });
 
   it("17. Purified 類別以 INHERITED 明確標示繼承 Normal", async () => {

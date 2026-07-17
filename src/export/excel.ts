@@ -10,7 +10,7 @@ export const exportSheetNames = [
   "道館與Max Battle",
   "招式資料",
   "進化關係",
-  "需要重新確認",
+  "資料待補清單",
   "資料來源",
   "變更紀錄",
 ] as const;
@@ -129,6 +129,7 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
         { key: "maxStatus", header: "Max資料狀態", width: 18 },
         { key: "evolutionStatus", header: "後續進化資料狀態", width: 20 },
         { key: "decision", header: "最終分類", width: 18 },
+        { key: "decisionEnum", header: "finalDecision Enum", width: 22 },
         { key: "provenanceLabel", header: "結論依據", width: 18 },
         { key: "provenance", header: "結論依據Enum", width: 22 },
         { key: "reason", header: "判斷理由", width: 48 },
@@ -137,6 +138,7 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
         { key: "rules", header: "rulesVersion", width: 20 },
         { key: "updated", header: "更新日期", width: 14 },
         { key: "reviewed", header: "審核狀態", width: 14 },
+        { key: "missing", header: "缺失資料摘要", width: 48 },
       ],
       rows: variants.map((variant) => {
         const item = variant.retentionEvaluations[0];
@@ -154,7 +156,8 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
           megaStatus: localizedDataStatus(variant.categoryEvaluations, "MEGA"),
           maxStatus: localizedDataStatus(variant.categoryEvaluations, "MAX_BATTLE"),
           evolutionStatus: localizedDataStatus(variant.categoryEvaluations, "EVOLUTION_VALUE"),
-          decision: item ? zhTw.decision[item.decision] : zhTw.decision.NEEDS_REVIEW,
+          decision: item ? zhTw.decision[item.finalDecision] : zhTw.decision.HOLD_FOR_NOW,
+          decisionEnum: item?.finalDecision ?? "HOLD_FOR_NOW",
           provenanceLabel: item
             ? zhTw.evaluationProvenance[item.provenance]
             : zhTw.evaluationProvenance.DATA_UNAVAILABLE,
@@ -164,7 +167,8 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
           confidence: item ? zhTw.confidence[item.confidence] : "低",
           rules: item?.rulesVersion ?? "—",
           updated: item?.generatedAt ?? null,
-          reviewed: item?.reviewed ? "已確認" : "尚未確認",
+          reviewed: item ? zhTw.reviewStatus[item.reviewStatus] : "部分資料待補",
+          missing: item?.missingDataSummaryZhTw ?? "尚未產生資料缺口摘要。",
         };
       }),
     },
@@ -264,7 +268,7 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
       })),
     },
     {
-      name: "需要重新確認",
+      name: "資料待補清單",
       columns: [
         { key: "id", header: "問題ID", width: 34 },
         { key: "dex", header: "圖鑑編號", width: 12 },
@@ -273,10 +277,12 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
         { key: "type", header: "問題類型Enum", width: 24 },
         { key: "message", header: "繁中說明", width: 48 },
         { key: "affects", header: "影響最終結論", width: 16 },
-        { key: "action", header: "建議處理方式", width: 48 },
+        { key: "provisional", header: "目前暫定建議", width: 20 },
+        { key: "provisionalEnum", header: "provisionalDecision Enum", width: 24 },
+        { key: "action", header: "下一步研究行動", width: 48 },
         { key: "batch", header: "研究批次", width: 12 },
         { key: "status", header: "狀態Enum", width: 12 },
-        { key: "detected", header: "偵測日期", width: 14 },
+        { key: "detected", header: "最後研究日期", width: 14 },
       ],
       rows: issues.map((item) => ({
         id: item.id,
@@ -286,10 +292,12 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
         type: item.issueType,
         message: item.messageZhTw,
         affects: item.affectsFinalDecision ? "會" : "不會",
-        action: item.suggestedActionZhTw,
+        provisional: zhTw.decision[item.provisionalDecision],
+        provisionalEnum: item.provisionalDecision,
+        action: item.suggestedResearchActionZhTw || item.suggestedActionZhTw,
         batch: item.batchKey,
         status: item.status,
-        detected: item.detectedAt,
+        detected: item.lastResearchedAt ?? item.detectedAt,
       })),
     },
     {

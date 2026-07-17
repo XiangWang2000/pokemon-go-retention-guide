@@ -3,16 +3,19 @@ import { prisma } from "../src/lib/prisma";
 import { RULES_VERSION } from "../src/rules/rules";
 
 interface Metrics {
-  beforeNeedsReview: number;
-  afterNeedsReview: number;
-  resolvedNeedsReview: number;
+  originalNeedsReviewCount: number;
+  reclassificationCounts: Record<
+    "KEEP" | "CONDITIONAL_KEEP" | "HOLD_FOR_NOW" | "TRANSFER_CANDIDATE",
+    number
+  >;
+  holdForNowReasons: Array<{ battleVariantId: string; reasonZhTw: string }>;
+  nonImpactingOpenIssueCount: number;
   resolvedWithNotApplicable: number;
   decidedWithDataUnavailable: number;
   resolvedByPurifiedInheritance: number;
   resolvedByPracticalDecisionBasis: number;
   purifiedInheritedCategoryCount: number;
   purifiedOverrides: number;
-  remainingReview: string[];
 }
 
 async function readJson<T>(path: string): Promise<T> {
@@ -38,7 +41,7 @@ async function main() {
         orderBy: [{ affectsFinalDecision: "desc" }, { issueType: "asc" }],
       }),
       prisma.retentionEvaluation.groupBy({
-        by: ["decision"],
+        by: ["finalDecision"],
         where: { rulesVersion: RULES_VERSION },
         _count: true,
       }),
@@ -60,7 +63,7 @@ async function main() {
     ]);
   const payload = {
     batch: "001-030",
-    updatedAt: "2026-07-16",
+    updatedAt: "2026-07-17",
     rulesVersion: RULES_VERSION,
     originalProblem:
       "舊規則仍可能把個別類別缺資料提升為 NEEDS_REVIEW，即使已有足以作出實用保留判斷的人工整理或繼承資料。",
@@ -71,9 +74,9 @@ async function main() {
       "新增 EvaluationProvenance，區分 SOURCE_VERIFIED、MANUAL_CURATED、INHERITED、DATA_UNAVAILABLE。",
     ],
     ruleEngineChanges: [
-      "NEEDS_REVIEW 只代表目前無法合理判斷是否值得保留；推出狀態不明與未解決的關鍵衝突仍會阻止正式決策。",
-      "SOURCE_MISSING、NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE、PARTIALLY_VERIFIED 只在沒有任何實用判斷依據時觸發 NEEDS_REVIEW。",
-      "類別缺口保留為 Review issue 並降低 confidence，不會自動覆蓋 final decision。",
+      "finalDecision 不再包含 NEEDS_REVIEW；關鍵不確定性依不可逆風險原則產生 HOLD_FOR_NOW。",
+      "SOURCE_MISSING、NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE、PARTIALLY_VERIFIED 等次要缺口不會自動產生 HOLD_FOR_NOW。",
+      "類別缺口保留在資料待補清單並視情況降低 confidence，不會自動覆蓋 finalDecision。",
     ],
     rocketStrategy:
       "火箭隊改存 DATA_UNAVAILABLE／定性 rocketRating／rocketRoles；未使用 PvP 或 PvE 排名替代。",
@@ -105,7 +108,7 @@ async function main() {
       fearow,
     },
     needsReviewStatistics: metrics,
-    decisionCounts: Object.fromEntries(decisions.map((item) => [item.decision, item._count])),
+    decisionCounts: Object.fromEntries(decisions.map((item) => [item.finalDecision, item._count])),
     preservedHistory: {
       sourceReferences: sourceCount,
       rawEvaluationData: rawCount,
@@ -175,30 +178,37 @@ async function main() {
     "- 只接受 Open League／Overall 完整 JSON；保存 species、form、variant、league、cup、category、版本、擷取方法與 reproducible。",
     `- 大嘴雀 GL #${fearow?.rank ?? "—"}：${fearow?.reproducible ? "完整榜單可重現，因此保留" : "無法重現，已停用"}。`,
     "",
-    "## 9. 修正前後 NEEDS_REVIEW 統計",
+    "## 9. 原 NEEDS_REVIEW 重新分類統計",
     "",
-    `- 修正前：${metrics.beforeNeedsReview}`,
-    `- 修正後：${metrics.afterNeedsReview}`,
-    `- 已解決：${metrics.resolvedNeedsReview}`,
+    `- 原 NEEDS_REVIEW：${metrics.originalNeedsReviewCount}`,
+    `- 轉為 KEEP：${metrics.reclassificationCounts.KEEP}`,
+    `- 轉為 CONDITIONAL_KEEP：${metrics.reclassificationCounts.CONDITIONAL_KEEP}`,
+    `- 轉為 HOLD_FOR_NOW：${metrics.reclassificationCounts.HOLD_FOR_NOW}`,
+    `- 轉為 TRANSFER_CANDIDATE：${metrics.reclassificationCounts.TRANSFER_CANDIDATE}`,
+    `- 不影響最終決策的資料待補：${metrics.nonImpactingOpenIssueCount}`,
     `- 含 NOT_APPLICABLE 而仍可判斷：${metrics.resolvedWithNotApplicable}`,
     `- 含 DATA_UNAVAILABLE 而仍可判斷：${metrics.decidedWithDataUnavailable}`,
     `- 因 Purified 繼承而解決：${metrics.resolvedByPurifiedInheritance}`,
     `- 因已有足夠實用判斷依據而解決：${metrics.resolvedByPracticalDecisionBasis}`,
     "",
-    "## 10. 仍待人工確認項目",
+    "## 10. HOLD_FOR_NOW 的具體原因",
+    "",
+    ...metrics.holdForNowReasons.map((item) => `- ${item.battleVariantId}：${item.reasonZhTw}`),
+    "",
+    "## 11. 資料待補項目",
     "",
     ...payload.remainingReview.map(
       (issue) => `- ${issue.battleVariantId ?? "未指定"}｜${issue.issueType}｜${issue.messageZhTw}`,
     ),
     "",
-    "## 11. 剩餘問題是否影響最終保留結論",
+    "## 12. 資料問題是否影響最終保留結論",
     "",
     ...payload.remainingReview.map(
       (issue) =>
         `- ${issue.battleVariantId ?? "未指定"}：${issue.affectsFinalDecision ? "會" : "不會"}；建議：${issue.suggestedActionZhTw}`,
     ),
     "",
-    "## 12. 測試結果",
+    "## 13. 測試結果",
     "",
     ...Object.entries(validation).map(([key, value]) => `- ${key}：${value}`),
     "",

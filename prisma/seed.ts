@@ -325,9 +325,9 @@ async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, Rank
         data: {
           id: evaluationId,
           battleVariantId: variantId,
-          decision: result.decision,
+          finalDecision: result.finalDecision,
           pvpSummaryZhTw: pvpSummary,
-          pveSummaryZhTw: "尚未取得可完整驗證的 Pokebattler 原始輸出，列入審核佇列。",
+          pveSummaryZhTw: "尚未取得可完整驗證的 Pokebattler 原始輸出，列入資料待補清單。",
           rocketSummaryZhTw: isShadow
             ? "暗影輸出與承傷機制已由官方說明確認；物種級火箭隊實用性仍待研究。"
             : "物種級火箭隊實用性尚待研究。",
@@ -354,13 +354,14 @@ async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, Rank
             : "尚無已驗證的必要招式結論。",
           recommendedIvStrategyZhTw: result.recommendedIvStrategyZhTw,
           reasonZhTw: result.reasonZhTw,
-          confidence: result.decision === "NEEDS_REVIEW" ? "LOW" : majorPvp ? "MEDIUM" : "LOW",
+          confidence: result.confidence,
           rulesVersion: RULES_VERSION,
           generatedAt: checkedAt,
           reviewed: false,
           reviewedAt: null,
-          reviewNotesZhTw:
-            "第一批自動推導結果；須由人工核對 PvE、道館、Max、限定招式與推出狀態後才能提高信心。",
+          reviewStatus: "DATA_PENDING",
+          missingDataSummaryZhTw: "PvE、道館、Max、限定招式或推出狀態仍有資料待補。",
+          reviewNotesZhTw: "系統已依現有證據產生暫定建議；資料維護者補齊來源後可重新計算。",
         },
       });
       await prisma.evaluationRuleTrace.createMany({
@@ -407,10 +408,10 @@ async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, Rank
       }
 
       const issues: Array<{
-        type: "NEEDS_REVIEW" | "MISSING_SOURCE" | "UNKNOWN_RELEASE_STATUS";
+        type: "RULE_NOT_COVERED" | "MISSING_SOURCE" | "UNKNOWN_RELEASE_STATUS";
         message: string;
       }> = [];
-      issues.push({ type: "NEEDS_REVIEW", message: "尚未經人工確認。" });
+      issues.push({ type: "RULE_NOT_COVERED", message: "初始資料仍待規則引擎重新計算。" });
       if (released === null) {
         issues.push({
           type: "UNKNOWN_RELEASE_STATUS",
@@ -420,7 +421,7 @@ async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, Rank
       if (!rawRows.length) {
         issues.push({ type: "MISSING_SOURCE", message: "缺少此戰鬥版本的主要 PvP 原始資料。" });
       }
-      if (result.decision === "NEEDS_REVIEW") {
+      if (result.finalDecision === "HOLD_FOR_NOW") {
         issues.push({
           type: "MISSING_SOURCE",
           message: "缺少足以完成保留／傳送判斷的 PvE、道館或 Max 交叉資料。",
@@ -435,6 +436,10 @@ async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, Rank
           status: "OPEN",
           batchKey: "001-030",
           messageZhTw: issue.message,
+          affectsFinalDecision: result.finalDecision === "HOLD_FOR_NOW",
+          provisionalDecision: result.finalDecision,
+          suggestedResearchActionZhTw: "補齊對應原始來源後重新執行規則引擎。",
+          lastResearchedAt: checkedAt,
           detectedAt: checkedAt,
         })),
       });
@@ -445,7 +450,7 @@ async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, Rank
           entityId: evaluationId,
           fieldName: "decision",
           previousValue: null,
-          newValue: result.decision,
+          newValue: result.finalDecision,
           sourceId: rawRows[0]?.sourceId ?? null,
           changeReasonZhTw: "匯入第一批研究資料後由集中式規則引擎產生初始結論。",
           changedAt: checkedAt,

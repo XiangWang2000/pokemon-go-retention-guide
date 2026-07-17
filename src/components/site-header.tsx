@@ -4,7 +4,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 const links = [
   { href: "/", label: "圖鑑評估", icon: TableProperties },
-  { href: "/review", label: "審核佇列", icon: ClipboardList },
+  { href: "/review", label: "資料待補清單", icon: ClipboardList },
   { href: "/sources", label: "資料來源", icon: Database },
   { href: "/changes", label: "變更紀錄", icon: FileClock },
 ];

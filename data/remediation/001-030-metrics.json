@@ -1,37 +1,99 @@
 {
   "batch": "001-030",
-  "generatedAt": "2026-07-16T07:00:00.000Z",
-  "rulesVersion": "2026.07.16-v3",
-  "beforeNeedsReview": 25,
-  "afterNeedsReview": 19,
-  "resolvedNeedsReview": 6,
-  "resolvedWithNotApplicable": 6,
-  "decidedWithDataUnavailable": 6,
-  "resolvedByPurifiedInheritance": 1,
-  "resolvedByPracticalDecisionBasis": 6,
+  "generatedAt": "2026-07-17T04:00:00.000Z",
+  "rulesVersion": "2026.07.17-v4",
+  "originalNeedsReviewCount": 19,
+  "reclassificationCounts": {
+    "KEEP": 0,
+    "CONDITIONAL_KEEP": 0,
+    "HOLD_FOR_NOW": 19,
+    "TRANSFER_CANDIDATE": 0
+  },
+  "holdForNowReasons": [
+    {
+      "battleVariantId": "004-kanto-purified",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "004-kanto-shadow",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "007-kanto-purified",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "007-kanto-shadow",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "011-kanto-normal",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "019-kanto-purified",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "019-kanto-shadow",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "021-kanto-purified",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "021-kanto-shadow",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "022-kanto-purified",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "022-kanto-shadow",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "023-kanto-purified",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "023-kanto-shadow",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "025-kanto-purified",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "025-kanto-shadow",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "026-alola-purified",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "026-alola-shadow",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "026-kanto-purified",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    },
+    {
+      "battleVariantId": "026-kanto-shadow",
+      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+    }
+  ],
+  "nonImpactingOpenIssueCount": 112,
+  "resolvedWithNotApplicable": 0,
+  "decidedWithDataUnavailable": 0,
+  "resolvedByPurifiedInheritance": 9,
+  "resolvedByPracticalDecisionBasis": 0,
   "purifiedInheritedCategoryCount": 140,
   "purifiedOverrides": 5,
-  "remainingReview": [
-    "004-kanto-purified",
-    "004-kanto-shadow",
-    "007-kanto-purified",
-    "007-kanto-shadow",
-    "011-kanto-normal",
-    "019-kanto-purified",
-    "019-kanto-shadow",
-    "021-kanto-purified",
-    "021-kanto-shadow",
-    "022-kanto-purified",
-    "022-kanto-shadow",
-    "023-kanto-purified",
-    "023-kanto-shadow",
-    "025-kanto-purified",
-    "025-kanto-shadow",
-    "026-alola-purified",
-    "026-alola-shadow",
-    "026-kanto-purified",
-    "026-kanto-shadow"
-  ],
   "remainingMaterialIssues": [
     {
       "battleVariantId": "004-kanto-shadow",

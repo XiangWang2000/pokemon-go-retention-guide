@@ -61,12 +61,12 @@ export default async function PokemonDetailPage({
         <p className="mt-5 max-w-4xl text-lg leading-8">{row.reasonZhTw}</p>
         <p className="mt-3 text-sm text-[var(--muted)]">
           信心程度：{zhTw.confidence[row.confidence]} · 規則版本：{row.rulesVersion} ·{" "}
-          {row.reviewed ? "已人工確認" : "尚未人工確認"}
+          {zhTw.reviewStatus[row.reviewStatus]}
         </p>
         <p className="mt-2 text-sm font-bold">
           結論依據：{zhTw.evaluationProvenance[row.provenance]}
           {row.provenance === "MANUAL_CURATED"
-            ? "（保留人工整理的實用判斷，不代表所有類別皆有完整排名）"
+            ? "（人工整理代表資料來源類型，不要求使用者自行判斷）"
             : ""}
         </p>
         <p className="mt-2 text-sm font-bold">推出狀態：{zhTw.releaseStatus[row.releaseStatus]}</p>
@@ -169,7 +169,7 @@ export default async function PokemonDetailPage({
                   {path.requiresEvent ? "需要活動條件" : "不需要活動條件"} · 驗證日期：
                   {path.verifiedAt
                     ? new Date(path.verifiedAt).toLocaleDateString("zh-TW")
-                    : "需要重新確認"}
+                    : "尚待資料維護確認"}
                 </p>
               </li>
             ))}
@@ -229,7 +229,7 @@ export default async function PokemonDetailPage({
           </div>
         ) : (
           <p className="mt-3 text-[var(--muted)]">
-            目前沒有可驗證的原始資料，必須維持需要重新確認。
+            目前沒有可驗證的原始資料；系統會依不可逆風險原則顯示暫定建議，並將缺口列入資料待補清單。
           </p>
         )}
       </section>

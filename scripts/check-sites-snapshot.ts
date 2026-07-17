@@ -71,7 +71,7 @@ async function main() {
   const changes = parsed.changes as unknown[];
   const details = parsed.details as Record<string, unknown>;
   assert(dashboard.length === manifest.counts.dashboardRows, "dashboard 筆數不一致。");
-  assert(review.length === manifest.counts.openReviewIssues, "Review Queue 筆數不一致。");
+  assert(review.length === manifest.counts.openReviewIssues, "資料待補清單筆數不一致。");
   assert(sources.length === manifest.counts.sourceReferences, "來源筆數不一致。");
   assert(changes.length === manifest.counts.changeLogs, "變更紀錄筆數不一致。");
   assert(Object.keys(details).length === manifest.counts.detailRecords, "詳細資料筆數不一致。");

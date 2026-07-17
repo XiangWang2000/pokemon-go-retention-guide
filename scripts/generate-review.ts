@@ -14,7 +14,7 @@ async function main() {
   const decisions = Object.keys(zhTw.decision) as Array<keyof typeof zhTw.decision>;
   const payload = {
     batch: "001-030",
-    updatedAt: "2026-07-15",
+    updatedAt: "2026-07-17",
     rulesVersion: RULES_VERSION,
     counts: {
       species: new Set(rows.map((row) => row.dexNumber)).size,
@@ -67,9 +67,9 @@ async function main() {
       ].includes(issue.issueType),
     ),
     highRiskJudgments: rows
-      .filter((row) => row.confidence === "LOW" && row.decision !== "NEEDS_REVIEW")
+      .filter((row) => row.confidence === "LOW" && row.decision !== "HOLD_FOR_NOW")
       .map((row) => ({ id: row.id, decision: row.decision, reasonZhTw: row.reasonZhTw })),
-    manualReviewRequired: issues,
+    dataResearchQueue: issues,
     sources: sources.map((source) => ({
       id: source.id,
       sourceName: source.sourceName,
@@ -80,13 +80,13 @@ async function main() {
     })),
   };
   const lines = [
-    "# 第一批資料審核報告：#001～#030",
+    "# 第一批資料與保留決策報告：#001～#030",
     "",
     `- 本批圖鑑範圍：#001～#030`,
     `- 寶可夢型態：${payload.counts.forms}`,
     `- 戰鬥版本：${payload.counts.battleVariants}`,
     `- 來源：${payload.counts.sources}`,
-    `- 尚待人工處理問題：${payload.counts.openReviewIssues}`,
+    `- 資料待補項目：${payload.counts.openReviewIssues}`,
     `- 本批資料更新日期：${payload.updatedAt}`,
     `- rulesVersion：${payload.rulesVersion}`,
     "",
@@ -126,13 +126,13 @@ async function main() {
     "## 缺失資料與高風險判斷",
     "",
     `- 缺少來源或推出狀態證據：${payload.missingData.length} 項。`,
-    `- 低信心但非 NEEDS_REVIEW：${payload.highRiskJudgments.length} 項，必須優先人工覆核。`,
+    `- 低信心但非暫時保留：${payload.highRiskJudgments.length} 項，資料維護者應優先核對。`,
     "- 火箭隊缺少可在本批逐物種、逐版本重現的當季整體排名，不以 PvP 或 PvE 排名代替。",
     "- Pokebattler 動態表格出現物種錯置風險，本批未匯入無法穩定重現的全域排名。",
     "- Purified 缺少普遍可用的獨立物種排名；Return 需求必須逐筆確認。",
     "- #030 的後續進化 #031 超出本批研究範圍，沒有自動進入下一批。",
     "",
-    "## 需要人工確認的項目",
+    "## 資料待補項目",
     "",
     ...issues
       .slice(0, 120)
@@ -141,7 +141,7 @@ async function main() {
           `- #${item.dexNumber ? String(item.dexNumber).padStart(3, "0") : "---"} ${item.nameZhTw}（${item.formNameZhTw}／${item.variantKey}）：${zhTw.issueType[item.issueType]}－${item.messageZhTw}（影響最終結論：${item.affectsFinalDecision ? "會" : "不會"}；建議：${item.suggestedActionZhTw}）`,
       ),
     ...(issues.length > 120
-      ? [`- 其餘 ${issues.length - 120} 項請見 review/001-030.json 與網站審核佇列。`]
+      ? [`- 其餘 ${issues.length - 120} 項請見 review/001-030.json 與網站資料待補清單。`]
       : []),
     "",
     "## 使用的來源",

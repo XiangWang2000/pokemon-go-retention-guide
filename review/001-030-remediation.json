@@ -1,7 +1,7 @@
 {
   "batch": "001-030",
-  "updatedAt": "2026-07-16",
-  "rulesVersion": "2026.07.16-v3",
+  "updatedAt": "2026-07-17",
+  "rulesVersion": "2026.07.17-v4",
   "originalProblem": "舊規則仍可能把個別類別缺資料提升為 NEEDS_REVIEW，即使已有足以作出實用保留判斷的人工整理或繼承資料。",
   "schemaChanges": [
     "新增 EvaluationDataStatus 與 CategoryEvaluation／CategoryEvaluationSource。",
@@ -10,9 +10,9 @@
     "新增 EvaluationProvenance，區分 SOURCE_VERIFIED、MANUAL_CURATED、INHERITED、DATA_UNAVAILABLE。"
   ],
   "ruleEngineChanges": [
-    "NEEDS_REVIEW 只代表目前無法合理判斷是否值得保留；推出狀態不明與未解決的關鍵衝突仍會阻止正式決策。",
-    "SOURCE_MISSING、NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE、PARTIALLY_VERIFIED 只在沒有任何實用判斷依據時觸發 NEEDS_REVIEW。",
-    "類別缺口保留為 Review issue 並降低 confidence，不會自動覆蓋 final decision。"
+    "finalDecision 不再包含 NEEDS_REVIEW；關鍵不確定性依不可逆風險原則產生 HOLD_FOR_NOW。",
+    "SOURCE_MISSING、NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE、PARTIALLY_VERIFIED 等次要缺口不會自動產生 HOLD_FOR_NOW。",
+    "類別缺口保留在資料待補清單並視情況降低 confidence，不會自動覆蓋 finalDecision。"
   ],
   "rocketStrategy": "火箭隊改存 DATA_UNAVAILABLE／定性 rocketRating／rocketRoles；未使用 PvP 或 PvE 排名替代。",
   "pokebattlerStrategy": "不保存無法穩定重現的全域攻擊手名次；資料鍵需包含物種、型態、版本、雙招、Boss、等級、天氣、好友與排序方法。",
@@ -47,9 +47,9 @@
       "maxOverallRating": "LIMITED",
       "maxInvestmentRating": "LOW",
       "maxUseCaseBreadth": "NARROW",
-      "checkedAt": "2026-07-16T07:00:00.000Z",
+      "checkedAt": "2026-07-17T04:00:00.000Z",
       "createdAt": "2026-07-15T13:59:25.780Z",
-      "updatedAt": "2026-07-16T15:43:09.910Z"
+      "updatedAt": "2026-07-17T13:50:17.043Z"
     },
     "sourceConflict": false
   },
@@ -96,38 +96,100 @@
   },
   "needsReviewStatistics": {
     "batch": "001-030",
-    "generatedAt": "2026-07-16T07:00:00.000Z",
-    "rulesVersion": "2026.07.16-v3",
-    "beforeNeedsReview": 25,
-    "afterNeedsReview": 19,
-    "resolvedNeedsReview": 6,
-    "resolvedWithNotApplicable": 6,
-    "decidedWithDataUnavailable": 6,
-    "resolvedByPurifiedInheritance": 1,
-    "resolvedByPracticalDecisionBasis": 6,
+    "generatedAt": "2026-07-17T04:00:00.000Z",
+    "rulesVersion": "2026.07.17-v4",
+    "originalNeedsReviewCount": 19,
+    "reclassificationCounts": {
+      "KEEP": 0,
+      "CONDITIONAL_KEEP": 0,
+      "HOLD_FOR_NOW": 19,
+      "TRANSFER_CANDIDATE": 0
+    },
+    "holdForNowReasons": [
+      {
+        "battleVariantId": "004-kanto-purified",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "004-kanto-shadow",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "007-kanto-purified",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "007-kanto-shadow",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "011-kanto-normal",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "019-kanto-purified",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "019-kanto-shadow",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "021-kanto-purified",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "021-kanto-shadow",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "022-kanto-purified",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "022-kanto-shadow",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "023-kanto-purified",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "023-kanto-shadow",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "025-kanto-purified",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "025-kanto-shadow",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "026-alola-purified",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "026-alola-shadow",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "026-kanto-purified",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      },
+      {
+        "battleVariantId": "026-kanto-shadow",
+        "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
+      }
+    ],
+    "nonImpactingOpenIssueCount": 112,
+    "resolvedWithNotApplicable": 0,
+    "decidedWithDataUnavailable": 0,
+    "resolvedByPurifiedInheritance": 9,
+    "resolvedByPracticalDecisionBasis": 0,
     "purifiedInheritedCategoryCount": 140,
     "purifiedOverrides": 5,
-    "remainingReview": [
-      "004-kanto-purified",
-      "004-kanto-shadow",
-      "007-kanto-purified",
-      "007-kanto-shadow",
-      "011-kanto-normal",
-      "019-kanto-purified",
-      "019-kanto-shadow",
-      "021-kanto-purified",
-      "021-kanto-shadow",
-      "022-kanto-purified",
-      "022-kanto-shadow",
-      "023-kanto-purified",
-      "023-kanto-shadow",
-      "025-kanto-purified",
-      "025-kanto-shadow",
-      "026-alola-purified",
-      "026-alola-shadow",
-      "026-kanto-purified",
-      "026-kanto-shadow"
-    ],
     "remainingMaterialIssues": [
       {
         "battleVariantId": "004-kanto-shadow",
@@ -247,18 +309,18 @@
   },
   "decisionCounts": {
     "CONDITIONAL_KEEP": 76,
+    "HOLD_FOR_NOW": 19,
     "KEEP": 20,
-    "NEEDS_REVIEW": 19,
     "TRANSFER_CANDIDATE": 38
   },
   "preservedHistory": {
     "sourceReferences": 107,
     "rawEvaluationData": 123,
-    "changeLogs": 365
+    "changeLogs": 535
   },
   "remainingReview": [
     {
-      "id": "issue-004-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-004-kanto-shadow-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "004-kanto-shadow",
       "dexNumber": 4,
       "pokemon": "小火龍",
@@ -269,7 +331,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-004-kanto-purified-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-004-kanto-purified-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "004-kanto-purified",
       "dexNumber": 4,
       "pokemon": "小火龍",
@@ -280,7 +342,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-007-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-007-kanto-shadow-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "007-kanto-shadow",
       "dexNumber": 7,
       "pokemon": "傑尼龜",
@@ -291,7 +353,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-007-kanto-purified-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-007-kanto-purified-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "007-kanto-purified",
       "dexNumber": 7,
       "pokemon": "傑尼龜",
@@ -302,7 +364,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-011-kanto-normal-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-011-kanto-normal-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "011-kanto-normal",
       "dexNumber": 11,
       "pokemon": "鐵甲蛹",
@@ -313,7 +375,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-019-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-019-kanto-shadow-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "019-kanto-shadow",
       "dexNumber": 19,
       "pokemon": "小拉達",
@@ -324,7 +386,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-019-kanto-purified-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-019-kanto-purified-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "019-kanto-purified",
       "dexNumber": 19,
       "pokemon": "小拉達",
@@ -335,7 +397,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-021-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-021-kanto-shadow-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "021-kanto-shadow",
       "dexNumber": 21,
       "pokemon": "烈雀",
@@ -346,7 +408,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-021-kanto-purified-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-021-kanto-purified-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "021-kanto-purified",
       "dexNumber": 21,
       "pokemon": "烈雀",
@@ -357,7 +419,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-022-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-022-kanto-shadow-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "022-kanto-shadow",
       "dexNumber": 22,
       "pokemon": "大嘴雀",
@@ -368,7 +430,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-022-kanto-purified-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-022-kanto-purified-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "022-kanto-purified",
       "dexNumber": 22,
       "pokemon": "大嘴雀",
@@ -379,7 +441,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-023-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-023-kanto-shadow-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "023-kanto-shadow",
       "dexNumber": 23,
       "pokemon": "阿柏蛇",
@@ -390,7 +452,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-023-kanto-purified-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-023-kanto-purified-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "023-kanto-purified",
       "dexNumber": 23,
       "pokemon": "阿柏蛇",
@@ -401,7 +463,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-025-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-025-kanto-shadow-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "025-kanto-shadow",
       "dexNumber": 25,
       "pokemon": "皮卡丘",
@@ -412,7 +474,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-025-kanto-purified-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-025-kanto-purified-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "025-kanto-purified",
       "dexNumber": 25,
       "pokemon": "皮卡丘",
@@ -423,7 +485,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-026-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-026-kanto-shadow-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "026-kanto-shadow",
       "dexNumber": 26,
       "pokemon": "雷丘",
@@ -434,7 +496,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-026-kanto-purified-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-026-kanto-purified-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "026-kanto-purified",
       "dexNumber": 26,
       "pokemon": "雷丘",
@@ -445,7 +507,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-026-alola-shadow-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-026-alola-shadow-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "026-alola-shadow",
       "dexNumber": 26,
       "pokemon": "雷丘",
@@ -456,7 +518,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-026-alola-purified-2026.07.16-v3-unknown-release-status-0",
+      "id": "issue-026-alola-purified-2026.07.17-v4-unknown-release-status-0",
       "battleVariantId": "026-alola-purified",
       "dexNumber": 26,
       "pokemon": "雷丘",
@@ -467,7 +529,7 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "id": "issue-020-kanto-shadow-2026.07.16-v3-material-data-gap-0",
+      "id": "issue-020-kanto-shadow-2026.07.17-v4-material-data-gap-0",
       "battleVariantId": "020-kanto-shadow",
       "dexNumber": 20,
       "pokemon": "拉達",
@@ -478,7 +540,7 @@
       "suggestedActionZhTw": "保留目前實用結論，後續補齊 PVE 精確資料並重新評估信心程度。"
     },
     {
-      "id": "issue-020-alola-shadow-2026.07.16-v3-material-data-gap-0",
+      "id": "issue-020-alola-shadow-2026.07.17-v4-material-data-gap-0",
       "battleVariantId": "020-alola-shadow",
       "dexNumber": 20,
       "pokemon": "拉達",
@@ -489,7 +551,7 @@
       "suggestedActionZhTw": "保留目前實用結論，後續補齊 PVE 精確資料並重新評估信心程度。"
     },
     {
-      "id": "issue-024-kanto-shadow-2026.07.16-v3-material-data-gap-0",
+      "id": "issue-024-kanto-shadow-2026.07.17-v4-material-data-gap-0",
       "battleVariantId": "024-kanto-shadow",
       "dexNumber": 24,
       "pokemon": "阿柏怪",
@@ -500,7 +562,7 @@
       "suggestedActionZhTw": "保留目前實用結論，後續補齊 PVE 精確資料並重新評估信心程度。"
     },
     {
-      "id": "issue-001-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-001-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "001-kanto-normal",
       "dexNumber": 1,
       "pokemon": "妙蛙種子",
@@ -511,7 +573,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-001-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-001-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "001-kanto-shadow",
       "dexNumber": 1,
       "pokemon": "妙蛙種子",
@@ -522,7 +584,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-001-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-001-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "001-kanto-purified",
       "dexNumber": 1,
       "pokemon": "妙蛙種子",
@@ -533,7 +595,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-001-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-001-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "001-kanto-dynamax",
       "dexNumber": 1,
       "pokemon": "妙蛙種子",
@@ -544,7 +606,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-002-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-002-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "002-kanto-normal",
       "dexNumber": 2,
       "pokemon": "妙蛙草",
@@ -555,7 +617,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-002-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-002-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "002-kanto-shadow",
       "dexNumber": 2,
       "pokemon": "妙蛙草",
@@ -566,7 +628,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-002-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-002-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "002-kanto-purified",
       "dexNumber": 2,
       "pokemon": "妙蛙草",
@@ -577,7 +639,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-002-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-002-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "002-kanto-dynamax",
       "dexNumber": 2,
       "pokemon": "妙蛙草",
@@ -588,7 +650,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-003-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-003-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "003-kanto-normal",
       "dexNumber": 3,
       "pokemon": "妙蛙花",
@@ -599,7 +661,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-003-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-003-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "003-kanto-shadow",
       "dexNumber": 3,
       "pokemon": "妙蛙花",
@@ -610,7 +672,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-003-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-003-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "003-kanto-purified",
       "dexNumber": 3,
       "pokemon": "妙蛙花",
@@ -621,7 +683,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-003-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-003-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "003-kanto-dynamax",
       "dexNumber": 3,
       "pokemon": "妙蛙花",
@@ -632,7 +694,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-003-kanto-mega-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-003-kanto-mega-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "003-kanto-mega",
       "dexNumber": 3,
       "pokemon": "妙蛙花",
@@ -643,7 +705,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-003-kanto-gigantamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-003-kanto-gigantamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "003-kanto-gigantamax",
       "dexNumber": 3,
       "pokemon": "妙蛙花",
@@ -654,7 +716,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-004-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-004-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "004-kanto-normal",
       "dexNumber": 4,
       "pokemon": "小火龍",
@@ -665,7 +727,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-004-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-004-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "004-kanto-dynamax",
       "dexNumber": 4,
       "pokemon": "小火龍",
@@ -676,7 +738,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-005-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-005-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "005-kanto-normal",
       "dexNumber": 5,
       "pokemon": "火恐龍",
@@ -687,7 +749,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-005-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-005-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "005-kanto-shadow",
       "dexNumber": 5,
       "pokemon": "火恐龍",
@@ -698,7 +760,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-005-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-005-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "005-kanto-purified",
       "dexNumber": 5,
       "pokemon": "火恐龍",
@@ -709,7 +771,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-005-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-005-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "005-kanto-dynamax",
       "dexNumber": 5,
       "pokemon": "火恐龍",
@@ -720,7 +782,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-006-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-006-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "006-kanto-normal",
       "dexNumber": 6,
       "pokemon": "噴火龍",
@@ -731,7 +793,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-006-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-006-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "006-kanto-shadow",
       "dexNumber": 6,
       "pokemon": "噴火龍",
@@ -742,7 +804,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-006-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-006-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "006-kanto-purified",
       "dexNumber": 6,
       "pokemon": "噴火龍",
@@ -753,7 +815,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-006-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-006-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "006-kanto-dynamax",
       "dexNumber": 6,
       "pokemon": "噴火龍",
@@ -764,7 +826,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-006-kanto-mega-x-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-006-kanto-mega-x-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "006-kanto-mega-x",
       "dexNumber": 6,
       "pokemon": "噴火龍",
@@ -775,7 +837,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-006-kanto-mega-y-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-006-kanto-mega-y-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "006-kanto-mega-y",
       "dexNumber": 6,
       "pokemon": "噴火龍",
@@ -786,7 +848,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-006-kanto-gigantamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-006-kanto-gigantamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "006-kanto-gigantamax",
       "dexNumber": 6,
       "pokemon": "噴火龍",
@@ -797,7 +859,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-007-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-007-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "007-kanto-normal",
       "dexNumber": 7,
       "pokemon": "傑尼龜",
@@ -808,7 +870,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-007-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-007-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "007-kanto-dynamax",
       "dexNumber": 7,
       "pokemon": "傑尼龜",
@@ -819,7 +881,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-008-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-008-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "008-kanto-normal",
       "dexNumber": 8,
       "pokemon": "卡咪龜",
@@ -830,7 +892,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-008-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-008-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "008-kanto-shadow",
       "dexNumber": 8,
       "pokemon": "卡咪龜",
@@ -841,7 +903,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-008-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-008-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "008-kanto-purified",
       "dexNumber": 8,
       "pokemon": "卡咪龜",
@@ -852,7 +914,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-008-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-008-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "008-kanto-dynamax",
       "dexNumber": 8,
       "pokemon": "卡咪龜",
@@ -863,7 +925,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-009-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-009-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "009-kanto-normal",
       "dexNumber": 9,
       "pokemon": "水箭龜",
@@ -874,7 +936,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-009-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-009-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "009-kanto-shadow",
       "dexNumber": 9,
       "pokemon": "水箭龜",
@@ -885,7 +947,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-009-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-009-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "009-kanto-purified",
       "dexNumber": 9,
       "pokemon": "水箭龜",
@@ -896,7 +958,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-009-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-009-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "009-kanto-dynamax",
       "dexNumber": 9,
       "pokemon": "水箭龜",
@@ -907,7 +969,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-009-kanto-mega-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-009-kanto-mega-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "009-kanto-mega",
       "dexNumber": 9,
       "pokemon": "水箭龜",
@@ -918,7 +980,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-009-kanto-gigantamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-009-kanto-gigantamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "009-kanto-gigantamax",
       "dexNumber": 9,
       "pokemon": "水箭龜",
@@ -929,7 +991,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-010-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-010-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "010-kanto-normal",
       "dexNumber": 10,
       "pokemon": "綠毛蟲",
@@ -940,7 +1002,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-010-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-010-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "010-kanto-shadow",
       "dexNumber": 10,
       "pokemon": "綠毛蟲",
@@ -951,7 +1013,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-010-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-010-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "010-kanto-purified",
       "dexNumber": 10,
       "pokemon": "綠毛蟲",
@@ -962,7 +1024,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-010-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-010-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "010-kanto-dynamax",
       "dexNumber": 10,
       "pokemon": "綠毛蟲",
@@ -973,7 +1035,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-011-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-011-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "011-kanto-shadow",
       "dexNumber": 11,
       "pokemon": "鐵甲蛹",
@@ -984,7 +1046,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-011-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-011-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "011-kanto-purified",
       "dexNumber": 11,
       "pokemon": "鐵甲蛹",
@@ -995,7 +1057,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-011-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-011-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "011-kanto-dynamax",
       "dexNumber": 11,
       "pokemon": "鐵甲蛹",
@@ -1006,7 +1068,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-012-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-012-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "012-kanto-normal",
       "dexNumber": 12,
       "pokemon": "巴大蝶",
@@ -1017,7 +1079,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-012-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-012-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "012-kanto-shadow",
       "dexNumber": 12,
       "pokemon": "巴大蝶",
@@ -1028,7 +1090,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-012-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-012-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "012-kanto-purified",
       "dexNumber": 12,
       "pokemon": "巴大蝶",
@@ -1039,7 +1101,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-012-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-012-kanto-dynamax-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "012-kanto-dynamax",
       "dexNumber": 12,
       "pokemon": "巴大蝶",
@@ -1050,7 +1112,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-013-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-013-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "013-kanto-normal",
       "dexNumber": 13,
       "pokemon": "獨角蟲",
@@ -1061,7 +1123,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-013-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-013-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "013-kanto-shadow",
       "dexNumber": 13,
       "pokemon": "獨角蟲",
@@ -1072,7 +1134,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-013-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-013-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "013-kanto-purified",
       "dexNumber": 13,
       "pokemon": "獨角蟲",
@@ -1083,7 +1145,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-014-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-014-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "014-kanto-normal",
       "dexNumber": 14,
       "pokemon": "鐵殼蛹",
@@ -1094,7 +1156,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-014-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-014-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "014-kanto-shadow",
       "dexNumber": 14,
       "pokemon": "鐵殼蛹",
@@ -1105,7 +1167,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-014-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-014-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "014-kanto-purified",
       "dexNumber": 14,
       "pokemon": "鐵殼蛹",
@@ -1116,7 +1178,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-015-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-015-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "015-kanto-normal",
       "dexNumber": 15,
       "pokemon": "大針蜂",
@@ -1127,7 +1189,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-015-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-015-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "015-kanto-shadow",
       "dexNumber": 15,
       "pokemon": "大針蜂",
@@ -1138,7 +1200,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-015-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-015-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "015-kanto-purified",
       "dexNumber": 15,
       "pokemon": "大針蜂",
@@ -1149,7 +1211,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-015-kanto-mega-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-015-kanto-mega-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "015-kanto-mega",
       "dexNumber": 15,
       "pokemon": "大針蜂",
@@ -1160,7 +1222,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-016-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-016-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "016-kanto-normal",
       "dexNumber": 16,
       "pokemon": "波波",
@@ -1171,7 +1233,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-016-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-016-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "016-kanto-shadow",
       "dexNumber": 16,
       "pokemon": "波波",
@@ -1182,7 +1244,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-016-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-016-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "016-kanto-purified",
       "dexNumber": 16,
       "pokemon": "波波",
@@ -1193,7 +1255,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-017-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-017-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "017-kanto-normal",
       "dexNumber": 17,
       "pokemon": "比比鳥",
@@ -1204,7 +1266,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-017-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-017-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "017-kanto-shadow",
       "dexNumber": 17,
       "pokemon": "比比鳥",
@@ -1215,7 +1277,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-017-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-017-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "017-kanto-purified",
       "dexNumber": 17,
       "pokemon": "比比鳥",
@@ -1226,7 +1288,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-018-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-018-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "018-kanto-normal",
       "dexNumber": 18,
       "pokemon": "大比鳥",
@@ -1237,7 +1299,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-018-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-018-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "018-kanto-shadow",
       "dexNumber": 18,
       "pokemon": "大比鳥",
@@ -1248,7 +1310,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-018-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-018-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "018-kanto-purified",
       "dexNumber": 18,
       "pokemon": "大比鳥",
@@ -1259,7 +1321,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-018-kanto-mega-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-018-kanto-mega-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "018-kanto-mega",
       "dexNumber": 18,
       "pokemon": "大比鳥",
@@ -1270,7 +1332,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-019-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-019-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "019-kanto-normal",
       "dexNumber": 19,
       "pokemon": "小拉達",
@@ -1281,7 +1343,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-019-alola-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-019-alola-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "019-alola-normal",
       "dexNumber": 19,
       "pokemon": "小拉達",
@@ -1292,7 +1354,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-019-alola-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-019-alola-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "019-alola-shadow",
       "dexNumber": 19,
       "pokemon": "小拉達",
@@ -1303,7 +1365,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-019-alola-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-019-alola-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "019-alola-purified",
       "dexNumber": 19,
       "pokemon": "小拉達",
@@ -1314,7 +1376,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-020-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-020-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "020-kanto-normal",
       "dexNumber": 20,
       "pokemon": "拉達",
@@ -1325,7 +1387,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-020-kanto-shadow-2026.07.16-v3-optional-data-missing-1",
+      "id": "issue-020-kanto-shadow-2026.07.17-v4-optional-data-missing-1",
       "battleVariantId": "020-kanto-shadow",
       "dexNumber": 20,
       "pokemon": "拉達",
@@ -1336,7 +1398,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-020-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-020-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "020-kanto-purified",
       "dexNumber": 20,
       "pokemon": "拉達",
@@ -1347,7 +1409,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-020-alola-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-020-alola-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "020-alola-normal",
       "dexNumber": 20,
       "pokemon": "拉達",
@@ -1358,7 +1420,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-020-alola-shadow-2026.07.16-v3-optional-data-missing-1",
+      "id": "issue-020-alola-shadow-2026.07.17-v4-optional-data-missing-1",
       "battleVariantId": "020-alola-shadow",
       "dexNumber": 20,
       "pokemon": "拉達",
@@ -1369,7 +1431,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-020-alola-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-020-alola-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "020-alola-purified",
       "dexNumber": 20,
       "pokemon": "拉達",
@@ -1380,7 +1442,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-021-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-021-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "021-kanto-normal",
       "dexNumber": 21,
       "pokemon": "烈雀",
@@ -1391,7 +1453,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-022-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-022-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "022-kanto-normal",
       "dexNumber": 22,
       "pokemon": "大嘴雀",
@@ -1402,7 +1464,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-023-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-023-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "023-kanto-normal",
       "dexNumber": 23,
       "pokemon": "阿柏蛇",
@@ -1413,7 +1475,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-024-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-024-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "024-kanto-normal",
       "dexNumber": 24,
       "pokemon": "阿柏怪",
@@ -1424,7 +1486,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-024-kanto-shadow-2026.07.16-v3-optional-data-missing-1",
+      "id": "issue-024-kanto-shadow-2026.07.17-v4-optional-data-missing-1",
       "battleVariantId": "024-kanto-shadow",
       "dexNumber": 24,
       "pokemon": "阿柏怪",
@@ -1435,7 +1497,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-024-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-024-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "024-kanto-purified",
       "dexNumber": 24,
       "pokemon": "阿柏怪",
@@ -1446,7 +1508,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-025-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-025-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "025-kanto-normal",
       "dexNumber": 25,
       "pokemon": "皮卡丘",
@@ -1457,7 +1519,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-026-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-026-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "026-kanto-normal",
       "dexNumber": 26,
       "pokemon": "雷丘",
@@ -1468,7 +1530,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-026-alola-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-026-alola-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "026-alola-normal",
       "dexNumber": 26,
       "pokemon": "雷丘",
@@ -1479,7 +1541,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-027-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-027-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "027-kanto-normal",
       "dexNumber": 27,
       "pokemon": "穿山鼠",
@@ -1490,7 +1552,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-027-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-027-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "027-kanto-shadow",
       "dexNumber": 27,
       "pokemon": "穿山鼠",
@@ -1501,7 +1563,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-027-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-027-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "027-kanto-purified",
       "dexNumber": 27,
       "pokemon": "穿山鼠",
@@ -1512,7 +1574,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-027-alola-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-027-alola-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "027-alola-normal",
       "dexNumber": 27,
       "pokemon": "穿山鼠",
@@ -1523,7 +1585,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-027-alola-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-027-alola-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "027-alola-shadow",
       "dexNumber": 27,
       "pokemon": "穿山鼠",
@@ -1534,7 +1596,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-027-alola-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-027-alola-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "027-alola-purified",
       "dexNumber": 27,
       "pokemon": "穿山鼠",
@@ -1545,7 +1607,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-028-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-028-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "028-kanto-normal",
       "dexNumber": 28,
       "pokemon": "穿山王",
@@ -1556,7 +1618,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-028-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-028-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "028-kanto-shadow",
       "dexNumber": 28,
       "pokemon": "穿山王",
@@ -1567,7 +1629,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-028-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-028-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "028-kanto-purified",
       "dexNumber": 28,
       "pokemon": "穿山王",
@@ -1578,7 +1640,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-028-alola-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-028-alola-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "028-alola-normal",
       "dexNumber": 28,
       "pokemon": "穿山王",
@@ -1589,7 +1651,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-028-alola-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-028-alola-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "028-alola-shadow",
       "dexNumber": 28,
       "pokemon": "穿山王",
@@ -1600,7 +1662,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-028-alola-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-028-alola-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "028-alola-purified",
       "dexNumber": 28,
       "pokemon": "穿山王",
@@ -1611,7 +1673,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-029-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-029-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "029-kanto-normal",
       "dexNumber": 29,
       "pokemon": "尼多蘭",
@@ -1622,7 +1684,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-029-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-029-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "029-kanto-shadow",
       "dexNumber": 29,
       "pokemon": "尼多蘭",
@@ -1633,7 +1695,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-029-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-029-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "029-kanto-purified",
       "dexNumber": 29,
       "pokemon": "尼多蘭",
@@ -1644,29 +1706,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-012-kanto-gigantamax-2026.07.16-v3-optional-data-missing-0",
-      "battleVariantId": "012-kanto-gigantamax",
-      "dexNumber": 12,
-      "pokemon": "巴大蝶",
-      "variantKey": "GIGANTAMAX",
-      "issueType": "OPTIONAL_DATA_MISSING",
-      "affectsFinalDecision": false,
-      "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
-      "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
-    },
-    {
-      "id": "issue-025-kanto-gigantamax-2026.07.16-v3-optional-data-missing-0",
-      "battleVariantId": "025-kanto-gigantamax",
-      "dexNumber": 25,
-      "pokemon": "皮卡丘",
-      "variantKey": "GIGANTAMAX",
-      "issueType": "OPTIONAL_DATA_MISSING",
-      "affectsFinalDecision": false,
-      "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
-      "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
-    },
-    {
-      "id": "issue-030-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-030-kanto-normal-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "030-kanto-normal",
       "dexNumber": 30,
       "pokemon": "尼多娜",
@@ -1677,7 +1717,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-030-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-030-kanto-shadow-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "030-kanto-shadow",
       "dexNumber": 30,
       "pokemon": "尼多娜",
@@ -1688,7 +1728,7 @@
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     },
     {
-      "id": "issue-030-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+      "id": "issue-030-kanto-purified-2026.07.17-v4-optional-data-missing-0",
       "battleVariantId": "030-kanto-purified",
       "dexNumber": 30,
       "pokemon": "尼多娜",
@@ -1697,18 +1737,40 @@
       "affectsFinalDecision": false,
       "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
       "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
+    },
+    {
+      "id": "issue-012-kanto-gigantamax-2026.07.17-v4-optional-data-missing-0",
+      "battleVariantId": "012-kanto-gigantamax",
+      "dexNumber": 12,
+      "pokemon": "巴大蝶",
+      "variantKey": "GIGANTAMAX",
+      "issueType": "OPTIONAL_DATA_MISSING",
+      "affectsFinalDecision": false,
+      "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
+      "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
+    },
+    {
+      "id": "issue-025-kanto-gigantamax-2026.07.17-v4-optional-data-missing-0",
+      "battleVariantId": "025-kanto-gigantamax",
+      "dexNumber": 25,
+      "pokemon": "皮卡丘",
+      "variantKey": "GIGANTAMAX",
+      "issueType": "OPTIONAL_DATA_MISSING",
+      "affectsFinalDecision": false,
+      "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
+      "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。"
     }
   ],
   "tests": {
     "lint": "通過（0 errors, 0 warnings）",
     "typecheck": "通過",
-    "unitTests": "通過（7 files, 43 tests）",
-    "integrationTests": "通過（1 file, 4 tests）",
+    "unitTests": "通過（9 files, 62 tests）",
+    "integrationTests": "通過（包含資料庫 HOLD_FOR_NOW、reviewIssues 與 affectsFinalDecision 驗證）",
     "dataValidation": "通過（30 species, 35 forms, 153 variants, 123 raw records, 1071 category statuses, 107 sources）",
-    "migration": "通過（3 migrations, no pending migrations）",
+    "migration": "通過（5 migrations, no pending migrations）",
     "seed": "通過（既有 30 筆物種時安全略過，不清空歷史資料）",
     "productionBuild": "通過（Next.js 16.2.10）",
-    "uiSmoke": "通過（首頁中文搜尋、Fearow #20、Review Queue 影響與處理欄、GMax Butterfree 分維度與無衝突狀態）"
+    "uiSmoke": "通過（首頁顯示 19 個暫時保留版本、混合版本摘要不遺失 HOLD、資料待補清單欄位與分頁、影響結論篩選）"
   },
   "knownLimitations": [
     "仍有部分 Shadow／Purified 推出狀態缺少可靠逐物種原始來源。",

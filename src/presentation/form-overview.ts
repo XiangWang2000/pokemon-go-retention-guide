@@ -37,6 +37,7 @@ export interface FormOverview {
   decisionReason: string;
   ivDirection: string;
   primaryUses: string[];
+  hasDataIssues: boolean;
   reviewed: boolean;
   updatedAt: string | null;
 }
@@ -74,7 +75,12 @@ function category(row: DashboardRow, key: string) {
 
 function assessmentRows(rows: DashboardRow[]) {
   const released = rows.filter((row) => row.isReleased && row.releaseStatus === "RELEASED");
-  return released.length ? released : rows;
+  const heldUnknown = rows.filter(
+    (row) => row.decision === "HOLD_FOR_NOW" && row.releaseStatus !== "UNRELEASED",
+  );
+  return released.length
+    ? [...released, ...heldUnknown.filter((row) => !released.includes(row))]
+    : rows;
 }
 
 function isWorthKeeping(row: DashboardRow) {
@@ -367,7 +373,7 @@ function buildFormDecision(rows: DashboardRow[]) {
   if (assessed.some((row) => isWorthKeeping(row) && matchedRule(row, "CONDITIONAL_USE"))) {
     return "CONDITIONAL_KEEP" as const;
   }
-  if (assessed.some((row) => row.decision === "NEEDS_REVIEW")) return "NEEDS_REVIEW" as const;
+  if (assessed.some((row) => row.decision === "HOLD_FOR_NOW")) return "HOLD_FOR_NOW" as const;
   return "TRANSFER_CANDIDATE" as const;
 }
 
@@ -382,8 +388,17 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
     direct.length > 0 && direct.every((row) => ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey));
   const pvp = buildPvpOverview(assessed);
   const pve = buildPveOverview(assessed);
+  const holdRows = assessed.filter((row) => row.decision === "HOLD_FOR_NOW");
 
-  if (decision === "NEEDS_REVIEW") return "關鍵用途仍待確認，先不要大量整理。";
+  if (decision === "HOLD_FOR_NOW") return "關鍵用途仍有不確定性，傳送不可逆，目前先保留。";
+  if (holdRows.length) {
+    const heldVariants = [
+      ...new Set(holdRows.map((row) => zhTw.variantShort[row.variantKey])),
+    ].join("、");
+    return evolutionOnly
+      ? `保留適合進化的個體；${heldVariants}版本推出狀態未確認，先暫時保留。`
+      : `依已確認用途挑選個體；${heldVariants}版本關鍵資料未確認，先暫時保留。`;
+  }
   if (decision === "TRANSFER_CANDIDATE") return "一般重複個體通常可傳送。";
   if (onlyShadow) return "普通版用途有限；留暗影高攻個體。";
   if (onlyMega) return "普通重複個體通常可傳送；留一隻高 IV／15 攻作 Mega。";
@@ -410,7 +425,7 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
 }
 
 function buildVariantShortReason(row: DashboardRow, uses: string[]) {
-  if (row.decision === "NEEDS_REVIEW") return "資料仍待確認，先不要依此版本大量整理。";
+  if (row.decision === "HOLD_FOR_NOW") return "關鍵資料補齊前先保留一隻，不要大量投入資源。";
   if (row.decision === "TRANSFER_CANDIDATE") return "目前沒有足以支持囤積的主要戰鬥用途。";
   if (uses.includes("後續進化") && uses.length === 1) return "主要價值來自後續進化，不是本體戰力。";
   if (row.variantKey === "SHADOW") return "暗影版需獨立判斷，淨化前先確認用途。";
@@ -464,6 +479,7 @@ export function buildFormOverview(rows: DashboardRow[]): FormOverview {
       variants.find((variant) => isWorthKeeping(variant.row))?.ivDirection ??
       "用途確認後再挑 IV",
     primaryUses: [...new Set(variants.flatMap((variant) => variant.primaryUses))],
+    hasDataIssues: sorted.some((row) => (row.reviewIssues?.length ?? 0) > 0),
     reviewed: assessed.every((row) => row.reviewed),
     updatedAt:
       assessed

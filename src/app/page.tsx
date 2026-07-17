@@ -17,8 +17,8 @@ export default async function HomePage() {
       icon: ShieldCheck,
     },
     {
-      label: "需要重新確認",
-      value: forms.filter((form) => form.decision === "NEEDS_REVIEW").length,
+      label: "暫時保留版本",
+      value: rows.filter((row) => row.decision === "HOLD_FOR_NOW").length,
       icon: AlertTriangle,
     },
   ];

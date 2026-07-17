@@ -181,8 +181,8 @@ export function EvaluationTable({
               className={selectClass}
             >
               <option value="ALL">所有審核狀態</option>
-              <option value="YES">已人工確認</option>
-              <option value="NO">尚未人工確認</option>
+              <option value="YES">資料已確認</option>
+              <option value="NO">部分資料待補</option>
             </select>
           </label>
         </div>
@@ -427,7 +427,9 @@ function ExpandedContent({ row }: { row: DashboardRow }) {
             ))}
           </ul>
         ) : (
-          <p className="mt-3 text-sm text-[var(--muted)]">沒有可驗證的原始資料，已加入審核佇列。</p>
+          <p className="mt-3 text-sm text-[var(--muted)]">
+            沒有可驗證的原始資料，已加入資料待補清單。
+          </p>
         )}
       </section>
       <section className="rounded-xl border bg-[var(--surface)] p-4">

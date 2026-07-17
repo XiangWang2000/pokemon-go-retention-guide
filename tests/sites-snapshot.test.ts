@@ -54,7 +54,7 @@ describe("Sites 唯讀 snapshot", () => {
       battleVariants: 153,
       rawEvaluationData: 123,
       sourceReferences: 107,
-      retentionEvaluations: 459,
+      retentionEvaluations: 612,
       categoryEvaluations: 1071,
       dashboardRows: 153,
       openReviewIssues: 131,
@@ -78,7 +78,7 @@ describe("Sites 唯讀 snapshot", () => {
       "道館與Max Battle",
       "招式資料",
       "進化關係",
-      "需要重新確認",
+      "資料待補清單",
       "資料來源",
       "變更紀錄",
     ]);

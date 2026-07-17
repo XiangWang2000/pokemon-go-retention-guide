@@ -1,7 +1,7 @@
 # #001～#030 資料修正報告
 
-- 更新日期：2026-07-16
-- rulesVersion：2026.07.16-v3
+- 更新日期：2026-07-17
+- rulesVersion：2026.07.17-v4
 
 ## 1. 原問題摘要
 
@@ -16,9 +16,9 @@
 
 ## 3. 規則引擎修改
 
-- NEEDS_REVIEW 只代表目前無法合理判斷是否值得保留；推出狀態不明與未解決的關鍵衝突仍會阻止正式決策。
-- SOURCE_MISSING、NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE、PARTIALLY_VERIFIED 只在沒有任何實用判斷依據時觸發 NEEDS_REVIEW。
-- 類別缺口保留為 Review issue 並降低 confidence，不會自動覆蓋 final decision。
+- finalDecision 不再包含 NEEDS_REVIEW；關鍵不確定性依不可逆風險原則產生 HOLD_FOR_NOW。
+- SOURCE_MISSING、NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE、PARTIALLY_VERIFIED 等次要缺口不會自動產生 HOLD_FOR_NOW。
+- 類別缺口保留在資料待補清單並視情況降低 confidence，不會自動覆蓋 finalDecision。
 
 ## 4. 火箭隊策略修改
 
@@ -46,17 +46,42 @@
 - 只接受 Open League／Overall 完整 JSON；保存 species、form、variant、league、cup、category、版本、擷取方法與 reproducible。
 - 大嘴雀 GL #20：完整榜單可重現，因此保留。
 
-## 9. 修正前後 NEEDS_REVIEW 統計
+## 9. 原 NEEDS_REVIEW 重新分類統計
 
-- 修正前：25
-- 修正後：19
-- 已解決：6
-- 含 NOT_APPLICABLE 而仍可判斷：6
-- 含 DATA_UNAVAILABLE 而仍可判斷：6
-- 因 Purified 繼承而解決：1
-- 因已有足夠實用判斷依據而解決：6
+- 原 NEEDS_REVIEW：19
+- 轉為 KEEP：0
+- 轉為 CONDITIONAL_KEEP：0
+- 轉為 HOLD_FOR_NOW：19
+- 轉為 TRANSFER_CANDIDATE：0
+- 不影響最終決策的資料待補：112
+- 含 NOT_APPLICABLE 而仍可判斷：0
+- 含 DATA_UNAVAILABLE 而仍可判斷：0
+- 因 Purified 繼承而解決：9
+- 因已有足夠實用判斷依據而解決：0
 
-## 10. 仍待人工確認項目
+## 10. HOLD_FOR_NOW 的具體原因
+
+- 004-kanto-purified：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 004-kanto-shadow：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 007-kanto-purified：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 007-kanto-shadow：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 011-kanto-normal：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 019-kanto-purified：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 019-kanto-shadow：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 021-kanto-purified：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 021-kanto-shadow：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 022-kanto-purified：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 022-kanto-shadow：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 023-kanto-purified：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 023-kanto-shadow：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 025-kanto-purified：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 025-kanto-shadow：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 026-alola-purified：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 026-alola-shadow：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 026-kanto-purified：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+- 026-kanto-shadow：此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。
+
+## 11. 資料待補項目
 
 - 004-kanto-shadow｜UNKNOWN_RELEASE_STATUS｜此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。
 - 004-kanto-purified｜UNKNOWN_RELEASE_STATUS｜此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。
@@ -184,13 +209,13 @@
 - 029-kanto-normal｜OPTIONAL_DATA_MISSING｜非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。
 - 029-kanto-shadow｜OPTIONAL_DATA_MISSING｜非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。
 - 029-kanto-purified｜OPTIONAL_DATA_MISSING｜非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。
-- 012-kanto-gigantamax｜OPTIONAL_DATA_MISSING｜非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。
-- 025-kanto-gigantamax｜OPTIONAL_DATA_MISSING｜非關鍵類別仍有次要缺口：MAX_BATTLE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。
 - 030-kanto-normal｜OPTIONAL_DATA_MISSING｜非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。
 - 030-kanto-shadow｜OPTIONAL_DATA_MISSING｜非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。
 - 030-kanto-purified｜OPTIONAL_DATA_MISSING｜非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。
+- 012-kanto-gigantamax｜OPTIONAL_DATA_MISSING｜非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。
+- 025-kanto-gigantamax｜OPTIONAL_DATA_MISSING｜非關鍵類別仍有次要缺口：MAX_BATTLE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。
 
-## 11. 剩餘問題是否影響最終保留結論
+## 12. 資料問題是否影響最終保留結論
 
 - 004-kanto-shadow：會；建議：查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。
 - 004-kanto-purified：會；建議：查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。
@@ -318,23 +343,23 @@
 - 029-kanto-normal：不會；建議：日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。
 - 029-kanto-shadow：不會；建議：日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。
 - 029-kanto-purified：不會；建議：日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。
-- 012-kanto-gigantamax：不會；建議：日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。
-- 025-kanto-gigantamax：不會；建議：日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。
 - 030-kanto-normal：不會；建議：日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。
 - 030-kanto-shadow：不會；建議：日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。
 - 030-kanto-purified：不會；建議：日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。
+- 012-kanto-gigantamax：不會；建議：日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。
+- 025-kanto-gigantamax：不會；建議：日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。
 
-## 12. 測試結果
+## 13. 測試結果
 
 - lint：通過（0 errors, 0 warnings）
 - typecheck：通過
-- unitTests：通過（7 files, 43 tests）
-- integrationTests：通過（1 file, 4 tests）
+- unitTests：通過（9 files, 62 tests）
+- integrationTests：通過（包含資料庫 HOLD_FOR_NOW、reviewIssues 與 affectsFinalDecision 驗證）
 - dataValidation：通過（30 species, 35 forms, 153 variants, 123 raw records, 1071 category statuses, 107 sources）
-- migration：通過（3 migrations, no pending migrations）
+- migration：通過（5 migrations, no pending migrations）
 - seed：通過（既有 30 筆物種時安全略過，不清空歷史資料）
 - productionBuild：通過（Next.js 16.2.10）
-- uiSmoke：通過（首頁中文搜尋、Fearow #20、Review Queue 影響與處理欄、GMax Butterfree 分維度與無衝突狀態）
+- uiSmoke：通過（首頁顯示 19 個暫時保留版本、混合版本摘要不遺失 HOLD、資料待補清單欄位與分頁、影響結論篩選）
 
 ## 13. 已知限制
 

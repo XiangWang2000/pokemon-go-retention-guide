@@ -1,4 +1,5 @@
 import { Fragment } from "react";
+import { DatabaseZap } from "lucide-react";
 import type { FormOverview } from "@/presentation/form-overview";
 import { CompactRating } from "./compact-rating";
 import { FormDetailPanel } from "./form-detail-panel";
@@ -39,7 +40,15 @@ export function QuickOverview({
                     expanded={isExpanded}
                     onToggle={() => onToggle(form.formId)}
                   />
-                  <RetentionDecisionBadge decision={form.decision} prominent />
+                  <div className="flex flex-col items-end gap-2">
+                    <RetentionDecisionBadge decision={form.decision} prominent />
+                    {form.hasDataIssues ? (
+                      <span className="inline-flex items-center gap-1 text-[11px] font-bold text-[var(--muted)]">
+                        <DatabaseZap aria-hidden size={13} />
+                        部分資料待補
+                      </span>
+                    ) : null}
+                  </div>
                 </div>
                 <div className="mt-4">
                   <VariantBadges variants={form.releasedVariantKeys} />
@@ -144,6 +153,12 @@ export function QuickOverview({
                       >
                         IV：{form.ivDirection}
                       </p>
+                      {form.hasDataIssues ? (
+                        <p className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[var(--muted)]">
+                          <DatabaseZap aria-hidden size={13} />
+                          部分資料待補
+                        </p>
+                      ) : null}
                     </td>
                   </tr>
                   {isExpanded ? (

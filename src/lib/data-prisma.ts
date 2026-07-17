@@ -32,6 +32,7 @@ export async function getDashboardRows() {
         include: { sourceReferences: { include: { source: true } } },
         orderBy: { category: "asc" },
       },
+      dataIssues: { where: { status: "OPEN" }, orderBy: { detectedAt: "desc" } },
     },
     orderBy: [{ pokemonForm: { species: { dexNumber: "asc" } } }, { variantKey: "asc" }],
   });
@@ -59,9 +60,31 @@ export async function getDashboardRows() {
       releaseStatus: variant.releaseStatus,
       releaseVerifiedAt: variant.releaseVerifiedAt?.toISOString() ?? null,
       notesZhTw: variant.notesZhTw,
-      decision: evaluation?.decision ?? "NEEDS_REVIEW",
+      decision: evaluation?.finalDecision ?? "HOLD_FOR_NOW",
       provenance: evaluation?.provenance ?? "DATA_UNAVAILABLE",
       confidence: evaluation?.confidence ?? "LOW",
+      dataStatus:
+        variant.categoryEvaluations.find((item) => item.status === "SOURCE_CONFLICT")?.status ??
+        variant.categoryEvaluations.find((item) => item.status === "POSSIBLE_SPECIES_MISMATCH")
+          ?.status ??
+        variant.categoryEvaluations.find((item) => item.status === "UNKNOWN_RELEASE_STATUS")
+          ?.status ??
+        variant.categoryEvaluations.find((item) => item.status === "STALE")?.status ??
+        variant.categoryEvaluations.find((item) => item.status === "SOURCE_MISSING")?.status ??
+        variant.categoryEvaluations.find((item) => item.status === "PARTIALLY_VERIFIED")?.status ??
+        variant.categoryEvaluations.find((item) => item.status === "DATA_UNAVAILABLE")?.status ??
+        "VERIFIED",
+      reviewStatus: evaluation?.reviewStatus ?? "DATA_PENDING",
+      reviewIssues: variant.dataIssues.map((issue) => ({
+        id: issue.id,
+        issueType: issue.issueType,
+        messageZhTw: issue.messageZhTw,
+        affectsFinalDecision: issue.affectsFinalDecision,
+        provisionalDecision: issue.provisionalDecision,
+        suggestedResearchActionZhTw: issue.suggestedResearchActionZhTw,
+        lastResearchedAt: issue.lastResearchedAt?.toISOString() ?? null,
+      })),
+      missingDataSummaryZhTw: evaluation?.missingDataSummaryZhTw ?? "尚未產生資料缺口摘要。",
       reviewed: evaluation?.reviewed ?? false,
       updatedAt: evaluation?.generatedAt.toISOString() ?? null,
       pvpSummaryZhTw: evaluation?.pvpSummaryZhTw ?? "尚未評估",
@@ -77,7 +100,7 @@ export async function getDashboardRows() {
       reasonZhTw: evaluation?.reasonZhTw ?? "規則引擎尚未產生結論。",
       evaluationId: evaluation?.id ?? null,
       rulesVersion: evaluation?.rulesVersion ?? "—",
-      reviewNotesZhTw: evaluation?.reviewNotesZhTw ?? "尚未經人工審核。",
+      reviewNotesZhTw: evaluation?.reviewNotesZhTw ?? "資料維護狀態尚未確認。",
       inheritance: {
         inheritsFromVariantId: variant.inheritsFromVariantId,
         inheritanceMode: variant.inheritanceMode,
@@ -251,7 +274,13 @@ export async function getReviewIssues() {
     where: { status: "OPEN" },
     include: {
       pokemonForm: { include: { species: true } },
-      battleVariant: true,
+      battleVariant: {
+        include: {
+          categoryEvaluations: {
+            include: { sourceReferences: { include: { source: true } } },
+          },
+        },
+      },
     },
     orderBy: [{ detectedAt: "desc" }, { issueType: "asc" }],
   });
@@ -267,6 +296,17 @@ export async function getReviewIssues() {
     messageZhTw: issue.messageZhTw,
     affectsFinalDecision: issue.affectsFinalDecision,
     suggestedActionZhTw: issue.suggestedActionZhTw,
+    suggestedResearchActionZhTw: issue.suggestedResearchActionZhTw || issue.suggestedActionZhTw,
+    provisionalDecision: issue.provisionalDecision,
+    lastResearchedAt: (issue.lastResearchedAt ?? issue.detectedAt).toISOString(),
+    relatedSources:
+      issue.battleVariant?.categoryEvaluations.flatMap((category) =>
+        category.sourceReferences.map(({ source }) => ({
+          id: source.id,
+          title: source.sourceTitleOriginal,
+          url: source.sourceUrl,
+        })),
+      ) ?? [],
     detectedAt: issue.detectedAt.toISOString(),
   }));
 }

@@ -2,8 +2,8 @@ export const zhTw = {
   decision: {
     KEEP: "建議保留",
     CONDITIONAL_KEEP: "條件式保留",
+    HOLD_FOR_NOW: "暫時保留",
     TRANSFER_CANDIDATE: "通常可傳送",
-    NEEDS_REVIEW: "需要重新確認",
   },
   confidence: { HIGH: "高", MEDIUM: "中", LOW: "低" },
   variant: {
@@ -108,6 +108,8 @@ export const zhTw = {
     DATA_UNAVAILABLE: "目前無統一資料集",
     SOURCE_MISSING: "缺少關鍵來源",
     SOURCE_CONFLICT: "同維度來源衝突",
+    POSSIBLE_SPECIES_MISMATCH: "可能物種錯置",
+    STALE: "核心資料已過期",
     UNRELEASED: "版本尚未推出",
     UNKNOWN_RELEASE_STATUS: "推出狀態不明",
   },
@@ -119,6 +121,8 @@ export const zhTw = {
     DATA_UNAVAILABLE: "資料有限",
     SOURCE_MISSING: "待補資料",
     SOURCE_CONFLICT: "來源有差異",
+    POSSIBLE_SPECIES_MISMATCH: "可能物種錯置",
+    STALE: "資料可能已過期",
     UNRELEASED: "—",
     UNKNOWN_RELEASE_STATUS: "推出狀態待確認",
   },
@@ -160,9 +164,13 @@ export const zhTw = {
     UNASSESSED_FORM: "新型態尚未評估",
     UNHANDLED_MOVE: "新招式尚未處理",
     UNKNOWN_RELEASE_STATUS: "型態推出狀態不明",
-    NEEDS_REVIEW: "需要重新確認",
-    UNREVIEWED: "未經人工確認",
+    UNREVIEWED: "未經資料維護確認",
     LOW_TRUST_SOURCE: "來源可信度偏低",
+  },
+  reviewStatus: {
+    NOT_REQUIRED: "目前無待補資料",
+    DATA_PENDING: "部分資料待補",
+    RESOLVED: "資料問題已處理",
   },
   disclaimer:
     "此結論僅針對一般戰鬥及實用價值；異色、特殊造型、活動背卡、紀念與個人收藏價值需另行判斷。",

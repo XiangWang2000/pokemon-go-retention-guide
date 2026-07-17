@@ -43,6 +43,25 @@ describe("Prisma SQLite 資料模型", () => {
     );
     expect(schema.match(/provenance\s+EvaluationProvenance/g)).toHaveLength(2);
   });
+
+  it("finalDecision 使用 HOLD_FOR_NOW 且不再包含 NEEDS_REVIEW", () => {
+    const schema = readFileSync(resolve("prisma", "schema.prisma"), "utf8");
+    const decisionEnum = schema.match(/enum RetentionDecision \{[\s\S]*?\n\}/)?.[0] ?? "";
+    expect(decisionEnum).toContain("HOLD_FOR_NOW");
+    expect(decisionEnum).not.toContain("NEEDS_REVIEW");
+    expect(schema).toMatch(/finalDecision\s+RetentionDecision\s+@map\("decision"\)/);
+    expect(schema).toMatch(/reviewStatus\s+EvaluationReviewStatus/);
+    expect(schema).toMatch(/missingDataSummaryZhTw\s+String/);
+  });
+
+  it("資料待補項目保存影響性、暫定建議與研究行動", () => {
+    const schema = readFileSync(resolve("prisma", "schema.prisma"), "utf8");
+    const issueModel = schema.match(/model DataIssue \{[\s\S]*?\n\}/)?.[0] ?? "";
+    expect(issueModel).toMatch(/affectsFinalDecision\s+Boolean/);
+    expect(issueModel).toMatch(/provisionalDecision\s+RetentionDecision/);
+    expect(issueModel).toMatch(/suggestedResearchActionZhTw\s+String/);
+    expect(issueModel).toMatch(/lastResearchedAt\s+DateTime\?/);
+  });
 });
 
 afterAll(async () => prisma.$disconnect());

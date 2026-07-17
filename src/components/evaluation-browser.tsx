@@ -240,15 +240,15 @@ export function EvaluationBrowser({
               </select>
             </label>
             <label>
-              <span className="sr-only">人工審核狀態</span>
+              <span className="sr-only">資料維護狀態</span>
               <select
                 value={reviewed}
                 onChange={(event) => setReviewed(event.target.value)}
                 className={selectClass}
               >
                 <option value="ALL">所有審核狀態</option>
-                <option value="YES">已人工確認</option>
-                <option value="NO">尚未人工確認</option>
+                <option value="YES">資料已確認</option>
+                <option value="NO">部分資料待補</option>
               </select>
             </label>
           </div>
