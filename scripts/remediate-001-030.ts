@@ -7,7 +7,7 @@ import { pvpokeSpeciesId } from "../src/data/batch-001-030";
 import { evaluateRetention, type EvaluationFacts } from "../src/rules/engine";
 import { RULES_VERSION } from "../src/rules/rules";
 
-const checkedAt = new Date("2026-07-15T02:00:00+08:00");
+const checkedAt = new Date("2026-07-16T15:00:00+08:00");
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
 });
@@ -39,6 +39,7 @@ type DataStatus =
   | "UNRELEASED"
   | "UNKNOWN_RELEASE_STATUS";
 type ReleaseStatus = "RELEASED" | "UNRELEASED" | "UNKNOWN";
+type EvaluationProvenance = "SOURCE_VERIFIED" | "MANUAL_CURATED" | "INHERITED" | "DATA_UNAVAILABLE";
 
 interface OfficialResearch {
   forms: Array<{
@@ -107,7 +108,14 @@ async function addChange(data: {
       changedAt: checkedAt,
       rulesVersion: RULES_VERSION,
     },
-    update: {},
+    update: {
+      previousValue: data.previousValue,
+      newValue: data.newValue,
+      sourceId: data.sourceId ?? null,
+      changeReasonZhTw: data.reasonZhTw,
+      changedAt: checkedAt,
+      rulesVersion: RULES_VERSION,
+    },
   });
 }
 
@@ -425,6 +433,7 @@ async function upsertCategory(data: {
   status: DataStatus;
   summaryZhTw: string;
   material: boolean;
+  provenance?: EvaluationProvenance;
   sourceIds?: string[];
   rocketRating?:
     | "HIGHLY_RECOMMENDED"
@@ -442,6 +451,13 @@ async function upsertCategory(data: {
   maxUseCaseBreadth?: string | null;
 }) {
   const id = `category-${sanitize(data.variantId)}-${data.category.toLowerCase()}`;
+  const provenance: EvaluationProvenance =
+    data.provenance ??
+    (["DATA_UNAVAILABLE", "SOURCE_MISSING", "UNKNOWN_RELEASE_STATUS"].includes(data.status)
+      ? "DATA_UNAVAILABLE"
+      : (data.sourceIds?.length ?? 0) > 0
+        ? "SOURCE_VERIFIED"
+        : "MANUAL_CURATED");
   const evaluation = await prisma.categoryEvaluation.upsert({
     where: {
       battleVariantId_category: { battleVariantId: data.variantId, category: data.category },
@@ -451,6 +467,7 @@ async function upsertCategory(data: {
       battleVariantId: data.variantId,
       category: data.category,
       status: data.status,
+      provenance,
       summaryZhTw: data.summaryZhTw,
       materialToDecision: data.material,
       rocketRating: data.rocketRating,
@@ -465,6 +482,7 @@ async function upsertCategory(data: {
     },
     update: {
       status: data.status,
+      provenance,
       summaryZhTw: data.summaryZhTw,
       materialToDecision: data.material,
       rocketRating: data.rocketRating,
@@ -587,7 +605,7 @@ async function createBaseCategoryEvaluations(
     const evolutionStatus: DataStatus = outgoing
       ? "VERIFIED"
       : variant.pokemonForm.species.dexNumber === 30
-        ? "SOURCE_MISSING"
+        ? "PARTIALLY_VERIFIED"
         : "NOT_APPLICABLE";
 
     const bestPvpRank = pvpRows
@@ -684,11 +702,12 @@ async function createBaseCategoryEvaluations(
       variantId: variant.id,
       category: "EVOLUTION_VALUE",
       status: evolutionStatus,
+      provenance: variant.pokemonForm.species.dexNumber === 30 ? "MANUAL_CURATED" : undefined,
       material: outgoing || variant.pokemonForm.species.dexNumber === 30,
       summaryZhTw: outgoing
         ? "已有結構化進化路徑；後續進化價值可阻止前階個體被直接判定為通常可傳送。"
         : variant.pokemonForm.species.dexNumber === 30
-          ? "#030 的後續進化落在本批範圍外，需人工確認 #031 的實用價值後再定案。"
+          ? "可進化成尼多后；本批保留人工整理的實用進化結論，#031 的完整原始排名與來源細節仍待後續補齊。"
           : "本批資料中沒有後續進化路徑。",
       sourceIds: officialForm?.releaseSourceIds ?? [],
     });
@@ -779,6 +798,7 @@ async function createPurifiedCategoryEvaluations() {
         variantId: variant.id,
         category,
         status,
+        provenance: hasPvpOverride ? "SOURCE_VERIFIED" : "INHERITED",
         material: base?.materialToDecision ?? false,
         summaryZhTw: hasPvpOverride
           ? "基礎評價繼承普通版，另以報恩（Return）的可重現資料建立 Purified override。"
@@ -859,12 +879,17 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
     );
     const majorPvp = bestPvpRank !== undefined && bestPvpRank <= 100;
     const conditionalPvp = bestPvpRank !== undefined && bestPvpRank > 100 && bestPvpRank <= 250;
+    const pvpQualitativelyLow =
+      byCategory.get("PVP")?.status === "UNRANKED" ||
+      (bestPvpRank !== undefined && bestPvpRank > 250);
     const importantMega =
       isMega && (pveRows.some((row) => isHighTier(row.tier)) || megaRows.length > 0);
     const typeSpecialistOnly = variant.id === "012-kanto-gigantamax";
     const importantMax =
       isMax && !typeSpecialistOnly && maxRows.some((row) => /^(S|A\+?|B)$/i.test(row.tier ?? ""));
-    const valuableEvolution = variant.pokemonForm.evolutionPathsFrom.length > 0;
+    const valuableEvolution =
+      variant.pokemonForm.evolutionPathsFrom.length > 0 ||
+      variant.pokemonForm.species.dexNumber === 30;
     const hasMaterialSource = variant.categoryEvaluations
       .filter((category) => category.materialToDecision)
       .every(
@@ -886,6 +911,12 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
           ["SOURCE_MISSING", "DATA_UNAVAILABLE", "PARTIALLY_VERIFIED"].includes(category.status),
       ),
       hasStaleNonCriticalData: false,
+      decisionProvenance: "MANUAL_CURATED",
+      hasReliableQualitativeAssessment: pvpRows.length > 0 || pveRows.length > 0,
+      hasManualCuratedConclusion: variant.releaseStatus === "RELEASED",
+      hasUnresolvedDecisionConflict: variant.categoryEvaluations.some(
+        (category) => category.materialToDecision && category.status === "SOURCE_CONFLICT",
+      ),
       hasReliableSources: hasMaterialSource,
       releaseStatusKnown: variant.releaseStatus !== "UNKNOWN",
       hasSourceConflict: variant.categoryEvaluations.some(
@@ -914,7 +945,9 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
         !importantMega &&
         !importantMax &&
         !valuableEvolution &&
-        (lowPve || byCategory.get("PVE")?.status === "NOT_APPLICABLE"),
+        (lowPve ||
+          byCategory.get("PVE")?.status === "NOT_APPLICABLE" ||
+          (pvpQualitativelyLow && byCategory.get("PVE")?.status === "SOURCE_MISSING")),
       normalHighIvOnly: false,
       purificationRisk:
         variant.variantKey === "PURIFIED" && variant.purificationRiskZhTw.includes("不可逆"),
@@ -927,6 +960,7 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
         id: evaluationId,
         battleVariantId: variant.id,
         decision: result.decision,
+        provenance: result.decision === "NEEDS_REVIEW" ? "DATA_UNAVAILABLE" : "MANUAL_CURATED",
         pvpSummaryZhTw: categorySummary(byCategory, "PVP"),
         pveSummaryZhTw: categorySummary(byCategory, "PVE"),
         rocketSummaryZhTw: categorySummary(byCategory, "ROCKET"),
@@ -959,11 +993,12 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
         reviewedAt: null,
         reviewNotesZhTw:
           result.decision === "NEEDS_REVIEW"
-            ? "只有會影響最終結論的關鍵缺口仍列為 NEEDS_REVIEW；請查看 Review Queue 的具體原因。"
-            : "已依類別資料狀態產生正式結論；次要缺口不會自動覆蓋為 NEEDS_REVIEW。",
+            ? "目前仍無法合理判斷是否值得保留；只有會阻止實用結論的缺口才使用 NEEDS_REVIEW。"
+            : "人工整理的實用結論；個別類別缺少精確排名時只降低信心並保留審核事項，不會覆蓋最終建議。",
       },
       update: {
         decision: result.decision,
+        provenance: result.decision === "NEEDS_REVIEW" ? "DATA_UNAVAILABLE" : "MANUAL_CURATED",
         pvpSummaryZhTw: categorySummary(byCategory, "PVP"),
         pveSummaryZhTw: categorySummary(byCategory, "PVE"),
         rocketSummaryZhTw: categorySummary(byCategory, "ROCKET"),
@@ -993,8 +1028,8 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
         generatedAt: checkedAt,
         reviewNotesZhTw:
           result.decision === "NEEDS_REVIEW"
-            ? "只有會影響最終結論的關鍵缺口仍列為 NEEDS_REVIEW；請查看 Review Queue 的具體原因。"
-            : "已依類別資料狀態產生正式結論；次要缺口不會自動覆蓋為 NEEDS_REVIEW。",
+            ? "目前仍無法合理判斷是否值得保留；只有會阻止實用結論的缺口才使用 NEEDS_REVIEW。"
+            : "人工整理的實用結論；個別類別缺少精確排名時只降低信心並保留審核事項，不會覆蓋最終建議。",
       },
     });
     await prisma.evaluationRuleTrace.deleteMany({ where: { evaluationId } });
@@ -1029,7 +1064,7 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
     }
     if (before.get(variant.id) !== result.decision) {
       await addChange({
-        id: `remediation-decision-${sanitize(variant.id)}`,
+        id: `remediation-decision-${sanitize(variant.id)}-${sanitize(RULES_VERSION)}`,
         entityType: "BattleVariant",
         entityId: variant.id,
         fieldName: "decision",
@@ -1037,7 +1072,7 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
         newValue: result.decision,
         sourceId: sourceIds[0] ?? null,
         reasonZhTw:
-          "改用類別獨立資料狀態與 material data gap；NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE 不再一律觸發 NEEDS_REVIEW。",
+          "NEEDS_REVIEW 僅保留給無法合理判斷是否值得保留的情況；個別類別缺口改為降低信心並保留審核事項。",
       });
     }
   }
@@ -1048,6 +1083,7 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
   const decisions = await latestDecisionMap();
   const variants = await prisma.battleVariant.findMany({ include: { categoryEvaluations: true } });
   for (const variant of variants) {
+    const needsFinalReview = decisions.get(variant.id) === "NEEDS_REVIEW";
     const issues: Array<{
       type:
         | "MATERIAL_DATA_GAP"
@@ -1075,9 +1111,11 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
     )) {
       issues.push({
         type: "MATERIAL_DATA_GAP",
-        message: `${category.category} 是本筆最終決策的關鍵類別，目前狀態為 ${category.status}。${category.summaryZhTw}`,
-        affects: true,
-        action: `補齊可重現的 ${category.category} 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。`,
+        message: `${category.category} 類別仍有資料備註，目前狀態為 ${category.status}。${category.summaryZhTw}`,
+        affects: category.status === "SOURCE_CONFLICT" || needsFinalReview,
+        action: needsFinalReview
+          ? `補齊或人工確認 ${category.category}，直到能合理判斷是否值得保留。`
+          : `保留目前實用結論，後續補齊 ${category.category} 精確資料並重新評估信心程度。`,
       });
     }
     if (invalidPvpVariants.has(variant.id)) {
@@ -1088,7 +1126,7 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
         type: "UNREPRODUCIBLE_RANK",
         message:
           "舊 PvPoke 精確名次無法由固定 commit 的完整 Open League／Overall JSON 重現，正式 rank 已清空。",
-        affects: material,
+        affects: material && needsFinalReview,
         action:
           "重新取得完整結構化榜單，核對 species、form、variant、league、cup、category 與 season。",
       });
@@ -1181,8 +1219,9 @@ async function writeMetrics(before: Map<string, string>) {
     resolvedByPurifiedInheritance: resolved.filter(
       (variant) => variant.variantKey === "PURIFIED" && variant.inheritanceMode !== "NONE",
     ).length,
-    resolvedByReleaseStatus: resolved.filter((variant) => variant.releaseStatus !== "UNKNOWN")
-      .length,
+    resolvedByPracticalDecisionBasis: resolved.filter(
+      (variant) => variant.releaseStatus === "RELEASED",
+    ).length,
     purifiedInheritedCategoryCount: variants
       .filter((variant) => variant.variantKey === "PURIFIED" && variant.inheritanceMode !== "NONE")
       .reduce(

@@ -23,7 +23,8 @@ function AuditDetails({ row }: { row: DashboardRow }) {
                 <strong>{zhTw.category[status.category]}</strong>
                 <EvaluationStatusBadge status={status.status} />
                 <span className="text-xs text-[var(--muted)]">
-                  查核 {status.checkedAt?.slice(0, 10) ?? "待確認"}
+                  {zhTw.evaluationProvenance[status.provenance]} · 查核{" "}
+                  {status.checkedAt?.slice(0, 10) ?? "待確認"}
                 </span>
               </div>
               <p className="mt-1 leading-6 text-[var(--muted)]">{status.summaryZhTw}</p>

@@ -60,6 +60,7 @@ export async function getDashboardRows() {
       releaseVerifiedAt: variant.releaseVerifiedAt?.toISOString() ?? null,
       notesZhTw: variant.notesZhTw,
       decision: evaluation?.decision ?? "NEEDS_REVIEW",
+      provenance: evaluation?.provenance ?? "DATA_UNAVAILABLE",
       confidence: evaluation?.confidence ?? "LOW",
       reviewed: evaluation?.reviewed ?? false,
       updatedAt: evaluation?.generatedAt.toISOString() ?? null,
@@ -88,6 +89,7 @@ export async function getDashboardRows() {
       categoryStatuses: variant.categoryEvaluations.map((category) => ({
         category: category.category,
         status: category.status,
+        provenance: category.provenance,
         summaryZhTw: category.summaryZhTw,
         materialToDecision: category.materialToDecision,
         rocketRating: category.rocketRating,

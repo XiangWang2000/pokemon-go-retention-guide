@@ -139,6 +139,12 @@ export const zhTw = {
     SECONDARY: "次要來源",
     COMMUNITY: "社群",
   },
+  evaluationProvenance: {
+    SOURCE_VERIFIED: "來源已核對",
+    MANUAL_CURATED: "人工整理",
+    INHERITED: "繼承基礎評估",
+    DATA_UNAVAILABLE: "無可用資料",
+  },
   issueType: {
     MATERIAL_DATA_GAP: "關鍵資料缺口",
     UNREPRODUCIBLE_RANK: "精確名次無法重現",

@@ -46,6 +46,16 @@ describe("Excel 匯出", () => {
     const overviewHeaders = workbook.worksheets[1].getRow(1).values as unknown[];
     expect(overviewHeaders).toContain("火箭隊資料狀態");
     expect(overviewHeaders).toContain("Max資料狀態");
+    expect(overviewHeaders).toContain("結論依據Enum");
+    const manualRow = workbook.worksheets[1]
+      .getColumn("variantId")
+      .values.findIndex((value) => value === "020-kanto-shadow");
+    expect(
+      workbook.worksheets[1].getCell(
+        manualRow,
+        workbook.worksheets[1].getColumn("provenance").number,
+      ).value,
+    ).toBe("MANUAL_CURATED");
 
     const reviewHeaders = workbook.worksheets[7].getRow(1).values as unknown[];
     expect(reviewHeaders).toContain("影響最終結論");

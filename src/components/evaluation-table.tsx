@@ -454,7 +454,7 @@ function ExpandedContent({ row }: { row: DashboardRow }) {
           </ul>
         ) : (
           <p className="mt-3 text-sm text-[var(--muted)]">
-            此結論尚無完整來源，狀態必須維持需要重新確認。
+            此結論尚無完整外部來源；若已有人工整理或繼承依據，仍可保留正式建議並降低信心。
           </p>
         )}
       </section>

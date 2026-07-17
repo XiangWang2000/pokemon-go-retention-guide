@@ -21,7 +21,7 @@ async function main() {
         include: { evaluationSources: true },
       }),
       prisma.sourceReference.findMany(),
-      prisma.categoryEvaluation.findMany(),
+      prisma.categoryEvaluation.findMany({ include: { sourceReferences: true } }),
       prisma.dataIssue.findMany({ where: { status: "OPEN" } }),
     ]);
   const formIds = new Set(forms.map((item) => item.id));
@@ -76,8 +76,19 @@ async function main() {
     if (categoryCounts.get(item.id) !== 7) errors.push(`${item.id} 未完整建立七個類別資料狀態。`);
   }
   for (const item of evaluations) {
-    if (item.decision !== "NEEDS_REVIEW" && item.evaluationSources.length === 0)
-      errors.push(`${item.id} 已產生正式結論但沒有來源。`);
+    if (item.provenance === "SOURCE_VERIFIED" && item.evaluationSources.length === 0)
+      errors.push(`${item.id} 標記為 SOURCE_VERIFIED 但沒有結論來源。`);
+    if (item.provenance === "MANUAL_CURATED" && !item.reasonZhTw.trim())
+      errors.push(`${item.id} 標記為 MANUAL_CURATED 但缺少人工判斷理由。`);
+  }
+  for (const item of categoryEvaluations) {
+    if (item.provenance === "SOURCE_VERIFIED" && item.sourceReferences.length === 0)
+      errors.push(`${item.id} 標記為 SOURCE_VERIFIED 但沒有類別來源。`);
+    if (item.provenance === "INHERITED") {
+      const variant = variants.find((candidate) => candidate.id === item.battleVariantId);
+      if (!variant?.inheritsFromVariantId || variant.inheritanceMode === "NONE")
+        errors.push(`${item.id} 標記為 INHERITED 但戰鬥版本沒有繼承設定。`);
+    }
   }
   if (
     issues.some(

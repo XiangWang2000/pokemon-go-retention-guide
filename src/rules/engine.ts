@@ -12,6 +12,8 @@ export type EvaluationDataStatusValue =
   | "UNRELEASED"
   | "UNKNOWN_RELEASE_STATUS";
 export type MaterialCategory = "PVP" | "PVE" | "MEGA" | "MAX_BATTLE" | "EVOLUTION_VALUE";
+export type EvaluationProvenanceValue =
+  "SOURCE_VERIFIED" | "MANUAL_CURATED" | "INHERITED" | "DATA_UNAVAILABLE";
 
 export interface EvaluationFacts {
   releaseStatus?: ReleaseStatusValue;
@@ -24,6 +26,10 @@ export interface EvaluationFacts {
   ruleCovered?: boolean;
   hasOptionalDataGap?: boolean;
   hasStaleNonCriticalData?: boolean;
+  decisionProvenance?: EvaluationProvenanceValue;
+  hasReliableQualitativeAssessment?: boolean;
+  hasManualCuratedConclusion?: boolean;
+  hasUnresolvedDecisionConflict?: boolean;
   hasReliableSources: boolean;
   releaseStatusKnown: boolean;
   hasSourceConflict: boolean;
@@ -66,30 +72,50 @@ export interface EngineResult {
   materialDataGap: boolean;
 }
 
-const blockingStatuses = new Set<EvaluationDataStatusValue>([
-  "SOURCE_MISSING",
-  "SOURCE_CONFLICT",
-  "UNKNOWN_RELEASE_STATUS",
-]);
+export function hasPracticalDecisionBasis(facts: EvaluationFacts) {
+  return Boolean(
+    facts.majorPvpValue ||
+    facts.highPveValue ||
+    facts.shadowPveAdvantage ||
+    facts.importantMega ||
+    facts.importantMaxBattle ||
+    facts.highGymValue ||
+    facts.valuableEvolution ||
+    facts.specialCupOnly ||
+    facts.requiresSpecificMove ||
+    facts.requiresSpecificIv ||
+    facts.megaCandidateOnly ||
+    facts.maxCandidateOnly ||
+    facts.limitedGymUse ||
+    facts.maxTypeSpecialistOnly ||
+    facts.speciesBattleValueLow ||
+    facts.hasReliableQualitativeAssessment ||
+    facts.hasManualCuratedConclusion,
+  );
+}
 
 export function hasMaterialDataGap(facts: EvaluationFacts) {
   if (facts.releaseStatus === "UNKNOWN") return true;
-  if (
-    facts.possibleSpeciesMismatch ||
-    facts.hasUnreproducibleCriticalRank ||
-    facts.ruleCovered === false
-  )
-    return true;
+  if (facts.possibleSpeciesMismatch || facts.ruleCovered === false) return true;
+  if (facts.hasUnresolvedDecisionConflict || facts.hasSourceConflict) return true;
+  const hasDecisionBasis = hasPracticalDecisionBasis(facts);
+  if (facts.hasUnreproducibleCriticalRank && !hasDecisionBasis) return true;
   if (facts.categoryStatuses && facts.materialCategories) {
-    return facts.materialCategories.some((category) =>
-      blockingStatuses.has(facts.categoryStatuses?.[category] ?? "SOURCE_MISSING"),
+    const statuses = facts.materialCategories.map(
+      (category) => facts.categoryStatuses?.[category] ?? "SOURCE_MISSING",
     );
+    if (statuses.some((status) => status === "UNKNOWN_RELEASE_STATUS")) return true;
+    if (statuses.some((status) => status === "SOURCE_CONFLICT")) return true;
+    if (!hasDecisionBasis) {
+      return statuses.some((status) =>
+        ["SOURCE_MISSING", "DATA_UNAVAILABLE", "PARTIALLY_VERIFIED"].includes(status),
+      );
+    }
+    return false;
   }
   return (
-    !facts.hasReliableSources ||
     !facts.releaseStatusKnown ||
-    facts.hasSourceConflict ||
-    facts.hasStaleCriticalData
+    ((!facts.hasReliableSources || facts.hasStaleCriticalData) && !hasDecisionBasis)
   );
 }
 
@@ -106,7 +132,12 @@ export function calculateConfidence(
   if (
     facts.hasOptionalDataGap ||
     facts.hasStaleNonCriticalData ||
-    statuses.some((status) => status === "PARTIALLY_VERIFIED" || status === "DATA_UNAVAILABLE")
+    facts.decisionProvenance === "MANUAL_CURATED" ||
+    facts.decisionProvenance === "INHERITED" ||
+    facts.decisionProvenance === "DATA_UNAVAILABLE" ||
+    statuses.some((status) =>
+      ["PARTIALLY_VERIFIED", "DATA_UNAVAILABLE", "SOURCE_MISSING"].includes(status),
+    )
   )
     return "MEDIUM";
   if (
@@ -137,6 +168,9 @@ function ivRecommendation(facts: EvaluationFacts, decision: RuleDecision) {
   }
   if (facts.highPveValue || facts.importantMaxBattle) {
     return "優先正確招式、攻擊 IV 與整體 IV；高 IV 只有在物種本身具有戰鬥價值時才構成保留理由。";
+  }
+  if (facts.valuableEvolution) {
+    return "只保留可進化成實用最終型態，且符合該用途 IV／招式條件的個體；本體高 IV 並非單獨保留理由。";
   }
   if (decision === "TRANSFER_CANDIDATE") {
     return "普通高 IV 不會自動改變此物種目前的低戰鬥價值；收藏價值請另行判斷。";

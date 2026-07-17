@@ -35,6 +35,14 @@ describe("Prisma SQLite 資料模型", () => {
     expect(joinModel).toMatch(/moveId\s+String/);
     expect(joinModel).toMatch(/@@unique\(\[battleVariantId,\s*moveId,\s*availabilityType\]\)/);
   });
+
+  it("評估依據可區分來源核對、人工整理、繼承與無資料", () => {
+    const schema = readFileSync(resolve("prisma", "schema.prisma"), "utf8");
+    expect(schema).toMatch(
+      /enum EvaluationProvenance \{[\s\S]*SOURCE_VERIFIED[\s\S]*MANUAL_CURATED[\s\S]*INHERITED[\s\S]*DATA_UNAVAILABLE[\s\S]*\}/,
+    );
+    expect(schema.match(/provenance\s+EvaluationProvenance/g)).toHaveLength(2);
+  });
 });
 
 afterAll(async () => prisma.$disconnect());

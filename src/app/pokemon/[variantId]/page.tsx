@@ -63,6 +63,12 @@ export default async function PokemonDetailPage({
           信心程度：{zhTw.confidence[row.confidence]} · 規則版本：{row.rulesVersion} ·{" "}
           {row.reviewed ? "已人工確認" : "尚未人工確認"}
         </p>
+        <p className="mt-2 text-sm font-bold">
+          結論依據：{zhTw.evaluationProvenance[row.provenance]}
+          {row.provenance === "MANUAL_CURATED"
+            ? "（保留人工整理的實用判斷，不代表所有類別皆有完整排名）"
+            : ""}
+        </p>
         <p className="mt-2 text-sm font-bold">推出狀態：{zhTw.releaseStatus[row.releaseStatus]}</p>
       </header>
       <section className="surface rounded-2xl p-5">
@@ -78,9 +84,14 @@ export default async function PokemonDetailPage({
                   {zhTw.evaluationDataStatus[item.status as keyof typeof zhTw.evaluationDataStatus]}
                 </span>
               </div>
+              <p className="mt-2 text-xs font-bold text-[var(--muted)]">
+                資料依據：{zhTw.evaluationProvenance[item.provenance]}
+              </p>
               <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.summaryZhTw}</p>
               <p className="mt-2 text-xs font-bold">
-                {item.materialToDecision ? "此缺口可能影響最終結論" : "不會單獨阻止正式結論"}
+                {item.materialToDecision
+                  ? "此類別納入保留判斷；資料缺口會降低信心，但不會自動覆蓋結論"
+                  : "此類別為補充資料，不會單獨阻止正式結論"}
               </p>
               {item.category === "MAX_BATTLE" && item.maxTypeTier ? (
                 <p className="mt-2 text-xs leading-5">

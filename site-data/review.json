@@ -1,6 +1,6 @@
 [
   {
-    "id": "issue-020-kanto-shadow-2026.07.15-v2-material-data-gap-0",
+    "id": "issue-020-kanto-shadow-2026.07.16-v3-material-data-gap-0",
     "dexNumber": 20,
     "nameZhTw": "拉達",
     "formNameZhTw": "關都",
@@ -8,13 +8,13 @@
     "issueType": "MATERIAL_DATA_GAP",
     "status": "OPEN",
     "batchKey": "001-030",
-    "messageZhTw": "PVE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。尚無足夠的可重現 PvE 定位資料；只有在可能改變結論時才會阻止正式決策。",
-    "affectsFinalDecision": true,
-    "suggestedActionZhTw": "補齊可重現的 PVE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "messageZhTw": "PVE 類別仍有資料備註，目前狀態為 SOURCE_MISSING。尚無足夠的可重現 PvE 定位資料；只有在可能改變結論時才會阻止正式決策。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "保留目前實用結論，後續補齊 PVE 精確資料並重新評估信心程度。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-020-alola-shadow-2026.07.15-v2-material-data-gap-0",
+    "id": "issue-020-alola-shadow-2026.07.16-v3-material-data-gap-0",
     "dexNumber": 20,
     "nameZhTw": "拉達",
     "formNameZhTw": "阿羅拉",
@@ -22,13 +22,13 @@
     "issueType": "MATERIAL_DATA_GAP",
     "status": "OPEN",
     "batchKey": "001-030",
-    "messageZhTw": "PVE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。尚無足夠的可重現 PvE 定位資料；只有在可能改變結論時才會阻止正式決策。",
-    "affectsFinalDecision": true,
-    "suggestedActionZhTw": "補齊可重現的 PVE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "messageZhTw": "PVE 類別仍有資料備註，目前狀態為 SOURCE_MISSING。尚無足夠的可重現 PvE 定位資料；只有在可能改變結論時才會阻止正式決策。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "保留目前實用結論，後續補齊 PVE 精確資料並重新評估信心程度。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-024-kanto-shadow-2026.07.15-v2-material-data-gap-0",
+    "id": "issue-024-kanto-shadow-2026.07.16-v3-material-data-gap-0",
     "dexNumber": 24,
     "nameZhTw": "阿柏怪",
     "formNameZhTw": "關都",
@@ -36,55 +36,13 @@
     "issueType": "MATERIAL_DATA_GAP",
     "status": "OPEN",
     "batchKey": "001-030",
-    "messageZhTw": "PVE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。尚無足夠的可重現 PvE 定位資料；只有在可能改變結論時才會阻止正式決策。",
-    "affectsFinalDecision": true,
-    "suggestedActionZhTw": "補齊可重現的 PVE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "messageZhTw": "PVE 類別仍有資料備註，目前狀態為 SOURCE_MISSING。尚無足夠的可重現 PvE 定位資料；只有在可能改變結論時才會阻止正式決策。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "保留目前實用結論，後續補齊 PVE 精確資料並重新評估信心程度。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-030-kanto-normal-2026.07.15-v2-material-data-gap-0",
-    "dexNumber": 30,
-    "nameZhTw": "尼多娜",
-    "formNameZhTw": "關都",
-    "variantKey": "NORMAL",
-    "issueType": "MATERIAL_DATA_GAP",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "EVOLUTION_VALUE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。#030 的後續進化落在本批範圍外，需人工確認 #031 的實用價值後再定案。",
-    "affectsFinalDecision": true,
-    "suggestedActionZhTw": "補齊可重現的 EVOLUTION_VALUE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-030-kanto-shadow-2026.07.15-v2-material-data-gap-0",
-    "dexNumber": 30,
-    "nameZhTw": "尼多娜",
-    "formNameZhTw": "關都",
-    "variantKey": "SHADOW",
-    "issueType": "MATERIAL_DATA_GAP",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "EVOLUTION_VALUE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。#030 的後續進化落在本批範圍外，需人工確認 #031 的實用價值後再定案。",
-    "affectsFinalDecision": true,
-    "suggestedActionZhTw": "補齊可重現的 EVOLUTION_VALUE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-030-kanto-purified-2026.07.15-v2-material-data-gap-0",
-    "dexNumber": 30,
-    "nameZhTw": "尼多娜",
-    "formNameZhTw": "關都",
-    "variantKey": "PURIFIED",
-    "issueType": "MATERIAL_DATA_GAP",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "EVOLUTION_VALUE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。#030 的後續進化落在本批範圍外，需人工確認 #031 的實用價值後再定案。",
-    "affectsFinalDecision": true,
-    "suggestedActionZhTw": "補齊可重現的 EVOLUTION_VALUE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-001-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-001-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 1,
     "nameZhTw": "妙蛙種子",
     "formNameZhTw": "關都",
@@ -95,10 +53,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-001-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-001-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 1,
     "nameZhTw": "妙蛙種子",
     "formNameZhTw": "關都",
@@ -109,10 +67,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-001-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-001-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 1,
     "nameZhTw": "妙蛙種子",
     "formNameZhTw": "關都",
@@ -123,10 +81,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-002-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-001-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 1,
+    "nameZhTw": "妙蛙種子",
+    "formNameZhTw": "關都",
+    "variantKey": "DYNAMAX",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-002-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 2,
     "nameZhTw": "妙蛙草",
     "formNameZhTw": "關都",
@@ -137,10 +109,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-002-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-002-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 2,
     "nameZhTw": "妙蛙草",
     "formNameZhTw": "關都",
@@ -151,10 +123,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-002-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-002-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 2,
     "nameZhTw": "妙蛙草",
     "formNameZhTw": "關都",
@@ -165,10 +137,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-003-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-002-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 2,
+    "nameZhTw": "妙蛙草",
+    "formNameZhTw": "關都",
+    "variantKey": "DYNAMAX",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-003-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 3,
     "nameZhTw": "妙蛙花",
     "formNameZhTw": "關都",
@@ -179,10 +165,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-003-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-003-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 3,
     "nameZhTw": "妙蛙花",
     "formNameZhTw": "關都",
@@ -193,10 +179,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-003-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-003-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 3,
     "nameZhTw": "妙蛙花",
     "formNameZhTw": "關都",
@@ -207,10 +193,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-003-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-003-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 3,
     "nameZhTw": "妙蛙花",
     "formNameZhTw": "關都",
@@ -221,10 +207,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-003-kanto-mega-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-003-kanto-mega-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 3,
     "nameZhTw": "妙蛙花",
     "formNameZhTw": "關都",
@@ -235,10 +221,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-003-kanto-gigantamax-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-003-kanto-gigantamax-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 3,
     "nameZhTw": "妙蛙花",
     "formNameZhTw": "關都",
@@ -249,10 +235,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-004-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-004-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 4,
     "nameZhTw": "小火龍",
     "formNameZhTw": "關都",
@@ -263,10 +249,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-005-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-004-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 4,
+    "nameZhTw": "小火龍",
+    "formNameZhTw": "關都",
+    "variantKey": "DYNAMAX",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-005-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 5,
     "nameZhTw": "火恐龍",
     "formNameZhTw": "關都",
@@ -277,10 +277,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-005-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-005-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 5,
     "nameZhTw": "火恐龍",
     "formNameZhTw": "關都",
@@ -291,10 +291,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-005-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-005-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 5,
     "nameZhTw": "火恐龍",
     "formNameZhTw": "關都",
@@ -305,10 +305,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-006-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-005-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 5,
+    "nameZhTw": "火恐龍",
+    "formNameZhTw": "關都",
+    "variantKey": "DYNAMAX",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-006-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 6,
     "nameZhTw": "噴火龍",
     "formNameZhTw": "關都",
@@ -319,10 +333,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-006-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-006-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 6,
     "nameZhTw": "噴火龍",
     "formNameZhTw": "關都",
@@ -333,10 +347,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-006-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-006-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 6,
     "nameZhTw": "噴火龍",
     "formNameZhTw": "關都",
@@ -347,10 +361,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-006-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-006-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 6,
     "nameZhTw": "噴火龍",
     "formNameZhTw": "關都",
@@ -361,10 +375,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-006-kanto-mega-x-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-006-kanto-mega-x-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 6,
     "nameZhTw": "噴火龍",
     "formNameZhTw": "關都",
@@ -375,10 +389,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-006-kanto-mega-y-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-006-kanto-mega-y-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 6,
     "nameZhTw": "噴火龍",
     "formNameZhTw": "關都",
@@ -389,10 +403,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-006-kanto-gigantamax-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-006-kanto-gigantamax-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 6,
     "nameZhTw": "噴火龍",
     "formNameZhTw": "關都",
@@ -403,10 +417,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-007-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-007-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 7,
     "nameZhTw": "傑尼龜",
     "formNameZhTw": "關都",
@@ -417,10 +431,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-008-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-007-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 7,
+    "nameZhTw": "傑尼龜",
+    "formNameZhTw": "關都",
+    "variantKey": "DYNAMAX",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-008-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 8,
     "nameZhTw": "卡咪龜",
     "formNameZhTw": "關都",
@@ -431,10 +459,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-008-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-008-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 8,
     "nameZhTw": "卡咪龜",
     "formNameZhTw": "關都",
@@ -445,10 +473,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-008-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-008-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 8,
     "nameZhTw": "卡咪龜",
     "formNameZhTw": "關都",
@@ -459,10 +487,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-009-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-008-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 8,
+    "nameZhTw": "卡咪龜",
+    "formNameZhTw": "關都",
+    "variantKey": "DYNAMAX",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-009-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 9,
     "nameZhTw": "水箭龜",
     "formNameZhTw": "關都",
@@ -473,10 +515,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-009-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-009-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 9,
     "nameZhTw": "水箭龜",
     "formNameZhTw": "關都",
@@ -487,10 +529,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-009-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-009-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 9,
     "nameZhTw": "水箭龜",
     "formNameZhTw": "關都",
@@ -501,10 +543,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-009-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-009-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 9,
     "nameZhTw": "水箭龜",
     "formNameZhTw": "關都",
@@ -515,10 +557,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-009-kanto-mega-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-009-kanto-mega-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 9,
     "nameZhTw": "水箭龜",
     "formNameZhTw": "關都",
@@ -529,10 +571,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-009-kanto-gigantamax-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-009-kanto-gigantamax-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 9,
     "nameZhTw": "水箭龜",
     "formNameZhTw": "關都",
@@ -543,10 +585,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-010-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-010-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 10,
     "nameZhTw": "綠毛蟲",
     "formNameZhTw": "關都",
@@ -557,10 +599,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-010-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-010-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 10,
     "nameZhTw": "綠毛蟲",
     "formNameZhTw": "關都",
@@ -571,10 +613,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-010-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-010-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 10,
     "nameZhTw": "綠毛蟲",
     "formNameZhTw": "關都",
@@ -585,10 +627,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-011-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-010-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 10,
+    "nameZhTw": "綠毛蟲",
+    "formNameZhTw": "關都",
+    "variantKey": "DYNAMAX",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-011-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 11,
     "nameZhTw": "鐵甲蛹",
     "formNameZhTw": "關都",
@@ -599,10 +655,38 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-012-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-011-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 11,
+    "nameZhTw": "鐵甲蛹",
+    "formNameZhTw": "關都",
+    "variantKey": "PURIFIED",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-011-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 11,
+    "nameZhTw": "鐵甲蛹",
+    "formNameZhTw": "關都",
+    "variantKey": "DYNAMAX",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-012-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 12,
     "nameZhTw": "巴大蝶",
     "formNameZhTw": "關都",
@@ -613,10 +697,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-012-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-012-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 12,
     "nameZhTw": "巴大蝶",
     "formNameZhTw": "關都",
@@ -627,10 +711,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-012-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-012-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 12,
     "nameZhTw": "巴大蝶",
     "formNameZhTw": "關都",
@@ -641,10 +725,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-012-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-012-kanto-dynamax-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 12,
     "nameZhTw": "巴大蝶",
     "formNameZhTw": "關都",
@@ -655,10 +739,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-013-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-013-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 13,
     "nameZhTw": "獨角蟲",
     "formNameZhTw": "關都",
@@ -669,10 +753,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-013-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-013-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 13,
     "nameZhTw": "獨角蟲",
     "formNameZhTw": "關都",
@@ -683,10 +767,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-013-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-013-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 13,
     "nameZhTw": "獨角蟲",
     "formNameZhTw": "關都",
@@ -697,10 +781,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-014-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-014-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 14,
     "nameZhTw": "鐵殼蛹",
     "formNameZhTw": "關都",
@@ -711,10 +795,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-014-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-014-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 14,
     "nameZhTw": "鐵殼蛹",
     "formNameZhTw": "關都",
@@ -725,10 +809,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-014-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-014-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 14,
     "nameZhTw": "鐵殼蛹",
     "formNameZhTw": "關都",
@@ -739,10 +823,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-015-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-015-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 15,
     "nameZhTw": "大針蜂",
     "formNameZhTw": "關都",
@@ -753,10 +837,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-015-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-015-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 15,
     "nameZhTw": "大針蜂",
     "formNameZhTw": "關都",
@@ -767,10 +851,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-015-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-015-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 15,
     "nameZhTw": "大針蜂",
     "formNameZhTw": "關都",
@@ -781,10 +865,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-015-kanto-mega-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-015-kanto-mega-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 15,
     "nameZhTw": "大針蜂",
     "formNameZhTw": "關都",
@@ -795,10 +879,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-016-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-016-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 16,
     "nameZhTw": "波波",
     "formNameZhTw": "關都",
@@ -809,10 +893,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-016-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-016-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 16,
     "nameZhTw": "波波",
     "formNameZhTw": "關都",
@@ -823,10 +907,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-016-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-016-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 16,
     "nameZhTw": "波波",
     "formNameZhTw": "關都",
@@ -837,10 +921,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-017-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-017-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 17,
     "nameZhTw": "比比鳥",
     "formNameZhTw": "關都",
@@ -851,10 +935,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-017-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-017-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 17,
     "nameZhTw": "比比鳥",
     "formNameZhTw": "關都",
@@ -865,10 +949,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-017-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-017-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 17,
     "nameZhTw": "比比鳥",
     "formNameZhTw": "關都",
@@ -879,10 +963,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-018-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-018-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 18,
     "nameZhTw": "大比鳥",
     "formNameZhTw": "關都",
@@ -893,10 +977,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-018-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-018-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 18,
     "nameZhTw": "大比鳥",
     "formNameZhTw": "關都",
@@ -907,10 +991,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-018-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-018-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 18,
     "nameZhTw": "大比鳥",
     "formNameZhTw": "關都",
@@ -921,10 +1005,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-018-kanto-mega-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-018-kanto-mega-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 18,
     "nameZhTw": "大比鳥",
     "formNameZhTw": "關都",
@@ -935,10 +1019,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-019-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-019-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 19,
     "nameZhTw": "小拉達",
     "formNameZhTw": "關都",
@@ -949,10 +1033,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-019-alola-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-019-alola-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 19,
     "nameZhTw": "小拉達",
     "formNameZhTw": "阿羅拉",
@@ -963,10 +1047,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-019-alola-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-019-alola-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 19,
     "nameZhTw": "小拉達",
     "formNameZhTw": "阿羅拉",
@@ -977,10 +1061,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-019-alola-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-019-alola-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 19,
     "nameZhTw": "小拉達",
     "formNameZhTw": "阿羅拉",
@@ -991,10 +1075,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-020-kanto-shadow-2026.07.15-v2-optional-data-missing-1",
+    "id": "issue-020-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 20,
+    "nameZhTw": "拉達",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-020-kanto-shadow-2026.07.16-v3-optional-data-missing-1",
     "dexNumber": 20,
     "nameZhTw": "拉達",
     "formNameZhTw": "關都",
@@ -1005,10 +1103,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-020-alola-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-020-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 20,
+    "nameZhTw": "拉達",
+    "formNameZhTw": "關都",
+    "variantKey": "PURIFIED",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-020-alola-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 20,
     "nameZhTw": "拉達",
     "formNameZhTw": "阿羅拉",
@@ -1019,10 +1131,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-020-alola-shadow-2026.07.15-v2-optional-data-missing-1",
+    "id": "issue-020-alola-shadow-2026.07.16-v3-optional-data-missing-1",
     "dexNumber": 20,
     "nameZhTw": "拉達",
     "formNameZhTw": "阿羅拉",
@@ -1033,10 +1145,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-020-alola-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-020-alola-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 20,
     "nameZhTw": "拉達",
     "formNameZhTw": "阿羅拉",
@@ -1047,10 +1159,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-021-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-021-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 21,
     "nameZhTw": "烈雀",
     "formNameZhTw": "關都",
@@ -1061,10 +1173,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-023-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-022-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 22,
+    "nameZhTw": "大嘴雀",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-023-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 23,
     "nameZhTw": "阿柏蛇",
     "formNameZhTw": "關都",
@@ -1075,10 +1201,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-024-kanto-shadow-2026.07.15-v2-optional-data-missing-1",
+    "id": "issue-024-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 24,
+    "nameZhTw": "阿柏怪",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-024-kanto-shadow-2026.07.16-v3-optional-data-missing-1",
     "dexNumber": 24,
     "nameZhTw": "阿柏怪",
     "formNameZhTw": "關都",
@@ -1089,10 +1229,24 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-025-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-024-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 24,
+    "nameZhTw": "阿柏怪",
+    "formNameZhTw": "關都",
+    "variantKey": "PURIFIED",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-025-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 25,
     "nameZhTw": "皮卡丘",
     "formNameZhTw": "關都",
@@ -1103,10 +1257,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-026-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-026-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 26,
     "nameZhTw": "雷丘",
     "formNameZhTw": "關都",
@@ -1117,10 +1271,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-026-alola-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-026-alola-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 26,
     "nameZhTw": "雷丘",
     "formNameZhTw": "阿羅拉",
@@ -1131,10 +1285,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-027-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-027-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 27,
     "nameZhTw": "穿山鼠",
     "formNameZhTw": "關都",
@@ -1145,10 +1299,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-027-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-027-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 27,
     "nameZhTw": "穿山鼠",
     "formNameZhTw": "關都",
@@ -1159,10 +1313,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-027-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-027-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 27,
     "nameZhTw": "穿山鼠",
     "formNameZhTw": "關都",
@@ -1173,10 +1327,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-027-alola-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-027-alola-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 27,
     "nameZhTw": "穿山鼠",
     "formNameZhTw": "阿羅拉",
@@ -1187,10 +1341,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-027-alola-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-027-alola-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 27,
     "nameZhTw": "穿山鼠",
     "formNameZhTw": "阿羅拉",
@@ -1201,10 +1355,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-027-alola-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-027-alola-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 27,
     "nameZhTw": "穿山鼠",
     "formNameZhTw": "阿羅拉",
@@ -1215,10 +1369,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-028-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-028-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 28,
     "nameZhTw": "穿山王",
     "formNameZhTw": "關都",
@@ -1229,10 +1383,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-028-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-028-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 28,
     "nameZhTw": "穿山王",
     "formNameZhTw": "關都",
@@ -1243,10 +1397,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-028-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-028-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 28,
     "nameZhTw": "穿山王",
     "formNameZhTw": "關都",
@@ -1257,10 +1411,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-028-alola-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-028-alola-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 28,
     "nameZhTw": "穿山王",
     "formNameZhTw": "阿羅拉",
@@ -1271,10 +1425,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-028-alola-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-028-alola-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 28,
     "nameZhTw": "穿山王",
     "formNameZhTw": "阿羅拉",
@@ -1285,10 +1439,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-028-alola-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-028-alola-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 28,
     "nameZhTw": "穿山王",
     "formNameZhTw": "阿羅拉",
@@ -1299,10 +1453,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-029-kanto-normal-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-029-kanto-normal-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 29,
     "nameZhTw": "尼多蘭",
     "formNameZhTw": "關都",
@@ -1313,10 +1467,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-029-kanto-shadow-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-029-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 29,
     "nameZhTw": "尼多蘭",
     "formNameZhTw": "關都",
@@ -1327,10 +1481,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-029-kanto-purified-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-029-kanto-purified-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 29,
     "nameZhTw": "尼多蘭",
     "formNameZhTw": "關都",
@@ -1341,52 +1495,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、PVE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-030-kanto-normal-2026.07.15-v2-optional-data-missing-1",
-    "dexNumber": 30,
-    "nameZhTw": "尼多娜",
-    "formNameZhTw": "關都",
-    "variantKey": "NORMAL",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-030-kanto-shadow-2026.07.15-v2-optional-data-missing-1",
-    "dexNumber": 30,
-    "nameZhTw": "尼多娜",
-    "formNameZhTw": "關都",
-    "variantKey": "SHADOW",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-030-kanto-purified-2026.07.15-v2-optional-data-missing-1",
-    "dexNumber": 30,
-    "nameZhTw": "尼多娜",
-    "formNameZhTw": "關都",
-    "variantKey": "PURIFIED",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-012-kanto-gigantamax-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-012-kanto-gigantamax-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 12,
     "nameZhTw": "巴大蝶",
     "formNameZhTw": "關都",
@@ -1397,10 +1509,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-025-kanto-gigantamax-2026.07.15-v2-optional-data-missing-0",
+    "id": "issue-025-kanto-gigantamax-2026.07.16-v3-optional-data-missing-0",
     "dexNumber": 25,
     "nameZhTw": "皮卡丘",
     "formNameZhTw": "關都",
@@ -1411,138 +1523,12 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-001-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 1,
-    "nameZhTw": "妙蛙種子",
-    "formNameZhTw": "關都",
-    "variantKey": "DYNAMAX",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-002-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 2,
-    "nameZhTw": "妙蛙草",
-    "formNameZhTw": "關都",
-    "variantKey": "DYNAMAX",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-004-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 4,
-    "nameZhTw": "小火龍",
-    "formNameZhTw": "關都",
-    "variantKey": "DYNAMAX",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-005-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 5,
-    "nameZhTw": "火恐龍",
-    "formNameZhTw": "關都",
-    "variantKey": "DYNAMAX",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-007-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 7,
-    "nameZhTw": "傑尼龜",
-    "formNameZhTw": "關都",
-    "variantKey": "DYNAMAX",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-008-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 8,
-    "nameZhTw": "卡咪龜",
-    "formNameZhTw": "關都",
-    "variantKey": "DYNAMAX",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-010-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 10,
-    "nameZhTw": "綠毛蟲",
-    "formNameZhTw": "關都",
-    "variantKey": "DYNAMAX",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-011-kanto-purified-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 11,
-    "nameZhTw": "鐵甲蛹",
-    "formNameZhTw": "關都",
-    "variantKey": "PURIFIED",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-011-kanto-dynamax-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 11,
-    "nameZhTw": "鐵甲蛹",
-    "formNameZhTw": "關都",
-    "variantKey": "DYNAMAX",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：MAX_BATTLE=SOURCE_MISSING、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-020-kanto-normal-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 20,
-    "nameZhTw": "拉達",
+    "id": "issue-030-kanto-normal-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 30,
+    "nameZhTw": "尼多娜",
     "formNameZhTw": "關都",
     "variantKey": "NORMAL",
     "issueType": "OPTIONAL_DATA_MISSING",
@@ -1551,12 +1537,26 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-020-kanto-purified-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 20,
-    "nameZhTw": "拉達",
+    "id": "issue-030-kanto-shadow-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 30,
+    "nameZhTw": "尼多娜",
+    "formNameZhTw": "關都",
+    "variantKey": "SHADOW",
+    "issueType": "OPTIONAL_DATA_MISSING",
+    "status": "OPEN",
+    "batchKey": "001-030",
+    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
+    "affectsFinalDecision": false,
+    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
+    "detectedAt": "2026-07-16T07:00:00.000Z"
+  },
+  {
+    "id": "issue-030-kanto-purified-2026.07.16-v3-optional-data-missing-0",
+    "dexNumber": 30,
+    "nameZhTw": "尼多娜",
     "formNameZhTw": "關都",
     "variantKey": "PURIFIED",
     "issueType": "OPTIONAL_DATA_MISSING",
@@ -1565,52 +1565,10 @@
     "messageZhTw": "非關鍵類別仍有次要缺口：GYM=DATA_UNAVAILABLE、ROCKET=DATA_UNAVAILABLE。",
     "affectsFinalDecision": false,
     "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-022-kanto-normal-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 22,
-    "nameZhTw": "大嘴雀",
-    "formNameZhTw": "關都",
-    "variantKey": "NORMAL",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、PVE=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-024-kanto-normal-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 24,
-    "nameZhTw": "阿柏怪",
-    "formNameZhTw": "關都",
-    "variantKey": "NORMAL",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-024-kanto-purified-2026.07.15-v2-optional-data-missing-0",
-    "dexNumber": 24,
-    "nameZhTw": "阿柏怪",
-    "formNameZhTw": "關都",
-    "variantKey": "PURIFIED",
-    "issueType": "OPTIONAL_DATA_MISSING",
-    "status": "OPEN",
-    "batchKey": "001-030",
-    "messageZhTw": "非關鍵類別仍有次要缺口：GYM=PARTIALLY_VERIFIED、ROCKET=DATA_UNAVAILABLE。",
-    "affectsFinalDecision": false,
-    "suggestedActionZhTw": "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
-  },
-  {
-    "id": "issue-004-kanto-shadow-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-004-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 4,
     "nameZhTw": "小火龍",
     "formNameZhTw": "關都",
@@ -1621,10 +1579,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-004-kanto-purified-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-004-kanto-purified-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 4,
     "nameZhTw": "小火龍",
     "formNameZhTw": "關都",
@@ -1635,10 +1593,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-007-kanto-shadow-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-007-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 7,
     "nameZhTw": "傑尼龜",
     "formNameZhTw": "關都",
@@ -1649,10 +1607,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-007-kanto-purified-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-007-kanto-purified-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 7,
     "nameZhTw": "傑尼龜",
     "formNameZhTw": "關都",
@@ -1663,10 +1621,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-011-kanto-normal-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-011-kanto-normal-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 11,
     "nameZhTw": "鐵甲蛹",
     "formNameZhTw": "關都",
@@ -1677,10 +1635,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-019-kanto-shadow-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-019-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 19,
     "nameZhTw": "小拉達",
     "formNameZhTw": "關都",
@@ -1691,10 +1649,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-019-kanto-purified-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-019-kanto-purified-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 19,
     "nameZhTw": "小拉達",
     "formNameZhTw": "關都",
@@ -1705,10 +1663,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-021-kanto-shadow-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-021-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 21,
     "nameZhTw": "烈雀",
     "formNameZhTw": "關都",
@@ -1719,10 +1677,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-021-kanto-purified-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-021-kanto-purified-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 21,
     "nameZhTw": "烈雀",
     "formNameZhTw": "關都",
@@ -1733,10 +1691,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-022-kanto-shadow-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-022-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 22,
     "nameZhTw": "大嘴雀",
     "formNameZhTw": "關都",
@@ -1747,10 +1705,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-022-kanto-purified-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-022-kanto-purified-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 22,
     "nameZhTw": "大嘴雀",
     "formNameZhTw": "關都",
@@ -1761,10 +1719,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-023-kanto-shadow-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-023-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 23,
     "nameZhTw": "阿柏蛇",
     "formNameZhTw": "關都",
@@ -1775,10 +1733,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-023-kanto-purified-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-023-kanto-purified-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 23,
     "nameZhTw": "阿柏蛇",
     "formNameZhTw": "關都",
@@ -1789,10 +1747,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-025-kanto-shadow-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-025-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 25,
     "nameZhTw": "皮卡丘",
     "formNameZhTw": "關都",
@@ -1803,10 +1761,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-025-kanto-purified-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-025-kanto-purified-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 25,
     "nameZhTw": "皮卡丘",
     "formNameZhTw": "關都",
@@ -1817,10 +1775,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-026-kanto-shadow-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-026-kanto-shadow-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 26,
     "nameZhTw": "雷丘",
     "formNameZhTw": "關都",
@@ -1831,10 +1789,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-026-kanto-purified-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-026-kanto-purified-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 26,
     "nameZhTw": "雷丘",
     "formNameZhTw": "關都",
@@ -1845,10 +1803,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-026-alola-shadow-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-026-alola-shadow-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 26,
     "nameZhTw": "雷丘",
     "formNameZhTw": "阿羅拉",
@@ -1859,10 +1817,10 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   },
   {
-    "id": "issue-026-alola-purified-2026.07.15-v2-unknown-release-status-0",
+    "id": "issue-026-alola-purified-2026.07.16-v3-unknown-release-status-0",
     "dexNumber": 26,
     "nameZhTw": "雷丘",
     "formNameZhTw": "阿羅拉",
@@ -1873,6 +1831,6 @@
     "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
     "affectsFinalDecision": true,
     "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
-    "detectedAt": "2026-07-14T18:00:00.000Z"
+    "detectedAt": "2026-07-16T07:00:00.000Z"
   }
 ]

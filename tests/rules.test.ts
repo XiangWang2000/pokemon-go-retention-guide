@@ -69,16 +69,38 @@ describe("類別資料狀態與最終決策分離", () => {
     expect(result.confidence).toBe("MEDIUM");
   });
 
-  it("14. 只有關鍵類別的 SOURCE_MISSING 才產生 NEEDS_REVIEW", () => {
-    expect(run({ categoryStatuses: { PVP: "VERIFIED", PVE: "SOURCE_MISSING" } }).decision).toBe(
-      "NEEDS_REVIEW",
-    );
+  it("14. 關鍵類別缺少精確資料但已有實用判斷時不產生 NEEDS_REVIEW", () => {
+    const result = run({
+      categoryStatuses: { PVP: "VERIFIED", PVE: "SOURCE_MISSING" },
+      decisionProvenance: "MANUAL_CURATED",
+    });
+    expect(result.decision).toBe("TRANSFER_CANDIDATE");
+    expect(result.confidence).toBe("MEDIUM");
     expect(
       run({
         categoryStatuses: { PVP: "VERIFIED", PVE: "VERIFIED", GYM: "SOURCE_MISSING" },
         hasOptionalDataGap: true,
       }).decision,
     ).toBe("TRANSFER_CANDIDATE");
+  });
+
+  it("15. 完全沒有可判斷依據時才產生 NEEDS_REVIEW", () => {
+    expect(
+      run({
+        categoryStatuses: { PVP: "SOURCE_MISSING", PVE: "DATA_UNAVAILABLE" },
+        hasReliableSources: false,
+        speciesBattleValueLow: false,
+      }).decision,
+    ).toBe("NEEDS_REVIEW");
+  });
+
+  it("16. 繼承普通版定性評估可產生正式結論並降低信心", () => {
+    const result = run({
+      categoryStatuses: { PVP: "PARTIALLY_VERIFIED", PVE: "DATA_UNAVAILABLE" },
+      decisionProvenance: "INHERITED",
+    });
+    expect(result.decision).toBe("TRANSFER_CANDIDATE");
+    expect(result.confidence).toBe("MEDIUM");
   });
 
   it("普通高 IV 不會覆蓋物種低戰鬥價值", () => {
@@ -96,7 +118,7 @@ describe("類別資料狀態與最終決策分離", () => {
   });
 
   it("後續進化有價值時前階不可直接傳送", () => {
-    expect(run({ valuableEvolution: true }).decision).toBe("KEEP");
+    expect(run({ valuableEvolution: true }).decision).toBe("CONDITIONAL_KEEP");
   });
 
   it("果然翁類型不套用典型低攻 IV 說法", () => {

@@ -54,10 +54,10 @@ describe("Sites 唯讀 snapshot", () => {
       battleVariants: 153,
       rawEvaluationData: 123,
       sourceReferences: 107,
-      retentionEvaluations: 306,
+      retentionEvaluations: 459,
       categoryEvaluations: 1071,
       dashboardRows: 153,
-      openReviewIssues: 134,
+      openReviewIssues: 131,
     });
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
     expect(siteSnapshotManifest.snapshotSha256).toMatch(/^[a-f0-9]{64}$/);

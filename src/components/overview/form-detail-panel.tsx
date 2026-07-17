@@ -135,8 +135,18 @@ export function FormDetailPanel({ form }: { form: FormOverview }) {
                   ))}
                 </div>
                 <p className="mt-2 text-xs text-[var(--muted)]">
-                  信心：{zhTw.confidence[variant.row.confidence]} · 更新：
+                  結論依據：{zhTw.evaluationProvenance[variant.row.provenance]} · 信心：
+                  {zhTw.confidence[variant.row.confidence]} · 更新：
                   {variant.row.updatedAt?.slice(0, 10) ?? "待確認"}
+                </p>
+                <p className="mt-2 text-xs text-[var(--muted)]">
+                  類別依據：
+                  {variant.row.categoryStatuses
+                    .map(
+                      (status) =>
+                        `${zhTw.category[status.category]}=${zhTw.evaluationProvenance[status.provenance]}`,
+                    )
+                    .join("、")}
                 </p>
                 <div className="mt-3">
                   <ReviewIssuePanel row={variant.row} />

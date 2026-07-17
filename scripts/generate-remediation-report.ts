@@ -9,7 +9,7 @@ interface Metrics {
   resolvedWithNotApplicable: number;
   decidedWithDataUnavailable: number;
   resolvedByPurifiedInheritance: number;
-  resolvedByReleaseStatus: number;
+  resolvedByPracticalDecisionBasis: number;
   purifiedInheritedCategoryCount: number;
   purifiedOverrides: number;
   remainingReview: string[];
@@ -60,19 +60,20 @@ async function main() {
     ]);
   const payload = {
     batch: "001-030",
-    updatedAt: "2026-07-15",
+    updatedAt: "2026-07-16",
     rulesVersion: RULES_VERSION,
     originalProblem:
-      "舊規則把任何類別缺資料都提升為 NEEDS_REVIEW，且推出狀態只有 nullable boolean，Purified 重複要求排名，Max 屬性排名與整體投資混在一起。",
+      "舊規則仍可能把個別類別缺資料提升為 NEEDS_REVIEW，即使已有足以作出實用保留判斷的人工整理或繼承資料。",
     schemaChanges: [
       "新增 EvaluationDataStatus 與 CategoryEvaluation／CategoryEvaluationSource。",
       "PokemonForm、BattleVariant 新增 RELEASED／UNRELEASED／UNKNOWN 三態。",
       "新增 Purified 繼承、Rocket 定性欄位、Max 拆分維度、PvP 擷取 metadata 與 Review reason。",
+      "新增 EvaluationProvenance，區分 SOURCE_VERIFIED、MANUAL_CURATED、INHERITED、DATA_UNAVAILABLE。",
     ],
     ruleEngineChanges: [
-      "只有 material category 的 SOURCE_MISSING／SOURCE_CONFLICT／UNKNOWN_RELEASE_STATUS 阻止正式決策。",
-      "NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE、PARTIALLY_VERIFIED 不會自動觸發 NEEDS_REVIEW。",
-      "confidence 與 final decision 分開計算。",
+      "NEEDS_REVIEW 只代表目前無法合理判斷是否值得保留；推出狀態不明與未解決的關鍵衝突仍會阻止正式決策。",
+      "SOURCE_MISSING、NOT_APPLICABLE、UNRANKED、DATA_UNAVAILABLE、PARTIALLY_VERIFIED 只在沒有任何實用判斷依據時觸發 NEEDS_REVIEW。",
+      "類別缺口保留為 Review issue 並降低 confidence，不會自動覆蓋 final decision。",
     ],
     rocketStrategy:
       "火箭隊改存 DATA_UNAVAILABLE／定性 rocketRating／rocketRoles；未使用 PvP 或 PvE 排名替代。",
@@ -182,7 +183,7 @@ async function main() {
     `- 含 NOT_APPLICABLE 而仍可判斷：${metrics.resolvedWithNotApplicable}`,
     `- 含 DATA_UNAVAILABLE 而仍可判斷：${metrics.decidedWithDataUnavailable}`,
     `- 因 Purified 繼承而解決：${metrics.resolvedByPurifiedInheritance}`,
-    `- 因推出狀態三態化而解決：${metrics.resolvedByReleaseStatus}`,
+    `- 因已有足夠實用判斷依據而解決：${metrics.resolvedByPracticalDecisionBasis}`,
     "",
     "## 10. 仍待人工確認項目",
     "",

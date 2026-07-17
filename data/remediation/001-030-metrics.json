@@ -1,14 +1,14 @@
 {
   "batch": "001-030",
-  "generatedAt": "2026-07-14T18:00:00.000Z",
-  "rulesVersion": "2026.07.15-v2",
-  "beforeNeedsReview": 126,
-  "afterNeedsReview": 25,
-  "resolvedNeedsReview": 101,
-  "resolvedWithNotApplicable": 76,
-  "decidedWithDataUnavailable": 76,
-  "resolvedByPurifiedInheritance": 25,
-  "resolvedByReleaseStatus": 101,
+  "generatedAt": "2026-07-16T07:00:00.000Z",
+  "rulesVersion": "2026.07.16-v3",
+  "beforeNeedsReview": 25,
+  "afterNeedsReview": 19,
+  "resolvedNeedsReview": 6,
+  "resolvedWithNotApplicable": 6,
+  "decidedWithDataUnavailable": 6,
+  "resolvedByPurifiedInheritance": 1,
+  "resolvedByPracticalDecisionBasis": 6,
   "purifiedInheritedCategoryCount": 140,
   "purifiedOverrides": 5,
   "remainingReview": [
@@ -19,24 +19,18 @@
     "011-kanto-normal",
     "019-kanto-purified",
     "019-kanto-shadow",
-    "020-alola-shadow",
-    "020-kanto-shadow",
     "021-kanto-purified",
     "021-kanto-shadow",
     "022-kanto-purified",
     "022-kanto-shadow",
     "023-kanto-purified",
     "023-kanto-shadow",
-    "024-kanto-shadow",
     "025-kanto-purified",
     "025-kanto-shadow",
     "026-alola-purified",
     "026-alola-shadow",
     "026-kanto-purified",
-    "026-kanto-shadow",
-    "030-kanto-normal",
-    "030-kanto-purified",
-    "030-kanto-shadow"
+    "026-kanto-shadow"
   ],
   "remainingMaterialIssues": [
     {
@@ -82,18 +76,6 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "battleVariantId": "020-kanto-shadow",
-      "issueType": "MATERIAL_DATA_GAP",
-      "messageZhTw": "PVE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。尚無足夠的可重現 PvE 定位資料；只有在可能改變結論時才會阻止正式決策。",
-      "suggestedActionZhTw": "補齊可重現的 PVE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。"
-    },
-    {
-      "battleVariantId": "020-alola-shadow",
-      "issueType": "MATERIAL_DATA_GAP",
-      "messageZhTw": "PVE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。尚無足夠的可重現 PvE 定位資料；只有在可能改變結論時才會阻止正式決策。",
-      "suggestedActionZhTw": "補齊可重現的 PVE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。"
-    },
-    {
       "battleVariantId": "021-kanto-shadow",
       "issueType": "UNKNOWN_RELEASE_STATUS",
       "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
@@ -130,12 +112,6 @@
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
     },
     {
-      "battleVariantId": "024-kanto-shadow",
-      "issueType": "MATERIAL_DATA_GAP",
-      "messageZhTw": "PVE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。尚無足夠的可重現 PvE 定位資料；只有在可能改變結論時才會阻止正式決策。",
-      "suggestedActionZhTw": "補齊可重現的 PVE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。"
-    },
-    {
       "battleVariantId": "025-kanto-shadow",
       "issueType": "UNKNOWN_RELEASE_STATUS",
       "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
@@ -170,24 +146,6 @@
       "issueType": "UNKNOWN_RELEASE_STATUS",
       "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
       "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "030-kanto-normal",
-      "issueType": "MATERIAL_DATA_GAP",
-      "messageZhTw": "EVOLUTION_VALUE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。#030 的後續進化落在本批範圍外，需人工確認 #031 的實用價值後再定案。",
-      "suggestedActionZhTw": "補齊可重現的 EVOLUTION_VALUE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。"
-    },
-    {
-      "battleVariantId": "030-kanto-shadow",
-      "issueType": "MATERIAL_DATA_GAP",
-      "messageZhTw": "EVOLUTION_VALUE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。#030 的後續進化落在本批範圍外，需人工確認 #031 的實用價值後再定案。",
-      "suggestedActionZhTw": "補齊可重現的 EVOLUTION_VALUE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。"
-    },
-    {
-      "battleVariantId": "030-kanto-purified",
-      "issueType": "MATERIAL_DATA_GAP",
-      "messageZhTw": "EVOLUTION_VALUE 是本筆最終決策的關鍵類別，目前狀態為 SOURCE_MISSING。基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。#030 的後續進化落在本批範圍外，需人工確認 #031 的實用價值後再定案。",
-      "suggestedActionZhTw": "補齊可重現的 EVOLUTION_VALUE 原始資料，或確認此類別不會改變保留結論後調整 materialToDecision。"
     }
   ]
 }

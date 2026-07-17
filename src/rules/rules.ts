@@ -1,6 +1,6 @@
 export type RuleDecision = "KEEP" | "CONDITIONAL_KEEP" | "TRANSFER_CANDIDATE" | "NEEDS_REVIEW";
 
-export const RULES_VERSION = "2026.07.15-v2";
+export const RULES_VERSION = "2026.07.16-v3";
 
 export interface RuleDefinition {
   ruleKey: string;
@@ -17,7 +17,7 @@ export const retentionRules: readonly RuleDefinition[] = [
     ruleKey: "MATERIAL_DATA_GAP",
     version: RULES_VERSION,
     priority: 1000,
-    condition: "推出狀態不明，或缺少會改變最終決策的關鍵資料",
+    condition: "目前沒有足夠依據合理判斷是否值得保留，或存在尚未解決的關鍵衝突",
     resultingDecision: "NEEDS_REVIEW",
     reasonTemplateZhTw: "仍有會影響保留結論的關鍵資料缺口，必須完成指定審核後再判斷。",
     enabled: true,
@@ -45,8 +45,9 @@ export const retentionRules: readonly RuleDefinition[] = [
     version: RULES_VERSION,
     priority: 850,
     condition: "後續進化具有明確主要戰鬥價值",
-    resultingDecision: "KEEP",
-    reasonTemplateZhTw: "後續進化具有明確戰鬥價值，不應直接把前階個體視為可傳送。",
+    resultingDecision: "CONDITIONAL_KEEP",
+    reasonTemplateZhTw:
+      "本體用途有限，但後續進化具有明確戰鬥價值；只需保留可進化且符合用途條件的個體。",
     enabled: true,
   },
   {

@@ -63,4 +63,38 @@ describe("#001～#030 修正後資料一致性", () => {
     expect(change?.newValue).toContain("完整榜單可重現");
     expect(change?.changeReasonZhTw).toContain("固定 commit");
   });
+
+  it("16. 類別缺資料不會覆蓋已可合理作出的人工結論", async () => {
+    const [evaluation, issue] = await Promise.all([
+      prisma.retentionEvaluation.findFirst({
+        where: { battleVariantId: "020-kanto-shadow" },
+        orderBy: { generatedAt: "desc" },
+      }),
+      prisma.dataIssue.findFirst({
+        where: {
+          battleVariantId: "020-kanto-shadow",
+          issueType: "MATERIAL_DATA_GAP",
+          status: "OPEN",
+        },
+      }),
+    ]);
+    expect(evaluation).toMatchObject({
+      decision: "TRANSFER_CANDIDATE",
+      provenance: "MANUAL_CURATED",
+      confidence: "MEDIUM",
+    });
+    expect(issue?.affectsFinalDecision).toBe(false);
+  });
+
+  it("17. Purified 類別以 INHERITED 明確標示繼承 Normal", async () => {
+    const category = await prisma.categoryEvaluation.findUnique({
+      where: {
+        battleVariantId_category: {
+          battleVariantId: "003-kanto-purified",
+          category: "PVP",
+        },
+      },
+    });
+    expect(category?.provenance).toBe("INHERITED");
+  });
 });

@@ -96,6 +96,13 @@ enum SourceType {
   COMMUNITY
 }
 
+enum EvaluationProvenance {
+  SOURCE_VERIFIED
+  MANUAL_CURATED
+  INHERITED
+  DATA_UNAVAILABLE
+}
+
 enum EvaluationCategory {
   PVP
   PVE
@@ -335,6 +342,7 @@ model CategoryEvaluation {
   battleVariantId     String
   category            EvaluationCategory
   status              EvaluationDataStatus
+  provenance          EvaluationProvenance       @default(MANUAL_CURATED)
   summaryZhTw         String
   materialToDecision  Boolean                    @default(false)
   rocketRating        RocketRating?
@@ -369,6 +377,7 @@ model RetentionEvaluation {
   id                        String                @id
   battleVariantId           String
   decision                  RetentionDecision
+  provenance                EvaluationProvenance  @default(MANUAL_CURATED)
   pvpSummaryZhTw            String
   pveSummaryZhTw            String
   rocketSummaryZhTw         String
