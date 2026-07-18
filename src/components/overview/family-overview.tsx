@@ -1,8 +1,11 @@
+import { Fragment } from "react";
 import { AlertTriangle } from "lucide-react";
 import type { FamilyOverview as FamilyOverviewModel } from "@/presentation/family-overview";
+import { CompactRating } from "./compact-rating";
 import { FamilyIdentityCell } from "./family-identity-cell";
 import { FamilyMemberPanel } from "./family-member-panel";
 import { FamilyRetentionStrategyBadge, FamilyValueBadge } from "./family-strategy-badges";
+import { VariantBadges } from "./variant-badges";
 
 const useLabels: Record<string, string> = {
   GREAT_LEAGUE: "GL",
@@ -114,78 +117,186 @@ export function FamilyOverview({
   }
 
   return (
-    <div
-      className="space-y-4"
-      data-mobile-layout="family-cards"
-      data-testid="family-overview-table"
-    >
-      {families.map((family) => {
-        const expanded = expandedFamilies.has(family.familyId);
-        const controlsId = `family-desktop-${family.familyId}`;
-        return (
-          <article key={family.familyId} className="surface overflow-hidden rounded-2xl">
-            <div className="p-4 sm:p-5">
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <FamilyIdentityCell
-                  family={family}
-                  expanded={expanded}
-                  onToggle={() => onToggleFamily(family.familyId)}
-                  controlsId={controlsId}
-                />
-                <div className="flex flex-wrap items-center justify-end gap-2">
-                  <FamilyValueBadge value={family.familyValue} />
-                  <FamilyRetentionStrategyBadge strategy={family.retentionStrategy} prominent />
+    <>
+      <div className="space-y-4 lg:hidden" data-mobile-layout="family-cards">
+        {families.map((family) => {
+          const expanded = expandedFamilies.has(family.familyId);
+          const controlsId = `family-mobile-${family.familyId}`;
+          return (
+            <article key={family.familyId} className="surface overflow-hidden rounded-2xl">
+              <div className="p-4 sm:p-5">
+                <div className="flex flex-wrap items-start justify-between gap-3">
+                  <FamilyIdentityCell
+                    family={family}
+                    expanded={expanded}
+                    onToggle={() => onToggleFamily(family.familyId)}
+                    controlsId={controlsId}
+                  />
+                  <div className="flex flex-wrap items-center justify-end gap-2">
+                    <FamilyValueBadge value={family.familyValue} />
+                    <FamilyRetentionStrategyBadge strategy={family.retentionStrategy} prominent />
+                  </div>
                 </div>
+
+                <dl className="mt-4 grid gap-3 lg:grid-cols-2">
+                  <div className="rounded-xl bg-[var(--surface-muted)] p-3">
+                    <dt className="text-xs font-black text-[var(--muted)]">主要留</dt>
+                    <dd className="mt-1 text-base font-black">{family.primaryTargetSummaryZhTw}</dd>
+                  </div>
+                  <div className="rounded-xl bg-[var(--surface-muted)] p-3">
+                    <dt className="text-xs font-black text-[var(--muted)]">用途</dt>
+                    <dd className="mt-1 text-sm font-bold leading-6">
+                      {primaryUseSummary(family)}
+                    </dd>
+                  </div>
+                  <div className="rounded-xl bg-[var(--surface-muted)] p-3 lg:col-span-2">
+                    <dt className="text-xs font-black text-[var(--muted)]">數字 IV 門檻</dt>
+                    <dd className="mt-1">
+                      <FamilyIvSummary family={family} />
+                    </dd>
+                  </div>
+                </dl>
+
+                <p className="mt-3 text-sm font-semibold leading-6">{family.actionSummaryZhTw}</p>
+                {family.hasCriticalDataIssues ? (
+                  <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-black text-amber-700 dark:text-amber-300">
+                    <AlertTriangle aria-hidden size={15} /> 關鍵資料待確認
+                  </p>
+                ) : null}
+
+                <button
+                  type="button"
+                  onClick={() => onToggleFamily(family.familyId)}
+                  aria-expanded={expanded}
+                  aria-controls={controlsId}
+                  className="mt-4 inline-flex min-h-11 items-center rounded-xl border px-4 text-sm font-black transition hover:border-[var(--primary)] hover:text-[var(--primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]"
+                >
+                  {expanded ? "收合完整用途與版本" : "查看完整用途與版本"}
+                </button>
               </div>
 
-              <dl className="mt-4 grid gap-3 lg:grid-cols-2">
-                <div className="rounded-xl bg-[var(--surface-muted)] p-3">
-                  <dt className="text-xs font-black text-[var(--muted)]">主要留</dt>
-                  <dd className="mt-1 text-base font-black">{family.primaryTargetSummaryZhTw}</dd>
+              {expanded ? (
+                <div className="border-t bg-[var(--surface-muted)]/45">
+                  <FamilyMemberPanel
+                    family={family}
+                    expandedForms={expandedForms}
+                    onToggleForm={onToggleForm}
+                    layoutPrefix="mobile"
+                  />
                 </div>
-                <div className="rounded-xl bg-[var(--surface-muted)] p-3">
-                  <dt className="text-xs font-black text-[var(--muted)]">用途</dt>
-                  <dd className="mt-1 text-sm font-bold leading-6">{primaryUseSummary(family)}</dd>
-                </div>
-                <div className="rounded-xl bg-[var(--surface-muted)] p-3 lg:col-span-2">
-                  <dt className="text-xs font-black text-[var(--muted)]">數字 IV 門檻</dt>
-                  <dd className="mt-1">
-                    <FamilyIvSummary family={family} />
-                  </dd>
-                </div>
-              </dl>
-
-              <p className="mt-3 text-sm font-semibold leading-6">{family.actionSummaryZhTw}</p>
-              {family.hasCriticalDataIssues ? (
-                <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-black text-amber-700 dark:text-amber-300">
-                  <AlertTriangle aria-hidden size={15} /> 關鍵資料待確認
-                </p>
               ) : null}
+            </article>
+          );
+        })}
+      </div>
 
-              <button
-                type="button"
-                onClick={() => onToggleFamily(family.familyId)}
-                aria-expanded={expanded}
-                aria-controls={controlsId}
-                className="mt-4 inline-flex min-h-11 items-center rounded-xl border px-4 text-sm font-black transition hover:border-[var(--primary)] hover:text-[var(--primary)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]"
-              >
-                {expanded ? "收合完整用途與版本" : "查看完整用途與版本"}
-              </button>
-            </div>
-
-            {expanded ? (
-              <div className="border-t bg-[var(--surface-muted)]/45">
-                <FamilyMemberPanel
-                  family={family}
-                  expandedForms={expandedForms}
-                  onToggleForm={onToggleForm}
-                  layoutPrefix="desktop"
-                />
-              </div>
-            ) : null}
-          </article>
-        );
-      })}
-    </div>
+      <div
+        className="surface hidden overflow-visible rounded-2xl lg:block"
+        data-testid="family-overview-table"
+      >
+        <table className="w-full table-fixed border-collapse text-left text-sm">
+          <colgroup>
+            <col className="w-[15%]" />
+            <col className="w-[12%]" />
+            <col className="w-[10%]" />
+            <col className="w-[10%]" />
+            <col className="w-[11%]" />
+            <col className="w-[8%]" />
+            <col className="w-[11%]" />
+            <col className="w-[23%]" />
+          </colgroup>
+          <thead className="sticky top-16 z-30 bg-[var(--surface-muted)] text-xs tracking-wide text-[var(--muted)]">
+            <tr>
+              {["家族", "成員", "可用版本", "PvP", "PvE", "道館", "Mega／Max", "最終建議／IV"].map(
+                (heading, index) => (
+                  <th
+                    key={heading}
+                    scope="col"
+                    className={`border-b px-3 py-3 font-black ${index === 0 ? "sticky left-0 z-40 bg-[var(--surface-muted)]" : ""}`}
+                  >
+                    {heading}
+                  </th>
+                ),
+              )}
+            </tr>
+          </thead>
+          <tbody>
+            {families.map((family) => {
+              const expanded = expandedFamilies.has(family.familyId);
+              const controlsId = `family-desktop-${family.familyId}`;
+              return (
+                <Fragment key={family.familyId}>
+                  <tr className="h-[96px] border-b align-top hover:bg-[var(--surface-muted)]/55">
+                    <th scope="row" className="sticky left-0 z-10 bg-[var(--surface)] px-3 py-2">
+                      <FamilyIdentityCell
+                        family={family}
+                        expanded={expanded}
+                        onToggle={() => onToggleFamily(family.familyId)}
+                        controlsId={controlsId}
+                      />
+                    </th>
+                    <td className="px-3 py-2">
+                      <p className="line-clamp-3 text-xs font-bold leading-5">
+                        {family.members.map((member) => member.form.nameZhTw).join("、")}
+                      </p>
+                    </td>
+                    <td className="px-3 py-2">
+                      <VariantBadges variants={family.releasedVariantKeys} />
+                    </td>
+                    <td className="px-3 py-2">
+                      <CompactRating overview={family.pvp} />
+                    </td>
+                    <td className="px-3 py-2">
+                      <CompactRating overview={family.pve} />
+                    </td>
+                    <td className="px-3 py-2">
+                      <CompactRating overview={family.gym} />
+                    </td>
+                    <td className="px-3 py-2">
+                      <CompactRating overview={family.megaMax} />
+                    </td>
+                    <td className="px-3 py-2">
+                      <div className="flex flex-wrap gap-1.5">
+                        <FamilyValueBadge value={family.familyValue} />
+                        <FamilyRetentionStrategyBadge
+                          strategy={family.retentionStrategy}
+                          prominent
+                        />
+                      </div>
+                      <p className="mt-2 text-[11px] font-black text-[var(--muted)]">
+                        主要保留：{family.primaryTargetSummaryZhTw}
+                      </p>
+                      <p className="mt-1 line-clamp-2 text-xs font-semibold leading-5">
+                        {family.actionSummaryZhTw}
+                      </p>
+                      <div className="mt-2">
+                        <FamilyIvSummary family={family} />
+                      </div>
+                      {family.hasCriticalDataIssues ? (
+                        <p className="mt-1 inline-flex items-center gap-1.5 text-[11px] font-black text-amber-700 dark:text-amber-300">
+                          <AlertTriangle aria-hidden size={13} /> 關鍵資料待確認
+                        </p>
+                      ) : null}
+                    </td>
+                  </tr>
+                  {expanded ? (
+                    <tr>
+                      <td colSpan={8} className="border-b bg-[var(--surface-muted)]/45 p-0">
+                        <FamilyMemberPanel
+                          family={family}
+                          expandedForms={expandedForms}
+                          onToggleForm={onToggleForm}
+                          layoutPrefix="desktop"
+                        />
+                      </td>
+                    </tr>
+                  ) : null}
+                </Fragment>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </>
   );
 }
