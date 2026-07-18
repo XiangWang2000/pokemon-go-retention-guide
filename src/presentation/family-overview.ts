@@ -107,7 +107,7 @@ const roleLabel: Record<MemberRoleKey, string> = {
   INDEPENDENT_PVP: "獨立PvP用途",
   INDEPENDENT_PVE: "獨立PvE用途",
   GYM_DEFENDER: "道館守軍",
-  MEGA_CANDIDATE: "Mega候選",
+  MEGA_CANDIDATE: "Mega 候選",
   MAX_CANDIDATE: "Max候選",
   COLLECTION_ONLY: "僅收藏",
   NO_DISTINCT_USE: "無獨立用途",

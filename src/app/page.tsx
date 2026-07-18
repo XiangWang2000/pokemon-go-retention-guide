@@ -46,7 +46,7 @@ export default async function HomePage() {
             及 Max 版本。不同地區的進化路線分開呈現，來源與完整論證保留在第二層。
           </p>
           <p className="mt-3 text-xs font-semibold tracking-wide text-[var(--muted)]">
-            公開資料版本：2026.07.18-r3（2026/07/18 更新）
+            公開資料版本：2026.07.18-r4（2026/07/18 更新）
           </p>
         </div>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
