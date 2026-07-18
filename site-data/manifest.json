@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "batch": "001-030",
-  "dataAsOf": "2026-07-17T04:00:00.000Z",
+  "dataAsOf": "2026-07-17T16:00:00.000Z",
   "sourceDatabase": {
     "path": "dev.db",
-    "bytes": 4456448,
-    "sha256": "edf9db3858660d03c9943e6d832054e4c8c1a1c5d4bcd076684c32763b0a63ba"
+    "bytes": 4599808,
+    "sha256": "f7a24cb13b030757db714623c5bff1c6effcb0cf42f717f47e7f052ac3bbb95a"
   },
   "rulesVersions": [
     "2026.07.17-v4"
@@ -22,20 +22,21 @@
     "retentionEvaluations": 612,
     "evaluationSources": 2212,
     "evaluationRuleTraces": 3519,
-    "changeLogs": 535,
+    "changeLogs": 688,
     "dataIssues": 1063,
     "categoryEvaluations": 1071,
     "categoryEvaluationSources": 978,
+    "ivRecommendations": 11,
     "dashboardRows": 153,
     "openReviewIssues": 131,
     "detailRecords": 153
   },
-  "snapshotSha256": "0562427469c62268ef4364bb55fd1ccfffc03fc67bd97c42fabba7bc12acde19",
+  "snapshotSha256": "27cf60e02b1b8c733bda15d845fc386bd43fc6ba46cf5efa9f15da123b0b8414",
   "files": {
     "dashboard": {
       "path": "dashboard.json",
-      "bytes": 2232840,
-      "sha256": "5b22bd3b4d87db7e88f94ca50105fe3960ed2c2fe9f12d1f74819c60780ecd51"
+      "bytes": 4467082,
+      "sha256": "ddbb96ac23d70f5530e1eeab7ef53b1616932d159e728e3020e8c4abd7352f89"
     },
     "review": {
       "path": "review.json",
@@ -49,19 +50,19 @@
     },
     "changes": {
       "path": "changes.json",
-      "bytes": 325475,
-      "sha256": "f699dcd2784fb961126004910cf801ac0afdbdb728c8457eac2e64915fdd6c63"
+      "bytes": 436588,
+      "sha256": "8f5961ae0b8e8d3a12a47ca515a6ac1ef0788d22639355c8e4715daf3c1a14c5"
     },
     "details": {
       "path": "details.json",
-      "bytes": 238365,
-      "sha256": "6b0e0aca3a4976b7020ad14b2fbd3ceaaa877f271cb97f60ae0e73cb2e38435f"
+      "bytes": 336235,
+      "sha256": "78e0256f66dcd1407589b1a84c0dbcfd88f4e2232f0eacb3227de9d95220b1db"
     }
   },
   "excel": {
     "path": "public/exports/pokemon-go-retention-001-030.xlsx",
-    "bytes": 139249,
-    "sha256": "cd9ac41f2463063152f5d5409c766203409937dc697df6b3fa464e9e0872ddaa",
+    "bytes": 147121,
+    "sha256": "66c02d3f48bc8a2f593da851dfe0a8063d71f579abffcb763286b41e9afff549",
     "sheets": 10
   }
 }

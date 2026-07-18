@@ -32,6 +32,7 @@
     "data:validate": "tsx scripts/validate-data.ts",
     "data:import": "tsx scripts/import-data.ts",
     "data:remediate": "tsx scripts/remediate-001-030.ts",
+    "data:backfill-iv": "tsx scripts/backfill-structured-iv.ts",
     "review:generate": "tsx scripts/generate-review.ts",
     "review:remediation": "tsx scripts/generate-remediation-report.ts"
   },

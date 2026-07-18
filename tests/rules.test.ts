@@ -126,6 +126,6 @@ describe("不可逆風險保留規則", () => {
         majorPvpValue: true,
         unusualPvpIvProfile: "WYNAUT_OR_WOBBUFFET",
       }).recommendedIvStrategyZhTw,
-    ).toContain("接近滿 IV");
+    ).toContain("接近100%優先");
   });
 });

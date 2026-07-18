@@ -10,38 +10,43 @@ function parseArray(value: string) {
 }
 
 export async function getDashboardRows() {
-  const variants = await prisma.battleVariant.findMany({
-    include: {
-      pokemonForm: {
-        include: {
-          species: true,
-          evolutionPathsFrom: { include: { toForm: { include: { species: true } } } },
+  const [variants, ivRecommendations] = await Promise.all([
+    prisma.battleVariant.findMany({
+      include: {
+        pokemonForm: {
+          include: {
+            species: true,
+            evolutionPathsFrom: { include: { toForm: { include: { species: true } } } },
+          },
         },
-      },
-      rawEvaluationData: { include: { source: true }, orderBy: { checkedAt: "desc" } },
-      retentionEvaluations: {
-        orderBy: { generatedAt: "desc" },
-        take: 1,
-        include: {
-          ruleTraces: { orderBy: { priority: "desc" } },
-          evaluationSources: { include: { source: true } },
+        rawEvaluationData: { include: { source: true }, orderBy: { checkedAt: "desc" } },
+        retentionEvaluations: {
+          orderBy: { generatedAt: "desc" },
+          take: 1,
+          include: {
+            ruleTraces: { orderBy: { priority: "desc" } },
+            evaluationSources: { include: { source: true } },
+          },
         },
+        variantMoves: { include: { move: true } },
+        categoryEvaluations: {
+          include: { sourceReferences: { include: { source: true } } },
+          orderBy: { category: "asc" },
+        },
+        dataIssues: { where: { status: "OPEN" }, orderBy: { detectedAt: "desc" } },
       },
-      variantMoves: { include: { move: true } },
-      categoryEvaluations: {
-        include: { sourceReferences: { include: { source: true } } },
-        orderBy: { category: "asc" },
-      },
-      dataIssues: { where: { status: "OPEN" }, orderBy: { detectedAt: "desc" } },
-    },
-    orderBy: [{ pokemonForm: { species: { dexNumber: "asc" } } }, { variantKey: "asc" }],
-  });
+      orderBy: [{ pokemonForm: { species: { dexNumber: "asc" } } }, { variantKey: "asc" }],
+    }),
+    prisma.ivRecommendation.findMany({ orderBy: [{ scopeType: "asc" }, { primaryUseKey: "asc" }] }),
+  ]);
 
   return variants.map((variant) => {
     const evaluation = variant.retentionEvaluations[0] ?? null;
     return {
       id: variant.id,
       formId: variant.pokemonForm.id,
+      speciesId: variant.pokemonForm.species.id,
+      familyKey: variant.pokemonForm.species.familyKey,
       dexNumber: variant.pokemonForm.species.dexNumber,
       nameEn: variant.pokemonForm.species.nameEn,
       nameZhTw: variant.pokemonForm.species.nameZhTw,
@@ -49,6 +54,15 @@ export async function getDashboardRows() {
       formNameEn: variant.pokemonForm.formNameEn,
       formNameZhTw: variant.pokemonForm.formNameZhTw,
       regionKey: variant.pokemonForm.regionKey,
+      evolvesFromFormId: variant.pokemonForm.evolvesFromFormId,
+      evolutionFamilyNotesZhTw: variant.pokemonForm.evolutionFamilyNotesZhTw,
+      evolutionPaths: variant.pokemonForm.evolutionPathsFrom.map((path) => ({
+        id: path.id,
+        fromFormId: path.fromFormId,
+        toFormId: path.toFormId,
+        requiresEvent: path.requiresEvent,
+        verifiedAt: path.verifiedAt?.toISOString() ?? null,
+      })),
       types: parseArray(variant.pokemonForm.types),
       aliases: parseArray(variant.pokemonForm.searchAliases),
       evolutionNames: variant.pokemonForm.evolutionPathsFrom.flatMap((path) => [
@@ -97,6 +111,25 @@ export async function getDashboardRows() {
       evolutionSummaryZhTw: evaluation?.evolutionSummaryZhTw ?? "尚未評估",
       requiredMovesSummaryZhTw: evaluation?.requiredMovesSummaryZhTw ?? "尚未評估",
       recommendedIvStrategyZhTw: evaluation?.recommendedIvStrategyZhTw ?? "尚未評估",
+      ivRecommendations: ivRecommendations
+        .filter((recommendation) => {
+          if (recommendation.scopeType === "GLOBAL") return recommendation.scopeKey === "GLOBAL";
+          if (recommendation.scopeType === "FAMILY") {
+            return recommendation.scopeKey === variant.pokemonForm.species.familyKey;
+          }
+          if (recommendation.scopeType === "MEMBER") {
+            return recommendation.scopeKey === variant.pokemonForm.species.id;
+          }
+          if (recommendation.scopeType === "POKEMON_FORM") {
+            return recommendation.scopeKey === variant.pokemonForm.id;
+          }
+          return recommendation.scopeKey === variant.id;
+        })
+        .map((recommendation) => ({
+          ...recommendation,
+          createdAt: recommendation.createdAt.toISOString(),
+          updatedAt: recommendation.updatedAt.toISOString(),
+        })),
       reasonZhTw: evaluation?.reasonZhTw ?? "規則引擎尚未產生結論。",
       evaluationId: evaluation?.id ?? null,
       rulesVersion: evaluation?.rulesVersion ?? "—",

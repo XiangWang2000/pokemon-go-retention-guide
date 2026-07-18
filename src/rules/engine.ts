@@ -198,26 +198,28 @@ function holdReasonZhTw(facts: EvaluationFacts) {
 function recommendedIvStrategy(facts: EvaluationFacts, finalDecision: RuleDecision) {
   if (finalDecision === "HOLD_FOR_NOW") return "先保留一隻代表個體；資料補齊前不要大量投入資源。";
   if (facts.unusualPvpIvProfile === "WYNAUT_OR_WOBBUFFET") {
-    return "此物種可能需要偏高甚至接近滿 IV；請依指定聯盟的實際 PvP IV Rank 為準。";
+    return "低最大CP例外：接近100%優先；仍以指定聯盟、型態與等級上限的個體PvP IV Rank為準。";
   }
   if (facts.unusualPvpIvProfile === "LEDIAN") {
-    return "不要直接套用 0/15/15；請依指定聯盟與等級上限的實際 PvP IV Rank 為準。";
+    return "不要套用固定0/15/15；指定聯盟的個體PvP IV Rank≤100或PR≥97.5%優先。";
   }
-  if (facts.shadowPveAdvantage) return "優先保留暗影高攻個體；淨化不可逆，並先處理遷怒。";
+  if (facts.shadowPveAdvantage)
+    return "暗影：攻擊13以上建議保留，15攻優先；攻擊10～12依稀有度與替代品條件式保留。";
   if (facts.importantMega || facts.megaCandidateOnly)
-    return "保留少量高 IV／15 攻個體作 Mega 候選。";
+    return "Mega：15攻／96%以上優先，15攻／91%以上可先留；通常只需一隻主要候選。";
   if (facts.importantMaxBattle || facts.maxCandidateOnly)
-    return "只保留可極巨化／超極巨化版本，優先高 IV 與高攻擊。";
+    return "只保留可極巨化／超極巨化版本；攻擊手15攻優先，坦克看防禦／HP，支援依物種門檻。";
   if (facts.majorPvpValue || facts.specialCupOnly || facts.requiresSpecificIv) {
-    return "優先保留實際 PvP IV Rank 良好的個體；物種有用途時，個體 Rank 才有意義。";
+    return "GL／UL個體PvP IV Rank≤100或PR≥97.5%優先；ML以15攻／98%以上優先。只有物種有用途時門檻才生效。";
   }
   if (facts.valuableEvolution)
-    return "依進化後用途挑選 IV；PvP 看實際 Rank，PvE／Mega 優先高攻與高 IV。";
-  if (facts.highPveValue) return "優先正確招式、攻擊 IV 與整體 IV；漂亮 IV 不會取代物種價值。";
+    return "依目標進化結果挑選：GL／UL看個體Rank≤100；PvE／Mega以15攻／96%以上優先；Max依角色分開。";
+  if (facts.highPveValue) return "PvE：15攻／96%以上優先；15攻／91%以上可留；14攻／96%以上為次選。";
   if (facts.limitedGymUse || facts.highGymValue)
-    return "保留一隻耐久較佳的道館守軍即可，不建議大量投入。";
-  if (finalDecision === "TRANSFER_CANDIDATE") return "一般高 IV 不能單獨成為保留理由。";
-  return "依實際用途保留少量個體。";
+    return "道館不設固定IV門檻；同物種比較時優先已高等級、高CP及較高防禦／HP的個體。";
+  if (finalDecision === "TRANSFER_CANDIDATE")
+    return "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。";
+  return "目前沒有會改變保留結論的通用IV門檻。";
 }
 
 function matches(ruleKey: string, facts: EvaluationFacts) {

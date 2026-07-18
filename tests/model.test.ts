@@ -62,6 +62,23 @@ describe("Prisma SQLite 資料模型", () => {
     expect(issueModel).toMatch(/suggestedResearchActionZhTw\s+String/);
     expect(issueModel).toMatch(/lastResearchedAt\s+DateTime\?/);
   });
+  it("IV 建議使用結構化策略、用途與覆寫層級", async () => {
+    const schema = readFileSync(resolve("prisma", "schema.prisma"), "utf8");
+    const ivModel = schema.match(/model IvRecommendation \{[\s\S]*?\n\}/)?.[0] ?? "";
+
+    expect(schema).toMatch(/enum IvRecommendationScope \{[\s\S]*GLOBAL[\s\S]*BATTLE_VARIANT/);
+    expect(schema).toMatch(/enum IvStrategyKey \{[\s\S]*PVE_ATTACKER[\s\S]*MAX_TANK/);
+    expect(ivModel).toMatch(/attackIvPriority\s+Int\?/);
+    expect(ivModel).toMatch(/totalIvPercentPriority\s+Float\?/);
+    expect(ivModel).toMatch(/pvpRankMax\s+Int\?/);
+    expect(ivModel).toMatch(/shortIvLabelZhTw\s+String/);
+    expect(ivModel).toMatch(/@@unique\(\[scopeType, scopeKey, primaryUseKey\]\)/);
+
+    const globalRules = await prisma.ivRecommendation.findMany({
+      where: { scopeType: "GLOBAL", scopeKey: "GLOBAL" },
+    });
+    expect(globalRules.length).toBeGreaterThanOrEqual(11);
+  });
 });
 
 afterAll(async () => prisma.$disconnect());

@@ -70,6 +70,7 @@ async function tableCounts() {
     dataIssues,
     categoryEvaluations,
     categoryEvaluationSources,
+    ivRecommendations,
   ] = await Promise.all([
     prisma.pokemonSpecies.count(),
     prisma.pokemonForm.count(),
@@ -86,6 +87,7 @@ async function tableCounts() {
     prisma.dataIssue.count(),
     prisma.categoryEvaluation.count(),
     prisma.categoryEvaluationSource.count(),
+    prisma.ivRecommendation.count(),
   ]);
   return {
     pokemonSpecies,
@@ -103,6 +105,7 @@ async function tableCounts() {
     dataIssues,
     categoryEvaluations,
     categoryEvaluationSources,
+    ivRecommendations,
   };
 }
 

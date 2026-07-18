@@ -1,6 +1,7 @@
 import type { FormOverview } from "@/presentation/form-overview";
 import { zhTw } from "@/locales/zh-TW";
 import { EvaluationStatusBadge } from "./evaluation-status-badge";
+import { IvRecommendationDetails } from "./iv-recommendation";
 import { RetentionDecisionBadge } from "./retention-decision-badge";
 import { ReviewIssuePanel } from "./review-issue-panel";
 import { SourcePopover } from "./source-popover";
@@ -12,7 +13,7 @@ function rank(variant: FormOverview["variants"][number], league: string) {
   );
 }
 
-export function FormDetailPanel({ form }: { form: FormOverview }) {
+export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId?: string }) {
   const sources = [
     ...new Map(
       form.variants.flatMap((variant) => variant.row.sources).map((source) => [source.id, source]),
@@ -21,7 +22,7 @@ export function FormDetailPanel({ form }: { form: FormOverview }) {
 
   return (
     <div
-      id={`form-detail-${form.formId}`}
+      id={panelId ?? `form-detail-${form.formId}`}
       className="space-y-4 p-4 lg:p-6"
       data-testid="form-detail-panel"
     >
@@ -31,7 +32,13 @@ export function FormDetailPanel({ form }: { form: FormOverview }) {
           <RetentionDecisionBadge decision={form.decision} prominent />
         </div>
         <p className="mt-3 font-semibold leading-6">{form.decisionReason}</p>
-        <p className="mt-2 text-sm text-[var(--muted)]">IV 方向：{form.ivDirection}</p>
+        <div className="mt-3 max-w-3xl">
+          <IvRecommendationDetails
+            recommendations={form.ivRecommendations}
+            fallbackLabel={form.ivShortLabels[0]}
+            fallbackDetail={form.ivDirection}
+          />
+        </div>
       </section>
 
       <details open className="rounded-2xl border bg-[var(--surface)] p-4">

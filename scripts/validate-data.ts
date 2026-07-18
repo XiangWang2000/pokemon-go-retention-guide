@@ -10,23 +10,35 @@ const prisma = new PrismaClient({
 
 async function main() {
   const errors: string[] = [];
-  const [species, forms, variants, raw, evaluations, sources, categoryEvaluations, issues] =
-    await Promise.all([
-      prisma.pokemonSpecies.findMany(),
-      prisma.pokemonForm.findMany(),
-      prisma.battleVariant.findMany(),
-      prisma.rawEvaluationData.findMany(),
-      prisma.retentionEvaluation.findMany({
-        where: { rulesVersion: RULES_VERSION },
-        include: { evaluationSources: true },
-      }),
-      prisma.sourceReference.findMany(),
-      prisma.categoryEvaluation.findMany({ include: { sourceReferences: true } }),
-      prisma.dataIssue.findMany({ where: { status: "OPEN" } }),
-    ]);
+  const [
+    species,
+    forms,
+    variants,
+    raw,
+    evaluations,
+    sources,
+    categoryEvaluations,
+    issues,
+    ivRecommendations,
+  ] = await Promise.all([
+    prisma.pokemonSpecies.findMany(),
+    prisma.pokemonForm.findMany(),
+    prisma.battleVariant.findMany(),
+    prisma.rawEvaluationData.findMany(),
+    prisma.retentionEvaluation.findMany({
+      where: { rulesVersion: RULES_VERSION },
+      include: { evaluationSources: true },
+    }),
+    prisma.sourceReference.findMany(),
+    prisma.categoryEvaluation.findMany({ include: { sourceReferences: true } }),
+    prisma.dataIssue.findMany({ where: { status: "OPEN" } }),
+    prisma.ivRecommendation.findMany(),
+  ]);
   const formIds = new Set(forms.map((item) => item.id));
   const variantIds = new Set(variants.map((item) => item.id));
   const sourceIds = new Set(sources.map((item) => item.id));
+  const familyKeys = new Set(species.map((item) => item.familyKey));
+  const speciesIds = new Set(species.map((item) => item.id));
 
   for (const item of species) {
     if (item.dexNumber < 1 || item.dexNumber > 9999) errors.push(`${item.id} 的圖鑑編號不合法。`);
@@ -97,6 +109,37 @@ async function main() {
     )
   )
     errors.push("GMax 巴大蝶仍被錯誤標記為同維度 SOURCE_CONFLICT。");
+
+  for (const item of ivRecommendations) {
+    const scopeExists =
+      (item.scopeType === "GLOBAL" && item.scopeKey === "GLOBAL") ||
+      (item.scopeType === "FAMILY" && familyKeys.has(item.scopeKey)) ||
+      (item.scopeType === "MEMBER" && speciesIds.has(item.scopeKey)) ||
+      (item.scopeType === "POKEMON_FORM" && formIds.has(item.scopeKey)) ||
+      (item.scopeType === "BATTLE_VARIANT" && variantIds.has(item.scopeKey));
+    if (!scopeExists) errors.push(`${item.id} 的 IV 建議引用不存在的 ${item.scopeType} 範圍。`);
+
+    for (const [field, value] of [
+      ["attackIvMin", item.attackIvMin],
+      ["attackIvPriority", item.attackIvPriority],
+      ["attackIvConditionalMin", item.attackIvConditionalMin],
+      ["defenseIvMin", item.defenseIvMin],
+      ["staminaIvMin", item.staminaIvMin],
+    ] as const) {
+      if (value !== null && (value < 0 || value > 15))
+        errors.push(`${item.id} 的 ${field} 必須介於 0～15。`);
+    }
+    for (const [field, value] of [
+      ["totalIvPercentMin", item.totalIvPercentMin],
+      ["totalIvPercentPriority", item.totalIvPercentPriority],
+      ["pvpPrMin", item.pvpPrMin],
+    ] as const) {
+      if (value !== null && (value < 0 || value > 100))
+        errors.push(`${item.id} 的 ${field} 必須介於 0～100。`);
+    }
+    if (item.speciesSpecificOverride && !item.overrideReasonZhTw?.trim())
+      errors.push(`${item.id} 是物種覆寫，但缺少 overrideReasonZhTw。`);
+  }
 
   const uniqueSources = new Set<string>();
   for (const source of sources) {

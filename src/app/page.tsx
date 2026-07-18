@@ -1,18 +1,20 @@
 import { AlertTriangle, Database, Layers3, ShieldCheck } from "lucide-react";
 import { EvaluationBrowser } from "@/components/evaluation-browser";
 import { getDashboardRows, siteSnapshotManifest } from "@/lib/data";
+import { buildFamilyOverviews } from "@/presentation/family-overview";
 import { buildFormOverviews } from "@/presentation/form-overview";
 
 export default async function HomePage() {
   const rows = await getDashboardRows();
   const forms = buildFormOverviews(rows);
+  const families = buildFamilyOverviews(forms);
   const stats = [
-    { label: "圖鑑物種", value: new Set(forms.map((form) => form.dexNumber)).size, icon: Database },
-    { label: "獨立型態", value: forms.length, icon: Layers3 },
+    { label: "進化家族", value: families.length, icon: Database },
+    { label: "家族成員型態", value: forms.length, icon: Layers3 },
     {
       label: "建議或條件保留",
-      value: forms.filter(
-        (form) => form.decision === "KEEP" || form.decision === "CONDITIONAL_KEEP",
+      value: families.filter(
+        (family) => family.decision === "KEEP" || family.decision === "CONDITIONAL_KEEP",
       ).length,
       icon: ShieldCheck,
     },
@@ -34,8 +36,8 @@ export default async function HomePage() {
             3 秒看懂：這隻寶可夢該不該留？
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--muted)] sm:text-lg">
-            先看值得保留的版本、主要用途與 IV 方向；排名、來源及完整論證收進展開內容與資料審核模式。
-            不同地區型態仍分開，所有 BattleVariant 評估也完整保留。
+            先看整個進化家族中該留哪個成員、版本與數字 IV 門檻；展開後再查看每個成員及
+            BattleVariant。不同地區進化路徑仍分開，來源與完整論證保留在第二層。
           </p>
         </div>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -51,6 +53,7 @@ export default async function HomePage() {
         </div>
       </section>
       <EvaluationBrowser
+        families={families}
         forms={forms}
         referenceDate={siteSnapshotManifest.dataAsOf ?? "2026-07-15T00:00:00+08:00"}
       />

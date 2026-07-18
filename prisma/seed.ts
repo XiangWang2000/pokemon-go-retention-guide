@@ -6,6 +6,7 @@ import {
   batchSpecies,
   evolutionPairs,
   extraForms,
+  familyKeyByDex,
   gigantamaxCandidateForms,
   megaVariants,
   pvpokeSpeciesId,
@@ -37,13 +38,6 @@ const cpLeague = [
   { cp: 2500, league: "ULTRA", sourceId: "pvpoke-ul-20260715" },
   { cp: 10000, league: "MASTER", sourceId: "pvpoke-ml-20260715" },
 ] as const;
-
-const familyRoots = [1, 4, 7, 10, 13, 16, 19, 21, 23, 25, 27, 29];
-
-function familyKeyFor(dexNumber: number) {
-  const root = [...familyRoots].reverse().find((value) => value <= dexNumber) ?? dexNumber;
-  return `KANTO_FAMILY_${String(root).padStart(3, "0")}`;
-}
 
 async function readRankings() {
   const result = new Map<string, Map<string, RankingRecord>>();
@@ -146,7 +140,7 @@ async function seedSpeciesAndForms() {
         nameEn: species.nameEn,
         nameZhTw: species.nameZhTw,
         generation: 1,
-        familyKey: familyKeyFor(species.dexNumber),
+        familyKey: familyKeyByDex[species.dexNumber],
       },
     });
     const aliases = [species.nameEn, species.nameZhTw, ...(species.aliases ?? [])];
@@ -221,14 +215,17 @@ function bestRankFor(rankings: Map<string, Map<string, RankingRecord>>, speciesI
 }
 
 function descendants(formId: string) {
-  const output: string[] = [];
-  let cursor = formId;
-  while (true) {
-    const pair = evolutionPairs.find(([from]) => from === cursor);
-    if (!pair) return output;
-    output.push(pair[1]);
-    cursor = pair[1];
+  const output = new Set<string>();
+  const queue = [formId];
+  while (queue.length) {
+    const cursor = queue.shift()!;
+    for (const [, to] of evolutionPairs.filter(([from]) => from === cursor)) {
+      if (output.has(to)) continue;
+      output.add(to);
+      queue.push(to);
+    }
   }
+  return [...output];
 }
 
 async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, RankingRecord>>) {
@@ -336,7 +333,7 @@ async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, Rank
           megaSummaryZhTw: isMega
             ? "Mega 型態已獨立建模；物種級團體戰價值尚待 Pokebattler／GO Hub 交叉確認。"
             : megaVariants[form.id]
-              ? "此型態具有 Mega 候選；只應保留少量高品質個體，價值仍待交叉確認。"
+              ? "此型態具有 Mega 候選；只應保留少量符合15攻／96%以上優先門檻的個體，價值仍待交叉確認。"
               : "目前沒有本型態的 Mega 記錄。",
           maxBattleSummaryZhTw:
             variantKey === "DYNAMAX" || variantKey === "GIGANTAMAX"

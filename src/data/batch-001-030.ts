@@ -45,6 +45,40 @@ export const batchSpecies: readonly BatchSpeciesSeed[] = [
   { dexNumber: 30, nameEn: "Nidorina", nameZhTw: "尼多娜", types: ["POISON"] },
 ] as const;
 
+// 家族鍵是研究資料的一部分，不得以圖鑑編號連續區間推算。
+export const familyKeyByDex: Readonly<Record<number, string>> = {
+  1: "KANTO_FAMILY_001",
+  2: "KANTO_FAMILY_001",
+  3: "KANTO_FAMILY_001",
+  4: "KANTO_FAMILY_004",
+  5: "KANTO_FAMILY_004",
+  6: "KANTO_FAMILY_004",
+  7: "KANTO_FAMILY_007",
+  8: "KANTO_FAMILY_007",
+  9: "KANTO_FAMILY_007",
+  10: "KANTO_FAMILY_010",
+  11: "KANTO_FAMILY_010",
+  12: "KANTO_FAMILY_010",
+  13: "KANTO_FAMILY_013",
+  14: "KANTO_FAMILY_013",
+  15: "KANTO_FAMILY_013",
+  16: "KANTO_FAMILY_016",
+  17: "KANTO_FAMILY_016",
+  18: "KANTO_FAMILY_016",
+  19: "KANTO_FAMILY_019",
+  20: "KANTO_FAMILY_019",
+  21: "KANTO_FAMILY_021",
+  22: "KANTO_FAMILY_021",
+  23: "KANTO_FAMILY_023",
+  24: "KANTO_FAMILY_023",
+  25: "KANTO_FAMILY_025",
+  26: "KANTO_FAMILY_025",
+  27: "KANTO_FAMILY_027",
+  28: "KANTO_FAMILY_027",
+  29: "KANTO_FAMILY_029",
+  30: "KANTO_FAMILY_029",
+};
+
 export interface ExtraFormSeed {
   dexNumber: number;
   suffix: string;

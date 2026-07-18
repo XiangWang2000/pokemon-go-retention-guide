@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { zhTw } from "@/locales/zh-TW";
 import type { VariantOverview } from "@/presentation/form-overview";
+import { IvRecommendationDetails } from "./iv-recommendation";
 import { RetentionDecisionBadge } from "./retention-decision-badge";
 
 export function VariantDetailCard({ variant }: { variant: VariantOverview }) {
@@ -24,7 +25,14 @@ export function VariantDetailCard({ variant }: { variant: VariantOverview }) {
         </div>
         <div>
           <dt className="font-bold text-[var(--muted)]">IV 方向</dt>
-          <dd className="mt-1">{variant.ivDirection}</dd>
+          <dd className="mt-1">
+            <IvRecommendationDetails
+              recommendations={variant.ivRecommendations}
+              fallbackLabel={variant.ivShortLabels[0]}
+              fallbackDetail={variant.ivDirection}
+              compact
+            />
+          </dd>
         </div>
         <div>
           <dt className="font-bold text-[var(--muted)]">一句理由</dt>

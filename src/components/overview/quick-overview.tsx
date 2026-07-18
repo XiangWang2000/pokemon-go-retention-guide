@@ -3,6 +3,7 @@ import { DatabaseZap } from "lucide-react";
 import type { FormOverview } from "@/presentation/form-overview";
 import { CompactRating } from "./compact-rating";
 import { FormDetailPanel } from "./form-detail-panel";
+import { IvRecommendationDetails } from "./iv-recommendation";
 import { PokemonIdentityCell } from "./pokemon-identity-cell";
 import { RetentionDecisionBadge } from "./retention-decision-badge";
 import { SummaryCell } from "./summary-cell";
@@ -39,6 +40,7 @@ export function QuickOverview({
                     form={form}
                     expanded={isExpanded}
                     onToggle={() => onToggle(form.formId)}
+                    controlsId={`form-detail-mobile-${form.formId}`}
                   />
                   <div className="flex flex-col items-end gap-2">
                     <RetentionDecisionBadge decision={form.decision} prominent />
@@ -73,10 +75,19 @@ export function QuickOverview({
                 </div>
                 <div className="mt-4 border-t pt-4">
                   <SummaryCell text={form.decisionReason} />
-                  <p className="mt-2 text-xs text-[var(--muted)]">IV：{form.ivDirection}</p>
+                  <div className="mt-2">
+                    <IvRecommendationDetails
+                      recommendations={form.ivRecommendations}
+                      fallbackLabel={form.ivShortLabels[0]}
+                      fallbackDetail={form.ivDirection}
+                      compact
+                    />
+                  </div>
                 </div>
               </div>
-              {isExpanded ? <FormDetailPanel form={form} /> : null}
+              {isExpanded ? (
+                <FormDetailPanel form={form} panelId={`form-detail-mobile-${form.formId}`} />
+              ) : null}
             </article>
           );
         })}
@@ -125,6 +136,7 @@ export function QuickOverview({
                         form={form}
                         expanded={isExpanded}
                         onToggle={() => onToggle(form.formId)}
+                        controlsId={`form-detail-desktop-${form.formId}`}
                       />
                     </th>
                     <td className="px-3 py-2">
@@ -147,12 +159,14 @@ export function QuickOverview({
                       <div className="mt-2">
                         <SummaryCell text={form.decisionReason} />
                       </div>
-                      <p
-                        className="mt-1 line-clamp-1 text-[11px] text-[var(--muted)]"
-                        title={form.ivDirection}
-                      >
-                        IV：{form.ivDirection}
-                      </p>
+                      <div className="mt-1">
+                        <IvRecommendationDetails
+                          recommendations={form.ivRecommendations}
+                          fallbackLabel={form.ivShortLabels[0]}
+                          fallbackDetail={form.ivDirection}
+                          compact
+                        />
+                      </div>
                       {form.hasDataIssues ? (
                         <p className="mt-1 inline-flex items-center gap-1 text-[11px] font-bold text-[var(--muted)]">
                           <DatabaseZap aria-hidden size={13} />
@@ -164,7 +178,10 @@ export function QuickOverview({
                   {isExpanded ? (
                     <tr>
                       <td colSpan={7} className="border-b bg-[var(--surface-muted)]/45 p-0">
-                        <FormDetailPanel form={form} />
+                        <FormDetailPanel
+                          form={form}
+                          panelId={`form-detail-desktop-${form.formId}`}
+                        />
                       </td>
                     </tr>
                   ) : null}

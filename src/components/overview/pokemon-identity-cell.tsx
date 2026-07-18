@@ -5,10 +5,12 @@ export function PokemonIdentityCell({
   form,
   expanded,
   onToggle,
+  controlsId,
 }: {
   form: FormOverview;
   expanded: boolean;
   onToggle: () => void;
+  controlsId?: string;
 }) {
   return (
     <div className="flex min-w-0 items-start gap-2">
@@ -16,9 +18,9 @@ export function PokemonIdentityCell({
         type="button"
         onClick={onToggle}
         aria-expanded={expanded}
-        aria-controls={`form-detail-${form.formId}`}
+        aria-controls={controlsId ?? `form-detail-${form.formId}`}
         aria-label={`${expanded ? "收合" : "展開"}${form.nameZhTw}詳細資料`}
-        className="mt-0.5 inline-flex size-9 shrink-0 items-center justify-center rounded-lg border bg-[var(--surface)] text-[var(--muted)] transition hover:border-[var(--primary)] hover:text-[var(--foreground)]"
+        className="inline-flex size-11 shrink-0 items-center justify-center rounded-lg border bg-[var(--surface)] text-[var(--muted)] transition hover:border-[var(--primary)] hover:text-[var(--foreground)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]"
       >
         {expanded ? <ChevronDown aria-hidden size={17} /> : <ChevronRight aria-hidden size={17} />}
       </button>

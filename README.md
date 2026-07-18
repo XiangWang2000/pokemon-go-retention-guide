@@ -1,5 +1,62 @@
 # Pokémon GO Retention Guide
 
+## 家族總覽與結構化 IV 建議（2026-07-18）
+
+首頁預設為「家族總覽」，另保留「單隻圖鑑」與「資料審核」模式。顯示分組不會改寫或合併 `PokemonForm`、`BattleVariant`、`RawEvaluationData`、`SourceReference`、`ChangeLog` 或既有評估。
+
+### 家族分組
+
+1. 先依 `PokemonSpecies.familyKey` 建立候選家族。
+2. 再把 `EvolutionPath` 視為無向連線，於同一 `familyKey` 內計算 connected components。
+3. 同一進化網路只顯示一個家族群組；所有成員與 BattleVariant 仍保留在展開層。
+4. 不同地區型態若沒有互相連接的進化路徑，會形成獨立子群組，例如關都與阿羅拉小拉達。
+5. 分支進化使用完整 `EvolutionPath` 圖，不以圖鑑編號連續性推測，且會顯示分支數與需分開保留的提示。
+
+目前 #001～#030 共整理為 15 個顯示群組。小個體與中間進化各自具有 `memberSummary`，角色可為 `EVOLUTION_MATERIAL`、`INDEPENDENT_PVP`、`INDEPENDENT_PVE`、`GYM_DEFENDER`、`MEGA_CANDIDATE`、`MAX_CANDIDATE`、`COLLECTION_ONLY` 或 `NO_DISTINCT_USE`。若小個體或中間進化有獨立用途，家族摘要會明確提醒不要把最佳個體全部進化。
+
+### IV 策略與數字門檻
+
+結構化規則保存於 `IvRecommendation`，而不是只保存中文長句。全域預設包括：
+
+- 一般 PvE：`15攻／96%以上優先`；`15攻／91%以上可留`；`14攻／96%以上次選`。
+- Mega：`15攻／96%以上優先`；`15攻／91%以上可先留`，通常只留少量候選。
+- Master League：`15攻／96%以上`；`15攻／98%以上優先`；`100%最優先`。
+- Great／Ultra League：只有物種本身有對應聯盟用途時，才套用個體 `Rank≤100` 或 `PR≥97.5%`；`Rank 101～200` 為條件式。
+- 暗影 PvE：`攻擊13以上建議保留，15優先`；低 IV 不會自動建議傳送或淨化。
+- 道館：不設固定 IV 門檻，物種、等級、CP、耐久與既有投入優先。
+- Max 攻擊手：`15攻優先`；坦克：`防禦／HP優先`；支援與彈性角色使用角色或物種規則。
+
+IV 百分比統一以 `(attackIv + defenseIv + staminaIv) / 45 × 100` 計算，畫面依 Pokémon GO 慣例顯示 45/45=100%、44/45=98%、43/45=96%、42/45=93%、41/45=91%、40/45=89%。
+
+覆寫優先序為：
+
+```text
+BattleVariant 用途覆寫
+→ PokemonForm 覆寫
+→ 家族成員（PokemonSpecies）覆寫
+→ familyKey 家族預設
+→ GLOBAL 全域預設
+```
+
+任何門檻都先檢查該用途是否成立；低戰鬥價值物種不會因為 100% IV 自動變成 `KEEP`。規則與候選判定位於 `src/iv/strategy.ts`，家族聚合位於 `src/presentation/family-overview.ts`，表單摘要位於 `src/presentation/form-overview.ts`。
+
+新增 migration：`prisma/migrations/20260718120000_family_overview_structured_iv/migration.sql`。既有最新評估可用下列指令回填成具體 IV 文字，並同步寫入 `ChangeLog`：
+
+```powershell
+npm run db:deploy
+npm run data:backfill-iv
+npm run sites:snapshot
+```
+
+### 介面結構
+
+- 桌面：固定八欄家族表格，最終建議與 IV 短標籤位於主要視野，不設定超寬最小寬度。
+- 手機：家族卡片，展開後依成員顯示卡片，不使用超寬表格。
+- 第一層：家族、成員、已推出版本、PvP、PvE、道館、Mega／Max、最終建議與 IV 短標籤。
+- 第二層：成員角色、用途、IV 完整條件與成員結論。
+- 第三層：所有 BattleVariant、GL／UL／ML、原始資料、來源、confidence、dataStatus、reviewIssues 與 Change Log。
+
+第一版仍不接受使用者個體 IV 輸入，因此不會計算使用者背包中的實際 PvP Rank；介面提供的是該用途的可執行篩選門檻。Max 角色以目前人工整理的角色與來源推導，資料待補項目仍留在資料審核層。
 Pokémon GO 通用寶可夢保留價值指南。系統以 `PokemonForm × BattleVariant` 為最小評估單位，將來源原始資料與規則引擎推導結論分開保存，回答一般個體在排除異色、特殊造型、活動背卡、紀念與個人收藏價值後，是否具有 PvP、PvE、火箭隊、道館、Mega、Max Battle 或後續進化用途。
 
 第一版只處理通用圖鑑資料，不讀取個人背包、不輸入 IV、不比較個體，也不使用付費 API 或任何會操作 Pokémon GO 的功能。

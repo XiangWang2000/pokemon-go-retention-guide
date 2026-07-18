@@ -6,11 +6,13 @@ import { freshnessDays } from "@/config/freshness";
 import type { DashboardRow } from "@/lib/data";
 import { matchesPokemonSearch } from "@/lib/search";
 import { zhTw } from "@/locales/zh-TW";
+import type { FamilyOverview } from "@/presentation/family-overview";
 import type { FormOverview } from "@/presentation/form-overview";
 import { DataAuditTable } from "./overview/data-audit-table";
+import { FamilyOverview as FamilyOverviewTable } from "./overview/family-overview";
 import { QuickOverview } from "./overview/quick-overview";
 
-type ViewMode = "QUICK" | "AUDIT";
+export type ViewMode = "FAMILY" | "POKEDEX" | "AUDIT";
 
 function matchesForm(form: FormOverview, query: string) {
   return matchesPokemonSearch(
@@ -27,11 +29,17 @@ function matchesForm(form: FormOverview, query: string) {
   );
 }
 
+export function matchesFamilySearch(family: FamilyOverview, query: string) {
+  return family.members.some((member) => matchesForm(member.form, query));
+}
+
 export function EvaluationBrowser({
+  families,
   forms,
   referenceDate,
-  initialMode = "QUICK",
+  initialMode = "FAMILY",
 }: {
+  families: FamilyOverview[];
   forms: FormOverview[];
   referenceDate: string;
   initialMode?: ViewMode;
@@ -44,11 +52,42 @@ export function EvaluationBrowser({
   const [freshness, setFreshness] = useState("ALL");
   const [reviewed, setReviewed] = useState("ALL");
   const [sort, setSort] = useState("DEX_ASC");
-  const [expanded, setExpanded] = useState<Set<string>>(new Set());
+  const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
+  const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
   const searchMatches = useMemo(
     () => forms.filter((form) => matchesForm(form, query)),
     [forms, query],
+  );
+
+  const familySearchMatches = useMemo(
+    () => families.filter((family) => matchesFamilySearch(family, query)),
+    [families, query],
+  );
+
+  const familyRows = useMemo(
+    () =>
+      familySearchMatches
+        .filter((family) => decision === "ALL" || family.decision === decision)
+        .filter(
+          (family) =>
+            variant === "ALL" ||
+            family.releasedVariantKeys.includes(variant as DashboardRow["variantKey"]),
+        )
+        .filter((family) => {
+          if (valueFilter === "PVP") return ["HIGH", "MEDIUM", "SPECIAL"].includes(family.pvp.tone);
+          if (valueFilter === "PVE") return ["HIGH", "MEDIUM"].includes(family.pve.tone);
+          if (valueFilter === "GYM") return ["HIGH", "MEDIUM", "SPECIAL"].includes(family.gym.tone);
+          if (valueFilter === "MEGA_MAX") return family.megaMax.tone !== "NONE";
+          return true;
+        })
+        .sort((a, b) => {
+          if (sort === "DEX_DESC") return b.minDexNumber - a.minDexNumber;
+          if (sort === "DECISION") return a.decision.localeCompare(b.decision);
+          if (sort === "UPDATED") return (b.updatedAt ?? "").localeCompare(a.updatedAt ?? "");
+          return a.minDexNumber - b.minDexNumber || a.familyId.localeCompare(b.familyId);
+        }),
+    [decision, familySearchMatches, sort, valueFilter, variant],
   );
 
   const quickForms = useMemo(
@@ -107,8 +146,17 @@ export function EvaluationBrowser({
       });
   }, [decision, freshness, referenceDate, reviewed, searchMatches, sort, valueFilter, variant]);
 
-  function toggle(id: string) {
-    setExpanded((current) => {
+  function toggleItem(id: string) {
+    setExpandedItems((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function toggleFamily(id: string) {
+    setExpandedFamilies((current) => {
       const next = new Set(current);
       if (next.has(id)) next.delete(id);
       else next.add(id);
@@ -124,16 +172,24 @@ export function EvaluationBrowser({
       <div className="surface rounded-2xl p-4">
         <div className="flex flex-col gap-4 xl:flex-row xl:items-center xl:justify-between">
           <div
-            className="inline-flex w-fit rounded-xl border bg-[var(--surface-muted)] p-1"
+            className="inline-flex w-fit flex-wrap rounded-xl border bg-[var(--surface-muted)] p-1"
             aria-label="顯示模式"
           >
             <button
               type="button"
-              aria-pressed={mode === "QUICK"}
-              onClick={() => setMode("QUICK")}
-              className={`min-h-11 rounded-lg px-4 text-sm font-black ${mode === "QUICK" ? "bg-[var(--surface)] text-[var(--foreground)] shadow-sm" : "text-[var(--muted)]"}`}
+              aria-pressed={mode === "FAMILY"}
+              onClick={() => setMode("FAMILY")}
+              className={`min-h-11 rounded-lg px-4 text-sm font-black ${mode === "FAMILY" ? "bg-[var(--surface)] text-[var(--foreground)] shadow-sm" : "text-[var(--muted)]"}`}
             >
-              快速總覽
+              家族總覽
+            </button>
+            <button
+              type="button"
+              aria-pressed={mode === "POKEDEX"}
+              onClick={() => setMode("POKEDEX")}
+              className={`min-h-11 rounded-lg px-4 text-sm font-black ${mode === "POKEDEX" ? "bg-[var(--surface)] text-[var(--foreground)] shadow-sm" : "text-[var(--muted)]"}`}
+            >
+              單隻圖鑑
             </button>
             <button
               type="button"
@@ -145,9 +201,11 @@ export function EvaluationBrowser({
             </button>
           </div>
           <p className="text-sm leading-6 text-[var(--muted)]">
-            {mode === "QUICK"
-              ? "預設以寶可夢型態分組，先看保留結論；展開後仍可查看每個戰鬥版本。"
-              : "逐一檢查 BattleVariant 的排名、狀態、來源與規則軌跡。"}
+            {mode === "FAMILY"
+              ? "預設依 familyKey 與 EvolutionPath 分組；先看家族結論，再展開成員與戰鬥版本。"
+              : mode === "POKEDEX"
+                ? "依圖鑑型態逐隻查看精簡結論，所有地區型態維持分開。"
+                : "逐一檢查 BattleVariant 的排名、狀態、來源與規則軌跡。"}
           </p>
         </div>
 
@@ -254,14 +312,26 @@ export function EvaluationBrowser({
           </div>
         ) : null}
 
+        <h2 id="evaluations-heading" className="sr-only">
+          寶可夢保留評估
+        </h2>
         <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t pt-3">
-          <p id="evaluations-heading" className="text-sm text-[var(--muted)]" aria-live="polite">
+          <p className="text-sm text-[var(--muted)]" aria-live="polite">
             顯示{" "}
             <strong className="text-[var(--foreground)]">
-              {mode === "QUICK" ? quickForms.length : auditRows.length}
+              {mode === "FAMILY"
+                ? familyRows.length
+                : mode === "POKEDEX"
+                  ? quickForms.length
+                  : auditRows.length}
             </strong>
-            ／{mode === "QUICK" ? forms.length : forms.flatMap((form) => form.variants).length}{" "}
-            {mode === "QUICK" ? "個寶可夢型態" : "個戰鬥版本"}
+            ／
+            {mode === "FAMILY"
+              ? families.length
+              : mode === "POKEDEX"
+                ? forms.length
+                : forms.flatMap((form) => form.variants).length}{" "}
+            {mode === "FAMILY" ? "個進化家族" : mode === "POKEDEX" ? "個寶可夢型態" : "個戰鬥版本"}
           </p>
           <a
             href="/exports/pokemon-go-retention-001-030.xlsx"
@@ -274,10 +344,18 @@ export function EvaluationBrowser({
         <p className="mt-3 text-xs leading-5 text-[var(--muted)]">{zhTw.disclaimer}</p>
       </div>
 
-      {mode === "QUICK" ? (
-        <QuickOverview forms={quickForms} expanded={expanded} onToggle={toggle} />
+      {mode === "FAMILY" ? (
+        <FamilyOverviewTable
+          families={familyRows}
+          expandedFamilies={expandedFamilies}
+          expandedForms={expandedItems}
+          onToggleFamily={toggleFamily}
+          onToggleForm={toggleItem}
+        />
+      ) : mode === "POKEDEX" ? (
+        <QuickOverview forms={quickForms} expanded={expandedItems} onToggle={toggleItem} />
       ) : (
-        <DataAuditTable rows={auditRows} expanded={expanded} onToggle={toggle} />
+        <DataAuditTable rows={auditRows} expanded={expandedItems} onToggle={toggleItem} />
       )}
     </section>
   );

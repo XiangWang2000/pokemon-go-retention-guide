@@ -56,6 +56,7 @@ describe("Sites 唯讀 snapshot", () => {
       sourceReferences: 107,
       retentionEvaluations: 612,
       categoryEvaluations: 1071,
+      ivRecommendations: 11,
       dashboardRows: 153,
       openReviewIssues: 131,
     });
@@ -84,6 +85,22 @@ describe("Sites 唯讀 snapshot", () => {
     ]);
   });
 
+  it("dashboard snapshot 保留家族、進化路徑與結構化 IV 資料", async () => {
+    const rows = await getSnapshotDashboardRows();
+    const bulbasaur = rows.find((row) => row.formId === "001-kanto");
+
+    expect(bulbasaur?.familyKey).toBe("KANTO_FAMILY_001");
+    expect(bulbasaur?.evolutionPaths).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ fromFormId: "001-kanto", toFormId: "002-kanto" }),
+      ]),
+    );
+    expect(bulbasaur?.ivRecommendations).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ scopeType: "GLOBAL", primaryUseKey: "PVE" }),
+      ]),
+    );
+  });
   it("舊 Excel API 會轉址到靜態檔案", () => {
     const response = exportRedirect(new Request("https://example.test/api/export"));
     expect(response.status).toBe(307);

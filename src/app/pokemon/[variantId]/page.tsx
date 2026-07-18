@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { StatusBadge } from "@/components/status-badge";
 import { getDashboardRows, getVariantDetailMeta } from "@/lib/data";
 import { zhTw } from "@/locales/zh-TW";
+import { buildFormOverview } from "@/presentation/form-overview";
 
 export default async function PokemonDetailPage({
   params,
@@ -15,6 +16,8 @@ export default async function PokemonDetailPage({
   const row = rows.find((item) => item.id === decodeURIComponent(variantId));
   if (!row) notFound();
   const siblings = rows.filter((item) => item.formId === row.formId);
+  const formOverview = buildFormOverview(siblings);
+  const variantOverview = formOverview.variants.find((item) => item.row.id === row.id)!;
   const detail = await getVariantDetailMeta(row.formId, row.id, row.evaluationId);
   const sections = [
     ["PvP 評估", row.pvpSummaryZhTw],
@@ -25,7 +28,7 @@ export default async function PokemonDetailPage({
     ["Max Battle", row.maxBattleSummaryZhTw],
     ["後續進化", row.evolutionSummaryZhTw],
     ["必要招式", row.requiredMovesSummaryZhTw],
-    ["推薦 IV 方向", row.recommendedIvStrategyZhTw],
+    ["推薦 IV 方向", variantOverview.ivDirection],
   ] as const;
   return (
     <div className="space-y-6">

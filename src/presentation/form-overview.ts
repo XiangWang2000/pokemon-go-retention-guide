@@ -1,4 +1,5 @@
 import type { DashboardRow } from "@/lib/data";
+import { resolveIvRecommendation, type IvRecommendation, type PrimaryUseKey } from "@/iv/strategy";
 import { zhTw } from "@/locales/zh-TW";
 
 export type OverviewTone = "HIGH" | "MEDIUM" | "LOW" | "SPECIAL" | "NONE" | "REVIEW";
@@ -12,18 +13,26 @@ export interface CompactOverview {
 export interface VariantOverview {
   row: DashboardRow;
   primaryUses: string[];
+  primaryUseKeys: PrimaryUseKey[];
+  ivRecommendations: IvRecommendation[];
+  ivShortLabels: string[];
   ivDirection: string;
   shortReason: string;
 }
 
 export interface FormOverview {
   formId: string;
+  speciesId: string;
+  familyKey: string;
   dexNumber: number;
   nameEn: string;
   nameZhTw: string;
   formNameEn: string;
   formNameZhTw: string;
   regionKey: string;
+  evolvesFromFormId: string | null;
+  evolutionFamilyNotesZhTw: string;
+  evolutionPaths: DashboardRow["evolutionPaths"];
   types: string[];
   aliases: string[];
   evolutionNames: string[];
@@ -35,6 +44,8 @@ export interface FormOverview {
   megaMax: CompactOverview;
   decision: DashboardRow["decision"];
   decisionReason: string;
+  ivRecommendations: IvRecommendation[];
+  ivShortLabels: string[];
   ivDirection: string;
   primaryUses: string[];
   hasDataIssues: boolean;
@@ -333,31 +344,85 @@ function buildVariantPrimaryUses(row: DashboardRow) {
   return [...new Set(uses)];
 }
 
-function buildIvDirection(row: DashboardRow) {
-  const hasGreatUltra = row.raw.some(
+function hasSpeciesLeagueUse(row: DashboardRow, league: string) {
+  return row.raw.some(
     (item) =>
-      item.category === "PVP" &&
-      item.rank !== null &&
-      item.rank <= 250 &&
-      ["GREAT", "ULTRA", "SPECIAL_CUP"].includes(item.league),
+      item.category === "PVP" && item.league === league && item.rank !== null && item.rank <= 250,
   );
-  const hasMaster = row.raw.some(
-    (item) =>
-      item.category === "PVP" && item.league === "MASTER" && item.rank !== null && item.rank <= 250,
-  );
+}
+
+function maxPrimaryUse(row: DashboardRow): PrimaryUseKey {
+  const text = [
+    row.maxBattleSummaryZhTw,
+    ...row.raw
+      .filter((item) => item.category === "MAX_BATTLE")
+      .flatMap((item) => [item.rating, item.tier, item.rawNotes]),
+    ...row.categoryStatuses
+      .filter((item) => item.category === "MAX_BATTLE")
+      .flatMap((item) => [item.summaryZhTw, item.maxOverallRating, item.maxTypeTier]),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toUpperCase();
+  if (/TANK|DEFEN|坦克|耐久/.test(text)) return "MAX_TANK";
+  if (/SUPPORT|支援|輔助/.test(text)) return "MAX_SUPPORT";
+  if (/ATTACK|攻擊|輸出/.test(text)) return "MAX_ATTACK";
+  return "MAX_FLEX";
+}
+
+function buildVariantIvUseKeys(row: DashboardRow): PrimaryUseKey[] {
+  const uses: PrimaryUseKey[] = [];
+  if (hasSpeciesLeagueUse(row, "GREAT")) uses.push("GREAT_LEAGUE");
+  if (hasSpeciesLeagueUse(row, "ULTRA")) uses.push("ULTRA_LEAGUE");
+  if (hasSpeciesLeagueUse(row, "MASTER")) uses.push("MASTER_LEAGUE");
+
   const pveTone = bestPveEntry([row])?.tone;
-  const pve = pveTone === "HIGH" || pveTone === "MEDIUM";
-  if (hasGreatUltra && pve) return "PvP 對戰 IV；PvE 高攻／高 IV";
-  if (hasMaster) return "接近滿 IV，優先 15 攻";
-  if (hasGreatUltra) return "依指定聯盟保留 PvP IV";
-  if (row.variantKey === "SHADOW" && pve) return "暗影高攻；淨化前先確認用途";
-  if (row.variantKey.startsWith("MEGA")) return "高 IV／15 攻，留少量候選";
-  if (["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey)) return "僅看可極巨版本，優先高 IV";
-  if (hasEvolutionValue([row])) return "依進化後用途挑選 IV";
-  if (pve) return "高攻／高 IV與正確招式";
-  return row.recommendedIvStrategyZhTw === "尚未評估"
-    ? "用途確認後再挑 IV"
-    : row.recommendedIvStrategyZhTw;
+  if (pveTone === "HIGH" || pveTone === "MEDIUM") {
+    uses.push(row.variantKey === "SHADOW" ? "SHADOW_PVE" : "PVE");
+  }
+  if (
+    row.variantKey.startsWith("MEGA") &&
+    ["HIGH", "MEDIUM", "SPECIAL"].includes(megaVariantTone(row))
+  ) {
+    uses.push("MEGA");
+  }
+  if (["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(row.gymRating)) {
+    uses.push("GYM_DEFENSE");
+  }
+  if (
+    ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey) &&
+    ["HIGH", "MEDIUM", "SPECIAL"].includes(maxVariantTone(row))
+  ) {
+    uses.push(maxPrimaryUse(row));
+  }
+  return [...new Set(uses)];
+}
+
+function buildVariantIvRecommendations(row: DashboardRow, uses: PrimaryUseKey[]) {
+  const available = row.ivRecommendations as unknown as IvRecommendation[];
+  const context = {
+    familyKey: row.familyKey,
+    speciesId: row.speciesId,
+    pokemonFormId: row.formId,
+    battleVariantId: row.id,
+  };
+  return uses
+    .map((use) => resolveIvRecommendation(available, context, use))
+    .filter((item): item is IvRecommendation => Boolean(item));
+}
+
+function buildIvDirection(row: DashboardRow, recommendations: IvRecommendation[]) {
+  if (recommendations.length) {
+    return recommendations.map((item) => item.ivRecommendationZhTw).join("；");
+  }
+  if (hasEvolutionValue([row])) {
+    return "依目標進化結果套用 GL／UL 個體Rank、PvE／Mega攻擊IV或Max角色門檻。";
+  }
+  if (row.decision === "HOLD_FOR_NOW") return "先保留一隻；關鍵用途確認前不以IV篩除。";
+  if (row.decision === "TRANSFER_CANDIDATE") {
+    return "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。";
+  }
+  return "目前沒有會改變保留結論的通用IV門檻。";
 }
 
 function directWorthRows(rows: DashboardRow[]) {
@@ -400,10 +465,10 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
       : `依已確認用途挑選個體；${heldVariants}版本關鍵資料未確認，先暫時保留。`;
   }
   if (decision === "TRANSFER_CANDIDATE") return "一般重複個體通常可傳送。";
-  if (onlyShadow) return "普通版用途有限；留暗影高攻個體。";
-  if (onlyMega) return "普通重複個體通常可傳送；留一隻高 IV／15 攻作 Mega。";
+  if (onlyShadow) return "普通版用途有限；暗影版以攻擊13以上為保留線，15攻優先。";
+  if (onlyMega) return "普通重複個體通常可傳送；留一隻15攻／96%以上個體作 Mega。";
   if (onlyMax) return "只留可極巨版本；一般舊個體不具 Max 能力。";
-  if (evolutionOnly) return "本體用途有限；保留可進化成實用型態的高品質個體。";
+  if (evolutionOnly) return "本體用途有限；依目標進化結果的數字門檻保留個體。";
   if (
     normal?.decision === "TRANSFER_CANDIDATE" &&
     direct.some((row) => row.variantKey !== "NORMAL")
@@ -415,13 +480,13 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
   }
   const hasPvp = ["HIGH", "MEDIUM", "SPECIAL"].includes(pvp.tone);
   const hasPve = ["HIGH", "MEDIUM"].includes(pve.tone);
-  if (hasPvp && hasPve) return "PvP 留對戰 IV；PvE 留高攻／高 IV。";
-  if (hasPvp) return "只保留符合主要聯盟需求的 PvP IV。";
-  if (hasPve) return "保留高攻／高 IV與正確招式個體。";
+  if (hasPvp && hasPve) return "PvP看目標聯盟個體Rank≤100；PvE以15攻／96%以上優先。";
+  if (hasPvp) return "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。";
+  if (hasPve) return "具有PvE用途時，以15攻／96%以上及正確招式優先。";
   if (assessed.some((row) => ["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(row.gymRating))) {
     return "僅需保留一隻作道館守軍。";
   }
-  return "依值得保留的戰鬥版本與 IV 方向留少量個體。";
+  return "依各戰鬥版本的數字IV門檻留少量個體。";
 }
 
 function buildVariantShortReason(row: DashboardRow, uses: string[]) {
@@ -429,7 +494,8 @@ function buildVariantShortReason(row: DashboardRow, uses: string[]) {
   if (row.decision === "TRANSFER_CANDIDATE") return "目前沒有足以支持囤積的主要戰鬥用途。";
   if (uses.includes("後續進化") && uses.length === 1) return "主要價值來自後續進化，不是本體戰力。";
   if (row.variantKey === "SHADOW") return "暗影版需獨立判斷，淨化前先確認用途。";
-  if (row.variantKey.startsWith("MEGA")) return "作為 Mega 候選，通常只需保留少量高品質個體。";
+  if (row.variantKey.startsWith("MEGA"))
+    return "作為 Mega 候選，通常只需保留一隻15攻／96%以上個體。";
   if (["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey)) {
     return "只有具 Max 能力的個體適用，一般舊個體不能替代。";
   }
@@ -446,21 +512,42 @@ export function buildFormOverview(rows: DashboardRow[]): FormOverview {
   const decision = buildFormDecision(sorted);
   const variants = sorted.map((row) => {
     const primaryUses = buildVariantPrimaryUses(row);
+    const primaryUseKeys = buildVariantIvUseKeys(row);
+    const ivRecommendations = buildVariantIvRecommendations(row, primaryUseKeys);
     return {
       row,
       primaryUses,
-      ivDirection: buildIvDirection(row),
+      primaryUseKeys,
+      ivRecommendations,
+      ivShortLabels: ivRecommendations.map((item) => item.shortIvLabelZhTw),
+      ivDirection: buildIvDirection(row, ivRecommendations),
       shortReason: buildVariantShortReason(row, primaryUses),
     };
   });
+  const ivRecommendations = [
+    ...new Map(
+      variants
+        .flatMap((variant) => variant.ivRecommendations)
+        .map((item) => [`${item.primaryUseKey}:${item.ivStrategyKey}`, item]),
+    ).values(),
+  ];
   return {
     formId: base.formId,
+    speciesId: base.speciesId,
+    familyKey: base.familyKey,
     dexNumber: base.dexNumber,
     nameEn: base.nameEn,
     nameZhTw: base.nameZhTw,
     formNameEn: base.formNameEn,
     formNameZhTw: base.formNameZhTw,
     regionKey: base.regionKey,
+    evolvesFromFormId: base.evolvesFromFormId,
+    evolutionFamilyNotesZhTw: base.evolutionFamilyNotesZhTw,
+    evolutionPaths: [
+      ...new Map(
+        sorted.flatMap((row) => row.evolutionPaths).map((path) => [path.id, path]),
+      ).values(),
+    ],
     types: base.types,
     aliases: [...new Set(sorted.flatMap((row) => row.aliases))],
     evolutionNames: [...new Set(sorted.flatMap((row) => row.evolutionNames))],
@@ -474,10 +561,13 @@ export function buildFormOverview(rows: DashboardRow[]): FormOverview {
     megaMax: buildMegaMaxOverview(sorted),
     decision,
     decisionReason: buildRetentionReason(sorted, decision),
+    ivRecommendations,
+    ivShortLabels: ivRecommendations.map((item) => item.shortIvLabelZhTw),
     ivDirection:
-      variants.find((variant) => directWorthRows([variant.row]).length > 0)?.ivDirection ??
-      variants.find((variant) => isWorthKeeping(variant.row))?.ivDirection ??
-      "用途確認後再挑 IV",
+      ivRecommendations.length > 0
+        ? ivRecommendations.map((item) => item.ivRecommendationZhTw).join("；")
+        : (variants.find((variant) => isWorthKeeping(variant.row))?.ivDirection ??
+          "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。"),
     primaryUses: [...new Set(variants.flatMap((variant) => variant.primaryUses))],
     hasDataIssues: sorted.some((row) => (row.reviewIssues?.length ?? 0) > 0),
     reviewed: assessed.every((row) => row.reviewed),

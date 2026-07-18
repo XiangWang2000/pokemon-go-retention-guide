@@ -150,6 +150,54 @@ enum GymRating {
   NOT_APPLICABLE
 }
 
+enum IvRecommendationScope {
+  GLOBAL
+  FAMILY
+  MEMBER
+  POKEMON_FORM
+  BATTLE_VARIANT
+}
+
+enum IvStrategyKey {
+  PVE_ATTACKER
+  MEGA_ATTACKER
+  MASTER_LEAGUE
+  GREAT_LEAGUE_RANK
+  ULTRA_LEAGUE_RANK
+  SHADOW_PVE
+  GYM_DEFENDER
+  MAX_ATTACKER
+  MAX_TANK
+  MAX_SUPPORT
+  MAX_FLEX
+  HIGH_GENERAL_IV
+  HUNDO_PREFERRED
+  CUSTOM
+}
+
+enum PrimaryUseKey {
+  PVE
+  MEGA
+  MASTER_LEAGUE
+  GREAT_LEAGUE
+  ULTRA_LEAGUE
+  SHADOW_PVE
+  GYM_DEFENSE
+  MAX_ATTACK
+  MAX_TANK
+  MAX_SUPPORT
+  MAX_FLEX
+  GENERAL
+  EVOLUTION
+}
+
+enum MaxBattleRole {
+  ATTACKER
+  TANK
+  SUPPORT
+  FLEX
+}
+
 enum ReviewIssueType {
   MATERIAL_DATA_GAP
   UNKNOWN_RELEASE_STATUS
@@ -468,4 +516,40 @@ model DataIssue {
   battleVariant               BattleVariant?    @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
 
   @@index([batchKey, status])
+}
+
+model IvRecommendation {
+  id                          String                @id
+  scopeType                   IvRecommendationScope
+  scopeKey                    String
+  primaryUseKey               PrimaryUseKey
+  ivStrategyKey               IvStrategyKey
+  maxBattleRole               MaxBattleRole?
+  attackIvMin                 Int?
+  attackIvPriority            Int?
+  attackIvConditionalMin      Int?
+  secondaryAttackIv           Int?
+  defenseIvMin                Int?
+  defenseIvPriority           Int?
+  staminaIvMin                Int?
+  staminaIvPriority           Int?
+  totalIvPercentMin           Float?
+  totalIvPercentPriority      Float?
+  secondaryTotalIvPercentMin  Float?
+  pvpRankMax                  Int?
+  pvpRankConditionalMax       Int?
+  pvpPrMin                    Float?
+  recommendedQuantity         Int?
+  hundoPriority               Boolean               @default(false)
+  appliesOnlyWhenUseConfirmed Boolean               @default(true)
+  speciesSpecificOverride     Boolean               @default(false)
+  overrideReasonZhTw          String                @default("")
+  ivRecommendationZhTw        String
+  shortIvLabelZhTw            String
+  rulesVersion                String
+  createdAt                   DateTime              @default(now())
+  updatedAt                   DateTime              @updatedAt
+
+  @@unique([scopeType, scopeKey, primaryUseKey])
+  @@index([scopeType, scopeKey])
 }
