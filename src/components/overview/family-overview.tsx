@@ -21,9 +21,9 @@ const useLabels: Record<string, string> = {
 const variantLabels: Record<string, string> = {
   NORMAL: "普通",
   SHADOW: "暗影",
-  MEGA: "Mega候選",
-  MEGA_X: "Mega候選",
-  MEGA_Y: "Mega候選",
+  MEGA: "Mega 候選",
+  MEGA_X: "Mega 候選",
+  MEGA_Y: "Mega 候選",
   DYNAMAX: "極巨",
   GIGANTAMAX: "超極巨",
 };
