@@ -42,8 +42,11 @@ export default async function HomePage() {
             3 秒看懂：這隻寶可夢該不該留？
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--muted)] sm:text-lg">
-            先看整個進化家族中該留哪個成員、用途與數字 IV 門檻；展開後再查看普通、暗影、 淨化、Mega
+            先看整個進化家族中該留哪個成員、用途與數字 IV 門檻；展開後再查看普通、暗影、淨化、Mega
             及 Max 版本。不同地區的進化路線分開呈現，來源與完整論證保留在第二層。
+          </p>
+          <p className="mt-3 text-xs font-semibold tracking-wide text-[var(--muted)]">
+            公開資料版本：2026.07.18-r3（2026/07/18 更新）
           </p>
         </div>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
