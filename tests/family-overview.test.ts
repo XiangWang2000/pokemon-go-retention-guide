@@ -155,13 +155,14 @@ describe("家族總覽 UI", () => {
     expect(html).toContain('data-testid="family-overview-table"');
     expect(html).toContain('data-mobile-layout="family-cards"');
     expect(html).not.toContain("min-w-[");
-    expect(html).toContain("家族價值：高");
+    expect(html).toContain("用途廣度：高");
     expect(html).toContain("建議保留");
-    expect(html).toContain("主要保留：妙蛙花");
+    expect(html).toContain("主要留");
+    expect(html).toContain("妙蛙花");
     for (const vagueText of ["高攻個體", "高 IV", "高品質個體", "好的 PvP IV", "適合對戰的個體"]) {
       expect(html).not.toContain(vagueText);
     }
-    expect(html).toContain("最終建議／IV");
+    expect(html).toContain("數字 IV 門檻");
     expect(html).toContain('data-testid="iv-recommendation-details"');
     expect(html).not.toContain("來源與資料狀態");
   });

@@ -1,4 +1,4 @@
-import { AlertTriangle, Database, Layers3, ShieldCheck } from "lucide-react";
+import { AlertTriangle, CheckCircle2, CircleDot, Send } from "lucide-react";
 import { EvaluationBrowser } from "@/components/evaluation-browser";
 import { getDashboardRows, siteSnapshotManifest } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
@@ -9,15 +9,23 @@ export default async function HomePage() {
   const forms = buildFormOverviews(rows);
   const families = buildFamilyOverviews(forms);
   const stats = [
-    { label: "進化家族", value: families.length, icon: Database },
-    { label: "家族成員型態", value: forms.length, icon: Layers3 },
     {
-      label: "建議保留家族",
+      label: "建議保留",
       value: families.filter((family) => family.retentionStrategy === "KEEP_TARGETS").length,
-      icon: ShieldCheck,
+      icon: CheckCircle2,
     },
     {
-      label: "暫時保留家族",
+      label: "選擇性保留",
+      value: families.filter((family) => family.retentionStrategy === "SELECTIVE_KEEP").length,
+      icon: CircleDot,
+    },
+    {
+      label: "大多可傳",
+      value: families.filter((family) => family.retentionStrategy === "MOSTLY_TRANSFER").length,
+      icon: Send,
+    },
+    {
+      label: "暫時保留",
       value: families.filter((family) => family.retentionStrategy === "HOLD_FOR_NOW").length,
       icon: AlertTriangle,
     },
@@ -34,8 +42,8 @@ export default async function HomePage() {
             3 秒看懂：這隻寶可夢該不該留？
           </h1>
           <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--muted)] sm:text-lg">
-            先看整個進化家族中該留哪個成員、版本與數字 IV 門檻；展開後再查看每個成員及
-            BattleVariant。不同地區進化路徑仍分開，來源與完整論證保留在第二層。
+            先看整個進化家族中該留哪個成員、用途與數字 IV 門檻；展開後再查看普通、暗影、 淨化、Mega
+            及 Max 版本。不同地區的進化路線分開呈現，來源與完整論證保留在第二層。
           </p>
         </div>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">

@@ -25,7 +25,7 @@ interface Issue {
 export function ReviewTable({ issues }: { issues: Issue[] }) {
   const pageSize = 20;
   const [type, setType] = useState("ALL");
-  const [impact, setImpact] = useState("ALL");
+  const [impact, setImpact] = useState("true");
   const [batch, setBatch] = useState("001-030");
   const [from, setFrom] = useState("1");
   const [to, setTo] = useState("30");

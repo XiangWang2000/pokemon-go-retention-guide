@@ -78,6 +78,7 @@ export interface FamilyOverview {
   primaryUses: string[];
   notices: string[];
   hasDataIssues: boolean;
+  hasCriticalDataIssues: boolean;
   updatedAt: string | null;
   minDexNumber: number;
   maxDexNumber: number;
@@ -126,6 +127,24 @@ function bestByTone(members: FamilyMemberSummary[], key: "pvp" | "pve" | "gym" |
   return [...members].sort(
     (a, b) => toneWeight[b.form[key].tone] - toneWeight[a.form[key].tone],
   )[0];
+}
+
+const pvpUseKeys = new Set(["GREAT_LEAGUE", "ULTRA_LEAGUE", "MASTER_LEAGUE"]);
+const pveUseKeys = new Set(["PVE", "SHADOW_PVE"]);
+const megaMaxUseKeys = new Set(["MEGA", "MAX_ATTACK", "MAX_TANK", "MAX_SUPPORT", "MAX_FLEX"]);
+
+function bestByConfirmedUse(
+  members: FamilyMemberSummary[],
+  overviewKey: "pvp" | "pve" | "gym" | "megaMax",
+  useKeys: Set<string>,
+) {
+  const confirmed = members.filter((member) =>
+    member.form.variants.some(
+      (variant) =>
+        isUsefulVariant(variant) && variant.primaryUseKeys.some((key) => useKeys.has(key)),
+    ),
+  );
+  return confirmed.length ? bestByTone(confirmed, overviewKey) : undefined;
 }
 
 function descendantIds(formId: string, outgoing: Map<string, Set<string>>) {
@@ -229,7 +248,7 @@ export function buildFamilyMemberSummaries(graph: ComponentGraph): FamilyMemberS
 }
 
 export function buildFamilyPvpOverview(members: FamilyMemberSummary[]): CompactOverview {
-  const best = bestByTone(members, "pvp");
+  const best = bestByConfirmedUse(members, "pvp", pvpUseKeys);
   if (!best || best.form.pvp.tone === "NONE") return { label: "無明確用途", tone: "NONE" };
   const independentMiddle = members.find(
     (member) => member.isIntermediate && member.roles.includes("INDEPENDENT_PVP"),
@@ -249,7 +268,7 @@ export function buildFamilyPvpOverview(members: FamilyMemberSummary[]): CompactO
 }
 
 export function buildFamilyPveOverview(members: FamilyMemberSummary[]): CompactOverview {
-  const best = bestByTone(members, "pve");
+  const best = bestByConfirmedUse(members, "pve", pveUseKeys);
   if (!best || best.form.pve.tone === "NONE") return { label: "無明確用途", tone: "NONE" };
   const shadow = best.form.variants.some(
     (variant) =>
@@ -263,8 +282,10 @@ export function buildFamilyPveOverview(members: FamilyMemberSummary[]): CompactO
 }
 
 export function buildFamilyGymOverview(members: FamilyMemberSummary[]): CompactOverview {
-  const best = bestByTone(members, "gym");
-  if (!best || best.form.gym.tone === "NONE") return { label: "不適合", tone: "NONE" };
+  const best = bestByConfirmedUse(members, "gym", new Set(["GYM_DEFENSE"]));
+  if (!best || best.form.gym.tone === "NONE") {
+    return { label: "未列為主要保留理由", tone: "NONE" };
+  }
   return {
     label: best.form.gym.label,
     detail: `${best.form.nameZhTw}${best.form.gym.detail ? `・${best.form.gym.detail}` : ""}`,
@@ -273,8 +294,15 @@ export function buildFamilyGymOverview(members: FamilyMemberSummary[]): CompactO
 }
 
 export function buildFamilyMegaMaxOverview(members: FamilyMemberSummary[]): CompactOverview {
-  const best = bestByTone(members, "megaMax");
-  if (!best || best.form.megaMax.tone === "NONE") return { label: "—", tone: "NONE" };
+  const best = bestByConfirmedUse(members, "megaMax", megaMaxUseKeys);
+  if (!best) return { label: "—", tone: "NONE" };
+  if (best.form.megaMax.tone === "NONE") {
+    return {
+      label: "Max：限定用途",
+      detail: `${best.form.nameZhTw}有獨立Max用途`,
+      tone: "SPECIAL",
+    };
+  }
   return {
     label: best.form.megaMax.label,
     detail: `${best.form.nameZhTw}適用；前階可進化為候選`,
@@ -435,7 +463,7 @@ export function calculateFamilyValue(
       ),
   );
 
-  if (hasHighPvp || hasHighNormalPve || normalizedUses.size >= 2 || independentUses.length >= 2) {
+  if (hasHighNormalPve || normalizedUses.size >= 2 || independentUses.length >= 2) {
     return "HIGH";
   }
   return "MEDIUM";
@@ -666,6 +694,7 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
     primaryUses: unique(forms.flatMap((form) => form.primaryUses)),
     notices,
     hasDataIssues: forms.some((form) => form.hasDataIssues),
+    hasCriticalDataIssues: materialIssueMessages(members).length > 0,
     updatedAt:
       forms
         .map((form) => form.updatedAt)

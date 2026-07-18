@@ -28,7 +28,7 @@ export function FamilyValueBadge({ value }: { value: FamilyValue }) {
     <span
       className={`inline-flex w-fit items-center gap-1 rounded-full border px-2 py-1 text-[11px] font-bold whitespace-nowrap ${valueStyles[value]}`}
     >
-      <Target aria-hidden size={13} /> 家族價值：{zhTw.familyValue[value]}
+      <Target aria-hidden size={13} /> 用途廣度：{zhTw.familyValue[value]}
     </span>
   );
 }

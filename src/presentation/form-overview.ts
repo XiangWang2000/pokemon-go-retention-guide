@@ -336,7 +336,10 @@ function buildVariantPrimaryUses(row: DashboardRow) {
   }
   if (
     ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey) &&
-    ["HIGH", "MEDIUM", "SPECIAL"].includes(maxVariantTone(row))
+    (["HIGH", "MEDIUM", "SPECIAL"].includes(maxVariantTone(row)) ||
+      (row.variantKey === "GIGANTAMAX" &&
+        row.isReleased &&
+        ["KEEP", "CONDITIONAL_KEEP"].includes(row.decision)))
   ) {
     uses.push("Max Battle");
   }
@@ -391,7 +394,10 @@ function buildVariantIvUseKeys(row: DashboardRow): PrimaryUseKey[] {
   }
   if (
     ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey) &&
-    ["HIGH", "MEDIUM", "SPECIAL"].includes(maxVariantTone(row))
+    (["HIGH", "MEDIUM", "SPECIAL"].includes(maxVariantTone(row)) ||
+      (row.variantKey === "GIGANTAMAX" &&
+        row.isReleased &&
+        ["KEEP", "CONDITIONAL_KEEP"].includes(row.decision)))
   ) {
     uses.push(maxPrimaryUse(row));
   }

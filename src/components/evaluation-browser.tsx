@@ -209,10 +209,10 @@ export function EvaluationBrowser({
           </div>
           <p className="text-sm leading-6 text-[var(--muted)]">
             {mode === "FAMILY"
-              ? "預設依 familyKey 與 EvolutionPath 分組；先看家族結論，再展開成員與戰鬥版本。"
+              ? "先看家族保留結論，再展開成員與普通、暗影、Mega 及 Max 版本。"
               : mode === "POKEDEX"
                 ? "依圖鑑型態逐隻查看精簡結論，所有地區型態維持分開。"
-                : "逐一檢查 BattleVariant 的排名、狀態、來源與規則軌跡。"}
+                : "逐一檢查各戰鬥版本的排名、狀態、來源與判斷軌跡。"}
           </p>
         </div>
 
