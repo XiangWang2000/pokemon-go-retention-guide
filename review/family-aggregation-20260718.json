@@ -1,0 +1,142 @@
+{
+  "generatedAt": "2026-07-18",
+  "presentationRulesVersion": "family-aggregation-v2",
+  "beforeFamilyDecisionCounts": {
+    "KEEP": 0,
+    "CONDITIONAL_KEEP": 15,
+    "HOLD_FOR_NOW": 0,
+    "TRANSFER_CANDIDATE": 0
+  },
+  "afterFamilyValueCounts": {
+    "HIGH": 6,
+    "MEDIUM": 5,
+    "LOW": 3,
+    "UNKNOWN": 1
+  },
+  "afterFamilyRetentionStrategyCounts": {
+    "KEEP_TARGETS": 6,
+    "SELECTIVE_KEEP": 5,
+    "MOSTLY_TRANSFER": 3,
+    "HOLD_FOR_NOW": 1
+  },
+  "reclassifiedFromConditionalKeep": {
+    "KEEP_TARGETS": [
+      {
+        "familyId": "KANTO_FAMILY_001:001-kanto",
+        "familyNameZhTw": "妙蛙花家族",
+        "familyValue": "HIGH",
+        "primaryTargetZhTw": "妙蛙花",
+        "reasonZhTw": "主要保留妙蛙花；妙蛙種子、妙蛙草只留符合主要目標條件的進化候選。IV：GL：Rank≤100；UL：Rank≤100；PvE：15攻／96%+。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_004:004-kanto",
+        "familyNameZhTw": "噴火龍家族",
+        "familyValue": "HIGH",
+        "primaryTargetZhTw": "噴火龍",
+        "reasonZhTw": "主要保留噴火龍；小火龍、火恐龍只留符合主要目標條件的進化候選。IV：UL：Rank≤100；ML：15攻／98%優先；PvE：15攻／96%+。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_007:007-kanto",
+        "familyNameZhTw": "水箭龜家族",
+        "familyValue": "HIGH",
+        "primaryTargetZhTw": "水箭龜",
+        "reasonZhTw": "主要保留水箭龜；傑尼龜、卡咪龜只留符合主要目標條件的進化候選。IV：GL：Rank≤100；UL：Rank≤100；道館：無固定門檻。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_016:016-kanto",
+        "familyNameZhTw": "大比鳥家族",
+        "familyValue": "HIGH",
+        "primaryTargetZhTw": "大比鳥",
+        "reasonZhTw": "主要保留大比鳥；波波、比比鳥只留符合主要目標條件的進化候選。IV：GL：Rank≤100；PvE：15攻／96%+；Mega：15攻／96%+。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_021:021-kanto",
+        "familyNameZhTw": "大嘴雀家族",
+        "familyValue": "HIGH",
+        "primaryTargetZhTw": "大嘴雀",
+        "reasonZhTw": "主要保留大嘴雀；烈雀只留符合主要目標條件的進化候選。IV：GL：Rank≤100。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_027:027-alola",
+        "familyNameZhTw": "穿山王家族（阿羅拉）",
+        "familyValue": "HIGH",
+        "primaryTargetZhTw": "穿山王",
+        "reasonZhTw": "主要保留穿山王；穿山鼠只留符合主要目標條件的進化候選。IV：GL：Rank≤100；UL：Rank≤100。"
+      }
+    ],
+    "SELECTIVE_KEEP": [
+      {
+        "familyId": "KANTO_FAMILY_010:010-kanto",
+        "familyNameZhTw": "巴大蝶家族",
+        "familyValue": "MEDIUM",
+        "primaryTargetZhTw": "超極巨巴大蝶",
+        "reasonZhTw": "主要保留超極巨巴大蝶；價值集中於特定版本或條件。綠毛蟲、鐵甲蛹只留符合主要目標條件的進化候選。其餘普通重複個體大多可傳。IV：Max攻擊：15攻優先。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_013:013-kanto",
+        "familyNameZhTw": "大針蜂家族",
+        "familyValue": "MEDIUM",
+        "primaryTargetZhTw": "Mega大針蜂候選",
+        "reasonZhTw": "主要保留Mega大針蜂候選；價值集中於特定版本或條件。獨角蟲、鐵殼蛹只留符合主要目標條件的進化候選。其餘普通重複個體大多可傳。IV：PvE：15攻／96%+；Mega：15攻／96%+。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_025:025-kanto",
+        "familyNameZhTw": "雷丘家族",
+        "familyValue": "MEDIUM",
+        "primaryTargetZhTw": "雷丘",
+        "reasonZhTw": "主要保留雷丘；價值集中於特定版本或條件。皮卡丘只留符合主要目標條件的進化候選。其餘普通重複個體大多可傳。IV：GL：Rank≤100；UL：Rank≤100。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_025:026-alola",
+        "familyNameZhTw": "雷丘家族（阿羅拉）",
+        "familyValue": "MEDIUM",
+        "primaryTargetZhTw": "雷丘",
+        "reasonZhTw": "主要保留雷丘；價值集中於特定版本或條件。沒有僅作進化素材的前階成員。其餘普通重複個體大多可傳。IV：UL：Rank≤100。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_027:027-kanto",
+        "familyNameZhTw": "穿山王家族",
+        "familyValue": "MEDIUM",
+        "primaryTargetZhTw": "穿山王",
+        "reasonZhTw": "主要保留穿山王；價值集中於特定版本或條件。穿山鼠只留符合主要目標條件的進化候選。其餘普通重複個體大多可傳。IV：UL：Rank≤100。"
+      }
+    ],
+    "MOSTLY_TRANSFER": [
+      {
+        "familyId": "KANTO_FAMILY_019:019-kanto",
+        "familyNameZhTw": "拉達家族",
+        "familyValue": "LOW",
+        "primaryTargetZhTw": "無主要保留目標",
+        "reasonZhTw": "家族目前沒有明確主要PvP、PvE、Mega、Max或道館用途；排除收藏價值後，普通重複個體大多可傳。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_019:019-alola",
+        "familyNameZhTw": "拉達家族（阿羅拉）",
+        "familyValue": "LOW",
+        "primaryTargetZhTw": "無主要保留目標",
+        "reasonZhTw": "家族目前沒有明確主要PvP、PvE、Mega、Max或道館用途；排除收藏價值後，普通重複個體大多可傳。"
+      },
+      {
+        "familyId": "KANTO_FAMILY_023:023-kanto",
+        "familyNameZhTw": "阿柏怪家族",
+        "familyValue": "LOW",
+        "primaryTargetZhTw": "無主要保留目標",
+        "reasonZhTw": "家族目前沒有明確主要PvP、PvE、Mega、Max或道館用途；排除收藏價值後，普通重複個體大多可傳。"
+      }
+    ],
+    "HOLD_FOR_NOW": [
+      {
+        "familyId": "KANTO_FAMILY_029:029-kanto",
+        "familyNameZhTw": "尼多蘭家族（本批至尼多娜）",
+        "familyValue": "UNKNOWN",
+        "primaryTargetZhTw": "無主要保留目標",
+        "reasonZhTw": "最終進化目標位於本批研究範圍外，現有資料不足以安全判斷整個家族；補齊目標評估前暫時保留。"
+      }
+    ]
+  },
+  "notesZhTw": [
+    "?????????????????",
+    "?????????????????",
+    "???????? presentation layer??????????BattleVariant?????????"
+  ]
+}

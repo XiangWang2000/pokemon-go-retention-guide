@@ -5,6 +5,18 @@ export const zhTw = {
     HOLD_FOR_NOW: "暫時保留",
     TRANSFER_CANDIDATE: "通常可傳送",
   },
+  familyValue: {
+    HIGH: "高",
+    MEDIUM: "中",
+    LOW: "低",
+    UNKNOWN: "待確認",
+  },
+  familyRetentionStrategy: {
+    KEEP_TARGETS: "建議保留",
+    SELECTIVE_KEEP: "選擇性保留",
+    MOSTLY_TRANSFER: "大多可傳",
+    HOLD_FOR_NOW: "暫時保留",
+  },
   confidence: { HIGH: "高", MEDIUM: "中", LOW: "低" },
   variant: {
     NORMAL: "普通",

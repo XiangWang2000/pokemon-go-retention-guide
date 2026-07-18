@@ -14,6 +14,17 @@
 
 目前 #001～#030 共整理為 15 個顯示群組。小個體與中間進化各自具有 `memberSummary`，角色可為 `EVOLUTION_MATERIAL`、`INDEPENDENT_PVP`、`INDEPENDENT_PVE`、`GYM_DEFENDER`、`MEGA_CANDIDATE`、`MAX_CANDIDATE`、`COLLECTION_ONLY` 或 `NO_DISTINCT_USE`。若小個體或中間進化有獨立用途，家族摘要會明確提醒不要把最佳個體全部進化。
 
+### 家族價值與清包策略
+
+家族摘要不再直接沿用成員的 `finalDecision`，而是分開推導兩個 presentation-only 概念：
+
+- `familyValue`：`HIGH`、`MEDIUM`、`LOW`、`UNKNOWN`，回答家族是否有實際戰鬥價值。
+- `familyRetentionStrategy`：`KEEP_TARGETS`、`SELECTIVE_KEEP`、`MOSTLY_TRANSFER`、`HOLD_FOR_NOW`，回答清包時應如何處理重複個體。
+
+聚合會先找出真正具有 PvP、PvE、道館、Mega、Max 或特殊版本用途的 `primaryRetentionTargets`，再判斷用途是否廣泛、是否只限特定版本，以及是否有小個體或中間進化的獨立用途。單純存在進化路徑、屬於進化素材或成員不是 `TRANSFER_CANDIDATE`，都不再自動形成選擇性保留；前階只有在目標進化成員確實有用途時，才會顯示為符合目標 IV 條件的進化候選。
+
+關鍵來源衝突、物種錯置、規則未涵蓋或可能改變用途的 Mega／Max 推出狀態才會產生 `UNKNOWN + HOLD_FOR_NOW`。火箭隊缺少統一排名、Purified 繼承普通版及其他不影響清包策略的缺口，只保留為資料待補提示。重新計算結果與逐家族摘要見 `review/family-aggregation-20260718.md` 及其 JSON 版本。
+
 ### IV 策略與數字門檻
 
 結構化規則保存於 `IvRecommendation`，而不是只保存中文長句。全域預設包括：

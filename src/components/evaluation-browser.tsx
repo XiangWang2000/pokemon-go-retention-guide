@@ -68,7 +68,7 @@ export function EvaluationBrowser({
   const familyRows = useMemo(
     () =>
       familySearchMatches
-        .filter((family) => decision === "ALL" || family.decision === decision)
+        .filter((family) => decision === "ALL" || family.retentionStrategy === decision)
         .filter(
           (family) =>
             variant === "ALL" ||
@@ -83,7 +83,9 @@ export function EvaluationBrowser({
         })
         .sort((a, b) => {
           if (sort === "DEX_DESC") return b.minDexNumber - a.minDexNumber;
-          if (sort === "DECISION") return a.decision.localeCompare(b.decision);
+          if (sort === "DECISION") {
+            return a.retentionStrategy.localeCompare(b.retentionStrategy);
+          }
           if (sort === "UPDATED") return (b.updatedAt ?? "").localeCompare(a.updatedAt ?? "");
           return a.minDexNumber - b.minDexNumber || a.familyId.localeCompare(b.familyId);
         }),
@@ -164,6 +166,11 @@ export function EvaluationBrowser({
     });
   }
 
+  function changeMode(nextMode: ViewMode) {
+    setMode(nextMode);
+    setDecision("ALL");
+  }
+
   const selectClass =
     "min-h-11 w-full rounded-lg border bg-[var(--surface)] px-3 text-sm text-[var(--foreground)]";
 
@@ -178,7 +185,7 @@ export function EvaluationBrowser({
             <button
               type="button"
               aria-pressed={mode === "FAMILY"}
-              onClick={() => setMode("FAMILY")}
+              onClick={() => changeMode("FAMILY")}
               className={`min-h-11 rounded-lg px-4 text-sm font-black ${mode === "FAMILY" ? "bg-[var(--surface)] text-[var(--foreground)] shadow-sm" : "text-[var(--muted)]"}`}
             >
               家族總覽
@@ -186,7 +193,7 @@ export function EvaluationBrowser({
             <button
               type="button"
               aria-pressed={mode === "POKEDEX"}
-              onClick={() => setMode("POKEDEX")}
+              onClick={() => changeMode("POKEDEX")}
               className={`min-h-11 rounded-lg px-4 text-sm font-black ${mode === "POKEDEX" ? "bg-[var(--surface)] text-[var(--foreground)] shadow-sm" : "text-[var(--muted)]"}`}
             >
               單隻圖鑑
@@ -194,7 +201,7 @@ export function EvaluationBrowser({
             <button
               type="button"
               aria-pressed={mode === "AUDIT"}
-              onClick={() => setMode("AUDIT")}
+              onClick={() => changeMode("AUDIT")}
               className={`min-h-11 rounded-lg px-4 text-sm font-black ${mode === "AUDIT" ? "bg-[var(--surface)] text-[var(--foreground)] shadow-sm" : "text-[var(--muted)]"}`}
             >
               資料審核
@@ -232,11 +239,13 @@ export function EvaluationBrowser({
               className={selectClass}
             >
               <option value="ALL">所有建議</option>
-              {Object.entries(zhTw.decision).map(([value, label]) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              ))}
+              {Object.entries(mode === "FAMILY" ? zhTw.familyRetentionStrategy : zhTw.decision).map(
+                ([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ),
+              )}
             </select>
           </label>
           <label>

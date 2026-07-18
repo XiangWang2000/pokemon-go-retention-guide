@@ -11,6 +11,33 @@ export type MemberRoleKey =
   | "COLLECTION_ONLY"
   | "NO_DISTINCT_USE";
 
+export type FamilyValue = "HIGH" | "MEDIUM" | "LOW" | "UNKNOWN";
+
+export type FamilyRetentionStrategy =
+  "KEEP_TARGETS" | "SELECTIVE_KEEP" | "MOSTLY_TRANSFER" | "HOLD_FOR_NOW";
+
+export interface FamilyRetentionTarget {
+  formId: string;
+  memberNameZhTw: string;
+  displayNameZhTw: string;
+  useKeys: string[];
+  variantKeys: FormOverview["variants"][number]["row"]["variantKey"][];
+  variantSpecificOnly: boolean;
+}
+
+export interface IndependentMemberUse {
+  formId: string;
+  memberNameZhTw: string;
+  useKeys: string[];
+}
+
+export interface VariantSpecificUse {
+  formId: string;
+  memberNameZhTw: string;
+  variantKey: FormOverview["variants"][number]["row"]["variantKey"];
+  useKeys: string[];
+}
+
 export interface FamilyMemberSummary {
   form: FormOverview;
   roles: MemberRoleKey[];
@@ -39,8 +66,12 @@ export interface FamilyOverview {
   pve: CompactOverview;
   gym: CompactOverview;
   megaMax: CompactOverview;
-  decision: FormOverview["decision"];
-  decisionReason: string;
+  familyValue: FamilyValue;
+  retentionStrategy: FamilyRetentionStrategy;
+  primaryRetentionTargets: FamilyRetentionTarget[];
+  primaryTargetSummaryZhTw: string;
+  preEvolutionActionZhTw: string;
+  actionSummaryZhTw: string;
   ivShortLabels: string[];
   ivRecommendations: IvRecommendation[];
   ivSummaryZhTw: string;
@@ -59,13 +90,6 @@ const toneWeight: Record<OverviewTone, number> = {
   REVIEW: 3,
   LOW: 2,
   NONE: 1,
-};
-
-const decisionWeight: Record<FormOverview["decision"], number> = {
-  KEEP: 4,
-  CONDITIONAL_KEEP: 3,
-  HOLD_FOR_NOW: 2,
-  TRANSFER_CANDIDATE: 1,
 };
 
 const regionLabel: Record<string, string> = {
@@ -118,7 +142,9 @@ function descendantIds(formId: string, outgoing: Map<string, Set<string>>) {
 
 function memberRoles(form: FormOverview, outgoing: Map<string, Set<string>>): MemberRoleKey[] {
   const roles: MemberRoleKey[] = [];
-  const uses = new Set(form.variants.flatMap((variant) => variant.primaryUseKeys));
+  const uses = new Set(
+    form.variants.filter(isUsefulVariant).flatMap((variant) => variant.primaryUseKeys),
+  );
   if (outgoing.get(form.formId)?.size) roles.push("EVOLUTION_MATERIAL");
   if (["GREAT_LEAGUE", "ULTRA_LEAGUE", "MASTER_LEAGUE"].some((use) => uses.has(use as never))) {
     roles.push("INDEPENDENT_PVP");
@@ -256,19 +282,241 @@ export function buildFamilyMegaMaxOverview(members: FamilyMemberSummary[]): Comp
   };
 }
 
-export function buildFamilyRetentionDecision(members: FamilyMemberSummary[]) {
-  const decisions = members.map((member) => member.form.decision);
-  if (decisions.every((decision) => decision === "TRANSFER_CANDIDATE")) {
-    return "TRANSFER_CANDIDATE" as const;
+const specialVariantKeys = new Set(["SHADOW", "MEGA", "MEGA_X", "MEGA_Y", "DYNAMAX", "GIGANTAMAX"]);
+
+function isUsefulVariant(variant: FormOverview["variants"][number]) {
+  return (
+    variant.primaryUseKeys.length > 0 &&
+    (variant.row.decision === "KEEP" || variant.row.decision === "CONDITIONAL_KEEP")
+  );
+}
+
+function normalizedUseKey(useKey: string) {
+  if (["GREAT_LEAGUE", "ULTRA_LEAGUE", "MASTER_LEAGUE"].includes(useKey)) return "PVP";
+  if (["PVE", "SHADOW_PVE"].includes(useKey)) return "PVE";
+  if (useKey === "GYM_DEFENSE") return "GYM";
+  if (useKey === "MEGA") return "MEGA";
+  if (["MAX_ATTACK", "MAX_TANK", "MAX_SUPPORT", "MAX_FLEX"].includes(useKey)) return "MAX";
+  return useKey;
+}
+
+export function findIndependentMemberUses(members: FamilyMemberSummary[]): IndependentMemberUse[] {
+  return members.flatMap((member) => {
+    const useKeys = unique(
+      member.form.variants.filter(isUsefulVariant).flatMap((variant) => variant.primaryUseKeys),
+    );
+    return useKeys.length
+      ? [{ formId: member.form.formId, memberNameZhTw: member.form.nameZhTw, useKeys }]
+      : [];
+  });
+}
+
+export function findVariantSpecificUses(members: FamilyMemberSummary[]): VariantSpecificUse[] {
+  return members.flatMap((member) =>
+    member.form.variants
+      .filter(
+        (variant) => specialVariantKeys.has(variant.row.variantKey) && isUsefulVariant(variant),
+      )
+      .map((variant) => ({
+        formId: member.form.formId,
+        memberNameZhTw: member.form.nameZhTw,
+        variantKey: variant.row.variantKey,
+        useKeys: [...variant.primaryUseKeys],
+      })),
+  );
+}
+
+function targetDisplayName(
+  memberNameZhTw: string,
+  variants: FormOverview["variants"],
+  variantSpecificOnly: boolean,
+) {
+  if (!variantSpecificOnly) return memberNameZhTw;
+  const keys = new Set(variants.map((variant) => variant.row.variantKey));
+  if ([...keys].some((key) => ["MEGA", "MEGA_X", "MEGA_Y"].includes(key))) {
+    return `Mega${memberNameZhTw}候選`;
   }
-  if (decisions.every((decision) => decision === "KEEP")) return "KEEP" as const;
-  if (decisions.some((decision) => decision === "KEEP" || decision === "CONDITIONAL_KEEP")) {
-    return "CONDITIONAL_KEEP" as const;
+  if (keys.has("GIGANTAMAX")) return `超極巨${memberNameZhTw}`;
+  if (keys.has("DYNAMAX")) return `極巨${memberNameZhTw}`;
+  if (keys.has("SHADOW")) return `暗影${memberNameZhTw}`;
+  return memberNameZhTw;
+}
+
+export function findPrimaryRetentionTargets(
+  members: FamilyMemberSummary[],
+): FamilyRetentionTarget[] {
+  return members.flatMap((member) => {
+    const usefulVariants = member.form.variants.filter(isUsefulVariant);
+    if (!usefulVariants.length) return [];
+    const variantSpecificOnly = usefulVariants.every((variant) =>
+      specialVariantKeys.has(variant.row.variantKey),
+    );
+    return [
+      {
+        formId: member.form.formId,
+        memberNameZhTw: member.form.nameZhTw,
+        displayNameZhTw: targetDisplayName(
+          member.form.nameZhTw,
+          usefulVariants,
+          variantSpecificOnly,
+        ),
+        useKeys: unique(usefulVariants.flatMap((variant) => variant.primaryUseKeys)),
+        variantKeys: unique(usefulVariants.map((variant) => variant.row.variantKey)),
+        variantSpecificOnly,
+      },
+    ];
+  });
+}
+
+function materialIssueMessages(members: FamilyMemberSummary[]) {
+  return unique(
+    members.flatMap((member) =>
+      member.form.variants.flatMap((variant) => {
+        const hasKnownUse = variant.primaryUseKeys.length > 0;
+        const isPotentialMegaOrMax = ["MEGA", "MEGA_X", "MEGA_Y", "DYNAMAX", "GIGANTAMAX"].includes(
+          variant.row.variantKey,
+        );
+        return (variant.row.reviewIssues ?? [])
+          .filter(
+            (issue) =>
+              issue.affectsFinalDecision &&
+              [
+                "SOURCE_CONFLICT",
+                "POSSIBLE_SPECIES_MISMATCH",
+                "UNKNOWN_RELEASE_STATUS",
+                "RULE_NOT_COVERED",
+              ].includes(issue.issueType) &&
+              (hasKnownUse || issue.issueType !== "UNKNOWN_RELEASE_STATUS" || isPotentialMegaOrMax),
+          )
+          .map((issue) => issue.messageZhTw);
+      }),
+    ),
+  );
+}
+
+export function calculateFamilyValue(
+  members: FamilyMemberSummary[],
+  options: { isBatchTruncated?: boolean } = {},
+): FamilyValue {
+  const targets = findPrimaryRetentionTargets(members);
+  const materialIssues = materialIssueMessages(members);
+  if (materialIssues.length || (options.isBatchTruncated && !targets.length)) return "UNKNOWN";
+  if (!targets.length) return "LOW";
+
+  const independentUses = findIndependentMemberUses(members);
+  const normalizedUses = new Set(
+    members.flatMap((member) =>
+      member.form.variants.filter(isUsefulVariant).flatMap((variant) => {
+        if (["MEGA", "MEGA_X", "MEGA_Y"].includes(variant.row.variantKey)) return ["MEGA"];
+        if (["DYNAMAX", "GIGANTAMAX"].includes(variant.row.variantKey)) return ["MAX"];
+        if (variant.row.variantKey === "SHADOW") return ["SHADOW"];
+        return variant.primaryUseKeys.map(normalizedUseKey);
+      }),
+    ),
+  );
+  const hasHighPvp = members.some(
+    (member) =>
+      member.form.pvp.tone === "HIGH" &&
+      member.form.variants.some(
+        (variant) =>
+          variant.row.variantKey === "NORMAL" &&
+          isUsefulVariant(variant) &&
+          variant.primaryUseKeys.some((key) => normalizedUseKey(key) === "PVP"),
+      ),
+  );
+  const hasHighNormalPve = members.some(
+    (member) =>
+      member.form.pve.tone === "HIGH" &&
+      member.form.variants.some(
+        (variant) =>
+          variant.row.variantKey === "NORMAL" &&
+          isUsefulVariant(variant) &&
+          variant.primaryUseKeys.some((key) => normalizedUseKey(key) === "PVE"),
+      ),
+  );
+
+  if (hasHighPvp || hasHighNormalPve || normalizedUses.size >= 2 || independentUses.length >= 2) {
+    return "HIGH";
   }
-  if (decisions.some((decision) => decision === "HOLD_FOR_NOW")) return "HOLD_FOR_NOW" as const;
-  return [...members].sort(
-    (a, b) => decisionWeight[b.form.decision] - decisionWeight[a.form.decision],
-  )[0]!.form.decision;
+  return "MEDIUM";
+}
+
+export function calculateFamilyRetentionStrategy(
+  familyValue: FamilyValue,
+): FamilyRetentionStrategy {
+  if (familyValue === "HIGH") return "KEEP_TARGETS";
+  if (familyValue === "MEDIUM") return "SELECTIVE_KEEP";
+  if (familyValue === "LOW") return "MOSTLY_TRANSFER";
+  return "HOLD_FOR_NOW";
+}
+
+function buildPreEvolutionActionZhTw(
+  members: FamilyMemberSummary[],
+  targets: FamilyRetentionTarget[],
+) {
+  const materials = members.filter(
+    (member) => member.roles.includes("EVOLUTION_MATERIAL") && !member.hasIndependentUse,
+  );
+  if (!materials.length) return "沒有僅作進化素材的前階成員。";
+  if (!targets.length) return "前階不因可以進化而自動保留。";
+  return `${materials.map((member) => member.form.nameZhTw).join("、")}只留符合主要目標條件的進化候選。`;
+}
+
+export function buildMemberActionSummaryZhTw(
+  member: FamilyMemberSummary,
+  targets: FamilyRetentionTarget[],
+) {
+  const target = targets.find((item) => item.formId === member.form.formId);
+  if (target) {
+    const iv = member.ivShortLabels.length
+      ? `IV以${member.ivShortLabels.slice(0, 3).join("、")}為準。`
+      : "依該用途的具體條件篩選。";
+    return `主要保留${target.displayNameZhTw}；${iv}`;
+  }
+  if (member.roles.includes("EVOLUTION_MATERIAL")) {
+    if (targets.length) {
+      return `${member.form.nameZhTw}只作進化候選；僅保留可進化為${targets
+        .map((item) => item.memberNameZhTw)
+        .join("、")}且符合目標條件的個體。`;
+    }
+    return `${member.form.nameZhTw}雖可進化，但目前沒有已確認的主要保留目標；普通重複個體大多可傳。`;
+  }
+  return `${member.form.nameZhTw}沒有獨立用途；普通重複個體大多可傳。`;
+}
+
+export function buildFamilyActionSummaryZhTw({
+  members,
+  targets,
+  strategy,
+  ivShortLabels,
+  isBatchTruncated,
+}: {
+  members: FamilyMemberSummary[];
+  targets: FamilyRetentionTarget[];
+  strategy: FamilyRetentionStrategy;
+  ivShortLabels: string[];
+  isBatchTruncated: boolean;
+}) {
+  const targetNames = targets.map((target) => target.displayNameZhTw).join("、");
+  const preEvolution = buildPreEvolutionActionZhTw(members, targets);
+  const iv = ivShortLabels.length ? `IV：${ivShortLabels.slice(0, 3).join("；")}。` : "";
+  if (strategy === "KEEP_TARGETS") {
+    return `主要保留${targetNames}；${preEvolution}${iv}`;
+  }
+  if (strategy === "SELECTIVE_KEEP") {
+    return `主要保留${targetNames}；價值集中於特定版本或條件。${preEvolution}其餘普通重複個體大多可傳。${iv}`;
+  }
+  if (strategy === "MOSTLY_TRANSFER") {
+    return "家族目前沒有明確主要PvP、PvE、Mega、Max或道館用途；排除收藏價值後，普通重複個體大多可傳。";
+  }
+  const issueMessages = materialIssueMessages(members);
+  if (issueMessages.length) {
+    return `關鍵資料可能改變保留策略，目前暫時保留：${issueMessages.join("；")}`;
+  }
+  if (isBatchTruncated) {
+    return "最終進化目標位於本批研究範圍外，現有資料不足以安全判斷整個家族；補齊目標評估前暫時保留。";
+  }
+  return "存在可能改變保留策略的關鍵不確定性，補齊資料前暫時保留。";
 }
 
 export function buildFamilyIvOverview(members: FamilyMemberSummary[]) {
@@ -331,7 +579,7 @@ function connectedComponents(forms: FormOverview[]) {
 }
 
 export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): FamilyOverview {
-  const members = buildFamilyMemberSummaries(graph);
+  let members = buildFamilyMemberSummaries(graph);
   const forms = members.map((member) => member.form);
   const roots = members.filter((member) => member.isRoot);
   const terminals = members.filter((member) => member.isTerminal);
@@ -351,12 +599,22 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
       ? `${root.form.nameZhTw}進化家族`
       : `${terminal.form.nameZhTw}家族`;
   const familyNameZhTw = regionHintZhTw ? `${baseName}（${regionHintZhTw}）` : baseName;
-  const decision = buildFamilyRetentionDecision(members);
   const iv = buildFamilyIvOverview(members);
-  const valuableMembers = members.filter(
-    (member) => member.form.decision === "KEEP" || member.hasIndependentUse,
-  );
-  const valuableNames = unique(valuableMembers.map((member) => member.form.nameZhTw)).slice(0, 3);
+  const primaryRetentionTargets = findPrimaryRetentionTargets(members);
+  const familyValue = calculateFamilyValue(members, { isBatchTruncated });
+  const retentionStrategy = calculateFamilyRetentionStrategy(familyValue);
+  const preEvolutionActionZhTw = buildPreEvolutionActionZhTw(members, primaryRetentionTargets);
+  const actionSummaryZhTw = buildFamilyActionSummaryZhTw({
+    members,
+    targets: primaryRetentionTargets,
+    strategy: retentionStrategy,
+    ivShortLabels: iv.shortLabels,
+    isBatchTruncated,
+  });
+  members = members.map((member) => ({
+    ...member,
+    memberSummaryZhTw: buildMemberActionSummaryZhTw(member, primaryRetentionTargets),
+  }));
   const heldNames = members
     .filter((member) =>
       member.form.variants.some((variant) => variant.row.decision === "HOLD_FOR_NOW"),
@@ -373,13 +631,6 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
   if (independentMiddle) notices.push("中間進化有獨立PvP用途，不要將最好的個體全部進化");
   if (terminals.length > 1) notices.push(`具有${terminals.length}個進化分支，應分別保留目標個體`);
   if (heldNames.length) notices.push(`${unique(heldNames).join("、")}仍有暫時保留版本`);
-
-  const decisionReason =
-    decision === "TRANSFER_CANDIDATE"
-      ? "家族目前缺乏明確PvP、PvE、道館、Mega、Max及進化用途；普通重複個體通常可傳送。"
-      : decision === "HOLD_FOR_NOW"
-        ? "關鍵用途可能改變保留結論；傳送不可逆，資料確認前先保留。"
-        : `主要保留${valuableNames.join("、") || terminal.form.nameZhTw}；前階僅保留符合目標進化數字門檻的個體。`;
 
   return {
     familyId: `${familyKey}:${roots
@@ -401,8 +652,14 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
     pve: buildFamilyPveOverview(members),
     gym: buildFamilyGymOverview(members),
     megaMax: buildFamilyMegaMaxOverview(members),
-    decision,
-    decisionReason,
+    familyValue,
+    retentionStrategy,
+    primaryRetentionTargets,
+    primaryTargetSummaryZhTw: primaryRetentionTargets.length
+      ? primaryRetentionTargets.map((target) => target.displayNameZhTw).join("、")
+      : "無主要保留目標",
+    preEvolutionActionZhTw,
+    actionSummaryZhTw,
     ivShortLabels: iv.shortLabels,
     ivRecommendations: iv.recommendations,
     ivSummaryZhTw: iv.summaryZhTw,

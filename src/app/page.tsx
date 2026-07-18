@@ -12,15 +12,13 @@ export default async function HomePage() {
     { label: "進化家族", value: families.length, icon: Database },
     { label: "家族成員型態", value: forms.length, icon: Layers3 },
     {
-      label: "建議或條件保留",
-      value: families.filter(
-        (family) => family.decision === "KEEP" || family.decision === "CONDITIONAL_KEEP",
-      ).length,
+      label: "建議保留家族",
+      value: families.filter((family) => family.retentionStrategy === "KEEP_TARGETS").length,
       icon: ShieldCheck,
     },
     {
-      label: "暫時保留版本",
-      value: rows.filter((row) => row.decision === "HOLD_FOR_NOW").length,
+      label: "暫時保留家族",
+      value: families.filter((family) => family.retentionStrategy === "HOLD_FOR_NOW").length,
       icon: AlertTriangle,
     },
   ];

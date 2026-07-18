@@ -4,8 +4,8 @@ import type { FamilyOverview as FamilyOverviewModel } from "@/presentation/famil
 import { CompactRating } from "./compact-rating";
 import { FamilyIdentityCell } from "./family-identity-cell";
 import { FamilyMemberPanel } from "./family-member-panel";
+import { FamilyRetentionStrategyBadge, FamilyValueBadge } from "./family-strategy-badges";
 import { IvRecommendationDetails } from "./iv-recommendation";
-import { RetentionDecisionBadge } from "./retention-decision-badge";
 import { VariantBadges } from "./variant-badges";
 
 export function FamilyOverview({
@@ -46,7 +46,10 @@ export function FamilyOverview({
                     onToggle={() => onToggleFamily(family.familyId)}
                     controlsId={controlsId}
                   />
-                  <RetentionDecisionBadge decision={family.decision} prominent />
+                  <div className="flex flex-col items-end gap-2">
+                    <FamilyValueBadge value={family.familyValue} />
+                    <FamilyRetentionStrategyBadge strategy={family.retentionStrategy} prominent />
+                  </div>
                 </div>
                 <div className="mt-3 flex flex-wrap gap-2 text-xs font-bold">
                   {family.members.map((member) => (
@@ -76,8 +79,11 @@ export function FamilyOverview({
                     <CompactRating overview={family.megaMax} />
                   </div>
                 </div>
-                <p className="mt-4 line-clamp-2 text-sm font-semibold leading-6">
-                  {family.decisionReason}
+                <p className="mt-4 text-xs font-black text-[var(--muted)]">
+                  主要保留：{family.primaryTargetSummaryZhTw}
+                </p>
+                <p className="mt-1 line-clamp-2 text-sm font-semibold leading-6">
+                  {family.actionSummaryZhTw}
                 </p>
                 <div className="mt-3">
                   <IvRecommendationDetails
@@ -179,9 +185,18 @@ export function FamilyOverview({
                       <CompactRating overview={family.megaMax} />
                     </td>
                     <td className="px-3 py-3">
-                      <RetentionDecisionBadge decision={family.decision} prominent />
-                      <p className="mt-2 line-clamp-2 text-xs font-semibold leading-5">
-                        {family.decisionReason}
+                      <div className="flex flex-wrap gap-1.5">
+                        <FamilyValueBadge value={family.familyValue} />
+                        <FamilyRetentionStrategyBadge
+                          strategy={family.retentionStrategy}
+                          prominent
+                        />
+                      </div>
+                      <p className="mt-2 text-[11px] font-black text-[var(--muted)]">
+                        主要保留：{family.primaryTargetSummaryZhTw}
+                      </p>
+                      <p className="mt-1 line-clamp-2 text-xs font-semibold leading-5">
+                        {family.actionSummaryZhTw}
                       </p>
                       <div className="mt-2">
                         <IvRecommendationDetails
