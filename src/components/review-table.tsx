@@ -71,7 +71,7 @@ export function ReviewTable({ issues }: { issues: Issue[] }) {
           </select>
         </label>
         <label className="text-sm">
-          <span className="mb-1 block font-bold">影響目前建議</span>
+          <span className="mb-1 block font-bold">影響層級</span>
           <select
             className={control}
             value={impact}
@@ -81,8 +81,8 @@ export function ReviewTable({ issues }: { issues: Issue[] }) {
             }}
           >
             <option value="ALL">全部</option>
-            <option value="true">會影響</option>
-            <option value="false">不影響</option>
+            <option value="true">影響家族總結</option>
+            <option value="false">僅版本或不影響</option>
           </select>
         </label>
         <label className="text-sm">
@@ -155,11 +155,13 @@ export function ReviewTable({ issues }: { issues: Issue[] }) {
                 </dd>
               </div>
               <div className="rounded-xl bg-[var(--surface-muted)] p-3">
-                <dt className="font-bold">是否影響目前建議</dt>
+                <dt className="font-bold">影響層級</dt>
                 <dd className="mt-1 leading-6 text-[var(--muted)]">
                   {issue.affectsFinalDecision
-                    ? "會；目前採保守暫時保留"
-                    : "不會；主畫面維持正式建議"}
+                    ? "影響家族總結"
+                    : issue.issueType === "UNKNOWN_RELEASE_STATUS"
+                      ? "僅影響此版本，不影響家族總結"
+                      : "不影響目前建議"}
                 </dd>
               </div>
               <div className="sm:col-span-2">

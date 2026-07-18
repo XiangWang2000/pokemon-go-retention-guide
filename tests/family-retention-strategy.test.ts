@@ -41,7 +41,7 @@ describe("家族價值與清包策略聚合", () => {
     const family = familyContaining("015-kanto");
     expect(family.familyValue).toBe("MEDIUM");
     expect(family.retentionStrategy).toBe("SELECTIVE_KEEP");
-    expect(family.primaryTargetSummaryZhTw).toBe("Mega大針蜂候選");
+    expect(family.primaryTargetSummaryZhTw).toBe("大針蜂（Mega 候選）");
     expect(findVariantSpecificUses(family.members)).toEqual(
       expect.arrayContaining([expect.objectContaining({ variantKey: "MEGA" })]),
     );

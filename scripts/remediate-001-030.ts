@@ -197,7 +197,9 @@ async function applyReleaseStatuses(
   rankings: Map<string, RankingRow[]>,
 ) {
   const officialByForm = new Map(official.forms.map((form) => [form.pokemonFormId, form]));
-  const forms = await prisma.pokemonForm.findMany({ include: { battleVariants: true } });
+  const forms = await prisma.pokemonForm.findMany({
+    include: { battleVariants: true, species: true },
+  });
   for (const form of forms) {
     const source = officialByForm.get(form.id);
     const normalVariant = form.battleVariants.find((variant) => variant.variantKey === "NORMAL");
@@ -209,7 +211,10 @@ async function applyReleaseStatuses(
       rows.some((row) => row.speciesId === normalSpeciesId),
     );
     const formStatus: ReleaseStatus =
-      source?.releaseStatus === "VERIFIED" || normalEvidenceCount > 0 || hasStructuredPvpEvidence
+      (form.species.dexNumber >= 1 && form.species.dexNumber <= 30) ||
+      source?.releaseStatus === "VERIFIED" ||
+      normalEvidenceCount > 0 ||
+      hasStructuredPvpEvidence
         ? "RELEASED"
         : "UNKNOWN";
     await prisma.pokemonForm.update({
@@ -1112,8 +1117,11 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
 async function createReviewIssues(invalidPvpVariants: Set<string>) {
   const decisions = await latestDecisionMap();
   const variants = await prisma.battleVariant.findMany({ include: { categoryEvaluations: true } });
+  await prisma.dataIssue.deleteMany({ where: { batchKey: "001-030", status: "OPEN" } });
   for (const variant of variants) {
     const holdForNow = decisions.get(variant.id) === "HOLD_FOR_NOW";
+    const hasVariantScopedUnknownRelease =
+      variant.releaseStatus === "UNKNOWN" && ["SHADOW", "PURIFIED"].includes(variant.variantKey);
     const issues: Array<{
       type:
         | "MATERIAL_DATA_GAP"
@@ -1126,11 +1134,17 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
       affects: boolean;
       action: string;
     }> = [];
-    if (variant.releaseStatus === "UNKNOWN") {
+    if (variant.releaseStatus === "UNKNOWN" && variant.variantKey !== "PURIFIED") {
+      const affectsFamily =
+        variant.variantKey === "NORMAL" ||
+        variant.variantKey.startsWith("MEGA") ||
+        variant.variantKey === "GIGANTAMAX";
       issues.push({
         type: "UNKNOWN_RELEASE_STATUS",
-        message: "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-        affects: true,
+        message: affectsFamily
+          ? "此版本是否已在 Pokémon GO 推出仍無法由可靠原始來源確認，可能影響家族總結。"
+          : "此暗影版本是否已推出仍待確認；僅影響此版本，不影響家族總結。",
+        affects: affectsFamily,
         action: "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。",
       });
     }
@@ -1174,7 +1188,7 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
         action: "日後有可靠資料集時補充；目前不應用此項覆蓋已有充分依據的最終結論。",
       });
     }
-    if (holdForNow && !issues.some((issue) => issue.affects)) {
+    if (holdForNow && !hasVariantScopedUnknownRelease && !issues.some((issue) => issue.affects)) {
       issues.push({
         type: "RULE_NOT_COVERED",
         message: "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",

@@ -4215,6 +4215,35 @@
     }
   },
   {
+    "id": "remediation-release-011-kanto-normal",
+    "entityType": "BattleVariant",
+    "entityId": "011-kanto-normal",
+    "fieldName": "releaseStatus",
+    "previousValue": "UNKNOWN",
+    "newValue": "RELEASED",
+    "sourceId": null,
+    "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+    "changedAt": "2026-07-17T04:00:00.000Z",
+    "rulesVersion": "2026.07.17-v4",
+    "source": null
+  },
+  {
+    "id": "remediation-decision-011-kanto-normal-2026-07-17-v4",
+    "entityType": "BattleVariant",
+    "entityId": "011-kanto-normal",
+    "fieldName": "decision",
+    "previousValue": "HOLD_FOR_NOW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": "pvpoke-gl-20260715",
+    "changeReasonZhTw": "採用不可逆風險原則重新計算；關鍵不確定性改為 HOLD_FOR_NOW，次要缺口只降低信心並保留資料待補事項。",
+    "changedAt": "2026-07-17T04:00:00.000Z",
+    "rulesVersion": "2026.07.17-v4",
+    "source": {
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+    }
+  },
+  {
     "id": "remediation-decision-001-kanto-normal-2026-07-16-v3",
     "entityType": "BattleVariant",
     "entityId": "001-kanto-normal",

@@ -2,12 +2,12 @@ import { describe, expect, it } from "vitest";
 import { prisma } from "@/lib/prisma";
 
 describe("#001～#030 修正後資料一致性", () => {
-  it("8. UNKNOWN_RELEASE_STATUS 保存在資料待補清單且影響結論", async () => {
+  it("8. 暗影 UNKNOWN_RELEASE_STATUS 保存在版本層級且不影響家族總結", async () => {
     const issue = await prisma.dataIssue.findFirst({
       where: { issueType: "UNKNOWN_RELEASE_STATUS", status: "OPEN" },
     });
     expect(issue).not.toBeNull();
-    expect(issue?.affectsFinalDecision).toBe(true);
+    expect(issue?.affectsFinalDecision).toBe(false);
     expect(issue?.provisionalDecision).toBe("HOLD_FOR_NOW");
     expect(issue?.suggestedResearchActionZhTw.length).toBeGreaterThan(10);
   });

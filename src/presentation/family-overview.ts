@@ -362,7 +362,7 @@ function targetDisplayName(
   if (!variantSpecificOnly) return memberNameZhTw;
   const keys = new Set(variants.map((variant) => variant.row.variantKey));
   if ([...keys].some((key) => ["MEGA", "MEGA_X", "MEGA_Y"].includes(key))) {
-    return `Mega${memberNameZhTw}候選`;
+    return `${memberNameZhTw}（Mega 候選）`;
   }
   if (keys.has("GIGANTAMAX")) return `超極巨${memberNameZhTw}`;
   if (keys.has("DYNAMAX")) return `極巨${memberNameZhTw}`;
@@ -542,7 +542,8 @@ export function buildFamilyActionSummaryZhTw({
     return `關鍵資料可能改變保留策略，目前暫時保留：${issueMessages.join("；")}`;
   }
   if (isBatchTruncated) {
-    return "最終進化目標位於本批研究範圍外，現有資料不足以安全判斷整個家族；補齊目標評估前暫時保留。";
+    const currentMembers = members.map((member) => member.form.nameZhTw).join("、");
+    return `暫時處理：${currentMembers}各保留 1 隻最佳候選；補齊末階進化評估前，暫不依 IV 大量篩除。`;
   }
   return "存在可能改變保留策略的關鍵不確定性，補齊資料前暫時保留。";
 }

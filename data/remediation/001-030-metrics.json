@@ -5,8 +5,8 @@
   "originalNeedsReviewCount": 19,
   "reclassificationCounts": {
     "KEEP": 0,
-    "CONDITIONAL_KEEP": 0,
-    "HOLD_FOR_NOW": 19,
+    "CONDITIONAL_KEEP": 1,
+    "HOLD_FOR_NOW": 18,
     "TRANSFER_CANDIDATE": 0
   },
   "holdForNowReasons": [
@@ -24,10 +24,6 @@
     },
     {
       "battleVariantId": "007-kanto-shadow",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "011-kanto-normal",
       "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
     },
     {
@@ -87,127 +83,12 @@
       "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
     }
   ],
-  "nonImpactingOpenIssueCount": 112,
-  "resolvedWithNotApplicable": 0,
-  "decidedWithDataUnavailable": 0,
+  "nonImpactingOpenIssueCount": 122,
+  "resolvedWithNotApplicable": 1,
+  "decidedWithDataUnavailable": 1,
   "resolvedByPurifiedInheritance": 9,
-  "resolvedByPracticalDecisionBasis": 0,
+  "resolvedByPracticalDecisionBasis": 1,
   "purifiedInheritedCategoryCount": 140,
   "purifiedOverrides": 5,
-  "remainingMaterialIssues": [
-    {
-      "battleVariantId": "004-kanto-shadow",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "004-kanto-purified",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "007-kanto-shadow",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "007-kanto-purified",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "011-kanto-normal",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "019-kanto-shadow",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "019-kanto-purified",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "021-kanto-shadow",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "021-kanto-purified",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "022-kanto-shadow",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "022-kanto-purified",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "023-kanto-shadow",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "023-kanto-purified",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "025-kanto-shadow",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "025-kanto-purified",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "026-kanto-shadow",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "026-kanto-purified",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "026-alola-shadow",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    },
-    {
-      "battleVariantId": "026-alola-purified",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此 BattleVariant 是否已在 Pokémon GO 推出仍無法由可靠原始來源確認。",
-      "suggestedActionZhTw": "查找 Pokémon GO 官方公告、官方新聞或可核對日期的正式推出紀錄。"
-    }
-  ]
+  "remainingMaterialIssues": []
 }

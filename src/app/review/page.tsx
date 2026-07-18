@@ -12,8 +12,7 @@ export default async function ReviewPage() {
           <h1 className="text-3xl font-black">資料待補清單</h1>
         </div>
         <p className="mt-2 max-w-4xl leading-7 text-[var(--muted)]">
-          這是供開發者與後續 Codex
-          研究維護資料的管理頁，不要求一般使用者判斷寶可夢價值。每個問題都會說明是否影響目前建議、暫定結論與下一步研究方式。
+          首頁統計以進化家族為單位；本頁每筆紀錄則以單一戰鬥版本為單位。只有標示「影響家族總結」的項目，才會改變首頁保留建議。
         </p>
       </header>
       <ReviewTable issues={issues} />

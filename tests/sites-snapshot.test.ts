@@ -58,7 +58,7 @@ describe("Sites 唯讀 snapshot", () => {
       categoryEvaluations: 1071,
       ivRecommendations: 11,
       dashboardRows: 153,
-      openReviewIssues: 131,
+      openReviewIssues: 122,
     });
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
     expect(siteSnapshotManifest.snapshotSha256).toMatch(/^[a-f0-9]{64}$/);
