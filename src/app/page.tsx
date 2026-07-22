@@ -63,7 +63,6 @@ export default async function HomePage() {
       </section>
       <EvaluationBrowser
         families={families}
-        forms={forms}
         referenceDate={siteSnapshotManifest.dataAsOf ?? "2026-07-15T00:00:00+08:00"}
       />
     </div>

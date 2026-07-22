@@ -35,12 +35,10 @@ export function matchesFamilySearch(family: FamilyOverview, query: string) {
 
 export function EvaluationBrowser({
   families,
-  forms,
   referenceDate,
   initialMode = "FAMILY",
 }: {
   families: FamilyOverview[];
-  forms: FormOverview[];
   referenceDate: string;
   initialMode?: ViewMode;
 }) {
@@ -54,6 +52,17 @@ export function EvaluationBrowser({
   const [sort, setSort] = useState("DEX_ASC");
   const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+
+  const forms = useMemo(
+    () => [
+      ...new Map(
+        families.flatMap((family) =>
+          family.members.map((member) => [member.form.formId, member.form] as const),
+        ),
+      ).values(),
+    ],
+    [families],
+  );
 
   const searchMatches = useMemo(
     () => forms.filter((form) => matchesForm(form, query)),
