@@ -15,5 +15,7 @@ export default defineConfig([
     "generated/**",
     "coverage/**",
     "prisma/migrations/**",
+    ".vinext/**",
+    ".sites/**/dist/**",
   ]),
 ]);
