@@ -14,6 +14,7 @@ interface Manifest {
   sourceDatabase: { path: string; bytes: number; sha256: string };
   counts: {
     dashboardRows: number;
+    homeFamilies: number;
     openReviewIssues: number;
     sourceReferences: number;
     changeLogs: number;
@@ -68,11 +69,14 @@ async function main() {
   );
 
   const dashboard = parsed.dashboard as unknown[];
+  const home = parsed.home as { schemaVersion: number; families: unknown[] };
   const review = parsed.review as unknown[];
   const sources = parsed.sources as unknown[];
   const changes = parsed.changes as unknown[];
   const details = parsed.details as Record<string, unknown>;
   assert(dashboard.length === manifest.counts.dashboardRows, "dashboard 筆數不一致。");
+  assert(home.schemaVersion === 1, "home snapshot schemaVersion 不支援。");
+  assert(home.families.length === manifest.counts.homeFamilies, "home 家族筆數不一致。");
   assert(review.length === manifest.counts.openReviewIssues, "資料待補清單筆數不一致。");
   assert(sources.length === manifest.counts.sourceReferences, "來源筆數不一致。");
   assert(changes.length === manifest.counts.changeLogs, "變更紀錄筆數不一致。");

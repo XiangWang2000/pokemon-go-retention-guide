@@ -18,6 +18,8 @@ import {
   getSources as getPrismaSources,
 } from "@/lib/data-prisma";
 import { prisma } from "@/lib/prisma";
+import type { HomeSnapshot } from "@/presentation/home-snapshot";
+import homeSnapshot from "../site-data/home.json";
 
 function canonicalHash(value: unknown) {
   return createHash("sha256").update(JSON.stringify(value)).digest("hex");
@@ -59,6 +61,7 @@ describe("Sites 唯讀 snapshot", () => {
       categoryEvaluations: 1071,
       ivRecommendations: 11,
       dashboardRows: 153,
+      homeFamilies: 15,
       openReviewIssues: 122,
     });
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
@@ -108,5 +111,21 @@ describe("Sites 唯讀 snapshot", () => {
     expect(response.headers.get("location")).toBe(
       "https://example.test/exports/pokemon-go-retention-001-030.xlsx",
     );
+  });
+});
+
+describe("首頁 snapshot", () => {
+  it("保留已解析 IV 建議但不重複攜帶全域規則", () => {
+    const home = homeSnapshot as unknown as HomeSnapshot;
+    const forms = home.families.flatMap((family) => family.members.map((member) => member.form));
+    const variants = forms.flatMap((form) => form.variants);
+
+    expect(home.schemaVersion).toBe(1);
+    expect(home.families).toHaveLength(15);
+    expect(forms).toHaveLength(35);
+    expect(variants).toHaveLength(153);
+    expect(variants.every((variant) => variant.row.ivRecommendations.length === 0)).toBe(true);
+    expect(forms.some((form) => form.ivRecommendations.length > 0)).toBe(true);
+    expect(variants.some((variant) => variant.ivRecommendations.length > 0)).toBe(true);
   });
 });

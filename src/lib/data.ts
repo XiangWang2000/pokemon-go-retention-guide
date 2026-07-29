@@ -1,9 +1,4 @@
-import changesSnapshot from "../../site-data/changes.json";
-import dashboardSnapshot from "../../site-data/dashboard.json";
-import detailsSnapshot from "../../site-data/details.json";
 import manifestSnapshot from "../../site-data/manifest.json";
-import reviewSnapshot from "../../site-data/review.json";
-import sourcesSnapshot from "../../site-data/sources.json";
 import type {
   PrismaChangeLogRow,
   PrismaDashboardRow,
@@ -12,16 +7,11 @@ import type {
   PrismaVariantDetailMeta,
 } from "./data-prisma";
 
-const dashboard = dashboardSnapshot as unknown as PrismaDashboardRow[];
-const details = detailsSnapshot as unknown as Record<string, PrismaVariantDetailMeta>;
-const review = reviewSnapshot as unknown as PrismaReviewIssue[];
-const sources = sourcesSnapshot as unknown as PrismaSourceRow[];
-const changes = changesSnapshot as unknown as PrismaChangeLogRow[];
-
 export const siteSnapshotManifest = manifestSnapshot;
 
 export async function getDashboardRows() {
-  return dashboard;
+  const { default: snapshot } = await import("../../site-data/dashboard.json");
+  return snapshot as unknown as PrismaDashboardRow[];
 }
 
 export type DashboardRow = PrismaDashboardRow;
@@ -33,17 +23,22 @@ export async function getVariantDetailMeta(
 ) {
   void _formId;
   void _evaluationId;
+  const { default: snapshot } = await import("../../site-data/details.json");
+  const details = snapshot as unknown as Record<string, PrismaVariantDetailMeta>;
   return details[variantId] ?? { paths: [], conflicts: [], changeLogs: [] };
 }
 
 export async function getReviewIssues() {
-  return review;
+  const { default: snapshot } = await import("../../site-data/review.json");
+  return snapshot as unknown as PrismaReviewIssue[];
 }
 
 export async function getSources() {
-  return sources;
+  const { default: snapshot } = await import("../../site-data/sources.json");
+  return snapshot as unknown as PrismaSourceRow[];
 }
 
 export async function getChangeLogs() {
-  return changes;
+  const { default: snapshot } = await import("../../site-data/changes.json");
+  return snapshot as unknown as PrismaChangeLogRow[];
 }

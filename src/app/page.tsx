@@ -1,14 +1,13 @@
 import { AlertTriangle, CheckCircle2, CircleDot, Send } from "lucide-react";
 import { EvaluationBrowser } from "@/components/evaluation-browser";
 import { DATA_VERSION, DATA_VERSION_DATE_ZH_TW } from "@/config/release";
-import { getDashboardRows, siteSnapshotManifest } from "@/lib/data";
-import { buildFamilyOverviews } from "@/presentation/family-overview";
-import { buildFormOverviews } from "@/presentation/form-overview";
+import type { HomeSnapshot } from "@/presentation/home-snapshot";
+import homeSnapshot from "../../site-data/home.json";
 
-export default async function HomePage() {
-  const rows = await getDashboardRows();
-  const forms = buildFormOverviews(rows);
-  const families = buildFamilyOverviews(forms);
+const home = homeSnapshot as unknown as HomeSnapshot;
+
+export default function HomePage() {
+  const families = home.families;
   const stats = [
     {
       label: "建議保留",
@@ -64,7 +63,7 @@ export default async function HomePage() {
       </section>
       <EvaluationBrowser
         families={families}
-        referenceDate={siteSnapshotManifest.dataAsOf ?? "2026-07-15T00:00:00+08:00"}
+        referenceDate={home.dataAsOf ?? "2026-07-15T00:00:00+08:00"}
       />
     </div>
   );

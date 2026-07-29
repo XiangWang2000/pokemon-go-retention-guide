@@ -11,6 +11,7 @@ import {
 } from "../src/lib/data-prisma";
 import { prisma } from "../src/lib/prisma";
 import { DATA_VERSION } from "../src/config/release";
+import { buildHomeSnapshot } from "../src/presentation/home-snapshot";
 
 const root = process.cwd();
 const siteDataDirectory = path.join(root, "site-data");
@@ -126,7 +127,15 @@ async function main() {
     details[row.id] = await getVariantDetailMeta(row.formId, row.id, row.evaluationId);
   }
 
+  const dataAsOf = latestIso([
+    ...dashboard.map((row) => row.updatedAt),
+    ...review.map((issue) => issue.detectedAt),
+    ...sources.map((source) => source.accessedAt),
+    ...changes.map((change) => change.changedAt),
+  ]);
+  const home = buildHomeSnapshot(dashboard, dataAsOf);
   const payloads = {
+    home: jsonBuffer(home),
     dashboard: jsonBuffer(dashboard),
     review: jsonBuffer(review),
     sources: jsonBuffer(sources),
@@ -169,12 +178,6 @@ async function main() {
   }
   const workbook = await readFile(workbookPath);
 
-  const dataAsOf = latestIso([
-    ...dashboard.map((row) => row.updatedAt),
-    ...review.map((issue) => issue.detectedAt),
-    ...sources.map((source) => source.accessedAt),
-    ...changes.map((change) => change.changedAt),
-  ]);
   const manifest = {
     schemaVersion: 1,
     batch: "001-030",
@@ -189,6 +192,7 @@ async function main() {
     counts: {
       ...counts,
       dashboardRows: dashboard.length,
+      homeFamilies: home.families.length,
       openReviewIssues: review.length,
       detailRecords: Object.keys(details).length,
     },
