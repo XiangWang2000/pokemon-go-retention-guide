@@ -1,6 +1,6 @@
 export type RuleDecision = "KEEP" | "CONDITIONAL_KEEP" | "HOLD_FOR_NOW" | "TRANSFER_CANDIDATE";
 
-export const RULES_VERSION = "2026.07.17-v4";
+export const RULES_VERSION = "2026.07.28-v5";
 
 export interface RuleDefinition {
   ruleKey: string;

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { prisma } from "@/lib/prisma";
+import { RULES_VERSION } from "@/rules/rules";
 
 describe("#001～#030 修正後資料一致性", () => {
   it("8. 暗影 UNKNOWN_RELEASE_STATUS 保存在版本層級且不影響家族總結", async () => {
@@ -90,7 +91,7 @@ describe("#001～#030 修正後資料一致性", () => {
 
   it("9. affectsFinalDecision=false 不會覆蓋正式結論", async () => {
     const evaluation = await prisma.retentionEvaluation.findFirst({
-      where: { battleVariantId: "020-kanto-shadow", rulesVersion: "2026.07.17-v4" },
+      where: { battleVariantId: "020-kanto-shadow", rulesVersion: RULES_VERSION },
     });
     const issues = await prisma.dataIssue.findMany({
       where: { battleVariantId: "020-kanto-shadow", status: "OPEN" },
@@ -101,7 +102,7 @@ describe("#001～#030 修正後資料一致性", () => {
 
   it("10. 所有資料庫 HOLD_FOR_NOW 都有具體中文理由", async () => {
     const evaluations = await prisma.retentionEvaluation.findMany({
-      where: { rulesVersion: "2026.07.17-v4", finalDecision: "HOLD_FOR_NOW" },
+      where: { rulesVersion: RULES_VERSION, finalDecision: "HOLD_FOR_NOW" },
     });
     expect(evaluations.length).toBeGreaterThan(0);
     for (const evaluation of evaluations) {

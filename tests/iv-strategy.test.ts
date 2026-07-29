@@ -42,28 +42,55 @@ describe("IV 百分比顯示", () => {
 });
 
 describe("通用 IV 門檻", () => {
-  it("9. 一般 PvE 的 15攻／96%以上標示為優先", () => {
+  it("1/2. 高價值PvE的15攻高整體IV仍是同種長期投資優先", () => {
     expect(
       evaluateIvCandidate(recommendation("PVE"), candidate({ defenseIv: 14, staminaIv: 14 })),
-    ).toMatchObject({ level: "PRIORITY", labelZhTw: "PvE：15攻／96%以上優先" });
+    ).toMatchObject({
+      level: "PRIORITY",
+      labelZhTw: "PvE：15攻高整體IV為同種長期投資優先",
+    });
   });
 
-  it("10. 一般 PvE 的 15攻／91%以上標示為條件式", () => {
+  it.each([
+    [14, 15, 15],
+    [14, 15, 14],
+  ])("1. %i/%i/%i不會只因非15攻被判定可傳", (attackIv, defenseIv, staminaIv) => {
     expect(
-      evaluateIvCandidate(recommendation("PVE"), candidate({ defenseIv: 13, staminaIv: 13 })),
-    ).toMatchObject({ level: "CONDITIONAL", labelZhTw: "PvE：15攻／91%以上可留" });
+      evaluateIvCandidate(recommendation("PVE"), candidate({ attackIv, defenseIv, staminaIv })),
+    ).toMatchObject({ level: "RECOMMENDED" });
   });
 
-  it("11. 低 PvE 價值物種不因 100% 自動取得保留理由", () => {
+  it("3/4. 15/10/10不會自動勝過14/15/15，也不虛構斷點結果", () => {
+    const lowBulkFifteen = evaluateIvCandidate(
+      recommendation("PVE"),
+      candidate({ attackIv: 15, defenseIv: 10, staminaIv: 10 }),
+    );
+    const durableFourteen = evaluateIvCandidate(
+      recommendation("PVE"),
+      candidate({ attackIv: 14, defenseIv: 15, staminaIv: 15 }),
+    );
+    expect(lowBulkFifteen.level).toBe("CONDITIONAL");
+    expect(durableFourteen.level).toBe("RECOMMENDED");
+    expect(lowBulkFifteen.labelZhTw).toContain("斷點");
+    expect(lowBulkFifteen.labelZhTw).not.toMatch(/一定優於|傷害差|%差距/);
+  });
+
+  it("5. 低 PvE 價值物種不因 100% 自動取得保留理由", () => {
     expect(
       evaluateIvCandidate(recommendation("PVE"), candidate({ hasRelevantUse: false })),
     ).toMatchObject({ level: "NOT_APPLICABLE" });
   });
 
-  it("12. Mega 使用 15攻／96%以上預設", () => {
+  it("Mega沿用不設硬性淘汰線的PvE候選順序", () => {
     expect(
       evaluateIvCandidate(recommendation("MEGA"), candidate({ defenseIv: 14, staminaIv: 14 })),
-    ).toMatchObject({ level: "PRIORITY", labelZhTw: "Mega：15攻／96%以上優先" });
+    ).toMatchObject({ level: "PRIORITY" });
+    expect(
+      evaluateIvCandidate(
+        recommendation("MEGA"),
+        candidate({ attackIv: 14, defenseIv: 15, staminaIv: 15 }),
+      ),
+    ).toMatchObject({ level: "RECOMMENDED" });
   });
 
   it("13. ML 沒有 15攻時不能只因總 IV 96% 成為最高優先", () => {
@@ -76,16 +103,19 @@ describe("通用 IV 門檻", () => {
     expect(evaluated.labelZhTw).toContain("未達15攻");
   });
 
-  it("14. 高價值暗影攻擊 13 以上可標示為建議保留", () => {
+  it("6. 高價值暗影攻擊低於13時不會自動傳送", () => {
     expect(
       evaluateIvCandidate(
         recommendation("SHADOW_PVE"),
-        candidate({ attackIv: 13, defenseIv: 0, staminaIv: 0 }),
+        candidate({ attackIv: 8, defenseIv: 0, staminaIv: 0 }),
       ),
-    ).toMatchObject({ level: "RECOMMENDED", labelZhTw: "暗影：攻擊13以上建議保留" });
+    ).toMatchObject({
+      level: "RECOMMENDED",
+      labelZhTw: "暗影：不設硬性最低IV，不得只依IV自動傳送或淨化",
+    });
   });
 
-  it("15. 高價值或稀有暗影不因總 IV 低而自動傳送", () => {
+  it("7. 高價值或唯一暗影不因低總IV建議淨化", () => {
     expect(
       evaluateIvCandidate(
         recommendation("SHADOW_PVE"),
@@ -96,7 +126,11 @@ describe("通用 IV 門檻", () => {
           isRareOrHighValueShadow: true,
         }),
       ),
-    ).toMatchObject({ level: "CONDITIONAL" });
+    ).toMatchObject({
+      level: "RECOMMENDED",
+      labelZhTw: "暗影：高價值、稀有或只有一隻時至少保留一隻",
+    });
+    expect(recommendation("SHADOW_PVE").ivRecommendationZhTw).toContain("淨化不可逆");
   });
 
   it("16. GL／UL 使用個體 PvP IV Rank，而不是總 IV 或物種排名", () => {
@@ -212,6 +246,6 @@ describe("IV 覆寫解析", () => {
     ).toBe("family");
     expect(
       resolveIvRecommendation(GLOBAL_IV_RECOMMENDATIONS, context, "PVE")?.shortIvLabelZhTw,
-    ).toBe("PvE：15攻／96%+");
+    ).toBe("PvE：15攻優先；14攻高整體IV亦可留");
   });
 });

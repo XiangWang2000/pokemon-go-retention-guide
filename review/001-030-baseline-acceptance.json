@@ -1,0 +1,166 @@
+{
+  "status": "BASELINE_ACCEPTED_WITH_NON_BLOCKING_WARNINGS",
+  "scope": {
+    "dexFrom": 1,
+    "dexTo": 30,
+    "nextBatchStarted": false
+  },
+  "versions": {
+    "dataVersion": "2026.07.28-r6",
+    "rulesVersion": "2026.07.28-v5",
+    "ivRulesVersion": "2026.07.28-v2",
+    "dataAsOf": "2026-07-28T04:00:00.000Z"
+  },
+  "fixedItems": [
+    "移除一般 PvE 的攻擊 15、總 IV 百分比硬性淘汰線，改為物種與型態、招式、等級與既有投入、斷點、同種 IV 比較的順序。",
+    "一般 PvE 主畫面改為「15攻優先；14攻高整體IV亦可留。」",
+    "暗影 PvE 改用獨立寬鬆規則，不設攻擊 13 或總 IV 硬門檻，也不因低總 IV 自動建議淨化。",
+    "移除「只要存在進化路徑就自動選擇性保留」的家族聚合邏輯。",
+    "前階沒有獨立用途時，明確顯示「前階主要作符合條件的進化候選。」",
+    "關都與阿羅拉拉達家族分開評估，兩者均允許判定為大多可傳。",
+    "巴大蝶的普通、極巨與超極巨版本分開；明確說明超極巨不能由普通或極巨前階進化取得。",
+    "資料版本、規則版本、Change Log、Sites snapshot 與 Excel 匯出同步更新。"
+  ],
+  "remaining": {
+    "fail": [],
+    "warnings": [
+      {
+        "code": "OPEN_RESEARCH_QUEUE",
+        "count": 122,
+        "blocking": false,
+        "retentionSafetyImpact": false,
+        "detail": "研究佇列仍有次要資料待補；不會覆蓋目前的可執行家族建議。"
+      },
+      {
+        "code": "SURFACED_MISSING_DATA",
+        "count": 12,
+        "blocking": false,
+        "retentionSafetyImpact": false,
+        "detail": "3 筆 PvE 補充資料與 9 筆暗影推出狀態待確認；全部 affectsFinalDecision=false。未知暗影版本只在該版本局部暫時保留，不影響家族總結。"
+      }
+    ]
+  },
+  "specialChecks": {
+    "fearow": {
+      "status": "PASS",
+      "species": "Fearow",
+      "nameZhTw": "大嘴雀",
+      "league": "Open Great League",
+      "category": "Overall",
+      "rank": 20,
+      "rating": 670,
+      "score": 90.7,
+      "pvpokeCommit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "reproducible": true,
+      "familyStrategy": "SELECTIVE_KEEP",
+      "detail": "固定 PvPoke commit 的完整結構化排名可重現大嘴雀 GL Overall #20，因此保留精確名次。"
+    },
+    "caterpie": {
+      "status": "PASS",
+      "independentUse": false,
+      "display": "綠毛蟲本體沒有獨立用途；前階主要作符合條件的進化候選。"
+    },
+    "pidgey": {
+      "status": "PASS",
+      "independentUse": false,
+      "display": "波波本體沒有獨立用途；前階主要作符合條件的進化候選。"
+    },
+    "raticateFamilies": {
+      "status": "PASS",
+      "kanto": "MOSTLY_TRANSFER",
+      "alola": "MOSTLY_TRANSFER",
+      "detail": "兩個地區家族分開顯示；缺乏明確主要 PvP、PvE、道館、Mega 或 Max 用途時，普通重複個體大多可傳。"
+    },
+    "butterfree": {
+      "status": "PASS",
+      "normal": "TRANSFER_CANDIDATE",
+      "dynamax": "CONDITIONAL_KEEP",
+      "gigantamax": "CONDITIONAL_KEEP",
+      "primaryTarget": "超極巨巴大蝶",
+      "detail": "普通、極巨與超極巨個體分列；屬性內 Max 排名與整體投資優先度是不同維度，不視為來源衝突；超極巨版本須直接取得。"
+    }
+  },
+  "ivRules": {
+    "status": "PASS",
+    "pve": {
+      "mainDisplay": "15攻優先；14攻高整體IV亦可留。",
+      "hardMinimum": false,
+      "checks": {
+        "highValue141515NotTransferred": true,
+        "highValue141514NotTransferred": true,
+        "attack15StillTieBreakPriority": true,
+        "attack151010DoesNotAutomaticallyBeat141515": true,
+        "noFabricatedBreakpointResult": true,
+        "lowPveHundoNotAutomaticallyRequired": true
+      }
+    },
+    "shadow": {
+      "mainDisplay": "暗影標準較寬；15攻優先，不設硬性最低IV。",
+      "hardMinimum": false,
+      "checks": {
+        "highValueBelowAttack13NotTransferred": true,
+        "lowTotalIvDoesNotTriggerPurification": true,
+        "rareOrOnlyCopyKeepAtLeastOne": true,
+        "purificationIrreversible": true
+      }
+    }
+  },
+  "familyStrategyStatistics": {
+    "families": 15,
+    "KEEP_TARGETS": 6,
+    "SELECTIVE_KEEP": 5,
+    "MOSTLY_TRANSFER": 3,
+    "HOLD_FOR_NOW": 1
+  },
+  "deliveryChecks": {
+    "desktop": {
+      "status": "PASS",
+      "viewport": "1280px",
+      "horizontalOverflowPx": 0,
+      "search": "PASS",
+      "filter": "PASS",
+      "familyExpansion": "PASS",
+      "internalEnglishEnumsVisible": false
+    },
+    "mobile": {
+      "status": "PASS",
+      "requestedViewport": "390px",
+      "contentViewport": "375px",
+      "horizontalOverflowPx": 0,
+      "search": "PASS",
+      "familyExpansion": "PASS"
+    },
+    "excel": {
+      "status": "PASS",
+      "sheets": 10,
+      "formulaErrors": 0,
+      "matchesWebSnapshot": true,
+      "containsPveIvText": true,
+      "containsShadowIvText": true
+    },
+    "tests": {
+      "status": "PASS",
+      "testFiles": 12,
+      "tests": 101,
+      "integrationTests": 8,
+      "requiredIvAndFamilyCases": 10
+    },
+    "dataValidation": "PASS",
+    "productionBuild": {
+      "vinext": "PASS",
+      "nextLocalFallback": "PASS"
+    },
+    "productionSite": {
+      "status": "PASS",
+      "url": "https://pokemon-go-retention-guide.wang890921.chatgpt.site/?v=20260728-r6",
+      "cacheBustingVersion": "20260728-r6",
+      "expectedDataVersion": "2026.07.28-r6"
+    }
+  },
+  "retentionSafety": {
+    "status": "PASS",
+    "blockingFailures": 0,
+    "nonBlockingWarningsAffectTransferSafety": false,
+    "conclusion": "目前 #001～#030 可安全用於一般戰鬥與實用價值的背包清理；收藏、異色、特殊造型、活動背卡與個人紀念價值仍由玩家另行判斷。"
+  }
+}

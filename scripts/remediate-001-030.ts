@@ -7,7 +7,7 @@ import { pvpokeSpeciesId } from "../src/data/batch-001-030";
 import { evaluateRetention, type EvaluationFacts } from "../src/rules/engine";
 import { RULES_VERSION } from "../src/rules/rules";
 
-const checkedAt = new Date("2026-07-17T12:00:00+08:00");
+const checkedAt = new Date("2026-07-28T12:00:00+08:00");
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
 });
@@ -721,7 +721,7 @@ async function createBaseCategoryEvaluations(
       provenance: variant.pokemonForm.species.dexNumber === 30 ? "MANUAL_CURATED" : undefined,
       material: outgoing || variant.pokemonForm.species.dexNumber === 30,
       summaryZhTw: outgoing
-        ? "已有結構化進化路徑；後續進化價值可阻止前階個體被直接判定為通常可傳送。"
+        ? "已有結構化進化路徑；是否值得保留仍由目標進化的實際用途判定，不因可進化而自動保留。"
         : variant.pokemonForm.species.dexNumber === 30
           ? "可進化成尼多后；本批保留人工整理的實用進化結論，#031 的完整原始排名與來源細節仍待後續補齊。"
           : "本批資料中沒有後續進化路徑。",
@@ -848,6 +848,57 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
       variant,
     ]);
   }
+  const variantsByFormAndKey = new Map(
+    variants.map((variant) => [`${variant.pokemonFormId}:${variant.variantKey}`, variant]),
+  );
+  const outgoingByForm = new Map(
+    variants.map((variant) => [
+      variant.pokemonFormId,
+      variant.pokemonForm.evolutionPathsFrom.map((path) => path.toFormId),
+    ]),
+  );
+
+  function hasDirectEvolutionTargetValue(
+    formId: string,
+    variantKey: (typeof variants)[number]["variantKey"],
+  ) {
+    const target = variantsByFormAndKey.get(`${formId}:${variantKey}`);
+    if (!target || target.releaseStatus !== "RELEASED") return false;
+    const pvpRows = target.rawEvaluationData.filter((row) => row.category === "PVP");
+    const pveRows = target.rawEvaluationData.filter((row) => row.category === "PVE");
+    const gymRows = target.rawEvaluationData.filter((row) => row.category === "GYM");
+    const maxRows = target.rawEvaluationData.filter((row) => row.category === "MAX_BATTLE");
+    const hasReleasedMega = (siblingVariants.get(formId) ?? []).some(
+      (sibling) => sibling.variantKey.startsWith("MEGA") && sibling.releaseStatus === "RELEASED",
+    );
+    return Boolean(
+      pvpRows.some(
+        (row) => row.league === "SPECIAL_CUP" || (row.rank !== null && row.rank <= 250),
+      ) ||
+      pveRows.some((row) => isHighTier(row.tier)) ||
+      gymRows.some((row) => row.tier === "A" || row.tier === "B") ||
+      ((variantKey === "NORMAL" || variantKey === "PURIFIED") && hasReleasedMega) ||
+      ((variantKey === "DYNAMAX" || variantKey === "GIGANTAMAX") &&
+        target.id !== "012-kanto-gigantamax" &&
+        maxRows.some((row) => /^(S|A\+?|B)$/i.test(row.tier ?? ""))),
+    );
+  }
+
+  function hasValuableDescendant(
+    formId: string,
+    variantKey: (typeof variants)[number]["variantKey"],
+  ) {
+    const seen = new Set<string>();
+    const queue = [...(outgoingByForm.get(formId) ?? [])];
+    while (queue.length) {
+      const descendantId = queue.shift()!;
+      if (seen.has(descendantId)) continue;
+      seen.add(descendantId);
+      if (hasDirectEvolutionTargetValue(descendantId, variantKey)) return true;
+      queue.push(...(outgoingByForm.get(descendantId) ?? []));
+    }
+    return false;
+  }
   await prisma.dataIssue.updateMany({
     where: { batchKey: "001-030", status: "OPEN" },
     data: { status: "RESOLVED", resolvedAt: checkedAt },
@@ -904,7 +955,7 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
     const importantMax =
       isMax && !typeSpecialistOnly && maxRows.some((row) => /^(S|A\+?|B)$/i.test(row.tier ?? ""));
     const valuableEvolution =
-      variant.pokemonForm.evolutionPathsFrom.length > 0 ||
+      hasValuableDescendant(variant.pokemonFormId, variant.variantKey) ||
       variant.pokemonForm.species.dexNumber === 30;
     const hasMaterialSource = variant.categoryEvaluations
       .filter((category) => category.materialToDecision)

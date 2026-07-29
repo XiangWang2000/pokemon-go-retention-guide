@@ -10,6 +10,7 @@ import {
   getVariantDetailMeta,
 } from "../src/lib/data-prisma";
 import { prisma } from "../src/lib/prisma";
+import { DATA_VERSION } from "../src/config/release";
 
 const root = process.cwd();
 const siteDataDirectory = path.join(root, "site-data");
@@ -177,6 +178,7 @@ async function main() {
   const manifest = {
     schemaVersion: 1,
     batch: "001-030",
+    dataVersion: DATA_VERSION,
     dataAsOf,
     sourceDatabase: {
       path: "dev.db",

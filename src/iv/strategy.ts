@@ -99,7 +99,7 @@ export interface IvResolutionContext {
   battleVariantId?: string | null;
 }
 
-export const IV_RULES_VERSION = "2026.07.18-v1";
+export const IV_RULES_VERSION = "2026.07.28-v2";
 export const GLOBAL_IV_SCOPE_KEY = "GLOBAL";
 
 function globalRecommendation(
@@ -139,22 +139,17 @@ function globalRecommendation(
  */
 export const GLOBAL_IV_RECOMMENDATIONS: readonly IvRecommendation[] = [
   globalRecommendation("PVE", "PVE_ATTACKER", {
-    attackIvMin: 15,
     attackIvPriority: 15,
-    totalIvPercentMin: 91.1,
-    totalIvPercentPriority: 95.6,
     ivRecommendationZhTw:
-      "PvE：15攻／96%以上優先；15攻／91%以上可留；14攻／96%以上為次選。低於91%或攻擊13以下，不能只靠IV成為保留理由。",
-    shortIvLabelZhTw: "PvE：15攻／96%+",
+      "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
+    shortIvLabelZhTw: "PvE：15攻優先；14攻高整體IV亦可留",
   }),
   globalRecommendation("MEGA", "MEGA_ATTACKER", {
-    attackIvMin: 15,
     attackIvPriority: 15,
-    totalIvPercentMin: 91.1,
-    totalIvPercentPriority: 95.6,
     recommendedQuantity: 1,
-    ivRecommendationZhTw: "Mega：15攻／96%以上優先；15攻／91%以上可先留。通常只需保留少量候選。",
-    shortIvLabelZhTw: "Mega：15攻／96%+",
+    ivRecommendationZhTw:
+      "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+    shortIvLabelZhTw: "Mega：15攻優先；14攻高整體IV亦可留",
   }),
   globalRecommendation("MASTER_LEAGUE", "MASTER_LEAGUE", {
     attackIvMin: 15,
@@ -180,11 +175,10 @@ export const GLOBAL_IV_RECOMMENDATIONS: readonly IvRecommendation[] = [
     shortIvLabelZhTw: "UL：Rank≤100",
   }),
   globalRecommendation("SHADOW_PVE", "SHADOW_PVE", {
-    attackIvMin: 13,
     attackIvPriority: 15,
     ivRecommendationZhTw:
-      "暗影：15攻優先，攻擊13以上建議保留；攻擊10～12依稀有度、數量、招式與既有投入條件式保留。不得只因總IV低而建議淨化或傳送。",
-    shortIvLabelZhTw: "暗影：攻擊13+，15優先",
+      "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+    shortIvLabelZhTw: "暗影標準較寬；15攻優先，不設硬性最低IV",
   }),
   globalRecommendation("GYM_DEFENSE", "GYM_DEFENDER", {
     ivRecommendationZhTw: "道館：不設固定IV門檻；同物種比較時再參考既有等級、CP、防禦、HP與總IV。",
@@ -305,12 +299,14 @@ export function evaluateIvCandidate(
     case "MEGA_ATTACKER": {
       const prefix = recommendation.ivStrategyKey === "MEGA_ATTACKER" ? "Mega：" : "PvE：";
       if (candidate.attackIv === 15 && total >= 95.6)
-        return result(candidate, "PRIORITY", `${prefix}15攻／96%以上優先`);
-      if (candidate.attackIv === 15 && total >= 91.1)
-        return result(candidate, "CONDITIONAL", `${prefix}15攻／91%以上可留`);
+        return result(candidate, "PRIORITY", `${prefix}15攻高整體IV為同種長期投資優先`);
       if (candidate.attackIv === 14 && total >= 95.6)
-        return result(candidate, "SECONDARY", `${prefix}14攻／96%以上次選`);
-      return result(candidate, "INSUFFICIENT", `${prefix}不能只靠目前IV成為保留理由`);
+        return result(candidate, "RECOMMENDED", `${prefix}14攻高整體IV亦可留，不得只因非15攻淘汰`);
+      return result(
+        candidate,
+        "CONDITIONAL",
+        `${prefix}先比較招式、等級／CP、既有投入與斷點；IV不設硬性淘汰線`,
+      );
     }
 
     case "MASTER_LEAGUE":
@@ -340,14 +336,10 @@ export function evaluateIvCandidate(
 
     case "SHADOW_PVE":
       if (candidate.attackIv === 15) return result(candidate, "PRIORITY", "暗影：15攻優先");
-      if (candidate.attackIv >= 13)
-        return result(candidate, "RECOMMENDED", "暗影：攻擊13以上建議保留");
-      if (candidate.attackIv >= 10)
-        return result(candidate, "CONDITIONAL", "暗影：攻擊10～12依稀有度與替代品條件式保留");
       if (candidate.isRareOrHighValueShadow || candidate.isOnlyAvailableCopy) {
-        return result(candidate, "CONDITIONAL", "暗影IV偏低，但高價值或稀有，建議至少保留一隻");
+        return result(candidate, "RECOMMENDED", "暗影：高價值、稀有或只有一隻時至少保留一隻");
       }
-      return result(candidate, "INSUFFICIENT", "暗影：IV偏低，但不能只依IV自動傳送或淨化");
+      return result(candidate, "RECOMMENDED", "暗影：不設硬性最低IV，不得只依IV自動傳送或淨化");
 
     case "GYM_DEFENDER":
       return result(candidate, "RECOMMENDED", "道館：不設固定IV門檻");

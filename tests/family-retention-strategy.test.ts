@@ -30,11 +30,15 @@ function cloneForm(form: FormOverview, changes: Partial<FormOverview>): FormOver
 }
 
 describe("家族價值與清包策略聚合", () => {
-  it("1/2. 單純存在進化路徑且所有成員用途低，不會自動選擇性保留", () => {
-    const family = familyContaining("019-kanto");
-    expect(family.members.some((member) => member.roles.includes("EVOLUTION_MATERIAL"))).toBe(true);
-    expect(family.familyValue).toBe("LOW");
-    expect(family.retentionStrategy).toBe("MOSTLY_TRANSFER");
+  it("8/10. 單純存在進化路徑且所有成員用途低，不會自動選擇性保留", () => {
+    for (const formId of ["019-kanto", "019-alola"]) {
+      const family = familyContaining(formId);
+      expect(family.members.some((member) => member.roles.includes("EVOLUTION_MATERIAL"))).toBe(
+        true,
+      );
+      expect(family.familyValue).toBe("LOW");
+      expect(family.retentionStrategy).toBe("MOSTLY_TRANSFER");
+    }
   });
 
   it("3. 只有 Mega 候選有價值時為 MEDIUM＋SELECTIVE_KEEP", () => {
@@ -54,17 +58,33 @@ describe("家族價值與清包策略聚合", () => {
     expect(family.primaryTargetSummaryZhTw).toBe("大比鳥");
   });
 
-  it("5. 前階只作進化素材時不會被視為獨立用途或保留目標", () => {
-    const family = familyContaining("018-kanto");
-    const pidgey = family.members.find((member) => member.form.formId === "016-kanto")!;
-    expect(pidgey.roles).toContain("EVOLUTION_MATERIAL");
-    expect(pidgey.hasIndependentUse).toBe(false);
-    expect(findIndependentMemberUses(family.members).map((item) => item.formId)).not.toContain(
-      pidgey.form.formId,
+  it("9. 綠毛蟲與波波前階只作進化候選，不會被視為獨立用途", () => {
+    for (const formId of ["010-kanto", "016-kanto"]) {
+      const family = familyContaining(formId);
+      const member = family.members.find((item) => item.form.formId === formId)!;
+      expect(member.roles).toContain("EVOLUTION_MATERIAL");
+      expect(member.hasIndependentUse).toBe(false);
+      expect(member.memberSummaryZhTw).toContain("前階主要作符合條件的進化候選。");
+      expect(findIndependentMemberUses(family.members).map((item) => item.formId)).not.toContain(
+        member.form.formId,
+      );
+      expect(findPrimaryRetentionTargets(family.members).map((item) => item.formId)).not.toContain(
+        member.form.formId,
+      );
+    }
+  });
+
+  it("巴大蝶普通、極巨與超極巨分開，超極巨不能由前階替代", () => {
+    const family = familyContaining("012-kanto");
+    const butterfree = family.members.find((member) => member.form.formId === "012-kanto")!;
+    expect(butterfree.form.variants.map((variant) => variant.row.variantKey)).toEqual(
+      expect.arrayContaining(["NORMAL", "DYNAMAX", "GIGANTAMAX"]),
     );
-    expect(findPrimaryRetentionTargets(family.members).map((item) => item.formId)).not.toContain(
-      pidgey.form.formId,
-    );
+    expect(family.primaryTargetSummaryZhTw).toBe("超極巨巴大蝶");
+    expect(family.megaMax.detail).toContain("超極巨版本須直接取得");
+    expect(family.megaMax.detail).toContain("極巨前階只能進化為極巨候選");
+    expect(family.actionSummaryZhTw).toContain("超極巨個體不能由普通或極巨前階進化取得");
+    expect(family.notices.join(" ")).toContain("超極巨個體不能由普通或極巨前階替代");
   });
 
   it("6/7. 小個體與中間進化的獨立 PvP 用途會同時保留在家族摘要", () => {

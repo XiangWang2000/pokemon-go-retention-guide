@@ -422,7 +422,7 @@ function buildIvDirection(row: DashboardRow, recommendations: IvRecommendation[]
     return recommendations.map((item) => item.ivRecommendationZhTw).join("；");
   }
   if (hasEvolutionValue([row])) {
-    return "依目標進化結果套用 GL／UL 個體Rank、PvE／Mega攻擊IV或Max角色門檻。";
+    return "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。";
   }
   if (row.decision === "HOLD_FOR_NOW") return "先保留一隻；關鍵用途確認前不以IV篩除。";
   if (row.decision === "TRANSFER_CANDIDATE") {
@@ -471,8 +471,9 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
       : `依已確認用途挑選個體；${heldVariants}版本關鍵資料未確認，先暫時保留。`;
   }
   if (decision === "TRANSFER_CANDIDATE") return "一般重複個體通常可傳送。";
-  if (onlyShadow) return "普通版用途有限；暗影版以攻擊13以上為保留線，15攻優先。";
-  if (onlyMega) return "普通重複個體通常可傳送；留一隻15攻／96%以上個體作 Mega。";
+  if (onlyShadow) return "普通版用途有限；暗影標準較寬，15攻優先，不設硬性最低IV。";
+  if (onlyMega)
+    return "普通重複個體通常可傳送；Mega候選先看招式與既有投入，15攻優先，14攻高整體IV亦可留。";
   if (onlyMax) return "只留可極巨版本；一般舊個體不具 Max 能力。";
   if (evolutionOnly) return "本體用途有限；依目標進化結果的數字門檻保留個體。";
   if (
@@ -486,9 +487,11 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
   }
   const hasPvp = ["HIGH", "MEDIUM", "SPECIAL"].includes(pvp.tone);
   const hasPve = ["HIGH", "MEDIUM"].includes(pve.tone);
-  if (hasPvp && hasPve) return "PvP看目標聯盟個體Rank≤100；PvE以15攻／96%以上優先。";
+  if (hasPvp && hasPve)
+    return "PvP看目標聯盟個體Rank；PvE先看招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留。";
   if (hasPvp) return "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。";
-  if (hasPve) return "具有PvE用途時，以15攻／96%以上及正確招式優先。";
+  if (hasPve)
+    return "具有PvE用途時先看正確招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。";
   if (assessed.some((row) => ["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(row.gymRating))) {
     return "僅需保留一隻作道館守軍。";
   }
@@ -501,7 +504,7 @@ function buildVariantShortReason(row: DashboardRow, uses: string[]) {
   if (uses.includes("後續進化") && uses.length === 1) return "主要價值來自後續進化，不是本體戰力。";
   if (row.variantKey === "SHADOW") return "暗影版需獨立判斷，淨化前先確認用途。";
   if (row.variantKey.startsWith("MEGA"))
-    return "作為 Mega 候選，通常只需保留一隻15攻／96%以上個體。";
+    return "作為 Mega 候選，通常只需少量；15攻優先，14攻高整體IV亦可留。";
   if (["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey)) {
     return "只有具 Max 能力的個體適用，一般舊個體不能替代。";
   }

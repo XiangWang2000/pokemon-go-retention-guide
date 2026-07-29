@@ -204,17 +204,18 @@ function recommendedIvStrategy(facts: EvaluationFacts, finalDecision: RuleDecisi
     return "不要套用固定0/15/15；指定聯盟的個體PvP IV Rank≤100或PR≥97.5%優先。";
   }
   if (facts.shadowPveAdvantage)
-    return "暗影：攻擊13以上建議保留，15攻優先；攻擊10～12依稀有度與替代品條件式保留。";
+    return "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化。";
   if (facts.importantMega || facts.megaCandidateOnly)
-    return "Mega：15攻／96%以上優先，15攻／91%以上可先留；通常只需一隻主要候選。";
+    return "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。";
   if (facts.importantMaxBattle || facts.maxCandidateOnly)
     return "只保留可極巨化／超極巨化版本；攻擊手15攻優先，坦克看防禦／HP，支援依物種門檻。";
   if (facts.majorPvpValue || facts.specialCupOnly || facts.requiresSpecificIv) {
     return "GL／UL個體PvP IV Rank≤100或PR≥97.5%優先；ML以15攻／98%以上優先。只有物種有用途時門檻才生效。";
   }
   if (facts.valuableEvolution)
-    return "依目標進化結果挑選：GL／UL看個體Rank≤100；PvE／Mega以15攻／96%以上優先；Max依角色分開。";
-  if (facts.highPveValue) return "PvE：15攻／96%以上優先；15攻／91%以上可留；14攻／96%以上為次選。";
+    return "依目標進化結果挑選：GL／UL看個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。";
+  if (facts.highPveValue)
+    return "PvE：先看物種與型態、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。";
   if (facts.limitedGymUse || facts.highGymValue)
     return "道館不設固定IV門檻；同物種比較時優先已高等級、高CP及較高防禦／HP的個體。";
   if (finalDecision === "TRANSFER_CANDIDATE")

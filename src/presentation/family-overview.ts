@@ -229,7 +229,7 @@ export function buildFamilyMemberSummaries(graph: ComponentGraph): FamilyMemberS
           .map((role) => roleLabel[role])
           .join("、")}；請依用途分開挑選個體。`
       : roles.includes("EVOLUTION_MATERIAL")
-        ? `${form.nameZhTw}主要作進化素材；只保留符合目標進化結果數字門檻的個體。`
+        ? `${form.nameZhTw}本體沒有獨立用途；前階主要作符合條件的進化候選。`
         : `${form.nameZhTw}目前沒有獨立戰鬥用途，100%也不會自動改變物種結論。`;
     return {
       form,
@@ -301,6 +301,13 @@ export function buildFamilyMegaMaxOverview(members: FamilyMemberSummary[]): Comp
       label: "Max：限定用途",
       detail: `${best.form.nameZhTw}有獨立Max用途`,
       tone: "SPECIAL",
+    };
+  }
+  if (best.form.megaMax.label.includes("超極巨")) {
+    return {
+      label: best.form.megaMax.label,
+      detail: `${best.form.nameZhTw}的超極巨版本須直接取得；極巨前階只能進化為極巨候選`,
+      tone: best.form.megaMax.tone,
     };
   }
   return {
@@ -442,16 +449,6 @@ export function calculateFamilyValue(
       }),
     ),
   );
-  const hasHighPvp = members.some(
-    (member) =>
-      member.form.pvp.tone === "HIGH" &&
-      member.form.variants.some(
-        (variant) =>
-          variant.row.variantKey === "NORMAL" &&
-          isUsefulVariant(variant) &&
-          variant.primaryUseKeys.some((key) => normalizedUseKey(key) === "PVP"),
-      ),
-  );
   const hasHighNormalPve = members.some(
     (member) =>
       member.form.pve.tone === "HIGH" &&
@@ -487,7 +484,7 @@ function buildPreEvolutionActionZhTw(
   );
   if (!materials.length) return "沒有僅作進化素材的前階成員。";
   if (!targets.length) return "前階不因可以進化而自動保留。";
-  return `${materials.map((member) => member.form.nameZhTw).join("、")}只留符合主要目標條件的進化候選。`;
+  return "前階主要作符合條件的進化候選。";
 }
 
 export function buildMemberActionSummaryZhTw(
@@ -503,9 +500,7 @@ export function buildMemberActionSummaryZhTw(
   }
   if (member.roles.includes("EVOLUTION_MATERIAL")) {
     if (targets.length) {
-      return `${member.form.nameZhTw}只作進化候選；僅保留可進化為${targets
-        .map((item) => item.memberNameZhTw)
-        .join("、")}且符合目標條件的個體。`;
+      return `${member.form.nameZhTw}本體沒有獨立用途；前階主要作符合條件的進化候選。`;
     }
     return `${member.form.nameZhTw}雖可進化，但目前沒有已確認的主要保留目標；普通重複個體大多可傳。`;
   }
@@ -527,12 +522,21 @@ export function buildFamilyActionSummaryZhTw({
 }) {
   const targetNames = targets.map((target) => target.displayNameZhTw).join("、");
   const preEvolution = buildPreEvolutionActionZhTw(members, targets);
+  const hasGigantamaxOnlyTarget = targets.some(
+    (target) =>
+      target.variantSpecificOnly &&
+      target.variantKeys.length > 0 &&
+      target.variantKeys.every((key) => key === "GIGANTAMAX"),
+  );
+  const variantBoundary = hasGigantamaxOnlyTarget
+    ? "超極巨個體不能由普通或極巨前階進化取得；須保留超極巨版本本身。"
+    : "";
   const iv = ivShortLabels.length ? `IV：${ivShortLabels.slice(0, 3).join("；")}。` : "";
   if (strategy === "KEEP_TARGETS") {
-    return `主要保留${targetNames}；${preEvolution}${iv}`;
+    return `主要保留${targetNames}；${preEvolution}${variantBoundary}${iv}`;
   }
   if (strategy === "SELECTIVE_KEEP") {
-    return `主要保留${targetNames}；價值集中於特定版本或條件。${preEvolution}其餘普通重複個體大多可傳。${iv}`;
+    return `主要保留${targetNames}；價值集中於特定版本或條件。${preEvolution}${variantBoundary}其餘普通重複個體大多可傳。${iv}`;
   }
   if (strategy === "MOSTLY_TRANSFER") {
     return "家族目前沒有明確主要PvP、PvE、Mega、Max或道館用途；排除收藏價值後，普通重複個體大多可傳。";
@@ -659,6 +663,16 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
   if (independentSmall) notices.push("小個體有獨立PvP用途，不要將最好的個體全部進化");
   if (independentMiddle) notices.push("中間進化有獨立PvP用途，不要將最好的個體全部進化");
   if (terminals.length > 1) notices.push(`具有${terminals.length}個進化分支，應分別保留目標個體`);
+  if (
+    primaryRetentionTargets.some(
+      (target) =>
+        target.variantSpecificOnly &&
+        target.variantKeys.length > 0 &&
+        target.variantKeys.every((key) => key === "GIGANTAMAX"),
+    )
+  ) {
+    notices.push("超極巨個體不能由普通或極巨前階替代，必須保留超極巨版本本身");
+  }
   if (heldNames.length) notices.push(`${unique(heldNames).join("、")}仍有暫時保留版本`);
 
   return {

@@ -48,13 +48,14 @@ describe("Sites 唯讀 snapshot", () => {
   });
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
+    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.07.28-r6");
     expect(siteSnapshotManifest.counts).toMatchObject({
       pokemonSpecies: 30,
       pokemonForms: 35,
       battleVariants: 153,
       rawEvaluationData: 123,
       sourceReferences: 107,
-      retentionEvaluations: 612,
+      retentionEvaluations: 765,
       categoryEvaluations: 1071,
       ivRecommendations: 11,
       dashboardRows: 153,
