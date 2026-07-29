@@ -176,3 +176,27 @@ describe("家族價值與清包策略聚合", () => {
     }
   });
 });
+
+describe("家族直接處理結論", () => {
+  it("高價值家族直接列出聯盟、特殊版本與普通重複處理方式", () => {
+    const family = familyContaining("003-kanto");
+    expect(family.handlingSummaryZhTw).toContain("GL／UL 排名佳個體");
+    expect(family.handlingSummaryZhTw).toContain("PvE 候選");
+    expect(family.handlingSummaryZhTw).toContain("Mega 候選");
+    expect(family.handlingSummaryZhTw).toContain("超極巨版本本身");
+    expect(family.handlingSummaryZhTw).toContain("暗影版不設硬性 IV 下限");
+    expect(family.handlingSummaryZhTw).toContain("其他普通重複可傳");
+  });
+
+  it("限定版本家族不會把普通或極巨版本誤列為主要目標", () => {
+    const family = familyContaining("012-kanto");
+    expect(family.handlingSummaryZhTw).toContain("只留巴大蝶（超極巨版本本身）");
+    expect(family.handlingSummaryZhTw).not.toContain("極巨候選");
+    expect(family.handlingSummaryZhTw).toContain("其他普通重複可傳");
+  });
+
+  it("低價值與資料未完整家族給出相反且安全的清包動作", () => {
+    expect(familyContaining("020-kanto").handlingSummaryZhTw).toContain("普通重複可直接傳送");
+    expect(familyContaining("030-kanto").handlingSummaryZhTw).toContain("先不要大量傳送");
+  });
+});

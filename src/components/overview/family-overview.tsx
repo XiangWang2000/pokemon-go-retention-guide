@@ -1,18 +1,17 @@
 import { Fragment } from "react";
-import { AlertTriangle } from "lucide-react";
+import { AlertTriangle, CircleCheckBig, CirclePause, SearchCheck, Send } from "lucide-react";
 import type { FamilyOverview as FamilyOverviewModel } from "@/presentation/family-overview";
 import { CompactRating } from "./compact-rating";
 import { FamilyIdentityCell } from "./family-identity-cell";
 import { FamilyMemberPanel } from "./family-member-panel";
-import { FamilyRetentionStrategyBadge, FamilyValueBadge } from "./family-strategy-badges";
 import { VariantBadges } from "./variant-badges";
 
 const useLabels: Record<string, string> = {
-  GREAT_LEAGUE: "GL",
-  ULTRA_LEAGUE: "UL",
-  MASTER_LEAGUE: "ML",
-  PVE: "PvE",
-  SHADOW_PVE: "暗影 PvE",
+  GREAT_LEAGUE: "GL（超級聯盟）",
+  ULTRA_LEAGUE: "UL（高級聯盟）",
+  MASTER_LEAGUE: "ML（大師聯盟）",
+  PVE: "PvE（團體戰）",
+  SHADOW_PVE: "暗影 PvE（團體戰）",
   GYM_DEFENSE: "道館",
   MEGA: "Mega",
   MAX_ATTACK: "Max 攻擊",
@@ -30,6 +29,88 @@ const variantLabels: Record<string, string> = {
   DYNAMAX: "極巨",
   GIGANTAMAX: "超極巨",
 };
+
+const handlingMeta = {
+  KEEP_TARGETS: {
+    label: "先留再篩",
+    icon: CircleCheckBig,
+    containerClass: "border-emerald-600 bg-emerald-500/10",
+    labelClass: "text-emerald-700 dark:text-emerald-300",
+  },
+  SELECTIVE_KEEP: {
+    label: "只留符合條件者",
+    icon: SearchCheck,
+    containerClass: "border-blue-600 bg-blue-500/10",
+    labelClass: "text-blue-700 dark:text-blue-300",
+  },
+  MOSTLY_TRANSFER: {
+    label: "可直接清理",
+    icon: Send,
+    containerClass: "border-slate-500 bg-slate-500/10",
+    labelClass: "text-slate-700 dark:text-slate-200",
+  },
+  HOLD_FOR_NOW: {
+    label: "先不要傳",
+    icon: CirclePause,
+    containerClass: "border-amber-600 bg-amber-500/10",
+    labelClass: "text-amber-800 dark:text-amber-200",
+  },
+} as const;
+
+function FamilyHandlingConclusion({
+  family,
+  compact = false,
+}: {
+  family: FamilyOverviewModel;
+  compact?: boolean;
+}) {
+  const { label, icon: Icon, containerClass, labelClass } = handlingMeta[family.retentionStrategy];
+  return (
+    <section
+      data-testid="family-handling-summary"
+      aria-label={`${family.familyNameZhTw}處理結論`}
+      className={`rounded-xl border-l-4 p-3 ${containerClass}`}
+    >
+      <p className={`flex items-center gap-1.5 text-xs font-black tracking-wide ${labelClass}`}>
+        <Icon aria-hidden size={16} />
+        {label}
+      </p>
+      <p
+        className={`mt-1 font-black text-[var(--foreground)] ${
+          compact ? "text-[15px] leading-6" : "text-lg leading-7"
+        }`}
+      >
+        {family.handlingSummaryZhTw}
+      </p>
+    </section>
+  );
+}
+
+function FamilyTermGlossary() {
+  const terms = [
+    ["GL", "超級聯盟，CP 上限 1500"],
+    ["UL", "高級聯盟，CP 上限 2500"],
+    ["Rank", "同物種同聯盟的 IV 排名，數字越小越前"],
+    ["PvE", "團體戰與道館攻擊"],
+  ];
+  return (
+    <aside
+      aria-label="常用術語速查"
+      data-testid="family-term-glossary"
+      className="surface rounded-2xl px-4 py-3"
+    >
+      <p className="text-xs font-black text-[var(--muted)]">術語速查</p>
+      <dl className="mt-2 flex flex-wrap gap-x-5 gap-y-2 text-xs leading-5">
+        {terms.map(([term, meaning]) => (
+          <div key={term} className="flex gap-1.5">
+            <dt className="font-black text-[var(--foreground)]">{term}</dt>
+            <dd className="text-[var(--muted)]">＝{meaning}</dd>
+          </div>
+        ))}
+      </dl>
+    </aside>
+  );
+}
 
 function primaryUseSummary(family: FamilyOverviewModel) {
   if (!family.primaryRetentionTargets.length) return "未列為主要保留理由";
@@ -118,24 +199,24 @@ export function FamilyOverview({
 
   return (
     <>
-      <div className="space-y-4 lg:hidden" data-mobile-layout="family-cards">
+      <FamilyTermGlossary />
+
+      <div className="mt-4 space-y-4 lg:hidden" data-mobile-layout="family-cards">
         {families.map((family) => {
           const expanded = expandedFamilies.has(family.familyId);
           const controlsId = `family-mobile-${family.familyId}`;
           return (
             <article key={family.familyId} className="surface overflow-hidden rounded-2xl">
               <div className="p-4 sm:p-5">
-                <div className="flex flex-wrap items-start justify-between gap-3">
+                <FamilyHandlingConclusion family={family} />
+
+                <div className="mt-4">
                   <FamilyIdentityCell
                     family={family}
                     expanded={expanded}
                     onToggle={() => onToggleFamily(family.familyId)}
                     controlsId={controlsId}
                   />
-                  <div className="flex flex-wrap items-center justify-end gap-2">
-                    <FamilyValueBadge value={family.familyValue} />
-                    <FamilyRetentionStrategyBadge strategy={family.retentionStrategy} prominent />
-                  </div>
                 </div>
 
                 <dl className="mt-4 grid gap-3 lg:grid-cols-2">
@@ -157,7 +238,6 @@ export function FamilyOverview({
                   </div>
                 </dl>
 
-                <p className="mt-3 text-sm font-semibold leading-6">{family.actionSummaryZhTw}</p>
                 {family.hasCriticalDataIssues ? (
                   <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-black text-amber-700 dark:text-amber-300">
                     <AlertTriangle aria-hidden size={15} /> 關鍵資料待確認
@@ -191,33 +271,40 @@ export function FamilyOverview({
       </div>
 
       <div
-        className="surface hidden overflow-visible rounded-2xl lg:block"
+        className="surface mt-4 hidden overflow-visible rounded-2xl lg:block"
         data-testid="family-overview-table"
       >
         <table className="w-full table-fixed border-collapse text-left text-sm">
           <colgroup>
             <col className="w-[15%]" />
-            <col className="w-[12%]" />
             <col className="w-[10%]" />
+            <col className="w-[9%]" />
+            <col className="w-[9%]" />
             <col className="w-[10%]" />
-            <col className="w-[11%]" />
-            <col className="w-[8%]" />
-            <col className="w-[11%]" />
-            <col className="w-[23%]" />
+            <col className="w-[7%]" />
+            <col className="w-[10%]" />
+            <col className="w-[30%]" />
           </colgroup>
           <thead className="sticky top-16 z-30 bg-[var(--surface-muted)] text-xs tracking-wide text-[var(--muted)]">
             <tr>
-              {["家族", "成員", "可用版本", "PvP", "PvE", "道館", "Mega／Max", "最終建議／IV"].map(
-                (heading, index) => (
-                  <th
-                    key={heading}
-                    scope="col"
-                    className={`border-b px-3 py-3 font-black ${index === 0 ? "sticky left-0 z-40 bg-[var(--surface-muted)]" : ""}`}
-                  >
-                    {heading}
-                  </th>
-                ),
-              )}
+              {[
+                "家族",
+                "成員",
+                "可用版本",
+                "PvP",
+                "PvE",
+                "道館",
+                "Mega／Max",
+                "先怎麼處理／IV",
+              ].map((heading, index) => (
+                <th
+                  key={heading}
+                  scope="col"
+                  className={`border-b px-3 py-3 font-black ${index === 0 ? "sticky left-0 z-40 bg-[var(--surface-muted)]" : ""}`}
+                >
+                  {heading}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
@@ -256,18 +343,9 @@ export function FamilyOverview({
                       <CompactRating overview={family.megaMax} />
                     </td>
                     <td className="px-3 py-2">
-                      <div className="flex flex-wrap gap-1.5">
-                        <FamilyValueBadge value={family.familyValue} />
-                        <FamilyRetentionStrategyBadge
-                          strategy={family.retentionStrategy}
-                          prominent
-                        />
-                      </div>
+                      <FamilyHandlingConclusion family={family} compact />
                       <p className="mt-2 text-[11px] font-black text-[var(--muted)]">
                         主要保留：{family.primaryTargetSummaryZhTw}
-                      </p>
-                      <p className="mt-1 line-clamp-2 text-xs font-semibold leading-5">
-                        {family.actionSummaryZhTw}
                       </p>
                       <div className="mt-2">
                         <FamilyIvSummary family={family} />

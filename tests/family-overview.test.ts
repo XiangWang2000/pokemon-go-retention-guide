@@ -155,8 +155,20 @@ describe("家族總覽 UI", () => {
     expect(html).toContain('data-testid="family-overview-table"');
     expect(html).toContain('data-mobile-layout="family-cards"');
     expect(html).not.toContain("min-w-[");
-    expect(html).toContain("用途廣度：高");
-    expect(html).toContain("建議保留");
+    expect(html).not.toContain("用途廣度：高");
+    expect(html).not.toContain("建議保留");
+    expect(html).toContain('data-testid="family-handling-summary"');
+    expect(html).toContain("先留再篩");
+    expect(html).toContain("其他普通重複可傳");
+    expect(html).toContain("text-lg leading-7");
+    expect(html.indexOf('data-testid="family-handling-summary"')).toBeLessThan(
+      html.indexOf('aria-label="展開妙蛙花家族成員"'),
+    );
+    expect(html).toContain('data-testid="family-term-glossary"');
+    expect(html).toContain("GL");
+    expect(html).toContain("超級聯盟，CP 上限 1500");
+    expect(html).toContain("Rank");
+    expect(html).toContain("同物種同聯盟的 IV 排名");
     expect(html).toContain("主要留");
     expect(html).toContain("妙蛙花");
     for (const vagueText of ["高攻個體", "高 IV", "高品質個體", "好的 PvP IV", "適合對戰的個體"]) {
