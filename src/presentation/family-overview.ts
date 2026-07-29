@@ -553,25 +553,36 @@ export function buildFamilyActionSummaryZhTw({
   return "存在可能改變保留策略的關鍵不確定性，補齊資料前暫時保留。";
 }
 
-function targetHandlingParts(target: FamilyRetentionTarget) {
+function targetHandlingParts(target: FamilyRetentionTarget, members: FamilyMemberSummary[]) {
   const uses = new Set(target.useKeys);
   const variants = new Set(target.variantKeys);
   const parts: string[] = [];
-  const leagues = [
-    uses.has("GREAT_LEAGUE") ? "GL" : null,
-    uses.has("ULTRA_LEAGUE") ? "UL" : null,
-  ].filter((value): value is string => Boolean(value));
+  const member = members.find((item) => item.form.formId === target.formId);
+  const leagueRecommendations = ["GREAT_LEAGUE", "ULTRA_LEAGUE"]
+    .filter((useKey) => uses.has(useKey))
+    .map((useKey) => {
+      const recommendation = member?.ivRecommendations.find(
+        (item) => item.primaryUseKey === useKey,
+      );
+      return (
+        recommendation?.shortIvLabelZhTw.replace("：", " ") ??
+        (useKey === "GREAT_LEAGUE" ? "GL 排名佳" : "UL 排名佳")
+      );
+    })
+    .filter((value): value is string => Boolean(value));
 
-  if (leagues.length) parts.push(`${leagues.join("／")} 排名佳個體`);
+  if (leagueRecommendations.length) {
+    parts.push(`PvP（${leagueRecommendations.join("、")}）`);
+  }
   if (uses.has("MASTER_LEAGUE")) parts.push("ML 高 IV 投資候選");
-  if (uses.has("PVE") || uses.has("SHADOW_PVE")) parts.push("PvE 候選");
+  if (uses.has("PVE") || uses.has("SHADOW_PVE")) parts.push("PvE 實戰候選");
   if (uses.has("GYM_DEFENSE")) parts.push("道館防守候選");
   if ([...variants].some((key) => ["MEGA", "MEGA_X", "MEGA_Y"].includes(key))) {
     parts.push("Mega 候選");
   }
   if (variants.has("DYNAMAX")) parts.push("極巨候選");
   if (variants.has("GIGANTAMAX")) parts.push("超極巨版本本身");
-  if (variants.has("SHADOW")) parts.push("暗影版");
+  if (variants.has("SHADOW")) parts.push("有用途的暗影版");
 
   return `${target.memberNameZhTw}（${parts.join("、") || "符合條件個體"}）`;
 }
@@ -597,15 +608,13 @@ export function buildFamilyHandlingSummaryZhTw({
     return "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。";
   }
 
-  const targetText = targets.map(targetHandlingParts).join("，以及");
+  const targetText = targets.map((target) => targetHandlingParts(target, members)).join("，以及");
   const hasEvolutionOnlyMember = members.some(
     (member) => member.roles.includes("EVOLUTION_MATERIAL") && !member.hasIndependentUse,
   );
-  const hasShadowTarget = targets.some((target) => target.variantKeys.includes("SHADOW"));
-  const clauses = [`只留${targetText}`];
-  if (hasShadowTarget) clauses.push("暗影版不設硬性 IV 下限");
-  if (hasEvolutionOnlyMember) clauses.push("前階僅留符合條件的進化候選");
-  clauses.push("其他普通重複可傳");
+  const clauses = [`保留${targetText}`];
+  if (hasEvolutionOnlyMember) clauses.push("前階只留能進化成上述用途的候選");
+  clauses.push("其餘不符合上述用途的普通重複個體可傳");
   return `${clauses.join("；")}。`;
 }
 

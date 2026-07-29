@@ -73,6 +73,8 @@ function FamilyHandlingConclusion({
     >
       <p className={`flex items-center gap-1.5 text-xs font-black tracking-wide ${labelClass}`}>
         <Icon aria-hidden size={16} />
+        立即處理結論
+        <span aria-hidden>｜</span>
         {label}
       </p>
       <p

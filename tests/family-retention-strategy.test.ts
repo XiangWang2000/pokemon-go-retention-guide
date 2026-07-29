@@ -180,19 +180,33 @@ describe("家族價值與清包策略聚合", () => {
 describe("家族直接處理結論", () => {
   it("高價值家族直接列出聯盟、特殊版本與普通重複處理方式", () => {
     const family = familyContaining("003-kanto");
-    expect(family.handlingSummaryZhTw).toContain("GL／UL 排名佳個體");
-    expect(family.handlingSummaryZhTw).toContain("PvE 候選");
+    expect(family.handlingSummaryZhTw).toContain("PvP（GL Rank≤100、UL Rank≤100）");
+    expect(family.handlingSummaryZhTw).toContain("PvE 實戰候選");
     expect(family.handlingSummaryZhTw).toContain("Mega 候選");
     expect(family.handlingSummaryZhTw).toContain("超極巨版本本身");
-    expect(family.handlingSummaryZhTw).toContain("暗影版不設硬性 IV 下限");
-    expect(family.handlingSummaryZhTw).toContain("其他普通重複可傳");
+    expect(family.handlingSummaryZhTw).toContain("有用途的暗影版");
+    expect(family.handlingSummaryZhTw).not.toContain("暗影版不設硬性 IV 下限");
+    expect(family.handlingSummaryZhTw).not.toContain("15攻");
+    expect(family.handlingSummaryZhTw).not.toContain("14攻");
+    expect(family.handlingSummaryZhTw).not.toContain("斷點");
+    expect(family.handlingSummaryZhTw).toContain("其餘不符合上述用途的普通重複個體可傳");
+    expect(
+      family.members
+        .flatMap((member) => member.ivRecommendations)
+        .some((item) => item.ivRecommendationZhTw.includes("不設硬性最低IV")),
+    ).toBe(true);
+    expect(
+      family.members
+        .flatMap((member) => member.ivRecommendations)
+        .some((item) => item.ivRecommendationZhTw.includes("14攻高整體IV亦可留")),
+    ).toBe(true);
   });
 
   it("限定版本家族不會把普通或極巨版本誤列為主要目標", () => {
     const family = familyContaining("012-kanto");
-    expect(family.handlingSummaryZhTw).toContain("只留巴大蝶（超極巨版本本身）");
+    expect(family.handlingSummaryZhTw).toContain("保留巴大蝶（超極巨版本本身）");
     expect(family.handlingSummaryZhTw).not.toContain("極巨候選");
-    expect(family.handlingSummaryZhTw).toContain("其他普通重複可傳");
+    expect(family.handlingSummaryZhTw).toContain("其餘不符合上述用途的普通重複個體可傳");
   });
 
   it("低價值與資料未完整家族給出相反且安全的清包動作", () => {
