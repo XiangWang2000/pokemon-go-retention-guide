@@ -22,6 +22,7 @@ interface Manifest {
   };
   snapshotSha256: string;
   files: Record<string, ManifestFile>;
+  runtimeHome: ManifestFile;
   excel: { path: string; bytes: number; sha256: string; sheets: number };
 }
 
@@ -81,6 +82,15 @@ async function main() {
   assert(sources.length === manifest.counts.sourceReferences, "來源筆數不一致。");
   assert(changes.length === manifest.counts.changeLogs, "變更紀錄筆數不一致。");
   assert(Object.keys(details).length === manifest.counts.detailRecords, "詳細資料筆數不一致。");
+
+  const runtimeHomePath = path.join(root, manifest.runtimeHome.path);
+  const runtimeHome = await readFile(runtimeHomePath);
+  assert(runtimeHome.byteLength === manifest.runtimeHome.bytes, "首頁 runtime 資料大小不一致。");
+  assert(sha256(runtimeHome) === manifest.runtimeHome.sha256, "首頁 runtime 資料 SHA256 不一致。");
+  assert(
+    JSON.parse(runtimeHome.toString("utf8")).schemaVersion === 1,
+    "首頁 runtime 資料 schemaVersion 不正確。",
+  );
 
   const workbookPath = path.join(root, manifest.excel.path);
   const workbook = await readFile(workbookPath);

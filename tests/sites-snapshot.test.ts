@@ -89,6 +89,17 @@ describe("Sites 唯讀 snapshot", () => {
     ]);
   });
 
+  it("首頁使用可快取的精簡 runtime 資料，不把完整 snapshot 塞進初始 HTML", async () => {
+    const [pageSource, compactHome, prettyHome] = await Promise.all([
+      readFile(path.join(process.cwd(), "src", "app", "page.tsx"), "utf8"),
+      readFile(path.join(process.cwd(), "public", "data", "home.json")),
+      readFile(path.join(process.cwd(), "site-data", "home.json")),
+    ]);
+    expect(pageSource).not.toContain("site-data/home.json");
+    expect(compactHome.byteLength).toBeLessThan(prettyHome.byteLength);
+    expect(JSON.parse(compactHome.toString("utf8"))).toMatchObject({ schemaVersion: 1 });
+  });
+
   it("dashboard snapshot 保留家族、進化路徑與結構化 IV 資料", async () => {
     const rows = await getSnapshotDashboardRows();
     const bulbasaur = rows.find((row) => row.formId === "001-kanto");

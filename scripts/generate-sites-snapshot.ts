@@ -16,12 +16,17 @@ import { buildHomeSnapshot } from "../src/presentation/home-snapshot";
 const root = process.cwd();
 const siteDataDirectory = path.join(root, "site-data");
 const exportDirectory = path.join(root, "public", "exports");
+const publicDataDirectory = path.join(root, "public", "data");
 const databasePath = path.join(root, "dev.db");
 const workbookPath = path.join(exportDirectory, "pokemon-go-retention-001-060.xlsx");
 const manifestPath = path.join(siteDataDirectory, "manifest.json");
 
 function jsonBuffer(value: unknown) {
   return Buffer.from(`${JSON.stringify(value, null, 2).replace(/\r?\n/g, "\r\n")}\r\n`, "utf8");
+}
+
+function compactJsonBuffer(value: unknown) {
+  return Buffer.from(JSON.stringify(value), "utf8");
 }
 
 function sha256(value: Uint8Array) {
@@ -154,9 +159,12 @@ async function main() {
 
   await mkdir(siteDataDirectory, { recursive: true });
   await mkdir(exportDirectory, { recursive: true });
+  await mkdir(publicDataDirectory, { recursive: true });
   for (const [name, value] of Object.entries(payloads)) {
     await writeIfChanged(path.join(siteDataDirectory, `${name}.json`), value);
   }
+  const publicHome = compactJsonBuffer(home);
+  await writeIfChanged(path.join(publicDataDirectory, "home.json"), publicHome);
 
   let previousSnapshotSha: string | null = null;
   if (await exists(manifestPath)) {
@@ -198,6 +206,11 @@ async function main() {
     },
     snapshotSha256,
     files,
+    runtimeHome: {
+      path: "public/data/home.json",
+      bytes: publicHome.byteLength,
+      sha256: sha256(publicHome),
+    },
     excel: {
       path: "public/exports/pokemon-go-retention-001-060.xlsx",
       bytes: workbook.byteLength,
