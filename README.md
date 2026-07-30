@@ -12,7 +12,7 @@
 4. 不同地區型態若沒有互相連接的進化路徑，會形成獨立子群組，例如關都與阿羅拉小拉達。
 5. 分支進化使用完整 `EvolutionPath` 圖，不以圖鑑編號連續性推測，且會顯示分支數與需分開保留的提示。
 
-目前 #001～#030 共整理為 15 個顯示群組。小個體與中間進化各自具有 `memberSummary`，角色可為 `EVOLUTION_MATERIAL`、`INDEPENDENT_PVP`、`INDEPENDENT_PVE`、`GYM_DEFENDER`、`MEGA_CANDIDATE`、`MAX_CANDIDATE`、`COLLECTION_ONLY` 或 `NO_DISTINCT_USE`。若小個體或中間進化有獨立用途，家族摘要會明確提醒不要把最佳個體全部進化。
+目前 #001～#060 依進化圖與地區分支整理為顯示群組。小個體與中間進化各自具有 `memberSummary`，角色可為 `EVOLUTION_MATERIAL`、`INDEPENDENT_PVP`、`INDEPENDENT_PVE`、`GYM_DEFENDER`、`MEGA_CANDIDATE`、`MAX_CANDIDATE`、`COLLECTION_ONLY` 或 `NO_DISTINCT_USE`。若小個體或中間進化有獨立用途，家族摘要會明確提醒不要把最佳個體全部進化。
 
 ### 家族價值與清包策略
 
@@ -118,6 +118,7 @@ npm run db:generate
 npm run db:deploy
 npm run db:seed
 npm run data:remediate
+npm run data:import:031-060
 npm run data:validate
 npm run review:generate
 npm run review:remediation
@@ -130,18 +131,18 @@ npm run dev
 ## 已完成範圍
 
 - Next.js 16 App Router、TypeScript、Tailwind CSS、SQLite、Prisma 7。
-- #001～#030，共 30 個物種、35 個關都／阿羅拉型態。
-- 153 個普通、暗影、淨化、Mega、Dynamax、Gigantamax 獨立戰鬥版本。
-- 123 筆結構化原始評估資料、107 筆來源記錄。
+- #001～#060，共 60 個物種、74 個關都／阿羅拉／伽勒爾／洗翠型態。
+- 310 個普通、暗影、淨化、Mega、Dynamax、Gigantamax 獨立戰鬥版本。
+- 193 筆結構化原始評估資料、112 筆來源記錄。
 - PvPoke GL／UL／ML 原始排名 JSON 本機快照與 commit 版本。
 - Pokémon GO 官方推出狀態、Mega／Max／暗影／進化／活動招式研究記錄。
 - GO Hub Database 的 PvE、Mega、Max Battle、道館資料與來源衝突記錄。
 - 集中式規則引擎、規則追蹤、資料待補清單、來源頁、變更紀錄。
 - 10 張繁體中文工作表的 `.xlsx` 匯出。
 - JSON／CSV 匯入、交易式寫入、資料一致性驗證。
-- `review/001-030.md` 與 `review/001-030.json` 批次審核報告。
+- `review/001-030.md`／`.json` 與 `review/031-060.md`／`.json` 批次審核報告。
 
-目前規則引擎產生 20 筆 `KEEP`、76 筆 `CONDITIONAL_KEEP`、19 筆 `HOLD_FOR_NOW`、38 筆 `TRANSFER_CANDIDATE`。後續進化是唯一主要價值時使用條件式保留；只有推出狀態不明、物種疑似錯置、關鍵來源衝突、限定招式影響不明或規則未涵蓋等實質不確定性，才暫時保留。
+目前規則引擎產生 26 筆 `KEEP`、70 筆 `CONDITIONAL_KEEP`、35 筆 `HOLD_FOR_NOW`、179 筆 `TRANSFER_CANDIDATE`。後續進化是唯一主要價值時使用條件式保留；只有推出狀態不明、物種疑似錯置、關鍵來源衝突、限定招式影響不明或規則未涵蓋等實質不確定性，才暫時保留。
 
 ## 本機需求
 
@@ -157,6 +158,8 @@ npm install
 npm run db:generate
 npm run db:deploy
 npm run db:seed
+npm run data:remediate
+npm run data:import:031-060
 npm run sites:snapshot
 npm run dev
 ```
@@ -222,7 +225,7 @@ npm run build:local
 
 ### Excel 匯出
 
-首頁「匯出 Excel」下載 `/exports/pokemon-go-retention-001-030.xlsx`；檔案由 `npm run sites:snapshot` 從本機可信資料庫預先產生，舊 `/api/export` 會以 307 轉址到同一檔案。內容包含：
+首頁「匯出 Excel」下載 `/exports/pokemon-go-retention-001-060.xlsx`；檔案由 `npm run sites:snapshot` 從本機可信資料庫預先產生，舊 `/api/export` 會以 307 轉址到同一檔案。內容包含：
 
 1. 寶可夢型態
 2. 評估總覽
@@ -242,6 +245,8 @@ npm run build:local
 本次環境具備即時網路搜尋。研究日期為 2026-07-15，原始研究清單位於：
 
 - `research_notes/official-001-030.json`／`.md`
+- `research_notes/official-031-060.json`／`.md`
+- `research_notes/battle-031-060.json`／`.md`
 - `research_notes/battle-001-015.json`／`.md`
 - `research_notes/battle-016-030.json`／`.md`
 - `data/sources/pvpoke/rankings-1500.json`
@@ -365,7 +370,7 @@ Pokemon/
 - 大嘴雀 PvPoke GL Overall #20 已由固定 commit 的完整結構化 JSON 重現並保留。
 - Sites 第一版是唯讀 snapshot；開始實作個人背包、線上審核或 runtime 寫入時，才需要遷移到 D1。
 - Mega 雷丘 X／Y 官方公告首次登場日為 2026-07-18；研究查閱日 2026-07-15，因此記為已公告但尚未推出。
-- #030 尼多娜可進化成 #031 尼多后，先以 `MANUAL_CURATED` 保存條件式保留結論；#031 完整原始排名仍不在本批，也沒有自動延伸研究到 #031～#060。
+- #029 尼多蘭♀、#030 尼多娜與 #031 尼多后已跨批次整合；後續範圍外進化只在可能造成重要誤傳時採局部暫時保留。
 - 資料維護狀態不代表使用者必須自行判斷；網站、Excel 與 JSON 報告均分開保存 `finalDecision`、`confidence`、`reviewStatus`、`reviewIssues` 與缺失摘要。
 
 所有頁面都使用同一則範圍說明：本結論只針對一般戰鬥及實用價值；異色、特殊造型、活動背卡、紀念與個人收藏價值需另行判斷。

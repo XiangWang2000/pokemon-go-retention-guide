@@ -5,11 +5,13 @@ import { zhTw } from "../src/locales/zh-TW";
 import { RULES_VERSION } from "../src/rules/rules";
 
 async function main() {
-  const [rows, issues, sources] = await Promise.all([
+  const [allRows, allIssues, sources] = await Promise.all([
     getDashboardRows(),
     getReviewIssues(),
     getSources(),
   ]);
+  const rows = allRows.filter((row) => row.dexNumber >= 1 && row.dexNumber <= 30);
+  const issues = allIssues.filter((issue) => issue.batchKey === "001-030");
   const forms = Array.from(new Map(rows.map((row) => [row.formId, row])).values());
   const decisions = Object.keys(zhTw.decision) as Array<keyof typeof zhTw.decision>;
   const payload = {

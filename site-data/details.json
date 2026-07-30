@@ -7106,16 +7106,6 @@
     "conflicts": [],
     "changeLogs": [
       {
-        "id": "change-evaluation-029-kanto-dynamax-2026.07.28-v5-iv-20260728",
-        "fieldName": "recommendedIvStrategyZhTw",
-        "previousValue": "只保留可極巨化／超極巨化版本；攻擊手15攻優先，坦克看防禦／HP，支援依物種門檻。",
-        "newValue": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-        "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
-        "changedAt": "2026-07-28T04:00:00.000Z",
-        "rulesVersion": "2026.07.28-iv-v2",
-        "source": null
-      },
-      {
         "id": "remediation-release-029-kanto-dynamax",
         "fieldName": "releaseStatus",
         "previousValue": "UNKNOWN",
@@ -7334,20 +7324,23 @@
         "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
         "requiresEvent": false,
         "verifiedAt": null
+      },
+      {
+        "id": "evolution-030-kanto-031-kanto",
+        "fromFormId": "030-kanto",
+        "fromNameZhTw": "尼多娜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "031-kanto",
+        "toNameZhTw": "尼多后",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
       }
     ],
     "conflicts": [],
     "changeLogs": [
-      {
-        "id": "change-evaluation-030-kanto-dynamax-2026.07.28-v5-iv-20260728",
-        "fieldName": "recommendedIvStrategyZhTw",
-        "previousValue": "只保留可極巨化／超極巨化版本；攻擊手15攻優先，坦克看防禦／HP，支援依物種門檻。",
-        "newValue": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-        "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
-        "changedAt": "2026-07-28T04:00:00.000Z",
-        "rulesVersion": "2026.07.28-iv-v2",
-        "source": null
-      },
       {
         "id": "remediation-release-030-kanto-dynamax",
         "fieldName": "releaseStatus",
@@ -7390,20 +7383,23 @@
         "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
         "requiresEvent": false,
         "verifiedAt": null
+      },
+      {
+        "id": "evolution-030-kanto-031-kanto",
+        "fromFormId": "030-kanto",
+        "fromNameZhTw": "尼多娜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "031-kanto",
+        "toNameZhTw": "尼多后",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
       }
     ],
     "conflicts": [],
     "changeLogs": [
-      {
-        "id": "change-evaluation-030-kanto-normal-2026.07.28-v5-iv-20260728",
-        "fieldName": "recommendedIvStrategyZhTw",
-        "previousValue": "依目標進化結果挑選：GL／UL看個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
-        "newValue": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
-        "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
-        "changedAt": "2026-07-28T04:00:00.000Z",
-        "rulesVersion": "2026.07.28-iv-v2",
-        "source": null
-      },
       {
         "id": "remediation-decision-030-kanto-normal-2026-07-16-v3",
         "fieldName": "decision",
@@ -7433,20 +7429,23 @@
         "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
         "requiresEvent": false,
         "verifiedAt": null
+      },
+      {
+        "id": "evolution-030-kanto-031-kanto",
+        "fromFormId": "030-kanto",
+        "fromNameZhTw": "尼多娜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "031-kanto",
+        "toNameZhTw": "尼多后",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
       }
     ],
     "conflicts": [],
     "changeLogs": [
-      {
-        "id": "change-evaluation-030-kanto-purified-2026.07.28-v5-iv-20260728",
-        "fieldName": "recommendedIvStrategyZhTw",
-        "previousValue": "依目標進化結果挑選：GL／UL看個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
-        "newValue": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
-        "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
-        "changedAt": "2026-07-28T04:00:00.000Z",
-        "rulesVersion": "2026.07.28-iv-v2",
-        "source": null
-      },
       {
         "id": "remediation-decision-030-kanto-purified-2026-07-16-v3",
         "fieldName": "decision",
@@ -7476,20 +7475,23 @@
         "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
         "requiresEvent": false,
         "verifiedAt": null
+      },
+      {
+        "id": "evolution-030-kanto-031-kanto",
+        "fromFormId": "030-kanto",
+        "fromNameZhTw": "尼多娜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "031-kanto",
+        "toNameZhTw": "尼多后",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
       }
     ],
     "conflicts": [],
     "changeLogs": [
-      {
-        "id": "change-evaluation-030-kanto-shadow-2026.07.28-v5-iv-20260728",
-        "fieldName": "recommendedIvStrategyZhTw",
-        "previousValue": "依目標進化結果挑選：GL／UL看個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
-        "newValue": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
-        "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
-        "changedAt": "2026-07-28T04:00:00.000Z",
-        "rulesVersion": "2026.07.28-iv-v2",
-        "source": null
-      },
       {
         "id": "remediation-decision-030-kanto-shadow-2026-07-16-v3",
         "fieldName": "decision",
@@ -7504,5 +7506,2994 @@
         }
       }
     ]
+  },
+  "031-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-030-kanto-031-kanto",
+        "fromFormId": "030-kanto",
+        "fromNameZhTw": "尼多娜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "031-kanto",
+        "toNameZhTw": "尼多后",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "031-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-030-kanto-031-kanto",
+        "fromFormId": "030-kanto",
+        "fromNameZhTw": "尼多娜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "031-kanto",
+        "toNameZhTw": "尼多后",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "031-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-030-kanto-031-kanto",
+        "fromFormId": "030-kanto",
+        "fromNameZhTw": "尼多娜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "031-kanto",
+        "toNameZhTw": "尼多后",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "031-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-030-kanto-031-kanto",
+        "fromFormId": "030-kanto",
+        "fromNameZhTw": "尼多娜",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "031-kanto",
+        "toNameZhTw": "尼多后",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "032-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-032-kanto-033-kanto",
+        "fromFormId": "032-kanto",
+        "fromNameZhTw": "尼多朗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "033-kanto",
+        "toNameZhTw": "尼多力諾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "032-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-032-kanto-033-kanto",
+        "fromFormId": "032-kanto",
+        "fromNameZhTw": "尼多朗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "033-kanto",
+        "toNameZhTw": "尼多力諾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "032-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-032-kanto-033-kanto",
+        "fromFormId": "032-kanto",
+        "fromNameZhTw": "尼多朗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "033-kanto",
+        "toNameZhTw": "尼多力諾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "032-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-032-kanto-033-kanto",
+        "fromFormId": "032-kanto",
+        "fromNameZhTw": "尼多朗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "033-kanto",
+        "toNameZhTw": "尼多力諾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "033-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-032-kanto-033-kanto",
+        "fromFormId": "032-kanto",
+        "fromNameZhTw": "尼多朗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "033-kanto",
+        "toNameZhTw": "尼多力諾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      },
+      {
+        "id": "evolution-033-kanto-034-kanto",
+        "fromFormId": "033-kanto",
+        "fromNameZhTw": "尼多力諾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "034-kanto",
+        "toNameZhTw": "尼多王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "033-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-032-kanto-033-kanto",
+        "fromFormId": "032-kanto",
+        "fromNameZhTw": "尼多朗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "033-kanto",
+        "toNameZhTw": "尼多力諾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      },
+      {
+        "id": "evolution-033-kanto-034-kanto",
+        "fromFormId": "033-kanto",
+        "fromNameZhTw": "尼多力諾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "034-kanto",
+        "toNameZhTw": "尼多王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "033-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-032-kanto-033-kanto",
+        "fromFormId": "032-kanto",
+        "fromNameZhTw": "尼多朗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "033-kanto",
+        "toNameZhTw": "尼多力諾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      },
+      {
+        "id": "evolution-033-kanto-034-kanto",
+        "fromFormId": "033-kanto",
+        "fromNameZhTw": "尼多力諾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "034-kanto",
+        "toNameZhTw": "尼多王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "033-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-032-kanto-033-kanto",
+        "fromFormId": "032-kanto",
+        "fromNameZhTw": "尼多朗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "033-kanto",
+        "toNameZhTw": "尼多力諾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      },
+      {
+        "id": "evolution-033-kanto-034-kanto",
+        "fromFormId": "033-kanto",
+        "fromNameZhTw": "尼多力諾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "034-kanto",
+        "toNameZhTw": "尼多王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "034-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-033-kanto-034-kanto",
+        "fromFormId": "033-kanto",
+        "fromNameZhTw": "尼多力諾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "034-kanto",
+        "toNameZhTw": "尼多王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "034-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-033-kanto-034-kanto",
+        "fromFormId": "033-kanto",
+        "fromNameZhTw": "尼多力諾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "034-kanto",
+        "toNameZhTw": "尼多王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "034-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-033-kanto-034-kanto",
+        "fromFormId": "033-kanto",
+        "fromNameZhTw": "尼多力諾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "034-kanto",
+        "toNameZhTw": "尼多王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "034-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-033-kanto-034-kanto",
+        "fromFormId": "033-kanto",
+        "fromNameZhTw": "尼多力諾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "034-kanto",
+        "toNameZhTw": "尼多王",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "035-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-035-kanto-036-kanto",
+        "fromFormId": "035-kanto",
+        "fromNameZhTw": "皮皮",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "036-kanto",
+        "toNameZhTw": "皮可西",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "035-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-035-kanto-036-kanto",
+        "fromFormId": "035-kanto",
+        "fromNameZhTw": "皮皮",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "036-kanto",
+        "toNameZhTw": "皮可西",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "035-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-035-kanto-036-kanto",
+        "fromFormId": "035-kanto",
+        "fromNameZhTw": "皮皮",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "036-kanto",
+        "toNameZhTw": "皮可西",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "035-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-035-kanto-036-kanto",
+        "fromFormId": "035-kanto",
+        "fromNameZhTw": "皮皮",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "036-kanto",
+        "toNameZhTw": "皮可西",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "036-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-035-kanto-036-kanto",
+        "fromFormId": "035-kanto",
+        "fromNameZhTw": "皮皮",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "036-kanto",
+        "toNameZhTw": "皮可西",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "036-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-035-kanto-036-kanto",
+        "fromFormId": "035-kanto",
+        "fromNameZhTw": "皮皮",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "036-kanto",
+        "toNameZhTw": "皮可西",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "036-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-035-kanto-036-kanto",
+        "fromFormId": "035-kanto",
+        "fromNameZhTw": "皮皮",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "036-kanto",
+        "toNameZhTw": "皮可西",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "036-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-035-kanto-036-kanto",
+        "fromFormId": "035-kanto",
+        "fromNameZhTw": "皮皮",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "036-kanto",
+        "toNameZhTw": "皮可西",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "037-alola-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-037-alola-038-alola",
+        "fromFormId": "037-alola",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "038-alola",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "037-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-037-kanto-038-kanto",
+        "fromFormId": "037-kanto",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "038-kanto",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "037-alola-normal": {
+    "paths": [
+      {
+        "id": "evolution-037-alola-038-alola",
+        "fromFormId": "037-alola",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "038-alola",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "037-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-037-kanto-038-kanto",
+        "fromFormId": "037-kanto",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "038-kanto",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "037-alola-purified": {
+    "paths": [
+      {
+        "id": "evolution-037-alola-038-alola",
+        "fromFormId": "037-alola",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "038-alola",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "037-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-037-kanto-038-kanto",
+        "fromFormId": "037-kanto",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "038-kanto",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "037-alola-shadow": {
+    "paths": [
+      {
+        "id": "evolution-037-alola-038-alola",
+        "fromFormId": "037-alola",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "038-alola",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "037-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-037-kanto-038-kanto",
+        "fromFormId": "037-kanto",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "038-kanto",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "038-alola-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-037-alola-038-alola",
+        "fromFormId": "037-alola",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "038-alola",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "038-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-037-kanto-038-kanto",
+        "fromFormId": "037-kanto",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "038-kanto",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "038-alola-normal": {
+    "paths": [
+      {
+        "id": "evolution-037-alola-038-alola",
+        "fromFormId": "037-alola",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "038-alola",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "038-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-037-kanto-038-kanto",
+        "fromFormId": "037-kanto",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "038-kanto",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "038-alola-purified": {
+    "paths": [
+      {
+        "id": "evolution-037-alola-038-alola",
+        "fromFormId": "037-alola",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "038-alola",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "038-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-037-kanto-038-kanto",
+        "fromFormId": "037-kanto",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "038-kanto",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "038-alola-shadow": {
+    "paths": [
+      {
+        "id": "evolution-037-alola-038-alola",
+        "fromFormId": "037-alola",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "038-alola",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "038-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-037-kanto-038-kanto",
+        "fromFormId": "037-kanto",
+        "fromNameZhTw": "六尾",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "038-kanto",
+        "toNameZhTw": "九尾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "039-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-039-kanto-040-kanto",
+        "fromFormId": "039-kanto",
+        "fromNameZhTw": "胖丁",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "040-kanto",
+        "toNameZhTw": "胖可丁",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "039-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-039-kanto-040-kanto",
+        "fromFormId": "039-kanto",
+        "fromNameZhTw": "胖丁",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "040-kanto",
+        "toNameZhTw": "胖可丁",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "039-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-039-kanto-040-kanto",
+        "fromFormId": "039-kanto",
+        "fromNameZhTw": "胖丁",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "040-kanto",
+        "toNameZhTw": "胖可丁",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "039-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-039-kanto-040-kanto",
+        "fromFormId": "039-kanto",
+        "fromNameZhTw": "胖丁",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "040-kanto",
+        "toNameZhTw": "胖可丁",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "040-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-039-kanto-040-kanto",
+        "fromFormId": "039-kanto",
+        "fromNameZhTw": "胖丁",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "040-kanto",
+        "toNameZhTw": "胖可丁",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "040-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-039-kanto-040-kanto",
+        "fromFormId": "039-kanto",
+        "fromNameZhTw": "胖丁",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "040-kanto",
+        "toNameZhTw": "胖可丁",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "040-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-039-kanto-040-kanto",
+        "fromFormId": "039-kanto",
+        "fromNameZhTw": "胖丁",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "040-kanto",
+        "toNameZhTw": "胖可丁",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "040-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-039-kanto-040-kanto",
+        "fromFormId": "039-kanto",
+        "fromNameZhTw": "胖丁",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "040-kanto",
+        "toNameZhTw": "胖可丁",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "041-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-041-kanto-042-kanto",
+        "fromFormId": "041-kanto",
+        "fromNameZhTw": "超音蝠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "042-kanto",
+        "toNameZhTw": "大嘴蝠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "041-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-041-kanto-042-kanto",
+        "fromFormId": "041-kanto",
+        "fromNameZhTw": "超音蝠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "042-kanto",
+        "toNameZhTw": "大嘴蝠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "041-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-041-kanto-042-kanto",
+        "fromFormId": "041-kanto",
+        "fromNameZhTw": "超音蝠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "042-kanto",
+        "toNameZhTw": "大嘴蝠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "041-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-041-kanto-042-kanto",
+        "fromFormId": "041-kanto",
+        "fromNameZhTw": "超音蝠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "042-kanto",
+        "toNameZhTw": "大嘴蝠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "042-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-041-kanto-042-kanto",
+        "fromFormId": "041-kanto",
+        "fromNameZhTw": "超音蝠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "042-kanto",
+        "toNameZhTw": "大嘴蝠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "042-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-041-kanto-042-kanto",
+        "fromFormId": "041-kanto",
+        "fromNameZhTw": "超音蝠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "042-kanto",
+        "toNameZhTw": "大嘴蝠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "042-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-041-kanto-042-kanto",
+        "fromFormId": "041-kanto",
+        "fromNameZhTw": "超音蝠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "042-kanto",
+        "toNameZhTw": "大嘴蝠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "042-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-041-kanto-042-kanto",
+        "fromFormId": "041-kanto",
+        "fromNameZhTw": "超音蝠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "042-kanto",
+        "toNameZhTw": "大嘴蝠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "043-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-043-kanto-044-kanto",
+        "fromFormId": "043-kanto",
+        "fromNameZhTw": "走路草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "044-kanto",
+        "toNameZhTw": "臭臭花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "043-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-043-kanto-044-kanto",
+        "fromFormId": "043-kanto",
+        "fromNameZhTw": "走路草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "044-kanto",
+        "toNameZhTw": "臭臭花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "043-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-043-kanto-044-kanto",
+        "fromFormId": "043-kanto",
+        "fromNameZhTw": "走路草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "044-kanto",
+        "toNameZhTw": "臭臭花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "043-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-043-kanto-044-kanto",
+        "fromFormId": "043-kanto",
+        "fromNameZhTw": "走路草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "044-kanto",
+        "toNameZhTw": "臭臭花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "044-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-043-kanto-044-kanto",
+        "fromFormId": "043-kanto",
+        "fromNameZhTw": "走路草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "044-kanto",
+        "toNameZhTw": "臭臭花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      },
+      {
+        "id": "evolution-044-kanto-045-kanto",
+        "fromFormId": "044-kanto",
+        "fromNameZhTw": "臭臭花",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "045-kanto",
+        "toNameZhTw": "霸王花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "044-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-043-kanto-044-kanto",
+        "fromFormId": "043-kanto",
+        "fromNameZhTw": "走路草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "044-kanto",
+        "toNameZhTw": "臭臭花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      },
+      {
+        "id": "evolution-044-kanto-045-kanto",
+        "fromFormId": "044-kanto",
+        "fromNameZhTw": "臭臭花",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "045-kanto",
+        "toNameZhTw": "霸王花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "044-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-043-kanto-044-kanto",
+        "fromFormId": "043-kanto",
+        "fromNameZhTw": "走路草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "044-kanto",
+        "toNameZhTw": "臭臭花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      },
+      {
+        "id": "evolution-044-kanto-045-kanto",
+        "fromFormId": "044-kanto",
+        "fromNameZhTw": "臭臭花",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "045-kanto",
+        "toNameZhTw": "霸王花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "044-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-043-kanto-044-kanto",
+        "fromFormId": "043-kanto",
+        "fromNameZhTw": "走路草",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "044-kanto",
+        "toNameZhTw": "臭臭花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      },
+      {
+        "id": "evolution-044-kanto-045-kanto",
+        "fromFormId": "044-kanto",
+        "fromNameZhTw": "臭臭花",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "045-kanto",
+        "toNameZhTw": "霸王花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "045-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-044-kanto-045-kanto",
+        "fromFormId": "044-kanto",
+        "fromNameZhTw": "臭臭花",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "045-kanto",
+        "toNameZhTw": "霸王花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "045-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-044-kanto-045-kanto",
+        "fromFormId": "044-kanto",
+        "fromNameZhTw": "臭臭花",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "045-kanto",
+        "toNameZhTw": "霸王花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "045-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-044-kanto-045-kanto",
+        "fromFormId": "044-kanto",
+        "fromNameZhTw": "臭臭花",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "045-kanto",
+        "toNameZhTw": "霸王花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "045-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-044-kanto-045-kanto",
+        "fromFormId": "044-kanto",
+        "fromNameZhTw": "臭臭花",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "045-kanto",
+        "toNameZhTw": "霸王花",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "046-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-046-kanto-047-kanto",
+        "fromFormId": "046-kanto",
+        "fromNameZhTw": "派拉斯",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "047-kanto",
+        "toNameZhTw": "派拉斯特",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "046-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-046-kanto-047-kanto",
+        "fromFormId": "046-kanto",
+        "fromNameZhTw": "派拉斯",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "047-kanto",
+        "toNameZhTw": "派拉斯特",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "046-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-046-kanto-047-kanto",
+        "fromFormId": "046-kanto",
+        "fromNameZhTw": "派拉斯",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "047-kanto",
+        "toNameZhTw": "派拉斯特",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "046-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-046-kanto-047-kanto",
+        "fromFormId": "046-kanto",
+        "fromNameZhTw": "派拉斯",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "047-kanto",
+        "toNameZhTw": "派拉斯特",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "047-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-046-kanto-047-kanto",
+        "fromFormId": "046-kanto",
+        "fromNameZhTw": "派拉斯",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "047-kanto",
+        "toNameZhTw": "派拉斯特",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "047-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-046-kanto-047-kanto",
+        "fromFormId": "046-kanto",
+        "fromNameZhTw": "派拉斯",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "047-kanto",
+        "toNameZhTw": "派拉斯特",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "047-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-046-kanto-047-kanto",
+        "fromFormId": "046-kanto",
+        "fromNameZhTw": "派拉斯",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "047-kanto",
+        "toNameZhTw": "派拉斯特",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "047-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-046-kanto-047-kanto",
+        "fromFormId": "046-kanto",
+        "fromNameZhTw": "派拉斯",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "047-kanto",
+        "toNameZhTw": "派拉斯特",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "048-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-048-kanto-049-kanto",
+        "fromFormId": "048-kanto",
+        "fromNameZhTw": "毛球",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "049-kanto",
+        "toNameZhTw": "摩魯蛾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "048-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-048-kanto-049-kanto",
+        "fromFormId": "048-kanto",
+        "fromNameZhTw": "毛球",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "049-kanto",
+        "toNameZhTw": "摩魯蛾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "048-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-048-kanto-049-kanto",
+        "fromFormId": "048-kanto",
+        "fromNameZhTw": "毛球",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "049-kanto",
+        "toNameZhTw": "摩魯蛾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "048-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-048-kanto-049-kanto",
+        "fromFormId": "048-kanto",
+        "fromNameZhTw": "毛球",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "049-kanto",
+        "toNameZhTw": "摩魯蛾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "049-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-048-kanto-049-kanto",
+        "fromFormId": "048-kanto",
+        "fromNameZhTw": "毛球",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "049-kanto",
+        "toNameZhTw": "摩魯蛾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "049-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-048-kanto-049-kanto",
+        "fromFormId": "048-kanto",
+        "fromNameZhTw": "毛球",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "049-kanto",
+        "toNameZhTw": "摩魯蛾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "049-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-048-kanto-049-kanto",
+        "fromFormId": "048-kanto",
+        "fromNameZhTw": "毛球",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "049-kanto",
+        "toNameZhTw": "摩魯蛾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "049-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-048-kanto-049-kanto",
+        "fromFormId": "048-kanto",
+        "fromNameZhTw": "毛球",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "049-kanto",
+        "toNameZhTw": "摩魯蛾",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "050-alola-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-050-alola-051-alola",
+        "fromFormId": "050-alola",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "051-alola",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "050-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-050-kanto-051-kanto",
+        "fromFormId": "050-kanto",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "051-kanto",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "050-alola-normal": {
+    "paths": [
+      {
+        "id": "evolution-050-alola-051-alola",
+        "fromFormId": "050-alola",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "051-alola",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "050-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-050-kanto-051-kanto",
+        "fromFormId": "050-kanto",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "051-kanto",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "050-alola-purified": {
+    "paths": [
+      {
+        "id": "evolution-050-alola-051-alola",
+        "fromFormId": "050-alola",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "051-alola",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "050-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-050-kanto-051-kanto",
+        "fromFormId": "050-kanto",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "051-kanto",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "050-alola-shadow": {
+    "paths": [
+      {
+        "id": "evolution-050-alola-051-alola",
+        "fromFormId": "050-alola",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "051-alola",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "050-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-050-kanto-051-kanto",
+        "fromFormId": "050-kanto",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "051-kanto",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "051-alola-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-050-alola-051-alola",
+        "fromFormId": "050-alola",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "051-alola",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "051-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-050-kanto-051-kanto",
+        "fromFormId": "050-kanto",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "051-kanto",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "051-alola-normal": {
+    "paths": [
+      {
+        "id": "evolution-050-alola-051-alola",
+        "fromFormId": "050-alola",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "051-alola",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "051-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-050-kanto-051-kanto",
+        "fromFormId": "050-kanto",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "051-kanto",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "051-alola-purified": {
+    "paths": [
+      {
+        "id": "evolution-050-alola-051-alola",
+        "fromFormId": "050-alola",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "051-alola",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "051-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-050-kanto-051-kanto",
+        "fromFormId": "050-kanto",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "051-kanto",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "051-alola-shadow": {
+    "paths": [
+      {
+        "id": "evolution-050-alola-051-alola",
+        "fromFormId": "050-alola",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "051-alola",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "051-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-050-kanto-051-kanto",
+        "fromFormId": "050-kanto",
+        "fromNameZhTw": "地鼠",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "051-kanto",
+        "toNameZhTw": "三地鼠",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-alola-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-052-alola-053-alola",
+        "fromFormId": "052-alola",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "053-alola",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-galar-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-052-kanto-053-kanto",
+        "fromFormId": "052-kanto",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "053-kanto",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-kanto-gigantamax": {
+    "paths": [
+      {
+        "id": "evolution-052-kanto-053-kanto",
+        "fromFormId": "052-kanto",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "053-kanto",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "r8-gmax-meowth",
+        "fieldName": "releaseStatus",
+        "previousValue": null,
+        "newValue": "RELEASED",
+        "changeReasonZhTw": "普通、極巨與超極巨喵喵分開；超極巨個體不能進化。",
+        "changedAt": "2026-07-30T08:00:00.000Z",
+        "rulesVersion": "2026.07.28-v5",
+        "source": {
+          "title": "Gigantamax Meowth Max Battle Day",
+          "url": "https://pokemongo.com/news/gigantamax-meowth-max-battle-day-2026?hl=en"
+        }
+      }
+    ]
+  },
+  "052-alola-normal": {
+    "paths": [
+      {
+        "id": "evolution-052-alola-053-alola",
+        "fromFormId": "052-alola",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "053-alola",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-galar-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-052-kanto-053-kanto",
+        "fromFormId": "052-kanto",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "053-kanto",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-alola-purified": {
+    "paths": [
+      {
+        "id": "evolution-052-alola-053-alola",
+        "fromFormId": "052-alola",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "053-alola",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-galar-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-052-kanto-053-kanto",
+        "fromFormId": "052-kanto",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "053-kanto",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-alola-shadow": {
+    "paths": [
+      {
+        "id": "evolution-052-alola-053-alola",
+        "fromFormId": "052-alola",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "053-alola",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-galar-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "052-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-052-kanto-053-kanto",
+        "fromFormId": "052-kanto",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "053-kanto",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "053-alola-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-052-alola-053-alola",
+        "fromFormId": "052-alola",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "053-alola",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "053-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-052-kanto-053-kanto",
+        "fromFormId": "052-kanto",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "053-kanto",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "053-alola-normal": {
+    "paths": [
+      {
+        "id": "evolution-052-alola-053-alola",
+        "fromFormId": "052-alola",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "053-alola",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "053-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-052-kanto-053-kanto",
+        "fromFormId": "052-kanto",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "053-kanto",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "053-alola-purified": {
+    "paths": [
+      {
+        "id": "evolution-052-alola-053-alola",
+        "fromFormId": "052-alola",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "053-alola",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "053-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-052-kanto-053-kanto",
+        "fromFormId": "052-kanto",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "053-kanto",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "053-alola-shadow": {
+    "paths": [
+      {
+        "id": "evolution-052-alola-053-alola",
+        "fromFormId": "052-alola",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "阿羅拉",
+        "toFormId": "053-alola",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "阿羅拉",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "053-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-052-kanto-053-kanto",
+        "fromFormId": "052-kanto",
+        "fromNameZhTw": "喵喵",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "053-kanto",
+        "toNameZhTw": "貓老大",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "054-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-054-kanto-055-kanto",
+        "fromFormId": "054-kanto",
+        "fromNameZhTw": "可達鴨",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "055-kanto",
+        "toNameZhTw": "哥達鴨",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "054-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-054-kanto-055-kanto",
+        "fromFormId": "054-kanto",
+        "fromNameZhTw": "可達鴨",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "055-kanto",
+        "toNameZhTw": "哥達鴨",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "054-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-054-kanto-055-kanto",
+        "fromFormId": "054-kanto",
+        "fromNameZhTw": "可達鴨",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "055-kanto",
+        "toNameZhTw": "哥達鴨",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "054-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-054-kanto-055-kanto",
+        "fromFormId": "054-kanto",
+        "fromNameZhTw": "可達鴨",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "055-kanto",
+        "toNameZhTw": "哥達鴨",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "055-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-054-kanto-055-kanto",
+        "fromFormId": "054-kanto",
+        "fromNameZhTw": "可達鴨",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "055-kanto",
+        "toNameZhTw": "哥達鴨",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "055-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-054-kanto-055-kanto",
+        "fromFormId": "054-kanto",
+        "fromNameZhTw": "可達鴨",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "055-kanto",
+        "toNameZhTw": "哥達鴨",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "055-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-054-kanto-055-kanto",
+        "fromFormId": "054-kanto",
+        "fromNameZhTw": "可達鴨",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "055-kanto",
+        "toNameZhTw": "哥達鴨",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "055-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-054-kanto-055-kanto",
+        "fromFormId": "054-kanto",
+        "fromNameZhTw": "可達鴨",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "055-kanto",
+        "toNameZhTw": "哥達鴨",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "056-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-056-kanto-057-kanto",
+        "fromFormId": "056-kanto",
+        "fromNameZhTw": "猴怪",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "057-kanto",
+        "toNameZhTw": "火爆猴",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "056-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-056-kanto-057-kanto",
+        "fromFormId": "056-kanto",
+        "fromNameZhTw": "猴怪",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "057-kanto",
+        "toNameZhTw": "火爆猴",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "056-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-056-kanto-057-kanto",
+        "fromFormId": "056-kanto",
+        "fromNameZhTw": "猴怪",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "057-kanto",
+        "toNameZhTw": "火爆猴",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "056-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-056-kanto-057-kanto",
+        "fromFormId": "056-kanto",
+        "fromNameZhTw": "猴怪",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "057-kanto",
+        "toNameZhTw": "火爆猴",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "057-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-056-kanto-057-kanto",
+        "fromFormId": "056-kanto",
+        "fromNameZhTw": "猴怪",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "057-kanto",
+        "toNameZhTw": "火爆猴",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "057-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-056-kanto-057-kanto",
+        "fromFormId": "056-kanto",
+        "fromNameZhTw": "猴怪",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "057-kanto",
+        "toNameZhTw": "火爆猴",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "057-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-056-kanto-057-kanto",
+        "fromFormId": "056-kanto",
+        "fromNameZhTw": "猴怪",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "057-kanto",
+        "toNameZhTw": "火爆猴",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "057-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-056-kanto-057-kanto",
+        "fromFormId": "056-kanto",
+        "fromNameZhTw": "猴怪",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "057-kanto",
+        "toNameZhTw": "火爆猴",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "058-hisui-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-058-hisui-059-hisui",
+        "fromFormId": "058-hisui",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "洗翠",
+        "toFormId": "059-hisui",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "洗翠",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "058-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-058-kanto-059-kanto",
+        "fromFormId": "058-kanto",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "059-kanto",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "058-hisui-normal": {
+    "paths": [
+      {
+        "id": "evolution-058-hisui-059-hisui",
+        "fromFormId": "058-hisui",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "洗翠",
+        "toFormId": "059-hisui",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "洗翠",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "058-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-058-kanto-059-kanto",
+        "fromFormId": "058-kanto",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "059-kanto",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "058-hisui-purified": {
+    "paths": [
+      {
+        "id": "evolution-058-hisui-059-hisui",
+        "fromFormId": "058-hisui",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "洗翠",
+        "toFormId": "059-hisui",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "洗翠",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "058-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-058-kanto-059-kanto",
+        "fromFormId": "058-kanto",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "059-kanto",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "058-hisui-shadow": {
+    "paths": [
+      {
+        "id": "evolution-058-hisui-059-hisui",
+        "fromFormId": "058-hisui",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "洗翠",
+        "toFormId": "059-hisui",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "洗翠",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "058-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-058-kanto-059-kanto",
+        "fromFormId": "058-kanto",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "059-kanto",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "059-hisui-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-058-hisui-059-hisui",
+        "fromFormId": "058-hisui",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "洗翠",
+        "toFormId": "059-hisui",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "洗翠",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "059-kanto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-058-kanto-059-kanto",
+        "fromFormId": "058-kanto",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "059-kanto",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "059-hisui-normal": {
+    "paths": [
+      {
+        "id": "evolution-058-hisui-059-hisui",
+        "fromFormId": "058-hisui",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "洗翠",
+        "toFormId": "059-hisui",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "洗翠",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "059-kanto-normal": {
+    "paths": [
+      {
+        "id": "evolution-058-kanto-059-kanto",
+        "fromFormId": "058-kanto",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "059-kanto",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "059-hisui-purified": {
+    "paths": [
+      {
+        "id": "evolution-058-hisui-059-hisui",
+        "fromFormId": "058-hisui",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "洗翠",
+        "toFormId": "059-hisui",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "洗翠",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "059-kanto-purified": {
+    "paths": [
+      {
+        "id": "evolution-058-kanto-059-kanto",
+        "fromFormId": "058-kanto",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "059-kanto",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "059-hisui-shadow": {
+    "paths": [
+      {
+        "id": "evolution-058-hisui-059-hisui",
+        "fromFormId": "058-hisui",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "洗翠",
+        "toFormId": "059-hisui",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "洗翠",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "059-kanto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-058-kanto-059-kanto",
+        "fromFormId": "058-kanto",
+        "fromNameZhTw": "卡蒂狗",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "059-kanto",
+        "toNameZhTw": "風速狗",
+        "toFormNameZhTw": "關都",
+        "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-07-30T08:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "060-kanto-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "060-kanto-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "060-kanto-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "060-kanto-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
   }
 }

@@ -26,9 +26,9 @@ export function ReviewTable({ issues }: { issues: Issue[] }) {
   const pageSize = 20;
   const [type, setType] = useState("ALL");
   const [impact, setImpact] = useState("true");
-  const [batch, setBatch] = useState("001-030");
+  const [batch, setBatch] = useState("ALL");
   const [from, setFrom] = useState("1");
-  const [to, setTo] = useState("30");
+  const [to, setTo] = useState("60");
   const [page, setPage] = useState(1);
   const shown = useMemo(
     () =>
@@ -97,6 +97,7 @@ export function ReviewTable({ issues }: { issues: Issue[] }) {
           >
             <option value="ALL">全部</option>
             <option value="001-030">001-030</option>
+            <option value="031-060">031-060</option>
           </select>
         </label>
         <label className="text-sm">

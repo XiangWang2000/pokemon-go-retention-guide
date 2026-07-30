@@ -50,7 +50,7 @@ async function main() {
     await readFile(path.join(siteDataDirectory, "manifest.json"), "utf8"),
   ) as Manifest;
   assert(manifest.schemaVersion === 1, "Sites snapshot manifest schemaVersion 不支援。");
-  assert(manifest.dataVersion === "2026.07.30-r7", "Sites snapshot dataVersion 不正確。");
+  assert(manifest.dataVersion === "2026.07.30-r8", "Sites snapshot dataVersion 不正確。");
 
   const payloads: Uint8Array[] = [];
   const parsed: Record<string, unknown> = {};

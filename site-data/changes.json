@@ -1,5 +1,50 @@
 [
   {
+    "id": "r8-batch-031-060",
+    "entityType": "Batch",
+    "entityId": "031-060",
+    "fieldName": "status",
+    "previousValue": null,
+    "newValue": "REVIEWED",
+    "sourceId": "battle2-pvpoke-commit",
+    "changeReasonZhTw": "新增 #031～#060，套用與前批一致的立即處理結論、用途、IV 與版本分層。",
+    "changedAt": "2026-07-30T08:00:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Inteleon rankings · pvpoke/pvpoke@86847e5 · GitHub",
+      "url": "https://github.com/pvpoke/pvpoke/commit/86847e535b7e0a0f4e91f9628b3fc713ae6adca7"
+    }
+  },
+  {
+    "id": "r8-cross-family-029",
+    "entityType": "EvolutionFamily",
+    "entityId": "KANTO_FAMILY_029",
+    "fieldName": "members",
+    "previousValue": "#029-#030",
+    "newValue": "#029-#031",
+    "sourceId": null,
+    "changeReasonZhTw": "將 #031 尼多后接回前批尼多蘭♀家族，移除範圍外提示與互相矛盾建議。",
+    "changedAt": "2026-07-30T08:00:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": null
+  },
+  {
+    "id": "r8-gmax-meowth",
+    "entityType": "BattleVariant",
+    "entityId": "052-kanto-gigantamax",
+    "fieldName": "releaseStatus",
+    "previousValue": null,
+    "newValue": "RELEASED",
+    "sourceId": "OFF-GMAX-MEOWTH-2026",
+    "changeReasonZhTw": "普通、極巨與超極巨喵喵分開；超極巨個體不能進化。",
+    "changedAt": "2026-07-30T08:00:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Gigantamax Meowth Max Battle Day",
+      "url": "https://pokemongo.com/news/gigantamax-meowth-max-battle-day-2026?hl=en"
+    }
+  },
+  {
     "id": "remediation-fearow-gl-rank-verification",
     "entityType": "RawEvaluationData",
     "entityId": "raw-022-kanto-normal-great",

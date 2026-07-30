@@ -6,7 +6,7 @@
     "species": 30,
     "forms": 35,
     "battleVariants": 153,
-    "sources": 107,
+    "sources": 112,
     "openReviewIssues": 122
   },
   "forms": [
@@ -25417,8 +25417,8 @@
             }
           ],
           "decision": "TRANSFER_CANDIDATE",
-          "confidence": "MEDIUM",
-          "reasonZhTw": "此戰鬥版本尚未推出，不適用於現有個體的保留判斷。"
+          "confidence": "HIGH",
+          "reasonZhTw": "此版本沒有獨立保留理由，亦不因家族有用途而自動升格。"
         },
         {
           "variantKey": "NORMAL",
@@ -25584,9 +25584,9 @@
               ]
             }
           ],
-          "decision": "TRANSFER_CANDIDATE",
-          "confidence": "MEDIUM",
-          "reasonZhTw": "目前缺乏明確戰鬥、特殊版本或後續進化用途，一般重複個體通常可傳送。"
+          "decision": "CONDITIONAL_KEEP",
+          "confidence": "HIGH",
+          "reasonZhTw": "只留符合尼多后 PvP 用途的進化候選；其餘普通重複可傳。"
         },
         {
           "variantKey": "PURIFIED",
@@ -25799,8 +25799,8 @@
             }
           ],
           "decision": "TRANSFER_CANDIDATE",
-          "confidence": "MEDIUM",
-          "reasonZhTw": "目前缺乏明確戰鬥、特殊版本或後續進化用途，一般重複個體通常可傳送。"
+          "confidence": "HIGH",
+          "reasonZhTw": "此版本沒有獨立保留理由，亦不因家族有用途而自動升格。"
         },
         {
           "variantKey": "SHADOW",
@@ -25966,9 +25966,9 @@
               ]
             }
           ],
-          "decision": "TRANSFER_CANDIDATE",
-          "confidence": "MEDIUM",
-          "reasonZhTw": "目前缺乏明確戰鬥、特殊版本或後續進化用途，一般重複個體通常可傳送。"
+          "decision": "CONDITIONAL_KEEP",
+          "confidence": "HIGH",
+          "reasonZhTw": "只留符合尼多后 PvP 用途的進化候選；其餘普通重複可傳。"
         }
       ]
     },
@@ -26155,8 +26155,8 @@
             }
           ],
           "decision": "TRANSFER_CANDIDATE",
-          "confidence": "MEDIUM",
-          "reasonZhTw": "此戰鬥版本尚未推出，不適用於現有個體的保留判斷。"
+          "confidence": "HIGH",
+          "reasonZhTw": "此版本沒有獨立保留理由，亦不因家族有用途而自動升格。"
         },
         {
           "variantKey": "NORMAL",
@@ -26319,8 +26319,8 @@
             }
           ],
           "decision": "CONDITIONAL_KEEP",
-          "confidence": "MEDIUM",
-          "reasonZhTw": "本體用途有限，但後續進化具有價值；只保留適合進化用途的個體。"
+          "confidence": "HIGH",
+          "reasonZhTw": "只留符合尼多后 PvP 用途的進化候選；其餘普通重複可傳。"
         },
         {
           "variantKey": "PURIFIED",
@@ -26520,9 +26520,9 @@
               ]
             }
           ],
-          "decision": "CONDITIONAL_KEEP",
-          "confidence": "MEDIUM",
-          "reasonZhTw": "本體用途有限，但後續進化具有價值；只保留適合進化用途的個體。"
+          "decision": "TRANSFER_CANDIDATE",
+          "confidence": "HIGH",
+          "reasonZhTw": "此版本沒有獨立保留理由，亦不因家族有用途而自動升格。"
         },
         {
           "variantKey": "SHADOW",
@@ -26685,8 +26685,8 @@
             }
           ],
           "decision": "CONDITIONAL_KEEP",
-          "confidence": "MEDIUM",
-          "reasonZhTw": "本體用途有限，但後續進化具有價值；只保留適合進化用途的個體。"
+          "confidence": "HIGH",
+          "reasonZhTw": "只留符合尼多后 PvP 用途的進化候選；其餘普通重複可傳。"
         }
       ]
     }
@@ -27280,20 +27280,28 @@
         "reasonZhTw": "只有符合指定用途與條件的個體值得保留，不需囤積一般重複個體。"
       },
       {
+        "id": "029-kanto-normal",
+        "dexNumber": 29,
+        "nameZhTw": "尼多蘭",
+        "formNameZhTw": "關都",
+        "variantKey": "NORMAL",
+        "reasonZhTw": "只留符合尼多后 PvP 用途的進化候選；其餘普通重複可傳。"
+      },
+      {
+        "id": "029-kanto-shadow",
+        "dexNumber": 29,
+        "nameZhTw": "尼多蘭",
+        "formNameZhTw": "關都",
+        "variantKey": "SHADOW",
+        "reasonZhTw": "只留符合尼多后 PvP 用途的進化候選；其餘普通重複可傳。"
+      },
+      {
         "id": "030-kanto-normal",
         "dexNumber": 30,
         "nameZhTw": "尼多娜",
         "formNameZhTw": "關都",
         "variantKey": "NORMAL",
-        "reasonZhTw": "本體用途有限，但後續進化具有價值；只保留適合進化用途的個體。"
-      },
-      {
-        "id": "030-kanto-purified",
-        "dexNumber": 30,
-        "nameZhTw": "尼多娜",
-        "formNameZhTw": "關都",
-        "variantKey": "PURIFIED",
-        "reasonZhTw": "本體用途有限，但後續進化具有價值；只保留適合進化用途的個體。"
+        "reasonZhTw": "只留符合尼多后 PvP 用途的進化候選；其餘普通重複可傳。"
       },
       {
         "id": "030-kanto-shadow",
@@ -27301,7 +27309,7 @@
         "nameZhTw": "尼多娜",
         "formNameZhTw": "關都",
         "variantKey": "SHADOW",
-        "reasonZhTw": "本體用途有限，但後續進化具有價值；只保留適合進化用途的個體。"
+        "reasonZhTw": "只留符合尼多后 PvP 用途的進化候選；其餘普通重複可傳。"
       }
     ],
     "HOLD_FOR_NOW": [
@@ -27889,15 +27897,7 @@
         "nameZhTw": "尼多蘭",
         "formNameZhTw": "關都",
         "variantKey": "DYNAMAX",
-        "reasonZhTw": "此戰鬥版本尚未推出，不適用於現有個體的保留判斷。"
-      },
-      {
-        "id": "029-kanto-normal",
-        "dexNumber": 29,
-        "nameZhTw": "尼多蘭",
-        "formNameZhTw": "關都",
-        "variantKey": "NORMAL",
-        "reasonZhTw": "目前缺乏明確戰鬥、特殊版本或後續進化用途，一般重複個體通常可傳送。"
+        "reasonZhTw": "此版本沒有獨立保留理由，亦不因家族有用途而自動升格。"
       },
       {
         "id": "029-kanto-purified",
@@ -27905,15 +27905,7 @@
         "nameZhTw": "尼多蘭",
         "formNameZhTw": "關都",
         "variantKey": "PURIFIED",
-        "reasonZhTw": "目前缺乏明確戰鬥、特殊版本或後續進化用途，一般重複個體通常可傳送。"
-      },
-      {
-        "id": "029-kanto-shadow",
-        "dexNumber": 29,
-        "nameZhTw": "尼多蘭",
-        "formNameZhTw": "關都",
-        "variantKey": "SHADOW",
-        "reasonZhTw": "目前缺乏明確戰鬥、特殊版本或後續進化用途，一般重複個體通常可傳送。"
+        "reasonZhTw": "此版本沒有獨立保留理由，亦不因家族有用途而自動升格。"
       },
       {
         "id": "030-kanto-dynamax",
@@ -27921,7 +27913,15 @@
         "nameZhTw": "尼多娜",
         "formNameZhTw": "關都",
         "variantKey": "DYNAMAX",
-        "reasonZhTw": "此戰鬥版本尚未推出，不適用於現有個體的保留判斷。"
+        "reasonZhTw": "此版本沒有獨立保留理由，亦不因家族有用途而自動升格。"
+      },
+      {
+        "id": "030-kanto-purified",
+        "dexNumber": 30,
+        "nameZhTw": "尼多娜",
+        "formNameZhTw": "關都",
+        "variantKey": "PURIFIED",
+        "reasonZhTw": "此版本沒有獨立保留理由，亦不因家族有用途而自動升格。"
       }
     ]
   },
@@ -34600,6 +34600,46 @@
     }
   ],
   "sources": [
+    {
+      "id": "OFF-GMAX-MEOWTH-2026",
+      "sourceName": "Pokémon GO",
+      "title": "Gigantamax Meowth Max Battle Day",
+      "url": "https://pokemongo.com/news/gigantamax-meowth-max-battle-day-2026?hl=en",
+      "accessedAt": "2026-07-30T08:00:00.000Z",
+      "dataVersion": "accessed-2026-07-30"
+    },
+    {
+      "id": "OFF-CD-VULPIX-2026",
+      "sourceName": "Pokémon GO",
+      "title": "February 2026 Community Day: Vulpix",
+      "url": "https://pokemongo.com/en/news/202601_communityday-february-2026-vulpix",
+      "accessedAt": "2026-07-30T08:00:00.000Z",
+      "dataVersion": "accessed-2026-07-30"
+    },
+    {
+      "id": "OFF-RISING-SHADOWS-2023",
+      "sourceName": "Pokémon GO",
+      "title": "Rising Shadows",
+      "url": "https://pokemongo.com/en/post/rising-shadows",
+      "accessedAt": "2026-07-30T08:00:00.000Z",
+      "dataVersion": "accessed-2026-07-30"
+    },
+    {
+      "id": "OFF-AUTUMN-SHADOWS-2020",
+      "sourceName": "Pokémon GO",
+      "title": "Strange Eggs and Team GO Rocket",
+      "url": "https://pokemongo.com/post/autumn-event-2020-strange-eggs?hl=en",
+      "accessedAt": "2026-07-30T08:00:00.000Z",
+      "dataVersion": "accessed-2026-07-30"
+    },
+    {
+      "id": "OFF-CD-POLIWAG-2023",
+      "sourceName": "Pokémon GO",
+      "title": "July 2023 Community Day: Poliwag",
+      "url": "https://pokemongo.com/en/post/communityday-july-2023-poliwag?hl=en",
+      "accessedAt": "2026-07-30T08:00:00.000Z",
+      "dataVersion": "accessed-2026-07-30"
+    },
     {
       "id": "pvpoke-gl-20260715",
       "sourceName": "PvPoke",

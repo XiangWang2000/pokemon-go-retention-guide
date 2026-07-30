@@ -1,0 +1,229 @@
+{
+  "batch": "031-060",
+  "updatedAt": "2026-07-30",
+  "dataVersion": "2026.07.30-r8",
+  "rulesVersion": "2026.07.28-v5",
+  "status": "ACCEPTED_WITH_SCOPED_HOLDS",
+  "counts": {
+    "species": 30,
+    "forms": 39,
+    "battleVariants": 157,
+    "families": 20,
+    "strategyCounts": {
+      "KEEP_TARGETS": 4,
+      "SELECTIVE_KEEP": 3,
+      "MOSTLY_TRANSFER": 8,
+      "HOLD_FOR_NOW": 5
+    },
+    "openIssues": 17,
+    "safetyAffectingIssues": 17
+  },
+  "crossBatchIntegration": {
+    "familyKey": "KANTO_FAMILY_029",
+    "members": [
+      "029-kanto",
+      "030-kanto",
+      "031-kanto"
+    ],
+    "isBatchTruncated": false,
+    "result": "PASS"
+  },
+  "versionBoundaries": {
+    "meowthVariants": [
+      {
+        "variantKey": "DYNAMAX",
+        "releaseStatus": "UNRELEASED",
+        "decision": "TRANSFER_CANDIDATE"
+      },
+      {
+        "variantKey": "GIGANTAMAX",
+        "releaseStatus": "RELEASED",
+        "decision": "CONDITIONAL_KEEP"
+      },
+      {
+        "variantKey": "NORMAL",
+        "releaseStatus": "RELEASED",
+        "decision": "TRANSFER_CANDIDATE"
+      },
+      {
+        "variantKey": "PURIFIED",
+        "releaseStatus": "RELEASED",
+        "decision": "TRANSFER_CANDIDATE"
+      },
+      {
+        "variantKey": "SHADOW",
+        "releaseStatus": "RELEASED",
+        "decision": "TRANSFER_CANDIDATE"
+      }
+    ],
+    "result": "PASS"
+  },
+  "ivRules": {
+    "pve": "先看物種與型態、招式、等級與投入、斷點，最後才用 IV 比同種候選；15攻不是淘汰線。",
+    "shadow": "暗影標準較寬；15攻優先，不設硬性最低IV；低總IV不觸發淨化。",
+    "result": "PASS"
+  },
+  "scopedHolds": [
+    {
+      "familyId": "KANTO_FAMILY_041:041-kanto",
+      "members": [
+        "041-kanto",
+        "042-kanto"
+      ],
+      "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
+    },
+    {
+      "familyId": "KANTO_FAMILY_043:043-kanto",
+      "members": [
+        "043-kanto",
+        "044-kanto",
+        "045-kanto"
+      ],
+      "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
+    },
+    {
+      "familyId": "KANTO_FAMILY_052:052-galar",
+      "members": [
+        "052-galar"
+      ],
+      "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
+    },
+    {
+      "familyId": "KANTO_FAMILY_056:056-kanto",
+      "members": [
+        "056-kanto",
+        "057-kanto"
+      ],
+      "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
+    },
+    {
+      "familyId": "KANTO_FAMILY_060:060-kanto",
+      "members": [
+        "060-kanto"
+      ],
+      "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
+    }
+  ],
+  "immediateHandling": [
+    {
+      "familyId": "KANTO_FAMILY_029:029-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留尼多后（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_032:032-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_035:035-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留皮可西（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_037:037-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留九尾（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_037:037-alola",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留九尾（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_039:039-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留胖可丁（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_041:041-kanto",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；目前每個成員至少留 1 隻最佳候選，補齊末階進化評估後再判斷。",
+      "transferLine": null
+    },
+    {
+      "familyId": "KANTO_FAMILY_043:043-kanto",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；目前每個成員至少留 1 隻最佳候選，補齊末階進化評估後再判斷。",
+      "transferLine": null
+    },
+    {
+      "familyId": "KANTO_FAMILY_046:046-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_048:048-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_050:050-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_050:050-alola",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_052:052-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留喵喵（超極巨版本本身）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_052:052-galar",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；目前每個成員至少留 1 隻最佳候選，補齊末階進化評估後再判斷。",
+      "transferLine": null
+    },
+    {
+      "familyId": "KANTO_FAMILY_052:052-alola",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_054:054-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_056:056-kanto",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；目前每個成員至少留 1 隻最佳候選，補齊末階進化評估後再判斷。",
+      "transferLine": null
+    },
+    {
+      "familyId": "KANTO_FAMILY_058:058-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留風速狗（ML 高 IV 投資候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_058:058-hisui",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_060:060-kanto",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；目前每個成員至少留 1 隻最佳候選，補齊末階進化評估後再判斷。",
+      "transferLine": null
+    }
+  ]
+}

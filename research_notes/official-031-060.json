@@ -1,0 +1,78 @@
+{
+  "batch": "031-060",
+  "accessedAt": "2026-07-30T16:00:00+08:00",
+  "scope": {
+    "dexStart": 31,
+    "dexEnd": 60,
+    "speciesCount": 30,
+    "formCount": 39
+  },
+  "sources": [
+    {
+      "id": "OFF-GMAX-MEOWTH-2026",
+      "url": "https://pokemongo.com/news/gigantamax-meowth-max-battle-day-2026?hl=en",
+      "use": "超極巨喵喵開放狀態及不能進化"
+    },
+    {
+      "id": "OFF-CD-VULPIX-2026",
+      "url": "https://pokemongo.com/en/news/202601_communityday-february-2026-vulpix",
+      "use": "六尾與阿羅拉六尾分支，以及九尾、阿羅拉九尾活動招式"
+    },
+    {
+      "id": "OFF-RISING-SHADOWS-2023",
+      "url": "https://pokemongo.com/en/post/rising-shadows",
+      "use": "暗影蚊香蝌蚪版本"
+    },
+    {
+      "id": "OFF-AUTUMN-SHADOWS-2020",
+      "url": "https://pokemongo.com/post/autumn-event-2020-strange-eggs?hl=en",
+      "use": "暗影地鼠與暗影卡蒂狗版本"
+    },
+    {
+      "id": "OFF-CD-POLIWAG-2023",
+      "url": "https://pokemongo.com/en/post/communityday-july-2023-poliwag?hl=en",
+      "use": "蚊香蝌蚪後續分支進化"
+    },
+    {
+      "id": "battle2-pvpoke-commit",
+      "url": "https://github.com/pvpoke/pvpoke/commit/86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "use": "固定 PvPoke 版本"
+    }
+  ],
+  "regionalForms": [
+    "037-alola",
+    "038-alola",
+    "050-alola",
+    "051-alola",
+    "052-alola",
+    "052-galar",
+    "053-alola",
+    "058-hisui",
+    "059-hisui"
+  ],
+  "crossBatchFamilies": [
+    {
+      "familyKey": "KANTO_FAMILY_029",
+      "members": ["029-kanto", "030-kanto", "031-kanto"],
+      "result": "#029、#030、#031 已連成單一家族；前批的範圍外提示已移除。"
+    }
+  ],
+  "specialVersionBoundaries": [
+    {
+      "formId": "052-kanto",
+      "variants": ["NORMAL", "DYNAMAX", "GIGANTAMAX"],
+      "result": "三者分開；只有真正的超極巨喵喵可套用超極巨結論，且不能進化。"
+    },
+    {
+      "variant": "PURIFIED",
+      "result": "沒有獨立榜單；淨化不可逆，低總 IV 不觸發淨化建議。"
+    }
+  ],
+  "reviewQueue": [
+    {
+      "families": ["041", "043", "052-galar", "056", "060"],
+      "status": "DEFERRED_TO_FUTURE_BATCH",
+      "safetyAction": "因範圍外進化可能改變保留安全，僅這些家族先留一隻最佳候選。"
+    }
+  ]
+}

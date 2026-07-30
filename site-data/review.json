@@ -1,5 +1,413 @@
 [
   {
+    "id": "r8-issue-041-kanto-normal",
+    "dexNumber": 41,
+    "nameZhTw": "超音蝠",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-041-kanto-shadow",
+    "dexNumber": 41,
+    "nameZhTw": "超音蝠",
+    "formNameZhTw": "關都",
+    "variantKey": "SHADOW",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-042-kanto-normal",
+    "dexNumber": 42,
+    "nameZhTw": "大嘴蝠",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      },
+      {
+        "id": "pvpoke-ul-20260715",
+        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-042-kanto-shadow",
+    "dexNumber": 42,
+    "nameZhTw": "大嘴蝠",
+    "formNameZhTw": "關都",
+    "variantKey": "SHADOW",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      },
+      {
+        "id": "pvpoke-ul-20260715",
+        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-043-kanto-normal",
+    "dexNumber": 43,
+    "nameZhTw": "走路草",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-043-kanto-shadow",
+    "dexNumber": 43,
+    "nameZhTw": "走路草",
+    "formNameZhTw": "關都",
+    "variantKey": "SHADOW",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-044-kanto-normal",
+    "dexNumber": 44,
+    "nameZhTw": "臭臭花",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-044-kanto-shadow",
+    "dexNumber": 44,
+    "nameZhTw": "臭臭花",
+    "formNameZhTw": "關都",
+    "variantKey": "SHADOW",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-045-kanto-normal",
+    "dexNumber": 45,
+    "nameZhTw": "霸王花",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      },
+      {
+        "id": "pvpoke-ul-20260715",
+        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-045-kanto-shadow",
+    "dexNumber": 45,
+    "nameZhTw": "霸王花",
+    "formNameZhTw": "關都",
+    "variantKey": "SHADOW",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      },
+      {
+        "id": "pvpoke-ul-20260715",
+        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-052-galar-normal",
+    "dexNumber": 52,
+    "nameZhTw": "喵喵",
+    "formNameZhTw": "伽勒爾",
+    "variantKey": "NORMAL",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-056-kanto-normal",
+    "dexNumber": 56,
+    "nameZhTw": "猴怪",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-056-kanto-shadow",
+    "dexNumber": 56,
+    "nameZhTw": "猴怪",
+    "formNameZhTw": "關都",
+    "variantKey": "SHADOW",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-057-kanto-normal",
+    "dexNumber": 57,
+    "nameZhTw": "火爆猴",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      },
+      {
+        "id": "pvpoke-ul-20260715",
+        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-057-kanto-shadow",
+    "dexNumber": 57,
+    "nameZhTw": "火爆猴",
+    "formNameZhTw": "關都",
+    "variantKey": "SHADOW",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [
+      {
+        "id": "pvpoke-gl-20260715",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      },
+      {
+        "id": "pvpoke-ul-20260715",
+        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    ],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-060-kanto-normal",
+    "dexNumber": 60,
+    "nameZhTw": "蚊香蝌蚪",
+    "formNameZhTw": "關都",
+    "variantKey": "NORMAL",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
+    "id": "r8-issue-060-kanto-shadow",
+    "dexNumber": 60,
+    "nameZhTw": "蚊香蝌蚪",
+    "formNameZhTw": "關都",
+    "variantKey": "SHADOW",
+    "issueType": "RULE_NOT_COVERED",
+    "status": "OPEN",
+    "batchKey": "031-060",
+    "messageZhTw": "此進化家族仍有 #031～#060 範圍外成員，可能影響安全傳送結論。",
+    "affectsFinalDecision": true,
+    "suggestedActionZhTw": "先保留一隻最佳候選，不需保留全部普通重複。",
+    "suggestedResearchActionZhTw": "在包含範圍外末階的後續批次完成家族整合。",
+    "provisionalDecision": "HOLD_FOR_NOW",
+    "lastResearchedAt": "2026-07-30T08:00:00.000Z",
+    "relatedSources": [],
+    "detectedAt": "2026-07-30T08:00:00.000Z"
+  },
+  {
     "id": "issue-020-kanto-shadow-2026.07.28-v5-material-data-gap-0",
     "dexNumber": 20,
     "nameZhTw": "拉達",

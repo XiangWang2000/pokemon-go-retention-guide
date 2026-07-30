@@ -1,0 +1,34 @@
+{
+  "batch": "031-060",
+  "checkedAt": "2026-07-30T16:00:00+08:00",
+  "pvp": {
+    "sourceCommit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+    "cup": "OPEN",
+    "category": "OVERALL",
+    "leagues": ["GREAT", "ULTRA", "MASTER"],
+    "extraction": "完整 rankings JSON 陣列索引加一",
+    "primaryTargets": [
+      "Nidoqueen",
+      "Clefable",
+      "Ninetales",
+      "Alolan Ninetales",
+      "Wigglytuff",
+      "Primeape",
+      "Arcanine"
+    ],
+    "rankPolicy": "物種榜單名次與玩家個體 IV Rank 分開；前者判斷物種用途，後者只比較同種同型態候選。"
+  },
+  "pve": {
+    "primaryTargets": [],
+    "result": "本批沒有足夠證據列為主要 PvE 投資目標；低價值物種不因 100% 自動成為實戰必留。",
+    "ivPolicy": "先看物種與型態、招式、等級與投入、斷點，最後才用 IV 比同種候選；15攻不是淘汰線。"
+  },
+  "shadow": {
+    "ivPolicy": "暗影標準較寬；15攻優先，不設硬性最低IV。",
+    "purificationPolicy": "低總 IV 不會自動建議淨化；淨化不可逆。"
+  },
+  "max": {
+    "targets": ["Gigantamax Meowth"],
+    "result": "屬性內 Max 表現、整體投資價值與用途廣度分開呈現；普通、極巨、超極巨版本不得互換。"
+  }
+}

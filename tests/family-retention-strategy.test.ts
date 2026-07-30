@@ -209,8 +209,10 @@ describe("家族直接處理結論", () => {
     expect(family.handlingSummaryZhTw).toContain("其餘不符合上述用途的普通重複個體可傳");
   });
 
-  it("低價值與資料未完整家族給出相反且安全的清包動作", () => {
+  it("低價值與已補齊跨批次家族給出安全的清包動作", () => {
     expect(familyContaining("020-kanto").handlingSummaryZhTw).toContain("普通重複可直接傳送");
-    expect(familyContaining("030-kanto").handlingSummaryZhTw).toContain("先不要大量傳送");
+    expect(familyContaining("030-kanto").handlingSummaryZhTw).toContain("尼多后");
+    expect(familyContaining("030-kanto").handlingSummaryZhTw).toContain("普通重複個體可傳");
+    expect(familyContaining("030-kanto").isBatchTruncated).toBe(false);
   });
 });

@@ -9,3 +9,16 @@
 7. 來源衝突須同時保存、說明方法差異、降低 confidence 並建立 Review Queue。
 8. 更新後依序執行 `data:validate`、`review:generate`、`lint`、`typecheck`、`test`、`build`。
 9. 人工確認本批 Markdown／JSON 報告後才可開始下一批。
+
+## 目前批次執行順序
+
+```powershell
+npm run db:seed
+npm run data:remediate
+npm run data:import:031-060
+npm run data:validate
+npm run review:generate
+npm run sites:snapshot
+```
+
+`data:import:031-060` 只重建 #031～#060 與 #029～#031 的跨批次連接，不會啟動下一批。官方來源與固定 PvPoke snapshot 必須先存在；產物仍由 `sites:snapshot` 統一產生。

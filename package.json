@@ -31,9 +31,10 @@
     "db:reset": "prisma migrate reset --force",
     "data:validate": "tsx scripts/validate-data.ts",
     "data:import": "tsx scripts/import-data.ts",
+    "data:import:031-060": "tsx scripts/import-031-060.ts",
     "data:remediate": "tsx scripts/remediate-001-030.ts",
     "data:backfill-iv": "tsx scripts/backfill-structured-iv.ts",
-    "review:generate": "tsx scripts/generate-review.ts",
+    "review:generate": "tsx scripts/generate-review.ts && tsx scripts/generate-review-031-060.ts",
     "review:remediation": "tsx scripts/generate-remediation-report.ts"
   },
   "dependencies": {

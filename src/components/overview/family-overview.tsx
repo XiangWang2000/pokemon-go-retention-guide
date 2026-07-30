@@ -85,7 +85,7 @@ function FamilyHandlingConclusion({
         <div className="mt-2 space-y-2">
           <div className="grid grid-cols-1 items-start gap-1.5 sm:grid-cols-[auto_1fr] sm:gap-2">
             <span className="w-fit rounded-md bg-emerald-700 px-2 py-0.5 text-xs font-black text-white">
-              要留
+              要保留的條件
             </span>
             <p
               data-testid="family-keep-condition"
