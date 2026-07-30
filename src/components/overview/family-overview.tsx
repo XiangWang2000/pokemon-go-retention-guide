@@ -65,6 +65,10 @@ function FamilyHandlingConclusion({
   compact?: boolean;
 }) {
   const { label, icon: Icon, containerClass, labelClass } = handlingMeta[family.retentionStrategy];
+  const isMultiUseFamily = family.retentionStrategy === "KEEP_TARGETS";
+  const summaryClauses = family.handlingSummaryZhTw.replace(/。$/, "").split("；");
+  const transferClause = isMultiUseFamily ? summaryClauses.pop() : null;
+  const keepClause = summaryClauses.join("；");
   return (
     <section
       data-testid="family-handling-summary"
@@ -77,13 +81,45 @@ function FamilyHandlingConclusion({
         <span aria-hidden>｜</span>
         {label}
       </p>
-      <p
-        className={`mt-1 font-black text-[var(--foreground)] ${
-          compact ? "text-[15px] leading-6" : "text-lg leading-7"
-        }`}
-      >
-        {family.handlingSummaryZhTw}
-      </p>
+      {isMultiUseFamily ? (
+        <div className="mt-2 space-y-2">
+          <div className="grid grid-cols-1 items-start gap-1.5 sm:grid-cols-[auto_1fr] sm:gap-2">
+            <span className="w-fit rounded-md bg-emerald-700 px-2 py-0.5 text-xs font-black text-white">
+              要留
+            </span>
+            <p
+              data-testid="family-keep-condition"
+              className={`font-black text-[var(--foreground)] ${
+                compact ? "text-[15px] leading-6" : "text-lg leading-7"
+              }`}
+            >
+              {keepClause}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 items-start gap-1.5 rounded-lg border border-slate-500/40 bg-[var(--surface)] px-2.5 py-2 sm:grid-cols-[auto_1fr] sm:gap-2">
+            <span className="inline-flex w-fit items-center gap-1 rounded-md bg-slate-700 px-2 py-0.5 text-xs font-black text-white">
+              <Send aria-hidden size={13} />
+              其他普通重複可傳
+            </span>
+            <p
+              data-testid="family-transfer-condition"
+              className={`font-black text-[var(--foreground)] ${
+                compact ? "text-[13px] leading-5" : "text-base leading-6"
+              }`}
+            >
+              {transferClause}
+            </p>
+          </div>
+        </div>
+      ) : (
+        <p
+          className={`mt-1 font-black text-[var(--foreground)] ${
+            compact ? "text-[15px] leading-6" : "text-lg leading-7"
+          }`}
+        >
+          {family.handlingSummaryZhTw}
+        </p>
+      )}
     </section>
   );
 }

@@ -50,7 +50,7 @@ describe("Sites 唯讀 snapshot", () => {
   });
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
-    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.07.28-r6");
+    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.07.30-r7");
     expect(siteSnapshotManifest.counts).toMatchObject({
       pokemonSpecies: 30,
       pokemonForms: 35,
