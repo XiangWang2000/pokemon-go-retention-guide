@@ -60,6 +60,46 @@ function latestIso(values: Array<string | null | undefined>) {
   );
 }
 
+function buildRuntimeHome(home: ReturnType<typeof buildHomeSnapshot>) {
+  return {
+    ...home,
+    families: home.families.map((family) => ({
+      ...family,
+      members: family.members.map((member) => ({
+        ...member,
+        form: {
+          ...member.form,
+          variants: member.form.variants.map((variant) => ({
+            ...variant,
+            row: {
+              ...variant.row,
+              // The homepage already contains the computed conclusions. Full source
+              // and rule-trace evidence remains available on the variant detail route.
+              sources: [],
+              traces: [],
+              raw: variant.row.raw.map((raw) => ({
+                id: raw.id,
+                category: raw.category,
+                league: raw.league,
+                rank: raw.rank,
+                tier: raw.tier,
+                rating: raw.rating,
+                rawNotes: raw.rawNotes,
+              })),
+              categoryStatuses: variant.row.categoryStatuses.map((status) => ({
+                category: status.category,
+                status: status.status,
+                provenance: status.provenance,
+                materialToDecision: status.materialToDecision,
+              })),
+            },
+          })),
+        },
+      })),
+    })),
+  } as unknown as ReturnType<typeof buildHomeSnapshot>;
+}
+
 async function tableCounts() {
   const [
     pokemonSpecies,
@@ -163,7 +203,7 @@ async function main() {
   for (const [name, value] of Object.entries(payloads)) {
     await writeIfChanged(path.join(siteDataDirectory, `${name}.json`), value);
   }
-  const publicHome = compactJsonBuffer(home);
+  const publicHome = compactJsonBuffer(buildRuntimeHome(home));
   await writeIfChanged(path.join(publicDataDirectory, "home.json"), publicHome);
 
   let previousSnapshotSha: string | null = null;
