@@ -17,12 +17,12 @@ export default async function SourcesPage() {
       </header>
       <div className="grid gap-4 lg:grid-cols-2">
         {sources.map((source) => (
-          <article key={source.id} className="surface rounded-2xl p-5">
+          <article key={source.id} className="surface min-w-0 rounded-2xl p-5">
             <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="rounded-full border px-2 py-1 text-xs font-bold">
                 {zhTw.sourceType[source.sourceType]}
               </span>
-              <span className="font-mono text-xs text-[var(--muted)]">
+              <span className="max-w-full break-all text-right font-mono text-xs text-[var(--muted)]">
                 {source.dataVersion ?? "未標示版本"}
               </span>
             </div>
