@@ -16,9 +16,10 @@
 npm run db:seed
 npm run data:remediate
 npm run data:import:031-060
+npm run data:import:061-090
 npm run data:validate
 npm run review:generate
 npm run sites:snapshot
 ```
 
-`data:import:031-060` 只重建 #031～#060 與 #029～#031 的跨批次連接，不會啟動下一批。官方來源與固定 PvPoke snapshot 必須先存在；產物仍由 `sites:snapshot` 統一產生。
+`data:import:031-060` 重建 #031～#060 與 #029～#031 的跨批次連接；`data:import:061-090` 重建 #061～#090，並把 #060 蚊香蝌蚪接到 #061～#062。兩者都不會啟動範圍外下一批。官方來源與固定 PvPoke snapshot 必須先存在；產物仍由 `sites:snapshot` 統一產生。

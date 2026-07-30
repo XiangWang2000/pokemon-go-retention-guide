@@ -10,13 +10,13 @@
     "battleVariants": 157,
     "families": 20,
     "strategyCounts": {
-      "KEEP_TARGETS": 4,
+      "KEEP_TARGETS": 5,
       "SELECTIVE_KEEP": 3,
       "MOSTLY_TRANSFER": 8,
-      "HOLD_FOR_NOW": 5
+      "HOLD_FOR_NOW": 4
     },
-    "openIssues": 17,
-    "safetyAffectingIssues": 17
+    "openIssues": 15,
+    "safetyAffectingIssues": 15
   },
   "crossBatchIntegration": {
     "familyKey": "KANTO_FAMILY_029",
@@ -93,13 +93,6 @@
       "members": [
         "056-kanto",
         "057-kanto"
-      ],
-      "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
-    },
-    {
-      "familyId": "KANTO_FAMILY_060:060-kanto",
-      "members": [
-        "060-kanto"
       ],
       "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
     }
@@ -221,9 +214,9 @@
     },
     {
       "familyId": "KANTO_FAMILY_060:060-kanto",
-      "strategy": "HOLD_FOR_NOW",
-      "conclusion": "先不要大量傳送；目前每個成員至少留 1 隻最佳候選，補齊末階進化評估後再判斷。",
-      "transferLine": null
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留蚊香泳士（PvP（GL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
     }
   ]
 }

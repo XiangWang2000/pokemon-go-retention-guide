@@ -20,12 +20,20 @@ const sourceVariantLabels: Record<string, string> = {
   GIGANTAMAX: "超極巨",
 };
 
-const batch031060OfficialSourceIds = new Set([
+const batchEvidenceSourceIds = new Set([
   "OFF-GMAX-MEOWTH-2026",
   "OFF-CD-VULPIX-2026",
   "OFF-RISING-SHADOWS-2023",
   "OFF-AUTUMN-SHADOWS-2020",
   "OFF-CD-POLIWAG-2023",
+  "OFF-GMAX-MACHAMP-2025",
+  "OFF-MEGA-ALAKAZAM-2022",
+  "OFF-MEGA-VICTREEBEL-2026",
+  "OFF-MEGA-SLOWBRO-2021",
+  "OFF-CD-DEC-2023",
+  "PVE-SHADOW-MACHAMP-20260730",
+  "PVE-DMAX-ALAKAZAM-20260730",
+  "OFF-DMAX-MACHOP-2026",
 ]);
 
 function formatSourceTarget(variant: {
@@ -437,7 +445,7 @@ export async function getSources() {
         ]),
       ).values(),
     );
-    const exposedEvidence = batch031060OfficialSourceIds.has(source.id) ? allLinkedEvidence : [];
+    const exposedEvidence = batchEvidenceSourceIds.has(source.id) ? allLinkedEvidence : [];
     return {
       id: source.id,
       sourceName: source.sourceName,

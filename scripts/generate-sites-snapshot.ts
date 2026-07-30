@@ -18,7 +18,7 @@ const siteDataDirectory = path.join(root, "site-data");
 const exportDirectory = path.join(root, "public", "exports");
 const publicDataDirectory = path.join(root, "public", "data");
 const databasePath = path.join(root, "dev.db");
-const workbookPath = path.join(exportDirectory, "pokemon-go-retention-001-060.xlsx");
+const workbookPath = path.join(exportDirectory, "pokemon-go-retention-001-090.xlsx");
 const manifestPath = path.join(siteDataDirectory, "manifest.json");
 
 function jsonBuffer(value: unknown) {
@@ -228,7 +228,7 @@ async function main() {
 
   const manifest = {
     schemaVersion: 1,
-    batch: "001-060",
+    batch: "001-090",
     dataVersion: DATA_VERSION,
     dataAsOf,
     sourceDatabase: {
@@ -252,7 +252,7 @@ async function main() {
       sha256: sha256(publicHome),
     },
     excel: {
-      path: "public/exports/pokemon-go-retention-001-060.xlsx",
+      path: "public/exports/pokemon-go-retention-001-090.xlsx",
       bytes: workbook.byteLength,
       sha256: sha256(workbook),
       sheets: 10,

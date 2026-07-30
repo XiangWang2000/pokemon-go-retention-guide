@@ -1,80 +1,80 @@
 {
   "schemaVersion": 1,
-  "batch": "001-060",
-  "dataVersion": "2026.07.30-r9",
-  "dataAsOf": "2026-07-30T08:00:00.000Z",
+  "batch": "001-090",
+  "dataVersion": "2026.07.30-r10",
+  "dataAsOf": "2026-07-30T15:45:00.000Z",
   "sourceDatabase": {
     "path": "dev.db",
-    "bytes": 6406144,
-    "sha256": "f76223f8f3e5c51c51e4249712d4fbd38abfc47017d6ea423831e1b519e959a5"
+    "bytes": 7368704,
+    "sha256": "6fd6705293b764a158d61c240074ab72685a09d1139caea10e0537a2cd4af56b"
   },
   "rulesVersions": [
     "2026.07.28-v5"
   ],
   "counts": {
-    "pokemonSpecies": 60,
-    "pokemonForms": 74,
-    "battleVariants": 310,
-    "evolutionPaths": 40,
+    "pokemonSpecies": 90,
+    "pokemonForms": 114,
+    "battleVariants": 474,
+    "evolutionPaths": 62,
     "moves": 9,
     "variantMoves": 9,
-    "sourceReferences": 112,
-    "rawEvaluationData": 193,
-    "retentionEvaluations": 930,
-    "evaluationSources": 2932,
-    "evaluationRuleTraces": 4602,
-    "changeLogs": 836,
-    "dataIssues": 1203,
-    "categoryEvaluations": 2170,
-    "categoryEvaluationSources": 1061,
+    "sourceReferences": 119,
+    "rawEvaluationData": 311,
+    "retentionEvaluations": 1098,
+    "evaluationSources": 3066,
+    "evaluationRuleTraces": 4770,
+    "changeLogs": 840,
+    "dataIssues": 1208,
+    "categoryEvaluations": 3318,
+    "categoryEvaluationSources": 1196,
     "ivRecommendations": 11,
-    "dashboardRows": 310,
-    "homeFamilies": 34,
-    "openReviewIssues": 139,
-    "detailRecords": 310
+    "dashboardRows": 474,
+    "homeFamilies": 52,
+    "openReviewIssues": 144,
+    "detailRecords": 474
   },
-  "snapshotSha256": "0a8850abe412e73ad843216ab5541743222ce82e321a6c97a446aba8eca54c44",
+  "snapshotSha256": "e3d9b8ae08c1d7db828c7681d0cdb7e3763709da93ce1c6c2ffd67345d24f5cf",
   "files": {
     "home": {
       "path": "home.json",
-      "bytes": 5256737,
-      "sha256": "11c76122b336c32364e869469d111a45d876e377af22e6f762f222b38b016b6f"
+      "bytes": 7644791,
+      "sha256": "9435fbe90944d4238d231b5a460f7517cbe91d4bede34ade5698ac1eb546ceab"
     },
     "dashboard": {
       "path": "dashboard.json",
-      "bytes": 8100204,
-      "sha256": "8d474318dd09931b00beb48afaa09377380ffc6b057d3146cd2a6dcf255ebc71"
+      "bytes": 11996670,
+      "sha256": "147a2bbe4cb848ef26258c11c60e0e67bb12300b3eb0c5cae7ace2797db2fe6b"
     },
     "review": {
       "path": "review.json",
-      "bytes": 323450,
-      "sha256": "a9927693d727757e68790464a624482cfc543c4228d8441b7986e9ea5904a8f1"
+      "bytes": 329083,
+      "sha256": "8e6133b25eba822dab6e187f255e291178a24543221e771d230d09714d1dedee"
     },
     "sources": {
       "path": "sources.json",
-      "bytes": 92506,
-      "sha256": "c3ea01ee85c9439f6ca9eba4e94d401cdddb9da31dbe8bf4d87336262b461c8a"
+      "bytes": 106512,
+      "sha256": "154ad1b02f1d84be39b971300da7605e3ed20076d9a9b3f02831f6c8f48d3fa6"
     },
     "changes": {
       "path": "changes.json",
-      "bytes": 561571,
-      "sha256": "009310fe9d7ef66e8d19f56ed50edae3e7908d3e0278249a3ca2079c0712c733"
+      "bytes": 563778,
+      "sha256": "b698857382e20cb0575f1f6335efb8c4ca746c410e4a1c39972adb621be9fb2b"
     },
     "details": {
       "path": "details.json",
-      "bytes": 449804,
-      "sha256": "a94f9897283b77b229865713ae77815a784736134c8bb1ec304cd16f75bcafd9"
+      "bytes": 567251,
+      "sha256": "58d160a9ec2a2e6d790aae61bedcd686b96539d97ed5669fef7864df696bb986"
     }
   },
   "runtimeHome": {
     "path": "public/data/home.json",
-    "bytes": 1726774,
-    "sha256": "727585c60185794b4f145d33ca89d79acfee93434c5e93d150f49b45c5ffca0d"
+    "bytes": 2536740,
+    "sha256": "f09e0a07bd4dd7f52581200f86304d4ca54bfe3bc2250d69c16cabb8a60b52bf"
   },
   "excel": {
-    "path": "public/exports/pokemon-go-retention-001-060.xlsx",
-    "bytes": 213272,
-    "sha256": "b906a82313bf811230a361d73dd2abb096435f0e795bc564a7a253bc68e4249d",
+    "path": "public/exports/pokemon-go-retention-001-090.xlsx",
+    "bytes": 277570,
+    "sha256": "4cb18ecaceefe389e7dfed39be82a525dad593ec2016e0ac84a5f86726b4c436",
     "sheets": 10
   }
 }

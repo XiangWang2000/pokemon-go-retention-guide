@@ -1,0 +1,26 @@
+{
+  "batch": "061-090",
+  "pvpokeCommit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+  "format": "Open League / Overall",
+  "rankingMethod": "fixed JSON array index + 1",
+  "notableRanks": [
+    { "speciesId": "dewgong", "league": "GREAT", "rank": 56 },
+    { "speciesId": "tentacruel", "league": "ULTRA", "rank": 75 },
+    { "speciesId": "rapidash_shadow", "league": "ULTRA", "rank": 127 },
+    { "speciesId": "machamp_shadow", "league": "MASTER", "rank": 137 },
+    { "speciesId": "poliwrath", "league": "GREAT", "rank": 169 },
+    { "speciesId": "dodrio", "league": "ULTRA", "rank": 172 },
+    { "speciesId": "victreebel_shadow", "league": "ULTRA", "rank": 193 },
+    { "speciesId": "slowbro", "league": "ULTRA", "rank": 208 }
+  ],
+  "decisionBands": {
+    "keep": "rank <= 100",
+    "conditional": "rank 101-250",
+    "note": "物種排名只決定用途層級，不等於個體 IV Rank，也不構成硬性 IV 淘汰線。"
+  },
+  "ivSafety": {
+    "pve": "15攻優先；14攻高整體IV亦可留。",
+    "shadow": "暗影標準較寬；15攻優先，不設硬性最低IV。",
+    "breakpoints": "沒有可靠資料時不宣稱15/10/10一定優於14/15/15。"
+  }
+}
