@@ -32,22 +32,30 @@ export function HomeDataLoader() {
   const stats = [
     {
       label: "建議保留",
-      value: families.filter((family) => family.retentionStrategy === "KEEP_TARGETS").length,
+      value: home
+        ? families.filter((family) => family.retentionStrategy === "KEEP_TARGETS").length
+        : null,
       icon: CheckCircle2,
     },
     {
       label: "選擇性保留",
-      value: families.filter((family) => family.retentionStrategy === "SELECTIVE_KEEP").length,
+      value: home
+        ? families.filter((family) => family.retentionStrategy === "SELECTIVE_KEEP").length
+        : null,
       icon: CircleDot,
     },
     {
       label: "大多可傳",
-      value: families.filter((family) => family.retentionStrategy === "MOSTLY_TRANSFER").length,
+      value: home
+        ? families.filter((family) => family.retentionStrategy === "MOSTLY_TRANSFER").length
+        : null,
       icon: Send,
     },
     {
       label: "暫時保留",
-      value: families.filter((family) => family.retentionStrategy === "HOLD_FOR_NOW").length,
+      value: home
+        ? families.filter((family) => family.retentionStrategy === "HOLD_FOR_NOW").length
+        : null,
       icon: AlertTriangle,
     },
   ];
@@ -77,7 +85,12 @@ export function HomeDataLoader() {
                 <Icon aria-hidden size={17} />
                 {label}
               </div>
-              <p className="mt-2 font-mono text-3xl font-black">{value}</p>
+              <p
+                className="mt-2 font-mono text-3xl font-black"
+                aria-label={value === null ? `${label}資料載入中` : undefined}
+              >
+                {value ?? "—"}
+              </p>
             </div>
           ))}
         </div>

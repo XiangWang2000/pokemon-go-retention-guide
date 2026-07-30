@@ -9,6 +9,36 @@ function parseArray(value: string) {
   }
 }
 
+const sourceVariantLabels: Record<string, string> = {
+  NORMAL: "普通",
+  SHADOW: "暗影",
+  PURIFIED: "淨化",
+  MEGA: "Mega",
+  MEGA_X: "Mega X",
+  MEGA_Y: "Mega Y",
+  DYNAMAX: "極巨",
+  GIGANTAMAX: "超極巨",
+};
+
+const batch031060OfficialSourceIds = new Set([
+  "OFF-GMAX-MEOWTH-2026",
+  "OFF-CD-VULPIX-2026",
+  "OFF-RISING-SHADOWS-2023",
+  "OFF-AUTUMN-SHADOWS-2020",
+  "OFF-CD-POLIWAG-2023",
+]);
+
+function formatSourceTarget(variant: {
+  variantKey: string;
+  pokemonForm: {
+    formNameZhTw: string;
+    species: { dexNumber: number; nameZhTw: string };
+  };
+}) {
+  const { species } = variant.pokemonForm;
+  return `#${String(species.dexNumber).padStart(3, "0")} ${species.nameZhTw}（${variant.pokemonForm.formNameZhTw}／${sourceVariantLabels[variant.variantKey] ?? "其他版本"}）`;
+}
+
 export async function getDashboardRows() {
   const [variants, ivRecommendations] = await Promise.all([
     prisma.battleVariant.findMany({
@@ -350,32 +380,82 @@ export async function getSources() {
       rawEvaluationData: {
         include: { battleVariant: { include: { pokemonForm: { include: { species: true } } } } },
       },
-      evaluationSources: true,
+      evaluationSources: {
+        include: {
+          evaluation: {
+            include: {
+              battleVariant: {
+                include: { pokemonForm: { include: { species: true } } },
+              },
+            },
+          },
+        },
+      },
+      categoryEvaluationSources: {
+        include: {
+          categoryEvaluation: {
+            include: {
+              battleVariant: {
+                include: { pokemonForm: { include: { species: true } } },
+              },
+            },
+          },
+        },
+      },
     },
     orderBy: { accessedAt: "desc" },
   });
-  return sources.map((source) => ({
-    id: source.id,
-    sourceName: source.sourceName,
-    sourceUrl: source.sourceUrl,
-    sourceType: source.sourceType,
-    sourceTitleOriginal: source.sourceTitleOriginal,
-    sourceLanguage: source.sourceLanguage,
-    sourceSummaryZhTw: source.sourceSummaryZhTw,
-    accessedAt: source.accessedAt.toISOString(),
-    publishedAt: source.publishedAt?.toISOString() ?? null,
-    dataVersion: source.dataVersion,
-    notes: source.notes,
-    evaluationCount: source.evaluationSources.length,
-    referencedPokemon: Array.from(
+  return sources.map((source) => {
+    const referencedPokemon = Array.from(
       new Set(
-        source.rawEvaluationData.map(
-          (raw) =>
-            `#${String(raw.battleVariant.pokemonForm.species.dexNumber).padStart(3, "0")} ${raw.battleVariant.pokemonForm.species.nameZhTw}`,
+        [
+          ...source.rawEvaluationData.map((raw) => raw.battleVariant),
+          ...source.evaluationSources.map((link) => link.evaluation.battleVariant),
+          ...source.categoryEvaluationSources.map((link) => link.categoryEvaluation.battleVariant),
+        ].map(
+          (variant) =>
+            `#${String(variant.pokemonForm.species.dexNumber).padStart(3, "0")} ${variant.pokemonForm.species.nameZhTw}`,
         ),
       ),
-    ),
-  }));
+    );
+    const allLinkedEvidence = Array.from(
+      new Map(
+        [
+          ...source.evaluationSources.map((link) => ({
+            kind: "保留結論",
+            target: formatSourceTarget(link.evaluation.battleVariant),
+            usageZhTw: link.usageZhTw,
+          })),
+          ...source.categoryEvaluationSources.map((link) => ({
+            kind: "評估欄位",
+            target: formatSourceTarget(link.categoryEvaluation.battleVariant),
+            usageZhTw: link.usageZhTw,
+          })),
+        ].map((evidence) => [
+          `${evidence.kind}|${evidence.target}|${evidence.usageZhTw}`,
+          evidence,
+        ]),
+      ).values(),
+    );
+    const exposedEvidence = batch031060OfficialSourceIds.has(source.id) ? allLinkedEvidence : [];
+    return {
+      id: source.id,
+      sourceName: source.sourceName,
+      sourceUrl: source.sourceUrl,
+      sourceType: source.sourceType,
+      sourceTitleOriginal: source.sourceTitleOriginal,
+      sourceLanguage: source.sourceLanguage,
+      sourceSummaryZhTw: source.sourceSummaryZhTw,
+      accessedAt: source.accessedAt.toISOString(),
+      publishedAt: source.publishedAt?.toISOString() ?? null,
+      dataVersion: source.dataVersion,
+      notes: source.notes,
+      evaluationCount: source.evaluationSources.length,
+      referencedPokemon,
+      linkedEvidenceCount: exposedEvidence.length,
+      linkedEvidence: exposedEvidence.slice(0, 12),
+    };
+  });
 }
 
 export async function getChangeLogs() {

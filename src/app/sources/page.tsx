@@ -33,9 +33,30 @@ export default async function SourcesPage() {
             </p>
             <p className="mt-3 leading-6">{source.sourceSummaryZhTw}</p>
             <p className="mt-2 text-sm text-[var(--muted)]">
-              引用評估：{source.evaluationCount}；原始資料涵蓋：
+              引用評估：{source.evaluationCount}；資料涵蓋：
               {source.referencedPokemon.length ? source.referencedPokemon.join("、") : "尚未連結"}
             </p>
+            {source.linkedEvidence.length ? (
+              <div className="mt-3 rounded-xl bg-[var(--surface-muted)] p-3">
+                <p className="text-sm font-black">具體綁定</p>
+                <ul className="mt-2 space-y-2 text-sm leading-6">
+                  {source.linkedEvidence.map((evidence) => (
+                    <li key={`${evidence.kind}-${evidence.target}-${evidence.usageZhTw}`}>
+                      <span className="font-bold">
+                        {evidence.target} · {evidence.kind}
+                      </span>
+                      ：{evidence.usageZhTw}
+                    </li>
+                  ))}
+                </ul>
+                {source.linkedEvidenceCount > source.linkedEvidence.length ? (
+                  <p className="mt-2 text-xs text-[var(--muted)]">
+                    另有 {source.linkedEvidenceCount - source.linkedEvidence.length}{" "}
+                    筆綁定，完整資料保留於 Excel 匯出。
+                  </p>
+                ) : null}
+              </div>
+            ) : null}
             <a
               href={source.sourceUrl}
               target="_blank"

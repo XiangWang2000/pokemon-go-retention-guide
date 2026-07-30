@@ -1,8 +1,9 @@
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
+import { HomeDataLoader } from "@/components/home-data-loader";
 import { FamilyOverview as FamilyOverviewComponent } from "@/components/overview/family-overview";
-import { getDashboardRows } from "@/lib/data";
+import { getChangeLogs, getDashboardRows, getSources } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
 import { buildFormOverviews } from "@/presentation/form-overview";
 
@@ -129,5 +130,39 @@ describe("#031～#060 批次與跨批次家族", () => {
     expect(html).toContain("立即處理結論");
     expect(html).toContain("要保留的條件");
     expect(html).toContain("其他普通重複可傳");
+  });
+
+  it("首頁資料尚未載入時以破折號取代四個零值統計", () => {
+    const html = renderToStaticMarkup(createElement(HomeDataLoader));
+    expect(html.match(/資料載入中/g)).toHaveLength(4);
+    expect(html.match(/>—<\/p>/g)).toHaveLength(4);
+    expect(html).not.toMatch(/>0<\/p>/);
+  });
+
+  it("本批新增官方來源皆綁定到對應版本與評估結論", async () => {
+    const sources = await getSources();
+    const ids = [
+      "OFF-GMAX-MEOWTH-2026",
+      "OFF-CD-VULPIX-2026",
+      "OFF-RISING-SHADOWS-2023",
+      "OFF-AUTUMN-SHADOWS-2020",
+      "OFF-CD-POLIWAG-2023",
+    ];
+    for (const id of ids) {
+      const source = sources.find((item) => item.id === id);
+      expect(source, id).toBeDefined();
+      expect(source!.evaluationCount, id).toBeGreaterThan(0);
+      expect(source!.referencedPokemon.length, id).toBeGreaterThan(0);
+      expect(source!.linkedEvidence.length, id).toBeGreaterThan(0);
+      expect(source!.linkedEvidence.every((item) => item.target.includes("／"))).toBe(true);
+    }
+  });
+
+  it("整批新增的變更紀錄不再誤用 Inteleon rankings", async () => {
+    const logs = await getChangeLogs();
+    const batchLog = logs.find((log) => log.id === "r8-batch-031-060");
+    expect(batchLog).toBeDefined();
+    expect(batchLog!.source).toBeNull();
+    expect(JSON.stringify(batchLog)).not.toContain("Inteleon rankings");
   });
 });

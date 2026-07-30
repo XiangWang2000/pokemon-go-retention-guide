@@ -53,6 +53,65 @@ type RankResult = {
   moves: string[];
 };
 
+const officialEvidenceLinks: Array<{
+  sourceId: string;
+  variantId: string;
+  category?: (typeof categories)[number];
+  usageZhTw: string;
+}> = [
+  {
+    sourceId: "OFF-GMAX-MEOWTH-2026",
+    variantId: "052-kanto-gigantamax",
+    category: "MAX_BATTLE",
+    usageZhTw: "確認超極巨喵喵已開放、屬於獨立 Max 版本，且不能進化。",
+  },
+  {
+    sourceId: "OFF-CD-VULPIX-2026",
+    variantId: "037-kanto-normal",
+    category: "EVOLUTION_VALUE",
+    usageZhTw: "確認關都六尾分支與進化為九尾的活動條件。",
+  },
+  {
+    sourceId: "OFF-CD-VULPIX-2026",
+    variantId: "037-alola-normal",
+    category: "EVOLUTION_VALUE",
+    usageZhTw: "確認阿羅拉六尾是獨立地區分支，進化為阿羅拉九尾。",
+  },
+  {
+    sourceId: "OFF-CD-VULPIX-2026",
+    variantId: "038-kanto-normal",
+    category: "PVP",
+    usageZhTw: "確認九尾可取得活動招式能量球，供 PvP 招式檢查與保留結論使用。",
+  },
+  {
+    sourceId: "OFF-CD-VULPIX-2026",
+    variantId: "038-alola-normal",
+    category: "PVP",
+    usageZhTw: "確認阿羅拉九尾可取得活動招式冰凍水，供 PvP 招式檢查與保留結論使用。",
+  },
+  {
+    sourceId: "OFF-RISING-SHADOWS-2023",
+    variantId: "060-kanto-shadow",
+    usageZhTw: "確認暗影蚊香蝌蚪曾正式開放，支援暗影版本與保留安全判斷。",
+  },
+  {
+    sourceId: "OFF-AUTUMN-SHADOWS-2020",
+    variantId: "050-kanto-shadow",
+    usageZhTw: "確認暗影地鼠曾正式開放，支援暗影版本與保留安全判斷。",
+  },
+  {
+    sourceId: "OFF-AUTUMN-SHADOWS-2020",
+    variantId: "058-kanto-shadow",
+    usageZhTw: "確認暗影卡蒂狗曾正式開放，支援暗影版本與保留安全判斷。",
+  },
+  {
+    sourceId: "OFF-CD-POLIWAG-2023",
+    variantId: "060-kanto-normal",
+    category: "EVOLUTION_VALUE",
+    usageZhTw: "確認蚊香蝌蚪後續包含蚊香泳士與蚊香蛙皇分支，支援暫時保留結論。",
+  },
+];
+
 async function readRankings() {
   const result = new Map<LeagueKey, RankingRow[]>();
   for (const league of leagues) {
@@ -590,20 +649,25 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
 
   const categorySources = variants.flatMap((variant) => {
     const rows = rankMap.get(variant.id) ?? [];
-    const pvpSources = [...new Set(rows.map((item) => item.sourceId))].map((sourceId) => ({
+    return [...new Set(rows.map((item) => item.sourceId))].map((sourceId) => ({
       categoryEvaluationId: `category-${variant.id}-pvp`,
       sourceId,
       usageZhTw: "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。",
     }));
-    if (variant.variantKey === "GIGANTAMAX") {
-      pvpSources.push({
-        categoryEvaluationId: `category-${variant.id}-max_battle`,
-        sourceId: "OFF-GMAX-MEOWTH-2026",
-        usageZhTw: "確認超極巨喵喵開放與不能進化的版本邊界。",
-      });
-    }
-    return pvpSources;
   });
+  categorySources.push(
+    ...officialEvidenceLinks.flatMap((link) =>
+      link.category
+        ? [
+            {
+              categoryEvaluationId: `category-${link.variantId}-${link.category.toLowerCase()}`,
+              sourceId: link.sourceId,
+              usageZhTw: link.usageZhTw,
+            },
+          ]
+        : [],
+    ),
+  );
   if (categorySources.length) {
     await prisma.categoryEvaluationSource.createMany({ data: categorySources });
   }
@@ -689,13 +753,15 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       sourceId,
       usageZhTw: "Open League／Overall 名次與招式。",
     }));
-    if (variant.variantKey === "GIGANTAMAX") {
-      links.push({
-        evaluationId: `r8-eval-${variant.id}`,
-        sourceId: "OFF-GMAX-MEOWTH-2026",
-        usageZhTw: "超極巨版本開放與不能進化。",
-      });
-    }
+    links.push(
+      ...officialEvidenceLinks
+        .filter((link) => link.variantId === variant.id)
+        .map((link) => ({
+          evaluationId: `r8-eval-${variant.id}`,
+          sourceId: link.sourceId,
+          usageZhTw: link.usageZhTw,
+        })),
+    );
     return links;
   });
   if (evaluationSources.length) {
@@ -797,7 +863,7 @@ async function addChangeLogs() {
       fieldName: "status",
       previousValue: null,
       newValue: "REVIEWED",
-      sourceId: "battle2-pvpoke-commit",
+      sourceId: null,
       reason: "新增 #031～#060，套用與前批一致的立即處理結論、用途、IV 與版本分層。",
     },
     {

@@ -39,6 +39,38 @@
       "use": "固定 PvPoke 版本"
     }
   ],
+  "bindings": [
+    {
+      "sourceId": "OFF-GMAX-MEOWTH-2026",
+      "targets": ["052-kanto-gigantamax"],
+      "usage": "超極巨版本開放、版本邊界與不能進化的 Max Battle 評估及保留結論"
+    },
+    {
+      "sourceId": "OFF-CD-VULPIX-2026",
+      "targets": [
+        "037-kanto-normal",
+        "037-alola-normal",
+        "038-kanto-normal",
+        "038-alola-normal"
+      ],
+      "usage": "地區進化分支、九尾能量球與阿羅拉九尾冰凍水的招式檢查及保留結論"
+    },
+    {
+      "sourceId": "OFF-RISING-SHADOWS-2023",
+      "targets": ["060-kanto-shadow"],
+      "usage": "暗影蚊香蝌蚪開放狀態與暗影版本保留安全判斷"
+    },
+    {
+      "sourceId": "OFF-AUTUMN-SHADOWS-2020",
+      "targets": ["050-kanto-shadow", "058-kanto-shadow"],
+      "usage": "暗影地鼠與暗影卡蒂狗開放狀態及暗影版本保留安全判斷"
+    },
+    {
+      "sourceId": "OFF-CD-POLIWAG-2023",
+      "targets": ["060-kanto-normal"],
+      "usage": "後續分支進化與範圍外家族的暫時保留結論"
+    }
+  ],
   "regionalForms": [
     "037-alola",
     "038-alola",
