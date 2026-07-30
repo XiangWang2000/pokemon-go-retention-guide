@@ -192,6 +192,21 @@ describe("#061～#090 批次與跨批次家族", () => {
     }
   });
 
+  it("2023 年末社群日來源不再混入 #008 卡咪龜綁定", async () => {
+    const sources = await getSources();
+    const source = sources.find((item) => item.id === "OFF-CD-DEC-2023");
+    expect(source).toBeDefined();
+    expect(source!.referencedPokemon).toEqual(["#062 蚊香泳士", "#076 隆隆岩", "#080 呆殼獸"]);
+    expect(source!.linkedEvidence).not.toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ target: expect.stringContaining("#008") }),
+      ]),
+    );
+    expect(source!.linkedEvidence.every((item) => /^#(?:062|076|080) /.test(item.target))).toBe(
+      true,
+    );
+  });
+
   it("批次變更紀錄使用本批來源，不出現無關排行榜", async () => {
     const logs = await getChangeLogs();
     const batchLog = logs.find((log) => log.id === "r10-batch-061-090");

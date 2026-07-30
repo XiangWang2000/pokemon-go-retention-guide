@@ -26,7 +26,7 @@ async function main() {
   const payload = {
     batch: "061-090",
     updatedAt: "2026-07-30",
-    dataVersion: "2026.07.30-r10",
+    dataVersion: "2026.07.31-r11",
     rulesVersion: RULES_VERSION,
     status: issues.some((issue) => issue.affectsFinalDecision)
       ? "ACCEPTED_WITH_SCOPED_HOLDS"

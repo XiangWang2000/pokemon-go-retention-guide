@@ -1,5 +1,21 @@
 [
   {
+    "id": "r11-source-binding-december-2023",
+    "entityType": "SourceReference",
+    "entityId": "OFF-CD-DEC-2023",
+    "fieldName": "linkedEvaluations",
+    "previousValue": "#008, #062, #076, #080",
+    "newValue": "#062, #076, #080",
+    "sourceId": "OFF-CD-DEC-2023",
+    "changeReasonZhTw": "移除與本來源無關的 #008 卡咪龜評估綁定，只保留本批對應招式紀錄。",
+    "changedAt": "2026-07-30T16:20:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Catch up with Community Day! Pokémon from 2022 and 2023 Community Days are returning for a year-end catch celebration!",
+      "url": "https://pokemongo.com/post/community-day-december-2023?hl=en"
+    }
+  },
+  {
     "id": "r10-batch-061-090",
     "entityType": "Batch",
     "entityId": "061-090",

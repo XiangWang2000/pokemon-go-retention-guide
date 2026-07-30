@@ -19,6 +19,7 @@ const prisma = new PrismaClient({
 });
 
 const checkedAt = new Date("2026-07-30T23:45:00+08:00");
+const correctionAt = new Date("2026-07-31T00:20:00+08:00");
 const pvpokeCommit = "86847e535b7e0a0f4e91f9628b3fc713ae6adca7";
 const categories = [
   "PVP",
@@ -313,6 +314,39 @@ async function upsertOfficialSources() {
   }
 }
 
+async function removeIncorrectDecemberCommunityDayLinks() {
+  const wartortleVariantIds = (
+    await prisma.battleVariant.findMany({
+      where: { pokemonFormId: "008-kanto" },
+      select: { id: true },
+    })
+  ).map((variant) => variant.id);
+  if (!wartortleVariantIds.length) return;
+
+  const [evaluations, categories] = await Promise.all([
+    prisma.retentionEvaluation.findMany({
+      where: { battleVariantId: { in: wartortleVariantIds } },
+      select: { id: true },
+    }),
+    prisma.categoryEvaluation.findMany({
+      where: { battleVariantId: { in: wartortleVariantIds } },
+      select: { id: true },
+    }),
+  ]);
+  await prisma.evaluationSource.deleteMany({
+    where: {
+      sourceId: "OFF-CD-DEC-2023",
+      evaluationId: { in: evaluations.map((evaluation) => evaluation.id) },
+    },
+  });
+  await prisma.categoryEvaluationSource.deleteMany({
+    where: {
+      sourceId: "OFF-CD-DEC-2023",
+      categoryEvaluationId: { in: categories.map((category) => category.id) },
+    },
+  });
+}
+
 function variantRelease(formId: string, variantKey: VariantKey) {
   if (variantKey === "NORMAL") return true;
   if (variantKey === "SHADOW" || variantKey === "PURIFIED") {
@@ -517,6 +551,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
   }
   await prisma.retentionEvaluation.deleteMany({ where: { id: { startsWith: "r10-cross-" } } });
   await prisma.changeLog.deleteMany({ where: { id: { startsWith: "r10-" } } });
+  await prisma.changeLog.deleteMany({ where: { id: { startsWith: "r11-" } } });
   await prisma.dataIssue.deleteMany({
     where: { pokemonFormId: "060-kanto", batchKey: "031-060" },
   });
@@ -1105,6 +1140,16 @@ async function addChangeLogs() {
       sourceId: "OFF-MEGA-VICTREEBEL-2026",
       reason: "新增已正式開放的超級大食花，不把 Mega 用途回推到全部前階。",
     },
+    {
+      id: "r11-source-binding-december-2023",
+      entityType: "SourceReference",
+      entityId: "OFF-CD-DEC-2023",
+      fieldName: "linkedEvaluations",
+      previousValue: "#008, #062, #076, #080",
+      newValue: "#062, #076, #080",
+      sourceId: "OFF-CD-DEC-2023",
+      reason: "移除與本來源無關的 #008 卡咪龜評估綁定，只保留本批對應招式紀錄。",
+    },
   ];
   for (const change of changes) {
     await prisma.changeLog.create({
@@ -1117,7 +1162,7 @@ async function addChangeLogs() {
         newValue: change.newValue,
         sourceId: change.sourceId,
         changeReasonZhTw: change.reason,
-        changedAt: checkedAt,
+        changedAt: change.id.startsWith("r11-") ? correctionAt : checkedAt,
         rulesVersion: RULES_VERSION,
       },
     });
@@ -1126,6 +1171,7 @@ async function addChangeLogs() {
 
 async function main() {
   await upsertOfficialSources();
+  await removeIncorrectDecemberCommunityDayLinks();
   const rankings = await readRankings();
   await rebuildBatch(rankings);
   await refreshCrossBatchPoliwagFamily();
