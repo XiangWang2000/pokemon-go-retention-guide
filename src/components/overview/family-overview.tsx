@@ -69,6 +69,9 @@ function FamilyHandlingConclusion({
   const summaryClauses = family.handlingSummaryZhTw.replace(/。$/, "").split("；");
   const transferClause = isMultiUseFamily ? summaryClauses.pop() : null;
   const keepClause = summaryClauses.join("；");
+  const transferLabel = transferClause?.includes("特殊取得個體不以 IV 作傳送門檻")
+    ? "特殊取得不可傳"
+    : "其他普通重複可傳";
   return (
     <section
       data-testid="family-handling-summary"
@@ -99,7 +102,7 @@ function FamilyHandlingConclusion({
           <div className="grid grid-cols-1 items-start gap-1.5 rounded-lg border border-slate-500/40 bg-[var(--surface)] px-2.5 py-2 sm:grid-cols-[auto_1fr] sm:gap-2">
             <span className="inline-flex w-fit items-center gap-1 rounded-md bg-slate-700 px-2 py-0.5 text-xs font-black text-white">
               <Send aria-hidden size={13} />
-              其他普通重複可傳
+              {transferLabel}
             </span>
             <p
               data-testid="family-transfer-condition"

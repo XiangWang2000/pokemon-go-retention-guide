@@ -188,6 +188,23 @@ describe("家族總覽 UI", () => {
     expect(html).not.toContain("來源與資料狀態");
   });
 
+  it("特殊取得家族不會顯示普通重複可傳標籤", () => {
+    const mewFamily = byMember("151-kanto");
+    const html = renderToStaticMarkup(
+      createElement(FamilyOverviewComponent, {
+        families: [mewFamily],
+        expandedFamilies: new Set<string>(),
+        expandedForms: new Set<string>(),
+        onToggleFamily: () => undefined,
+        onToggleForm: () => undefined,
+      }),
+    );
+
+    expect(html).toContain("特殊取得不可傳");
+    expect(html).toContain("特殊取得個體不以 IV 作傳送門檻");
+    expect(html).not.toContain("其他普通重複可傳");
+  });
+
   it("2/7/27. 展開家族及成員後仍能查看各版本、來源與資料狀態", () => {
     const targetForm = family.members[0]!.form;
     const html = renderToStaticMarkup(
