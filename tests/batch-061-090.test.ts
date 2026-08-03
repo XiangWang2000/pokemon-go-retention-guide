@@ -127,7 +127,11 @@ describe("#061～#090 批次與跨批次家族", () => {
   it("只有後續重要進化可能造成誤傳時才暫時保留", () => {
     expect(familyByMember("081-kanto").retentionStrategy).toBe("HOLD_FOR_NOW");
     expect(familyByMember("083-galar").retentionStrategy).toBe("HOLD_FOR_NOW");
-    expect(familyByMember("090-kanto").retentionStrategy).toBe("HOLD_FOR_NOW");
+    expect(familyByMember("090-kanto").retentionStrategy).toBe("MOSTLY_TRANSFER");
+    expect(familyByMember("090-kanto").members.map((member) => member.form.formId)).toEqual([
+      "090-kanto",
+      "091-kanto",
+    ]);
     expect(familyByMember("062-kanto").retentionStrategy).not.toBe("HOLD_FOR_NOW");
     expect(familyByMember("080-kanto").retentionStrategy).not.toBe("HOLD_FOR_NOW");
   });

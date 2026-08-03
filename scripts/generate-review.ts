@@ -5,13 +5,19 @@ import { zhTw } from "../src/locales/zh-TW";
 import { RULES_VERSION } from "../src/rules/rules";
 
 async function main() {
-  const [allRows, allIssues, sources] = await Promise.all([
+  const [allRows, allIssues, allSources] = await Promise.all([
     getDashboardRows(),
     getReviewIssues(),
     getSources(),
   ]);
   const rows = allRows.filter((row) => row.dexNumber >= 1 && row.dexNumber <= 30);
   const issues = allIssues.filter((issue) => issue.batchKey === "001-030");
+  const sources = allSources.filter((source) =>
+    source.referencedPokemon.some((label) => {
+      const dexNumber = Number(label.slice(1, 4));
+      return dexNumber >= 1 && dexNumber <= 30;
+    }),
+  );
   const forms = Array.from(new Map(rows.map((row) => [row.formId, row])).values());
   const decisions = Object.keys(zhTw.decision) as Array<keyof typeof zhTw.decision>;
   const payload = {

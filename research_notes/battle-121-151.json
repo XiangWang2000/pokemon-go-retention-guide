@@ -1,0 +1,21 @@
+{
+  "batch": "121-151",
+  "pvpokeCommit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+  "format": "Open League / Overall",
+  "rankingMethod": "fixed JSON array index + 1",
+  "notableRanks": {
+    "GREAT": { "lapras": 25, "dragonair_shadow": 29, "dragonair": 35, "lapras_shadow": 46, "moltres_galarian": 50, "gyarados": 162, "gyarados_shadow": 178, "articuno": 183, "dragonite_shadow": 204, "starmie": 230 },
+    "ULTRA": { "moltres_galarian": 10, "lapras": 21, "lapras_shadow": 25, "gyarados": 65, "gyarados_shadow": 80, "articuno": 106, "zapdos": 111, "mewtwo_armored": 115, "articuno_shadow": 123, "zapdos_shadow": 135, "starmie_shadow": 170, "starmie": 196, "mew": 204, "dragonite_shadow": 234 },
+    "MASTER": { "gyarados_shadow": 32, "mewtwo_shadow": 35, "mewtwo": 45, "dragonite_shadow": 52, "gyarados": 58, "dragonite": 63, "zapdos_shadow": 72, "mewtwo_armored": 81, "zapdos": 82, "mew": 114, "articuno": 126, "moltres_galarian": 139, "zapdos_galarian": 142, "articuno_shadow": 143, "moltres": 146, "moltres_shadow": 167, "snorlax_shadow": 169, "snorlax": 178, "vaporeon": 195, "lapras": 201, "lapras_shadow": 202, "pinsir_shadow": 224, "articuno_galarian": 236 }
+  },
+  "decisionBands": {
+    "keep": "rank <= 100",
+    "conditional": "rank 101-250",
+    "note": "物種排名只決定用途層級，不等於個體 IV Rank，也不構成硬性 IV 淘汰線。"
+  },
+  "ivSafety": {
+    "pve": "15攻優先；14攻高整體IV亦可留。",
+    "shadow": "暗影標準較寬；15攻優先，不設硬性最低IV。",
+    "breakpoints": "沒有可靠資料時不宣稱15/10/10一定優於14/15/15。"
+  }
+}

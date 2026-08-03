@@ -1,0 +1,96 @@
+{
+  "batch": "091-120",
+  "checkedAt": "2026-08-03T16:30:00+08:00",
+  "sources": [
+    {
+      "id": "OFF-MEGA-GENGAR-2020",
+      "url": "https://pokemongo.com/en/post/megavenusaurraids",
+      "supports": ["094-kanto-mega", "MEGA", "PVE"]
+    },
+    {
+      "id": "OFF-DMAX-GASTLY-2024",
+      "url": "https://pokemongo.com/en/post/halloween-part-1-2024?hl=en",
+      "supports": [
+        "092-kanto-dynamax",
+        "093-kanto-dynamax",
+        "094-kanto-dynamax",
+        "MAX_BATTLE"
+      ]
+    },
+    {
+      "id": "OFF-GMAX-GENGAR-2024",
+      "url": "https://pokemongo.com/en/post/halloween-part-2-2024?hl=en",
+      "supports": ["094-kanto-gigantamax", "MAX_BATTLE"]
+    },
+    {
+      "id": "OFF-DMAX-KRABBY-2025",
+      "url": "https://pokemongo.com/en/post/legendary-flight-2025?hl=en",
+      "supports": ["098-kanto-dynamax", "099-kanto-dynamax", "MAX_BATTLE"]
+    },
+    {
+      "id": "OFF-GMAX-KINGLER-2025",
+      "url": "https://pokemongo.com/en/post/gigantamax-kingler-max-battle-day?hl=en",
+      "supports": ["099-kanto-gigantamax", "MAX_BATTLE"]
+    },
+    {
+      "id": "OFF-HISUI-ELECTRODE-2022",
+      "url": "https://pokemongo.com/post/pokeball-prep-go-tour-prep-event",
+      "supports": ["100-hisui", "101-hisui", "EVOLUTION_VALUE"]
+    },
+    {
+      "id": "OFF-ALOLA-EXEGGUTOR-2018",
+      "url": "https://pokemongo.com/post/pokemonletsgo?hl=en",
+      "supports": ["103-alola", "REGIONAL_FORM"]
+    },
+    {
+      "id": "OFF-EVENT-ALOLA-EXEGGUTOR-2024",
+      "url": "https://pokemongo.com/events/citysafari-tainan",
+      "supports": ["102-kanto", "103-alola", "EVENT_EVOLUTION"]
+    },
+    {
+      "id": "OFF-ALOLA-TO-ALOLA-2022",
+      "url": "https://pokemongo.com/post/alola-to-alola?hl=en",
+      "supports": ["104-kanto", "105-alola", "EVENT_EVOLUTION"]
+    },
+    {
+      "id": "OFF-GALAR-WEEZING-2019",
+      "url": "https://pokemongo.com/en/post/swordshield-galarianweezing",
+      "supports": ["110-galar", "REGIONAL_FORM"]
+    },
+    {
+      "id": "OFF-LEGENDARY-HEROES-2024",
+      "url": "https://pokemongo.com/en/post/legendary-heroes-2024",
+      "supports": ["109-kanto", "110-galar", "EVENT_EVOLUTION"]
+    },
+    {
+      "id": "OFF-MEGA-KANGASKHAN-2022",
+      "url": "https://pokemongo.com/post/mega-evolution-2022-update-global",
+      "supports": ["115-kanto-mega", "MEGA"]
+    },
+    {
+      "id": "OFF-CD-CHANSEY-2024",
+      "url": "https://pokemongo.com/en/post/communityday-february-2024-chansey",
+      "supports": ["113-kanto", "242-kanto", "EVOLUTION_VALUE"]
+    },
+    {
+      "id": "OFF-MEGA-STARMIE-2026",
+      "url": "https://pokemongo.com/en/news/starmie-super-mega-raid-day-2026",
+      "supports": ["120-kanto", "121-kanto-mega", "ANNOUNCED_UNRELEASED"]
+    },
+    {
+      "id": "OFF-SHADOW-STARYU-2025",
+      "url": "https://pokemongo.com/post/delightful-days-tgr-2025",
+      "supports": ["120-kanto-shadow", "120-kanto-purified", "ROCKET"]
+    }
+  ],
+  "review": {
+    "shellderCloysterCrossBatchResolved": true,
+    "regionalFormsSeparated": true,
+    "eventEvolutionPathsRequireEvent": true,
+    "megaMaxVersionsSeparated": true,
+    "ordinaryPokemonCannotSubstituteForMax": true,
+    "megaStarmieReleasedAsOfCheckedAt": false,
+    "shadowAvailabilityLimitedToOfficialOrControlledSnapshot": true,
+    "shadowStaryuReleased": true
+  }
+}

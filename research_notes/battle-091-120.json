@@ -1,0 +1,36 @@
+{
+  "batch": "091-120",
+  "pvpokeCommit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+  "format": "Open League / Overall",
+  "rankingMethod": "fixed JSON array index + 1",
+  "notableRanks": [
+    { "speciesId": "seaking", "league": "ULTRA", "rank": 44 },
+    { "speciesId": "marowak_shadow", "league": "GREAT", "rank": 67 },
+    { "speciesId": "seaking", "league": "GREAT", "rank": 79 },
+    { "speciesId": "weezing_galarian", "league": "ULTRA", "rank": 86 },
+    { "speciesId": "weezing_galarian_shadow", "league": "ULTRA", "rank": 89 },
+    { "speciesId": "lickitung", "league": "GREAT", "rank": 124 },
+    { "speciesId": "weezing_galarian_shadow", "league": "GREAT", "rank": 125 },
+    { "speciesId": "electrode_hisuian", "league": "ULTRA", "rank": 144 },
+    { "speciesId": "marowak", "league": "GREAT", "rank": 150 },
+    { "speciesId": "weezing_galarian", "league": "GREAT", "rank": 173 },
+    { "speciesId": "electrode_hisuian", "league": "GREAT", "rank": 190 },
+    { "speciesId": "marowak_alolan_shadow", "league": "GREAT", "rank": 227 },
+    { "speciesId": "marowak_alolan", "league": "GREAT", "rank": 236 },
+    { "speciesId": "hypno", "league": "GREAT", "rank": 243 },
+    { "speciesId": "starmie_shadow", "league": "ULTRA", "rank": 170 }
+  ],
+  "decisionBands": {
+    "keep": "rank <= 100",
+    "conditional": "rank 101-250",
+    "note": "物種排名只決定用途層級，不等於個體 IV Rank，也不構成硬性 IV 淘汰線。"
+  },
+  "ivSafety": {
+    "pve": "15攻優先；14攻高整體IV亦可留。",
+    "shadow": "暗影標準較寬；15攻優先，不設硬性最低IV。",
+    "breakpoints": "沒有可靠資料時不宣稱15/10/10一定優於14/15/15。"
+  },
+  "releaseFacts": {
+    "staryu_shadow": "OFF-SHADOW-STARYU-2025 confirms release; evolved Shadow Starmie is reproducible at Ultra League Overall #170 in the fixed snapshot."
+  }
+}

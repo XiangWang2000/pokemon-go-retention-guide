@@ -352,7 +352,7 @@ export function EvaluationBrowser({
             {mode === "FAMILY" ? "個進化家族" : mode === "POKEDEX" ? "個寶可夢型態" : "個戰鬥版本"}
           </p>
           <a
-            href="/exports/pokemon-go-retention-001-090.xlsx"
+            href="/exports/pokemon-go-retention-001-151.xlsx"
             className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[var(--primary)] px-4 text-sm font-bold text-[var(--primary-contrast)] transition hover:brightness-95"
           >
             <Download aria-hidden size={17} />

@@ -1,0 +1,260 @@
+{
+  "batch": "121-151",
+  "updatedAt": "2026-08-03",
+  "dataVersion": "2026.08.03-r13",
+  "rulesVersion": "2026.07.28-v5",
+  "status": "ACCEPTED_WITH_SCOPED_HOLDS",
+  "counts": {
+    "species": 31,
+    "forms": 39,
+    "battleVariants": 165,
+    "families": 31,
+    "strategyCounts": {
+      "KEEP_TARGETS": 11,
+      "SELECTIVE_KEEP": 6,
+      "MOSTLY_TRANSFER": 9,
+      "HOLD_FOR_NOW": 5
+    },
+    "openIssues": 9,
+    "safetyAffectingIssues": 9
+  },
+  "crossBatchIntegration": {
+    "familyKey": "KANTO_FAMILY_120",
+    "members": [
+      "120-kanto",
+      "121-kanto"
+    ],
+    "isBatchTruncated": false,
+    "result": "PASS"
+  },
+  "versionBoundaries": {
+    "megaStarmieUnreleased": true,
+    "megaMewtwoXReleased": true,
+    "megaMewtwoYReleased": true,
+    "armoredMewtwoHasNoMega": true
+  },
+  "specialAcquisition": {
+    "mewDecision": "KEEP",
+    "result": "PASS"
+  },
+  "scopedHolds": [
+    {
+      "familyId": "KANTO_FAMILY_122:122-galar",
+      "members": [
+        "122-galar"
+      ]
+    },
+    {
+      "familyId": "KANTO_FAMILY_123:123-kanto",
+      "members": [
+        "123-kanto"
+      ]
+    },
+    {
+      "familyId": "KANTO_FAMILY_125:125-kanto",
+      "members": [
+        "125-kanto"
+      ]
+    },
+    {
+      "familyId": "KANTO_FAMILY_126:126-kanto",
+      "members": [
+        "126-kanto"
+      ]
+    },
+    {
+      "familyId": "KANTO_FAMILY_137:137-kanto",
+      "members": [
+        "137-kanto"
+      ]
+    }
+  ],
+  "immediateHandling": [
+    {
+      "familyId": "KANTO_FAMILY_120:120-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留寶石海星（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_122:122-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_122:122-galar",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
+      "transferLine": null
+    },
+    {
+      "familyId": "KANTO_FAMILY_123:123-kanto",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
+      "transferLine": null
+    },
+    {
+      "familyId": "KANTO_FAMILY_124:124-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_125:125-kanto",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
+      "transferLine": null
+    },
+    {
+      "familyId": "KANTO_FAMILY_126:126-kanto",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
+      "transferLine": null
+    },
+    {
+      "familyId": "KANTO_FAMILY_127:127-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留凱羅斯（ML 高 IV 投資候選、Mega 候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_128:128-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_128:128-paldea-aqua",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_128:128-paldea-blaze",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_128:128-paldea-combat",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_129:129-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留暴鯉龍（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_131:131-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留拉普拉斯（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、超極巨版本本身、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_132:132-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_133:133-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留水伊布（ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_137:137-kanto",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
+      "transferLine": null
+    },
+    {
+      "familyId": "KANTO_FAMILY_138:138-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_140:140-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_142:142-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留化石翼龍（Mega 候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_143:143-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留卡比獸（ML 高 IV 投資候選、道館防守候選、超極巨版本本身、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_144:144-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留急凍鳥（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_144:144-galar",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留急凍鳥（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_145:145-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留閃電鳥（PvP（UL Rank≤100）、ML 高 IV 投資候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_145:145-galar",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留閃電鳥（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_146:146-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留火焰鳥（ML 高 IV 投資候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_146:146-galar",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留火焰鳥（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_147:147-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留哈克龍（PvP（GL Rank≤100）、有用途的暗影版），以及快龍（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_150:150-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留超夢（ML 高 IV 投資候選、Mega 候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_150:150-armored",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留超夢（PvP（UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "其他普通重複可傳"
+    },
+    {
+      "familyId": "KANTO_FAMILY_151:151-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留夢幻（PvP（UL Rank≤100）、ML 高 IV 投資候選、特殊取得，應保留）；特殊取得個體不以 IV 作傳送門檻。",
+      "transferLine": "其他普通重複可傳"
+    }
+  ]
+}

@@ -1,80 +1,80 @@
 {
   "schemaVersion": 1,
-  "batch": "001-090",
-  "dataVersion": "2026.07.31-r11",
-  "dataAsOf": "2026-07-30T16:20:00.000Z",
+  "batch": "001-151",
+  "dataVersion": "2026.08.03-r13",
+  "dataAsOf": "2026-08-03T10:30:00.000Z",
   "sourceDatabase": {
     "path": "dev.db",
-    "bytes": 7368704,
-    "sha256": "b596bc8edc49fadb780085cfc0613fb16910d4930b41bde2102c134c8792f4cb"
+    "bytes": 9248768,
+    "sha256": "40486f5b629829964d161d05d349c72ff58e8af376c8954230766e5f61f126e3"
   },
   "rulesVersions": [
     "2026.07.28-v5"
   ],
   "counts": {
-    "pokemonSpecies": 90,
-    "pokemonForms": 114,
-    "battleVariants": 474,
-    "evolutionPaths": 62,
+    "pokemonSpecies": 151,
+    "pokemonForms": 188,
+    "battleVariants": 783,
+    "evolutionPaths": 87,
     "moves": 9,
     "variantMoves": 9,
-    "sourceReferences": 119,
-    "rawEvaluationData": 311,
-    "retentionEvaluations": 1098,
-    "evaluationSources": 3049,
-    "evaluationRuleTraces": 4770,
-    "changeLogs": 841,
-    "dataIssues": 1208,
-    "categoryEvaluations": 3318,
-    "categoryEvaluationSources": 1192,
+    "sourceReferences": 151,
+    "rawEvaluationData": 542,
+    "retentionEvaluations": 1407,
+    "evaluationSources": 3341,
+    "evaluationRuleTraces": 5079,
+    "changeLogs": 853,
+    "dataIssues": 1227,
+    "categoryEvaluations": 5481,
+    "categoryEvaluationSources": 1491,
     "ivRecommendations": 11,
-    "dashboardRows": 474,
-    "homeFamilies": 52,
-    "openReviewIssues": 144,
-    "detailRecords": 474
+    "dashboardRows": 783,
+    "homeFamilies": 101,
+    "openReviewIssues": 163,
+    "detailRecords": 783
   },
-  "snapshotSha256": "e65bb8a01cf7729fc67c36f6044f29ce10d500b0bd98ae93e2f830ea931d3312",
+  "snapshotSha256": "380803e728dc4bc584fb9555346db19bfcedc1c2251aa26d602429f89b25801e",
   "files": {
     "home": {
       "path": "home.json",
-      "bytes": 7642391,
-      "sha256": "d6efee511c26e636f69a7dc744b2c7dd5940ce52a6290419e13b63b65e0e79aa"
+      "bytes": 12310651,
+      "sha256": "f31e8dbfb851351609af18a09fc038f6a41e5358701dec15c49ff91f82360237"
     },
     "dashboard": {
       "path": "dashboard.json",
-      "bytes": 11993262,
-      "sha256": "25f7c8063131081bb3b3696a251849f9d1a51404d515197d9b87fad746a56545"
+      "bytes": 19366555,
+      "sha256": "3c5babf87635c63667a5520d723f5f6e67a837a622d4a1c90f499b16fc995489"
     },
     "review": {
       "path": "review.json",
-      "bytes": 327991,
-      "sha256": "09e765e3b8ef729eb5a847e73756bc5be08552ef7ba74b85df3880cde07a9125"
+      "bytes": 353335,
+      "sha256": "c9baf48ee0fee1d8f6b7073639e020bc4f0f603a0d2aab73182dabacd74294a1"
     },
     "sources": {
       "path": "sources.json",
-      "bytes": 105778,
-      "sha256": "4764ded63632c1ef5dcf1b7eb690429e49869b06c507c4f52c214f16261f9631"
+      "bytes": 161725,
+      "sha256": "425b42fe0be2fa6234f6bb356c90d52d96d2e14952e68dbbdb1d2973a5355fb4"
     },
     "changes": {
       "path": "changes.json",
-      "bytes": 564516,
-      "sha256": "7aca5a5b6dda711a04ddad26a664a1ca8fa3ee643c6d48d0855a60d5f31cf34b"
+      "bytes": 571280,
+      "sha256": "9ebfbb31737abf01ecd0a5b55246841a23e0246ac35e202f5e9aa2b22d7a068a"
     },
     "details": {
       "path": "details.json",
-      "bytes": 567251,
-      "sha256": "58d160a9ec2a2e6d790aae61bedcd686b96539d97ed5669fef7864df696bb986"
+      "bytes": 718449,
+      "sha256": "28da61f38c5db4c3960f81e13b24609f86ffb94f9d93e9be2c548e0579682fb7"
     }
   },
   "runtimeHome": {
     "path": "public/data/home.json",
-    "bytes": 2536740,
-    "sha256": "39eab2dcb7491a4d7ea28a51f4b51686b1a6d9135045d5e3157136c1f5ef106d"
+    "bytes": 4158273,
+    "sha256": "30c688cfcc36022acdcf03ff8dbf1d491e7a695c3ca754c20cd6c65aa63401ef"
   },
   "excel": {
-    "path": "public/exports/pokemon-go-retention-001-090.xlsx",
-    "bytes": 277774,
-    "sha256": "f85fef5523d517227e8eacdd88c46df5d7991a9da7de1e6cc4f718bfd39e4965",
+    "path": "public/exports/pokemon-go-retention-001-151.xlsx",
+    "bytes": 403500,
+    "sha256": "9b1b3eec688373734b1bd0a199dbfd824d33a3af96656b4383b57724a04cc685",
     "sheets": 10
   }
 }

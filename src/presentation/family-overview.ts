@@ -175,6 +175,7 @@ function memberRoles(form: FormOverview, outgoing: Map<string, Set<string>>): Me
   if (["MAX_ATTACK", "MAX_TANK", "MAX_SUPPORT", "MAX_FLEX"].some((use) => uses.has(use as never))) {
     roles.push("MAX_CANDIDATE");
   }
+  if (form.variants.some(isSpecialAcquisitionVariant)) roles.push("COLLECTION_ONLY");
   if (!roles.length) roles.push("NO_DISTINCT_USE");
   return roles;
 }
@@ -320,9 +321,15 @@ export function buildFamilyMegaMaxOverview(members: FamilyMemberSummary[]): Comp
 
 const specialVariantKeys = new Set(["SHADOW", "MEGA", "MEGA_X", "MEGA_Y", "DYNAMAX", "GIGANTAMAX"]);
 
+function isSpecialAcquisitionVariant(variant: FormOverview["variants"][number]) {
+  return variant.row.traces.some(
+    (trace) => trace.matched && trace.ruleKey === "SPECIAL_ACQUISITION",
+  );
+}
+
 function isUsefulVariant(variant: FormOverview["variants"][number]) {
   return (
-    variant.primaryUseKeys.length > 0 &&
+    (variant.primaryUseKeys.length > 0 || isSpecialAcquisitionVariant(variant)) &&
     (variant.row.decision === "KEEP" || variant.row.decision === "CONDITIONAL_KEEP")
   );
 }
@@ -339,7 +346,12 @@ function normalizedUseKey(useKey: string) {
 export function findIndependentMemberUses(members: FamilyMemberSummary[]): IndependentMemberUse[] {
   return members.flatMap((member) => {
     const useKeys = unique(
-      member.form.variants.filter(isUsefulVariant).flatMap((variant) => variant.primaryUseKeys),
+      member.form.variants
+        .filter(isUsefulVariant)
+        .flatMap((variant) => [
+          ...variant.primaryUseKeys,
+          ...(isSpecialAcquisitionVariant(variant) ? ["SPECIAL_ACQUISITION"] : []),
+        ]),
     );
     return useKeys.length
       ? [{ formId: member.form.formId, memberNameZhTw: member.form.nameZhTw, useKeys }]
@@ -396,7 +408,12 @@ export function findPrimaryRetentionTargets(
           usefulVariants,
           variantSpecificOnly,
         ),
-        useKeys: unique(usefulVariants.flatMap((variant) => variant.primaryUseKeys)),
+        useKeys: unique(
+          usefulVariants.flatMap((variant) => [
+            ...variant.primaryUseKeys,
+            ...(isSpecialAcquisitionVariant(variant) ? ["SPECIAL_ACQUISITION"] : []),
+          ]),
+        ),
         variantKeys: unique(usefulVariants.map((variant) => variant.row.variantKey)),
         variantSpecificOnly,
       },
@@ -438,6 +455,9 @@ export function calculateFamilyValue(
   const materialIssues = materialIssueMessages(members);
   if (materialIssues.length || (options.isBatchTruncated && !targets.length)) return "UNKNOWN";
   if (!targets.length) return "LOW";
+  if (members.some((member) => member.form.variants.some(isSpecialAcquisitionVariant))) {
+    return "HIGH";
+  }
 
   const independentUses = findIndependentMemberUses(members);
   const normalizedUses = new Set(
@@ -494,6 +514,9 @@ export function buildMemberActionSummaryZhTw(
 ) {
   const target = targets.find((item) => item.formId === member.form.formId);
   if (target) {
+    if (target.useKeys.includes("SPECIAL_ACQUISITION")) {
+      return `主要保留${target.displayNameZhTw}；特殊取得個體不以 IV 作傳送門檻。`;
+    }
     const iv = member.ivShortLabels.length
       ? `IV以${member.ivShortLabels.slice(0, 3).join("、")}為準。`
       : "依該用途的具體條件篩選。";
@@ -577,6 +600,7 @@ function targetHandlingParts(target: FamilyRetentionTarget, members: FamilyMembe
   if (uses.has("MASTER_LEAGUE")) parts.push("ML 高 IV 投資候選");
   if (uses.has("PVE") || uses.has("SHADOW_PVE")) parts.push("PvE 實戰候選");
   if (uses.has("GYM_DEFENSE")) parts.push("道館防守候選");
+  if (uses.has("SPECIAL_ACQUISITION")) parts.push("特殊取得，應保留");
   if ([...variants].some((key) => ["MEGA", "MEGA_X", "MEGA_Y"].includes(key))) {
     parts.push("Mega 候選");
   }
@@ -609,6 +633,9 @@ export function buildFamilyHandlingSummaryZhTw({
   }
 
   const targetText = targets.map((target) => targetHandlingParts(target, members)).join("，以及");
+  if (targets.some((target) => target.useKeys.includes("SPECIAL_ACQUISITION"))) {
+    return `保留${targetText}；特殊取得個體不以 IV 作傳送門檻。`;
+  }
   const hasEvolutionOnlyMember = members.some(
     (member) => member.roles.includes("EVOLUTION_MATERIAL") && !member.hasIndependentUse,
   );

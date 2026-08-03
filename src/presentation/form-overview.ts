@@ -178,7 +178,15 @@ function megaVariantTone(row: DashboardRow): OverviewTone {
   if (status && reviewStatuses.has(status.status)) return "REVIEW";
   const raw = row.raw.find((item) => item.category === "PVE" || item.category === "MEGA");
   return (
-    tierTone(raw?.tier ?? raw?.rating) ?? (matchedRule(row, "MAJOR_BATTLE_VALUE") ? "HIGH" : "NONE")
+    tierTone(raw?.tier ?? raw?.rating) ??
+    (matchedRule(row, "MAJOR_BATTLE_VALUE")
+      ? "HIGH"
+      : row.variantKey.startsWith("MEGA") &&
+          row.isReleased &&
+          row.releaseStatus === "RELEASED" &&
+          isWorthKeeping(row)
+        ? "SPECIAL"
+        : "NONE")
   );
 }
 
@@ -438,6 +446,9 @@ function directWorthRows(rows: DashboardRow[]) {
 function buildFormDecision(rows: DashboardRow[]) {
   const assessed = assessmentRows(rows);
   const direct = directWorthRows(assessed);
+  if (assessed.some((row) => isWorthKeeping(row) && matchedRule(row, "SPECIAL_ACQUISITION"))) {
+    return "KEEP" as const;
+  }
   if (direct.some((row) => row.variantKey === "NORMAL")) return "KEEP" as const;
   if (direct.length) return "CONDITIONAL_KEEP" as const;
   if (hasEvolutionValue(assessed)) return "CONDITIONAL_KEEP" as const;
@@ -460,8 +471,12 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
   const pvp = buildPvpOverview(assessed);
   const pve = buildPveOverview(assessed);
   const holdRows = assessed.filter((row) => row.decision === "HOLD_FOR_NOW");
+  const specialAcquisition = assessed.some(
+    (row) => isWorthKeeping(row) && matchedRule(row, "SPECIAL_ACQUISITION"),
+  );
 
   if (decision === "HOLD_FOR_NOW") return "關鍵用途仍有不確定性，傳送不可逆，目前先保留。";
+  if (specialAcquisition) return "特殊取得個體應保留；不以 IV 作傳送門檻。";
   if (holdRows.length) {
     const heldVariants = [
       ...new Set(holdRows.map((row) => zhTw.variantShort[row.variantKey])),
@@ -501,6 +516,9 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
 function buildVariantShortReason(row: DashboardRow, uses: string[]) {
   if (row.decision === "HOLD_FOR_NOW") return "關鍵資料補齊前先保留一隻，不要大量投入資源。";
   if (row.decision === "TRANSFER_CANDIDATE") return "目前沒有足以支持囤積的主要戰鬥用途。";
+  if (matchedRule(row, "SPECIAL_ACQUISITION")) {
+    return "特殊取得個體應保留；不以 IV 作傳送門檻。";
+  }
   if (uses.includes("後續進化") && uses.length === 1) return "主要價值來自後續進化，不是本體戰力。";
   if (row.variantKey === "SHADOW") return "暗影版需獨立判斷，淨化前先確認用途。";
   if (row.variantKey.startsWith("MEGA"))

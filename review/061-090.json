@@ -12,11 +12,11 @@
     "strategyCounts": {
       "KEEP_TARGETS": 7,
       "SELECTIVE_KEEP": 2,
-      "MOSTLY_TRANSFER": 7,
-      "HOLD_FOR_NOW": 3
+      "MOSTLY_TRANSFER": 8,
+      "HOLD_FOR_NOW": 2
     },
-    "openIssues": 7,
-    "safetyAffectingIssues": 7
+    "openIssues": 5,
+    "safetyAffectingIssues": 5
   },
   "crossBatchIntegration": {
     "familyKey": "KANTO_FAMILY_060",
@@ -76,13 +76,6 @@
       "familyId": "KANTO_FAMILY_083:083-galar",
       "members": [
         "083-galar"
-      ],
-      "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
-    },
-    {
-      "familyId": "KANTO_FAMILY_090:090-kanto",
-      "members": [
-        "090-kanto"
       ],
       "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
     }
@@ -145,7 +138,7 @@
     {
       "familyId": "KANTO_FAMILY_079:079-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留呆殼獸（PvP（UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留呆殼獸（PvP（UL Rank≤100）、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -198,9 +191,9 @@
     },
     {
       "familyId": "KANTO_FAMILY_090:090-kanto",
-      "strategy": "HOLD_FOR_NOW",
-      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
-      "transferLine": null
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
     }
   ]
 }

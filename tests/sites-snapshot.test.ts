@@ -47,22 +47,22 @@ describe("Sites 唯讀 snapshot", () => {
     expect(canonicalHash(snapshotReview)).toBe(canonicalHash(prismaReview));
     expect(canonicalHash(snapshotSources)).toBe(canonicalHash(prismaSources));
     expect(canonicalHash(snapshotChanges)).toBe(canonicalHash(prismaChanges));
-  });
+  }, 30_000);
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
-    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.07.31-r11");
+    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.03-r13");
     expect(siteSnapshotManifest.counts).toMatchObject({
-      pokemonSpecies: 90,
-      pokemonForms: 114,
-      battleVariants: 474,
-      rawEvaluationData: 311,
-      sourceReferences: 119,
-      retentionEvaluations: 1098,
-      categoryEvaluations: 3318,
+      pokemonSpecies: 151,
+      pokemonForms: 188,
+      battleVariants: 783,
+      rawEvaluationData: 542,
+      sourceReferences: 151,
+      retentionEvaluations: 1407,
+      categoryEvaluations: 5481,
       ivRecommendations: 11,
-      dashboardRows: 474,
-      homeFamilies: 52,
-      openReviewIssues: 144,
+      dashboardRows: 783,
+      homeFamilies: 101,
+      openReviewIssues: 163,
     });
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
     expect(siteSnapshotManifest.snapshotSha256).toMatch(/^[a-f0-9]{64}$/);
@@ -71,7 +71,7 @@ describe("Sites 唯讀 snapshot", () => {
   it("預建 Excel 可開啟且包含十張繁中工作表", async () => {
     const workbook = new ExcelJS.Workbook();
     const buffer = await readFile(
-      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-090.xlsx"),
+      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-151.xlsx"),
     );
     await workbook.xlsx.load(buffer as unknown as Parameters<typeof workbook.xlsx.load>[0]);
     expect(workbook.worksheets).toHaveLength(10);
@@ -115,12 +115,12 @@ describe("Sites 唯讀 snapshot", () => {
         expect.objectContaining({ scopeType: "GLOBAL", primaryUseKey: "PVE" }),
       ]),
     );
-  });
+  }, 30_000);
   it("舊 Excel API 會轉址到靜態檔案", () => {
     const response = exportRedirect(new Request("https://example.test/api/export"));
     expect(response.status).toBe(307);
     expect(response.headers.get("location")).toBe(
-      "https://example.test/exports/pokemon-go-retention-001-090.xlsx",
+      "https://example.test/exports/pokemon-go-retention-001-151.xlsx",
     );
   });
 });
@@ -132,11 +132,31 @@ describe("首頁 snapshot", () => {
     const variants = forms.flatMap((form) => form.variants);
 
     expect(home.schemaVersion).toBe(1);
-    expect(home.families).toHaveLength(52);
-    expect(forms).toHaveLength(114);
-    expect(variants).toHaveLength(474);
+    expect(home.families).toHaveLength(101);
+    expect(forms).toHaveLength(188);
+    expect(variants).toHaveLength(783);
     expect(variants.every((variant) => variant.row.ivRecommendations.length === 0)).toBe(true);
     expect(forms.some((form) => form.ivRecommendations.length > 0)).toBe(true);
     expect(variants.some((variant) => variant.ivRecommendations.length > 0)).toBe(true);
+  });
+
+  it("把 released Mega 候選與特殊取得夢幻帶入第一層安全結論", () => {
+    const home = homeSnapshot as unknown as HomeSnapshot;
+    const familyContaining = (formId: string) =>
+      home.families.find((family) =>
+        family.members.some((member) => member.form.formId === formId),
+      );
+    const aerodactyl = familyContaining("142-kanto");
+    const mew = familyContaining("151-kanto");
+    const mewForm = mew?.members.find((member) => member.form.formId === "151-kanto")?.form;
+
+    expect(aerodactyl?.retentionStrategy).toBe("SELECTIVE_KEEP");
+    expect(aerodactyl?.handlingSummaryZhTw).toContain("Mega 候選");
+    expect(aerodactyl?.handlingSummaryZhTw).toContain("普通重複個體可傳");
+    expect(mew?.retentionStrategy).toBe("KEEP_TARGETS");
+    expect(mew?.handlingSummaryZhTw).toContain("特殊取得");
+    expect(mew?.handlingSummaryZhTw).not.toContain("普通重複個體可傳");
+    expect(mewForm?.decision).toBe("KEEP");
+    expect(mewForm?.decisionReason).toContain("不以 IV 作傳送門檻");
   });
 });

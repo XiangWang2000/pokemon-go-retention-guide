@@ -1,0 +1,34 @@
+{
+  "batch": "121-151",
+  "checkedAt": "2026-08-03T18:30:00+08:00",
+  "sources": [
+    { "id": "OFF-MEGA-STARMIE-2026", "url": "https://pokemongo.com/en/news/starmie-super-mega-raid-day-2026", "supports": ["120-kanto-normal", "121-kanto-normal", "121-kanto-mega"] },
+    { "id": "OFF-GALAR-MR-MIME-2020", "url": "https://pokemongo.com/post/galarianmrmimespecialresearch?hl=en", "supports": ["122-galar-normal"] },
+    { "id": "OFF-KLEAVOR-2023", "url": "https://pokemongo.com/post/kleavor-raid-day?hl=en", "supports": ["123-kanto-normal"] },
+    { "id": "OFF-CD-ELECTABUZZ-MAGMAR-2020", "url": "https://pokemongo.com/en/post/communityday-nov20?hl=pt_br", "supports": ["125-kanto-normal", "126-kanto-normal"] },
+    { "id": "OFF-MEGA-PINSIR-2023", "url": "https://pokemongo.com/post/a-valorous-hero/?hl=en", "supports": ["127-kanto-normal", "127-kanto-mega"] },
+    { "id": "OFF-PALDEA-TAUROS-2025", "url": "https://pokemongo.com/en/news/journey-to-paldea-2025", "supports": ["128-kanto-normal", "128-paldea-combat-normal", "128-paldea-blaze-normal", "128-paldea-aqua-normal"] },
+    { "id": "OFF-MEGA-GYARADOS-2025", "url": "https://pokemongo.com/news/mega-gyarados-raid-day-2025", "supports": ["130-kanto-normal", "130-kanto-mega"] },
+    { "id": "OFF-GMAX-LAPRAS-2024", "url": "https://pokemongo.com/en/post/gigantamax-lapras-max-battle-day?hl=en", "supports": ["131-kanto-gigantamax"] },
+    { "id": "OFF-DMAX-EEVEE-2025", "url": "https://pokemongo.com/en/news/eevee-max-battle-weekend-2025", "supports": ["133-kanto-dynamax", "134-kanto-dynamax", "135-kanto-dynamax", "136-kanto-dynamax"] },
+    { "id": "OFF-CD-PORYGON-2024", "url": "https://pokemongo.com/post/communityday-classic-porygon/?hl=en", "supports": ["137-kanto-normal"] },
+    { "id": "OFF-MEGA-AERODACTYL-2026", "url": "https://pokemongo.com/en/news/pgo-pokemon-fossil-musuem-chicago-2026", "supports": ["142-kanto-normal", "142-kanto-mega"] },
+    { "id": "OFF-GMAX-SNORLAX-2025", "url": "https://pokemongo.com/post/gigantamax-snorlax-max-battle-day/", "supports": ["143-kanto-gigantamax"] },
+    { "id": "OFF-DMAX-BIRDS-2025", "url": "https://pokemongo.com/en/post/legendary-flight-2025?hl=en", "supports": ["144-kanto-dynamax", "145-kanto-dynamax", "146-kanto-dynamax"] },
+    { "id": "OFF-GALAR-BIRDS-2024", "url": "https://pokemongo.com/post/galarian-expedition-2024", "supports": ["144-galar-normal", "145-galar-normal", "146-galar-normal"] },
+    { "id": "OFF-MEGA-DRAGONITE-2026", "url": "https://pokemongo.com/news/gotour-road-to-kalos-live?hl=en", "supports": ["149-kanto-normal", "149-kanto-mega"] },
+    { "id": "OFF-ARMORED-MEWTWO-2020", "url": "https://pokemongo.com/en/post/pokemonday2020", "supports": ["150-armored-normal"] },
+    { "id": "OFF-MEGA-MEWTWO-2026", "url": "https://pokemongo.com/en/news/mega-mewtwo-gofest-2026?game_client=android", "supports": ["150-kanto-normal", "150-kanto-mega-x", "150-kanto-mega-y"] },
+    { "id": "OFF-MEW-TRADING-2023", "url": "https://pokemongo.com/post/jundevupdate-trading", "supports": ["151-kanto-normal"] },
+    { "id": "OFF-SHADOW-STARYU-2025", "url": "https://pokemongo.com/post/delightful-days-tgr-2025", "supports": ["120-kanto-shadow", "120-kanto-purified", "121-kanto-shadow", "121-kanto-purified"] }
+  ],
+  "review": {
+    "staryuStarmieCrossBatchResolved": true,
+    "megaStarmieReleasedAsOfCheckedAt": false,
+    "formsSeparated": true,
+    "megaAndMaxVersionsSeparated": true,
+    "armoredMewtwoCannotMegaEvolve": true,
+    "mewIsSpecialOneOffAcquisition": true,
+    "taurosShadowOrPurifiedReleased": false
+  }
+}

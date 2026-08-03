@@ -1,5 +1,188 @@
 [
   {
+    "id": "r13-batch-121-151",
+    "entityType": "Batch",
+    "entityId": "121-151",
+    "fieldName": "status",
+    "previousValue": null,
+    "newValue": "REVIEWED",
+    "sourceId": null,
+    "changeReasonZhTw": "新增 #121～#151，沿用立即處理結論、用途、IV 與版本分層。",
+    "changedAt": "2026-08-03T10:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": null
+  },
+  {
+    "id": "r13-cross-family-120",
+    "entityType": "EvolutionFamily",
+    "entityId": "KANTO_FAMILY_120",
+    "fieldName": "members",
+    "previousValue": "#120",
+    "newValue": "#120-#121",
+    "sourceId": "OFF-MEGA-STARMIE-2026",
+    "changeReasonZhTw": "將 #121 寶石海星接回前批 #120 海星星。",
+    "changedAt": "2026-08-03T10:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Starmie Super Mega Raid Day 2026",
+      "url": "https://pokemongo.com/en/news/starmie-super-mega-raid-day-2026"
+    }
+  },
+  {
+    "id": "r13-mega-starmie-announced",
+    "entityType": "BattleVariant",
+    "entityId": "121-kanto-mega",
+    "fieldName": "releaseStatus",
+    "previousValue": null,
+    "newValue": "ANNOUNCED_UNRELEASED_2026-08-22",
+    "sourceId": "OFF-MEGA-STARMIE-2026",
+    "changeReasonZhTw": "保留公告證據，但不把尚未登場的 Mega 寫成已開放。",
+    "changedAt": "2026-08-03T10:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Starmie Super Mega Raid Day 2026",
+      "url": "https://pokemongo.com/en/news/starmie-super-mega-raid-day-2026"
+    }
+  },
+  {
+    "id": "r13-mega-mewtwo-x",
+    "entityType": "BattleVariant",
+    "entityId": "150-kanto-mega-x",
+    "fieldName": "releaseStatus",
+    "previousValue": null,
+    "newValue": "RELEASED",
+    "sourceId": "OFF-MEGA-MEWTWO-2026",
+    "changeReasonZhTw": "超級超夢 X 與普通、裝甲及超級超夢 Y 分開評估。",
+    "changedAt": "2026-08-03T10:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Mewtwo Mega Evolves and more exciting GO Fest updates!",
+      "url": "https://pokemongo.com/en/news/mega-mewtwo-gofest-2026?game_client=android"
+    }
+  },
+  {
+    "id": "r13-mega-mewtwo-y",
+    "entityType": "BattleVariant",
+    "entityId": "150-kanto-mega-y",
+    "fieldName": "releaseStatus",
+    "previousValue": null,
+    "newValue": "RELEASED",
+    "sourceId": "OFF-MEGA-MEWTWO-2026",
+    "changeReasonZhTw": "超級超夢 Y 與普通、裝甲及超級超夢 X 分開評估。",
+    "changedAt": "2026-08-03T10:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Mewtwo Mega Evolves and more exciting GO Fest updates!",
+      "url": "https://pokemongo.com/en/news/mega-mewtwo-gofest-2026?game_client=android"
+    }
+  },
+  {
+    "id": "r13-gmax-lapras",
+    "entityType": "BattleVariant",
+    "entityId": "131-kanto-gigantamax",
+    "fieldName": "releaseStatus",
+    "previousValue": null,
+    "newValue": "RELEASED",
+    "sourceId": "OFF-GMAX-LAPRAS-2024",
+    "changeReasonZhTw": "超極巨拉普拉斯與普通、暗影及極巨版本分開。",
+    "changedAt": "2026-08-03T10:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Brace yourselves—Gigantamax Lapras is coming.",
+      "url": "https://pokemongo.com/en/post/gigantamax-lapras-max-battle-day?hl=en"
+    }
+  },
+  {
+    "id": "r13-gmax-snorlax",
+    "entityType": "BattleVariant",
+    "entityId": "143-kanto-gigantamax",
+    "fieldName": "releaseStatus",
+    "previousValue": null,
+    "newValue": "RELEASED",
+    "sourceId": "OFF-GMAX-SNORLAX-2025",
+    "changeReasonZhTw": "超極巨卡比獸與普通、暗影及極巨版本分開。",
+    "changedAt": "2026-08-03T10:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Don’t sleep on this giant opportunity! Gigantamax Snorlax emerges in a new Max Battle Day.",
+      "url": "https://pokemongo.com/post/gigantamax-snorlax-max-battle-day/"
+    }
+  },
+  {
+    "id": "r12-batch-091-120",
+    "entityType": "Batch",
+    "entityId": "091-120",
+    "fieldName": "status",
+    "previousValue": null,
+    "newValue": "REVIEWED",
+    "sourceId": null,
+    "changeReasonZhTw": "新增 #091～#120，沿用立即處理結論、用途、IV 與版本分層。",
+    "changedAt": "2026-08-03T08:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": null
+  },
+  {
+    "id": "r12-cross-family-090",
+    "entityType": "EvolutionFamily",
+    "entityId": "KANTO_FAMILY_090",
+    "fieldName": "members",
+    "previousValue": "#090",
+    "newValue": "#090-#091",
+    "sourceId": null,
+    "changeReasonZhTw": "將 #091 刺甲貝接回前批 #090 大舌貝，並移除已不必要的 HOLD／issue。",
+    "changedAt": "2026-08-03T08:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": null
+  },
+  {
+    "id": "r12-gmax-gengar",
+    "entityType": "BattleVariant",
+    "entityId": "094-kanto-gigantamax",
+    "fieldName": "releaseStatus",
+    "previousValue": null,
+    "newValue": "RELEASED",
+    "sourceId": "OFF-GMAX-GENGAR-2024",
+    "changeReasonZhTw": "普通、暗影、Mega、極巨與超極巨耿鬼分開評估。",
+    "changedAt": "2026-08-03T08:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Halloween 2024 Part II",
+      "url": "https://pokemongo.com/en/post/halloween-part-2-2024?hl=en"
+    }
+  },
+  {
+    "id": "r12-gmax-kingler",
+    "entityType": "BattleVariant",
+    "entityId": "099-kanto-gigantamax",
+    "fieldName": "releaseStatus",
+    "previousValue": null,
+    "newValue": "RELEASED",
+    "sourceId": "OFF-GMAX-KINGLER-2025",
+    "changeReasonZhTw": "普通、暗影、極巨與超極巨巨鉗蟹分開評估。",
+    "changedAt": "2026-08-03T08:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Gigantamax Kingler Max Battle Day",
+      "url": "https://pokemongo.com/en/post/gigantamax-kingler-max-battle-day?hl=en"
+    }
+  },
+  {
+    "id": "r12-mega-starmie-announced",
+    "entityType": "EvolutionFamily",
+    "entityId": "KANTO_FAMILY_120",
+    "fieldName": "futureMegaTarget",
+    "previousValue": null,
+    "newValue": "ANNOUNCED_UNRELEASED_2026-08-22",
+    "sourceId": "OFF-MEGA-STARMIE-2026",
+    "changeReasonZhTw": "僅讓 #120 海星星保留少量未來進化候選；不把尚未登場的 Mega 寫成已開放。",
+    "changedAt": "2026-08-03T08:30:00.000Z",
+    "rulesVersion": "2026.07.28-v5",
+    "source": {
+      "title": "Starmie Super Mega Raid Day 2026",
+      "url": "https://pokemongo.com/en/news/starmie-super-mega-raid-day-2026"
+    }
+  },
+  {
     "id": "r11-source-binding-december-2023",
     "entityType": "SourceReference",
     "entityId": "OFF-CD-DEC-2023",

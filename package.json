@@ -33,9 +33,11 @@
     "data:import": "tsx scripts/import-data.ts",
     "data:import:031-060": "tsx scripts/import-031-060.ts",
     "data:import:061-090": "tsx scripts/import-061-090.ts",
+    "data:import:091-120": "tsx scripts/import-091-120.ts",
+    "data:import:121-151": "tsx scripts/import-121-151.ts",
     "data:remediate": "tsx scripts/remediate-001-030.ts",
     "data:backfill-iv": "tsx scripts/backfill-structured-iv.ts",
-    "review:generate": "tsx scripts/generate-review.ts && tsx scripts/generate-review-031-060.ts && tsx scripts/generate-review-061-090.ts",
+    "review:generate": "tsx scripts/generate-review.ts && tsx scripts/generate-review-031-060.ts && tsx scripts/generate-review-061-090.ts && tsx scripts/generate-review-091-120.ts && tsx scripts/generate-review-121-151.ts",
     "review:remediation": "tsx scripts/generate-remediation-report.ts"
   },
   "dependencies": {

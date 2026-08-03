@@ -65,7 +65,7 @@ export function HomeDataLoader() {
       <section className="subtle-grid surface overflow-hidden rounded-3xl p-6 lg:p-8">
         <div className="max-w-4xl">
           <p className="text-sm font-bold tracking-widest text-[var(--primary)]">
-            三批研究 · #001～#090
+            五批研究 · #001～#151
           </p>
           <h1 className="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
             3 秒看懂：這隻寶可夢該不該留？
