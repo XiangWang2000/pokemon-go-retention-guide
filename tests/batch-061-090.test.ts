@@ -60,12 +60,16 @@ describe("#061～#090 批次與跨批次家族", () => {
     const variants = forms
       .find((form) => form.formId === "068-kanto")!
       .variants.map((variant) => variant.row);
-    for (const key of ["NORMAL", "SHADOW", "DYNAMAX", "GIGANTAMAX"]) {
+    for (const key of ["NORMAL", "SHADOW", "GIGANTAMAX"]) {
       expect(variants.find((row) => row.variantKey === key)).toMatchObject({
         releaseStatus: "RELEASED",
         decision: "KEEP",
       });
     }
+    expect(variants.find((row) => row.variantKey === "DYNAMAX")).toMatchObject({
+      releaseStatus: "RELEASED",
+      decision: "CONDITIONAL_KEEP",
+    });
     expect(variants.find((row) => row.variantKey === "GIGANTAMAX")?.maxBattleSummaryZhTw).toContain(
       "普通與極巨版本不能替代",
     );
@@ -124,9 +128,15 @@ describe("#061～#090 批次與跨批次家族", () => {
     expect(familyByMember("088-alola").retentionStrategy).toBe("MOSTLY_TRANSFER");
   });
 
-  it("只有後續重要進化可能造成誤傳時才暫時保留", () => {
-    expect(familyByMember("081-kanto").retentionStrategy).toBe("HOLD_FOR_NOW");
-    expect(familyByMember("083-galar").retentionStrategy).toBe("HOLD_FOR_NOW");
+  it("後續進化用途會轉成逐版本的有限用途，不讓整個家族暫停判斷", () => {
+    expect(familyByMember("081-kanto").retentionStrategy).not.toBe("HOLD_FOR_NOW");
+    expect(familyByMember("083-galar").retentionStrategy).not.toBe("HOLD_FOR_NOW");
+    expect(rows.find((row) => row.id === "081-kanto-normal")).toMatchObject({
+      decision: "CONDITIONAL_KEEP",
+      assessmentDisposition: "LIMITED_USE",
+    });
+    expect(rows.find((row) => row.id === "081-kanto-normal")?.categoryStatuses.find((item) => item.category === "PVE"))
+      .toMatchObject({ pveUseLevel: "USABLE_OR_BUDGET" });
     expect(familyByMember("090-kanto").retentionStrategy).toBe("MOSTLY_TRANSFER");
     expect(familyByMember("090-kanto").members.map((member) => member.form.formId)).toEqual([
       "090-kanto",

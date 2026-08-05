@@ -125,6 +125,19 @@ export const zhTw = {
     UNRELEASED: "版本尚未推出",
     UNKNOWN_RELEASE_STATUS: "推出狀態不明",
   },
+  pveUseLevel: {
+    CORE_INVESTMENT: "核心投資",
+    USABLE_OR_BUDGET: "可用／預算型",
+    SPECIAL_USE: "特殊用途",
+    NO_SIGNIFICANT_USE: "無顯著用途",
+  },
+  assessmentDisposition: {
+    CLEAR_USE: "已有明確用途",
+    LIMITED_USE: "用途有限",
+    NO_SIGNIFICANT_USE: "無顯著用途",
+    NOT_APPLICABLE_OR_UNRELEASED: "不適用／尚未推出",
+    TRUE_DATA_PENDING: "真正待補資料",
+  },
   overviewDataStatus: {
     VERIFIED: "已確認",
     PARTIALLY_VERIFIED: "部分確認",

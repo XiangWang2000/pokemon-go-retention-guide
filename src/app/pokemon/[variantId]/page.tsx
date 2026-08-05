@@ -66,6 +66,12 @@ export default async function PokemonDetailPage({
           信心程度：{zhTw.confidence[row.confidence]} · 規則版本：{row.rulesVersion} ·{" "}
           {zhTw.reviewStatus[row.reviewStatus]}
         </p>
+        <p className="mt-2 text-sm font-bold text-[var(--accent)]">
+          資料處置：
+          {zhTw.assessmentDisposition[
+            row.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+          ]}
+        </p>
         <p className="mt-2 text-sm font-bold">
           結論依據：{zhTw.evaluationProvenance[row.provenance]}
           {row.provenance === "MANUAL_CURATED"
@@ -86,7 +92,19 @@ export default async function PokemonDetailPage({
                 <span className="rounded-full border px-2 py-1 text-xs font-bold">
                   {zhTw.evaluationDataStatus[item.status as keyof typeof zhTw.evaluationDataStatus]}
                 </span>
+                {item.category === "PVE" && item.pveUseLevel ? (
+                  <span className="rounded-full border border-[var(--accent)] px-2 py-1 text-xs font-bold text-[var(--accent)]">
+                    {zhTw.pveUseLevel[item.pveUseLevel as keyof typeof zhTw.pveUseLevel]}
+                  </span>
+                ) : null}
               </div>
+              {item.assessmentDisposition ? (
+                <p className="mt-2 text-xs font-bold text-[var(--muted)]">
+                  {zhTw.assessmentDisposition[
+                    item.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+                  ]}
+                </p>
+              ) : null}
               <p className="mt-2 text-xs font-bold text-[var(--muted)]">
                 資料依據：{zhTw.evaluationProvenance[item.provenance]}
               </p>

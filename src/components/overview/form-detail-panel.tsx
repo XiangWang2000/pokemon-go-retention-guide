@@ -138,6 +138,18 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
                     <span key={status.category} className="inline-flex items-center gap-1 text-xs">
                       {zhTw.category[status.category]}{" "}
                       <EvaluationStatusBadge status={status.status} />
+                      {status.category === "PVE" && status.pveUseLevel ? (
+                        <span className="font-bold text-[var(--accent)]">
+                          {zhTw.pveUseLevel[status.pveUseLevel as keyof typeof zhTw.pveUseLevel]}
+                        </span>
+                      ) : null}
+                      {status.assessmentDisposition ? (
+                        <span className="text-[var(--muted)]">
+                          {zhTw.assessmentDisposition[
+                            status.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+                          ]}
+                        </span>
+                      ) : null}
                     </span>
                   ))}
                 </div>

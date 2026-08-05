@@ -145,6 +145,7 @@ export async function getDashboardRows() {
       releaseVerifiedAt: variant.releaseVerifiedAt?.toISOString() ?? null,
       notesZhTw: variant.notesZhTw,
       decision: evaluation?.finalDecision ?? "HOLD_FOR_NOW",
+      assessmentDisposition: evaluation?.assessmentDisposition ?? "TRUE_DATA_PENDING",
       provenance: evaluation?.provenance ?? "DATA_UNAVAILABLE",
       confidence: evaluation?.confidence ?? "LOW",
       dataStatus:
@@ -226,6 +227,8 @@ export async function getDashboardRows() {
         maxOverallRating: category.maxOverallRating,
         maxInvestmentRating: category.maxInvestmentRating,
         maxUseCaseBreadth: category.maxUseCaseBreadth,
+        pveUseLevel: category.pveUseLevel,
+        assessmentDisposition: category.assessmentDisposition,
         checkedAt: category.checkedAt.toISOString(),
         sources: category.sourceReferences.map(({ source, usageZhTw }) => ({
           id: source.id,

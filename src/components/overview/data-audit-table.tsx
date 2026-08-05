@@ -26,6 +26,18 @@ function AuditDetails({ row }: { row: DashboardRow }) {
                   {zhTw.evaluationProvenance[status.provenance]} · 查核{" "}
                   {status.checkedAt?.slice(0, 10) ?? "待確認"}
                 </span>
+                {status.category === "PVE" && status.pveUseLevel ? (
+                  <span className="font-bold text-[var(--accent)]">
+                    {zhTw.pveUseLevel[status.pveUseLevel as keyof typeof zhTw.pveUseLevel]}
+                  </span>
+                ) : null}
+                {status.assessmentDisposition ? (
+                  <span className="text-xs text-[var(--muted)]">
+                    {zhTw.assessmentDisposition[
+                      status.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+                    ]}
+                  </span>
+                ) : null}
               </div>
               <p className="mt-1 leading-6 text-[var(--muted)]">{status.summaryZhTw}</p>
             </li>

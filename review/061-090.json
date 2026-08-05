@@ -2,8 +2,8 @@
   "batch": "061-090",
   "updatedAt": "2026-07-30",
   "dataVersion": "2026.07.31-r11",
-  "rulesVersion": "2026.07.28-v5",
-  "status": "ACCEPTED_WITH_SCOPED_HOLDS",
+  "rulesVersion": "2026.08.05-v6",
+  "status": "ACCEPTED",
   "counts": {
     "species": 30,
     "forms": 40,
@@ -12,11 +12,11 @@
     "strategyCounts": {
       "KEEP_TARGETS": 7,
       "SELECTIVE_KEEP": 2,
-      "MOSTLY_TRANSFER": 8,
-      "HOLD_FOR_NOW": 2
+      "MOSTLY_TRANSFER": 10,
+      "HOLD_FOR_NOW": 0
     },
     "openIssues": 5,
-    "safetyAffectingIssues": 5
+    "safetyAffectingIssues": 0
   },
   "crossBatchIntegration": {
     "familyKey": "KANTO_FAMILY_060",
@@ -33,7 +33,7 @@
       {
         "variantKey": "DYNAMAX",
         "releaseStatus": "RELEASED",
-        "decision": "KEEP"
+        "decision": "CONDITIONAL_KEEP"
       },
       {
         "variantKey": "GIGANTAMAX",
@@ -63,23 +63,7 @@
     "shadow": "暗影標準較寬；15攻優先，不設硬性最低IV；低總IV不觸發淨化。",
     "result": "PASS"
   },
-  "scopedHolds": [
-    {
-      "familyId": "KANTO_FAMILY_081:081-kanto",
-      "members": [
-        "081-kanto",
-        "082-kanto"
-      ],
-      "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
-    },
-    {
-      "familyId": "KANTO_FAMILY_083:083-galar",
-      "members": [
-        "083-galar"
-      ],
-      "safetyImpact": "範圍外進化可能改變保留安全，因此只先留一隻最佳候選；不要求保留全部重複。"
-    }
-  ],
+  "scopedHolds": [],
   "immediateHandling": [
     {
       "familyId": "KANTO_FAMILY_060:060-kanto",
@@ -90,19 +74,19 @@
     {
       "familyId": "KANTO_FAMILY_063:063-kanto",
       "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留胡地（Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留胡地（PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_066:066-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留豪力（PvP（GL Rank≤100）、有用途的暗影版），以及怪力（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、超極巨版本本身、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留豪力（PvP（GL Rank≤100）、有用途的暗影版），以及怪力（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、超極巨版本本身、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_069:069-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留大食花（PvP（UL Rank≤100）、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留大食花（PvP（UL Rank≤100）、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -149,9 +133,9 @@
     },
     {
       "familyId": "KANTO_FAMILY_081:081-kanto",
-      "strategy": "HOLD_FOR_NOW",
-      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
-      "transferLine": null
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_083:083-kanto",
@@ -161,9 +145,9 @@
     },
     {
       "familyId": "KANTO_FAMILY_083:083-galar",
-      "strategy": "HOLD_FOR_NOW",
-      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
-      "transferLine": null
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_084:084-kanto",

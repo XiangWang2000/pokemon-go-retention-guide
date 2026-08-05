@@ -17,9 +17,18 @@ npm run db:seed
 npm run data:remediate
 npm run data:import:031-060
 npm run data:import:061-090
+npm run data:import:091-120
+npm run data:import:121-151
+npm run data:recompute:001-151
 npm run data:validate
 npm run review:generate
 npm run sites:snapshot
 ```
 
-`data:import:031-060` 重建 #031～#060 與 #029～#031 的跨批次連接；`data:import:061-090` 重建 #061～#090，並把 #060 蚊香蝌蚪接到 #061～#062。兩者都不會啟動範圍外下一批。官方來源與固定 PvPoke snapshot 必須先存在；產物仍由 `sites:snapshot` 統一產生。
+`data:import:*` 只負責寫入批次來源、型態、原始資料與初步評估；四批都完成後必須執行 `data:recompute:001-151`。這一步套用共用的 PvE 四級用途與逐版本資料處置，將後續世代進化、暗影、Mega、Max、道館與特殊用途納入同一判斷，並清除不再具決策影響的家族級範圍缺口。沒有執行重算前，不得把新 snapshot 視為最終驗收結果。
+
+## 共用重算規則
+
+- PvE 用途固定分為 `CORE_INVESTMENT`（核心投資）、`USABLE_OR_BUDGET`（可用／預算型）、`SPECIAL_USE`（特殊用途）、`NO_SIGNIFICANT_USE`（無顯著用途）。
+- 每個 `BattleVariant` 另存 `AssessmentDisposition`：已有明確用途、用途有限、無顯著用途、不適用／尚未推出、真正待補資料。
+- 只有 `TRUE_DATA_PENDING` 才能使用 `HOLD_FOR_NOW`，並顯示「無法判斷，暫時不要傳」；未推出版本、用途有限與次要欄位缺來源不可沿用這個提示。

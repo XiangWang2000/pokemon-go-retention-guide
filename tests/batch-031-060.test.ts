@@ -88,10 +88,10 @@ describe("#031～#060 批次與跨批次家族", () => {
     expect(familyByMember("048-kanto").retentionStrategy).toBe("MOSTLY_TRANSFER");
   });
 
-  it("只有範圍外進化可能造成誤傳時才暫時保留", () => {
+  it("後續世代進化已知時，不再把整個家族標成暫時保留", () => {
     expect(familyByMember("057-kanto")).toMatchObject({
       isBatchTruncated: true,
-      retentionStrategy: "HOLD_FOR_NOW",
+      retentionStrategy: "KEEP_TARGETS",
     });
     expect(familyByMember("060-kanto")).toMatchObject({
       isBatchTruncated: false,

@@ -27,7 +27,7 @@ describe("#091～#120 部署快照安全回歸", () => {
     expect(byId["120-kanto-shadow"]?.decision).toBe("CONDITIONAL_KEEP");
     expect(byId["094-kanto-normal"]?.reasonZhTw).toContain("其餘普通重複可傳");
     expect(byId["115-kanto-normal"]?.reasonZhTw).toContain("其餘普通重複可傳");
-    expect(byId["120-kanto-shadow"]?.reasonZhTw).toContain("Ultra League Overall #170");
+    expect(byId["120-kanto-shadow"]?.reasonZhTw).toContain("後續進化");
     expect(byId["120-kanto-shadow"]?.recommendedIvStrategyZhTw).toContain("不設硬性最低IV");
   });
 

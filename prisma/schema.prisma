@@ -115,6 +115,21 @@ enum EvaluationCategory {
   EVOLUTION_VALUE
 }
 
+enum PveUseLevel {
+  CORE_INVESTMENT
+  USABLE_OR_BUDGET
+  SPECIAL_USE
+  NO_SIGNIFICANT_USE
+}
+
+enum AssessmentDisposition {
+  CLEAR_USE
+  LIMITED_USE
+  NO_SIGNIFICANT_USE
+  NOT_APPLICABLE_OR_UNRELEASED
+  TRUE_DATA_PENDING
+}
+
 enum League {
   GREAT
   ULTRA
@@ -408,6 +423,8 @@ model CategoryEvaluation {
   maxOverallRating    String?
   maxInvestmentRating String?
   maxUseCaseBreadth   String?
+  pveUseLevel         PveUseLevel?
+  assessmentDisposition AssessmentDisposition?
   checkedAt           DateTime
   createdAt           DateTime                   @default(now())
   updatedAt           DateTime                   @updatedAt
@@ -451,6 +468,7 @@ model RetentionEvaluation {
   reviewedAt                DateTime?
   reviewStatus              EvaluationReviewStatus @default(DATA_PENDING)
   missingDataSummaryZhTw    String                 @default("")
+  assessmentDisposition     AssessmentDisposition   @default(TRUE_DATA_PENDING)
   reviewNotesZhTw           String
   battleVariant             BattleVariant          @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
   ruleTraces                EvaluationRuleTrace[]

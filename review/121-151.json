@@ -2,8 +2,8 @@
   "batch": "121-151",
   "updatedAt": "2026-08-03",
   "dataVersion": "2026.08.03-r13",
-  "rulesVersion": "2026.07.28-v5",
-  "status": "ACCEPTED_WITH_SCOPED_HOLDS",
+  "rulesVersion": "2026.08.05-v6",
+  "status": "ACCEPTED",
   "counts": {
     "species": 31,
     "forms": 39,
@@ -12,11 +12,11 @@
     "strategyCounts": {
       "KEEP_TARGETS": 11,
       "SELECTIVE_KEEP": 6,
-      "MOSTLY_TRANSFER": 9,
-      "HOLD_FOR_NOW": 5
+      "MOSTLY_TRANSFER": 14,
+      "HOLD_FOR_NOW": 0
     },
     "openIssues": 9,
-    "safetyAffectingIssues": 9
+    "safetyAffectingIssues": 0
   },
   "crossBatchIntegration": {
     "familyKey": "KANTO_FAMILY_120",
@@ -37,38 +37,7 @@
     "mewDecision": "KEEP",
     "result": "PASS"
   },
-  "scopedHolds": [
-    {
-      "familyId": "KANTO_FAMILY_122:122-galar",
-      "members": [
-        "122-galar"
-      ]
-    },
-    {
-      "familyId": "KANTO_FAMILY_123:123-kanto",
-      "members": [
-        "123-kanto"
-      ]
-    },
-    {
-      "familyId": "KANTO_FAMILY_125:125-kanto",
-      "members": [
-        "125-kanto"
-      ]
-    },
-    {
-      "familyId": "KANTO_FAMILY_126:126-kanto",
-      "members": [
-        "126-kanto"
-      ]
-    },
-    {
-      "familyId": "KANTO_FAMILY_137:137-kanto",
-      "members": [
-        "137-kanto"
-      ]
-    }
-  ],
+  "scopedHolds": [],
   "immediateHandling": [
     {
       "familyId": "KANTO_FAMILY_120:120-kanto",
@@ -84,15 +53,15 @@
     },
     {
       "familyId": "KANTO_FAMILY_122:122-galar",
-      "strategy": "HOLD_FOR_NOW",
-      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
-      "transferLine": null
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_123:123-kanto",
-      "strategy": "HOLD_FOR_NOW",
-      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
-      "transferLine": null
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_124:124-kanto",
@@ -102,15 +71,15 @@
     },
     {
       "familyId": "KANTO_FAMILY_125:125-kanto",
-      "strategy": "HOLD_FOR_NOW",
-      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
-      "transferLine": null
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_126:126-kanto",
-      "strategy": "HOLD_FOR_NOW",
-      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
-      "transferLine": null
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_127:127-kanto",
@@ -168,9 +137,9 @@
     },
     {
       "familyId": "KANTO_FAMILY_137:137-kanto",
-      "strategy": "HOLD_FOR_NOW",
-      "conclusion": "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。",
-      "transferLine": null
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_138:138-kanto",
@@ -241,7 +210,7 @@
     {
       "familyId": "KANTO_FAMILY_150:150-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留超夢（ML 高 IV 投資候選、Mega 候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留超夢（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {

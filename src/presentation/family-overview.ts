@@ -1,4 +1,5 @@
 import type { IvRecommendation } from "@/iv/strategy";
+import { isTrueDataPending } from "@/rules/battle-assessment";
 import type { CompactOverview, FormOverview, OverviewTone } from "./form-overview";
 
 export type MemberRoleKey =
@@ -334,6 +335,15 @@ function isUsefulVariant(variant: FormOverview["variants"][number]) {
   );
 }
 
+function isVariantTruePending(variant: FormOverview["variants"][number]) {
+  return (
+    isTrueDataPending(variant.row.assessmentDisposition) ||
+    (!variant.row.assessmentDisposition &&
+      variant.row.decision === "HOLD_FOR_NOW" &&
+      variant.row.reviewStatus === "DATA_PENDING")
+  );
+}
+
 function normalizedUseKey(useKey: string) {
   if (["GREAT_LEAGUE", "ULTRA_LEAGUE", "MASTER_LEAGUE"].includes(useKey)) return "PVP";
   if (["PVE", "SHADOW_PVE"].includes(useKey)) return "PVE";
@@ -425,10 +435,7 @@ function materialIssueMessages(members: FamilyMemberSummary[]) {
   return unique(
     members.flatMap((member) =>
       member.form.variants.flatMap((variant) => {
-        const hasKnownUse = variant.primaryUseKeys.length > 0;
-        const isPotentialMegaOrMax = ["MEGA", "MEGA_X", "MEGA_Y", "DYNAMAX", "GIGANTAMAX"].includes(
-          variant.row.variantKey,
-        );
+        if (!isVariantTruePending(variant)) return [];
         return (variant.row.reviewIssues ?? [])
           .filter(
             (issue) =>
@@ -438,8 +445,7 @@ function materialIssueMessages(members: FamilyMemberSummary[]) {
                 "POSSIBLE_SPECIES_MISMATCH",
                 "UNKNOWN_RELEASE_STATUS",
                 "RULE_NOT_COVERED",
-              ].includes(issue.issueType) &&
-              (hasKnownUse || issue.issueType !== "UNKNOWN_RELEASE_STATUS" || isPotentialMegaOrMax),
+              ].includes(issue.issueType),
           )
           .map((issue) => issue.messageZhTw);
       }),
@@ -451,9 +457,10 @@ export function calculateFamilyValue(
   members: FamilyMemberSummary[],
   options: { isBatchTruncated?: boolean } = {},
 ): FamilyValue {
+  void options;
   const targets = findPrimaryRetentionTargets(members);
   const materialIssues = materialIssueMessages(members);
-  if (materialIssues.length || (options.isBatchTruncated && !targets.length)) return "UNKNOWN";
+  if (materialIssues.length) return "UNKNOWN";
   if (!targets.length) return "LOW";
   if (members.some((member) => member.form.variants.some(isSpecialAcquisitionVariant))) {
     return "HIGH";

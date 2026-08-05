@@ -26,7 +26,16 @@ function categoryText(row: DashboardRow, category: string, summary: string) {
   const status = item
     ? zhTw.evaluationDataStatus[item.status as keyof typeof zhTw.evaluationDataStatus]
     : "尚未建立狀態";
-  return `【${status}】${summary}`;
+  const level =
+    category === "PVE" && item?.pveUseLevel
+      ? zhTw.pveUseLevel[item.pveUseLevel as keyof typeof zhTw.pveUseLevel]
+      : null;
+  const disposition = item?.assessmentDisposition
+    ? zhTw.assessmentDisposition[
+        item.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+      ]
+    : null;
+  return `【${[level, disposition, status].filter(Boolean).join("／")}】${summary}`;
 }
 
 export function EvaluationTable({
@@ -404,6 +413,18 @@ function ExpandedContent({ row }: { row: DashboardRow }) {
               <span className="ml-2">
                 {zhTw.evaluationDataStatus[item.status as keyof typeof zhTw.evaluationDataStatus]}
               </span>
+              {item.category === "PVE" && item.pveUseLevel ? (
+                <span className="ml-2 font-bold text-[var(--accent)]">
+                  {zhTw.pveUseLevel[item.pveUseLevel as keyof typeof zhTw.pveUseLevel]}
+                </span>
+              ) : null}
+              {item.assessmentDisposition ? (
+                <span className="ml-2 text-xs text-[var(--muted)]">
+                  {zhTw.assessmentDisposition[
+                    item.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+                  ]}
+                </span>
+              ) : null}
               <p className="mt-1 text-xs text-[var(--muted)]">
                 {item.materialToDecision ? "會影響最終結論" : "不會單獨阻止正式結論"}
               </p>

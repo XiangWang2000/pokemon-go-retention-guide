@@ -87,8 +87,8 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
 
   it("Max Battle 摘要使用 Max 原始評價，而不是整體保留結論", () => {
     expect(form("001-kanto").megaMax).toMatchObject({
-      label: "極巨：待確認",
-      tone: "REVIEW",
+      label: "極巨：—",
+      tone: "NONE",
     });
     expect([form("003-kanto").megaMax.label, form("003-kanto").megaMax.detail]).toContain(
       "超極巨：中",

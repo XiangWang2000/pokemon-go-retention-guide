@@ -142,6 +142,9 @@ describe("家族價值與清包策略聚合", () => {
                     ...variant,
                     row: {
                       ...variant.row,
+                      assessmentDisposition: "TRUE_DATA_PENDING",
+                      decision: "HOLD_FOR_NOW",
+                      reviewStatus: "DATA_PENDING",
                       reviewIssues: [
                         ...(variant.row.reviewIssues ?? []),
                         {

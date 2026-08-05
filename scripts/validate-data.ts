@@ -92,6 +92,10 @@ async function main() {
       errors.push(`${item.id} 標記為 SOURCE_VERIFIED 但沒有結論來源。`);
     if (item.provenance === "MANUAL_CURATED" && !item.reasonZhTw.trim())
       errors.push(`${item.id} 標記為 MANUAL_CURATED 但缺少人工判斷理由。`);
+    if (item.assessmentDisposition === "TRUE_DATA_PENDING" && item.finalDecision !== "HOLD_FOR_NOW")
+      errors.push(`${item.id} 的真正待補資料狀態必須使用 HOLD_FOR_NOW。`);
+    if (item.assessmentDisposition !== "TRUE_DATA_PENDING" && item.finalDecision === "HOLD_FOR_NOW")
+      errors.push(`${item.id} 只有真正待補資料才能使用 HOLD_FOR_NOW。`);
   }
   for (const item of categoryEvaluations) {
     if (item.provenance === "SOURCE_VERIFIED" && item.sourceReferences.length === 0)
@@ -101,6 +105,8 @@ async function main() {
       if (!variant?.inheritsFromVariantId || variant.inheritanceMode === "NONE")
         errors.push(`${item.id} 標記為 INHERITED 但戰鬥版本沒有繼承設定。`);
     }
+    if (item.category === "PVE" && !item.pveUseLevel)
+      errors.push(`${item.id} 的 PvE 類別缺少四級用途判斷。`);
   }
   if (
     issues.some(

@@ -123,6 +123,8 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
         { key: "releaseStatus", header: "推出狀態", width: 16 },
         { key: "pvpStatus", header: "PvP資料狀態", width: 18 },
         { key: "pveStatus", header: "PvE資料狀態", width: 18 },
+        { key: "pveUseLevel", header: "PvE用途層級", width: 18 },
+        { key: "assessmentDisposition", header: "逐版本資料處置", width: 22 },
         { key: "rocketStatus", header: "火箭隊資料狀態", width: 20 },
         { key: "gymStatus", header: "道館資料狀態", width: 18 },
         { key: "megaStatus", header: "Mega資料狀態", width: 18 },
@@ -151,6 +153,17 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
           releaseStatus: zhTw.releaseStatus[variant.releaseStatus],
           pvpStatus: localizedDataStatus(variant.categoryEvaluations, "PVP"),
           pveStatus: localizedDataStatus(variant.categoryEvaluations, "PVE"),
+          pveUseLevel: variant.categoryEvaluations.find((item) => item.category === "PVE")?.pveUseLevel
+            ? zhTw.pveUseLevel[
+                variant.categoryEvaluations.find((item) => item.category === "PVE")!
+                  .pveUseLevel as keyof typeof zhTw.pveUseLevel
+              ]
+            : "—",
+          assessmentDisposition: item
+            ? zhTw.assessmentDisposition[
+                item.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+              ]
+            : zhTw.assessmentDisposition.TRUE_DATA_PENDING,
           rocketStatus: localizedDataStatus(variant.categoryEvaluations, "ROCKET"),
           gymStatus: localizedDataStatus(variant.categoryEvaluations, "GYM"),
           megaStatus: localizedDataStatus(variant.categoryEvaluations, "MEGA"),
