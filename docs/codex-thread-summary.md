@@ -39,4 +39,4 @@
 
 - 公開入口固定為 `/`、`/api/home`、`/data/home.json`；資料版本保留在 meta、`X-Data-Version`、manifest 與內部紀錄，不再附加公開版本 query。
 - 首頁由 server build 產生精簡摘要，直接輸出更新日期、PvE 四級分類統計與重要家族連結；完整 `HomeSnapshot` 仍由瀏覽器載入。
-- `worker/index.ts` 與 `scripts/purge-sites-cache.mjs` 形成部署後 CDN purge 流程；正式部署成功後必須執行 `npm run sites:purge` 並驗證三個固定入口回傳同一個資料版本。
+- `worker/index.ts` 與 `scripts/purge-sites-cache.mjs` 形成部署後 CDN purge hook；正式部署成功後必須執行 `npm run sites:purge`，`/` 與 `/api/home` 驗證 `X-Data-Version`，`/data/home.json` 驗證公開檔案雜湊。Sites runtime 若拒絕 Cache API，hook 會退回 no-store 與 canonical revalidation，不得讓請求失敗。

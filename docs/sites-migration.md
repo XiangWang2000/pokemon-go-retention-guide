@@ -127,4 +127,4 @@ ExcelJS 只在本機 snapshot 產生流程與測試執行，不進入 Worker run
 npm run sites:purge
 ```
 
-此流程會以目前 `site-data/manifest.json` 的 `dataVersion`，依序 purge `/`、`/api/home`、`/data/home.json`，並要求回應的 `X-Data-Version` 與 manifest 一致；任一路徑仍回傳舊版本時，流程會失敗，不應視為部署完成。
+此流程會以目前 `site-data/manifest.json` 的 `dataVersion`，依序呼叫固定入口的 purge hook 並重新驗證；`/` 與 `/api/home` 必須回傳相同的 `X-Data-Version`，`/data/home.json` 則以公開檔案 SHA-256 比對（Sites 可能不會對靜態 asset 套用自訂 header）。任一路徑仍回傳舊版本時，流程會失敗，不應視為部署完成。

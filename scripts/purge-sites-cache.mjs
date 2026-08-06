@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 
 const siteUrl = (
@@ -10,6 +11,8 @@ const dataVersion = manifest.dataVersion;
 if (typeof dataVersion !== "string" || !dataVersion) {
   throw new Error("site-data/manifest.json 缺少 dataVersion，停止 purge。");
 }
+const expectedHome = await readFile(new URL("../public/data/home.json", import.meta.url));
+const expectedHomeHash = createHash("sha256").update(expectedHome).digest("hex");
 
 const paths = ["/", "/api/home", "/data/home.json"];
 for (const pathname of paths) {
@@ -22,10 +25,14 @@ for (const pathname of paths) {
     },
   });
   const body = await response.arrayBuffer();
+  const bodyHash = createHash("sha256").update(Buffer.from(body)).digest("hex");
   const responseVersion = response.headers.get("x-data-version");
-  if (!response.ok || responseVersion !== dataVersion) {
+  const versionMatches =
+    responseVersion === dataVersion ||
+    (pathname === "/data/home.json" && bodyHash === expectedHomeHash);
+  if (!response.ok || !versionMatches) {
     throw new Error(
-      `${pathname} purge 驗證失敗：HTTP ${response.status}，X-Data-Version=${responseVersion ?? "<missing>"}，預期 ${dataVersion}。`,
+      `${pathname} purge 驗證失敗：HTTP ${response.status}，X-Data-Version=${responseVersion ?? "<missing>"}，contentHash=${bodyHash}，預期版本 ${dataVersion}。`,
     );
   }
   console.log(
@@ -34,6 +41,7 @@ for (const pathname of paths) {
       status: response.status,
       bytes: body.byteLength,
       dataVersion: responseVersion,
+      contentHash: bodyHash,
       cacheControl: response.headers.get("cache-control"),
       cdnCacheControl: response.headers.get("cdn-cache-control"),
     }),
