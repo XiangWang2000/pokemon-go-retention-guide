@@ -2,6 +2,7 @@
 
 import { Download, Search } from "lucide-react";
 import { useMemo, useState } from "react";
+import { withDataVersion } from "@/config/release";
 import { freshnessDays } from "@/config/freshness";
 import type { DashboardRow } from "@/lib/data";
 import { matchesPokemonSearch } from "@/lib/search";
@@ -85,7 +86,8 @@ export function EvaluationBrowser({
         )
         .filter((family) => {
           if (valueFilter === "PVP") return ["HIGH", "MEDIUM", "SPECIAL"].includes(family.pvp.tone);
-          if (valueFilter === "PVE") return ["HIGH", "MEDIUM"].includes(family.pve.tone);
+          if (valueFilter === "PVE")
+            return ["HIGH", "MEDIUM", "SPECIAL", "LOW", "REVIEW"].includes(family.pve.tone);
           if (valueFilter === "GYM") return ["HIGH", "MEDIUM", "SPECIAL"].includes(family.gym.tone);
           if (valueFilter === "MEGA_MAX") return family.megaMax.tone !== "NONE";
           return true;
@@ -112,7 +114,8 @@ export function EvaluationBrowser({
         )
         .filter((form) => {
           if (valueFilter === "PVP") return ["HIGH", "MEDIUM", "SPECIAL"].includes(form.pvp.tone);
-          if (valueFilter === "PVE") return ["HIGH", "MEDIUM"].includes(form.pve.tone);
+          if (valueFilter === "PVE")
+            return ["HIGH", "MEDIUM", "SPECIAL", "LOW", "REVIEW"].includes(form.pve.tone);
           if (valueFilter === "GYM") return ["HIGH", "MEDIUM", "SPECIAL"].includes(form.gym.tone);
           if (valueFilter === "MEGA_MAX") return form.megaMax.tone !== "NONE";
           return true;
@@ -283,7 +286,7 @@ export function EvaluationBrowser({
               <option value="PVP">PvP</option>
               <option value="PVE">PvE</option>
               <option value="GYM">道館</option>
-              <option value="MEGA_MAX">Mega／Max</option>
+              <option value="MEGA_MAX">Mega／Primal／Max</option>
             </select>
           </label>
           <label>
@@ -352,7 +355,7 @@ export function EvaluationBrowser({
             {mode === "FAMILY" ? "個進化家族" : mode === "POKEDEX" ? "個寶可夢型態" : "個戰鬥版本"}
           </p>
           <a
-            href="/exports/pokemon-go-retention-001-151.xlsx"
+            href={withDataVersion("/exports/pokemon-go-retention-001-151.xlsx")}
             className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[var(--primary)] px-4 text-sm font-bold text-[var(--primary-contrast)] transition hover:brightness-95"
           >
             <Download aria-hidden size={17} />

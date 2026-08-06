@@ -57,7 +57,7 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
     expect(charmander.decision).toBe("CONDITIONAL_KEEP");
     expect(
       charmander.variants.filter((variant) => variant.row.decision === "HOLD_FOR_NOW"),
-    ).toHaveLength(2);
+    ).toHaveLength(1);
     expect(charmander.decisionReason).toContain("暫時保留");
   });
 
@@ -81,8 +81,32 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
     )!;
     expect(buildPveOverview([highShadow.row])).toMatchObject({
       tone: "HIGH",
-      label: "頂級屬性暗影打手",
+      label: "核心投資",
+      detail: expect.stringContaining("暗影"),
     });
+  });
+
+  it("高風險前階會保留後續進化用途與 PvE 四級標籤", () => {
+    const expected = [
+      ["081-kanto", "USABLE_OR_BUDGET", "可用／預算型", "自爆磁怪"],
+      ["111-kanto", "CORE_INVESTMENT", "核心投資", "超甲狂犀"],
+      ["114-kanto", "USABLE_OR_BUDGET", "可用／預算型", "巨蔓藤"],
+      ["123-kanto", "SPECIAL_USE", "特殊用途", "巨鉗螳螂"],
+      ["125-kanto", "USABLE_OR_BUDGET", "可用／預算型", "電擊魔獸"],
+      ["126-kanto", "USABLE_OR_BUDGET", "可用／預算型", "鴨嘴炎獸"],
+    ] as const;
+    for (const [formId, pveUseLevel, pveLabel, target] of expected) {
+      const normal = form(formId).variants.find((variant) => variant.row.variantKey === "NORMAL")!;
+      expect(normal.row.decision, formId).not.toBe("HOLD_FOR_NOW");
+      expect(
+        normal.row.categoryStatuses.find((item) => item.category === "PVE"),
+        formId,
+      ).toMatchObject({
+        pveUseLevel,
+      });
+      expect(normal.row.evolutionSummaryZhTw, formId).toContain(target);
+      expect(buildPveOverview([normal.row]), formId).toMatchObject({ label: pveLabel });
+    }
   });
 
   it("Max Battle 摘要使用 Max 原始評價，而不是整體保留結論", () => {
@@ -93,7 +117,7 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
     expect([form("003-kanto").megaMax.label, form("003-kanto").megaMax.detail]).toContain(
       "超極巨：中",
     );
-    expect(form("006-kanto").megaMax).toMatchObject({ label: "Mega：高", tone: "HIGH" });
+    expect(form("006-kanto").megaMax).toMatchObject({ label: "Mega／Primal：高", tone: "HIGH" });
     expect([form("006-kanto").megaMax.label, form("006-kanto").megaMax.detail]).toContain(
       "超極巨：高",
     );
@@ -156,6 +180,7 @@ describe("快速總覽與資料審核 UI", () => {
     expect(html).toContain("信心");
     expect(html).toContain("原始資料與規則軌跡");
     expect(html).toContain("類別狀態");
+    expect(html).toContain("此欄位待補，但不影響普通個體結論");
     expect(html).toContain("查看");
   });
 

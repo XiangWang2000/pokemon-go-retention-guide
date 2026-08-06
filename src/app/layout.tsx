@@ -1,10 +1,37 @@
 import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
+import { DATA_VERSION, DATA_VERSION_DATE_ZH_TW } from "@/config/release";
 import "./globals.css";
 
+const siteTitle = "Pokémon GO 寶可夢保留價值指南";
+const siteDescription = "以可追溯來源與集中式規則評估 Pokémon GO 各型態的通用保留價值。";
+
 export const metadata: Metadata = {
-  title: "Pokémon GO 寶可夢保留價值指南",
-  description: "以可追溯來源與集中式規則評估 Pokémon GO 各型態的通用保留價值。",
+  metadataBase: new URL("https://pokemon-go-retention-guide.wang890921.chatgpt.site"),
+  title: {
+    default: siteTitle,
+    template: `%s｜${siteTitle}`,
+  },
+  description: siteDescription,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "zh_TW",
+    url: "/",
+    siteName: siteTitle,
+    title: `${siteTitle}（資料版本 ${DATA_VERSION}）`,
+    description: `${siteDescription} 資料版本：${DATA_VERSION}（${DATA_VERSION_DATE_ZH_TW} 更新）。`,
+  },
+  twitter: {
+    card: "summary",
+    title: `${siteTitle}（${DATA_VERSION}）`,
+    description: siteDescription,
+  },
+  robots: { index: true, follow: true },
+  other: {
+    "data-version": DATA_VERSION,
+    "data-version-date": DATA_VERSION_DATE_ZH_TW,
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

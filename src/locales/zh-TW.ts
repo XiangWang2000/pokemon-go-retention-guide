@@ -63,7 +63,7 @@ export const zhTw = {
     PVE: "PvE 團體戰",
     ROCKET: "火箭隊",
     GYM: "道館防守",
-    MEGA: "Mega",
+    MEGA: "Mega／Primal",
     MAX_BATTLE: "Max Battle",
     EVOLUTION_VALUE: "後續進化",
   },

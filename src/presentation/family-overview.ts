@@ -1,5 +1,5 @@
 import type { IvRecommendation } from "@/iv/strategy";
-import { isTrueDataPending } from "@/rules/battle-assessment";
+import { isTrueDataPending, pveUseLevelLabelZhTw } from "@/rules/battle-assessment";
 import type { CompactOverview, FormOverview, OverviewTone } from "./form-overview";
 
 export type MemberRoleKey =
@@ -272,14 +272,26 @@ export function buildFamilyPvpOverview(members: FamilyMemberSummary[]): CompactO
 
 export function buildFamilyPveOverview(members: FamilyMemberSummary[]): CompactOverview {
   const best = bestByConfirmedUse(members, "pve", pveUseKeys);
-  if (!best || best.form.pve.tone === "NONE") return { label: "無明確用途", tone: "NONE" };
+  if (!best || best.form.pve.tone === "NONE") {
+    const assessed = bestByTone(members, "pve");
+    if (assessed?.form.pve.tone === "REVIEW") return assessed.form.pve;
+    return {
+      label: pveUseLevelLabelZhTw.NO_SIGNIFICANT_USE,
+      detail: "目前沒有已確認的 PvE 投資用途",
+      tone: "LOW",
+    };
+  }
   const shadow = best.form.variants.some(
     (variant) =>
       variant.row.variantKey === "SHADOW" && variant.primaryUseKeys.includes("SHADOW_PVE"),
   );
   return {
-    label: shadow ? `暗影${best.form.nameZhTw}有價值` : best.form.pve.label,
-    detail: best.isTerminal ? "最終進化為主要投資目標" : `${best.form.nameZhTw}有獨立用途`,
+    label: best.form.pve.label,
+    detail: shadow
+      ? `暗影版本；${best.form.nameZhTw}有獨立用途`
+      : best.isTerminal
+        ? "最終進化為主要投資目標"
+        : `${best.form.nameZhTw}有獨立用途`,
     tone: best.form.pve.tone,
   };
 }

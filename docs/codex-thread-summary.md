@@ -28,8 +28,9 @@
 - [`sites-migration.md`](sites-migration.md)
 - [`../README.md`](../README.md)
 
-## 2026-08-05 #001～#151 共用重算
+## 2026-08-06 #001～#151 共用重算
 
 - 四級 PvE 用途與五種逐版本資料處置已集中到 src/rules/battle-assessment.ts；#001～#151 透過
-pm run data:recompute:001-151 批次重算，只有 TRUE_DATA_PENDING 才使用 HOLD_FOR_NOW 與「無法判斷，暫時不要傳」。
-- 後續世代進化、暗影、Mega、道館與 Max 版本分開評估；site-data/ 與 public/exports/ 必須由 snapshot／export scripts 重新產生。
+  npm run data:recompute:001-151 批次重算，只有 TRUE_DATA_PENDING 才使用 HOLD_FOR_NOW 與「無法判斷，暫時不要傳」。
+- PvE 顯示四級投資標籤，並分開呈現團體戰、火箭隊、道館、Mega／Primal、Max Battle、暗影與後續進化；非關鍵欄位顯示「此欄位待補，但不影響普通個體結論」。
+- 缺口以 BattleVariant 與類別狀態拆分；site-data/ 與 public/exports/ 必須由 snapshot／export scripts 重新產生。

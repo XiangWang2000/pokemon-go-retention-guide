@@ -2,6 +2,7 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 import { Fragment } from "react";
 import type { DashboardRow } from "@/lib/data";
 import { zhTw } from "@/locales/zh-TW";
+import { scopedCategoryDataNote } from "@/presentation/data-status";
 import { EvaluationStatusBadge } from "./evaluation-status-badge";
 import { RetentionDecisionBadge } from "./retention-decision-badge";
 import { ReviewIssuePanel } from "./review-issue-panel";
@@ -33,9 +34,16 @@ function AuditDetails({ row }: { row: DashboardRow }) {
                 ) : null}
                 {status.assessmentDisposition ? (
                   <span className="text-xs text-[var(--muted)]">
-                    {zhTw.assessmentDisposition[
-                      status.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
-                    ]}
+                    {
+                      zhTw.assessmentDisposition[
+                        status.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+                      ]
+                    }
+                  </span>
+                ) : null}
+                {scopedCategoryDataNote(status) ? (
+                  <span className="text-xs font-bold text-amber-700 dark:text-amber-300">
+                    {scopedCategoryDataNote(status)}
                   </span>
                 ) : null}
               </div>

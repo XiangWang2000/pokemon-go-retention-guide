@@ -1,6 +1,6 @@
 export type RuleDecision = "KEEP" | "CONDITIONAL_KEEP" | "HOLD_FOR_NOW" | "TRANSFER_CANDIDATE";
 
-export const RULES_VERSION = "2026.08.05-v6";
+export const RULES_VERSION = "2026.08.06-v7";
 
 export interface RuleDefinition {
   ruleKey: string;
@@ -53,7 +53,8 @@ export const retentionRules: readonly RuleDefinition[] = [
     ruleKey: "CONDITIONAL_USE",
     version: RULES_VERSION,
     priority: 700,
-    condition: "可用／預算型或特殊用途；包含特殊盃、特定招式或 IV、Mega／Max 候選、少量道館與進化候選",
+    condition:
+      "可用／預算型或特殊用途；包含特殊盃、特定招式或 IV、Mega／Max 候選、少量道館與進化候選",
     resultingDecision: "CONDITIONAL_KEEP",
     reasonTemplateZhTw: "只有符合指定用途與條件的個體值得保留，不需囤積一般重複個體。",
     enabled: true,

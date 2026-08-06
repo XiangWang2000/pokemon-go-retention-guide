@@ -119,9 +119,11 @@ export function classifyAssessmentDisposition(input: {
   pveUseLevel: PveUseLevel;
   hasAnyActionableUse: boolean;
   hasTrueDataGap?: boolean;
-}) : AssessmentDisposition {
+}): AssessmentDisposition {
   if (input.releaseStatus === "UNRELEASED") return "NOT_APPLICABLE_OR_UNRELEASED";
-  if (input.releaseStatus === "UNKNOWN" || input.hasTrueDataGap) return "TRUE_DATA_PENDING";
+  if (input.hasTrueDataGap || (input.releaseStatus === "UNKNOWN" && !input.hasAnyActionableUse)) {
+    return "TRUE_DATA_PENDING";
+  }
   if (input.hasAnyActionableUse) {
     return input.pveUseLevel === "CORE_INVESTMENT" ? "CLEAR_USE" : "LIMITED_USE";
   }

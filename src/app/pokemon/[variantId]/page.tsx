@@ -2,8 +2,10 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { StatusBadge } from "@/components/status-badge";
+import { withDataVersion } from "@/config/release";
 import { getDashboardRows, getVariantDetailMeta } from "@/lib/data";
 import { zhTw } from "@/locales/zh-TW";
+import { scopedCategoryDataNote } from "@/presentation/data-status";
 import { buildFormOverview } from "@/presentation/form-overview";
 
 export default async function PokemonDetailPage({
@@ -24,7 +26,7 @@ export default async function PokemonDetailPage({
     ["PvE 團體戰", row.pveSummaryZhTw],
     ["火箭隊", row.rocketSummaryZhTw],
     ["道館防守", `${zhTw.gymRating[row.gymRating]}：${row.gymSummaryZhTw}`],
-    ["Mega", row.megaSummaryZhTw],
+    ["Mega／Primal", row.megaSummaryZhTw],
     ["Max Battle", row.maxBattleSummaryZhTw],
     ["後續進化", row.evolutionSummaryZhTw],
     ["必要招式", row.requiredMovesSummaryZhTw],
@@ -33,7 +35,7 @@ export default async function PokemonDetailPage({
   return (
     <div className="space-y-6">
       <Link
-        href="/"
+        href={withDataVersion("/")}
         className="inline-flex min-h-11 items-center gap-2 rounded-lg border px-3 text-sm font-bold hover:bg-[var(--surface-muted)]"
       >
         <ArrowLeft aria-hidden size={17} />
@@ -68,9 +70,11 @@ export default async function PokemonDetailPage({
         </p>
         <p className="mt-2 text-sm font-bold text-[var(--accent)]">
           資料處置：
-          {zhTw.assessmentDisposition[
-            row.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
-          ]}
+          {
+            zhTw.assessmentDisposition[
+              row.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+            ]
+          }
         </p>
         <p className="mt-2 text-sm font-bold">
           結論依據：{zhTw.evaluationProvenance[row.provenance]}
@@ -100,15 +104,22 @@ export default async function PokemonDetailPage({
               </div>
               {item.assessmentDisposition ? (
                 <p className="mt-2 text-xs font-bold text-[var(--muted)]">
-                  {zhTw.assessmentDisposition[
-                    item.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
-                  ]}
+                  {
+                    zhTw.assessmentDisposition[
+                      item.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+                    ]
+                  }
                 </p>
               ) : null}
               <p className="mt-2 text-xs font-bold text-[var(--muted)]">
                 資料依據：{zhTw.evaluationProvenance[item.provenance]}
               </p>
               <p className="mt-2 text-sm leading-6 text-[var(--muted)]">{item.summaryZhTw}</p>
+              {scopedCategoryDataNote(item) ? (
+                <p className="mt-2 text-xs font-bold text-amber-700 dark:text-amber-300">
+                  {scopedCategoryDataNote(item)}
+                </p>
+              ) : null}
               <p className="mt-2 text-xs font-bold">
                 {item.materialToDecision
                   ? "此類別納入保留判斷；資料缺口會降低信心，但不會自動覆蓋結論"
@@ -166,7 +177,7 @@ export default async function PokemonDetailPage({
           {siblings.map((item) => (
             <Link
               key={item.id}
-              href={`/pokemon/${encodeURIComponent(item.id)}`}
+              href={withDataVersion(`/pokemon/${encodeURIComponent(item.id)}`)}
               className={`min-h-11 rounded-lg border px-3 py-2 text-sm font-bold ${item.id === row.id ? "bg-[var(--primary)] text-[var(--primary-contrast)]" : "hover:bg-[var(--surface-muted)]"}`}
             >
               {zhTw.variant[item.variantKey]} · {zhTw.decision[item.decision]}

@@ -5,6 +5,7 @@ import {
   DEFAULT_IMAGE_SIZES,
 } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { DATA_VERSION, DATA_VERSION_QUERY } from "../src/config/release";
 
 interface Env {
   ASSETS: {
@@ -22,6 +23,36 @@ interface Env {
 interface ExecutionContext {
   waitUntil(promise: Promise<unknown>): void;
   passThroughOnException(): void;
+}
+
+interface EdgeCache {
+  delete(request: Request): Promise<boolean>;
+}
+
+interface WorkerGlobals {
+  caches?: { default?: EdgeCache };
+}
+
+const noStoreHeaders = {
+  "Cache-Control": "no-store, max-age=0, must-revalidate",
+  "CDN-Cache-Control": "no-store",
+  "Surrogate-Control": "no-store",
+  Pragma: "no-cache",
+  "X-Data-Version": DATA_VERSION,
+  "X-Data-Version-Query": DATA_VERSION_QUERY,
+};
+
+function isCacheSensitiveRequest(request: Request, url: URL) {
+  if (request.method !== "GET") return false;
+  if (url.pathname === "/data/home.json") return true;
+  return url.pathname === "/" || (request.headers.get("accept") ?? "").includes("text/html");
+}
+
+function purgeEdgeCache(request: Request, url: URL, ctx: ExecutionContext) {
+  const edgeCache = (globalThis as typeof globalThis & WorkerGlobals).caches?.default;
+  if (!edgeCache) return;
+  ctx.waitUntil(edgeCache.delete(request));
+  ctx.waitUntil(edgeCache.delete(new Request(new URL(url.pathname, request.url))));
 }
 
 // Image security config. SVG sources with .svg extension auto-skip the
@@ -51,7 +82,18 @@ const worker = {
       );
     }
 
-    return handler.fetch(request, env, ctx);
+    const response = await handler.fetch(request, env, ctx);
+    if (!isCacheSensitiveRequest(request, url)) return response;
+
+    purgeEdgeCache(request, url, ctx);
+    const headers = new Headers(response.headers);
+    for (const [name, value] of Object.entries(noStoreHeaders)) headers.set(name, value);
+    if (url.pathname === "/") headers.set("Clear-Site-Data", '"cache"');
+    return new Response(response.body, {
+      status: response.status,
+      statusText: response.statusText,
+      headers,
+    });
   },
 };
 

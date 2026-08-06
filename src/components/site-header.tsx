@@ -1,13 +1,13 @@
 import { BookOpenCheck, ClipboardList, Database, FileClock, TableProperties } from "lucide-react";
 import Link from "next/link";
+import { DATA_VERSION, withDataVersion } from "@/config/release";
 import { ThemeToggle } from "./theme-toggle";
-import { DATA_VERSION, DATA_VERSION_QUERY } from "@/config/release";
 
 const links = [
-  { href: `/?v=${DATA_VERSION_QUERY}`, label: "圖鑑評估", icon: TableProperties },
-  { href: `/review?v=${DATA_VERSION_QUERY}`, label: "資料待補清單", icon: ClipboardList },
-  { href: `/sources?v=${DATA_VERSION_QUERY}`, label: "資料來源", icon: Database },
-  { href: `/changes?v=${DATA_VERSION_QUERY}`, label: "變更紀錄", icon: FileClock },
+  { href: withDataVersion("/"), label: "圖鑑評估", icon: TableProperties },
+  { href: withDataVersion("/review"), label: "資料待補清單", icon: ClipboardList },
+  { href: withDataVersion("/sources"), label: "資料來源", icon: Database },
+  { href: withDataVersion("/changes"), label: "變更紀錄", icon: FileClock },
 ];
 
 export function SiteHeader() {
@@ -15,7 +15,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b bg-[color-mix(in_srgb,var(--background)_92%,transparent)] backdrop-blur-md">
       <div className="mx-auto flex max-w-[1600px] items-center gap-3 px-4 py-3 lg:px-6">
         <Link
-          href={`/?v=${DATA_VERSION_QUERY}`}
+          href={withDataVersion("/")}
           className="flex min-h-11 items-center gap-3 rounded-lg pr-2 font-bold"
         >
           <span className="grid size-10 place-items-center rounded-xl bg-[var(--primary)] text-[var(--primary-contrast)]">

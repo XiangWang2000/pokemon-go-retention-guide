@@ -18,7 +18,7 @@ const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
 });
 
-const checkedAt = new Date("2026-08-05T18:00:00+08:00");
+const checkedAt = new Date("2026-08-06T18:00:00+08:00");
 const dexMin = 1;
 const dexMax = 151;
 
@@ -98,7 +98,6 @@ interface DirectAssessment {
   hasMaxValue: boolean;
   hasMaxCore: boolean;
   hasSpecialAcquisition: boolean;
-  hasCriticalIssue: boolean;
 }
 
 interface RecalculatedAssessment extends DirectAssessment {
@@ -173,19 +172,19 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
   const hasDirectPveCore = directPve === "CORE_INVESTMENT";
   const hasMegaValue = Boolean(
     mega?.materialToDecision ||
-      (variant.variantKey === "NORMAL" && normalMegaCandidateForms.has(variant.pokemonFormId)),
+    (variant.variantKey === "NORMAL" && normalMegaCandidateForms.has(variant.pokemonFormId)),
   );
   const hasMaxValue = Boolean(
     max?.materialToDecision ||
-      (variant.variantKey === "GIGANTAMAX" && variant.releaseStatus === "RELEASED"),
+    (variant.variantKey === "GIGANTAMAX" && variant.releaseStatus === "RELEASED"),
   );
   const hasGymValue = Boolean(
     gym?.materialToDecision ||
-      ["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(variant.retentionEvaluations[0]?.gymRating),
+    ["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(variant.retentionEvaluations[0]?.gymRating),
   );
   const hasMaxCore = Boolean(
     variant.variantKey === "GIGANTAMAX" &&
-      ["HIGH", "CORE"].includes(max?.maxOverallRating ?? max?.maxInvestmentRating ?? ""),
+    ["HIGH", "CORE"].includes(max?.maxOverallRating ?? max?.maxInvestmentRating ?? ""),
   );
   const classifiedPveLevel = classifyPveUse({
     pveTiers: rawPveEvidence(variant).map((item) => item.tier ?? item.rating),
@@ -217,9 +216,6 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
     hasMaxValue,
     hasMaxCore,
     hasSpecialAcquisition: hasMatchedRule(variant, "SPECIAL_ACQUISITION"),
-    hasCriticalIssue: variant.dataIssues.some(
-      (issue) => issueIsCritical(issue) && issue.issueType !== "RULE_NOT_COVERED",
-    ),
   };
 }
 
@@ -306,7 +302,10 @@ function laterEvolutionAssessment(
     })[0];
   return {
     hasValue: true,
-    target: best?.candidate.pokemonForm.formNameZhTw ?? best?.candidate.pokemonForm.species.nameZhTw ?? "後續進化",
+    target:
+      best?.candidate.pokemonForm.formNameZhTw ??
+      best?.candidate.pokemonForm.species.nameZhTw ??
+      "後續進化",
     note: "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     level: best?.assessment.pveLevel ?? "SPECIAL_USE",
   };
@@ -316,6 +315,7 @@ function pveSummary(assessment: {
   pveUseLevel: PveUseLevel;
   hasDirectPveValue: boolean;
   isShadow: boolean;
+  hasMegaValue: boolean;
   hasMaxValue: boolean;
   hasGymValue: boolean;
   hasLaterEvolutionValue: boolean;
@@ -328,6 +328,7 @@ function pveSummary(assessment: {
   if (assessment.isShadow && assessment.hasDirectPveValue) {
     details.push("暗影標準較寬；不設攻擊或總 IV 硬性最低門檻");
   }
+  if (assessment.hasMegaValue) details.push("Mega／Primal 用途需與普通／暗影版本分開評估");
   if (assessment.hasMaxValue) details.push("Max Battle 版本需與普通／暗影分開保留");
   if (assessment.hasGymValue) details.push("道館防守列為特殊用途");
   if (assessment.hasLaterEvolutionValue && assessment.laterEvolutionTarget) {
@@ -346,8 +347,14 @@ function makeDecision(input: {
   laterEvolutionTarget: string | null;
   disposition: AssessmentDisposition;
 }): Pick<RecalculatedAssessment, "decision" | "ruleKey" | "reasonZhTw"> {
-  const { variant, direct, hasLaterEvolutionValue, hasTrueDataGap, laterEvolutionTarget, disposition } =
-    input;
+  const {
+    variant,
+    direct,
+    hasLaterEvolutionValue,
+    hasTrueDataGap,
+    laterEvolutionTarget,
+    disposition,
+  } = input;
   if (variant.releaseStatus === "UNRELEASED") {
     return {
       decision: "TRANSFER_CANDIDATE",
@@ -378,7 +385,7 @@ function makeDecision(input: {
   }
   if (
     direct.hasDirectPveCore ||
-    direct.bestPvpRank !== null && direct.bestPvpRank <= 100 ||
+    (direct.bestPvpRank !== null && direct.bestPvpRank <= 100) ||
     (direct.hasMegaValue && variant.variantKey.startsWith("MEGA") && direct.hasDirectPveValue) ||
     (direct.hasMaxCore && variant.variantKey === "GIGANTAMAX") ||
     direct.gymRating === "HIGH"
@@ -386,7 +393,8 @@ function makeDecision(input: {
     return {
       decision: "KEEP",
       ruleKey: "MAJOR_BATTLE_VALUE",
-      reasonZhTw: "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
+      reasonZhTw:
+        "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
     };
   }
   if (hasLaterEvolutionValue) {
@@ -419,7 +427,8 @@ function makeDecision(input: {
   return {
     decision: "TRANSFER_CANDIDATE",
     ruleKey: "LOW_GENERAL_VALUE",
-    reasonZhTw: "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
+    reasonZhTw:
+      "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
   };
 }
 
@@ -456,8 +465,15 @@ function confidence(variant: VariantRecord, assessment: RecalculatedAssessment) 
   return "HIGH" as const;
 }
 
-function categoryDisposition(variant: VariantRecord, assessment: RecalculatedAssessment) {
+function categoryDisposition(
+  variant: VariantRecord,
+  assessment: RecalculatedAssessment,
+  categoryRow: CategoryRecord,
+) {
   if (variant.releaseStatus === "UNRELEASED") return "NOT_APPLICABLE_OR_UNRELEASED" as const;
+  if (assessment.disposition === "TRUE_DATA_PENDING" && !categoryRow.materialToDecision) {
+    return "NO_SIGNIFICANT_USE" as const;
+  }
   return assessment.disposition;
 }
 
@@ -498,37 +514,35 @@ async function main() {
 
   for (const variant of variants) {
     const direct = directByVariant.get(variant.id)!;
-    const later = laterEvolutionAssessment(
-      variant,
-      directByVariant,
-      variantsByForm,
-      outgoing,
+    const later = laterEvolutionAssessment(variant, directByVariant, variantsByForm, outgoing);
+    const hasActionableEvidence =
+      direct.hasDirectPveValue ||
+      direct.hasPvpValue ||
+      direct.hasGymValue ||
+      direct.hasMegaValue ||
+      direct.hasMaxValue ||
+      direct.hasSpecialAcquisition ||
+      later.hasValue;
+    const hasCriticalIssue = variant.dataIssues.some(
+      (issue) => issueIsCritical(issue) && issue.issueType !== "RULE_NOT_COVERED",
     );
+    const hasUnresolvedRuleBoundary =
+      variant.dataIssues.some((issue) => issue.issueType === "RULE_NOT_COVERED") &&
+      !hasResolvedFamilyBoundary(variant, later.hasValue);
     const hasTrueDataGap =
-      direct.hasCriticalIssue ||
-      (variant.releaseStatus === "UNKNOWN" &&
-        !direct.hasPvpValue &&
-        !direct.hasDirectPveValue &&
-        !later.hasValue) ||
-      (variant.dataIssues.some(
-        (issue) => issueIsCritical(issue) && issue.issueType !== "RULE_NOT_COVERED",
-      ) && !direct.hasDirectPveValue && !direct.hasPvpValue && !later.hasValue) ||
-      (variant.dataIssues.some((issue) => issue.issueType === "RULE_NOT_COVERED") &&
-        !hasResolvedFamilyBoundary(variant, later.hasValue) &&
-        !direct.hasPvpValue &&
-        !direct.hasDirectPveValue &&
-        !later.hasValue);
+      !hasActionableEvidence &&
+      (variant.releaseStatus === "UNKNOWN" || hasCriticalIssue || hasUnresolvedRuleBoundary);
     const derivedPveLevel = classifyPveUse({
-        hasDirectMajorPveValue: direct.hasDirectPveCore,
-        hasShadowPveValue: variant.variantKey === "SHADOW" && direct.hasDirectPveCore,
-        hasMegaPveValue: variant.variantKey.startsWith("MEGA") && direct.hasDirectPveCore,
-        hasMaxPveValue: direct.hasMaxValue,
-        hasGymValue: direct.hasGymValue,
-        hasLaterEvolutionValue: later.hasValue,
-        laterEvolutionLevel: later.level ?? undefined,
-        hasSpecialAcquisition: direct.hasSpecialAcquisition,
-        releaseStatus: variant.releaseStatus,
-      });
+      hasDirectMajorPveValue: direct.hasDirectPveCore,
+      hasShadowPveValue: variant.variantKey === "SHADOW" && direct.hasDirectPveCore,
+      hasMegaPveValue: variant.variantKey.startsWith("MEGA") && direct.hasDirectPveCore,
+      hasMaxPveValue: direct.hasMaxValue,
+      hasGymValue: direct.hasGymValue,
+      hasLaterEvolutionValue: later.hasValue,
+      laterEvolutionLevel: later.level ?? undefined,
+      hasSpecialAcquisition: direct.hasSpecialAcquisition,
+      releaseStatus: variant.releaseStatus,
+    });
     const pveUseLevel =
       direct.pveLevel === "NO_SIGNIFICANT_USE" && later.hasValue
         ? (later.level ?? "SPECIAL_USE")
@@ -568,6 +582,7 @@ async function main() {
         pveUseLevel,
         hasDirectPveValue: direct.hasDirectPveValue,
         isShadow: variant.variantKey === "SHADOW",
+        hasMegaValue: direct.hasMegaValue,
         hasMaxValue: direct.hasMaxValue,
         hasGymValue: direct.hasGymValue,
         hasLaterEvolutionValue: later.hasValue,
@@ -575,7 +590,7 @@ async function main() {
         laterEvolutionNote: later.note,
       }),
       evolutionSummaryZhTw: later.hasValue
-        ? later.note ?? `後續進化目標：${later.target ?? "用途候選"}。`
+        ? (later.note ?? `後續進化目標：${later.target ?? "用途候選"}。`)
         : "目前沒有需要跨家族回推的已確認進化用途。",
       missingDataSummaryZhTw: missingDataSummaryZhTw(disposition),
       confidence: "HIGH",
@@ -591,7 +606,7 @@ async function main() {
     const oldEvaluation = variant.retentionEvaluations[0];
     if (oldEvaluation && oldEvaluation.finalDecision !== assessment.decision) {
       changeLogs.push({
-        id: `recalibrate-20260805-decision-${safeId(variant.id)}`,
+        id: `recalibrate-20260806-decision-${safeId(variant.id)}`,
         entityType: "BattleVariant",
         entityId: variant.id,
         fieldName: "decision",
@@ -605,7 +620,7 @@ async function main() {
     }
     if (oldEvaluation && oldEvaluation.assessmentDisposition !== assessment.disposition) {
       changeLogs.push({
-        id: `recalibrate-20260805-disposition-${safeId(variant.id)}`,
+        id: `recalibrate-20260806-disposition-${safeId(variant.id)}`,
         entityType: "BattleVariant",
         entityId: variant.id,
         fieldName: "assessmentDisposition",
@@ -619,14 +634,15 @@ async function main() {
     }
   }
 
-  const targetFormIds = [...new Set(variants.map((variant) => variant.pokemonFormId))];
   const targetEvaluationIds = variants
     .map((variant) => variant.retentionEvaluations[0]?.id)
     .filter((id): id is string => Boolean(id));
 
   await prisma.$transaction(async (tx) => {
     if (targetEvaluationIds.length) {
-      await tx.evaluationRuleTrace.deleteMany({ where: { evaluationId: { in: targetEvaluationIds } } });
+      await tx.evaluationRuleTrace.deleteMany({
+        where: { evaluationId: { in: targetEvaluationIds } },
+      });
     }
 
     for (const variant of variants) {
@@ -676,7 +692,8 @@ async function main() {
             megaSummaryZhTw: "Mega 版本與普通版本分開評估。",
             maxBattleSummaryZhTw: "Max 版本與普通／暗影版本分開評估。",
             evolutionSummaryZhTw: assessment.evolutionSummaryZhTw,
-            requiredMovesSummaryZhTw: "依實際用途再核對招式；沒有主要用途時不因招式欄位缺失囤積個體。",
+            requiredMovesSummaryZhTw:
+              "依實際用途再核對招式；沒有主要用途時不因招式欄位缺失囤積個體。",
             recommendedIvStrategyZhTw: ivStrategy(variant, assessment.decision),
             reasonZhTw: assessment.reasonZhTw,
             confidence: assessment.confidence,
@@ -699,10 +716,8 @@ async function main() {
           where: { id: categoryRow.id },
           data: {
             pveUseLevel: categoryName === "PVE" ? assessment.pveUseLevel : null,
-            assessmentDisposition: categoryDisposition(variant, assessment),
-            ...(categoryName === "PVE"
-              ? { summaryZhTw: `${pveUseLevelLabelZhTw[assessment.pveUseLevel]}：${assessment.pveSummaryZhTw}` }
-              : {}),
+            assessmentDisposition: categoryDisposition(variant, assessment, categoryRow),
+            ...(categoryName === "PVE" ? { summaryZhTw: assessment.pveSummaryZhTw } : {}),
           },
         });
       }
@@ -732,16 +747,6 @@ async function main() {
       });
     }
 
-    if (targetFormIds.length) {
-      await tx.dataIssue.updateMany({
-        where: { pokemonFormId: { in: targetFormIds }, status: "OPEN" },
-        data: {
-          affectsFinalDecision: false,
-          suggestedActionZhTw: "已拆分為逐版本用途；次要欄位缺資料不再外推到整個家族。",
-          suggestedResearchActionZhTw: "若補到真正會改變用途結論的來源，再針對該版本重算。",
-        },
-      });
-    }
     for (const variant of variants) {
       const assessment = assessments.get(variant.id)!;
       const keepRuleIssue = shouldKeepRuleNotCovered(variant, assessment);
@@ -758,7 +763,7 @@ async function main() {
             provisionalDecision: assessment.decision,
             messageZhTw: shouldAffect
               ? "真正待補資料：此版本仍有可能改變保留結論的關鍵缺口。"
-              : "已拆分逐版本用途；此欄位缺資料不覆蓋目前保留或傳送結論。",
+              : "此欄位待補，但不影響普通個體結論",
           },
         });
       }
@@ -791,7 +796,7 @@ async function main() {
       }
     }
 
-    await tx.changeLog.deleteMany({ where: { id: { startsWith: "recalibrate-20260805-" } } });
+    await tx.changeLog.deleteMany({ where: { id: { startsWith: "recalibrate-20260806-" } } });
     if (changeLogs.length) await tx.changeLog.createMany({ data: changeLogs });
   });
 
@@ -803,7 +808,9 @@ async function main() {
     dispositions.set(assessment.disposition, (dispositions.get(assessment.disposition) ?? 0) + 1);
     pveLevels.set(assessment.pveUseLevel, (pveLevels.get(assessment.pveUseLevel) ?? 0) + 1);
   }
-  const highRiskDex = new Set([63, 66, 81, 92, 111, 113, 114, 123, 125, 126, 131, 143, 144, 145, 146, 147, 150]);
+  const highRiskDex = new Set([
+    63, 66, 81, 92, 111, 113, 114, 123, 125, 126, 131, 143, 144, 145, 146, 147, 150,
+  ]);
   const report = {
     scope: `${dexMin}-${dexMax}`,
     generatedAt: checkedAt.toISOString(),

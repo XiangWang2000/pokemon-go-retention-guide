@@ -4,6 +4,7 @@ import { zhTw } from "@/locales/zh-TW";
 import {
   isTrueDataPending,
   pveUseLevelLabelZhTw,
+  type PveUseLevel,
 } from "@/rules/battle-assessment";
 
 export type OverviewTone = "HIGH" | "MEDIUM" | "LOW" | "SPECIAL" | "NONE" | "REVIEW";
@@ -125,8 +126,10 @@ function hasDirectPveUse(row: DashboardRow) {
 function hasReviewGap(rows: DashboardRow[], key: string) {
   return rows.some((row) => {
     const status = category(row, key);
-    return isTrueDataPending(status?.assessmentDisposition) ||
-      (row.assessmentDisposition === "TRUE_DATA_PENDING" && Boolean(status?.materialToDecision));
+    return (
+      isTrueDataPending(status?.assessmentDisposition) ||
+      (row.assessmentDisposition === "TRUE_DATA_PENDING" && Boolean(status?.materialToDecision))
+    );
   });
 }
 
@@ -162,7 +165,7 @@ function bestRank(rows: DashboardRow[]) {
 type PveEntry = {
   row: DashboardRow;
   raw: DashboardRow["raw"][number] | null;
-  pveUseLevel: string | null | undefined;
+  pveUseLevel: PveUseLevel | null | undefined;
   tone: OverviewTone;
 };
 
@@ -176,29 +179,29 @@ function bestPveEntry(rows: DashboardRow[]): PveEntry | undefined {
     NONE: 0,
   };
   const entries = rows.flatMap<PveEntry>((row): PveEntry[] => {
-      const pveStatus = category(row, "PVE");
-      const rawRows = row.raw.filter((item) => item.category === "PVE");
-      if (rawRows.length) {
-        return rawRows.map((raw): PveEntry => ({
-          row,
-          raw,
-          pveUseLevel: pveStatus?.pveUseLevel,
-          tone:
-            pveUseLevelTone(pveStatus?.pveUseLevel) ??
-            tierTone(raw.tier ?? raw.rating) ??
-            ("LOW" as OverviewTone),
-        }));
-      }
-      return pveStatus?.pveUseLevel
-        ? ([
-            {
-              row,
-              raw: null,
-              pveUseLevel: pveStatus.pveUseLevel,
-              tone: pveUseLevelTone(pveStatus.pveUseLevel) ?? ("LOW" as OverviewTone),
-            },
-          ] as PveEntry[])
-        : [];
+    const pveStatus = category(row, "PVE");
+    const rawRows = row.raw.filter((item) => item.category === "PVE");
+    if (rawRows.length) {
+      return rawRows.map((raw): PveEntry => ({
+        row,
+        raw,
+        pveUseLevel: pveStatus?.pveUseLevel,
+        tone:
+          pveUseLevelTone(pveStatus?.pveUseLevel) ??
+          tierTone(raw.tier ?? raw.rating) ??
+          ("LOW" as OverviewTone),
+      }));
+    }
+    return pveStatus?.pveUseLevel
+      ? ([
+          {
+            row,
+            raw: null,
+            pveUseLevel: pveStatus.pveUseLevel,
+            tone: pveUseLevelTone(pveStatus.pveUseLevel) ?? ("LOW" as OverviewTone),
+          },
+        ] as PveEntry[])
+      : [];
   });
   entries.sort((a, b) => weight[b.tone] - weight[a.tone]);
   return entries[0];
@@ -210,6 +213,25 @@ function pveUseLevelTone(level: string | null | undefined): OverviewTone | null 
   if (level === "SPECIAL_USE") return "SPECIAL";
   if (level === "NO_SIGNIFICANT_USE") return "LOW";
   return null;
+}
+
+function pveContextDetail(entry: PveEntry) {
+  const contexts: string[] = [];
+  if (entry.raw?.category === "PVE") contexts.push("團體戰");
+  if (entry.row.variantKey === "SHADOW") contexts.push("暗影");
+  if (entry.row.variantKey.startsWith("MEGA")) contexts.push("Mega／Primal");
+  if (["DYNAMAX", "GIGANTAMAX"].includes(entry.row.variantKey)) contexts.push("Max Battle");
+  if (["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(entry.row.gymRating)) {
+    contexts.push("道館防守");
+  }
+  if (
+    entry.row.evolutionSummaryZhTw.includes("後續進化") ||
+    entry.row.evolutionSummaryZhTw.includes("進化版本")
+  ) {
+    contexts.push("後續世代進化");
+  }
+  const summary = entry.row.pveSummaryZhTw.replace(/^[^。]+。/, "");
+  return [contexts.join("／"), summary].filter(Boolean).join("：") || undefined;
 }
 
 function maxVariantTone(row: DashboardRow): OverviewTone {
@@ -292,27 +314,21 @@ export function buildPveOverview(rows: DashboardRow[]): CompactOverview {
     (row) => !["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey),
   );
   const best = bestPveEntry(assessed);
-  if (best?.tone === "HIGH") {
-    if (best.row.variantKey === "SHADOW") {
-      return { label: "頂級屬性暗影打手", tone: "HIGH" };
+  if (best?.pveUseLevel) {
+    const tone = pveUseLevelTone(best.pveUseLevel) ?? best.tone;
+    if (tone !== "LOW" || !hasReviewGap(assessed, "PVE")) {
+      return {
+        label: pveUseLevelLabelZhTw[best.pveUseLevel],
+        detail: pveContextDetail(best),
+        tone,
+      };
     }
-    if (best.row.variantKey.startsWith("MEGA")) return { label: "Mega 候選", tone: "HIGH" };
-    return { label: "高價值屬性攻擊手", tone: "HIGH" };
-  }
-  if (best?.tone === "MEDIUM") {
-    return { label: pveUseLevelLabelZhTw.USABLE_OR_BUDGET, tone: "MEDIUM" };
-  }
-  if (best?.tone === "SPECIAL") {
-    return {
-      label: pveUseLevelLabelZhTw.SPECIAL_USE,
-      detail: best.row.evolutionSummaryZhTw.includes("後續進化") ? "後續進化候選" : undefined,
-      tone: "SPECIAL",
-    };
   }
 
   const evolutionOnly = hasEvolutionValue(assessed) && !hasDirectBattleValue(assessed);
-  if (evolutionOnly) return { label: "進化後有價值", tone: "MEDIUM" };
-  if (best?.tone === "LOW") return { label: pveUseLevelLabelZhTw.NO_SIGNIFICANT_USE, tone: "LOW" };
+  if (evolutionOnly) {
+    return { label: pveUseLevelLabelZhTw.USABLE_OR_BUDGET, detail: "後續世代進化", tone: "MEDIUM" };
+  }
   if (hasReviewGap(assessed, "PVE")) return { label: "無法判斷，暫時不要傳", tone: "REVIEW" };
   return { label: pveUseLevelLabelZhTw.NO_SIGNIFICANT_USE, tone: "NONE" };
 }
@@ -366,7 +382,7 @@ export function buildMegaMaxOverview(rows: DashboardRow[]): CompactOverview {
   const maxTones = maxRows.map(maxVariantTone);
   const lines: string[] = [];
 
-  if (megaRows.length) lines.push(`Mega：${toneLabel(strongestTone(megaTones))}`);
+  if (megaRows.length) lines.push(`Mega／Primal：${toneLabel(strongestTone(megaTones))}`);
   if (maxRows.length) {
     const label = maxRows.some((row) => row.variantKey === "GIGANTAMAX") ? "超極巨" : "極巨";
     lines.push(`${label}：${toneLabel(strongestTone(maxTones))}`);
@@ -376,7 +392,7 @@ export function buildMegaMaxOverview(rows: DashboardRow[]): CompactOverview {
       (row) => row.variantKey.startsWith("MEGA") && row.releaseStatus === "UNRELEASED",
     );
     return hasUnreleasedMega
-      ? { label: "Mega：尚未推出", tone: "NONE" }
+      ? { label: "Mega／Primal：尚未推出", tone: "NONE" }
       : { label: "—", tone: "NONE" };
   }
   return {
@@ -391,7 +407,8 @@ function buildVariantPrimaryUses(row: DashboardRow) {
   const pvp = bestRank([row]);
   if (pvp && ((pvp.raw.rank ?? 9999) <= 250 || pvp.raw.league === "SPECIAL_CUP")) uses.push("PvP");
   const pveTone = bestPveEntry([row])?.tone;
-  if ((pveTone === "HIGH" || pveTone === "MEDIUM") && hasDirectPveUse(row)) uses.push("PvE");
+  if (["HIGH", "MEDIUM", "SPECIAL"].includes(pveTone ?? "") && hasDirectPveUse(row))
+    uses.push("PvE");
   if (["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(row.gymRating)) uses.push("道館");
   if (
     row.variantKey.startsWith("MEGA") &&
@@ -445,7 +462,7 @@ function buildVariantIvUseKeys(row: DashboardRow): PrimaryUseKey[] {
   if (hasSpeciesLeagueUse(row, "MASTER")) uses.push("MASTER_LEAGUE");
 
   const pveTone = bestPveEntry([row])?.tone;
-  if ((pveTone === "HIGH" || pveTone === "MEDIUM") && hasDirectPveUse(row)) {
+  if (["HIGH", "MEDIUM", "SPECIAL"].includes(pveTone ?? "") && hasDirectPveUse(row)) {
     uses.push(row.variantKey === "SHADOW" ? "SHADOW_PVE" : "PVE");
   }
   if (

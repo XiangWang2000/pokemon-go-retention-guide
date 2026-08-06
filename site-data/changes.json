@@ -1,5 +1,57 @@
 [
   {
+    "id": "recalibrate-20260806-decision-004-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "004-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "HOLD_FOR_NOW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": null,
+    "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+    "changedAt": "2026-08-06T10:00:00.000Z",
+    "rulesVersion": "2026.08.06-v7",
+    "source": null
+  },
+  {
+    "id": "recalibrate-20260806-disposition-004-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "004-kanto-shadow",
+    "fieldName": "assessmentDisposition",
+    "previousValue": "TRUE_DATA_PENDING",
+    "newValue": "CLEAR_USE",
+    "sourceId": null,
+    "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+    "changedAt": "2026-08-06T10:00:00.000Z",
+    "rulesVersion": "2026.08.06-v7",
+    "source": null
+  },
+  {
+    "id": "recalibrate-20260806-decision-007-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "007-kanto-shadow",
+    "fieldName": "decision",
+    "previousValue": "HOLD_FOR_NOW",
+    "newValue": "CONDITIONAL_KEEP",
+    "sourceId": null,
+    "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+    "changedAt": "2026-08-06T10:00:00.000Z",
+    "rulesVersion": "2026.08.06-v7",
+    "source": null
+  },
+  {
+    "id": "recalibrate-20260806-disposition-007-kanto-shadow",
+    "entityType": "BattleVariant",
+    "entityId": "007-kanto-shadow",
+    "fieldName": "assessmentDisposition",
+    "previousValue": "TRUE_DATA_PENDING",
+    "newValue": "CLEAR_USE",
+    "sourceId": null,
+    "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+    "changedAt": "2026-08-06T10:00:00.000Z",
+    "rulesVersion": "2026.08.06-v7",
+    "source": null
+  },
+  {
     "id": "recalibrate-20260805-decision-003-kanto-gigantamax",
     "entityType": "BattleVariant",
     "entityId": "003-kanto-gigantamax",

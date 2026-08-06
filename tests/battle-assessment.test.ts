@@ -45,6 +45,13 @@ describe("共用 PvE 用途與逐版本資料處置規則", () => {
         hasTrueDataGap: true,
       }),
     ).toBe("TRUE_DATA_PENDING");
+    expect(
+      classifyAssessmentDisposition({
+        releaseStatus: "UNKNOWN",
+        pveUseLevel: "CORE_INVESTMENT",
+        hasAnyActionableUse: true,
+      }),
+    ).toBe("CLEAR_USE");
     expect(missingDataSummaryZhTw("TRUE_DATA_PENDING")).toBe("無法判斷，暫時不要傳。");
     expect(missingDataSummaryZhTw("NO_SIGNIFICANT_USE")).not.toContain("無法判斷");
   });

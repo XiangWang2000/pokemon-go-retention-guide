@@ -335,7 +335,7 @@ export function FamilyOverview({
                 "PvP",
                 "PvE",
                 "道館",
-                "Mega／Max",
+                "Mega／Primal／Max",
                 "先怎麼處理／IV",
               ].map((heading, index) => (
                 <th

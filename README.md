@@ -132,12 +132,13 @@ npm run dev
 
 `db:seed` 在偵測到既有資料時會停止寫入，不會清空來源、歷史評估或變更紀錄。要重跑本批修正使用 `npm run data:remediate`；腳本使用 upsert／append-only 評估版本，可安全重跑。
 
-## #001～#151 共用重算規則（2026-08-05）
+## #001～#151 共用重算規則（2026-08-06）
 
 關都 #001～#151 的批次初步匯入不等於最終驗收。四批資料完成後，必須執行 `npm run data:recompute:001-151`，再產生 Sites snapshot。
 
-- PvE 固定分為四級：`CORE_INVESTMENT`（核心投資）、`USABLE_OR_BUDGET`（可用／預算型）、`SPECIAL_USE`（特殊用途）、`NO_SIGNIFICANT_USE`（無顯著用途）。判斷會合併暗影、Mega、後續世代進化、道館防守、Dynamax 與 Gigantamax，而不是只看關都本體。
+- PvE 固定分為四級：`CORE_INVESTMENT`（核心投資）、`USABLE_OR_BUDGET`（可用／預算型）、`SPECIAL_USE`（特殊用途）、`NO_SIGNIFICANT_USE`（無顯著用途）。判斷會分開標示團體戰、火箭隊、道館防守、Mega／Primal、Max Battle、暗影與後續世代進化，而不是只看關都本體。
 - 每個 `BattleVariant` 另存五種資料處置：已有明確用途、用途有限、無顯著用途、不適用／尚未推出、真正待補資料。單一型態或次要欄位缺來源不再外推到整個家族。
+- 非關鍵欄位缺資料會明確顯示「此欄位待補，但不影響普通個體結論」；只有可能改變保留判斷的關鍵缺口才暫時保留。
 - 只有 `TRUE_DATA_PENDING` 才能使用 `HOLD_FOR_NOW`，並顯示「無法判斷，暫時不要傳」；已知用途、用途有限、無顯著用途與尚未推出版本均會各自產生可執行結論。
 
 ## 已完成範圍
@@ -154,7 +155,7 @@ npm run dev
 - JSON／CSV 匯入、交易式寫入、資料一致性驗證。
 - `review/001-030.md`～`review/121-151.md`／`.json` 批次審核報告，以及 `review/001-151-recalibration.md` 共用規則重算報告。
 
-目前 #001～#151（含本批已納入的地區型態）重算為 54 筆 `KEEP`、187 筆 `CONDITIONAL_KEEP`、23 筆 `HOLD_FOR_NOW`、519 筆 `TRANSFER_CANDIDATE`；PvE 四級用途分布與逐版本資料處置均寫入 snapshot。只有真正可能改變結論的資料缺口才暫時保留。
+目前 #001～#151（含本批已納入的地區型態）重算為 54 筆 `KEEP`、189 筆 `CONDITIONAL_KEEP`、21 筆 `HOLD_FOR_NOW`、519 筆 `TRANSFER_CANDIDATE`；PvE 四級用途分布與逐版本資料處置均寫入 snapshot。只有真正可能改變結論的資料缺口才暫時保留。
 
 ## 本機需求
 

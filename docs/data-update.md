@@ -25,7 +25,7 @@ npm run review:generate
 npm run sites:snapshot
 ```
 
-`data:import:*` 只負責寫入批次來源、型態、原始資料與初步評估；四批都完成後必須執行 `data:recompute:001-151`。這一步套用共用的 PvE 四級用途與逐版本資料處置，將後續世代進化、暗影、Mega、Max、道館與特殊用途納入同一判斷，並清除不再具決策影響的家族級範圍缺口。沒有執行重算前，不得把新 snapshot 視為最終驗收結果。
+`data:import:*` 只負責寫入批次來源、型態、原始資料與初步評估；四批都完成後必須執行 `data:recompute:001-151`。這一步套用共用的 PvE 四級用途與逐版本資料處置，將後續世代進化、暗影、Mega／Primal、Max、道館與特殊用途納入同一判斷，並把缺口拆到 BattleVariant／類別欄位，不讓單一型態或次要欄位外推到整個家族。沒有執行重算前，不得把新 snapshot 視為最終驗收結果。
 
 ## 共用重算規則
 

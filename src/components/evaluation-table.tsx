@@ -3,10 +3,12 @@
 import { ChevronDown, ChevronRight, Download, ExternalLink, Search } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { withDataVersion } from "@/config/release";
 import { freshnessDays } from "@/config/freshness";
 import type { DashboardRow } from "@/lib/data";
 import { matchesPokemonSearch } from "@/lib/search";
 import { zhTw } from "@/locales/zh-TW";
+import { scopedCategoryDataNote } from "@/presentation/data-status";
 import { StatusBadge } from "./status-badge";
 
 function rank(row: DashboardRow, league: "GREAT" | "ULTRA" | "MASTER") {
@@ -35,7 +37,8 @@ function categoryText(row: DashboardRow, category: string, summary: string) {
         item.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
       ]
     : null;
-  return `【${[level, disposition, status].filter(Boolean).join("／")}】${summary}`;
+  const pendingNote = item ? scopedCategoryDataNote(item) : null;
+  return `【${[level, disposition, status].filter(Boolean).join("／")}】${pendingNote ? `${pendingNote}；` : ""}${summary}`;
 }
 
 export function EvaluationTable({
@@ -215,7 +218,7 @@ export function EvaluationTable({
               </select>
             </label>
             <a
-              href="/exports/pokemon-go-retention-001-151.xlsx"
+              href={withDataVersion("/exports/pokemon-go-retention-001-151.xlsx")}
               className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[var(--primary)] px-4 text-sm font-bold text-[var(--primary-contrast)] transition hover:brightness-95"
             >
               <Download aria-hidden size={17} />
@@ -282,7 +285,7 @@ export function EvaluationTable({
                 "PvE 團體戰",
                 "火箭隊",
                 "道館防守",
-                "Mega",
+                "Mega／Primal",
                 "Max Battle",
                 "後續進化",
                 "必要招式",
@@ -341,7 +344,7 @@ function FragmentRow({
         <td className="px-3 py-3 font-mono">#{String(row.dexNumber).padStart(3, "0")}</td>
         <td className="px-3 py-3">
           <Link
-            href={`/pokemon/${encodeURIComponent(row.id)}`}
+            href={withDataVersion(`/pokemon/${encodeURIComponent(row.id)}`)}
             className="font-bold text-[var(--accent)] hover:underline"
           >
             {row.nameZhTw}
@@ -420,9 +423,11 @@ function ExpandedContent({ row }: { row: DashboardRow }) {
               ) : null}
               {item.assessmentDisposition ? (
                 <span className="ml-2 text-xs text-[var(--muted)]">
-                  {zhTw.assessmentDisposition[
-                    item.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
-                  ]}
+                  {
+                    zhTw.assessmentDisposition[
+                      item.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+                    ]
+                  }
                 </span>
               ) : null}
               <p className="mt-1 text-xs text-[var(--muted)]">
@@ -496,7 +501,7 @@ function ExpandedContent({ row }: { row: DashboardRow }) {
           ))}
         </ul>
         <Link
-          href={`/pokemon/${encodeURIComponent(row.id)}`}
+          href={withDataVersion(`/pokemon/${encodeURIComponent(row.id)}`)}
           className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg border px-3 text-sm font-bold text-[var(--accent)] hover:bg-[var(--surface-muted)]"
         >
           查看完整詳細頁 <ChevronRight aria-hidden size={17} />

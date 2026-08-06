@@ -5,7 +5,11 @@ import { RULES_VERSION } from "@/rules/rules";
 describe("#001～#030 修正後資料一致性", () => {
   it("8. 暗影 UNKNOWN_RELEASE_STATUS 保存在版本層級且不影響家族總結", async () => {
     const issue = await prisma.dataIssue.findFirst({
-      where: { issueType: "UNKNOWN_RELEASE_STATUS", status: "OPEN" },
+      where: {
+        battleVariantId: "019-kanto-shadow",
+        issueType: "UNKNOWN_RELEASE_STATUS",
+        status: "OPEN",
+      },
     });
     expect(issue).not.toBeNull();
     expect(issue?.affectsFinalDecision).toBe(false);

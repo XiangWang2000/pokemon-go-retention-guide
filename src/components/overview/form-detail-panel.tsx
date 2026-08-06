@@ -1,4 +1,5 @@
 import type { FormOverview } from "@/presentation/form-overview";
+import { scopedCategoryDataNote } from "@/presentation/data-status";
 import { zhTw } from "@/locales/zh-TW";
 import { EvaluationStatusBadge } from "./evaluation-status-badge";
 import { IvRecommendationDetails } from "./iv-recommendation";
@@ -70,7 +71,7 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
           </div>
         </details>
         <details className="rounded-2xl border bg-[var(--surface)] p-4">
-          <summary className="cursor-pointer font-black">PvE 與火箭隊</summary>
+          <summary className="cursor-pointer font-black">PvE 團體戰／火箭隊</summary>
           <div className="mt-3 space-y-3">
             {form.variants.map((variant) => (
               <div
@@ -101,7 +102,7 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
           </div>
         </details>
         <details className="rounded-2xl border bg-[var(--surface)] p-4">
-          <summary className="cursor-pointer font-black">Mega／Max Battle</summary>
+          <summary className="cursor-pointer font-black">Mega／Primal／Max Battle</summary>
           <div className="mt-3 space-y-3">
             {form.variants.map((variant) => (
               <div
@@ -109,7 +110,7 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
                 className="rounded-xl bg-[var(--surface-muted)] p-3 text-sm leading-6"
               >
                 <p className="font-bold">{zhTw.variant[variant.row.variantKey]}</p>
-                <p className="mt-1">Mega：{variant.row.megaSummaryZhTw}</p>
+                <p className="mt-1">Mega／Primal：{variant.row.megaSummaryZhTw}</p>
                 <p className="mt-1">Max：{variant.row.maxBattleSummaryZhTw}</p>
               </div>
             ))}
@@ -145,9 +146,16 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
                       ) : null}
                       {status.assessmentDisposition ? (
                         <span className="text-[var(--muted)]">
-                          {zhTw.assessmentDisposition[
-                            status.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
-                          ]}
+                          {
+                            zhTw.assessmentDisposition[
+                              status.assessmentDisposition as keyof typeof zhTw.assessmentDisposition
+                            ]
+                          }
+                        </span>
+                      ) : null}
+                      {scopedCategoryDataNote(status) ? (
+                        <span className="font-bold text-amber-700 dark:text-amber-300">
+                          {scopedCategoryDataNote(status)}
                         </span>
                       ) : null}
                     </span>

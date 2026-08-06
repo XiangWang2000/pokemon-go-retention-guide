@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AlertTriangle, CheckCircle2, CircleDot, Send } from "lucide-react";
 import { EvaluationBrowser } from "@/components/evaluation-browser";
-import { DATA_VERSION, DATA_VERSION_DATE_ZH_TW, DATA_VERSION_QUERY } from "@/config/release";
+import { DATA_VERSION, DATA_VERSION_DATE_ZH_TW, withDataVersion } from "@/config/release";
 import type { HomeSnapshot } from "@/presentation/home-snapshot";
 
 export function HomeDataLoader() {
@@ -11,7 +11,7 @@ export function HomeDataLoader() {
   const [loadError, setLoadError] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`/data/home.json?v=${DATA_VERSION_QUERY}`, {
+    fetch(withDataVersion("/data/home.json"), {
       signal: controller.signal,
     })
       .then((response) => {

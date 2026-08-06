@@ -70,7 +70,9 @@ export function QuickOverview({
                   </div>
                 </div>
                 <div className="mt-3 flex items-start gap-3">
-                  <p className="w-20 shrink-0 text-xs font-bold text-[var(--muted)]">Mega／Max</p>
+                  <p className="w-20 shrink-0 text-xs font-bold text-[var(--muted)]">
+                    Mega／Primal／Max
+                  </p>
                   <CompactRating overview={form.megaMax} />
                 </div>
                 <div className="mt-4 border-t pt-4">
@@ -109,7 +111,7 @@ export function QuickOverview({
           </colgroup>
           <thead className="sticky top-16 z-30 bg-[var(--surface-muted)] text-xs tracking-wide text-[var(--muted)]">
             <tr>
-              {["寶可夢", "可用版本", "PvP", "PvE", "道館", "Mega／Max", "最終建議"].map(
+              {["寶可夢", "可用版本", "PvP", "PvE", "道館", "Mega／Primal／Max", "最終建議"].map(
                 (heading, index) => (
                   <th
                     key={heading}
