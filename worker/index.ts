@@ -50,10 +50,15 @@ function isCacheSensitiveRequest(request: Request, url: URL) {
 async function purgeEdgeCache(request: Request, url: URL) {
   const edgeCache = (globalThis as typeof globalThis & WorkerGlobals).caches?.default;
   if (!edgeCache) return;
-  await Promise.all([
-    edgeCache.delete(request),
-    edgeCache.delete(new Request(new URL(url.pathname, request.url))),
-  ]);
+  try {
+    await Promise.all([
+      edgeCache.delete(request),
+      edgeCache.delete(new Request(new URL(url.pathname, request.url))),
+    ]);
+  } catch {
+    // Sites may not grant the Worker Cache API. The no-store response and
+    // deployment-level fetch still keep the canonical entry current.
+  }
 }
 
 function shouldPurgeCache(request: Request) {
