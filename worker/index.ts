@@ -55,6 +55,17 @@ function purgeEdgeCache(request: Request, url: URL, ctx: ExecutionContext) {
   ctx.waitUntil(edgeCache.delete(new Request(new URL(url.pathname, request.url))));
 }
 
+function addNoStoreHeaders(response: Response, clearSiteData = false) {
+  const headers = new Headers(response.headers);
+  for (const [name, value] of Object.entries(noStoreHeaders)) headers.set(name, value);
+  if (clearSiteData) headers.set("Clear-Site-Data", '"cache"');
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
+}
+
 // Image security config. SVG sources with .svg extension auto-skip the
 // optimization endpoint on the client side (served directly, no proxy).
 // To route SVGs through the optimizer (with security headers), set
@@ -82,18 +93,19 @@ const worker = {
       );
     }
 
+    if (url.pathname === "/api/home") {
+      const assetUrl = new URL("/data/home.json", request.url);
+      assetUrl.search = url.search;
+      const response = await env.ASSETS.fetch(new Request(assetUrl));
+      purgeEdgeCache(request, url, ctx);
+      return addNoStoreHeaders(response);
+    }
+
     const response = await handler.fetch(request, env, ctx);
     if (!isCacheSensitiveRequest(request, url)) return response;
 
     purgeEdgeCache(request, url, ctx);
-    const headers = new Headers(response.headers);
-    for (const [name, value] of Object.entries(noStoreHeaders)) headers.set(name, value);
-    if (url.pathname === "/") headers.set("Clear-Site-Data", '"cache"');
-    return new Response(response.body, {
-      status: response.status,
-      statusText: response.statusText,
-      headers,
-    });
+    return addNoStoreHeaders(response, url.pathname === "/");
   },
 };
 

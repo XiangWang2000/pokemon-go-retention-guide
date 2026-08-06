@@ -11,7 +11,7 @@ export function HomeDataLoader() {
   const [loadError, setLoadError] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
-    fetch(withDataVersion("/data/home.json"), {
+    fetch(withDataVersion("/api/home"), {
       cache: "no-store",
       signal: controller.signal,
     })
