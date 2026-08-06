@@ -17,6 +17,7 @@ const root = process.cwd();
 const siteDataDirectory = path.join(root, "site-data");
 const exportDirectory = path.join(root, "public", "exports");
 const publicDataDirectory = path.join(root, "public", "data");
+const publicHeadersPath = path.join(root, "public", "_headers");
 const databasePath = path.join(root, "dev.db");
 const exportFileName = "pokemon-go-retention-001-151.xlsx";
 const workbookPath = path.join(exportDirectory, exportFileName);
@@ -209,6 +210,19 @@ async function main() {
   }
   const publicHome = compactJsonBuffer(buildRuntimeHome(home));
   await writeIfChanged(path.join(publicDataDirectory, "home.json"), publicHome);
+  const publicHeaders = Buffer.from(
+    [
+      "/data/home.json",
+      `  Cache-Control: no-store, max-age=0, must-revalidate`,
+      "  CDN-Cache-Control: no-store",
+      "  Surrogate-Control: no-store",
+      "  Pragma: no-cache",
+      `  X-Data-Version: ${DATA_VERSION}`,
+      "",
+    ].join("\r\n"),
+    "utf8",
+  );
+  await writeIfChanged(publicHeadersPath, publicHeaders);
 
   let previousSnapshotSha: string | null = null;
   if (await exists(manifestPath)) {

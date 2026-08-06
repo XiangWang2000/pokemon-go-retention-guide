@@ -12,6 +12,7 @@ export function HomeDataLoader() {
   useEffect(() => {
     const controller = new AbortController();
     fetch(withDataVersion("/data/home.json"), {
+      cache: "no-store",
       signal: controller.signal,
     })
       .then((response) => {
