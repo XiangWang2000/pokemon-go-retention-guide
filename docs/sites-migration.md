@@ -116,3 +116,15 @@ ExcelJS 只在本機 snapshot 產生流程與測試執行，不進入 Worker run
 ## 還原方式
 
 來源程式可由遷移前 Git commit 還原；SQLite 可由備份複製回根目錄。還原前應先保存目前工作，再核對備份 manifest 的 SHA-256。不要使用空的 `prisma/dev.db` 覆蓋正式資料。
+
+## 固定公開網址與部署後 CDN purge
+
+對外固定使用 `/`、`/api/home` 與 `/data/home.json`，不把資料版本 query 放進公開連結。首頁由 SSG 先輸出更新日期、四級 PvE 分類統計與重要家族摘要；完整家族資料仍由瀏覽器從 `/api/home` 載入。
+
+每次 production deployment 成功後，執行：
+
+```powershell
+npm run sites:purge
+```
+
+此流程會以目前 `site-data/manifest.json` 的 `dataVersion`，依序 purge `/`、`/api/home`、`/data/home.json`，並要求回應的 `X-Data-Version` 與 manifest 一致；任一路徑仍回傳舊版本時，流程會失敗，不應視為部署完成。

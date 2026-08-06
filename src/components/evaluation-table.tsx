@@ -3,7 +3,6 @@
 import { ChevronDown, ChevronRight, Download, ExternalLink, Search } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { withDataVersion } from "@/config/release";
 import { freshnessDays } from "@/config/freshness";
 import type { DashboardRow } from "@/lib/data";
 import { matchesPokemonSearch } from "@/lib/search";
@@ -218,7 +217,7 @@ export function EvaluationTable({
               </select>
             </label>
             <a
-              href={withDataVersion("/exports/pokemon-go-retention-001-151.xlsx")}
+              href="/exports/pokemon-go-retention-001-151.xlsx"
               className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[var(--primary)] px-4 text-sm font-bold text-[var(--primary-contrast)] transition hover:brightness-95"
             >
               <Download aria-hidden size={17} />
@@ -344,7 +343,7 @@ function FragmentRow({
         <td className="px-3 py-3 font-mono">#{String(row.dexNumber).padStart(3, "0")}</td>
         <td className="px-3 py-3">
           <Link
-            href={withDataVersion(`/pokemon/${encodeURIComponent(row.id)}`)}
+            href={`/pokemon/${encodeURIComponent(row.id)}`}
             className="font-bold text-[var(--accent)] hover:underline"
           >
             {row.nameZhTw}
@@ -501,7 +500,7 @@ function ExpandedContent({ row }: { row: DashboardRow }) {
           ))}
         </ul>
         <Link
-          href={withDataVersion(`/pokemon/${encodeURIComponent(row.id)}`)}
+          href={`/pokemon/${encodeURIComponent(row.id)}`}
           className="mt-4 inline-flex min-h-11 items-center gap-2 rounded-lg border px-3 text-sm font-bold text-[var(--accent)] hover:bg-[var(--surface-muted)]"
         >
           查看完整詳細頁 <ChevronRight aria-hidden size={17} />

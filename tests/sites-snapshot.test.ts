@@ -2,8 +2,11 @@ import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import ExcelJS from "exceljs";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { afterAll, describe, expect, it } from "vitest";
 import { GET as exportRedirect } from "@/app/api/export/route";
+import { HomeDataLoader } from "@/components/home-data-loader";
 import {
   getChangeLogs as getSnapshotChangeLogs,
   getDashboardRows as getSnapshotDashboardRows,
@@ -19,6 +22,7 @@ import {
 } from "@/lib/data-prisma";
 import { prisma } from "@/lib/prisma";
 import type { HomeSnapshot } from "@/presentation/home-snapshot";
+import { buildHomeSummary } from "@/presentation/home-summary";
 import homeSnapshot from "../site-data/home.json";
 
 function canonicalHash(value: unknown) {
@@ -89,15 +93,30 @@ describe("Sites 唯讀 snapshot", () => {
     ]);
   });
 
-  it("首頁使用可快取的精簡 runtime 資料，不把完整 snapshot 塞進初始 HTML", async () => {
+  it("首頁使用精簡 SSR 摘要，完整 snapshot 仍由 runtime API 載入", async () => {
     const [pageSource, compactHome, prettyHome] = await Promise.all([
       readFile(path.join(process.cwd(), "src", "app", "page.tsx"), "utf8"),
       readFile(path.join(process.cwd(), "public", "data", "home.json")),
       readFile(path.join(process.cwd(), "site-data", "home.json")),
     ]);
-    expect(pageSource).not.toContain("site-data/home.json");
+    expect(pageSource).toContain("buildHomeSummary");
+    expect(pageSource).toContain("HomeDataLoader");
     expect(compactHome.byteLength).toBeLessThan(prettyHome.byteLength);
     expect(JSON.parse(compactHome.toString("utf8"))).toMatchObject({ schemaVersion: 1 });
+  });
+
+  it("首頁初始 HTML 直接輸出日期、PvE 分類摘要與重要家族", () => {
+    const home = homeSnapshot as unknown as HomeSnapshot;
+    const summary = buildHomeSummary(home);
+    const html = renderToStaticMarkup(createElement(HomeDataLoader, { initialSummary: summary }));
+
+    expect(html).toContain("資料更新日期：2026/08/06");
+    expect(html).toContain("首頁摘要");
+    expect(html).toContain("核心投資");
+    expect(html).toContain("三合一磁怪家族");
+    expect(html).toContain("鑽角犀獸家族");
+    expect(html).toContain('href="/pokemon/');
+    expect(html).not.toContain("?v=");
   });
 
   it("dashboard snapshot 保留家族、進化路徑與結構化 IV 資料", async () => {

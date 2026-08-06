@@ -2,7 +2,6 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { StatusBadge } from "@/components/status-badge";
-import { withDataVersion } from "@/config/release";
 import { getDashboardRows, getVariantDetailMeta } from "@/lib/data";
 import { zhTw } from "@/locales/zh-TW";
 import { scopedCategoryDataNote } from "@/presentation/data-status";
@@ -35,7 +34,7 @@ export default async function PokemonDetailPage({
   return (
     <div className="space-y-6">
       <Link
-        href={withDataVersion("/")}
+        href="/"
         className="inline-flex min-h-11 items-center gap-2 rounded-lg border px-3 text-sm font-bold hover:bg-[var(--surface-muted)]"
       >
         <ArrowLeft aria-hidden size={17} />
@@ -177,7 +176,7 @@ export default async function PokemonDetailPage({
           {siblings.map((item) => (
             <Link
               key={item.id}
-              href={withDataVersion(`/pokemon/${encodeURIComponent(item.id)}`)}
+              href={`/pokemon/${encodeURIComponent(item.id)}`}
               className={`min-h-11 rounded-lg border px-3 py-2 text-sm font-bold ${item.id === row.id ? "bg-[var(--primary)] text-[var(--primary-contrast)]" : "hover:bg-[var(--surface-muted)]"}`}
             >
               {zhTw.variant[item.variantKey]} · {zhTw.decision[item.decision]}

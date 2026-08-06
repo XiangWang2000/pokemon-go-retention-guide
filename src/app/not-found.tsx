@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { withDataVersion } from "@/config/release";
 
 export default function NotFound() {
   return (
@@ -7,7 +6,7 @@ export default function NotFound() {
       <h1 className="text-3xl font-black">找不到此評估資料</h1>
       <p className="mt-3 text-[var(--muted)]">可能尚未匯入該型態，或穩定 ID 已變更。</p>
       <Link
-        href={withDataVersion("/")}
+        href="/"
         className="mt-6 inline-flex min-h-11 items-center rounded-lg bg-[var(--primary)] px-4 font-bold text-[var(--primary-contrast)]"
       >
         返回圖鑑評估

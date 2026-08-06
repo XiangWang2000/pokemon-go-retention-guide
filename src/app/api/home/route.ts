@@ -5,7 +5,6 @@ export const revalidate = 0;
 
 export async function GET(request: Request) {
   const sourceUrl = new URL("/data/home.json", request.url);
-  sourceUrl.search = new URL(request.url).search;
   const source = await fetch(sourceUrl, { cache: "no-store" });
   const headers = new Headers(source.headers);
   headers.set("Cache-Control", "no-store, max-age=0, must-revalidate");

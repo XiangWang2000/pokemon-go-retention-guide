@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { withDataVersion } from "@/config/release";
 import { zhTw } from "@/locales/zh-TW";
 import type { VariantOverview } from "@/presentation/form-overview";
 import { IvRecommendationDetails } from "./iv-recommendation";
@@ -41,7 +40,7 @@ export function VariantDetailCard({ variant }: { variant: VariantOverview }) {
         </div>
       </dl>
       <Link
-        href={withDataVersion(`/pokemon/${row.id}`)}
+        href={`/pokemon/${row.id}`}
         className="mt-4 inline-flex min-h-11 items-center gap-1 rounded-lg border px-3 text-sm font-bold text-[var(--accent)] hover:bg-[var(--surface-muted)]"
       >
         完整詳細資料 <ArrowUpRight aria-hidden size={15} />

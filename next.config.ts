@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { DATA_VERSION } from "./src/config/release";
 
 const nextConfig: NextConfig = {
   serverExternalPackages: ["better-sqlite3"],
@@ -7,6 +8,7 @@ const nextConfig: NextConfig = {
       { key: "Cache-Control", value: "no-store, max-age=0, must-revalidate" },
       { key: "CDN-Cache-Control", value: "no-store" },
       { key: "Pragma", value: "no-cache" },
+      { key: "X-Data-Version", value: DATA_VERSION },
     ];
     return [
       { source: "/", headers: [...cacheHeaders, { key: "Clear-Site-Data", value: '"cache"' }] },

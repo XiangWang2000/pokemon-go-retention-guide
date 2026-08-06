@@ -34,3 +34,9 @@
   npm run data:recompute:001-151 批次重算，只有 TRUE_DATA_PENDING 才使用 HOLD_FOR_NOW 與「無法判斷，暫時不要傳」。
 - PvE 顯示四級投資標籤，並分開呈現團體戰、火箭隊、道館、Mega／Primal、Max Battle、暗影與後續進化；非關鍵欄位顯示「此欄位待補，但不影響普通個體結論」。
 - 缺口以 BattleVariant 與類別狀態拆分；site-data/ 與 public/exports/ 必須由 snapshot／export scripts 重新產生。
+
+## 2026-08-06 固定公開網址與首頁 SSR
+
+- 公開入口固定為 `/`、`/api/home`、`/data/home.json`；資料版本保留在 meta、`X-Data-Version`、manifest 與內部紀錄，不再附加公開版本 query。
+- 首頁由 server build 產生精簡摘要，直接輸出更新日期、PvE 四級分類統計與重要家族連結；完整 `HomeSnapshot` 仍由瀏覽器載入。
+- `worker/index.ts` 與 `scripts/purge-sites-cache.mjs` 形成部署後 CDN purge 流程；正式部署成功後必須執行 `npm run sites:purge` 並驗證三個固定入口回傳同一個資料版本。

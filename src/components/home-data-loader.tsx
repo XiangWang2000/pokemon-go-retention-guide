@@ -3,15 +3,23 @@
 import { useEffect, useState } from "react";
 import { AlertTriangle, CheckCircle2, CircleDot, Send } from "lucide-react";
 import { EvaluationBrowser } from "@/components/evaluation-browser";
-import { DATA_VERSION, DATA_VERSION_DATE_ZH_TW, withDataVersion } from "@/config/release";
+import { DATA_VERSION_DATE_ZH_TW } from "@/config/release";
 import type { HomeSnapshot } from "@/presentation/home-snapshot";
+import type { HomeSummary } from "@/presentation/home-summary";
 
-export function HomeDataLoader() {
+const strategyLabels = {
+  KEEP_TARGETS: "建議保留",
+  SELECTIVE_KEEP: "選擇性保留",
+  MOSTLY_TRANSFER: "大多可傳",
+  HOLD_FOR_NOW: "暫時保留",
+} as const;
+
+export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummary | null }) {
   const [home, setHome] = useState<HomeSnapshot | null>(null);
   const [loadError, setLoadError] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
-    fetch(withDataVersion("/api/home"), {
+    fetch("/api/home", {
       cache: "no-store",
       signal: controller.signal,
     })
@@ -30,33 +38,34 @@ export function HomeDataLoader() {
     return () => controller.abort();
   }, []);
   const families = home?.families ?? [];
+  const initialCounts = initialSummary?.strategyCounts;
   const stats = [
     {
-      label: "建議保留",
+      label: strategyLabels.KEEP_TARGETS,
       value: home
         ? families.filter((family) => family.retentionStrategy === "KEEP_TARGETS").length
-        : null,
+        : (initialCounts?.KEEP_TARGETS ?? null),
       icon: CheckCircle2,
     },
     {
-      label: "選擇性保留",
+      label: strategyLabels.SELECTIVE_KEEP,
       value: home
         ? families.filter((family) => family.retentionStrategy === "SELECTIVE_KEEP").length
-        : null,
+        : (initialCounts?.SELECTIVE_KEEP ?? null),
       icon: CircleDot,
     },
     {
-      label: "大多可傳",
+      label: strategyLabels.MOSTLY_TRANSFER,
       value: home
         ? families.filter((family) => family.retentionStrategy === "MOSTLY_TRANSFER").length
-        : null,
+        : (initialCounts?.MOSTLY_TRANSFER ?? null),
       icon: Send,
     },
     {
-      label: "暫時保留",
+      label: strategyLabels.HOLD_FOR_NOW,
       value: home
         ? families.filter((family) => family.retentionStrategy === "HOLD_FOR_NOW").length
-        : null,
+        : (initialCounts?.HOLD_FOR_NOW ?? null),
       icon: AlertTriangle,
     },
   ];
@@ -76,7 +85,7 @@ export function HomeDataLoader() {
             及 Max 版本。不同地區的進化路線分開呈現，來源與完整論證保留在第二層。
           </p>
           <p className="mt-3 text-xs font-semibold tracking-wide text-[var(--muted)]">
-            公開資料版本：{DATA_VERSION}（{DATA_VERSION_DATE_ZH_TW} 更新）
+            資料更新日期：{DATA_VERSION_DATE_ZH_TW}（完整資料由瀏覽器載入）
           </p>
         </div>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -96,6 +105,51 @@ export function HomeDataLoader() {
           ))}
         </div>
       </section>
+      {initialSummary ? (
+        <section className="surface rounded-2xl p-5" aria-labelledby="home-summary-title">
+          <div className="flex flex-wrap items-baseline justify-between gap-2">
+            <h2 id="home-summary-title" className="text-xl font-black">
+              首頁摘要
+            </h2>
+            <p className="text-sm font-semibold text-[var(--muted)]">
+              {initialSummary.familyCount} 個進化家族 · 更新於 {DATA_VERSION_DATE_ZH_TW}
+            </p>
+          </div>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {Object.entries(initialSummary.pveCounts).map(([level, count]) => (
+              <div key={level} className="rounded-xl border p-3">
+                <p className="text-xs font-bold text-[var(--muted)]">
+                  {level === "CORE_INVESTMENT"
+                    ? "核心投資"
+                    : level === "USABLE_OR_BUDGET"
+                      ? "可用／預算型"
+                      : level === "SPECIAL_USE"
+                        ? "特殊用途"
+                        : "無顯著用途"}
+                </p>
+                <p className="mt-1 font-mono text-2xl font-black">{count}</p>
+              </div>
+            ))}
+          </div>
+          <h3 className="mt-5 text-lg font-black">重要家族速覽</h3>
+          <ul className="mt-3 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+            {initialSummary.importantFamilies.map((family) => (
+              <li key={family.familyId} className="rounded-xl border p-4">
+                <a href={family.href} className="font-black underline-offset-4 hover:underline">
+                  {family.dexRangeZhTw} {family.familyNameZhTw}
+                </a>
+                <p className="mt-1 text-sm font-bold text-[var(--accent)]">
+                  PvE：{family.pveLabel}
+                  {family.pveDetail ? `（${family.pveDetail}）` : ""}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-[var(--muted)]">
+                  {family.handlingSummaryZhTw}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
       {loadError ? (
         <section className="surface rounded-2xl p-6 text-center">
           <p className="font-black">資料載入失敗</p>

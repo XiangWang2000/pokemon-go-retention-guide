@@ -5,7 +5,7 @@ import {
   DEFAULT_IMAGE_SIZES,
 } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
-import { DATA_VERSION, DATA_VERSION_QUERY } from "../src/config/release";
+import { DATA_VERSION } from "../src/config/release";
 
 interface Env {
   ASSETS: {
@@ -39,7 +39,6 @@ const noStoreHeaders = {
   "Surrogate-Control": "no-store",
   Pragma: "no-cache",
   "X-Data-Version": DATA_VERSION,
-  "X-Data-Version-Query": DATA_VERSION_QUERY,
 };
 
 function isCacheSensitiveRequest(request: Request, url: URL) {
@@ -48,11 +47,17 @@ function isCacheSensitiveRequest(request: Request, url: URL) {
   return url.pathname === "/" || (request.headers.get("accept") ?? "").includes("text/html");
 }
 
-function purgeEdgeCache(request: Request, url: URL, ctx: ExecutionContext) {
+async function purgeEdgeCache(request: Request, url: URL) {
   const edgeCache = (globalThis as typeof globalThis & WorkerGlobals).caches?.default;
   if (!edgeCache) return;
-  ctx.waitUntil(edgeCache.delete(request));
-  ctx.waitUntil(edgeCache.delete(new Request(new URL(url.pathname, request.url))));
+  await Promise.all([
+    edgeCache.delete(request),
+    edgeCache.delete(new Request(new URL(url.pathname, request.url))),
+  ]);
+}
+
+function shouldPurgeCache(request: Request) {
+  return request.headers.get("X-Site-Cache-Purge") === DATA_VERSION;
 }
 
 function addNoStoreHeaders(response: Response, clearSiteData = false) {
@@ -93,18 +98,23 @@ const worker = {
       );
     }
 
-    if (url.pathname === "/api/home") {
-      const assetUrl = new URL("/data/home.json", request.url);
-      assetUrl.search = url.search;
-      const response = await env.ASSETS.fetch(new Request(assetUrl));
-      purgeEdgeCache(request, url, ctx);
+    if (
+      request.method === "GET" &&
+      (url.pathname === "/api/home" || url.pathname === "/data/home.json")
+    ) {
+      if (shouldPurgeCache(request)) await purgeEdgeCache(request, url);
+      const response = await env.ASSETS.fetch(
+        new Request(
+          new URL(url.pathname === "/api/home" ? "/data/home.json" : url.pathname, request.url),
+        ),
+      );
       return addNoStoreHeaders(response);
     }
 
     const response = await handler.fetch(request, env, ctx);
     if (!isCacheSensitiveRequest(request, url)) return response;
 
-    purgeEdgeCache(request, url, ctx);
+    if (shouldPurgeCache(request)) await purgeEdgeCache(request, url);
     return addNoStoreHeaders(response, url.pathname === "/");
   },
 };

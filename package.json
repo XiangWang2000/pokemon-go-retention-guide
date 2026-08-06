@@ -15,6 +15,7 @@
     "start:local": "next start",
     "sites:snapshot": "tsx scripts/generate-sites-snapshot.ts",
     "sites:snapshot:check": "tsx scripts/check-sites-snapshot.ts",
+    "sites:purge": "node scripts/purge-sites-cache.mjs",
     "sites:check": "vinext check",
     "sites:build": "npm run sites:snapshot && npm run build",
     "lint": "eslint . --max-warnings=0",
