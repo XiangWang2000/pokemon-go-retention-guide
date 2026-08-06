@@ -6,30 +6,6 @@ import { FamilyIdentityCell } from "./family-identity-cell";
 import { FamilyMemberPanel } from "./family-member-panel";
 import { VariantBadges } from "./variant-badges";
 
-const useLabels: Record<string, string> = {
-  GREAT_LEAGUE: "GL（超級聯盟）",
-  ULTRA_LEAGUE: "UL（高級聯盟）",
-  MASTER_LEAGUE: "ML（大師聯盟）",
-  PVE: "PvE（團體戰）",
-  SHADOW_PVE: "暗影 PvE（團體戰）",
-  GYM_DEFENSE: "道館",
-  MEGA: "Mega",
-  MAX_ATTACK: "Max 攻擊",
-  MAX_TANK: "Max 坦克",
-  MAX_SUPPORT: "Max 支援",
-  MAX_FLEX: "Max",
-};
-
-const variantLabels: Record<string, string> = {
-  NORMAL: "普通",
-  SHADOW: "暗影",
-  MEGA: "Mega 候選",
-  MEGA_X: "Mega 候選",
-  MEGA_Y: "Mega 候選",
-  DYNAMAX: "極巨",
-  GIGANTAMAX: "超極巨",
-};
-
 const handlingMeta = {
   KEEP_TARGETS: {
     label: "先留再篩",
@@ -72,6 +48,19 @@ function FamilyHandlingConclusion({
   const transferLabel = transferClause?.includes("特殊取得個體不以 IV 作傳送門檻")
     ? "特殊取得不可傳"
     : "其他普通重複可傳";
+  const holdReasons = family.holdReasons.map((reason) => reason.labelZhTw);
+  const shortKeepText =
+    family.retentionStrategy === "HOLD_FOR_NOW"
+      ? `${family.primaryTargetSummaryZhTw}；資料補齊前至少各留 1 隻候選`
+      : family.retentionStrategy === "MOSTLY_TRANSFER"
+        ? "收藏、交換或個人偏好以外，不需特別保留"
+        : family.primaryTargetSummaryZhTw;
+  const shortTransferText =
+    family.retentionStrategy === "HOLD_FOR_NOW"
+      ? "關鍵資料補齊前不要大量傳送"
+      : family.retentionStrategy === "MOSTLY_TRANSFER"
+        ? "排除收藏需求後，普通重複可直接傳送"
+        : "不符合上述用途的普通重複個體可傳";
   return (
     <section
       data-testid="family-handling-summary"
@@ -115,13 +104,34 @@ function FamilyHandlingConclusion({
           </div>
         </div>
       ) : (
-        <p
-          className={`mt-1 font-black text-[var(--foreground)] ${
-            compact ? "text-[15px] leading-6" : "text-lg leading-7"
-          }`}
-        >
-          {family.handlingSummaryZhTw}
-        </p>
+        <div className="mt-2 space-y-2">
+          <div className="grid grid-cols-1 items-start gap-1.5 sm:grid-cols-[auto_1fr] sm:gap-2">
+            <span className="w-fit rounded-md bg-emerald-700 px-2 py-0.5 text-xs font-black text-white">
+              要保留
+            </span>
+            <p
+              className={`font-black text-[var(--foreground)] ${compact ? "text-[13px] leading-5" : "text-base leading-6"}`}
+            >
+              {shortKeepText}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 items-start gap-1.5 rounded-lg border border-slate-500/40 bg-[var(--surface)] px-2.5 py-2 sm:grid-cols-[auto_1fr] sm:gap-2">
+            <span className="inline-flex w-fit items-center gap-1 rounded-md bg-slate-700 px-2 py-0.5 text-xs font-black text-white">
+              <Send aria-hidden size={13} />
+              哪些可傳
+            </span>
+            <p
+              className={`font-black text-[var(--foreground)] ${compact ? "text-[13px] leading-5" : "text-sm leading-5"}`}
+            >
+              {shortTransferText}
+            </p>
+          </div>
+          {family.retentionStrategy === "HOLD_FOR_NOW" ? (
+            <p className="text-xs font-bold leading-5 text-amber-800 dark:text-amber-200">
+              暫時保留原因：{holdReasons.join("、") || "關鍵資料待補"}
+            </p>
+          ) : null}
+        </div>
       )}
     </section>
   );
@@ -153,66 +163,25 @@ function FamilyTermGlossary() {
   );
 }
 
-function primaryUseSummary(family: FamilyOverviewModel) {
-  if (!family.primaryRetentionTargets.length) return "未列為主要保留理由";
-  return family.primaryRetentionTargets
-    .map(
-      (target) =>
-        `${target.displayNameZhTw}：${target.useKeys.map((key) => useLabels[key] ?? key).join("／")}`,
-    )
-    .join("；");
-}
-
-function familyIvItems(family: FamilyOverviewModel) {
-  return [
-    ...new Map(
-      family.members.flatMap((member) =>
-        member.form.ivRecommendations.map((item) => {
-          const versions = [
-            ...new Set(
-              member.form.variants
-                .filter(
-                  (variant) =>
-                    ["KEEP", "CONDITIONAL_KEEP"].includes(variant.row.decision) &&
-                    variant.primaryUseKeys.includes(item.primaryUseKey),
-                )
-                .map((variant) => variantLabels[variant.row.variantKey] ?? variant.row.variantKey),
-            ),
-          ];
-          const label = `${member.form.nameZhTw}（${versions.join("／") || "指定版本"}）${item.shortIvLabelZhTw}`;
-          return [
-            `${member.form.formId}:${item.primaryUseKey}:${item.ivStrategyKey}`,
-            { label, detail: item.ivRecommendationZhTw },
-          ] as const;
-        }),
-      ),
-    ).values(),
-  ];
-}
-
-function FamilyIvSummary({ family }: { family: FamilyOverviewModel }) {
-  const items = familyIvItems(family);
-  if (!items.length) return <p className="text-sm font-bold">不構成額外保留理由</p>;
-  const shown = items.slice(0, 3).map((item) => item.label);
-  const hidden = items.length - shown.length;
+function FamilyUseTags({ family }: { family: FamilyOverviewModel }) {
+  const tags = [
+    ...family.primaryUses,
+    family.isBatchTruncated ? "後續進化" : null,
+    family.megaMax.tone !== "NONE" ? "Mega／Max" : null,
+  ].filter((value): value is string => Boolean(value));
+  const uniqueTags = [...new Set(tags)].slice(0, 4);
+  if (!uniqueTags.length) return null;
   return (
-    <details data-testid="iv-recommendation-details" className="group/iv">
-      <summary className="cursor-pointer list-none rounded-lg font-bold leading-6 text-[var(--foreground)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]">
-        {shown.join("；")}
-        {hidden > 0 ? `；另有 ${hidden} 項` : ""}
-        <span className="ml-1 text-[var(--primary)]" aria-hidden>
-          ＋
+    <div className="flex flex-wrap gap-1.5" aria-label="主要用途標籤" data-testid="family-use-tags">
+      {uniqueTags.map((tag) => (
+        <span
+          key={tag}
+          className="rounded-full border bg-[var(--surface-muted)] px-2 py-1 text-[11px] font-bold"
+        >
+          {tag}
         </span>
-      </summary>
-      <div className="mt-3 space-y-3 border-t pt-3">
-        {items.map((item) => (
-          <div key={item.label}>
-            <p className="text-sm font-black">{item.label}</p>
-            <p className="mt-1 text-xs leading-5 text-[var(--muted)]">{item.detail}</p>
-          </div>
-        ))}
-      </div>
-    </details>
+      ))}
+    </div>
   );
 }
 
@@ -259,31 +228,9 @@ export function FamilyOverview({
                     controlsId={controlsId}
                   />
                 </div>
-
-                <dl className="mt-4 grid gap-3 lg:grid-cols-2">
-                  <div className="rounded-xl bg-[var(--surface-muted)] p-3">
-                    <dt className="text-xs font-black text-[var(--muted)]">主要留</dt>
-                    <dd className="mt-1 text-base font-black">{family.primaryTargetSummaryZhTw}</dd>
-                  </div>
-                  <div className="rounded-xl bg-[var(--surface-muted)] p-3">
-                    <dt className="text-xs font-black text-[var(--muted)]">用途</dt>
-                    <dd className="mt-1 text-sm font-bold leading-6">
-                      {primaryUseSummary(family)}
-                    </dd>
-                  </div>
-                  <div className="rounded-xl bg-[var(--surface-muted)] p-3 lg:col-span-2">
-                    <dt className="text-xs font-black text-[var(--muted)]">數字 IV 門檻</dt>
-                    <dd className="mt-1">
-                      <FamilyIvSummary family={family} />
-                    </dd>
-                  </div>
-                </dl>
-
-                {family.hasCriticalDataIssues ? (
-                  <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-black text-amber-700 dark:text-amber-300">
-                    <AlertTriangle aria-hidden size={15} /> 關鍵資料待確認
-                  </p>
-                ) : null}
+                <div className="mt-3">
+                  <FamilyUseTags family={family} />
+                </div>
 
                 <button
                   type="button"
@@ -385,11 +332,8 @@ export function FamilyOverview({
                     </td>
                     <td className="px-3 py-2">
                       <FamilyHandlingConclusion family={family} compact />
-                      <p className="mt-2 text-[11px] font-black text-[var(--muted)]">
-                        主要保留：{family.primaryTargetSummaryZhTw}
-                      </p>
                       <div className="mt-2">
-                        <FamilyIvSummary family={family} />
+                        <FamilyUseTags family={family} />
                       </div>
                       {family.hasCriticalDataIssues ? (
                         <p className="mt-1 inline-flex items-center gap-1.5 text-[11px] font-black text-amber-700 dark:text-amber-300">

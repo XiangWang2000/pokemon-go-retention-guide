@@ -105,17 +105,18 @@ describe("Sites 唯讀 snapshot", () => {
     expect(JSON.parse(compactHome.toString("utf8"))).toMatchObject({ schemaVersion: 1 });
   });
 
-  it("首頁初始 HTML 直接輸出日期、PvE 分類摘要與重要家族", () => {
+  it("首頁初始 HTML 直接輸出日期與搜尋入口，不重複輸出家族摘要", () => {
     const home = homeSnapshot as unknown as HomeSnapshot;
     const summary = buildHomeSummary(home);
     const html = renderToStaticMarkup(createElement(HomeDataLoader, { initialSummary: summary }));
 
     expect(html).toContain("資料更新日期：2026/08/06");
-    expect(html).toContain("首頁摘要");
-    expect(html).toContain("核心投資");
-    expect(html).toContain("三合一磁怪家族");
-    expect(html).toContain("鑽角犀獸家族");
-    expect(html).toContain('href="/pokemon/');
+    expect(html).toContain("搜尋編號、名稱、型態或進化名稱");
+    expect(html).toContain("所有世代");
+    expect(html).toContain("所有用途");
+    expect(html).not.toContain("首頁摘要");
+    expect(html).not.toContain("重要家族速覽");
+    expect(html).not.toContain("三合一磁怪家族");
     expect(html).not.toContain("?v=");
   });
 

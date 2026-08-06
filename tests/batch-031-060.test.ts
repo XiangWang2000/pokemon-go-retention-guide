@@ -130,6 +130,16 @@ describe("#031～#060 批次與跨批次家族", () => {
     expect(html).toContain("立即處理結論");
     expect(html).toContain("要保留的條件");
     expect(html).toContain("其他普通重複可傳");
+    expect(html).toContain("主要用途標籤");
+    expect(html).not.toContain("數字 IV 門檻");
+  });
+
+  it("暫時保留會列出實際待補原因，而不是只顯示通用缺資料", () => {
+    const family = familyByMember("041-kanto");
+    expect(family.retentionStrategy).toBe("HOLD_FOR_NOW");
+    expect(family.holdReasons.map((reason) => reason.labelZhTw)).toEqual(
+      expect.arrayContaining(["後續進化待補", "尚未推出版本"]),
+    );
   });
 
   it("首頁資料尚未載入時以破折號取代四個零值統計", () => {

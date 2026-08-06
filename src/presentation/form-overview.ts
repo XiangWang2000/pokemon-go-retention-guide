@@ -410,6 +410,10 @@ function buildVariantPrimaryUses(row: DashboardRow) {
   if (["HIGH", "MEDIUM", "SPECIAL"].includes(pveTone ?? "") && hasDirectPveUse(row))
     uses.push("PvE");
   if (["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(row.gymRating)) uses.push("道館");
+  const rocket = row.categoryStatuses.find((status) => status.category === "ROCKET");
+  if (["HIGHLY_RECOMMENDED", "USEFUL", "NICHE"].includes(rocket?.rocketRating ?? "")) {
+    uses.push("火箭隊");
+  }
   if (
     row.variantKey.startsWith("MEGA") &&
     ["HIGH", "MEDIUM", "SPECIAL"].includes(megaVariantTone(row))

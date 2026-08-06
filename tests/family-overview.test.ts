@@ -178,13 +178,13 @@ describe("家族總覽 UI", () => {
     expect(html).toContain("超級聯盟，CP 上限 1500");
     expect(html).toContain("Rank");
     expect(html).toContain("同物種同聯盟的 IV 排名");
-    expect(html).toContain("主要留");
     expect(html).toContain("妙蛙花");
     for (const vagueText of ["高攻個體", "高 IV", "高品質個體", "好的 PvP IV", "適合對戰的個體"]) {
       expect(html).not.toContain(vagueText);
     }
-    expect(html).toContain("數字 IV 門檻");
-    expect(html).toContain('data-testid="iv-recommendation-details"');
+    expect(html).toContain("主要用途標籤");
+    expect(html).not.toContain("數字 IV 門檻");
+    expect(html).not.toContain('data-testid="iv-recommendation-details"');
     expect(html).not.toContain("來源與資料狀態");
   });
 

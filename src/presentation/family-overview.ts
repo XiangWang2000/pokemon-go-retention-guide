@@ -17,6 +17,18 @@ export type FamilyValue = "HIGH" | "MEDIUM" | "LOW" | "UNKNOWN";
 export type FamilyRetentionStrategy =
   "KEEP_TARGETS" | "SELECTIVE_KEEP" | "MOSTLY_TRANSFER" | "HOLD_FOR_NOW";
 
+export type FamilyHoldReasonKey =
+  | "LATER_EVOLUTION_PENDING"
+  | "EVENT_MOVE_PENDING"
+  | "MAX_DATA_PENDING"
+  | "UNRELEASED_VARIANT"
+  | "KEY_DATA_PENDING";
+
+export interface FamilyHoldReason {
+  key: FamilyHoldReasonKey;
+  labelZhTw: string;
+}
+
 export interface FamilyRetentionTarget {
   formId: string;
   memberNameZhTw: string;
@@ -78,6 +90,7 @@ export interface FamilyOverview {
   ivRecommendations: IvRecommendation[];
   ivSummaryZhTw: string;
   primaryUses: string[];
+  holdReasons: FamilyHoldReason[];
   notices: string[];
   hasDataIssues: boolean;
   hasCriticalDataIssues: boolean;
@@ -465,6 +478,77 @@ function materialIssueMessages(members: FamilyMemberSummary[]) {
   );
 }
 
+export function buildFamilyHoldReasons(
+  members: FamilyMemberSummary[],
+  options: { isBatchTruncated?: boolean } = {},
+): FamilyHoldReason[] {
+  const variants = members.flatMap((member) => member.form.variants);
+  const rows = variants.map((variant) => variant.row);
+  const reasons: FamilyHoldReason[] = [];
+  const add = (key: FamilyHoldReasonKey, labelZhTw: string) => {
+    if (!reasons.some((reason) => reason.key === key)) reasons.push({ key, labelZhTw });
+  };
+
+  if (
+    options.isBatchTruncated ||
+    members.some((member) =>
+      /範圍外|可繼續進化|後續世代進化|後續進化/.test(member.form.evolutionFamilyNotesZhTw),
+    )
+  ) {
+    add("LATER_EVOLUTION_PENDING", "後續進化待補");
+  }
+
+  if (
+    rows.some((row) =>
+      (row.reviewIssues ?? []).some(
+        (issue) =>
+          ["UNHANDLED_MOVE", "MISSING_SOURCE"].includes(issue.issueType) &&
+          /招式|活動|社群日|限定|event/i.test(
+            `${issue.messageZhTw} ${issue.suggestedResearchActionZhTw ?? ""}`,
+          ),
+      ),
+    ) ||
+    rows.some((row) => /活動招式|活動限定|社群日招式|招式待確認/.test(row.requiredMovesSummaryZhTw))
+  ) {
+    add("EVENT_MOVE_PENDING", "活動招式待確認");
+  }
+
+  if (
+    variants.some((variant) => {
+      if (!["DYNAMAX", "GIGANTAMAX"].includes(variant.row.variantKey)) return false;
+      if (!variant.row.isReleased || variant.row.releaseStatus === "UNRELEASED") return false;
+      const maxStatus = variant.row.categoryStatuses.find(
+        (status) => status.category === "MAX_BATTLE",
+      );
+      return (
+        isVariantTruePending(variant) ||
+        isTrueDataPending(maxStatus?.assessmentDisposition) ||
+        /待補|待確認|尚未評估/.test(variant.row.maxBattleSummaryZhTw)
+      );
+    })
+  ) {
+    add("MAX_DATA_PENDING", "Max Battle 資料待補");
+  }
+
+  if (rows.some((row) => !row.isReleased || row.releaseStatus === "UNRELEASED")) {
+    add("UNRELEASED_VARIANT", "尚未推出版本");
+  }
+
+  if (
+    materialIssueMessages(members).length ||
+    variants.some(
+      (variant) =>
+        isVariantTruePending(variant) &&
+        (variant.row.reviewIssues ?? []).some((issue) => issue.affectsFinalDecision),
+    )
+  ) {
+    add("KEY_DATA_PENDING", "關鍵資料待補");
+  }
+
+  if (!reasons.length) add("KEY_DATA_PENDING", "關鍵資料待補");
+  return reasons;
+}
+
 export function calculateFamilyValue(
   members: FamilyMemberSummary[],
   options: { isBatchTruncated?: boolean } = {},
@@ -556,12 +640,14 @@ export function buildFamilyActionSummaryZhTw({
   strategy,
   ivShortLabels,
   isBatchTruncated,
+  holdReasons,
 }: {
   members: FamilyMemberSummary[];
   targets: FamilyRetentionTarget[];
   strategy: FamilyRetentionStrategy;
   ivShortLabels: string[];
   isBatchTruncated: boolean;
+  holdReasons?: FamilyHoldReason[];
 }) {
   const targetNames = targets.map((target) => target.displayNameZhTw).join("、");
   const preEvolution = buildPreEvolutionActionZhTw(members, targets);
@@ -586,13 +672,13 @@ export function buildFamilyActionSummaryZhTw({
   }
   const issueMessages = materialIssueMessages(members);
   if (issueMessages.length) {
-    return `關鍵資料可能改變保留策略，目前暫時保留：${issueMessages.join("；")}`;
+    return `關鍵資料可能改變保留策略，目前暫時保留（${(holdReasons ?? []).map((reason) => reason.labelZhTw).join("、") || "關鍵資料待補"}）：${issueMessages.join("；")}`;
   }
   if (isBatchTruncated) {
     const currentMembers = members.map((member) => member.form.nameZhTw).join("、");
-    return `暫時處理：${currentMembers}各保留 1 隻最佳候選；補齊末階進化評估前，暫不依 IV 大量篩除。`;
+    return `暫時處理（${(holdReasons ?? []).map((reason) => reason.labelZhTw).join("、") || "後續進化待補"}）：${currentMembers}各保留 1 隻最佳候選；補齊末階進化評估前，暫不依 IV 大量篩除。`;
   }
-  return "存在可能改變保留策略的關鍵不確定性，補齊資料前暫時保留。";
+  return `存在可能改變保留策略的關鍵不確定性（${(holdReasons ?? []).map((reason) => reason.labelZhTw).join("、") || "關鍵資料待補"}），補齊資料前暫時保留。`;
 }
 
 function targetHandlingParts(target: FamilyRetentionTarget, members: FamilyMemberSummary[]) {
@@ -635,20 +721,23 @@ export function buildFamilyHandlingSummaryZhTw({
   targets,
   strategy,
   isBatchTruncated,
+  holdReasons,
 }: {
   members: FamilyMemberSummary[];
   targets: FamilyRetentionTarget[];
   strategy: FamilyRetentionStrategy;
   isBatchTruncated: boolean;
+  holdReasons?: FamilyHoldReason[];
 }) {
   if (strategy === "MOSTLY_TRANSFER") {
     return "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。";
   }
   if (strategy === "HOLD_FOR_NOW") {
+    const reasonText = (holdReasons ?? []).map((reason) => reason.labelZhTw).join("、");
     if (isBatchTruncated) {
-      return "先不要大量傳送；目前每個成員至少留 1 隻最佳候選，補齊末階進化評估後再判斷。";
+      return `先不要大量傳送；${reasonText || "後續進化待補"}，目前每個成員至少留 1 隻最佳候選，補齊資料後再判斷。`;
     }
-    return "先不要大量傳送；保留現有最佳候選，待影響結論的關鍵資料補齊後再判斷。";
+    return `先不要大量傳送；${reasonText || "關鍵資料待補"}，保留現有最佳候選，待影響結論的資料補齊後再判斷。`;
   }
 
   const targetText = targets.map((target) => targetHandlingParts(target, members)).join("，以及");
@@ -748,6 +837,10 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
   const primaryRetentionTargets = findPrimaryRetentionTargets(members);
   const familyValue = calculateFamilyValue(members, { isBatchTruncated });
   const retentionStrategy = calculateFamilyRetentionStrategy(familyValue);
+  const holdReasons =
+    retentionStrategy === "HOLD_FOR_NOW"
+      ? buildFamilyHoldReasons(members, { isBatchTruncated })
+      : [];
   const preEvolutionActionZhTw = buildPreEvolutionActionZhTw(members, primaryRetentionTargets);
   const actionSummaryZhTw = buildFamilyActionSummaryZhTw({
     members,
@@ -755,12 +848,14 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
     strategy: retentionStrategy,
     ivShortLabels: iv.shortLabels,
     isBatchTruncated,
+    holdReasons,
   });
   const handlingSummaryZhTw = buildFamilyHandlingSummaryZhTw({
     members,
     targets: primaryRetentionTargets,
     strategy: retentionStrategy,
     isBatchTruncated,
+    holdReasons,
   });
   members = members.map((member) => ({
     ...member,
@@ -826,6 +921,7 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
     ivRecommendations: iv.recommendations,
     ivSummaryZhTw: iv.summaryZhTw,
     primaryUses: unique(forms.flatMap((form) => form.primaryUses)),
+    holdReasons,
     notices,
     hasDataIssues: forms.some((form) => form.hasDataIssues),
     hasCriticalDataIssues: materialIssueMessages(members).length > 0,
