@@ -102,7 +102,24 @@ describe("Sites 唯讀 snapshot", () => {
     expect(pageSource).toContain("buildHomeSummary");
     expect(pageSource).toContain("HomeDataLoader");
     expect(compactHome.byteLength).toBeLessThan(prettyHome.byteLength);
-    expect(JSON.parse(compactHome.toString("utf8"))).toMatchObject({ schemaVersion: 1 });
+    expect(compactHome.byteLength).toBeLessThan(1_000_000);
+    const runtimeHome = JSON.parse(compactHome.toString("utf8")) as {
+      schemaVersion: number;
+      families: Array<{
+        detailsLoaded?: boolean;
+        members: Array<{ form: { variants: unknown[]; detailsLoaded?: boolean } }>;
+      }>;
+    };
+    expect(runtimeHome.schemaVersion).toBe(2);
+    expect(
+      runtimeHome.families.every(
+        (family) =>
+          family.detailsLoaded === false &&
+          family.members.every(
+            (member) => member.form.detailsLoaded === false && member.form.variants.length === 0,
+          ),
+      ),
+    ).toBe(true);
   });
 
   it("首頁初始 HTML 直接輸出日期與搜尋入口，不重複輸出家族摘要", () => {

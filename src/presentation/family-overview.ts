@@ -97,6 +97,7 @@ export interface FamilyOverview {
   updatedAt: string | null;
   minDexNumber: number;
   maxDexNumber: number;
+  detailsLoaded?: boolean;
 }
 
 const toneWeight: Record<OverviewTone, number> = {

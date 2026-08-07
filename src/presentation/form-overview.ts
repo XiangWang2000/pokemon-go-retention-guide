@@ -42,6 +42,7 @@ export interface FormOverview {
   aliases: string[];
   evolutionNames: string[];
   variants: VariantOverview[];
+  variantKeys: DashboardRow["variantKey"][];
   releasedVariantKeys: DashboardRow["variantKey"][];
   pvp: CompactOverview;
   pve: CompactOverview;
@@ -53,9 +54,13 @@ export interface FormOverview {
   ivShortLabels: string[];
   ivDirection: string;
   primaryUses: string[];
+  primaryUseKeys: PrimaryUseKey[];
+  hasRocketUse: boolean;
+  hasEvolutionUse: boolean;
   hasDataIssues: boolean;
   reviewed: boolean;
   updatedAt: string | null;
+  detailsLoaded?: boolean;
 }
 
 const variantOrder: Record<string, number> = {
@@ -410,8 +415,7 @@ function buildVariantPrimaryUses(row: DashboardRow) {
   if (["HIGH", "MEDIUM", "SPECIAL"].includes(pveTone ?? "") && hasDirectPveUse(row))
     uses.push("PvE");
   if (["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(row.gymRating)) uses.push("道館");
-  const rocket = row.categoryStatuses.find((status) => status.category === "ROCKET");
-  if (["HIGHLY_RECOMMENDED", "USEFUL", "NICHE"].includes(rocket?.rocketRating ?? "")) {
+  if (hasRocketUse(row)) {
     uses.push("火箭隊");
   }
   if (
@@ -431,6 +435,11 @@ function buildVariantPrimaryUses(row: DashboardRow) {
   }
   if (matchedRule(row, "VALUABLE_EVOLUTION")) uses.push("後續進化");
   return [...new Set(uses)];
+}
+
+function hasRocketUse(row: DashboardRow) {
+  const rocket = row.categoryStatuses.find((status) => status.category === "ROCKET");
+  return ["HIGHLY_RECOMMENDED", "USEFUL", "NICHE"].includes(rocket?.rocketRating ?? "");
 }
 
 function hasSpeciesLeagueUse(row: DashboardRow, league: string) {
@@ -657,6 +666,7 @@ export function buildFormOverview(rows: DashboardRow[]): FormOverview {
     aliases: [...new Set(sorted.flatMap((row) => row.aliases))],
     evolutionNames: [...new Set(sorted.flatMap((row) => row.evolutionNames))],
     variants,
+    variantKeys: [...new Set(variants.map((variant) => variant.row.variantKey))],
     releasedVariantKeys: sorted
       .filter((row) => row.isReleased && row.releaseStatus === "RELEASED")
       .map((row) => row.variantKey),
@@ -674,6 +684,9 @@ export function buildFormOverview(rows: DashboardRow[]): FormOverview {
         : (variants.find((variant) => isWorthKeeping(variant.row))?.ivDirection ??
           "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。"),
     primaryUses: [...new Set(variants.flatMap((variant) => variant.primaryUses))],
+    primaryUseKeys: [...new Set(variants.flatMap((variant) => variant.primaryUseKeys))],
+    hasRocketUse: sorted.some(hasRocketUse),
+    hasEvolutionUse: sorted.some((row) => matchedRule(row, "VALUABLE_EVOLUTION")),
     hasDataIssues: sorted.some((row) => (row.reviewIssues?.length ?? 0) > 0),
     reviewed: assessed.every((row) => row.reviewed),
     updatedAt:

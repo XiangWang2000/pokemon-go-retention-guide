@@ -95,11 +95,21 @@ export function DataAuditTable({
   rows,
   expanded,
   onToggle,
+  loading = false,
 }: {
   rows: DashboardRow[];
   expanded: Set<string>;
   onToggle: (id: string) => void;
+  loading?: boolean;
 }) {
+  if (loading) {
+    return (
+      <div className="surface rounded-2xl p-10 text-center" aria-busy="true" aria-live="polite">
+        <p className="font-black">正在載入完整資料稽核列表…</p>
+        <p className="mt-2 text-sm text-[var(--muted)]">首次開啟稽核模式需要額外載入資料。</p>
+      </div>
+    );
+  }
   if (!rows.length) {
     return (
       <div className="surface rounded-2xl p-10 text-center font-black">找不到符合條件的資料</div>

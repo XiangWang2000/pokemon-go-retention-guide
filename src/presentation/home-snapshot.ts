@@ -9,6 +9,18 @@ export interface HomeSnapshot {
   families: FamilyOverview[];
 }
 
+export interface HomeRuntimeSnapshot {
+  schemaVersion: 2;
+  dataAsOf: string | null;
+  families: FamilyOverview[];
+}
+
+export interface HomeFamilyDetailResponse {
+  schemaVersion: 1;
+  dataAsOf: string | null;
+  family: FamilyOverview;
+}
+
 export function buildHomeSnapshot(rows: DashboardRow[], dataAsOf: string | null): HomeSnapshot {
   const families = buildFamilyOverviews(buildFormOverviews(rows)).map((family) => ({
     ...family,

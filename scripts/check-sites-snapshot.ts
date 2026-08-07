@@ -89,10 +89,22 @@ async function main() {
   assert(runtimeHome.byteLength === manifest.runtimeHome.bytes, "首頁 runtime 資料大小不一致。");
   assert(sha256(runtimeHome) === manifest.runtimeHome.sha256, "首頁 runtime 資料 SHA256 不一致。");
   assert(
-    JSON.parse(runtimeHome.toString("utf8")).schemaVersion === 1,
+    JSON.parse(runtimeHome.toString("utf8")).schemaVersion === 2,
     "首頁 runtime 資料 schemaVersion 不正確。",
   );
 
+  const runtimeHomePayload = JSON.parse(runtimeHome.toString("utf8")) as {
+    schemaVersion: number;
+    families: Array<{ detailsLoaded?: boolean; members: Array<{ form: { variants: unknown[] } }> }>;
+  };
+  assert(
+    runtimeHomePayload.families.every(
+      (family) =>
+        family.detailsLoaded === false &&
+        family.members.every((member) => member.form.variants.length === 0),
+    ),
+    "runtime home must contain summary-only family forms",
+  );
   const workbookPath = path.join(root, manifest.excel.path);
   const workbook = await readFile(workbookPath);
   assert(workbook.byteLength === manifest.excel.bytes, "Excel 大小與 manifest 不一致。");

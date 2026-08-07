@@ -1,7 +1,7 @@
 "use client";
 
 import { Download, Search } from "lucide-react";
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { freshnessDays } from "@/config/freshness";
 import type { DashboardRow } from "@/lib/data";
 import { matchesPokemonGeneration, pokemonGenerationRanges } from "@/lib/pokemon-taxonomy";
@@ -110,11 +110,29 @@ function matchesVariantUse(variant: FormOverview["variants"][number], use: strin
 
 function matchesFormUse(form: FormOverview, use: string) {
   if (use === "ALL") return true;
-  if (form.variants.some((variant) => matchesVariantUse(variant, use))) return true;
-  if (use === "PVE") return meaningfulTones.has(form.pve.tone);
-  if (use === "GYM") return meaningfulTones.has(form.gym.tone);
-  if (use === "MEGA" || use === "MAX") return meaningfulTones.has(form.megaMax.tone);
-  if (use === "EVOLUTION") return form.primaryUses.includes("後續進化");
+  const useKeys = new Set<string>(form.primaryUseKeys);
+  if (use === "PVP") {
+    return (
+      ["GREAT_LEAGUE", "ULTRA_LEAGUE", "MASTER_LEAGUE"].some((key) => useKeys.has(key)) ||
+      form.variants.some((variant) => matchesVariantUse(variant, use))
+    );
+  }
+  if (use === "PVE") {
+    return (
+      ["PVE", "SHADOW_PVE"].some((key) => useKeys.has(key)) || meaningfulTones.has(form.pve.tone)
+    );
+  }
+  if (use === "ROCKET")
+    return form.hasRocketUse || form.variants.some((variant) => matchesVariantUse(variant, use));
+  if (use === "GYM") return useKeys.has("GYM_DEFENSE") || meaningfulTones.has(form.gym.tone);
+  if (use === "MEGA") return useKeys.has("MEGA") || meaningfulTones.has(form.megaMax.tone);
+  if (use === "MAX") {
+    return (
+      ["MAX_ATTACK", "MAX_TANK", "MAX_SUPPORT", "MAX_FLEX"].some((key) => useKeys.has(key)) ||
+      meaningfulTones.has(form.megaMax.tone)
+    );
+  }
+  if (use === "EVOLUTION") return form.hasEvolutionUse || form.primaryUses.includes("後續進化");
   return false;
 }
 
@@ -134,6 +152,87 @@ function matchesRowUse(row: DashboardRow, use: string) {
   if (use === "MAX") return ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey);
   if (use === "EVOLUTION") return row.evolutionSummaryZhTw.includes("後續進化");
   return false;
+}
+
+type BrowserUrlState = {
+  mode: ViewMode;
+  query: string;
+  decision: string;
+  variant: string;
+  valueFilter: string;
+  generation: string;
+  region: string;
+  freshness: string;
+  reviewed: string;
+  sort: string;
+  page: number;
+};
+
+const managedUrlKeys = [
+  "mode",
+  "q",
+  "decision",
+  "variant",
+  "use",
+  "generation",
+  "region",
+  "freshness",
+  "reviewed",
+  "sort",
+  "page",
+] as const;
+
+function readBrowserUrlState(initialMode: ViewMode): BrowserUrlState {
+  const defaults: BrowserUrlState = {
+    mode: initialMode,
+    query: "",
+    decision: "ALL",
+    variant: "ALL",
+    valueFilter: "ALL",
+    generation: "ALL",
+    region: "ALL",
+    freshness: "ALL",
+    reviewed: "ALL",
+    sort: "DEX_ASC",
+    page: 1,
+  };
+  if (typeof window === "undefined") return defaults;
+  const params = new URLSearchParams(window.location.search);
+  const mode = params.get("mode")?.toUpperCase();
+  const page = Number(params.get("page"));
+  return {
+    mode: mode === "POKEDEX" || mode === "AUDIT" || mode === "FAMILY" ? mode : defaults.mode,
+    query: params.get("q") ?? defaults.query,
+    decision: params.get("decision") ?? defaults.decision,
+    variant: params.get("variant") ?? defaults.variant,
+    valueFilter: params.get("use") ?? defaults.valueFilter,
+    generation: params.get("generation") ?? defaults.generation,
+    region: params.get("region") ?? defaults.region,
+    freshness: params.get("freshness") ?? defaults.freshness,
+    reviewed: params.get("reviewed") ?? defaults.reviewed,
+    sort: params.get("sort") ?? defaults.sort,
+    page: Number.isFinite(page) && page > 0 ? Math.floor(page) : defaults.page,
+  };
+}
+
+function writeBrowserUrl(state: BrowserUrlState, replace: boolean) {
+  if (typeof window === "undefined") return;
+  const url = new URL(window.location.href);
+  for (const key of managedUrlKeys) url.searchParams.delete(key);
+  if (state.mode !== "FAMILY") url.searchParams.set("mode", state.mode.toLowerCase());
+  if (state.query) url.searchParams.set("q", state.query);
+  if (state.decision !== "ALL") url.searchParams.set("decision", state.decision);
+  if (state.variant !== "ALL") url.searchParams.set("variant", state.variant);
+  if (state.valueFilter !== "ALL") url.searchParams.set("use", state.valueFilter);
+  if (state.generation !== "ALL") url.searchParams.set("generation", state.generation);
+  if (state.region !== "ALL") url.searchParams.set("region", state.region);
+  if (state.freshness !== "ALL") url.searchParams.set("freshness", state.freshness);
+  if (state.reviewed !== "ALL") url.searchParams.set("reviewed", state.reviewed);
+  if (state.sort !== "DEX_ASC") url.searchParams.set("sort", state.sort);
+  if (state.page > 1) url.searchParams.set("page", String(state.page));
+  const nextUrl = `${url.pathname}${url.search}${url.hash}`;
+  if (replace) window.history.replaceState({}, "", nextUrl);
+  else window.history.pushState({}, "", nextUrl);
 }
 
 function PaginationControls({
@@ -176,11 +275,19 @@ export function EvaluationBrowser({
   referenceDate,
   initialMode = "FAMILY",
   loading = false,
+  auditRows = null,
+  auditLoading = false,
+  onLoadAuditRows,
+  onLoadFamilyDetails,
 }: {
   families: FamilyOverview[];
   referenceDate: string;
   initialMode?: ViewMode;
   loading?: boolean;
+  auditRows?: DashboardRow[] | null;
+  auditLoading?: boolean;
+  onLoadAuditRows?: () => void;
+  onLoadFamilyDetails?: (familyId: string) => void;
 }) {
   const [mode, setMode] = useState<ViewMode>(initialMode);
   const [query, setQuery] = useState("");
@@ -195,6 +302,73 @@ export function EvaluationBrowser({
   const [page, setPage] = useState(1);
   const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const urlReadyRef = useRef(false);
+  const resultsTopRef = useRef<HTMLDivElement>(null);
+  const previousPageRef = useRef(1);
+
+  const updateUrl = useCallback(
+    (overrides: Partial<BrowserUrlState>, replace = true) => {
+      if (!urlReadyRef.current) return;
+      writeBrowserUrl(
+        {
+          mode,
+          query,
+          decision,
+          variant,
+          valueFilter,
+          generation,
+          region,
+          freshness,
+          reviewed,
+          sort,
+          page,
+          ...overrides,
+        },
+        replace,
+      );
+    },
+    [
+      decision,
+      freshness,
+      generation,
+      mode,
+      page,
+      query,
+      region,
+      reviewed,
+      sort,
+      valueFilter,
+      variant,
+    ],
+  );
+
+  useEffect(() => {
+    const applyUrlState = () => {
+      const next = readBrowserUrlState(initialMode);
+      setMode(next.mode);
+      setQuery(next.query);
+      setDecision(next.decision);
+      setVariant(next.variant);
+      setValueFilter(next.valueFilter);
+      setGeneration(next.generation);
+      setRegion(next.region);
+      setFreshness(next.freshness);
+      setReviewed(next.reviewed);
+      setSort(next.sort);
+      setPage(next.page);
+      setExpandedFamilies(new Set());
+      setExpandedItems(new Set());
+    };
+
+    applyUrlState();
+    urlReadyRef.current = true;
+    window.addEventListener("popstate", applyUrlState);
+    return () => window.removeEventListener("popstate", applyUrlState);
+  }, [initialMode]);
+
+  useEffect(() => {
+    if (mode === "AUDIT" && auditRows === null && !auditLoading) onLoadAuditRows?.();
+  }, [auditLoading, auditRows, mode, onLoadAuditRows]);
 
   const forms = useMemo(
     () => [
@@ -232,9 +406,7 @@ export function EvaluationBrowser({
         .filter(
           (family) =>
             variant === "ALL" ||
-            family.members.some((member) =>
-              member.form.variants.some((item) => item.row.variantKey === variant),
-            ),
+            family.members.some((member) => member.form.variantKeys.some((key) => key === variant)),
         )
         .filter((family) =>
           family.members.some(
@@ -259,10 +431,7 @@ export function EvaluationBrowser({
     () =>
       searchMatches
         .filter((form) => decision === "ALL" || form.decision === decision)
-        .filter(
-          (form) =>
-            variant === "ALL" || form.variants.some((item) => item.row.variantKey === variant),
-        )
+        .filter((form) => variant === "ALL" || form.variantKeys.some((key) => key === variant))
         .filter(
           (form) =>
             matchesPokemonGeneration(form.dexNumber, generation) &&
@@ -278,45 +447,51 @@ export function EvaluationBrowser({
     [decision, generation, region, searchMatches, sort, valueFilter, variant],
   );
 
-  const auditRows = useMemo(() => {
+  const filteredAuditRows = useMemo(() => {
     const now = Date.parse(referenceDate);
-    return searchMatches
-      .flatMap((form) =>
-        form.variants.map((variantOverview) => ({ form, row: variantOverview.row })),
+    return (auditRows ?? [])
+      .filter((row) =>
+        matchesPokemonSearch(
+          {
+            dexNumber: row.dexNumber,
+            nameEn: row.nameEn,
+            nameZhTw: row.nameZhTw,
+            formNameEn: row.formNameEn,
+            formNameZhTw: row.formNameZhTw,
+            aliases: row.aliases,
+            evolutionNames: row.evolutionNames,
+          },
+          query,
+        ),
       )
-      .filter(({ row }) => decision === "ALL" || row.decision === decision)
-      .filter(({ row }) => variant === "ALL" || row.variantKey === variant)
-      .filter(({ form }) => matchesPokemonGeneration(form.dexNumber, generation))
-      .filter(({ form }) => matchesRegion(form.regionKey, region))
-      .filter(({ form, row }) => {
-        const variantOverview = form.variants.find((item) => item.row.id === row.id);
-        return variantOverview
-          ? matchesVariantUse(variantOverview, valueFilter)
-          : matchesRowUse(row, valueFilter);
-      })
-      .filter(({ row }) => reviewed === "ALL" || row.reviewed === (reviewed === "YES"))
-      .filter(({ row }) => {
+      .filter((row) => decision === "ALL" || row.decision === decision)
+      .filter((row) => variant === "ALL" || row.variantKey === variant)
+      .filter((row) => matchesPokemonGeneration(row.dexNumber, generation))
+      .filter((row) => matchesRegion(row.regionKey, region))
+      .filter((row) => matchesRowUse(row, valueFilter))
+      .filter((row) => reviewed === "ALL" || row.reviewed === (reviewed === "YES"))
+      .filter((row) => {
         if (freshness === "ALL") return true;
         const stale =
           !row.updatedAt ||
           now - new Date(row.updatedAt).getTime() > freshnessDays.PVP * 86_400_000;
         return freshness === "STALE" ? stale : !stale;
       })
-      .sort(({ row: left }, { row: right }) => {
+      .sort((left, right) => {
         if (sort === "DEX_DESC") return right.dexNumber - left.dexNumber;
         if (sort === "DECISION") return left.decision.localeCompare(right.decision);
         if (sort === "UPDATED") return (right.updatedAt ?? "").localeCompare(left.updatedAt ?? "");
         return left.dexNumber - right.dexNumber || left.formId.localeCompare(right.formId);
-      })
-      .map(({ row }) => row);
+      });
   }, [
+    auditRows,
     decision,
     freshness,
     generation,
+    query,
     referenceDate,
     region,
     reviewed,
-    searchMatches,
     sort,
     valueFilter,
     variant,
@@ -327,16 +502,38 @@ export function EvaluationBrowser({
       ? familyRows.length
       : mode === "POKEDEX"
         ? quickForms.length
-        : auditRows.length;
+        : filteredAuditRows.length;
   const pageSize = mode === "FAMILY" ? 12 : mode === "POKEDEX" ? 24 : 40;
   const pageCount = Math.max(1, Math.ceil(totalItems / pageSize));
   const activePage = Math.min(page, pageCount);
   const start = (activePage - 1) * pageSize;
   const visibleFamilyRows = familyRows.slice(start, start + pageSize);
   const visibleQuickForms = quickForms.slice(start, start + pageSize);
-  const visibleAuditRows = auditRows.slice(start, start + pageSize);
+  const visibleAuditRows = filteredAuditRows.slice(start, start + pageSize);
+
+  useEffect(() => {
+    if (previousPageRef.current !== activePage) {
+      previousPageRef.current = activePage;
+      resultsTopRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    if (urlReadyRef.current && page !== activePage) {
+      updateUrl({ page: activePage });
+    }
+  }, [activePage, page, updateUrl]);
+
+  function resetExpandedState() {
+    setExpandedFamilies(new Set());
+    setExpandedItems(new Set());
+  }
 
   function toggleItem(id: string) {
+    const form = forms.find((item) => item.formId === id);
+    if (form?.detailsLoaded === false) {
+      const family = families.find((item) =>
+        item.members.some((member) => member.form.formId === id),
+      );
+      if (family) onLoadFamilyDetails?.(family.familyId);
+    }
     setExpandedItems((current) => {
       const next = new Set(current);
       if (next.has(id)) next.delete(id);
@@ -346,23 +543,44 @@ export function EvaluationBrowser({
   }
 
   function toggleFamily(id: string) {
+    const family = families.find((item) => item.familyId === id);
     setExpandedFamilies((current) => {
       const next = new Set(current);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
+      if (next.has(id)) {
+        next.delete(id);
+      } else {
+        next.add(id);
+        if (family?.detailsLoaded === false) onLoadFamilyDetails?.(id);
+      }
       return next;
     });
+  }
+
+  function changePage(nextPage: number) {
+    const safePage = Math.max(1, Math.min(pageCount, nextPage));
+    if (safePage === activePage) return;
+    setPage(safePage);
+    resetExpandedState();
+    updateUrl({ page: safePage }, false);
   }
 
   function changeMode(nextMode: ViewMode) {
     setMode(nextMode);
     setDecision("ALL");
     setPage(1);
+    resetExpandedState();
+    updateUrl({ mode: nextMode, decision: "ALL", page: 1 }, false);
   }
 
-  function changeFilter(setter: (value: string) => void, value: string) {
+  function changeFilter(
+    setter: (value: string) => void,
+    key: Exclude<keyof BrowserUrlState, "mode" | "page">,
+    value: string,
+  ) {
     setter(value);
     setPage(1);
+    resetExpandedState();
+    updateUrl({ [key]: value, page: 1 }, key === "query");
   }
 
   const selectClass =
@@ -422,7 +640,7 @@ export function EvaluationBrowser({
             />
             <input
               value={query}
-              onChange={(event) => changeFilter(setQuery, event.target.value)}
+              onChange={(event) => changeFilter(setQuery, "query", event.target.value)}
               placeholder="搜尋編號、名稱、型態或進化名稱"
               className="min-h-11 w-full rounded-lg border bg-[var(--surface)] pl-10 pr-3 text-base"
             />
@@ -431,7 +649,7 @@ export function EvaluationBrowser({
             <span className="sr-only">保留狀態</span>
             <select
               value={decision}
-              onChange={(event) => changeFilter(setDecision, event.target.value)}
+              onChange={(event) => changeFilter(setDecision, "decision", event.target.value)}
               className={selectClass}
             >
               <option value="ALL">所有保留狀態</option>
@@ -448,7 +666,7 @@ export function EvaluationBrowser({
             <span className="sr-only">世代</span>
             <select
               value={generation}
-              onChange={(event) => changeFilter(setGeneration, event.target.value)}
+              onChange={(event) => changeFilter(setGeneration, "generation", event.target.value)}
               className={selectClass}
             >
               <option value="ALL">所有世代</option>
@@ -463,7 +681,7 @@ export function EvaluationBrowser({
             <span className="sr-only">地區</span>
             <select
               value={region}
-              onChange={(event) => changeFilter(setRegion, event.target.value)}
+              onChange={(event) => changeFilter(setRegion, "region", event.target.value)}
               className={selectClass}
             >
               <option value="ALL">所有地區</option>
@@ -478,7 +696,7 @@ export function EvaluationBrowser({
             <span className="sr-only">用途</span>
             <select
               value={valueFilter}
-              onChange={(event) => changeFilter(setValueFilter, event.target.value)}
+              onChange={(event) => changeFilter(setValueFilter, "valueFilter", event.target.value)}
               className={selectClass}
             >
               <option value="ALL">所有用途</option>
@@ -493,7 +711,7 @@ export function EvaluationBrowser({
             <span className="sr-only">型態／版本</span>
             <select
               value={variant}
-              onChange={(event) => changeFilter(setVariant, event.target.value)}
+              onChange={(event) => changeFilter(setVariant, "variant", event.target.value)}
               className={selectClass}
             >
               <option value="ALL">所有型態／版本</option>
@@ -508,7 +726,7 @@ export function EvaluationBrowser({
             <span className="sr-only">排序</span>
             <select
               value={sort}
-              onChange={(event) => changeFilter(setSort, event.target.value)}
+              onChange={(event) => changeFilter(setSort, "sort", event.target.value)}
               className={selectClass}
             >
               <option value="DEX_ASC">圖鑑編號升冪</option>
@@ -525,7 +743,7 @@ export function EvaluationBrowser({
               <span className="sr-only">資料新鮮度</span>
               <select
                 value={freshness}
-                onChange={(event) => changeFilter(setFreshness, event.target.value)}
+                onChange={(event) => changeFilter(setFreshness, "freshness", event.target.value)}
                 className={selectClass}
               >
                 <option value="ALL">所有新鮮度</option>
@@ -537,7 +755,7 @@ export function EvaluationBrowser({
               <span className="sr-only">資料維護狀態</span>
               <select
                 value={reviewed}
-                onChange={(event) => changeFilter(setReviewed, event.target.value)}
+                onChange={(event) => changeFilter(setReviewed, "reviewed", event.target.value)}
                 className={selectClass}
               >
                 <option value="ALL">所有審核狀態</option>
@@ -562,13 +780,13 @@ export function EvaluationBrowser({
                   ? families.length
                   : mode === "POKEDEX"
                     ? forms.length
-                    : forms.flatMap((form) => form.variants).length}{" "}
+                    : filteredAuditRows.length}{" "}
                 {totalLabel}
               </>
             )}
           </p>
           <div className="flex flex-wrap items-center gap-3">
-            <PaginationControls page={activePage} pageCount={pageCount} onPageChange={setPage} />
+            <PaginationControls page={activePage} pageCount={pageCount} onPageChange={changePage} />
             <a
               href="/exports/pokemon-go-retention-001-151.xlsx"
               className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[var(--primary)] px-4 text-sm font-bold text-[var(--primary-contrast)] transition hover:brightness-95"
@@ -581,31 +799,43 @@ export function EvaluationBrowser({
         <p className="mt-3 text-xs leading-5 text-[var(--muted)]">{zhTw.disclaimer}</p>
       </div>
 
-      {loading ? (
-        <section
-          className="surface rounded-2xl p-6"
-          aria-busy="true"
-          aria-live="polite"
-          data-testid="home-data-loading"
-        >
-          <p className="font-black">正在載入保留指南資料…</p>
-          <p className="mt-2 text-sm text-[var(--muted)]">
-            搜尋與篩選框已可先使用，家族資料載入後會顯示結果。
-          </p>
-        </section>
-      ) : mode === "FAMILY" ? (
-        <FamilyOverviewTable
-          families={visibleFamilyRows}
-          expandedFamilies={expandedFamilies}
-          expandedForms={expandedItems}
-          onToggleFamily={toggleFamily}
-          onToggleForm={toggleItem}
-        />
-      ) : mode === "POKEDEX" ? (
-        <QuickOverview forms={visibleQuickForms} expanded={expandedItems} onToggle={toggleItem} />
-      ) : (
-        <DataAuditTable rows={visibleAuditRows} expanded={expandedItems} onToggle={toggleItem} />
-      )}
+      <div ref={resultsTopRef} className="scroll-mt-24">
+        {loading ? (
+          <section
+            className="surface rounded-2xl p-6"
+            aria-busy="true"
+            aria-live="polite"
+            data-testid="home-data-loading"
+          >
+            <p className="font-black">正在載入保留指南資料…</p>
+            <p className="mt-2 text-sm text-[var(--muted)]">
+              搜尋與篩選框已可先使用，家族資料載入後會顯示結果。
+            </p>
+          </section>
+        ) : mode === "FAMILY" ? (
+          <FamilyOverviewTable
+            families={visibleFamilyRows}
+            expandedFamilies={expandedFamilies}
+            expandedForms={expandedItems}
+            onToggleFamily={toggleFamily}
+            onToggleForm={toggleItem}
+          />
+        ) : mode === "POKEDEX" ? (
+          <QuickOverview forms={visibleQuickForms} expanded={expandedItems} onToggle={toggleItem} />
+        ) : (
+          <DataAuditTable
+            rows={visibleAuditRows}
+            expanded={expandedItems}
+            onToggle={toggleItem}
+            loading={auditLoading}
+          />
+        )}
+      </div>
+      {pageCount > 1 ? (
+        <div className="flex justify-center border-t pt-4">
+          <PaginationControls page={activePage} pageCount={pageCount} onPageChange={changePage} />
+        </div>
+      ) : null}
     </section>
   );
 }

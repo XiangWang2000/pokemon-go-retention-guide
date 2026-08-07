@@ -34,6 +34,16 @@ export function FamilyMemberPanel({
         </div>
       ) : null}
 
+      {family.detailsLoaded === false ? (
+        <div
+          className="rounded-xl border bg-[var(--surface)] p-4 text-sm text-[var(--muted)]"
+          data-testid="family-detail-loading"
+          aria-live="polite"
+        >
+          正在載入 IV、版本、來源與完整論證資料…
+        </div>
+      ) : null}
+
       <div className="grid gap-3">
         {family.members.map((member) => {
           const form = member.form;
@@ -119,7 +129,9 @@ export function FamilyMemberPanel({
                   {member.memberSummaryZhTw}
                 </p>
               </div>
-              {expanded ? <FormDetailPanel form={form} panelId={detailId} /> : null}
+              {expanded && family.detailsLoaded !== false ? (
+                <FormDetailPanel form={form} panelId={detailId} />
+              ) : null}
             </article>
           );
         })}

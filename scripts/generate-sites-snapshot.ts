@@ -12,6 +12,7 @@ import {
 import { prisma } from "../src/lib/prisma";
 import { DATA_VERSION } from "../src/config/release";
 import { buildHomeSnapshot } from "../src/presentation/home-snapshot";
+import type { HomeRuntimeSnapshot } from "../src/presentation/home-snapshot";
 
 const root = process.cwd();
 const siteDataDirectory = path.join(root, "site-data");
@@ -63,46 +64,93 @@ function latestIso(values: Array<string | null | undefined>) {
 }
 
 function buildRuntimeHome(home: ReturnType<typeof buildHomeSnapshot>) {
+  const lazyIvLabel = "展開後載入 IV 建議";
   return {
-    ...home,
+    schemaVersion: 2,
+    dataAsOf: home.dataAsOf,
     families: home.families.map((family) => ({
-      ...family,
+      familyId: family.familyId,
+      familyKey: family.familyKey,
+      familyNameZhTw: family.familyNameZhTw,
+      dexRangeZhTw: family.dexRangeZhTw,
+      regionHintZhTw: family.regionHintZhTw,
+      branchCount: family.branchCount,
+      isBatchTruncated: family.isBatchTruncated,
       members: family.members.map((member) => ({
-        ...member,
+        roles: member.roles,
+        roleLabelsZhTw: member.roleLabelsZhTw,
+        mainUseZhTw: member.mainUseZhTw,
+        memberSummaryZhTw: member.memberSummaryZhTw,
+        ivShortLabels: [lazyIvLabel],
+        ivRecommendations: [],
+        isRoot: member.isRoot,
+        isIntermediate: member.isIntermediate,
+        isTerminal: member.isTerminal,
+        hasIndependentUse: member.hasIndependentUse,
         form: {
-          ...member.form,
-          variants: member.form.variants.map((variant) => ({
-            ...variant,
-            row: {
-              ...variant.row,
-              // The homepage already contains the computed conclusions. Full source
-              // and rule-trace evidence remains available on the variant detail route.
-              sources: [],
-              traces: [],
-              raw: variant.row.raw.map((raw) => ({
-                id: raw.id,
-                category: raw.category,
-                league: raw.league,
-                rank: raw.rank,
-                tier: raw.tier,
-                rating: raw.rating,
-                rawNotes: raw.rawNotes,
-              })),
-              categoryStatuses: variant.row.categoryStatuses.map((status) => ({
-                category: status.category,
-                status: status.status,
-                provenance: status.provenance,
-                materialToDecision: status.materialToDecision,
-                pveUseLevel: status.pveUseLevel,
-                assessmentDisposition: status.assessmentDisposition,
-                summaryZhTw: status.summaryZhTw,
-              })),
-            },
-          })),
+          formId: member.form.formId,
+          speciesId: member.form.speciesId,
+          familyKey: member.form.familyKey,
+          dexNumber: member.form.dexNumber,
+          nameEn: member.form.nameEn,
+          nameZhTw: member.form.nameZhTw,
+          formNameEn: member.form.formNameEn,
+          formNameZhTw: member.form.formNameZhTw,
+          regionKey: member.form.regionKey,
+          evolvesFromFormId: member.form.evolvesFromFormId,
+          evolutionFamilyNotesZhTw: member.form.evolutionFamilyNotesZhTw,
+          evolutionPaths: [],
+          types: member.form.types,
+          aliases: member.form.aliases,
+          evolutionNames: member.form.evolutionNames,
+          variants: [],
+          variantKeys: member.form.variantKeys,
+          releasedVariantKeys: member.form.releasedVariantKeys,
+          pvp: member.form.pvp,
+          pve: member.form.pve,
+          gym: member.form.gym,
+          megaMax: member.form.megaMax,
+          decision: member.form.decision,
+          decisionReason: member.form.decisionReason,
+          ivRecommendations: [],
+          ivShortLabels: [lazyIvLabel],
+          ivDirection: lazyIvLabel,
+          primaryUses: member.form.primaryUses,
+          primaryUseKeys: member.form.primaryUseKeys,
+          hasRocketUse: member.form.hasRocketUse,
+          hasEvolutionUse: member.form.hasEvolutionUse,
+          hasDataIssues: member.form.hasDataIssues,
+          reviewed: member.form.reviewed,
+          updatedAt: member.form.updatedAt,
+          detailsLoaded: false,
         },
       })),
+      releasedVariantKeys: family.releasedVariantKeys,
+      pvp: family.pvp,
+      pve: family.pve,
+      gym: family.gym,
+      megaMax: family.megaMax,
+      familyValue: family.familyValue,
+      retentionStrategy: family.retentionStrategy,
+      primaryRetentionTargets: family.primaryRetentionTargets,
+      primaryTargetSummaryZhTw: family.primaryTargetSummaryZhTw,
+      preEvolutionActionZhTw: family.preEvolutionActionZhTw,
+      handlingSummaryZhTw: family.handlingSummaryZhTw,
+      actionSummaryZhTw: family.actionSummaryZhTw,
+      ivShortLabels: [],
+      ivRecommendations: [],
+      ivSummaryZhTw: lazyIvLabel,
+      primaryUses: family.primaryUses,
+      holdReasons: family.holdReasons,
+      notices: family.notices,
+      hasDataIssues: family.hasDataIssues,
+      hasCriticalDataIssues: family.hasCriticalDataIssues,
+      updatedAt: family.updatedAt,
+      minDexNumber: family.minDexNumber,
+      maxDexNumber: family.maxDexNumber,
+      detailsLoaded: false,
     })),
-  } as unknown as ReturnType<typeof buildHomeSnapshot>;
+  } satisfies HomeRuntimeSnapshot;
 }
 
 async function tableCounts() {

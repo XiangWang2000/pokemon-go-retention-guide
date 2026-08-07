@@ -9,6 +9,18 @@ import { RetentionDecisionBadge } from "./retention-decision-badge";
 import { SummaryCell } from "./summary-cell";
 import { VariantBadges } from "./variant-badges";
 
+function LazyDetailNotice() {
+  return (
+    <div
+      className="border-t bg-[var(--surface-muted)]/45 p-4 text-sm text-[var(--muted)]"
+      data-testid="lazy-detail-loading"
+      aria-live="polite"
+    >
+      正在載入 IV、版本、來源與完整論證資料…
+    </div>
+  );
+}
+
 export function QuickOverview({
   forms,
   expanded,
@@ -88,7 +100,11 @@ export function QuickOverview({
                 </div>
               </div>
               {isExpanded ? (
-                <FormDetailPanel form={form} panelId={`form-detail-mobile-${form.formId}`} />
+                form.detailsLoaded === false ? (
+                  <LazyDetailNotice />
+                ) : (
+                  <FormDetailPanel form={form} panelId={`form-detail-mobile-${form.formId}`} />
+                )
               ) : null}
             </article>
           );
@@ -180,10 +196,14 @@ export function QuickOverview({
                   {isExpanded ? (
                     <tr>
                       <td colSpan={7} className="border-b bg-[var(--surface-muted)]/45 p-0">
-                        <FormDetailPanel
-                          form={form}
-                          panelId={`form-detail-desktop-${form.formId}`}
-                        />
+                        {form.detailsLoaded === false ? (
+                          <LazyDetailNotice />
+                        ) : (
+                          <FormDetailPanel
+                            form={form}
+                            panelId={`form-detail-desktop-${form.formId}`}
+                          />
+                        )}
                       </td>
                     </tr>
                   ) : null}

@@ -1,10 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { AlertTriangle, CheckCircle2, CircleDot, Send } from "lucide-react";
 import { EvaluationBrowser } from "@/components/evaluation-browser";
 import { DATA_VERSION_DATE_ZH_TW } from "@/config/release";
-import type { HomeSnapshot } from "@/presentation/home-snapshot";
+import type { DashboardRow } from "@/lib/data";
+import type { FamilyOverview } from "@/presentation/family-overview";
+import type { HomeFamilyDetailResponse, HomeRuntimeSnapshot } from "@/presentation/home-snapshot";
 import type { HomeSummary } from "@/presentation/home-summary";
 
 const strategyLabels = {
@@ -15,7 +17,11 @@ const strategyLabels = {
 } as const;
 
 export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummary | null }) {
-  const [home, setHome] = useState<HomeSnapshot | null>(null);
+  const [home, setHome] = useState<HomeRuntimeSnapshot | null>(null);
+  const [familyDetails, setFamilyDetails] = useState<Record<string, FamilyOverview>>({});
+  const [familyDetailLoading, setFamilyDetailLoading] = useState<Set<string>>(new Set());
+  const [auditRows, setAuditRows] = useState<DashboardRow[] | null>(null);
+  const [auditLoading, setAuditLoading] = useState(false);
   const [loadError, setLoadError] = useState(false);
   useEffect(() => {
     const controller = new AbortController();
@@ -25,7 +31,7 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
     })
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json() as Promise<HomeSnapshot>;
+        return response.json() as Promise<HomeRuntimeSnapshot>;
       })
       .then((payload) => {
         setHome(payload);
@@ -37,7 +43,51 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
       });
     return () => controller.abort();
   }, []);
-  const families = home?.families ?? [];
+  const families = useMemo(
+    () => home?.families.map((family) => familyDetails[family.familyId] ?? family) ?? [],
+    [familyDetails, home],
+  );
+
+  const loadFamilyDetails = useCallback(
+    (familyId: string) => {
+      const family = home?.families.find((item) => item.familyId === familyId);
+      if (!family || familyDetails[familyId] || familyDetailLoading.has(familyId)) return;
+      setFamilyDetailLoading((current) => new Set(current).add(familyId));
+      fetch(`/api/home?scope=family&familyId=${encodeURIComponent(familyId)}`, {
+        cache: "no-store",
+      })
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json() as Promise<HomeFamilyDetailResponse>;
+        })
+        .then((payload) => {
+          setFamilyDetails((current) => ({ ...current, [familyId]: payload.family }));
+        })
+        .catch(() => setLoadError(true))
+        .finally(() => {
+          setFamilyDetailLoading((current) => {
+            const next = new Set(current);
+            next.delete(familyId);
+            return next;
+          });
+        });
+    },
+    [familyDetailLoading, familyDetails, home],
+  );
+
+  const loadAuditRows = useCallback(() => {
+    if (auditRows || auditLoading) return;
+    setAuditLoading(true);
+    fetch("/api/home?scope=audit", { cache: "no-store" })
+      .then((response) => {
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        return response.json() as Promise<DashboardRow[]>;
+      })
+      .then((payload) => setAuditRows(payload))
+      .catch(() => setLoadError(true))
+      .finally(() => setAuditLoading(false));
+  }, [auditLoading, auditRows]);
+
   const isLoading = !home && !loadError;
   const initialCounts = initialSummary?.strategyCounts;
   const stats = [
@@ -117,6 +167,10 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
         families={families}
         referenceDate={home?.dataAsOf ?? initialSummary?.dataAsOf ?? "2026-08-06T00:00:00+08:00"}
         loading={isLoading}
+        auditRows={auditRows}
+        auditLoading={auditLoading}
+        onLoadAuditRows={loadAuditRows}
+        onLoadFamilyDetails={loadFamilyDetails}
       />
     </div>
   );
