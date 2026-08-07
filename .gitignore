@@ -18,3 +18,24 @@ prisma/dev.db-journal
 *.tsbuildinfo
 ~$*.xlsx
 
+# Local packaging and temporary output
+.codex-site-package/
+.tmp/
+*.tar.gz
+*.zip
+
+# Local databases and SQLite sidecars
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+
+# Environment variants (keep the committed template)
+.env.*
+!.env.example
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+

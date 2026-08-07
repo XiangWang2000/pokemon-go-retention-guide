@@ -238,7 +238,7 @@ npm run build:local
 
 ### Excel 匯出
 
-首頁「匯出 Excel」下載 `/exports/pokemon-go-retention-001-060.xlsx`；檔案由 `npm run sites:snapshot` 從本機可信資料庫預先產生，舊 `/api/export` 會以 307 轉址到同一檔案。內容包含：
+首頁「匯出 Excel」下載 `/exports/pokemon-go-retention-001-151.xlsx`；檔案由 `npm run sites:snapshot` 從本機可信資料庫預先產生，舊 `/api/export` 會以 307 轉址到同一檔案。內容包含：
 
 1. 寶可夢型態
 2. 評估總覽

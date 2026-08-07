@@ -29,7 +29,7 @@ dev.db
        ├─ site-data/sources.json
        ├─ site-data/changes.json
        ├─ site-data/manifest.json
-       └─ public/exports/pokemon-go-retention-001-090.xlsx
+       └─ public/exports/pokemon-go-retention-001-151.xlsx
               │
               └─ Vinext → Cloudflare Worker／Sites
 ```
@@ -95,7 +95,7 @@ npm run build
 ExcelJS 只在本機 snapshot 產生流程與測試執行，不進入 Worker runtime。首頁直接下載：
 
 ```text
-/exports/pokemon-go-retention-001-090.xlsx
+/exports/pokemon-go-retention-001-151.xlsx
 ```
 
 舊 `/api/export` 以 307 轉址保留相容性。這避免 Worker runtime 的 Node stream、記憶體、CPU 與 bundle 風險，同時保留十張繁中工作表、超連結、日期、穩定 ID、凍結列與自動篩選。
