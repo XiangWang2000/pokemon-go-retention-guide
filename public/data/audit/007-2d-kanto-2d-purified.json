@@ -18,7 +18,9 @@
       "fromFormId": "007-kanto",
       "toFormId": "008-kanto",
       "requiresEvent": false,
-      "verifiedAt": null
+      "verifiedAt": null,
+      "isEvolutionStub": false,
+      "targetUseLevel": null
     }
   ],
   "types": [
@@ -37,26 +39,26 @@
   "releaseStatus": "UNKNOWN",
   "releaseVerifiedAt": null,
   "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
-  "decision": "HOLD_FOR_NOW",
-  "assessmentDisposition": "TRUE_DATA_PENDING",
+  "decision": "TRANSFER_CANDIDATE",
+  "assessmentDisposition": "NO_SIGNIFICANT_USE",
   "provenance": "DATA_UNAVAILABLE",
-  "confidence": "LOW",
+  "confidence": "MEDIUM",
   "dataStatus": "UNKNOWN_RELEASE_STATUS",
-  "reviewStatus": "DATA_PENDING",
+  "reviewStatus": "RESOLVED",
   "reviewIssues": [
     {
       "id": "recalibrate-issue-007-kanto-purified",
       "issueType": "MATERIAL_DATA_GAP",
-      "messageZhTw": "真正待補資料：此版本仍有可能改變保留結論的關鍵缺口。",
-      "affectsFinalDecision": true,
-      "provisionalDecision": "HOLD_FOR_NOW",
-      "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-      "lastResearchedAt": "2026-08-05T10:00:00.000Z"
+      "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "affectsFinalDecision": false,
+      "provisionalDecision": "TRANSFER_CANDIDATE",
+      "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "lastResearchedAt": "2026-08-07T16:00:00.000Z"
     }
   ],
-  "missingDataSummaryZhTw": "無法判斷，暫時不要傳。",
-  "reviewed": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
+  "reviewed": true,
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
@@ -66,7 +68,7 @@
   "maxBattleSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
-  "recommendedIvStrategyZhTw": "無法判斷，暫時不要傳；資料補齊前不以 IV 大量篩除。",
+  "recommendedIvStrategyZhTw": "沒有主要用途時，不因 100% 自動產生保留理由。",
   "ivRecommendations": [
     {
       "id": "iv-global-great",
@@ -421,7 +423,7 @@
       "updatedAt": "2026-07-17T16:45:17.000Z"
     }
   ],
-  "reasonZhTw": "真正待補資料：無法判斷，暫時不要傳；請補齊主要來源後再重算。",
+  "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
   "evaluationId": "evaluation-007-kanto-purified-2026.07.28-v5",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
@@ -572,11 +574,11 @@
   "sources": [],
   "traces": [
     {
-      "ruleKey": "MATERIAL_UNCERTAINTY",
-      "priority": 1000,
+      "ruleKey": "NO_MAJOR_USE",
+      "priority": 100,
       "matched": true,
-      "resultDecision": "HOLD_FOR_NOW",
-      "explanationZhTw": "真正待補資料：無法判斷，暫時不要傳；請補齊主要來源後再重算。"
+      "resultDecision": "TRANSFER_CANDIDATE",
+      "explanationZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。"
     }
   ],
   "moves": []

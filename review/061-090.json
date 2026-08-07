@@ -1,7 +1,7 @@
 {
   "batch": "061-090",
-  "updatedAt": "2026-07-30",
-  "dataVersion": "2026.07.31-r11",
+  "updatedAt": "2026-08-08",
+  "dataVersion": "2026.08.08-r16",
   "rulesVersion": "2026.08.06-v7",
   "status": "ACCEPTED",
   "counts": {
@@ -10,9 +10,9 @@
     "battleVariants": 164,
     "families": 19,
     "strategyCounts": {
-      "KEEP_TARGETS": 7,
-      "SELECTIVE_KEEP": 2,
-      "MOSTLY_TRANSFER": 10,
+      "KEEP_TARGETS": 5,
+      "SELECTIVE_KEEP": 6,
+      "MOSTLY_TRANSFER": 8,
       "HOLD_FOR_NOW": 0
     },
     "openIssues": 5,
@@ -25,7 +25,7 @@
       "061-kanto",
       "062-kanto"
     ],
-    "isBatchTruncated": false,
+    "isBatchTruncated": true,
     "result": "PASS"
   },
   "versionBoundaries": {
@@ -68,7 +68,7 @@
     {
       "familyId": "KANTO_FAMILY_060:060-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留蚊香泳士（PvP（GL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留蚊香蝌蚪（有用途的暗影版），以及蚊香君（有用途的暗影版），以及蚊香泳士（PvP（GL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -91,7 +91,7 @@
     },
     {
       "familyId": "KANTO_FAMILY_072:072-kanto",
-      "strategy": "KEEP_TARGETS",
+      "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留毒刺水母（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
@@ -109,7 +109,7 @@
     },
     {
       "familyId": "KANTO_FAMILY_077:077-kanto",
-      "strategy": "KEEP_TARGETS",
+      "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留烈焰馬（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
@@ -122,7 +122,7 @@
     {
       "familyId": "KANTO_FAMILY_079:079-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留呆殼獸（PvP（UL Rank≤100）、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留呆呆獸（有用途的暗影版），以及呆殼獸（PvP（UL Rank≤100）、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -133,8 +133,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_081:081-kanto",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留小磁怪（有用途的暗影版），以及三合一磁怪（有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -145,8 +145,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_083:083-galar",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留大蔥鴨（符合條件個體）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -157,7 +157,7 @@
     },
     {
       "familyId": "KANTO_FAMILY_086:086-kanto",
-      "strategy": "KEEP_TARGETS",
+      "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留白海獅（PvP（GL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },

@@ -18,7 +18,18 @@
       "fromFormId": "079-kanto",
       "toFormId": "080-kanto",
       "requiresEvent": false,
-      "verifiedAt": "2026-07-30T15:45:00.000Z"
+      "verifiedAt": "2026-07-30T15:45:00.000Z",
+      "isEvolutionStub": false,
+      "targetUseLevel": null
+    },
+    {
+      "id": "evolution-cross-079-kanto-199-kanto",
+      "fromFormId": "079-kanto",
+      "toFormId": "199-kanto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-07T16:00:00.000Z",
+      "isEvolutionStub": true,
+      "targetUseLevel": "SPECIAL_USE"
     }
   ],
   "types": [
@@ -31,7 +42,9 @@
   ],
   "evolutionNames": [
     "Slowbro",
-    "呆殼獸"
+    "呆殼獸",
+    "Slowking",
+    "呆呆王"
   ],
   "variantKey": "SHADOW",
   "isReleased": true,
@@ -47,7 +60,7 @@
   "reviewIssues": [],
   "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "GL（超級聯盟） Overall #646；招式 CONFUSION／PSYSHOCK／WATER_PULSE",
   "pveSummaryZhTw": "特殊用途。呆呆王：可進化為呆呆王；與呆殼獸分支分開判斷。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",

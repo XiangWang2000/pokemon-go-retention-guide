@@ -12,7 +12,17 @@
   "regionKey": "KANTO",
   "evolvesFromFormId": null,
   "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-cross-113-kanto-242-kanto",
+      "fromFormId": "113-kanto",
+      "toFormId": "242-kanto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-07T16:00:00.000Z",
+      "isEvolutionStub": true,
+      "targetUseLevel": "SPECIAL_USE"
+    }
+  ],
   "types": [
     "NORMAL"
   ],
@@ -20,22 +30,25 @@
     "Chansey",
     "吉利蛋"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "Blissey",
+    "幸福蛋"
+  ],
   "variantKey": "PURIFIED",
   "isReleased": false,
   "releaseStatus": "UNRELEASED",
   "releaseVerifiedAt": "2026-08-03T08:30:00.000Z",
   "notesZhTw": "淨化不可逆；Purified 沒有獨立榜單，不因淨化本身升格為必留。",
   "decision": "TRANSFER_CANDIDATE",
-  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+  "assessmentDisposition": "NO_SIGNIFICANT_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+  "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",

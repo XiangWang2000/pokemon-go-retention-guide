@@ -569,7 +569,9 @@ export function calculateFamilyValue(
       member.form.variants.filter(isUsefulVariant).flatMap((variant) => {
         if (["MEGA", "MEGA_X", "MEGA_Y"].includes(variant.row.variantKey)) return ["MEGA"];
         if (["DYNAMAX", "GIGANTAMAX"].includes(variant.row.variantKey)) return ["MAX"];
-        if (variant.row.variantKey === "SHADOW") return ["SHADOW"];
+        if (variant.row.variantKey === "SHADOW" && variant.primaryUseKeys.includes("SHADOW_PVE")) {
+          return ["SHADOW"];
+        }
         return variant.primaryUseKeys.map(normalizedUseKey);
       }),
     ),
@@ -820,9 +822,11 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
   const terminals = members.filter((member) => member.isTerminal);
   const minDexNumber = Math.min(...forms.map((form) => form.dexNumber));
   const maxDexNumber = Math.max(...forms.map((form) => form.dexNumber));
-  const isBatchTruncated = forms.some((form) =>
-    /範圍外|可繼續進化/.test(form.evolutionFamilyNotesZhTw),
-  );
+  const isBatchTruncated =
+    forms.some((form) => /範圍外|可繼續進化/.test(form.evolutionFamilyNotesZhTw)) ||
+    forms.some((form) =>
+      form.evolutionPaths.some((path) => Number(path.toFormId.slice(0, 3)) > 151),
+    );
   const regionKeys = unique(forms.map((form) => form.regionKey));
   const regionHintZhTw =
     regionKeys.length === 1 && regionKeys[0] !== "KANTO" ? regionLabel[regionKeys[0]!] : null;

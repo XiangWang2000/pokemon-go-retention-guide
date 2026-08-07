@@ -52,7 +52,7 @@ describe("#031～#060 批次與跨批次家族", () => {
     expect(
       families.filter((item) => item.members.some((member) => member.form.formId === "031-kanto")),
     ).toHaveLength(1);
-    expect(family.retentionStrategy).toBe("KEEP_TARGETS");
+    expect(family.retentionStrategy).toBe("SELECTIVE_KEEP");
   });
 
   it("普通、極巨、超極巨喵喵分開，只有超極巨版本套用 Max 結論", () => {
@@ -94,7 +94,7 @@ describe("#031～#060 批次與跨批次家族", () => {
       retentionStrategy: "KEEP_TARGETS",
     });
     expect(familyByMember("060-kanto")).toMatchObject({
-      isBatchTruncated: false,
+      isBatchTruncated: true,
       retentionStrategy: "KEEP_TARGETS",
     });
     expect(familyByMember("047-kanto").retentionStrategy).not.toBe("HOLD_FOR_NOW");
@@ -128,8 +128,8 @@ describe("#031～#060 批次與跨批次家族", () => {
       }),
     );
     expect(html).toContain("立即處理結論");
-    expect(html).toContain("要保留的條件");
-    expect(html).toContain("其他普通重複可傳");
+    expect(html).toContain("要保留");
+    expect(html).toContain("不符合上述用途的普通重複個體可傳");
     expect(html).toContain("主要用途標籤");
     expect(html).not.toContain("數字 IV 門檻");
   });

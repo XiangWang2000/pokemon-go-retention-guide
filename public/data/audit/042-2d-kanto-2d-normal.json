@@ -12,7 +12,17 @@
   "regionKey": "KANTO",
   "evolvesFromFormId": "041-kanto",
   "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-cross-042-kanto-169-kanto",
+      "fromFormId": "042-kanto",
+      "toFormId": "169-kanto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-07T16:00:00.000Z",
+      "isEvolutionStub": true,
+      "targetUseLevel": null
+    }
+  ],
   "types": [
     "POISON",
     "FLYING"
@@ -21,7 +31,10 @@
     "Golbat",
     "大嘴蝠"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "Crobat",
+    "叉字蝠"
+  ],
   "variantKey": "NORMAL",
   "isReleased": true,
   "releaseStatus": "RELEASED",
@@ -37,16 +50,16 @@
     {
       "id": "r8-issue-042-kanto-normal",
       "issueType": "RULE_NOT_COVERED",
-      "messageZhTw": "真正待補資料：此版本仍有可能改變保留結論的關鍵缺口。",
+      "messageZhTw": "真正待補資料：缺少關鍵用途欄位的可重現證據；影響此版本的實戰用途與保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
       "affectsFinalDecision": true,
       "provisionalDecision": "HOLD_FOR_NOW",
-      "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-      "lastResearchedAt": "2026-07-30T08:00:00.000Z"
+      "suggestedResearchActionZhTw": "真正待補資料：缺少關鍵用途欄位的可重現證據；影響此版本的實戰用途與保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
+      "lastResearchedAt": "2026-08-07T16:00:00.000Z"
     }
   ],
   "missingDataSummaryZhTw": "無法判斷，暫時不要傳。",
   "reviewed": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "GL（超級聯盟） Overall #260；招式 WING_ATTACK／POISON_FANG／SHADOW_BALL；UL（高級聯盟） Overall #546；招式 WING_ATTACK／AIR_CUTTER／SHADOW_BALL",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",

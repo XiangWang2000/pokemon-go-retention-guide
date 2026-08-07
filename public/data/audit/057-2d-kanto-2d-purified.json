@@ -12,7 +12,17 @@
   "regionKey": "KANTO",
   "evolvesFromFormId": "056-kanto",
   "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-cross-057-kanto-979-kanto",
+      "fromFormId": "057-kanto",
+      "toFormId": "979-kanto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-07T16:00:00.000Z",
+      "isEvolutionStub": true,
+      "targetUseLevel": "USABLE_OR_BUDGET"
+    }
+  ],
   "types": [
     "FIGHTING"
   ],
@@ -20,7 +30,10 @@
     "Primeape",
     "火爆猴"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "Annihilape",
+    "棄世猴"
+  ],
   "variantKey": "PURIFIED",
   "isReleased": true,
   "releaseStatus": "RELEASED",
@@ -35,7 +48,7 @@
   "reviewIssues": [],
   "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",

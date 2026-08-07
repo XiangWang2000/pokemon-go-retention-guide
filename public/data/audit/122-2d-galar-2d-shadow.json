@@ -12,7 +12,17 @@
   "regionKey": "GALAR",
   "evolvesFromFormId": null,
   "evolutionFamilyNotesZhTw": "可進化為後續 #866 踏冰人偶；關都魔牆人偶不使用此路徑，只留少量伽勒爾候選。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-cross-122-galar-866-kanto",
+      "fromFormId": "122-galar",
+      "toFormId": "866-kanto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-07T16:00:00.000Z",
+      "isEvolutionStub": true,
+      "targetUseLevel": "SPECIAL_USE"
+    }
+  ],
   "types": [
     "ICE",
     "PSYCHIC"
@@ -23,7 +33,10 @@
     "Mr. Mime",
     "魔牆人偶"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "Mr. Rime",
+    "踏冰人偶"
+  ],
   "variantKey": "SHADOW",
   "isReleased": false,
   "releaseStatus": "UNRELEASED",
@@ -38,7 +51,7 @@
   "reviewIssues": [],
   "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
   "reviewed": true,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
   "pveSummaryZhTw": "特殊用途。踏冰人偶：伽勒爾魔牆人偶可進化為踏冰人偶；屬於分支／特殊用途候選。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",

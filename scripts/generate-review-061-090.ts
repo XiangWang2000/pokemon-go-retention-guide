@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { getDashboardRows, getReviewIssues } from "../src/lib/data-prisma";
 import { prisma } from "../src/lib/prisma";
+import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
 import { RULES_VERSION } from "../src/rules/rules";
@@ -25,8 +26,8 @@ async function main() {
   const machamp = rows.filter((row) => row.formId === "068-kanto");
   const payload = {
     batch: "061-090",
-    updatedAt: "2026-07-30",
-    dataVersion: "2026.07.31-r11",
+    updatedAt: DATA_VERSION_DATE_ISO,
+    dataVersion: DATA_VERSION,
     rulesVersion: RULES_VERSION,
     status: issues.some((issue) => issue.affectsFinalDecision)
       ? "ACCEPTED_WITH_SCOPED_HOLDS"
@@ -46,7 +47,11 @@ async function main() {
       isBatchTruncated: poliwagFamily?.isBatchTruncated,
       result:
         poliwagFamily?.members.map((member) => member.form.formId).join(",") ===
-          "060-kanto,061-kanto,062-kanto" && !poliwagFamily.isBatchTruncated
+          "060-kanto,061-kanto,062-kanto" &&
+        poliwagFamily.isBatchTruncated &&
+        poliwagFamily.members.some((member) =>
+          member.form.evolutionPaths.some((path) => path.toFormId === "186-kanto"),
+        )
           ? "PASS"
           : "FAIL",
     },

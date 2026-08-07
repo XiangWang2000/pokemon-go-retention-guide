@@ -26,7 +26,9 @@
             "fromFormId": "041-kanto",
             "toFormId": "042-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-07-30T08:00:00.000Z"
+            "verifiedAt": "2026-07-30T08:00:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
           }
         ],
         "types": [
@@ -63,7 +65,9 @@
                   "fromFormId": "041-kanto",
                   "toFormId": "042-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -93,16 +97,16 @@
                 {
                   "id": "r8-issue-041-kanto-normal",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-30T08:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -302,7 +306,9 @@
                   "fromFormId": "041-kanto",
                   "toFormId": "042-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -332,16 +338,16 @@
                 {
                   "id": "r8-issue-041-kanto-shadow",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-30T08:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -541,7 +547,9 @@
                   "fromFormId": "041-kanto",
                   "toFormId": "042-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -570,7 +578,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -770,7 +778,9 @@
                   "fromFormId": "041-kanto",
                   "toFormId": "042-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -799,7 +809,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1018,7 +1028,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1049,7 +1059,17 @@
         "regionKey": "KANTO",
         "evolvesFromFormId": "041-kanto",
         "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-        "evolutionPaths": [],
+        "evolutionPaths": [
+          {
+            "id": "evolution-cross-042-kanto-169-kanto",
+            "fromFormId": "042-kanto",
+            "toFormId": "169-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": null
+          }
+        ],
         "types": [
           "POISON",
           "FLYING"
@@ -1058,7 +1078,10 @@
           "Golbat",
           "大嘴蝠"
         ],
-        "evolutionNames": [],
+        "evolutionNames": [
+          "Crobat",
+          "叉字蝠"
+        ],
         "variants": [
           {
             "row": {
@@ -1075,7 +1098,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "041-kanto",
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-042-kanto-169-kanto",
+                  "fromFormId": "042-kanto",
+                  "toFormId": "169-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": null
+                }
+              ],
               "types": [
                 "POISON",
                 "FLYING"
@@ -1084,7 +1117,10 @@
                 "Golbat",
                 "大嘴蝠"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Crobat",
+                "叉字蝠"
+              ],
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -1100,16 +1136,16 @@
                 {
                   "id": "r8-issue-042-kanto-normal",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "真正待補資料：此版本仍有可能改變保留結論的關鍵缺口。",
+                  "messageZhTw": "真正待補資料：缺少關鍵用途欄位的可重現證據；影響此版本的實戰用途與保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
                   "affectsFinalDecision": true,
                   "provisionalDecision": "HOLD_FOR_NOW",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-30T08:00:00.000Z"
+                  "suggestedResearchActionZhTw": "真正待補資料：缺少關鍵用途欄位的可重現證據；影響此版本的實戰用途與保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "無法判斷，暫時不要傳。",
               "reviewed": false,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #260；招式 WING_ATTACK／POISON_FANG／SHADOW_BALL；UL（高級聯盟） Overall #546；招式 WING_ATTACK／AIR_CUTTER／SHADOW_BALL",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1387,7 +1423,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "041-kanto",
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-042-kanto-169-kanto",
+                  "fromFormId": "042-kanto",
+                  "toFormId": "169-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": null
+                }
+              ],
               "types": [
                 "POISON",
                 "FLYING"
@@ -1396,7 +1442,10 @@
                 "Golbat",
                 "大嘴蝠"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Crobat",
+                "叉字蝠"
+              ],
               "variantKey": "SHADOW",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -1412,16 +1461,16 @@
                 {
                   "id": "r8-issue-042-kanto-shadow",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "真正待補資料：此版本仍有可能改變保留結論的關鍵缺口。",
+                  "messageZhTw": "真正待補資料：缺少關鍵用途欄位的可重現證據；影響暗影用途與普通個體保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
                   "affectsFinalDecision": true,
                   "provisionalDecision": "HOLD_FOR_NOW",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-30T08:00:00.000Z"
+                  "suggestedResearchActionZhTw": "真正待補資料：缺少關鍵用途欄位的可重現證據；影響暗影用途與普通個體保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "無法判斷，暫時不要傳。",
               "reviewed": false,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #325；招式 WING_ATTACK／POISON_FANG／SHADOW_BALL；UL（高級聯盟） Overall #565；招式 WING_ATTACK／AIR_CUTTER／SHADOW_BALL",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1699,7 +1748,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "041-kanto",
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-042-kanto-169-kanto",
+                  "fromFormId": "042-kanto",
+                  "toFormId": "169-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": null
+                }
+              ],
               "types": [
                 "POISON",
                 "FLYING"
@@ -1708,7 +1767,10 @@
                 "Golbat",
                 "大嘴蝠"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Crobat",
+                "叉字蝠"
+              ],
               "variantKey": "PURIFIED",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -1723,7 +1785,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1917,7 +1979,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "041-kanto",
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-042-kanto-169-kanto",
+                  "fromFormId": "042-kanto",
+                  "toFormId": "169-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": null
+                }
+              ],
               "types": [
                 "POISON",
                 "FLYING"
@@ -1926,7 +1998,10 @@
                 "Golbat",
                 "大嘴蝠"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Crobat",
+                "叉字蝠"
+              ],
               "variantKey": "DYNAMAX",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
@@ -1941,7 +2016,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2161,7 +2236,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": true,
         "reviewed": false,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2208,7 +2283,7 @@
   "primaryTargetSummaryZhTw": "無主要保留目標",
   "preEvolutionActionZhTw": "前階不因可以進化而自動保留。",
   "handlingSummaryZhTw": "先不要大量傳送；後續進化待補、尚未推出版本、關鍵資料待補，目前每個成員至少留 1 隻最佳候選，補齊資料後再判斷。",
-  "actionSummaryZhTw": "關鍵資料可能改變保留策略，目前暫時保留（後續進化待補、尚未推出版本、關鍵資料待補）：真正待補資料：此版本仍有可能改變保留結論的關鍵缺口。",
+  "actionSummaryZhTw": "關鍵資料可能改變保留策略，目前暫時保留（後續進化待補、尚未推出版本、關鍵資料待補）：真正待補資料：缺少關鍵用途欄位的可重現證據；影響此版本的實戰用途與保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。；真正待補資料：缺少關鍵用途欄位的可重現證據；影響暗影用途與普通個體保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
   "ivShortLabels": [],
   "ivRecommendations": [],
   "ivSummaryZhTw": "IV不構成額外保留理由",
@@ -2232,7 +2307,7 @@
   ],
   "hasDataIssues": true,
   "hasCriticalDataIssues": true,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "minDexNumber": 41,
   "maxDexNumber": 42,
   "detailsLoaded": true

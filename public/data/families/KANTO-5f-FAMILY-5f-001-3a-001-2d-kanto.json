@@ -26,7 +26,9 @@
             "fromFormId": "001-kanto",
             "toFormId": "002-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-07-14T16:00:00.000Z"
+            "verifiedAt": "2026-07-14T16:00:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
           }
         ],
         "types": [
@@ -63,7 +65,9 @@
                   "fromFormId": "001-kanto",
                   "toFormId": "002-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z"
+                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -93,16 +97,16 @@
                 {
                   "id": "issue-001-kanto-normal-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -365,7 +369,9 @@
                   "fromFormId": "001-kanto",
                   "toFormId": "002-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z"
+                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -395,16 +401,16 @@
                 {
                   "id": "issue-001-kanto-shadow-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -667,7 +673,9 @@
                   "fromFormId": "001-kanto",
                   "toFormId": "002-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z"
+                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -697,16 +705,16 @@
                 {
                   "id": "issue-001-kanto-purified-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
@@ -943,7 +951,9 @@
                   "fromFormId": "001-kanto",
                   "toFormId": "002-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z"
+                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -973,16 +983,16 @@
                 {
                   "id": "issue-001-kanto-dynamax-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -1251,7 +1261,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1488,7 +1498,9 @@
             "fromFormId": "002-kanto",
             "toFormId": "003-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-07-14T16:00:00.000Z"
+            "verifiedAt": "2026-07-14T16:00:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
           }
         ],
         "types": [
@@ -1525,7 +1537,9 @@
                   "fromFormId": "002-kanto",
                   "toFormId": "003-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z"
+                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -1555,16 +1569,16 @@
                 {
                   "id": "issue-002-kanto-normal-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -1836,7 +1850,9 @@
                   "fromFormId": "002-kanto",
                   "toFormId": "003-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z"
+                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -1866,16 +1882,16 @@
                 {
                   "id": "issue-002-kanto-shadow-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -2147,7 +2163,9 @@
                   "fromFormId": "002-kanto",
                   "toFormId": "003-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z"
+                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -2177,16 +2195,16 @@
                 {
                   "id": "issue-002-kanto-purified-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
@@ -2432,7 +2450,9 @@
                   "fromFormId": "002-kanto",
                   "toFormId": "003-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z"
+                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -2462,16 +2482,16 @@
                 {
                   "id": "issue-002-kanto-dynamax-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -2749,7 +2769,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -3031,16 +3051,16 @@
                 {
                   "id": "issue-003-kanto-normal-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -3587,16 +3607,16 @@
                 {
                   "id": "issue-003-kanto-shadow-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -4081,16 +4101,16 @@
                 {
                   "id": "issue-003-kanto-purified-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
@@ -4382,16 +4402,16 @@
                 {
                   "id": "issue-003-kanto-mega-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響MEGA 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響MEGA 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -4780,16 +4800,16 @@
                 {
                   "id": "issue-003-kanto-dynamax-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -5104,16 +5124,16 @@
                 {
                   "id": "issue-003-kanto-gigantamax-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響GIGANTAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響GIGANTAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -5686,7 +5706,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -6180,7 +6200,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "minDexNumber": 1,
   "maxDexNumber": 3,
   "detailsLoaded": true

@@ -12,7 +12,17 @@
   "regionKey": "KANTO",
   "evolvesFromFormId": "116-kanto",
   "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-cross-117-kanto-230-kanto",
+      "fromFormId": "117-kanto",
+      "toFormId": "230-kanto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-07T16:00:00.000Z",
+      "isEvolutionStub": true,
+      "targetUseLevel": "SPECIAL_USE"
+    }
+  ],
   "types": [
     "WATER"
   ],
@@ -20,7 +30,10 @@
     "Seadra",
     "海刺龍"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "Kingdra",
+    "刺龍王"
+  ],
   "variantKey": "DYNAMAX",
   "isReleased": false,
   "releaseStatus": "UNRELEASED",
@@ -35,7 +48,7 @@
   "reviewIssues": [],
   "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
   "reviewed": true,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",

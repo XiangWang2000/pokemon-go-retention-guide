@@ -18,7 +18,9 @@
       "fromFormId": "013-kanto",
       "toFormId": "014-kanto",
       "requiresEvent": false,
-      "verifiedAt": "2026-07-14T16:00:00.000Z"
+      "verifiedAt": "2026-07-14T16:00:00.000Z",
+      "isEvolutionStub": false,
+      "targetUseLevel": null
     }
   ],
   "types": [
@@ -48,16 +50,16 @@
     {
       "id": "issue-013-kanto-shadow-2026.07.28-v5-optional-data-missing-0",
       "issueType": "OPTIONAL_DATA_MISSING",
-      "messageZhTw": "此欄位待補，但不影響普通個體結論",
+      "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
       "affectsFinalDecision": false,
       "provisionalDecision": "TRANSFER_CANDIDATE",
-      "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-      "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+      "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "lastResearchedAt": "2026-08-07T16:00:00.000Z"
     }
   ],
   "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",

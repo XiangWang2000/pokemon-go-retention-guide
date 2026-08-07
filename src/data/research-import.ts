@@ -290,6 +290,27 @@ async function importOfficialResearch(
           verifiedAt: path.verificationStatus === "VERIFIED" ? checkedAt : null,
         },
       });
+    } else {
+      const [fromForm, toForm] = await Promise.all([
+        prisma.pokemonForm.findUnique({ where: { id: path.fromFormId }, select: { id: true } }),
+        prisma.pokemonForm.findUnique({ where: { id: path.toFormId }, select: { id: true } }),
+      ]);
+      if (!fromForm || !toForm) {
+        throw new Error(
+          `正式資料包含 dangling evolution path：${path.fromFormId}->${path.toFormId}`,
+        );
+      }
+      await prisma.evolutionPath.create({
+        data: {
+          id: `evolution-research-${path.fromFormId}-${path.toFormId}`,
+          fromFormId: path.fromFormId,
+          toFormId: path.toFormId,
+          evolutionMethodZhTw: path.evolutionMethodZhTw,
+          availabilityNotesZhTw: path.availabilityNotesZhTw,
+          requiresEvent: path.requiresEvent,
+          verifiedAt: path.verificationStatus === "VERIFIED" ? checkedAt : null,
+        },
+      });
     }
   }
 

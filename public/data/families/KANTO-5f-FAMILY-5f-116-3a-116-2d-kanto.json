@@ -1,11 +1,11 @@
 {
   "familyId": "KANTO_FAMILY_116:116-kanto",
   "familyKey": "KANTO_FAMILY_116",
-  "familyNameZhTw": "海刺龍家族",
+  "familyNameZhTw": "墨海馬家族（本批至海刺龍）",
   "dexRangeZhTw": "#116～#117",
   "regionHintZhTw": null,
   "branchCount": 1,
-  "isBatchTruncated": false,
+  "isBatchTruncated": true,
   "members": [
     {
       "form": {
@@ -26,7 +26,9 @@
             "fromFormId": "116-kanto",
             "toFormId": "117-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-03T08:30:00.000Z"
+            "verifiedAt": "2026-08-03T08:30:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
           }
         ],
         "types": [
@@ -62,7 +64,9 @@
                   "fromFormId": "116-kanto",
                   "toFormId": "117-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T08:30:00.000Z"
+                  "verifiedAt": "2026-08-03T08:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -91,16 +95,16 @@
                 {
                   "id": "r12-issue-116-kanto-normal",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-08-03T08:30:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。刺龍王：可進化為刺龍王；保留少量分支進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -275,7 +279,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -302,7 +308,9 @@
                   "fromFormId": "116-kanto",
                   "toFormId": "117-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T08:30:00.000Z"
+                  "verifiedAt": "2026-08-03T08:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -331,16 +339,16 @@
                 {
                   "id": "r12-issue-116-kanto-shadow",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-08-03T08:30:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。刺龍王：可進化為刺龍王；保留少量分支進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -515,7 +523,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -542,7 +552,9 @@
                   "fromFormId": "116-kanto",
                   "toFormId": "117-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T08:30:00.000Z"
+                  "verifiedAt": "2026-08-03T08:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -570,7 +582,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -770,7 +782,9 @@
                   "fromFormId": "116-kanto",
                   "toFormId": "117-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T08:30:00.000Z"
+                  "verifiedAt": "2026-08-03T08:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -798,7 +812,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1014,12 +1028,14 @@
         "primaryUses": [
           "後續進化"
         ],
-        "primaryUseKeys": [],
+        "primaryUseKeys": [
+          "EVOLUTION"
+        ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1029,7 +1045,7 @@
         "進化素材"
       ],
       "mainUseZhTw": "進化素材",
-      "memberSummaryZhTw": "墨海馬雖可進化，但目前沒有已確認的主要保留目標；普通重複個體大多可傳。",
+      "memberSummaryZhTw": "主要保留墨海馬；依該用途的具體條件篩選。",
       "ivShortLabels": [],
       "ivRecommendations": [],
       "isRoot": true,
@@ -1050,7 +1066,17 @@
         "regionKey": "KANTO",
         "evolvesFromFormId": "116-kanto",
         "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-        "evolutionPaths": [],
+        "evolutionPaths": [
+          {
+            "id": "evolution-cross-117-kanto-230-kanto",
+            "fromFormId": "117-kanto",
+            "toFormId": "230-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": "SPECIAL_USE"
+          }
+        ],
         "types": [
           "WATER"
         ],
@@ -1058,7 +1084,10 @@
           "Seadra",
           "海刺龍"
         ],
-        "evolutionNames": [],
+        "evolutionNames": [
+          "Kingdra",
+          "刺龍王"
+        ],
         "variants": [
           {
             "row": {
@@ -1075,7 +1104,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "116-kanto",
               "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-117-kanto-230-kanto",
+                  "fromFormId": "117-kanto",
+                  "toFormId": "230-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                }
+              ],
               "types": [
                 "WATER"
               ],
@@ -1083,7 +1122,10 @@
                 "Seadra",
                 "海刺龍"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Kingdra",
+                "刺龍王"
+              ],
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -1099,16 +1141,16 @@
                 {
                   "id": "r12-issue-117-kanto-normal",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-08-03T08:30:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #1041；招式 DRAGON_BREATH／HYDRO_PUMP／DRAGON_PULSE；UL（高級聯盟） Overall #806；招式 DRAGON_BREATH／HYDRO_PUMP／DRAGON_PULSE",
               "pveSummaryZhTw": "特殊用途。刺龍王：可進化為刺龍王；與海刺龍本體用途分開判斷。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1367,7 +1409,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -1388,7 +1432,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "116-kanto",
               "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-117-kanto-230-kanto",
+                  "fromFormId": "117-kanto",
+                  "toFormId": "230-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                }
+              ],
               "types": [
                 "WATER"
               ],
@@ -1396,7 +1450,10 @@
                 "Seadra",
                 "海刺龍"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Kingdra",
+                "刺龍王"
+              ],
               "variantKey": "SHADOW",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -1412,16 +1469,16 @@
                 {
                   "id": "r12-issue-117-kanto-shadow",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-08-03T08:30:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #1089；招式 DRAGON_BREATH／DRAGON_PULSE／HYDRO_PUMP；UL（高級聯盟） Overall #824；招式 DRAGON_BREATH／DRAGON_PULSE／HYDRO_PUMP",
               "pveSummaryZhTw": "特殊用途。刺龍王：可進化為刺龍王；與海刺龍本體用途分開判斷。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1680,7 +1737,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -1701,7 +1760,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "116-kanto",
               "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-117-kanto-230-kanto",
+                  "fromFormId": "117-kanto",
+                  "toFormId": "230-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                }
+              ],
               "types": [
                 "WATER"
               ],
@@ -1709,7 +1778,10 @@
                 "Seadra",
                 "海刺龍"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Kingdra",
+                "刺龍王"
+              ],
               "variantKey": "PURIFIED",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -1724,7 +1796,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1918,7 +1990,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "116-kanto",
               "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-117-kanto-230-kanto",
+                  "fromFormId": "117-kanto",
+                  "toFormId": "230-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                }
+              ],
               "types": [
                 "WATER"
               ],
@@ -1926,7 +2008,10 @@
                 "Seadra",
                 "海刺龍"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Kingdra",
+                "刺龍王"
+              ],
               "variantKey": "DYNAMAX",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
@@ -1941,7 +2026,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2158,12 +2243,14 @@
         "primaryUses": [
           "後續進化"
         ],
-        "primaryUseKeys": [],
+        "primaryUseKeys": [
+          "EVOLUTION"
+        ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2173,7 +2260,7 @@
         "無獨立用途"
       ],
       "mainUseZhTw": "無獨立用途",
-      "memberSummaryZhTw": "海刺龍沒有獨立用途；普通重複個體大多可傳。",
+      "memberSummaryZhTw": "主要保留海刺龍；依該用途的具體條件篩選。",
       "ivShortLabels": [],
       "ivRecommendations": [],
       "isRoot": false,
@@ -2204,13 +2291,40 @@
     "label": "—",
     "tone": "NONE"
   },
-  "familyValue": "LOW",
-  "retentionStrategy": "MOSTLY_TRANSFER",
-  "primaryRetentionTargets": [],
-  "primaryTargetSummaryZhTw": "無主要保留目標",
-  "preEvolutionActionZhTw": "前階不因可以進化而自動保留。",
-  "handlingSummaryZhTw": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
-  "actionSummaryZhTw": "家族目前沒有明確主要PvP、PvE、Mega、Max或道館用途；排除收藏價值後，普通重複個體大多可傳。",
+  "familyValue": "HIGH",
+  "retentionStrategy": "KEEP_TARGETS",
+  "primaryRetentionTargets": [
+    {
+      "formId": "116-kanto",
+      "memberNameZhTw": "墨海馬",
+      "displayNameZhTw": "墨海馬",
+      "useKeys": [
+        "EVOLUTION"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW"
+      ],
+      "variantSpecificOnly": false
+    },
+    {
+      "formId": "117-kanto",
+      "memberNameZhTw": "海刺龍",
+      "displayNameZhTw": "海刺龍",
+      "useKeys": [
+        "EVOLUTION"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW"
+      ],
+      "variantSpecificOnly": false
+    }
+  ],
+  "primaryTargetSummaryZhTw": "墨海馬、海刺龍",
+  "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
+  "handlingSummaryZhTw": "保留墨海馬（有用途的暗影版），以及海刺龍（有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留墨海馬、海刺龍；前階主要作符合條件的進化候選。",
   "ivShortLabels": [],
   "ivRecommendations": [],
   "ivSummaryZhTw": "IV不構成額外保留理由",
@@ -2221,7 +2335,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "minDexNumber": 116,
   "maxDexNumber": 117,
   "detailsLoaded": true

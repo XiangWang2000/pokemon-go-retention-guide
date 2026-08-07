@@ -18,7 +18,9 @@
       "fromFormId": "041-kanto",
       "toFormId": "042-kanto",
       "requiresEvent": false,
-      "verifiedAt": "2026-07-30T08:00:00.000Z"
+      "verifiedAt": "2026-07-30T08:00:00.000Z",
+      "isEvolutionStub": false,
+      "targetUseLevel": null
     }
   ],
   "types": [
@@ -48,16 +50,16 @@
     {
       "id": "r8-issue-041-kanto-normal",
       "issueType": "RULE_NOT_COVERED",
-      "messageZhTw": "此欄位待補，但不影響普通個體結論",
+      "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
       "affectsFinalDecision": false,
       "provisionalDecision": "TRANSFER_CANDIDATE",
-      "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-      "lastResearchedAt": "2026-07-30T08:00:00.000Z"
+      "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "lastResearchedAt": "2026-08-07T16:00:00.000Z"
     }
   ],
   "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",

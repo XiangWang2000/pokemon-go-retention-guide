@@ -1,11 +1,11 @@
 {
   "familyId": "KANTO_FAMILY_108:108-kanto",
   "familyKey": "KANTO_FAMILY_108",
-  "familyNameZhTw": "大舌頭家族",
+  "familyNameZhTw": "大舌頭家族（本批至大舌頭）",
   "dexRangeZhTw": "#108",
   "regionHintZhTw": null,
   "branchCount": 1,
-  "isBatchTruncated": false,
+  "isBatchTruncated": true,
   "members": [
     {
       "form": {
@@ -20,7 +20,17 @@
         "regionKey": "KANTO",
         "evolvesFromFormId": null,
         "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-        "evolutionPaths": [],
+        "evolutionPaths": [
+          {
+            "id": "evolution-cross-108-kanto-463-kanto",
+            "fromFormId": "108-kanto",
+            "toFormId": "463-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": "SPECIAL_USE"
+          }
+        ],
         "types": [
           "NORMAL"
         ],
@@ -28,7 +38,10 @@
           "Lickitung",
           "大舌頭"
         ],
-        "evolutionNames": [],
+        "evolutionNames": [
+          "Lickilicky",
+          "大舌舔"
+        ],
         "variants": [
           {
             "row": {
@@ -45,7 +58,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": null,
               "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-108-kanto-463-kanto",
+                  "fromFormId": "108-kanto",
+                  "toFormId": "463-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                }
+              ],
               "types": [
                 "NORMAL"
               ],
@@ -53,7 +76,10 @@
                 "Lickitung",
                 "大舌頭"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Lickilicky",
+                "大舌舔"
+              ],
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -68,7 +94,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #124；招式 LICK／BODY_SLAM／POWER_WHIP",
               "pveSummaryZhTw": "特殊用途。大舌舔：可進化為大舌舔；主要是特定 PvP 候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -288,7 +314,8 @@
               "後續進化"
             ],
             "primaryUseKeys": [
-              "GREAT_LEAGUE"
+              "GREAT_LEAGUE",
+              "EVOLUTION"
             ],
             "ivRecommendations": [
               {
@@ -345,7 +372,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": null,
               "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-108-kanto-463-kanto",
+                  "fromFormId": "108-kanto",
+                  "toFormId": "463-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                }
+              ],
               "types": [
                 "NORMAL"
               ],
@@ -353,7 +390,10 @@
                 "Lickitung",
                 "大舌頭"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Lickilicky",
+                "大舌舔"
+              ],
               "variantKey": "SHADOW",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
@@ -368,7 +408,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。大舌舔：可進化為大舌舔；主要是特定 PvP 候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -562,7 +602,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": null,
               "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-108-kanto-463-kanto",
+                  "fromFormId": "108-kanto",
+                  "toFormId": "463-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                }
+              ],
               "types": [
                 "NORMAL"
               ],
@@ -570,22 +620,25 @@
                 "Lickitung",
                 "大舌頭"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Lickilicky",
+                "大舌舔"
+              ],
               "variantKey": "PURIFIED",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
               "releaseVerifiedAt": "2026-08-03T08:30:00.000Z",
               "notesZhTw": "淨化不可逆；Purified 沒有獨立榜單，不因淨化本身升格為必留。",
               "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -779,7 +832,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": null,
               "evolutionFamilyNotesZhTw": "重要後續進化仍在 #120 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-108-kanto-463-kanto",
+                  "fromFormId": "108-kanto",
+                  "toFormId": "463-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                }
+              ],
               "types": [
                 "NORMAL"
               ],
@@ -787,7 +850,10 @@
                 "Lickitung",
                 "大舌頭"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Lickilicky",
+                "大舌舔"
+              ],
               "variantKey": "DYNAMAX",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
@@ -802,7 +868,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1054,13 +1120,14 @@
           "後續進化"
         ],
         "primaryUseKeys": [
-          "GREAT_LEAGUE"
+          "GREAT_LEAGUE",
+          "EVOLUTION"
         ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1135,15 +1202,16 @@
     "label": "—",
     "tone": "NONE"
   },
-  "familyValue": "MEDIUM",
-  "retentionStrategy": "SELECTIVE_KEEP",
+  "familyValue": "HIGH",
+  "retentionStrategy": "KEEP_TARGETS",
   "primaryRetentionTargets": [
     {
       "formId": "108-kanto",
       "memberNameZhTw": "大舌頭",
       "displayNameZhTw": "大舌頭",
       "useKeys": [
-        "GREAT_LEAGUE"
+        "GREAT_LEAGUE",
+        "EVOLUTION"
       ],
       "variantKeys": [
         "NORMAL"
@@ -1154,7 +1222,7 @@
   "primaryTargetSummaryZhTw": "大舌頭",
   "preEvolutionActionZhTw": "沒有僅作進化素材的前階成員。",
   "handlingSummaryZhTw": "保留大舌頭（PvP（GL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留大舌頭；價值集中於特定版本或條件。沒有僅作進化素材的前階成員。其餘普通重複個體大多可傳。IV：GL：Rank≤100。",
+  "actionSummaryZhTw": "主要保留大舌頭；沒有僅作進化素材的前階成員。IV：GL：Rank≤100。",
   "ivShortLabels": [
     "GL：Rank≤100"
   ],
@@ -1203,7 +1271,7 @@
   ],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "minDexNumber": 108,
   "maxDexNumber": 108,
   "detailsLoaded": true

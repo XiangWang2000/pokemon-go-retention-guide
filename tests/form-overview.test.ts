@@ -57,8 +57,8 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
     expect(charmander.decision).toBe("CONDITIONAL_KEEP");
     expect(
       charmander.variants.filter((variant) => variant.row.decision === "HOLD_FOR_NOW"),
-    ).toHaveLength(1);
-    expect(charmander.decisionReason).toContain("暫時保留");
+    ).toHaveLength(0);
+    expect(charmander.decisionReason).not.toContain("暫時保留");
   });
 
   it("資料狀態只輸出短版繁體中文，不洩漏內部 Enum 或長說明", () => {

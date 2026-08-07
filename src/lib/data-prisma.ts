@@ -86,7 +86,13 @@ export async function getDashboardRows() {
         pokemonForm: {
           include: {
             species: true,
-            evolutionPathsFrom: { include: { toForm: { include: { species: true } } } },
+            evolutionPathsFrom: {
+              include: {
+                toForm: {
+                  include: { species: true },
+                },
+              },
+            },
           },
         },
         rawEvaluationData: { include: { source: true }, orderBy: { checkedAt: "desc" } },
@@ -132,6 +138,8 @@ export async function getDashboardRows() {
         toFormId: path.toFormId,
         requiresEvent: path.requiresEvent,
         verifiedAt: path.verifiedAt?.toISOString() ?? null,
+        isEvolutionStub: path.toForm.isEvolutionStub,
+        targetUseLevel: path.toForm.evolutionTargetUseLevel,
       })),
       types: parseArray(variant.pokemonForm.types),
       aliases: parseArray(variant.pokemonForm.searchAliases),

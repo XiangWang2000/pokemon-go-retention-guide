@@ -40,6 +40,7 @@
     "data:recompute:001-151": "tsx scripts/recompute-001-151.ts",
     "data:backfill-iv": "tsx scripts/backfill-structured-iv.ts",
     "review:generate": "tsx scripts/generate-review.ts && tsx scripts/generate-review-031-060.ts && tsx scripts/generate-review-061-090.ts && tsx scripts/generate-review-091-120.ts && tsx scripts/generate-review-121-151.ts",
+    "review:validate": "tsx scripts/validate-review-consistency.ts",
     "review:remediation": "tsx scripts/generate-remediation-report.ts"
   },
   "dependencies": {

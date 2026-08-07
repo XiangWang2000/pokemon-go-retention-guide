@@ -1,11 +1,11 @@
 {
   "familyId": "KANTO_FAMILY_079:079-galar",
   "familyKey": "KANTO_FAMILY_079",
-  "familyNameZhTw": "呆殼獸家族（伽勒爾）",
+  "familyNameZhTw": "呆呆獸家族（本批至呆殼獸）（伽勒爾）",
   "dexRangeZhTw": "#079～#080",
   "regionHintZhTw": "伽勒爾",
   "branchCount": 1,
-  "isBatchTruncated": false,
+  "isBatchTruncated": true,
   "members": [
     {
       "form": {
@@ -26,7 +26,18 @@
             "fromFormId": "079-galar",
             "toFormId": "080-galar",
             "requiresEvent": false,
-            "verifiedAt": "2026-07-30T15:45:00.000Z"
+            "verifiedAt": "2026-07-30T15:45:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
+          },
+          {
+            "id": "evolution-cross-079-galar-199-galar",
+            "fromFormId": "079-galar",
+            "toFormId": "199-galar",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": null
           }
         ],
         "types": [
@@ -40,7 +51,9 @@
         ],
         "evolutionNames": [
           "Slowbro",
-          "呆殼獸"
+          "呆殼獸",
+          "Slowking",
+          "呆呆王"
         ],
         "variants": [
           {
@@ -64,7 +77,18 @@
                   "fromFormId": "079-galar",
                   "toFormId": "080-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T15:45:00.000Z"
+                  "verifiedAt": "2026-07-30T15:45:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-079-galar-199-galar",
+                  "fromFormId": "079-galar",
+                  "toFormId": "199-galar",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -78,7 +102,9 @@
               ],
               "evolutionNames": [
                 "Slowbro",
-                "呆殼獸"
+                "呆殼獸",
+                "Slowking",
+                "呆呆王"
               ],
               "variantKey": "NORMAL",
               "isReleased": true,
@@ -94,7 +120,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #640；招式 CONFUSION／PSYSHOCK／SURF",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -337,7 +363,18 @@
                   "fromFormId": "079-galar",
                   "toFormId": "080-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T15:45:00.000Z"
+                  "verifiedAt": "2026-07-30T15:45:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-079-galar-199-galar",
+                  "fromFormId": "079-galar",
+                  "toFormId": "199-galar",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -351,7 +388,9 @@
               ],
               "evolutionNames": [
                 "Slowbro",
-                "呆殼獸"
+                "呆殼獸",
+                "Slowking",
+                "呆呆王"
               ],
               "variantKey": "SHADOW",
               "isReleased": false,
@@ -367,7 +406,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -567,7 +606,18 @@
                   "fromFormId": "079-galar",
                   "toFormId": "080-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T15:45:00.000Z"
+                  "verifiedAt": "2026-07-30T15:45:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-079-galar-199-galar",
+                  "fromFormId": "079-galar",
+                  "toFormId": "199-galar",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -581,7 +631,9 @@
               ],
               "evolutionNames": [
                 "Slowbro",
-                "呆殼獸"
+                "呆殼獸",
+                "Slowking",
+                "呆呆王"
               ],
               "variantKey": "PURIFIED",
               "isReleased": false,
@@ -589,15 +641,15 @@
               "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
               "notesZhTw": "淨化不可逆；Purified 沒有獨立榜單，不因淨化本身升格為必留。",
               "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -797,7 +849,18 @@
                   "fromFormId": "079-galar",
                   "toFormId": "080-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T15:45:00.000Z"
+                  "verifiedAt": "2026-07-30T15:45:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-079-galar-199-galar",
+                  "fromFormId": "079-galar",
+                  "toFormId": "199-galar",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -811,7 +874,9 @@
               ],
               "evolutionNames": [
                 "Slowbro",
-                "呆殼獸"
+                "呆殼獸",
+                "Slowking",
+                "呆呆王"
               ],
               "variantKey": "DYNAMAX",
               "isReleased": false,
@@ -827,7 +892,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1045,7 +1110,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1130,7 +1195,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #488；招式 CONFUSION／DRAIN_PUNCH／SLUDGE_BOMB；UL（高級聯盟） Overall #299；招式 CONFUSION／DRAIN_PUNCH／SLUDGE_BOMB",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1443,7 +1508,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1655,15 +1720,15 @@
               "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
               "notesZhTw": "淨化不可逆；Purified 沒有獨立榜單，不因淨化本身升格為必留。",
               "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1883,7 +1948,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2101,7 +2166,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2155,7 +2220,7 @@
   "notices": [],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "minDexNumber": 79,
   "maxDexNumber": 80,
   "detailsLoaded": true

@@ -2,6 +2,7 @@ import "dotenv/config";
 import { readFile } from "node:fs/promises";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
+import { loadCrossGenerationEvolutionData } from "../src/data/cross-generation-evolution";
 import { RULES_VERSION } from "../src/rules/rules";
 
 const prisma = new PrismaClient({
@@ -20,6 +21,7 @@ async function main() {
     categoryEvaluations,
     issues,
     ivRecommendations,
+    evolutionPaths,
   ] = await Promise.all([
     prisma.pokemonSpecies.findMany(),
     prisma.pokemonForm.findMany(),
@@ -33,12 +35,24 @@ async function main() {
     prisma.categoryEvaluation.findMany({ include: { sourceReferences: true } }),
     prisma.dataIssue.findMany({ where: { status: "OPEN" } }),
     prisma.ivRecommendation.findMany(),
+    prisma.evolutionPath.findMany({
+      select: { id: true, fromFormId: true, toFormId: true },
+    }),
   ]);
+  const evolutionData = await loadCrossGenerationEvolutionData();
   const formIds = new Set(forms.map((item) => item.id));
   const variantIds = new Set(variants.map((item) => item.id));
   const sourceIds = new Set(sources.map((item) => item.id));
   const familyKeys = new Set(species.map((item) => item.familyKey));
   const speciesIds = new Set(species.map((item) => item.id));
+  const formsById = new Map(forms.map((item) => [item.id, item]));
+  const variantCountByForm = new Map<string, number>();
+  for (const variant of variants) {
+    variantCountByForm.set(
+      variant.pokemonFormId,
+      (variantCountByForm.get(variant.pokemonFormId) ?? 0) + 1,
+    );
+  }
 
   for (const item of species) {
     if (item.dexNumber < 1 || item.dexNumber > 9999) errors.push(`${item.id} 的圖鑑編號不合法。`);
@@ -47,6 +61,53 @@ async function main() {
     if (!form.formNameEn || !form.formNameZhTw) errors.push(`${form.id} 缺少中英文型態名稱。`);
     if (form.evolvesFromFormId && !formIds.has(form.evolvesFromFormId))
       errors.push(`${form.id} 引用不存在的進化前型態。`);
+  }
+  const evolutionEdges = new Set<string>();
+  for (const path of evolutionPaths) {
+    if (!formIds.has(path.fromFormId) || !formIds.has(path.toFormId)) {
+      errors.push(`${path.id} has a dangling evolution endpoint.`);
+    }
+    if (path.fromFormId === path.toFormId) {
+      errors.push(`${path.id} is a self-referential evolution path.`);
+    }
+    const edge = `${path.fromFormId}->${path.toFormId}`;
+    if (evolutionEdges.has(edge)) errors.push(`Duplicate evolution path: ${edge}.`);
+    evolutionEdges.add(edge);
+  }
+  const manifestTargetIds = new Set(
+    evolutionData.targets.map(
+      (target) => `${String(target.dexNumber).padStart(3, "0")}-${target.formKey.toLowerCase()}`,
+    ),
+  );
+  for (const target of evolutionData.targets) {
+    const targetId = `${String(target.dexNumber).padStart(3, "0")}-${target.formKey.toLowerCase()}`;
+    const form = formsById.get(targetId);
+    if (!form) {
+      errors.push(`Missing cross-generation evolution target: ${targetId}.`);
+      continue;
+    }
+    if (form.evolvesFromFormId !== target.fromFormId) {
+      errors.push(`${targetId} has an unexpected evolvesFromFormId.`);
+    }
+    if (form.isEvolutionStub && (variantCountByForm.get(targetId) ?? 0) !== 0) {
+      errors.push(`${targetId} is marked as a stub but has battle variants.`);
+    }
+    if (!evolutionEdges.has(`${target.fromFormId}->${targetId}`)) {
+      errors.push(`Missing manifest evolution path: ${target.fromFormId}->${targetId}.`);
+    }
+  }
+  for (const path of evolutionData.paths) {
+    if (!formIds.has(path.fromFormId)) {
+      errors.push(`Missing manifest evolution source: ${path.fromFormId}.`);
+    }
+    if (!manifestTargetIds.has(path.toFormId)) {
+      errors.push(`Manifest evolution target is not declared: ${path.toFormId}.`);
+    }
+    if (!evolutionEdges.has(`${path.fromFormId}->${path.toFormId}`)) {
+      errors.push(
+        `Manifest evolution path is absent from the database: ${path.fromFormId}->${path.toFormId}.`,
+      );
+    }
   }
   for (const item of variants) {
     if (!formIds.has(item.pokemonFormId)) errors.push(`${item.id} 引用不存在的型態。`);
@@ -165,6 +226,7 @@ async function main() {
     "research_notes/battle-091-120.json",
     "research_notes/official-121-151.json",
     "research_notes/battle-121-151.json",
+    "research_notes/cross-generation-evolution-targets.json",
   ]) {
     JSON.parse((await readFile(file, "utf8")).replace(/^\uFEFF/, ""));
   }

@@ -1,7 +1,7 @@
 {
   "batch": "091-120",
-  "updatedAt": "2026-08-03",
-  "dataVersion": "2026.08.03-r12",
+  "updatedAt": "2026-08-08",
+  "dataVersion": "2026.08.08-r16",
   "rulesVersion": "2026.08.06-v7",
   "status": "ACCEPTED",
   "counts": {
@@ -10,9 +10,9 @@
     "battleVariants": 144,
     "families": 20,
     "strategyCounts": {
-      "KEEP_TARGETS": 4,
-      "SELECTIVE_KEEP": 7,
-      "MOSTLY_TRANSFER": 9,
+      "KEEP_TARGETS": 6,
+      "SELECTIVE_KEEP": 9,
+      "MOSTLY_TRANSFER": 5,
       "HOLD_FOR_NOW": 0
     },
     "openIssues": 12,
@@ -78,8 +78,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_095:095-kanto",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留大岩蛇（有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -132,32 +132,32 @@
     },
     {
       "familyId": "KANTO_FAMILY_108:108-kanto",
-      "strategy": "SELECTIVE_KEEP",
+      "strategy": "KEEP_TARGETS",
       "conclusion": "保留大舌頭（PvP（GL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_109:109-kanto",
-      "strategy": "KEEP_TARGETS",
+      "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留雙彈瓦斯（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_111:111-kanto",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留獨角犀牛（有用途的暗影版），以及鑽角犀獸（有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_113:113-kanto",
-      "strategy": "SELECTIVE_KEEP",
+      "strategy": "KEEP_TARGETS",
       "conclusion": "保留吉利蛋（道館防守候選）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_114:114-kanto",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留蔓藤怪（有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -168,8 +168,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_116:116-kanto",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留墨海馬（有用途的暗影版），以及海刺龍（有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -180,7 +180,7 @@
     },
     {
       "familyId": "KANTO_FAMILY_120:120-kanto",
-      "strategy": "KEEP_TARGETS",
+      "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留寶石海星（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     }

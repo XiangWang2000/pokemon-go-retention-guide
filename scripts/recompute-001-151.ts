@@ -12,13 +12,15 @@ import {
   type PveUseLevel,
 } from "../src/rules/battle-assessment";
 import { laterEvolutionUses } from "../src/data/later-evolution-uses";
+import { ensureCrossGenerationEvolutionTargets } from "../src/data/cross-generation-evolution";
+import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
 });
 
-const checkedAt = new Date("2026-08-06T18:00:00+08:00");
+const checkedAt = new Date(`${DATA_VERSION_DATE_ISO}T00:00:00+08:00`);
 const dexMin = 1;
 const dexMax = 151;
 
@@ -219,14 +221,12 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
   };
 }
 
-function buildOutgoing(variants: VariantRecord[]) {
+function buildOutgoing(paths: Array<{ fromFormId: string; toFormId: string }>) {
   const outgoing = new Map<string, string[]>();
-  for (const variant of variants) {
-    for (const path of variant.pokemonForm.evolutionPathsFrom) {
-      const targets = outgoing.get(path.fromFormId) ?? [];
-      targets.push(path.toFormId);
-      outgoing.set(path.fromFormId, targets);
-    }
+  for (const path of paths) {
+    const targets = outgoing.get(path.fromFormId) ?? [];
+    if (!targets.includes(path.toFormId)) targets.push(path.toFormId);
+    outgoing.set(path.fromFormId, targets);
   }
   return outgoing;
 }
@@ -259,6 +259,15 @@ function laterEvolutionAssessment(
   directByVariant: Map<string, DirectAssessment>,
   variantsByForm: Map<string, VariantRecord[]>,
   outgoing: Map<string, string[]>,
+  evolutionTargets: Map<
+    string,
+    {
+      nameZhTw: string;
+      formNameZhTw: string;
+      useLevel: PveUseLevel | null;
+      noteZhTw: string | null;
+    }
+  >,
 ) {
   if (!["NORMAL", "SHADOW"].includes(variant.variantKey)) {
     return {
@@ -291,6 +300,29 @@ function laterEvolutionAssessment(
     };
   }
   if (!descendantUseful.length) {
+    const stubTargets = descendants
+      .map((formId) => evolutionTargets.get(formId))
+      .filter(
+        (
+          target,
+        ): target is {
+          nameZhTw: string;
+          formNameZhTw: string;
+          useLevel: PveUseLevel;
+          noteZhTw: string | null;
+        } => Boolean(target?.useLevel),
+      );
+    const stubTarget = stubTargets.sort((a, b) =>
+      strongestPveUseLevel([b.useLevel]).localeCompare(strongestPveUseLevel([a.useLevel])),
+    )[0];
+    if (stubTarget) {
+      return {
+        hasValue: true,
+        target: stubTarget.nameZhTw,
+        note: stubTarget.noteZhTw ?? "正式後續進化目標；完整戰鬥資料尚未納入目前展示批次。",
+        level: stubTarget.useLevel,
+      };
+    }
     return { hasValue: false, target: null, note: null, level: null };
   }
   const best = descendantUseful
@@ -488,15 +520,103 @@ function safeId(value: string) {
   return value.replace(/[^a-zA-Z0-9_-]/g, "_");
 }
 
+const materialMissingStatuses = new Set([
+  "SOURCE_MISSING",
+  "SOURCE_CONFLICT",
+  "POSSIBLE_SPECIES_MISMATCH",
+  "UNKNOWN_RELEASE_STATUS",
+  "DATA_UNAVAILABLE",
+  "STALE",
+]);
+
+const categoryLabels: Record<string, string> = {
+  PVP: "PvP 排名",
+  PVE: "PvE 用途",
+  ROCKET: "火箭隊用途",
+  GYM: "道館防守",
+  MEGA: "Mega／Primal",
+  MAX_BATTLE: "Max Battle",
+  EVOLUTION_VALUE: "後續進化用途",
+};
+
+function releaseStatusCanAffectDecision(variant: VariantRecord) {
+  return (
+    variant.variantKey === "NORMAL" ||
+    variant.variantKey.startsWith("MEGA") ||
+    variant.variantKey === "GIGANTAMAX"
+  );
+}
+
+function materialGapDetails(variant: VariantRecord) {
+  const missingCategories = variant.categoryEvaluations
+    .filter((item) => item.materialToDecision && materialMissingStatuses.has(item.status))
+    .map((item) => `${categoryLabels[item.category] ?? item.category}（${item.status}）`);
+  const missing = missingCategories.length
+    ? missingCategories.join("、")
+    : variant.rawEvaluationData.length
+      ? "關鍵用途欄位的可重現證據"
+      : "PvP／PvE／火箭隊／道館／Mega／Max 的關鍵原始資料";
+  const affected = missingCategories.length
+    ? missingCategories.map((item) => item.replace(/（.*$/, "")).join("、")
+    : variant.variantKey === "SHADOW"
+      ? "暗影用途與普通個體保留判斷"
+      : "此版本的實戰用途與保留判斷";
+  return { missing, affected };
+}
+
+function materialGapMessage(variant: VariantRecord, assessment: RecalculatedAssessment) {
+  const { missing, affected } = materialGapDetails(variant);
+  const possibleConclusion =
+    assessment.decision === "HOLD_FOR_NOW"
+      ? "補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途"
+      : "補齊後可能改變目前的保留結論";
+  return `真正待補資料：缺少${missing}；影響${affected}；${possibleConclusion}；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。`;
+}
+
+function nonMaterialIssueMessage(variant: VariantRecord, issueType: string) {
+  const scope = variant.variantKey === "NORMAL" ? "普通個體" : `${variant.variantKey} 版本`;
+  const missing =
+    issueType === "RULE_NOT_COVERED"
+      ? "次要規則邊界或非關鍵型態的覆蓋"
+      : issueType === "UNKNOWN_RELEASE_STATUS"
+        ? "次要型態的發佈狀態欄位"
+        : "次要用途或來源欄位";
+  return `此欄位待補，但不影響${scope}結論。缺口：${missing}；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。`;
+}
+
 async function main() {
+  await ensureCrossGenerationEvolutionTargets(prisma, checkedAt);
   const variants = await loadVariants();
+  const [evolutionPaths, evolutionForms] = await Promise.all([
+    prisma.evolutionPath.findMany({ select: { fromFormId: true, toFormId: true } }),
+    prisma.pokemonForm.findMany({
+      select: {
+        id: true,
+        formNameZhTw: true,
+        evolutionTargetUseLevel: true,
+        evolutionTargetNotesZhTw: true,
+        species: { select: { nameZhTw: true } },
+      },
+    }),
+  ]);
   const variantsByForm = new Map<string, VariantRecord[]>();
   for (const variant of variants) {
     const group = variantsByForm.get(variant.pokemonFormId) ?? [];
     group.push(variant);
     variantsByForm.set(variant.pokemonFormId, group);
   }
-  const outgoing = buildOutgoing(variants);
+  const outgoing = buildOutgoing(evolutionPaths);
+  const evolutionTargets = new Map(
+    evolutionForms.map((form) => [
+      form.id,
+      {
+        nameZhTw: form.species.nameZhTw,
+        formNameZhTw: form.formNameZhTw,
+        useLevel: form.evolutionTargetUseLevel as PveUseLevel | null,
+        noteZhTw: form.evolutionTargetNotesZhTw,
+      },
+    ]),
+  );
   const directByVariant = makeDirectMap(variants);
   const assessments = new Map<string, RecalculatedAssessment>();
   const changeLogs: Array<{
@@ -514,7 +634,13 @@ async function main() {
 
   for (const variant of variants) {
     const direct = directByVariant.get(variant.id)!;
-    const later = laterEvolutionAssessment(variant, directByVariant, variantsByForm, outgoing);
+    const later = laterEvolutionAssessment(
+      variant,
+      directByVariant,
+      variantsByForm,
+      outgoing,
+      evolutionTargets,
+    );
     const hasActionableEvidence =
       direct.hasDirectPveValue ||
       direct.hasPvpValue ||
@@ -523,15 +649,24 @@ async function main() {
       direct.hasMaxValue ||
       direct.hasSpecialAcquisition ||
       later.hasValue;
-    const hasCriticalIssue = variant.dataIssues.some(
-      (issue) => issueIsCritical(issue) && issue.issueType !== "RULE_NOT_COVERED",
-    );
+    const hasCriticalIssue =
+      variant.variantKey !== "PURIFIED" &&
+      variant.dataIssues.some(
+        (issue) => issueIsCritical(issue) && issue.issueType !== "RULE_NOT_COVERED",
+      );
     const hasUnresolvedRuleBoundary =
-      variant.dataIssues.some((issue) => issue.issueType === "RULE_NOT_COVERED") &&
+      variant.variantKey !== "PURIFIED" &&
+      variant.dataIssues.some(
+        (issue) => issue.issueType === "RULE_NOT_COVERED" && issue.affectsFinalDecision,
+      ) &&
       !hasResolvedFamilyBoundary(variant, later.hasValue);
     const hasTrueDataGap =
+      variant.variantKey !== "PURIFIED" &&
+      variant.releaseStatus !== "UNRELEASED" &&
       !hasActionableEvidence &&
-      (variant.releaseStatus === "UNKNOWN" || hasCriticalIssue || hasUnresolvedRuleBoundary);
+      ((variant.releaseStatus === "UNKNOWN" && releaseStatusCanAffectDecision(variant)) ||
+        hasCriticalIssue ||
+        hasUnresolvedRuleBoundary);
     const derivedPveLevel = classifyPveUse({
       hasDirectMajorPveValue: direct.hasDirectPveCore,
       hasShadowPveValue: variant.variantKey === "SHADOW" && direct.hasDirectPveCore,
@@ -556,7 +691,7 @@ async function main() {
       direct.hasSpecialAcquisition ||
       later.hasValue;
     const disposition = classifyAssessmentDisposition({
-      releaseStatus: variant.releaseStatus,
+      releaseStatus: variant.variantKey === "PURIFIED" ? "RELEASED" : variant.releaseStatus,
       pveUseLevel,
       hasAnyActionableUse: hasActionableUse && variant.variantKey !== "PURIFIED",
       hasTrueDataGap,
@@ -606,7 +741,7 @@ async function main() {
     const oldEvaluation = variant.retentionEvaluations[0];
     if (oldEvaluation && oldEvaluation.finalDecision !== assessment.decision) {
       changeLogs.push({
-        id: `recalibrate-20260806-decision-${safeId(variant.id)}`,
+        id: `recalibrate-20260808-decision-${safeId(variant.id)}`,
         entityType: "BattleVariant",
         entityId: variant.id,
         fieldName: "decision",
@@ -620,7 +755,7 @@ async function main() {
     }
     if (oldEvaluation && oldEvaluation.assessmentDisposition !== assessment.disposition) {
       changeLogs.push({
-        id: `recalibrate-20260806-disposition-${safeId(variant.id)}`,
+        id: `recalibrate-20260808-disposition-${safeId(variant.id)}`,
         entityType: "BattleVariant",
         entityId: variant.id,
         fieldName: "assessmentDisposition",
@@ -751,23 +886,30 @@ async function main() {
       const assessment = assessments.get(variant.id)!;
       const keepRuleIssue = shouldKeepRuleNotCovered(variant, assessment);
       const criticalIssue = assessment.disposition === "TRUE_DATA_PENDING";
+      let affectingExistingIssue = false;
       for (const issue of variant.dataIssues) {
         const shouldAffect =
           criticalIssue &&
           (issueIsCritical(issue) || issue.issueType === "RULE_NOT_COVERED") &&
           (issue.issueType !== "RULE_NOT_COVERED" || keepRuleIssue);
+        if (shouldAffect) affectingExistingIssue = true;
+        const messageZhTw = shouldAffect
+          ? materialGapMessage(variant, assessment)
+          : nonMaterialIssueMessage(variant, issue.issueType);
         await tx.dataIssue.update({
           where: { id: issue.id },
           data: {
             affectsFinalDecision: shouldAffect,
             provisionalDecision: assessment.decision,
-            messageZhTw: shouldAffect
-              ? "真正待補資料：此版本仍有可能改變保留結論的關鍵缺口。"
-              : "此欄位待補，但不影響普通個體結論",
+            messageZhTw,
+            suggestedActionZhTw: messageZhTw,
+            suggestedResearchActionZhTw: messageZhTw,
+            lastResearchedAt: checkedAt,
           },
         });
       }
-      if (criticalIssue && !variant.dataIssues.some((issue) => issueIsCritical(issue))) {
+      if (criticalIssue && !affectingExistingIssue) {
+        const messageZhTw = materialGapMessage(variant, assessment);
         await tx.dataIssue.upsert({
           where: { id: `recalibrate-issue-${safeId(variant.id)}` },
           create: {
@@ -777,11 +919,11 @@ async function main() {
             issueType: "MATERIAL_DATA_GAP",
             status: "OPEN",
             batchKey: "001-151-recalibration",
-            messageZhTw: "真正待補資料：此版本仍有可能改變保留結論的關鍵缺口。",
+            messageZhTw,
             affectsFinalDecision: true,
             provisionalDecision: assessment.decision,
-            suggestedActionZhTw: "補齊會改變此版本用途判斷的主要來源後，再重新計算。",
-            suggestedResearchActionZhTw: "只針對此版本補來源，不把缺口外推到整個進化家族。",
+            suggestedActionZhTw: messageZhTw,
+            suggestedResearchActionZhTw: messageZhTw,
             lastResearchedAt: checkedAt,
             detectedAt: checkedAt,
           },
@@ -789,14 +931,16 @@ async function main() {
             status: "OPEN",
             affectsFinalDecision: true,
             provisionalDecision: assessment.decision,
-            messageZhTw: "真正待補資料：此版本仍有可能改變保留結論的關鍵缺口。",
+            messageZhTw,
+            suggestedActionZhTw: messageZhTw,
+            suggestedResearchActionZhTw: messageZhTw,
+            lastResearchedAt: checkedAt,
             resolvedAt: null,
           },
         });
       }
     }
-
-    await tx.changeLog.deleteMany({ where: { id: { startsWith: "recalibrate-20260806-" } } });
+    await tx.changeLog.deleteMany({ where: { id: { startsWith: "recalibrate-20260808-" } } });
     if (changeLogs.length) await tx.changeLog.createMany({ data: changeLogs });
   });
 
@@ -813,6 +957,8 @@ async function main() {
   ]);
   const report = {
     scope: `${dexMin}-${dexMax}`,
+    dataVersion: DATA_VERSION,
+    updatedAt: DATA_VERSION_DATE_ISO,
     generatedAt: checkedAt.toISOString(),
     rulesVersion: RULES_VERSION,
     counts: {

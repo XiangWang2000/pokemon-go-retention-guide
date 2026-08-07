@@ -54,10 +54,10 @@ describe("Sites 唯讀 snapshot", () => {
   }, 30_000);
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
-    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.06-r15");
+    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.08-r16");
     expect(siteSnapshotManifest.counts).toMatchObject({
-      pokemonSpecies: 151,
-      pokemonForms: 188,
+      pokemonSpecies: 175,
+      pokemonForms: 213,
       battleVariants: 783,
       rawEvaluationData: 542,
       sourceReferences: 151,
@@ -128,7 +128,7 @@ describe("Sites 唯讀 snapshot", () => {
     const summary = buildHomeSummary(home);
     const html = renderToStaticMarkup(createElement(HomeDataLoader, { initialSummary: summary }));
 
-    expect(html).toContain("資料更新日期：2026/08/06");
+    expect(html).toContain("資料更新日期：2026/08/08");
     expect(html).toContain("搜尋編號、名稱、型態或進化名稱");
     expect(html).toContain("所有世代");
     expect(html).toContain("所有用途");

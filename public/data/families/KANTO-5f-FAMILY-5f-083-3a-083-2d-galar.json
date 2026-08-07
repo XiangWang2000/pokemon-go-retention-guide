@@ -1,11 +1,11 @@
 {
   "familyId": "KANTO_FAMILY_083:083-galar",
   "familyKey": "KANTO_FAMILY_083",
-  "familyNameZhTw": "大蔥鴨家族（伽勒爾）",
+  "familyNameZhTw": "大蔥鴨家族（本批至大蔥鴨）（伽勒爾）",
   "dexRangeZhTw": "#083",
   "regionHintZhTw": "伽勒爾",
   "branchCount": 1,
-  "isBatchTruncated": false,
+  "isBatchTruncated": true,
   "members": [
     {
       "form": {
@@ -20,7 +20,17 @@
         "regionKey": "GALAR",
         "evolvesFromFormId": null,
         "evolutionFamilyNotesZhTw": "重要末階仍在 #090 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-        "evolutionPaths": [],
+        "evolutionPaths": [
+          {
+            "id": "evolution-cross-083-galar-865-kanto",
+            "fromFormId": "083-galar",
+            "toFormId": "865-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": "USABLE_OR_BUDGET"
+          }
+        ],
         "types": [
           "FIGHTING"
         ],
@@ -30,7 +40,10 @@
           "Farfetch'd",
           "大蔥鴨"
         ],
-        "evolutionNames": [],
+        "evolutionNames": [
+          "Sirfetch'd",
+          "蔥遊兵"
+        ],
         "variants": [
           {
             "row": {
@@ -47,7 +60,17 @@
               "regionKey": "GALAR",
               "evolvesFromFormId": null,
               "evolutionFamilyNotesZhTw": "重要末階仍在 #090 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-083-galar-865-kanto",
+                  "fromFormId": "083-galar",
+                  "toFormId": "865-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "USABLE_OR_BUDGET"
+                }
+              ],
               "types": [
                 "FIGHTING"
               ],
@@ -57,7 +80,10 @@
                 "Farfetch'd",
                 "大蔥鴨"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Sirfetch'd",
+                "蔥遊兵"
+              ],
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -73,16 +99,16 @@
                 {
                   "id": "r10-issue-083-galar-normal",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-30T15:45:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #338；招式 FURY_CUTTER／LEAF_BLADE／BRICK_BREAK",
               "pveSummaryZhTw": "可用／預算型。蔥遊兵：伽勒爾大蔥鴨可進化為蔥遊兵；保留少量進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -300,7 +326,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -321,7 +349,17 @@
               "regionKey": "GALAR",
               "evolvesFromFormId": null,
               "evolutionFamilyNotesZhTw": "重要末階仍在 #090 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-083-galar-865-kanto",
+                  "fromFormId": "083-galar",
+                  "toFormId": "865-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "USABLE_OR_BUDGET"
+                }
+              ],
               "types": [
                 "FIGHTING"
               ],
@@ -331,7 +369,10 @@
                 "Farfetch'd",
                 "大蔥鴨"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Sirfetch'd",
+                "蔥遊兵"
+              ],
               "variantKey": "SHADOW",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
@@ -346,7 +387,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "可用／預算型。蔥遊兵：伽勒爾大蔥鴨可進化為蔥遊兵；保留少量進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -540,7 +581,17 @@
               "regionKey": "GALAR",
               "evolvesFromFormId": null,
               "evolutionFamilyNotesZhTw": "重要末階仍在 #090 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-083-galar-865-kanto",
+                  "fromFormId": "083-galar",
+                  "toFormId": "865-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "USABLE_OR_BUDGET"
+                }
+              ],
               "types": [
                 "FIGHTING"
               ],
@@ -550,22 +601,25 @@
                 "Farfetch'd",
                 "大蔥鴨"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Sirfetch'd",
+                "蔥遊兵"
+              ],
               "variantKey": "PURIFIED",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
               "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
               "notesZhTw": "淨化不可逆；Purified 沒有獨立榜單，不因淨化本身升格為必留。",
               "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -759,7 +813,17 @@
               "regionKey": "GALAR",
               "evolvesFromFormId": null,
               "evolutionFamilyNotesZhTw": "重要末階仍在 #090 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-083-galar-865-kanto",
+                  "fromFormId": "083-galar",
+                  "toFormId": "865-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "USABLE_OR_BUDGET"
+                }
+              ],
               "types": [
                 "FIGHTING"
               ],
@@ -769,7 +833,10 @@
                 "Farfetch'd",
                 "大蔥鴨"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Sirfetch'd",
+                "蔥遊兵"
+              ],
               "variantKey": "DYNAMAX",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
@@ -784,7 +851,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -999,12 +1066,14 @@
         "primaryUses": [
           "後續進化"
         ],
-        "primaryUseKeys": [],
+        "primaryUseKeys": [
+          "EVOLUTION"
+        ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1014,7 +1083,7 @@
         "無獨立用途"
       ],
       "mainUseZhTw": "無獨立用途",
-      "memberSummaryZhTw": "大蔥鴨沒有獨立用途；普通重複個體大多可傳。",
+      "memberSummaryZhTw": "主要保留大蔥鴨；依該用途的具體條件篩選。",
       "ivShortLabels": [],
       "ivRecommendations": [],
       "isRoot": true,
@@ -1043,13 +1112,26 @@
     "label": "—",
     "tone": "NONE"
   },
-  "familyValue": "LOW",
-  "retentionStrategy": "MOSTLY_TRANSFER",
-  "primaryRetentionTargets": [],
-  "primaryTargetSummaryZhTw": "無主要保留目標",
+  "familyValue": "MEDIUM",
+  "retentionStrategy": "SELECTIVE_KEEP",
+  "primaryRetentionTargets": [
+    {
+      "formId": "083-galar",
+      "memberNameZhTw": "大蔥鴨",
+      "displayNameZhTw": "大蔥鴨",
+      "useKeys": [
+        "EVOLUTION"
+      ],
+      "variantKeys": [
+        "NORMAL"
+      ],
+      "variantSpecificOnly": false
+    }
+  ],
+  "primaryTargetSummaryZhTw": "大蔥鴨",
   "preEvolutionActionZhTw": "沒有僅作進化素材的前階成員。",
-  "handlingSummaryZhTw": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
-  "actionSummaryZhTw": "家族目前沒有明確主要PvP、PvE、Mega、Max或道館用途；排除收藏價值後，普通重複個體大多可傳。",
+  "handlingSummaryZhTw": "保留大蔥鴨（符合條件個體）；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留大蔥鴨；價值集中於特定版本或條件。沒有僅作進化素材的前階成員。其餘普通重複個體大多可傳。",
   "ivShortLabels": [],
   "ivRecommendations": [],
   "ivSummaryZhTw": "IV不構成額外保留理由",
@@ -1060,7 +1142,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "minDexNumber": 83,
   "maxDexNumber": 83,
   "detailsLoaded": true

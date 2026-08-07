@@ -12,7 +12,17 @@
   "regionKey": "GALAR",
   "evolvesFromFormId": null,
   "evolutionFamilyNotesZhTw": "重要末階仍在 #090 之後；為避免誤傳，暫時只留一隻最佳進化候選，不需保留全部重複。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-cross-083-galar-865-kanto",
+      "fromFormId": "083-galar",
+      "toFormId": "865-kanto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-07T16:00:00.000Z",
+      "isEvolutionStub": true,
+      "targetUseLevel": "USABLE_OR_BUDGET"
+    }
+  ],
   "types": [
     "FIGHTING"
   ],
@@ -22,22 +32,25 @@
     "Farfetch'd",
     "大蔥鴨"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "Sirfetch'd",
+    "蔥遊兵"
+  ],
   "variantKey": "PURIFIED",
   "isReleased": false,
   "releaseStatus": "UNRELEASED",
   "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
   "notesZhTw": "淨化不可逆；Purified 沒有獨立榜單，不因淨化本身升格為必留。",
   "decision": "TRANSFER_CANDIDATE",
-  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+  "assessmentDisposition": "NO_SIGNIFICANT_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+  "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",

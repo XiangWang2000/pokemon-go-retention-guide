@@ -1,11 +1,11 @@
 {
   "familyId": "KANTO_FAMILY_133:133-kanto",
   "familyKey": "KANTO_FAMILY_133",
-  "familyNameZhTw": "伊布進化家族",
+  "familyNameZhTw": "伊布家族（本批至水伊布）",
   "dexRangeZhTw": "#133～#136",
   "regionHintZhTw": null,
   "branchCount": 3,
-  "isBatchTruncated": false,
+  "isBatchTruncated": true,
   "members": [
     {
       "form": {
@@ -26,21 +26,72 @@
             "fromFormId": "133-kanto",
             "toFormId": "134-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-03T10:30:00.000Z"
+            "verifiedAt": "2026-08-03T10:30:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
           },
           {
             "id": "evolution-133-kanto-135-kanto",
             "fromFormId": "133-kanto",
             "toFormId": "135-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-03T10:30:00.000Z"
+            "verifiedAt": "2026-08-03T10:30:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
           },
           {
             "id": "evolution-133-kanto-136-kanto",
             "fromFormId": "133-kanto",
             "toFormId": "136-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-03T10:30:00.000Z"
+            "verifiedAt": "2026-08-03T10:30:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
+          },
+          {
+            "id": "evolution-cross-133-kanto-196-kanto",
+            "fromFormId": "133-kanto",
+            "toFormId": "196-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": "SPECIAL_USE"
+          },
+          {
+            "id": "evolution-cross-133-kanto-197-kanto",
+            "fromFormId": "133-kanto",
+            "toFormId": "197-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": "SPECIAL_USE"
+          },
+          {
+            "id": "evolution-cross-133-kanto-470-kanto",
+            "fromFormId": "133-kanto",
+            "toFormId": "470-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": "SPECIAL_USE"
+          },
+          {
+            "id": "evolution-cross-133-kanto-471-kanto",
+            "fromFormId": "133-kanto",
+            "toFormId": "471-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": "SPECIAL_USE"
+          },
+          {
+            "id": "evolution-cross-133-kanto-700-kanto",
+            "fromFormId": "133-kanto",
+            "toFormId": "700-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": "SPECIAL_USE"
           }
         ],
         "types": [
@@ -56,7 +107,17 @@
           "Jolteon",
           "雷伊布",
           "Flareon",
-          "火伊布"
+          "火伊布",
+          "Espeon",
+          "太陽伊布",
+          "Umbreon",
+          "月亮伊布",
+          "Leafeon",
+          "葉伊布",
+          "Glaceon",
+          "冰伊布",
+          "Sylveon",
+          "仙子伊布"
         ],
         "variants": [
           {
@@ -80,21 +141,72 @@
                   "fromFormId": "133-kanto",
                   "toFormId": "134-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 },
                 {
                   "id": "evolution-133-kanto-135-kanto",
                   "fromFormId": "133-kanto",
                   "toFormId": "135-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 },
                 {
                   "id": "evolution-133-kanto-136-kanto",
                   "fromFormId": "133-kanto",
                   "toFormId": "136-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-133-kanto-196-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "196-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-197-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "197-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-470-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "470-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-471-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "471-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-700-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "700-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
                 }
               ],
               "types": [
@@ -110,7 +222,17 @@
                 "Jolteon",
                 "雷伊布",
                 "Flareon",
-                "火伊布"
+                "火伊布",
+                "Espeon",
+                "太陽伊布",
+                "Umbreon",
+                "月亮伊布",
+                "Leafeon",
+                "葉伊布",
+                "Glaceon",
+                "冰伊布",
+                "Sylveon",
+                "仙子伊布"
               ],
               "variantKey": "NORMAL",
               "isReleased": true,
@@ -126,7 +248,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #1083；招式 QUICK_ATTACK／BODY_SLAM／SWIFT",
               "pveSummaryZhTw": "特殊用途。後續伊布分支：可進化為多個後續世代分支；依目標分支與用途少量保留。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -344,7 +466,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -371,21 +495,72 @@
                   "fromFormId": "133-kanto",
                   "toFormId": "134-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 },
                 {
                   "id": "evolution-133-kanto-135-kanto",
                   "fromFormId": "133-kanto",
                   "toFormId": "135-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 },
                 {
                   "id": "evolution-133-kanto-136-kanto",
                   "fromFormId": "133-kanto",
                   "toFormId": "136-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-133-kanto-196-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "196-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-197-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "197-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-470-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "470-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-471-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "471-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-700-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "700-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
                 }
               ],
               "types": [
@@ -401,7 +576,17 @@
                 "Jolteon",
                 "雷伊布",
                 "Flareon",
-                "火伊布"
+                "火伊布",
+                "Espeon",
+                "太陽伊布",
+                "Umbreon",
+                "月亮伊布",
+                "Leafeon",
+                "葉伊布",
+                "Glaceon",
+                "冰伊布",
+                "Sylveon",
+                "仙子伊布"
               ],
               "variantKey": "SHADOW",
               "isReleased": false,
@@ -417,7 +602,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。後續伊布分支：可進化為多個後續世代分支；依目標分支與用途少量保留。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -617,21 +802,72 @@
                   "fromFormId": "133-kanto",
                   "toFormId": "134-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 },
                 {
                   "id": "evolution-133-kanto-135-kanto",
                   "fromFormId": "133-kanto",
                   "toFormId": "135-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 },
                 {
                   "id": "evolution-133-kanto-136-kanto",
                   "fromFormId": "133-kanto",
                   "toFormId": "136-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-133-kanto-196-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "196-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-197-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "197-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-470-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "470-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-471-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "471-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-700-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "700-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
                 }
               ],
               "types": [
@@ -647,7 +883,17 @@
                 "Jolteon",
                 "雷伊布",
                 "Flareon",
-                "火伊布"
+                "火伊布",
+                "Espeon",
+                "太陽伊布",
+                "Umbreon",
+                "月亮伊布",
+                "Leafeon",
+                "葉伊布",
+                "Glaceon",
+                "冰伊布",
+                "Sylveon",
+                "仙子伊布"
               ],
               "variantKey": "PURIFIED",
               "isReleased": false,
@@ -655,15 +901,15 @@
               "releaseVerifiedAt": "2026-08-03T10:30:00.000Z",
               "notesZhTw": "淨化不可逆；Purified 沒有獨立榜單，不因淨化本身升格為必留。",
               "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -863,21 +1109,72 @@
                   "fromFormId": "133-kanto",
                   "toFormId": "134-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 },
                 {
                   "id": "evolution-133-kanto-135-kanto",
                   "fromFormId": "133-kanto",
                   "toFormId": "135-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 },
                 {
                   "id": "evolution-133-kanto-136-kanto",
                   "fromFormId": "133-kanto",
                   "toFormId": "136-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-03T10:30:00.000Z"
+                  "verifiedAt": "2026-08-03T10:30:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-133-kanto-196-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "196-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-197-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "197-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-470-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "470-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-471-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "471-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
+                },
+                {
+                  "id": "evolution-cross-133-kanto-700-kanto",
+                  "fromFormId": "133-kanto",
+                  "toFormId": "700-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
                 }
               ],
               "types": [
@@ -893,7 +1190,17 @@
                 "Jolteon",
                 "雷伊布",
                 "Flareon",
-                "火伊布"
+                "火伊布",
+                "Espeon",
+                "太陽伊布",
+                "Umbreon",
+                "月亮伊布",
+                "Leafeon",
+                "葉伊布",
+                "Glaceon",
+                "冰伊布",
+                "Sylveon",
+                "仙子伊布"
               ],
               "variantKey": "DYNAMAX",
               "isReleased": true,
@@ -909,7 +1216,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1135,12 +1442,14 @@
         "primaryUses": [
           "後續進化"
         ],
-        "primaryUseKeys": [],
+        "primaryUseKeys": [
+          "EVOLUTION"
+        ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1150,7 +1459,7 @@
         "進化素材"
       ],
       "mainUseZhTw": "進化素材",
-      "memberSummaryZhTw": "伊布本體沒有獨立用途；前階主要作符合條件的進化候選。",
+      "memberSummaryZhTw": "主要保留伊布；IV以ML：15攻／98%優先為準。",
       "ivShortLabels": [
         "ML：15攻／98%優先"
       ],
@@ -1254,7 +1563,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #440；招式 WATER_GUN／AQUA_TAIL／LAST_RESORT；UL（高級聯盟） Overall #390；招式 WATER_GUN／AQUA_TAIL／LIQUIDATION；ML（大師聯盟） Overall #195；招式 WATER_GUN／AQUA_TAIL／LIQUIDATION",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1635,7 +1944,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1844,15 +2153,15 @@
               "releaseVerifiedAt": "2026-08-03T10:30:00.000Z",
               "notesZhTw": "淨化不可逆；Purified 沒有獨立榜單，不因淨化本身升格為必留。",
               "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2069,7 +2378,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2337,7 +2646,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2451,7 +2760,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #798；招式 THUNDER_SHOCK／DISCHARGE／LAST_RESORT；UL（高級聯盟） Overall #465；招式 VOLT_SWITCH／DISCHARGE／LAST_RESORT；ML（大師聯盟） Overall #354；招式 VOLT_SWITCH／DISCHARGE／LAST_RESORT",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2793,7 +3102,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -3002,15 +3311,15 @@
               "releaseVerifiedAt": "2026-08-03T10:30:00.000Z",
               "notesZhTw": "淨化不可逆；Purified 沒有獨立榜單，不因淨化本身升格為必留。",
               "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -3227,7 +3536,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -3456,7 +3765,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -3535,7 +3844,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #724；招式 EMBER／SUPER_POWER／HEAT_WAVE；UL（高級聯盟） Overall #605；招式 EMBER／SUPER_POWER／HEAT_WAVE；ML（大師聯盟） Overall #300；招式 EMBER／SUPER_POWER／HEAT_WAVE",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -3877,7 +4186,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -4086,15 +4395,15 @@
               "releaseVerifiedAt": "2026-08-03T10:30:00.000Z",
               "notesZhTw": "淨化不可逆；Purified 沒有獨立榜單，不因淨化本身升格為必留。",
               "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -4311,7 +4620,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -4540,7 +4849,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -4581,9 +4890,21 @@
     "label": "—",
     "tone": "NONE"
   },
-  "familyValue": "MEDIUM",
-  "retentionStrategy": "SELECTIVE_KEEP",
+  "familyValue": "HIGH",
+  "retentionStrategy": "KEEP_TARGETS",
   "primaryRetentionTargets": [
+    {
+      "formId": "133-kanto",
+      "memberNameZhTw": "伊布",
+      "displayNameZhTw": "伊布",
+      "useKeys": [
+        "EVOLUTION"
+      ],
+      "variantKeys": [
+        "NORMAL"
+      ],
+      "variantSpecificOnly": false
+    },
     {
       "formId": "134-kanto",
       "memberNameZhTw": "水伊布",
@@ -4597,10 +4918,10 @@
       "variantSpecificOnly": false
     }
   ],
-  "primaryTargetSummaryZhTw": "水伊布",
+  "primaryTargetSummaryZhTw": "伊布、水伊布",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
-  "handlingSummaryZhTw": "保留水伊布（ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留水伊布；價值集中於特定版本或條件。前階主要作符合條件的進化候選。其餘普通重複個體大多可傳。IV：ML：15攻／98%優先。",
+  "handlingSummaryZhTw": "保留伊布（符合條件個體），以及水伊布（ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留伊布、水伊布；前階主要作符合條件的進化候選。IV：ML：15攻／98%優先。",
   "ivShortLabels": [
     "ML：15攻／98%優先"
   ],
@@ -4649,7 +4970,7 @@
   ],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "minDexNumber": 133,
   "maxDexNumber": 136,
   "detailsLoaded": true

@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { getDashboardRows, getReviewIssues } from "../src/lib/data-prisma";
 import { prisma } from "../src/lib/prisma";
+import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
 import { RULES_VERSION } from "../src/rules/rules";
@@ -27,8 +28,8 @@ async function main() {
   const mew = rows.find((row) => row.formId === "151-kanto" && row.variantKey === "NORMAL");
   const payload = {
     batch: "121-151",
-    updatedAt: "2026-08-03",
-    dataVersion: "2026.08.03-r13",
+    updatedAt: DATA_VERSION_DATE_ISO,
+    dataVersion: DATA_VERSION,
     rulesVersion: RULES_VERSION,
     status: issues.some((issue) => issue.affectsFinalDecision)
       ? "ACCEPTED_WITH_SCOPED_HOLDS"

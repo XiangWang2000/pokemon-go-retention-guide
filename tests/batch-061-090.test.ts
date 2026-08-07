@@ -48,7 +48,12 @@ describe("#061～#090 批次與跨批次家族", () => {
       "061-kanto",
       "062-kanto",
     ]);
-    expect(family.isBatchTruncated).toBe(false);
+    expect(family.isBatchTruncated).toBe(true);
+    expect(
+      family.members.some((member) =>
+        member.form.evolutionPaths.some((path) => path.toFormId === "186-kanto"),
+      ),
+    ).toBe(true);
     expect(family.retentionStrategy).toBe("KEEP_TARGETS");
     expect(
       families.filter((item) => item.members.some((member) => member.form.formId === "062-kanto")),
@@ -135,8 +140,11 @@ describe("#061～#090 批次與跨批次家族", () => {
       decision: "CONDITIONAL_KEEP",
       assessmentDisposition: "LIMITED_USE",
     });
-    expect(rows.find((row) => row.id === "081-kanto-normal")?.categoryStatuses.find((item) => item.category === "PVE"))
-      .toMatchObject({ pveUseLevel: "USABLE_OR_BUDGET" });
+    expect(
+      rows
+        .find((row) => row.id === "081-kanto-normal")
+        ?.categoryStatuses.find((item) => item.category === "PVE"),
+    ).toMatchObject({ pveUseLevel: "USABLE_OR_BUDGET" });
     expect(familyByMember("090-kanto").retentionStrategy).toBe("MOSTLY_TRANSFER");
     expect(familyByMember("090-kanto").members.map((member) => member.form.formId)).toEqual([
       "090-kanto",

@@ -37,7 +37,7 @@ export interface FormOverview {
   regionKey: string;
   evolvesFromFormId: string | null;
   evolutionFamilyNotesZhTw: string;
-  evolutionPaths: DashboardRow["evolutionPaths"];
+  evolutionPaths: EvolutionPathOverview[];
   types: string[];
   aliases: string[];
   evolutionNames: string[];
@@ -499,6 +499,14 @@ function buildVariantIvUseKeys(row: DashboardRow): PrimaryUseKey[] {
   return [...new Set(uses)];
 }
 
+type EvolutionPathOverview = Omit<
+  DashboardRow["evolutionPaths"][number],
+  "isEvolutionStub" | "targetUseLevel"
+> & {
+  isEvolutionStub?: boolean;
+  targetUseLevel?: string | null;
+};
+
 function buildVariantIvRecommendations(row: DashboardRow, uses: PrimaryUseKey[]) {
   const available = row.ivRecommendations as unknown as IvRecommendation[];
   const context = {
@@ -705,7 +713,7 @@ export function buildFormOverviews(rows: DashboardRow[]) {
     group.push(row);
     grouped.set(row.formId, group);
   }
-  return [...grouped.values()]
+  const forms = [...grouped.values()]
     .map(buildFormOverview)
     .sort(
       (a, b) =>
@@ -713,4 +721,36 @@ export function buildFormOverviews(rows: DashboardRow[]) {
         (regionOrder[a.regionKey] ?? 99) - (regionOrder[b.regionKey] ?? 99) ||
         a.formId.localeCompare(b.formId),
     );
+  const byId = new Map(forms.map((form) => [form.formId, form]));
+  const hasStubDescendant = (formId: string) => {
+    const queue = [formId];
+    const seen = new Set<string>();
+    while (queue.length) {
+      const currentId = queue.shift()!;
+      if (seen.has(currentId)) continue;
+      seen.add(currentId);
+      const current = byId.get(currentId);
+      if (!current) continue;
+      for (const path of current.evolutionPaths) {
+        if (path.isEvolutionStub || Number(path.toFormId.slice(0, 3)) > 151) return true;
+        if (byId.has(path.toFormId)) queue.push(path.toFormId);
+      }
+    }
+    return false;
+  };
+  return forms.map((form) => {
+    if (!hasStubDescendant(form.formId)) return form;
+    const variants = form.variants.map((variant) => {
+      if (!matchedRule(variant.row, "VALUABLE_EVOLUTION")) return variant;
+      return {
+        ...variant,
+        primaryUseKeys: [...new Set([...variant.primaryUseKeys, "EVOLUTION" as PrimaryUseKey])],
+      };
+    });
+    return {
+      ...form,
+      variants,
+      primaryUseKeys: [...new Set(variants.flatMap((variant) => variant.primaryUseKeys))],
+    };
+  });
 }

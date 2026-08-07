@@ -1,21 +1,23 @@
 {
   "scope": "1-151",
-  "generatedAt": "2026-08-06T10:00:00.000Z",
+  "dataVersion": "2026.08.08-r16",
+  "updatedAt": "2026-08-08",
+  "generatedAt": "2026-08-07T16:00:00.000Z",
   "rulesVersion": "2026.08.06-v7",
   "counts": {
     "variants": 783,
     "decisions": {
-      "TRANSFER_CANDIDATE": 519,
+      "TRANSFER_CANDIDATE": 528,
       "CONDITIONAL_KEEP": 189,
       "KEEP": 54,
-      "HOLD_FOR_NOW": 21
+      "HOLD_FOR_NOW": 12
     },
     "dispositions": {
-      "NO_SIGNIFICANT_USE": 272,
+      "NO_SIGNIFICANT_USE": 324,
       "LIMITED_USE": 205,
       "CLEAR_USE": 38,
-      "TRUE_DATA_PENDING": 21,
-      "NOT_APPLICABLE_OR_UNRELEASED": 247
+      "NOT_APPLICABLE_OR_UNRELEASED": 204,
+      "TRUE_DATA_PENDING": 12
     },
     "pveUseLevels": {
       "NO_SIGNIFICANT_USE": 645,
@@ -23,33 +25,13 @@
       "CORE_INVESTMENT": 38,
       "USABLE_OR_BUDGET": 22
     },
-    "changedFields": 4
+    "changedFields": 0
   },
   "trueDataPending": [
-    {
-      "id": "004-kanto-purified",
-      "formId": "004-kanto",
-      "variantKey": "PURIFIED"
-    },
-    {
-      "id": "007-kanto-purified",
-      "formId": "007-kanto",
-      "variantKey": "PURIFIED"
-    },
-    {
-      "id": "019-kanto-purified",
-      "formId": "019-kanto",
-      "variantKey": "PURIFIED"
-    },
     {
       "id": "019-kanto-shadow",
       "formId": "019-kanto",
       "variantKey": "SHADOW"
-    },
-    {
-      "id": "021-kanto-purified",
-      "formId": "021-kanto",
-      "variantKey": "PURIFIED"
     },
     {
       "id": "021-kanto-shadow",
@@ -57,19 +39,9 @@
       "variantKey": "SHADOW"
     },
     {
-      "id": "022-kanto-purified",
-      "formId": "022-kanto",
-      "variantKey": "PURIFIED"
-    },
-    {
       "id": "022-kanto-shadow",
       "formId": "022-kanto",
       "variantKey": "SHADOW"
-    },
-    {
-      "id": "023-kanto-purified",
-      "formId": "023-kanto",
-      "variantKey": "PURIFIED"
     },
     {
       "id": "023-kanto-shadow",
@@ -77,24 +49,9 @@
       "variantKey": "SHADOW"
     },
     {
-      "id": "025-kanto-purified",
-      "formId": "025-kanto",
-      "variantKey": "PURIFIED"
-    },
-    {
       "id": "025-kanto-shadow",
       "formId": "025-kanto",
       "variantKey": "SHADOW"
-    },
-    {
-      "id": "026-alola-purified",
-      "formId": "026-alola",
-      "variantKey": "PURIFIED"
-    },
-    {
-      "id": "026-kanto-purified",
-      "formId": "026-kanto",
-      "variantKey": "PURIFIED"
     },
     {
       "id": "026-alola-shadow",
@@ -360,7 +317,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "disposition": "NO_SIGNIFICANT_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -680,7 +637,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "disposition": "NO_SIGNIFICANT_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -760,7 +717,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "disposition": "NO_SIGNIFICANT_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -840,7 +797,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "disposition": "NO_SIGNIFICANT_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -980,7 +937,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "disposition": "NO_SIGNIFICANT_USE",
       "laterEvolutionTarget": null
     },
     {

@@ -1,6 +1,7 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { getDashboardRows, getReviewIssues, getSources } from "../src/lib/data-prisma";
 import { prisma } from "../src/lib/prisma";
+import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { zhTw } from "../src/locales/zh-TW";
 import { RULES_VERSION } from "../src/rules/rules";
 
@@ -22,7 +23,8 @@ async function main() {
   const decisions = Object.keys(zhTw.decision) as Array<keyof typeof zhTw.decision>;
   const payload = {
     batch: "001-030",
-    updatedAt: "2026-07-17",
+    updatedAt: DATA_VERSION_DATE_ISO,
+    dataVersion: DATA_VERSION,
     rulesVersion: RULES_VERSION,
     counts: {
       species: new Set(rows.map((row) => row.dexNumber)).size,

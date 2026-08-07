@@ -1,11 +1,11 @@
 {
   "familyId": "KANTO_FAMILY_079:079-kanto",
   "familyKey": "KANTO_FAMILY_079",
-  "familyNameZhTw": "呆殼獸家族",
+  "familyNameZhTw": "呆呆獸家族（本批至呆殼獸）",
   "dexRangeZhTw": "#079～#080",
   "regionHintZhTw": null,
   "branchCount": 1,
-  "isBatchTruncated": false,
+  "isBatchTruncated": true,
   "members": [
     {
       "form": {
@@ -26,7 +26,18 @@
             "fromFormId": "079-kanto",
             "toFormId": "080-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-07-30T15:45:00.000Z"
+            "verifiedAt": "2026-07-30T15:45:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
+          },
+          {
+            "id": "evolution-cross-079-kanto-199-kanto",
+            "fromFormId": "079-kanto",
+            "toFormId": "199-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": "SPECIAL_USE"
           }
         ],
         "types": [
@@ -39,7 +50,9 @@
         ],
         "evolutionNames": [
           "Slowbro",
-          "呆殼獸"
+          "呆殼獸",
+          "Slowking",
+          "呆呆王"
         ],
         "variants": [
           {
@@ -63,7 +76,18 @@
                   "fromFormId": "079-kanto",
                   "toFormId": "080-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T15:45:00.000Z"
+                  "verifiedAt": "2026-07-30T15:45:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-079-kanto-199-kanto",
+                  "fromFormId": "079-kanto",
+                  "toFormId": "199-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
                 }
               ],
               "types": [
@@ -76,7 +100,9 @@
               ],
               "evolutionNames": [
                 "Slowbro",
-                "呆殼獸"
+                "呆殼獸",
+                "Slowking",
+                "呆呆王"
               ],
               "variantKey": "NORMAL",
               "isReleased": true,
@@ -92,7 +118,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #570；招式 CONFUSION／PSYSHOCK／WATER_PULSE",
               "pveSummaryZhTw": "特殊用途。呆呆王：可進化為呆呆王；與呆殼獸分支分開判斷。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -310,7 +336,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -337,7 +365,18 @@
                   "fromFormId": "079-kanto",
                   "toFormId": "080-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T15:45:00.000Z"
+                  "verifiedAt": "2026-07-30T15:45:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-079-kanto-199-kanto",
+                  "fromFormId": "079-kanto",
+                  "toFormId": "199-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
                 }
               ],
               "types": [
@@ -350,7 +389,9 @@
               ],
               "evolutionNames": [
                 "Slowbro",
-                "呆殼獸"
+                "呆殼獸",
+                "Slowking",
+                "呆呆王"
               ],
               "variantKey": "SHADOW",
               "isReleased": true,
@@ -366,7 +407,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #646；招式 CONFUSION／PSYSHOCK／WATER_PULSE",
               "pveSummaryZhTw": "特殊用途。呆呆王：可進化為呆呆王；與呆殼獸分支分開判斷。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -584,7 +625,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -611,7 +654,18 @@
                   "fromFormId": "079-kanto",
                   "toFormId": "080-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T15:45:00.000Z"
+                  "verifiedAt": "2026-07-30T15:45:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-079-kanto-199-kanto",
+                  "fromFormId": "079-kanto",
+                  "toFormId": "199-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
                 }
               ],
               "types": [
@@ -624,7 +678,9 @@
               ],
               "evolutionNames": [
                 "Slowbro",
-                "呆殼獸"
+                "呆殼獸",
+                "Slowking",
+                "呆呆王"
               ],
               "variantKey": "PURIFIED",
               "isReleased": true,
@@ -640,7 +696,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -840,7 +896,18 @@
                   "fromFormId": "079-kanto",
                   "toFormId": "080-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T15:45:00.000Z"
+                  "verifiedAt": "2026-07-30T15:45:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
+                },
+                {
+                  "id": "evolution-cross-079-kanto-199-kanto",
+                  "fromFormId": "079-kanto",
+                  "toFormId": "199-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "SPECIAL_USE"
                 }
               ],
               "types": [
@@ -853,7 +920,9 @@
               ],
               "evolutionNames": [
                 "Slowbro",
-                "呆殼獸"
+                "呆殼獸",
+                "Slowking",
+                "呆呆王"
               ],
               "variantKey": "DYNAMAX",
               "isReleased": false,
@@ -869,7 +938,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1086,12 +1155,14 @@
         "primaryUses": [
           "後續進化"
         ],
-        "primaryUseKeys": [],
+        "primaryUseKeys": [
+          "EVOLUTION"
+        ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1101,7 +1172,7 @@
         "進化素材"
       ],
       "mainUseZhTw": "進化素材",
-      "memberSummaryZhTw": "呆呆獸本體沒有獨立用途；前階主要作符合條件的進化候選。",
+      "memberSummaryZhTw": "主要保留呆呆獸；IV以UL：Rank≤100、Mega：15攻優先；14攻高整體IV亦可留為準。",
       "ivShortLabels": [
         "UL：Rank≤100",
         "Mega：15攻優先；14攻高整體IV亦可留"
@@ -1240,7 +1311,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #316；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；UL（高級聯盟） Overall #208；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；ML（大師聯盟） Overall #288；招式 CONFUSION／SURF／DRAIN_PUNCH",
               "pveSummaryZhTw": "無顯著用途。Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1631,7 +1702,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #366；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；UL（高級聯盟） Overall #243；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；ML（大師聯盟） Overall #368；招式 CONFUSION／SURF／ICE_BEAM",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2013,7 +2084,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2231,7 +2302,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2498,7 +2569,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2794,7 +2865,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2912,6 +2983,19 @@
   "retentionStrategy": "KEEP_TARGETS",
   "primaryRetentionTargets": [
     {
+      "formId": "079-kanto",
+      "memberNameZhTw": "呆呆獸",
+      "displayNameZhTw": "呆呆獸",
+      "useKeys": [
+        "EVOLUTION"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW"
+      ],
+      "variantSpecificOnly": false
+    },
+    {
       "formId": "080-kanto",
       "memberNameZhTw": "呆殼獸",
       "displayNameZhTw": "呆殼獸",
@@ -2927,10 +3011,10 @@
       "variantSpecificOnly": false
     }
   ],
-  "primaryTargetSummaryZhTw": "呆殼獸",
+  "primaryTargetSummaryZhTw": "呆呆獸、呆殼獸",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
-  "handlingSummaryZhTw": "保留呆殼獸（PvP（UL Rank≤100）、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留呆殼獸；前階主要作符合條件的進化候選。IV：UL：Rank≤100；Mega：15攻優先；14攻高整體IV亦可留。",
+  "handlingSummaryZhTw": "保留呆呆獸（有用途的暗影版），以及呆殼獸（PvP（UL Rank≤100）、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留呆呆獸、呆殼獸；前階主要作符合條件的進化候選。IV：UL：Rank≤100；Mega：15攻優先；14攻高整體IV亦可留。",
   "ivShortLabels": [
     "UL：Rank≤100",
     "Mega：15攻優先；14攻高整體IV亦可留"
@@ -3011,7 +3095,7 @@
   "notices": [],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "minDexNumber": 79,
   "maxDexNumber": 80,
   "detailsLoaded": true

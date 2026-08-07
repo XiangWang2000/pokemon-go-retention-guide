@@ -26,7 +26,9 @@
             "fromFormId": "056-kanto",
             "toFormId": "057-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-07-30T08:00:00.000Z"
+            "verifiedAt": "2026-07-30T08:00:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
           }
         ],
         "types": [
@@ -62,7 +64,9 @@
                   "fromFormId": "056-kanto",
                   "toFormId": "057-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -91,16 +95,16 @@
                 {
                   "id": "r8-issue-056-kanto-normal",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-30T08:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #776；招式 KARATE_CHOP／CROSS_CHOP／BRICK_BREAK",
               "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -318,7 +322,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -345,7 +351,9 @@
                   "fromFormId": "056-kanto",
                   "toFormId": "057-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -374,16 +382,16 @@
                 {
                   "id": "r8-issue-056-kanto-shadow",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-30T08:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #766；招式 KARATE_CHOP／CROSS_CHOP／BRICK_BREAK",
               "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -601,7 +609,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -628,7 +638,9 @@
                   "fromFormId": "056-kanto",
                   "toFormId": "057-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -656,7 +668,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -856,7 +868,9 @@
                   "fromFormId": "056-kanto",
                   "toFormId": "057-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -884,7 +898,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1101,12 +1115,14 @@
         "primaryUses": [
           "後續進化"
         ],
-        "primaryUseKeys": [],
+        "primaryUseKeys": [
+          "EVOLUTION"
+        ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1116,7 +1132,7 @@
         "進化素材"
       ],
       "mainUseZhTw": "進化素材",
-      "memberSummaryZhTw": "猴怪本體沒有獨立用途；前階主要作符合條件的進化候選。",
+      "memberSummaryZhTw": "主要保留猴怪；IV以GL：Rank≤100、UL：Rank≤100為準。",
       "ivShortLabels": [
         "GL：Rank≤100",
         "UL：Rank≤100"
@@ -1205,7 +1221,17 @@
         "regionKey": "KANTO",
         "evolvesFromFormId": "056-kanto",
         "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-        "evolutionPaths": [],
+        "evolutionPaths": [
+          {
+            "id": "evolution-cross-057-kanto-979-kanto",
+            "fromFormId": "057-kanto",
+            "toFormId": "979-kanto",
+            "requiresEvent": false,
+            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "isEvolutionStub": true,
+            "targetUseLevel": "USABLE_OR_BUDGET"
+          }
+        ],
         "types": [
           "FIGHTING"
         ],
@@ -1213,7 +1239,10 @@
           "Primeape",
           "火爆猴"
         ],
-        "evolutionNames": [],
+        "evolutionNames": [
+          "Annihilape",
+          "棄世猴"
+        ],
         "variants": [
           {
             "row": {
@@ -1230,7 +1259,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "056-kanto",
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-057-kanto-979-kanto",
+                  "fromFormId": "057-kanto",
+                  "toFormId": "979-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "USABLE_OR_BUDGET"
+                }
+              ],
               "types": [
                 "FIGHTING"
               ],
@@ -1238,7 +1277,10 @@
                 "Primeape",
                 "火爆猴"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Annihilape",
+                "棄世猴"
+              ],
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -1254,16 +1296,16 @@
                 {
                   "id": "r8-issue-057-kanto-normal",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-30T08:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #185；招式 KARATE_CHOP／RAGE_FIST／ICE_PUNCH；UL（高級聯盟） Overall #113；招式 KARATE_CHOP／RAGE_FIST／CLOSE_COMBAT",
               "pveSummaryZhTw": "可用／預算型。棄世猴：可進化為後續世代的棄世猴，保留少量合適進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1525,7 +1567,8 @@
             ],
             "primaryUseKeys": [
               "GREAT_LEAGUE",
-              "ULTRA_LEAGUE"
+              "ULTRA_LEAGUE",
+              "EVOLUTION"
             ],
             "ivRecommendations": [
               {
@@ -1615,7 +1658,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "056-kanto",
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-057-kanto-979-kanto",
+                  "fromFormId": "057-kanto",
+                  "toFormId": "979-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "USABLE_OR_BUDGET"
+                }
+              ],
               "types": [
                 "FIGHTING"
               ],
@@ -1623,7 +1676,10 @@
                 "Primeape",
                 "火爆猴"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Annihilape",
+                "棄世猴"
+              ],
               "variantKey": "SHADOW",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -1639,16 +1695,16 @@
                 {
                   "id": "r8-issue-057-kanto-shadow",
                   "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-30T08:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #107；招式 KARATE_CHOP／RAGE_FIST／ICE_PUNCH；UL（高級聯盟） Overall #128；招式 KARATE_CHOP／RAGE_FIST／ICE_PUNCH",
               "pveSummaryZhTw": "可用／預算型。棄世猴：可進化為後續世代的棄世猴，保留少量合適進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1910,7 +1966,8 @@
             ],
             "primaryUseKeys": [
               "GREAT_LEAGUE",
-              "ULTRA_LEAGUE"
+              "ULTRA_LEAGUE",
+              "EVOLUTION"
             ],
             "ivRecommendations": [
               {
@@ -2000,7 +2057,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "056-kanto",
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-057-kanto-979-kanto",
+                  "fromFormId": "057-kanto",
+                  "toFormId": "979-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "USABLE_OR_BUDGET"
+                }
+              ],
               "types": [
                 "FIGHTING"
               ],
@@ -2008,7 +2075,10 @@
                 "Primeape",
                 "火爆猴"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Annihilape",
+                "棄世猴"
+              ],
               "variantKey": "PURIFIED",
               "isReleased": true,
               "releaseStatus": "RELEASED",
@@ -2023,7 +2093,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2217,7 +2287,17 @@
               "regionKey": "KANTO",
               "evolvesFromFormId": "056-kanto",
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-              "evolutionPaths": [],
+              "evolutionPaths": [
+                {
+                  "id": "evolution-cross-057-kanto-979-kanto",
+                  "fromFormId": "057-kanto",
+                  "toFormId": "979-kanto",
+                  "requiresEvent": false,
+                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "isEvolutionStub": true,
+                  "targetUseLevel": "USABLE_OR_BUDGET"
+                }
+              ],
               "types": [
                 "FIGHTING"
               ],
@@ -2225,7 +2305,10 @@
                 "Primeape",
                 "火爆猴"
               ],
-              "evolutionNames": [],
+              "evolutionNames": [
+                "Annihilape",
+                "棄世猴"
+              ],
               "variantKey": "DYNAMAX",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
@@ -2240,7 +2323,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2528,13 +2611,14 @@
         ],
         "primaryUseKeys": [
           "GREAT_LEAGUE",
-          "ULTRA_LEAGUE"
+          "ULTRA_LEAGUE",
+          "EVOLUTION"
         ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2648,12 +2732,26 @@
   "retentionStrategy": "KEEP_TARGETS",
   "primaryRetentionTargets": [
     {
+      "formId": "056-kanto",
+      "memberNameZhTw": "猴怪",
+      "displayNameZhTw": "猴怪",
+      "useKeys": [
+        "EVOLUTION"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW"
+      ],
+      "variantSpecificOnly": false
+    },
+    {
       "formId": "057-kanto",
       "memberNameZhTw": "火爆猴",
       "displayNameZhTw": "火爆猴",
       "useKeys": [
         "GREAT_LEAGUE",
-        "ULTRA_LEAGUE"
+        "ULTRA_LEAGUE",
+        "EVOLUTION"
       ],
       "variantKeys": [
         "NORMAL",
@@ -2662,10 +2760,10 @@
       "variantSpecificOnly": false
     }
   ],
-  "primaryTargetSummaryZhTw": "火爆猴",
+  "primaryTargetSummaryZhTw": "猴怪、火爆猴",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
-  "handlingSummaryZhTw": "保留火爆猴（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留火爆猴；前階主要作符合條件的進化候選。IV：GL：Rank≤100；UL：Rank≤100。",
+  "handlingSummaryZhTw": "保留猴怪（有用途的暗影版），以及火爆猴（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留猴怪、火爆猴；前階主要作符合條件的進化候選。IV：GL：Rank≤100；UL：Rank≤100。",
   "ivShortLabels": [
     "GL：Rank≤100",
     "UL：Rank≤100"
@@ -2745,7 +2843,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "minDexNumber": 56,
   "maxDexNumber": 57,
   "detailsLoaded": true

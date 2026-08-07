@@ -26,7 +26,9 @@
             "fromFormId": "029-kanto",
             "toFormId": "030-kanto",
             "requiresEvent": false,
-            "verifiedAt": null
+            "verifiedAt": null,
+            "isEvolutionStub": false,
+            "targetUseLevel": null
           }
         ],
         "types": [
@@ -63,7 +65,9 @@
                   "fromFormId": "029-kanto",
                   "toFormId": "030-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": null
+                  "verifiedAt": null,
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -93,16 +97,16 @@
                 {
                   "id": "issue-029-kanto-normal-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
               "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
@@ -304,7 +308,9 @@
                   "fromFormId": "029-kanto",
                   "toFormId": "030-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": null
+                  "verifiedAt": null,
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -334,16 +340,16 @@
                 {
                   "id": "issue-029-kanto-shadow-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
               "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
@@ -545,7 +551,9 @@
                   "fromFormId": "029-kanto",
                   "toFormId": "030-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": null
+                  "verifiedAt": null,
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -575,16 +583,16 @@
                 {
                   "id": "issue-029-kanto-purified-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
@@ -784,7 +792,9 @@
                   "fromFormId": "029-kanto",
                   "toFormId": "030-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": null
+                  "verifiedAt": null,
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -813,7 +823,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
@@ -1034,7 +1044,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1139,7 +1149,9 @@
             "fromFormId": "030-kanto",
             "toFormId": "031-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-07-30T08:00:00.000Z"
+            "verifiedAt": "2026-07-30T08:00:00.000Z",
+            "isEvolutionStub": false,
+            "targetUseLevel": null
           }
         ],
         "types": [
@@ -1175,7 +1187,9 @@
                   "fromFormId": "030-kanto",
                   "toFormId": "031-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -1204,16 +1218,16 @@
                 {
                   "id": "issue-030-kanto-normal-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
               "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
@@ -1479,7 +1493,9 @@
                   "fromFormId": "030-kanto",
                   "toFormId": "031-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -1508,16 +1524,16 @@
                 {
                   "id": "issue-030-kanto-shadow-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
               "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
@@ -1783,7 +1799,9 @@
                   "fromFormId": "030-kanto",
                   "toFormId": "031-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -1812,16 +1830,16 @@
                 {
                   "id": "issue-030-kanto-purified-2026.07.28-v5-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "若補到真正會改變用途結論的來源，再針對該版本重算。",
-                  "lastResearchedAt": "2026-07-28T04:00:00.000Z"
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
@@ -2021,7 +2039,9 @@
                   "fromFormId": "030-kanto",
                   "toFormId": "031-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-30T08:00:00.000Z"
+                  "verifiedAt": "2026-07-30T08:00:00.000Z",
+                  "isEvolutionStub": false,
+                  "targetUseLevel": null
                 }
               ],
               "types": [
@@ -2049,7 +2069,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
@@ -2271,7 +2291,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2420,7 +2440,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #209；招式 MUD_SLAP／EARTH_POWER／POISON_FANG；UL（高級聯盟） Overall #119；招式 MUD_SLAP／POISON_FANG／EARTH_POWER",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2795,7 +2815,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #258；招式 MUD_SLAP／EARTH_POWER／POISON_FANG；UL（高級聯盟） Overall #141；招式 MUD_SLAP／POISON_FANG／EARTH_POWER",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -3136,7 +3156,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -3354,7 +3374,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-06T10:00:00.000Z",
+              "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -3647,7 +3667,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-06T10:00:00.000Z",
+        "updatedAt": "2026-08-07T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -3757,8 +3777,8 @@
     "label": "—",
     "tone": "NONE"
   },
-  "familyValue": "HIGH",
-  "retentionStrategy": "KEEP_TARGETS",
+  "familyValue": "MEDIUM",
+  "retentionStrategy": "SELECTIVE_KEEP",
   "primaryRetentionTargets": [
     {
       "formId": "031-kanto",
@@ -3778,7 +3798,7 @@
   "primaryTargetSummaryZhTw": "尼多后",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
   "handlingSummaryZhTw": "保留尼多后（PvP（GL Rank≤100、UL Rank≤100）、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留尼多后；前階主要作符合條件的進化候選。IV：GL：Rank≤100；UL：Rank≤100。",
+  "actionSummaryZhTw": "主要保留尼多后；價值集中於特定版本或條件。前階主要作符合條件的進化候選。其餘普通重複個體大多可傳。IV：GL：Rank≤100；UL：Rank≤100。",
   "ivShortLabels": [
     "GL：Rank≤100",
     "UL：Rank≤100"
@@ -3858,7 +3878,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-06T10:00:00.000Z",
+  "updatedAt": "2026-08-07T16:00:00.000Z",
   "minDexNumber": 29,
   "maxDexNumber": 31,
   "detailsLoaded": true
