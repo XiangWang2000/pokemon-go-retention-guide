@@ -1,13 +1,17 @@
-import homeSnapshot from "../../../../site-data/home.json";
+import auditSummarySnapshot from "../../../../site-data/auditSummary.json";
 import { DATA_VERSION } from "@/config/release";
-import { getDashboardRows } from "@/lib/data";
+import {
+  filterAuditRows,
+  normalizeAuditQuery,
+  type AuditRowSummary,
+  type AuditSummarySnapshot,
+} from "@/lib/audit-data";
+import { auditDataFileName, familyDataFileName } from "@/lib/site-data-paths";
 import type { FamilyOverview } from "@/presentation/family-overview";
-import type { HomeSnapshot } from "@/presentation/home-snapshot";
+import siteSnapshotManifest from "../../../../site-data/manifest.json";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
-
-const fullHome = homeSnapshot as unknown as HomeSnapshot;
 
 function noStoreHeaders() {
   const headers = new Headers({ "Content-Type": "application/json; charset=utf-8" });
@@ -30,23 +34,38 @@ function markFamilyLoaded(family: FamilyOverview): FamilyOverview {
   };
 }
 
+async function proxyJson(request: Request, pathname: string) {
+  const sourceUrl = new URL(pathname, request.url);
+  const source = await fetch(sourceUrl, { cache: "no-store" });
+  return new Response(await source.text(), {
+    status: source.status,
+    statusText: source.statusText,
+    headers: noStoreHeaders(),
+  });
+}
+
 export async function GET(request: Request) {
   const requestUrl = new URL(request.url);
   const scope = requestUrl.searchParams.get("scope");
 
   if (scope === "family") {
     const familyId = requestUrl.searchParams.get("familyId");
-    const family = familyId ? fullHome.families.find((item) => item.familyId === familyId) : null;
-    if (!family) {
+    if (!familyId) {
       return new Response(JSON.stringify({ error: "Family not found" }), {
         status: 404,
         headers: noStoreHeaders(),
       });
     }
+    const response = await proxyJson(
+      request,
+      `/data/families/${encodeURIComponent(familyDataFileName(familyId))}`,
+    );
+    if (!response.ok) return response;
+    const family = (await response.json()) as FamilyOverview;
     return new Response(
       JSON.stringify({
         schemaVersion: 1,
-        dataAsOf: fullHome.dataAsOf,
+        dataAsOf: siteSnapshotManifest.dataAsOf ?? null,
         family: markFamilyLoaded(family),
       }),
       { headers: noStoreHeaders() },
@@ -54,15 +73,34 @@ export async function GET(request: Request) {
   }
 
   if (scope === "audit") {
-    const rows = await getDashboardRows();
-    return new Response(JSON.stringify(rows), { headers: noStoreHeaders() });
+    const snapshot = auditSummarySnapshot as unknown as AuditSummarySnapshot;
+    const query = normalizeAuditQuery(requestUrl.searchParams);
+    const filtered = filterAuditRows(snapshot.rows as AuditRowSummary[], query, snapshot.dataAsOf);
+    const pageCount = Math.max(1, Math.ceil(filtered.length / query.pageSize));
+    const page = Math.min(query.page, pageCount);
+    const start = (page - 1) * query.pageSize;
+    const payload = {
+      schemaVersion: 1,
+      dataAsOf: snapshot.dataAsOf,
+      rows: filtered.slice(start, start + query.pageSize),
+      total: filtered.length,
+      overallTotal: snapshot.rows.length,
+      page,
+      pageSize: query.pageSize,
+    };
+    return new Response(JSON.stringify(payload), { headers: noStoreHeaders() });
   }
 
-  const sourceUrl = new URL("/data/home.json", request.url);
-  const source = await fetch(sourceUrl, { cache: "no-store" });
-  return new Response(await source.text(), {
-    status: source.status,
-    statusText: source.statusText,
-    headers: noStoreHeaders(),
-  });
+  if (scope === "audit-row") {
+    const rowId = requestUrl.searchParams.get("rowId");
+    if (!rowId) {
+      return new Response(JSON.stringify({ error: "Audit row not found" }), {
+        status: 404,
+        headers: noStoreHeaders(),
+      });
+    }
+    return proxyJson(request, `/data/audit/${encodeURIComponent(auditDataFileName(rowId))}`);
+  }
+
+  return proxyJson(request, "/data/home.json");
 }

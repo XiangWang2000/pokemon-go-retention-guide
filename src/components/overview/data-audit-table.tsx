@@ -1,5 +1,6 @@
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { Fragment } from "react";
+import { toAuditRowSummary, type AuditRowSummary } from "@/lib/audit-data";
 import type { DashboardRow } from "@/lib/data";
 import { zhTw } from "@/locales/zh-TW";
 import { scopedCategoryDataNote } from "@/presentation/data-status";
@@ -8,8 +9,8 @@ import { RetentionDecisionBadge } from "./retention-decision-badge";
 import { ReviewIssuePanel } from "./review-issue-panel";
 import { SourcePopover } from "./source-popover";
 
-function rank(row: DashboardRow, league: "GREAT" | "ULTRA" | "MASTER") {
-  return row.raw.find((item) => item.category === "PVP" && item.league === league)?.rank ?? null;
+function rank(row: AuditRowSummary, league: "GREAT" | "ULTRA" | "MASTER") {
+  return row.pvpRanks[league];
 }
 
 function AuditDetails({ row }: { row: DashboardRow }) {
@@ -91,17 +92,75 @@ function AuditDetails({ row }: { row: DashboardRow }) {
   );
 }
 
+function AuditDetailContent({
+  row,
+  detail,
+  loading,
+  error,
+  onRetry,
+}: {
+  row: AuditRowSummary;
+  detail?: DashboardRow;
+  loading: boolean;
+  error: boolean;
+  onRetry: () => void;
+}) {
+  if (detail) return <AuditDetails row={detail} />;
+  if (error) {
+    return (
+      <div className="border-t bg-red-500/10 p-4 text-sm" aria-live="polite">
+        <p className="font-black">此筆詳細資料載入失敗</p>
+        <button
+          type="button"
+          onClick={onRetry}
+          className="mt-3 min-h-11 rounded-lg border border-current px-3 font-bold"
+        >
+          重試此筆資料
+        </button>
+      </div>
+    );
+  }
+  return (
+    <div
+      className="border-t bg-[var(--surface-muted)]/45 p-4 text-sm text-[var(--muted)]"
+      aria-busy="true"
+    >
+      {loading ? "正在載入詳細資料…" : `正在準備 ${row.nameZhTw} 的詳細資料…`}
+    </div>
+  );
+}
+
 export function DataAuditTable({
   rows,
   expanded,
   onToggle,
   loading = false,
+  error = false,
+  onRetry,
+  details,
+  detailLoading,
+  detailErrors,
+  onRetryDetail,
 }: {
-  rows: DashboardRow[];
+  rows: Array<AuditRowSummary | DashboardRow>;
   expanded: Set<string>;
   onToggle: (id: string) => void;
   loading?: boolean;
+  error?: boolean;
+  onRetry?: () => void;
+  details?: Record<string, DashboardRow>;
+  detailLoading?: Set<string>;
+  detailErrors?: Record<string, boolean>;
+  onRetryDetail?: (id: string) => void;
 }) {
+  const summaryRows = rows.map((row) => ("pvpRanks" in row ? row : toAuditRowSummary(row)));
+  const inlineDetails = Object.fromEntries(
+    rows.filter((row): row is DashboardRow => !("pvpRanks" in row)).map((row) => [row.id, row]),
+  );
+  const resolvedDetails = { ...inlineDetails, ...details };
+  const resolvedDetailLoading = detailLoading ?? new Set<string>();
+  const resolvedDetailErrors = detailErrors ?? {};
+  const retryDetail = onRetryDetail ?? (() => undefined);
   if (loading) {
     return (
       <div className="surface rounded-2xl p-10 text-center" aria-busy="true" aria-live="polite">
@@ -110,7 +169,22 @@ export function DataAuditTable({
       </div>
     );
   }
-  if (!rows.length) {
+  if (error) {
+    return (
+      <div className="surface rounded-2xl p-10 text-center" aria-live="polite">
+        <p className="font-black">資料審核載入失敗</p>
+        <p className="mt-2 text-sm text-[var(--muted)]">可只重試資料審核，不影響首頁與家族資料。</p>
+        <button
+          type="button"
+          onClick={onRetry}
+          className="mt-4 min-h-11 rounded-lg bg-[var(--primary)] px-4 text-sm font-bold text-[var(--primary-contrast)]"
+        >
+          重試資料審核
+        </button>
+      </div>
+    );
+  }
+  if (!summaryRows.length) {
     return (
       <div className="surface rounded-2xl p-10 text-center font-black">找不到符合條件的資料</div>
     );
@@ -118,7 +192,7 @@ export function DataAuditTable({
   return (
     <>
       <div className="space-y-3 lg:hidden" data-mobile-layout="audit-cards">
-        {rows.map((row) => {
+        {summaryRows.map((row) => {
           const isExpanded = expanded.has(row.id);
           return (
             <article key={row.id} className="surface overflow-hidden rounded-2xl">
@@ -153,7 +227,15 @@ export function DataAuditTable({
                   {isExpanded ? "收合審核資料" : "展開審核資料"}
                 </button>
               </div>
-              {isExpanded ? <AuditDetails row={row} /> : null}
+              {isExpanded ? (
+                <AuditDetailContent
+                  row={row}
+                  detail={resolvedDetails[row.id]}
+                  loading={resolvedDetailLoading.has(row.id)}
+                  error={resolvedDetailErrors[row.id] === true}
+                  onRetry={() => retryDetail(row.id)}
+                />
+              ) : null}
             </article>
           );
         })}
@@ -186,7 +268,7 @@ export function DataAuditTable({
             </tr>
           </thead>
           <tbody>
-            {rows.map((row) => {
+            {summaryRows.map((row) => {
               const isExpanded = expanded.has(row.id);
               return (
                 <Fragment key={row.id}>
@@ -223,12 +305,18 @@ export function DataAuditTable({
                     <td className="px-3 py-3">{zhTw.confidence[row.confidence]}</td>
                     <td className="px-3 py-3">{row.updatedAt?.slice(0, 10) ?? "待確認"}</td>
                     <td className="px-3 py-3">{row.reviewed ? "已確認" : "未確認"}</td>
-                    <td className="px-3 py-3">{row.sources.length} 筆</td>
+                    <td className="px-3 py-3">{row.sourceCount} 筆</td>
                   </tr>
                   {isExpanded ? (
                     <tr>
                       <td colSpan={11} className="border-b bg-[var(--surface-muted)]/45 p-0">
-                        <AuditDetails row={row} />
+                        <AuditDetailContent
+                          row={row}
+                          detail={resolvedDetails[row.id]}
+                          loading={resolvedDetailLoading.has(row.id)}
+                          error={resolvedDetailErrors[row.id] === true}
+                          onRetry={() => retryDetail(row.id)}
+                        />
                       </td>
                     </tr>
                   ) : null}

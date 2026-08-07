@@ -2,8 +2,20 @@
 
 import { Download, Search } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { freshnessDays } from "@/config/freshness";
+import type { AuditPageResponse, AuditQuery } from "@/lib/audit-data";
 import type { DashboardRow } from "@/lib/data";
+import {
+  decisionFilterValues,
+  familyDecisionFilterValues,
+  freshnessFilterValues,
+  generationFilterValues,
+  normalizeFilterValue,
+  regionFilterValues,
+  reviewedFilterValues,
+  sortFilterValues,
+  useFilterValues,
+  variantFilterValues,
+} from "@/lib/evaluation-filters";
 import { matchesPokemonGeneration, pokemonGenerationRanges } from "@/lib/pokemon-taxonomy";
 import { matchesPokemonSearch } from "@/lib/search";
 import { zhTw } from "@/locales/zh-TW";
@@ -136,24 +148,6 @@ function matchesFormUse(form: FormOverview, use: string) {
   return false;
 }
 
-function matchesRowUse(row: DashboardRow, use: string) {
-  if (use === "ALL") return true;
-  if (use === "PVP") return row.raw.some((raw) => raw.category === "PVP");
-  if (use === "PVE") {
-    return row.categoryStatuses.some(
-      (status) =>
-        status.category === "PVE" &&
-        ["CORE_INVESTMENT", "USABLE_OR_BUDGET", "SPECIAL_USE"].includes(status.pveUseLevel ?? ""),
-    );
-  }
-  if (use === "ROCKET") return hasRocketUse(row);
-  if (use === "GYM") return ["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(row.gymRating);
-  if (use === "MEGA") return row.variantKey.startsWith("MEGA");
-  if (use === "MAX") return ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey);
-  if (use === "EVOLUTION") return row.evolutionSummaryZhTw.includes("後續進化");
-  return false;
-}
-
 type BrowserUrlState = {
   mode: ViewMode;
   query: string;
@@ -199,18 +193,32 @@ function readBrowserUrlState(initialMode: ViewMode): BrowserUrlState {
   if (typeof window === "undefined") return defaults;
   const params = new URLSearchParams(window.location.search);
   const mode = params.get("mode")?.toUpperCase();
+  const safeMode =
+    mode === "POKEDEX" || mode === "AUDIT" || mode === "FAMILY" ? mode : defaults.mode;
   const page = Number(params.get("page"));
   return {
-    mode: mode === "POKEDEX" || mode === "AUDIT" || mode === "FAMILY" ? mode : defaults.mode,
+    mode: safeMode,
     query: params.get("q") ?? defaults.query,
-    decision: params.get("decision") ?? defaults.decision,
-    variant: params.get("variant") ?? defaults.variant,
-    valueFilter: params.get("use") ?? defaults.valueFilter,
-    generation: params.get("generation") ?? defaults.generation,
-    region: params.get("region") ?? defaults.region,
-    freshness: params.get("freshness") ?? defaults.freshness,
-    reviewed: params.get("reviewed") ?? defaults.reviewed,
-    sort: params.get("sort") ?? defaults.sort,
+    decision: normalizeFilterValue(
+      params.get("decision"),
+      safeMode === "FAMILY" ? familyDecisionFilterValues : decisionFilterValues,
+      defaults.decision,
+    ),
+    variant: normalizeFilterValue(params.get("variant"), variantFilterValues, defaults.variant),
+    valueFilter: normalizeFilterValue(params.get("use"), useFilterValues, defaults.valueFilter),
+    generation: normalizeFilterValue(
+      params.get("generation"),
+      generationFilterValues,
+      defaults.generation,
+    ),
+    region: normalizeFilterValue(params.get("region"), regionFilterValues, defaults.region),
+    freshness: normalizeFilterValue(
+      params.get("freshness"),
+      freshnessFilterValues,
+      defaults.freshness,
+    ),
+    reviewed: normalizeFilterValue(params.get("reviewed"), reviewedFilterValues, defaults.reviewed),
+    sort: normalizeFilterValue(params.get("sort"), sortFilterValues, defaults.sort),
     page: Number.isFinite(page) && page > 0 ? Math.floor(page) : defaults.page,
   };
 }
@@ -272,21 +280,36 @@ function PaginationControls({
 
 export function EvaluationBrowser({
   families,
-  referenceDate,
   initialMode = "FAMILY",
   loading = false,
-  auditRows = null,
+  auditPage = null,
   auditLoading = false,
-  onLoadAuditRows,
+  auditError = false,
+  onLoadAuditPage,
+  onRetryAudit,
+  auditDetails = {},
+  auditDetailLoading = new Set<string>(),
+  auditDetailErrors = {},
+  onLoadAuditDetail,
+  familyDetailErrors = {},
+  onRetryFamilyDetails,
   onLoadFamilyDetails,
 }: {
   families: FamilyOverview[];
   referenceDate: string;
   initialMode?: ViewMode;
   loading?: boolean;
-  auditRows?: DashboardRow[] | null;
+  auditPage?: AuditPageResponse | null;
   auditLoading?: boolean;
-  onLoadAuditRows?: () => void;
+  auditError?: boolean;
+  onLoadAuditPage?: (query: AuditQuery) => void;
+  onRetryAudit?: () => void;
+  auditDetails?: Record<string, DashboardRow>;
+  auditDetailLoading?: Set<string>;
+  auditDetailErrors?: Record<string, boolean>;
+  onLoadAuditDetail?: (rowId: string) => void;
+  familyDetailErrors?: Record<string, boolean>;
+  onRetryFamilyDetails?: (familyId: string) => void;
   onLoadFamilyDetails?: (familyId: string) => void;
 }) {
   const [mode, setMode] = useState<ViewMode>(initialMode);
@@ -358,17 +381,15 @@ export function EvaluationBrowser({
       setPage(next.page);
       setExpandedFamilies(new Set());
       setExpandedItems(new Set());
+      if (urlReadyRef.current) writeBrowserUrl(next, true);
     };
 
     applyUrlState();
     urlReadyRef.current = true;
+    writeBrowserUrl(readBrowserUrlState(initialMode), true);
     window.addEventListener("popstate", applyUrlState);
     return () => window.removeEventListener("popstate", applyUrlState);
   }, [initialMode]);
-
-  useEffect(() => {
-    if (mode === "AUDIT" && auditRows === null && !auditLoading) onLoadAuditRows?.();
-  }, [auditLoading, auditRows, mode, onLoadAuditRows]);
 
   const forms = useMemo(
     () => [
@@ -379,6 +400,34 @@ export function EvaluationBrowser({
       ).values(),
     ],
     [families],
+  );
+
+  const formFamilyIds = useMemo(
+    () =>
+      new Map(
+        families.flatMap((family) =>
+          family.members.map((member) => [member.form.formId, family.familyId] as const),
+        ),
+      ),
+    [families],
+  );
+  const formDetailErrors = useMemo(
+    () =>
+      Object.fromEntries(
+        forms.map((form) => [
+          form.formId,
+          familyDetailErrors[formFamilyIds.get(form.formId) ?? ""] === true,
+        ]),
+      ),
+    [formFamilyIds, forms, familyDetailErrors],
+  );
+
+  const retryFormDetails = useCallback(
+    (formId: string) => {
+      const familyId = formFamilyIds.get(formId);
+      if (familyId) onRetryFamilyDetails?.(familyId);
+    },
+    [formFamilyIds, onRetryFamilyDetails],
   );
 
   const regionOptions = useMemo(
@@ -447,69 +496,60 @@ export function EvaluationBrowser({
     [decision, generation, region, searchMatches, sort, valueFilter, variant],
   );
 
-  const filteredAuditRows = useMemo(() => {
-    const now = Date.parse(referenceDate);
-    return (auditRows ?? [])
-      .filter((row) =>
-        matchesPokemonSearch(
-          {
-            dexNumber: row.dexNumber,
-            nameEn: row.nameEn,
-            nameZhTw: row.nameZhTw,
-            formNameEn: row.formNameEn,
-            formNameZhTw: row.formNameZhTw,
-            aliases: row.aliases,
-            evolutionNames: row.evolutionNames,
-          },
-          query,
-        ),
-      )
-      .filter((row) => decision === "ALL" || row.decision === decision)
-      .filter((row) => variant === "ALL" || row.variantKey === variant)
-      .filter((row) => matchesPokemonGeneration(row.dexNumber, generation))
-      .filter((row) => matchesRegion(row.regionKey, region))
-      .filter((row) => matchesRowUse(row, valueFilter))
-      .filter((row) => reviewed === "ALL" || row.reviewed === (reviewed === "YES"))
-      .filter((row) => {
-        if (freshness === "ALL") return true;
-        const stale =
-          !row.updatedAt ||
-          now - new Date(row.updatedAt).getTime() > freshnessDays.PVP * 86_400_000;
-        return freshness === "STALE" ? stale : !stale;
-      })
-      .sort((left, right) => {
-        if (sort === "DEX_DESC") return right.dexNumber - left.dexNumber;
-        if (sort === "DECISION") return left.decision.localeCompare(right.decision);
-        if (sort === "UPDATED") return (right.updatedAt ?? "").localeCompare(left.updatedAt ?? "");
-        return left.dexNumber - right.dexNumber || left.formId.localeCompare(right.formId);
-      });
-  }, [
-    auditRows,
-    decision,
-    freshness,
-    generation,
-    query,
-    referenceDate,
-    region,
-    reviewed,
-    sort,
-    valueFilter,
-    variant,
-  ]);
-
   const totalItems =
     mode === "FAMILY"
       ? familyRows.length
       : mode === "POKEDEX"
         ? quickForms.length
-        : filteredAuditRows.length;
+        : (auditPage?.total ?? 0);
   const pageSize = mode === "FAMILY" ? 12 : mode === "POKEDEX" ? 24 : 40;
-  const pageCount = Math.max(1, Math.ceil(totalItems / pageSize));
-  const activePage = Math.min(page, pageCount);
+  const pageCount =
+    mode === "AUDIT" && !auditPage
+      ? Math.max(1, page)
+      : Math.max(1, Math.ceil(totalItems / pageSize));
+  const activePage = mode === "AUDIT" && !auditPage ? page : Math.min(page, pageCount);
   const start = (activePage - 1) * pageSize;
   const visibleFamilyRows = familyRows.slice(start, start + pageSize);
   const visibleQuickForms = quickForms.slice(start, start + pageSize);
-  const visibleAuditRows = filteredAuditRows.slice(start, start + pageSize);
+  const visibleAuditRows = auditPage?.rows ?? [];
+
+  const auditQuery = useMemo<AuditQuery>(
+    () => ({
+      query,
+      decision,
+      variant,
+      use: valueFilter,
+      generation,
+      region,
+      freshness,
+      reviewed,
+      sort,
+      page: activePage,
+      pageSize: 40,
+    }),
+    [
+      activePage,
+      decision,
+      freshness,
+      generation,
+      query,
+      region,
+      reviewed,
+      sort,
+      valueFilter,
+      variant,
+    ],
+  );
+  const auditQueryKey = JSON.stringify(auditQuery);
+  const lastAuditQueryRef = useRef("");
+
+  useEffect(() => {
+    if (mode !== "AUDIT" || !onLoadAuditPage || lastAuditQueryRef.current === auditQueryKey) {
+      return;
+    }
+    lastAuditQueryRef.current = auditQueryKey;
+    onLoadAuditPage(auditQuery);
+  }, [auditQuery, auditQueryKey, mode, onLoadAuditPage]);
 
   useEffect(() => {
     if (previousPageRef.current !== activePage) {
@@ -527,6 +567,16 @@ export function EvaluationBrowser({
   }
 
   function toggleItem(id: string) {
+    if (mode === "AUDIT") {
+      if (!auditDetails[id]) onLoadAuditDetail?.(id);
+      setExpandedItems((current) => {
+        const next = new Set(current);
+        if (next.has(id)) next.delete(id);
+        else next.add(id);
+        return next;
+      });
+      return;
+    }
     const form = forms.find((item) => item.formId === id);
     if (form?.detailsLoaded === false) {
       const family = families.find((item) =>
@@ -773,6 +823,12 @@ export function EvaluationBrowser({
           <p className="text-sm text-[var(--muted)]" aria-live="polite">
             {loading ? (
               "正在讀取資料…"
+            ) : mode === "AUDIT" && !auditPage ? (
+              auditError ? (
+                "資料審核載入失敗"
+              ) : (
+                "正在載入資料…"
+              )
             ) : (
               <>
                 顯示 <strong className="text-[var(--foreground)]">{totalItems}</strong>／
@@ -780,7 +836,7 @@ export function EvaluationBrowser({
                   ? families.length
                   : mode === "POKEDEX"
                     ? forms.length
-                    : filteredAuditRows.length}{" "}
+                    : (auditPage?.overallTotal ?? 0)}{" "}
                 {totalLabel}
               </>
             )}
@@ -819,15 +875,29 @@ export function EvaluationBrowser({
             expandedForms={expandedItems}
             onToggleFamily={toggleFamily}
             onToggleForm={toggleItem}
+            familyDetailErrors={familyDetailErrors}
+            onRetryFamilyDetails={onRetryFamilyDetails}
           />
         ) : mode === "POKEDEX" ? (
-          <QuickOverview forms={visibleQuickForms} expanded={expandedItems} onToggle={toggleItem} />
+          <QuickOverview
+            forms={visibleQuickForms}
+            expanded={expandedItems}
+            onToggle={toggleItem}
+            detailErrors={formDetailErrors}
+            onRetryDetail={retryFormDetails}
+          />
         ) : (
           <DataAuditTable
             rows={visibleAuditRows}
             expanded={expandedItems}
             onToggle={toggleItem}
-            loading={auditLoading}
+            loading={auditLoading || (!auditPage && !auditError)}
+            error={auditError && !auditPage}
+            onRetry={onRetryAudit}
+            details={auditDetails}
+            detailLoading={auditDetailLoading}
+            detailErrors={auditDetailErrors}
+            onRetryDetail={(id) => onLoadAuditDetail?.(id)}
           />
         )}
       </div>

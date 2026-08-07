@@ -9,7 +9,25 @@ import { RetentionDecisionBadge } from "./retention-decision-badge";
 import { SummaryCell } from "./summary-cell";
 import { VariantBadges } from "./variant-badges";
 
-function LazyDetailNotice() {
+function LazyDetailNotice({ error = false, onRetry }: { error?: boolean; onRetry?: () => void }) {
+  if (error) {
+    return (
+      <div
+        className="border-t bg-red-500/10 p-4 text-sm"
+        data-testid="family-detail-error"
+        aria-live="polite"
+      >
+        <p className="font-black">家族詳細資料載入失敗</p>
+        <button
+          type="button"
+          onClick={onRetry}
+          className="mt-3 min-h-11 rounded-lg border border-current px-3 font-bold"
+        >
+          重試家族詳細資料
+        </button>
+      </div>
+    );
+  }
   return (
     <div
       className="border-t bg-[var(--surface-muted)]/45 p-4 text-sm text-[var(--muted)]"
@@ -25,10 +43,14 @@ export function QuickOverview({
   forms,
   expanded,
   onToggle,
+  detailErrors = {},
+  onRetryDetail,
 }: {
   forms: FormOverview[];
   expanded: Set<string>;
   onToggle: (formId: string) => void;
+  detailErrors?: Record<string, boolean>;
+  onRetryDetail?: (formId: string) => void;
 }) {
   if (!forms.length) {
     return (
@@ -101,7 +123,10 @@ export function QuickOverview({
               </div>
               {isExpanded ? (
                 form.detailsLoaded === false ? (
-                  <LazyDetailNotice />
+                  <LazyDetailNotice
+                    error={detailErrors[form.formId] === true}
+                    onRetry={() => onRetryDetail?.(form.formId)}
+                  />
                 ) : (
                   <FormDetailPanel form={form} panelId={`form-detail-mobile-${form.formId}`} />
                 )
@@ -197,7 +222,10 @@ export function QuickOverview({
                     <tr>
                       <td colSpan={7} className="border-b bg-[var(--surface-muted)]/45 p-0">
                         {form.detailsLoaded === false ? (
-                          <LazyDetailNotice />
+                          <LazyDetailNotice
+                            error={detailErrors[form.formId] === true}
+                            onRetry={() => onRetryDetail?.(form.formId)}
+                          />
                         ) : (
                           <FormDetailPanel
                             form={form}

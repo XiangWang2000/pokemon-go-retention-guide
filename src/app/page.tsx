@@ -1,10 +1,7 @@
+import homeSummarySnapshot from "../../site-data/homeSummary.json";
 import { HomeDataLoader } from "@/components/home-data-loader";
-import { getDashboardRows, siteSnapshotManifest } from "@/lib/data";
-import { buildHomeSnapshot } from "@/presentation/home-snapshot";
-import { buildHomeSummary } from "@/presentation/home-summary";
+import type { HomeSummary } from "@/presentation/home-summary";
 
-export default async function HomePage() {
-  const rows = await getDashboardRows();
-  const home = buildHomeSnapshot(rows, siteSnapshotManifest.dataAsOf ?? null);
-  return <HomeDataLoader initialSummary={buildHomeSummary(home)} />;
+export default function HomePage() {
+  return <HomeDataLoader initialSummary={homeSummarySnapshot as unknown as HomeSummary} />;
 }

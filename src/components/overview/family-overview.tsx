@@ -191,12 +191,16 @@ export function FamilyOverview({
   expandedForms,
   onToggleFamily,
   onToggleForm,
+  familyDetailErrors = {},
+  onRetryFamilyDetails,
 }: {
   families: FamilyOverviewModel[];
   expandedFamilies: Set<string>;
   expandedForms: Set<string>;
   onToggleFamily: (familyId: string) => void;
   onToggleForm: (formId: string) => void;
+  familyDetailErrors?: Record<string, boolean>;
+  onRetryFamilyDetails?: (familyId: string) => void;
 }) {
   if (!families.length) {
     return (
@@ -250,6 +254,8 @@ export function FamilyOverview({
                     expandedForms={expandedForms}
                     onToggleForm={onToggleForm}
                     layoutPrefix="mobile"
+                    familyDetailError={familyDetailErrors[family.familyId] === true}
+                    onRetryFamilyDetails={() => onRetryFamilyDetails?.(family.familyId)}
                   />
                 </div>
               ) : null}
@@ -350,6 +356,8 @@ export function FamilyOverview({
                           expandedForms={expandedForms}
                           onToggleForm={onToggleForm}
                           layoutPrefix="desktop"
+                          familyDetailError={familyDetailErrors[family.familyId] === true}
+                          onRetryFamilyDetails={() => onRetryFamilyDetails?.(family.familyId)}
                         />
                       </td>
                     </tr>

@@ -1,9 +1,10 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AlertTriangle, CheckCircle2, CircleDot, Send } from "lucide-react";
 import { EvaluationBrowser } from "@/components/evaluation-browser";
 import { DATA_VERSION_DATE_ZH_TW } from "@/config/release";
+import type { AuditPageResponse, AuditQuery } from "@/lib/audit-data";
 import type { DashboardRow } from "@/lib/data";
 import type { FamilyOverview } from "@/presentation/family-overview";
 import type { HomeFamilyDetailResponse, HomeRuntimeSnapshot } from "@/presentation/home-snapshot";
@@ -18,31 +19,47 @@ const strategyLabels = {
 
 export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummary | null }) {
   const [home, setHome] = useState<HomeRuntimeSnapshot | null>(null);
+  const [homeLoading, setHomeLoading] = useState(true);
+  const [homeError, setHomeError] = useState(false);
   const [familyDetails, setFamilyDetails] = useState<Record<string, FamilyOverview>>({});
   const [familyDetailLoading, setFamilyDetailLoading] = useState<Set<string>>(new Set());
-  const [auditRows, setAuditRows] = useState<DashboardRow[] | null>(null);
+  const [familyDetailErrors, setFamilyDetailErrors] = useState<Record<string, boolean>>({});
+  const [auditPage, setAuditPage] = useState<AuditPageResponse | null>(null);
   const [auditLoading, setAuditLoading] = useState(false);
-  const [loadError, setLoadError] = useState(false);
-  useEffect(() => {
-    const controller = new AbortController();
-    fetch("/api/home", {
-      cache: "no-store",
-      signal: controller.signal,
-    })
+  const [auditError, setAuditError] = useState(false);
+  const [auditDetails, setAuditDetails] = useState<Record<string, DashboardRow>>({});
+  const [auditDetailLoading, setAuditDetailLoading] = useState<Set<string>>(new Set());
+  const [auditDetailErrors, setAuditDetailErrors] = useState<Record<string, boolean>>({});
+  const homeRequestRef = useRef(0);
+  const auditRequestRef = useRef(0);
+  const auditQueryRef = useRef<AuditQuery | null>(null);
+
+  const loadHome = useCallback(() => {
+    const requestId = ++homeRequestRef.current;
+    setHomeLoading(true);
+    setHomeError(false);
+    fetch("/api/home", { cache: "no-store" })
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         return response.json() as Promise<HomeRuntimeSnapshot>;
       })
       .then((payload) => {
+        if (requestId !== homeRequestRef.current) return;
         setHome(payload);
-        setLoadError(false);
       })
-      .catch((error: unknown) => {
-        if (error instanceof DOMException && error.name === "AbortError") return;
-        setLoadError(true);
+      .catch(() => {
+        if (requestId === homeRequestRef.current) setHomeError(true);
+      })
+      .finally(() => {
+        if (requestId === homeRequestRef.current) setHomeLoading(false);
       });
-    return () => controller.abort();
   }, []);
+
+  useEffect(() => {
+    const timer = window.setTimeout(loadHome, 0);
+    return () => window.clearTimeout(timer);
+  }, [loadHome]);
+
   const families = useMemo(
     () => home?.families.map((family) => familyDetails[family.familyId] ?? family) ?? [],
     [familyDetails, home],
@@ -52,6 +69,7 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
     (familyId: string) => {
       const family = home?.families.find((item) => item.familyId === familyId);
       if (!family || familyDetails[familyId] || familyDetailLoading.has(familyId)) return;
+      setFamilyDetailErrors((current) => ({ ...current, [familyId]: false }));
       setFamilyDetailLoading((current) => new Set(current).add(familyId));
       fetch(`/api/home?scope=family&familyId=${encodeURIComponent(familyId)}`, {
         cache: "no-store",
@@ -63,7 +81,9 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
         .then((payload) => {
           setFamilyDetails((current) => ({ ...current, [familyId]: payload.family }));
         })
-        .catch(() => setLoadError(true))
+        .catch(() => {
+          setFamilyDetailErrors((current) => ({ ...current, [familyId]: true }));
+        })
         .finally(() => {
           setFamilyDetailLoading((current) => {
             const next = new Set(current);
@@ -75,20 +95,75 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
     [familyDetailLoading, familyDetails, home],
   );
 
-  const loadAuditRows = useCallback(() => {
-    if (auditRows || auditLoading) return;
+  const loadAuditPage = useCallback((query: AuditQuery) => {
+    const requestId = ++auditRequestRef.current;
+    auditQueryRef.current = query;
+    setAuditPage(null);
     setAuditLoading(true);
-    fetch("/api/home?scope=audit", { cache: "no-store" })
+    setAuditError(false);
+    const params = new URLSearchParams({
+      scope: "audit",
+      q: query.query,
+      decision: query.decision,
+      variant: query.variant,
+      use: query.use,
+      generation: query.generation,
+      region: query.region,
+      freshness: query.freshness,
+      reviewed: query.reviewed,
+      sort: query.sort,
+      page: String(query.page),
+    });
+    fetch(`/api/home?${params.toString()}`, { cache: "no-store" })
       .then((response) => {
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json() as Promise<DashboardRow[]>;
+        return response.json() as Promise<AuditPageResponse>;
       })
-      .then((payload) => setAuditRows(payload))
-      .catch(() => setLoadError(true))
-      .finally(() => setAuditLoading(false));
-  }, [auditLoading, auditRows]);
+      .then((payload) => {
+        if (requestId === auditRequestRef.current) setAuditPage(payload);
+      })
+      .catch(() => {
+        if (requestId === auditRequestRef.current) setAuditError(true);
+      })
+      .finally(() => {
+        if (requestId === auditRequestRef.current) setAuditLoading(false);
+      });
+  }, []);
 
-  const isLoading = !home && !loadError;
+  const retryAudit = useCallback(() => {
+    if (auditQueryRef.current) loadAuditPage(auditQueryRef.current);
+  }, [loadAuditPage]);
+
+  const loadAuditDetail = useCallback(
+    (rowId: string) => {
+      if (auditDetails[rowId] || auditDetailLoading.has(rowId)) return;
+      setAuditDetailErrors((current) => ({ ...current, [rowId]: false }));
+      setAuditDetailLoading((current) => new Set(current).add(rowId));
+      fetch(`/api/home?scope=audit-row&rowId=${encodeURIComponent(rowId)}`, {
+        cache: "no-store",
+      })
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          return response.json() as Promise<DashboardRow>;
+        })
+        .then((payload) => {
+          setAuditDetails((current) => ({ ...current, [rowId]: payload }));
+        })
+        .catch(() => {
+          setAuditDetailErrors((current) => ({ ...current, [rowId]: true }));
+        })
+        .finally(() => {
+          setAuditDetailLoading((current) => {
+            const next = new Set(current);
+            next.delete(rowId);
+            return next;
+          });
+        });
+    },
+    [auditDetailLoading, auditDetails],
+  );
+
+  const isLoading = homeLoading;
   const initialCounts = initialSummary?.strategyCounts;
   const stats = [
     {
@@ -155,22 +230,36 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
           ))}
         </div>
       </section>
-      {loadError ? (
+      {homeError ? (
         <section className="surface rounded-2xl p-6 text-center">
-          <p className="font-black">資料載入失敗</p>
+          <p className="font-black">首頁資料載入失敗</p>
           <p className="mt-2 text-sm text-[var(--muted)]">
-            請重新整理頁面；保留指南資料不會因載入失敗而顯示錯誤清包結論。
+            搜尋與篩選介面仍可使用，請只重試首頁資料。
           </p>
+          <button
+            type="button"
+            onClick={loadHome}
+            className="mt-4 min-h-11 rounded-lg bg-[var(--primary)] px-4 text-sm font-bold text-[var(--primary-contrast)]"
+          >
+            重試首頁資料
+          </button>
         </section>
       ) : null}
       <EvaluationBrowser
         families={families}
         referenceDate={home?.dataAsOf ?? initialSummary?.dataAsOf ?? "2026-08-06T00:00:00+08:00"}
         loading={isLoading}
-        auditRows={auditRows}
-        auditLoading={auditLoading}
-        onLoadAuditRows={loadAuditRows}
+        familyDetailErrors={familyDetailErrors}
         onLoadFamilyDetails={loadFamilyDetails}
+        auditPage={auditPage}
+        auditLoading={auditLoading}
+        auditError={auditError}
+        onLoadAuditPage={loadAuditPage}
+        onRetryAudit={retryAudit}
+        auditDetails={auditDetails}
+        auditDetailLoading={auditDetailLoading}
+        auditDetailErrors={auditDetailErrors}
+        onLoadAuditDetail={loadAuditDetail}
       />
     </div>
   );

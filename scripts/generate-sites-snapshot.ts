@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { access, mkdir, readFile, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, readdir, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { buildExportWorkbook } from "../src/export/excel";
 import {
@@ -11,7 +11,10 @@ import {
 } from "../src/lib/data-prisma";
 import { prisma } from "../src/lib/prisma";
 import { DATA_VERSION } from "../src/config/release";
+import { buildAuditSummary } from "../src/lib/audit-data";
+import { auditDataFileName, familyDataFileName } from "../src/lib/site-data-paths";
 import { buildHomeSnapshot } from "../src/presentation/home-snapshot";
+import { buildHomeSummary } from "../src/presentation/home-summary";
 import type { HomeRuntimeSnapshot } from "../src/presentation/home-snapshot";
 
 const root = process.cwd();
@@ -52,6 +55,19 @@ async function writeIfChanged(filePath: string, value: Uint8Array) {
   }
   await writeFile(filePath, value);
   return true;
+}
+
+async function syncJsonDirectory(directory: string, files: Map<string, Uint8Array>) {
+  await mkdir(directory, { recursive: true });
+  const expected = new Set(files.keys());
+  for (const entry of await readdir(directory, { withFileTypes: true })) {
+    if (entry.isFile() && entry.name.endsWith(".json") && !expected.has(entry.name)) {
+      await unlink(path.join(directory, entry.name));
+    }
+  }
+  for (const [name, value] of files) {
+    await writeIfChanged(path.join(directory, name), value);
+  }
 }
 
 function latestIso(values: Array<string | null | undefined>) {
@@ -153,6 +169,17 @@ function buildRuntimeHome(home: ReturnType<typeof buildHomeSnapshot>) {
   } satisfies HomeRuntimeSnapshot;
 }
 
+function buildFamilyDetail(family: ReturnType<typeof buildHomeSnapshot>["families"][number]) {
+  return {
+    ...family,
+    detailsLoaded: true,
+    members: family.members.map((member) => ({
+      ...member,
+      form: { ...member.form, detailsLoaded: true },
+    })),
+  };
+}
+
 async function tableCounts() {
   const [
     pokemonSpecies,
@@ -232,9 +259,13 @@ async function main() {
     ...changes.map((change) => change.changedAt),
   ]);
   const home = buildHomeSnapshot(dashboard, dataAsOf);
+  const homeSummary = buildHomeSummary(home);
+  const auditSummary = buildAuditSummary(dashboard, dataAsOf);
   const payloads = {
     home: jsonBuffer(home),
+    homeSummary: jsonBuffer(homeSummary),
     dashboard: jsonBuffer(dashboard),
+    auditSummary: jsonBuffer(auditSummary),
     review: jsonBuffer(review),
     sources: jsonBuffer(sources),
     changes: jsonBuffer(changes),
@@ -258,10 +289,31 @@ async function main() {
   }
   const publicHome = compactJsonBuffer(buildRuntimeHome(home));
   await writeIfChanged(path.join(publicDataDirectory, "home.json"), publicHome);
+  const familyFiles = new Map(
+    home.families.map((family) => [
+      familyDataFileName(family.familyId),
+      jsonBuffer(buildFamilyDetail(family)),
+    ]),
+  );
+  const auditFiles = new Map(dashboard.map((row) => [auditDataFileName(row.id), jsonBuffer(row)]));
+  await syncJsonDirectory(path.join(publicDataDirectory, "families"), familyFiles);
+  await syncJsonDirectory(path.join(publicDataDirectory, "audit"), auditFiles);
   const publicHeaders = Buffer.from(
     [
       "/data/home.json",
       `  Cache-Control: no-store, max-age=0, must-revalidate`,
+      "  CDN-Cache-Control: no-store",
+      "  Surrogate-Control: no-store",
+      "  Pragma: no-cache",
+      `  X-Data-Version: ${DATA_VERSION}`,
+      "/data/families/*",
+      "  Cache-Control: no-store, max-age=0, must-revalidate",
+      "  CDN-Cache-Control: no-store",
+      "  Surrogate-Control: no-store",
+      "  Pragma: no-cache",
+      `  X-Data-Version: ${DATA_VERSION}`,
+      "/data/audit/*",
+      "  Cache-Control: no-store, max-age=0, must-revalidate",
       "  CDN-Cache-Control: no-store",
       "  Surrogate-Control: no-store",
       "  Pragma: no-cache",
@@ -307,6 +359,9 @@ async function main() {
       ...counts,
       dashboardRows: dashboard.length,
       homeFamilies: home.families.length,
+      auditSummaryRows: auditSummary.rows.length,
+      runtimeFamilyFiles: familyFiles.size,
+      runtimeAuditDetailFiles: auditFiles.size,
       openReviewIssues: review.length,
       detailRecords: Object.keys(details).length,
     },
@@ -316,6 +371,16 @@ async function main() {
       path: "public/data/home.json",
       bytes: publicHome.byteLength,
       sha256: sha256(publicHome),
+    },
+    runtimeFamilyData: {
+      directory: "public/data/families",
+      count: familyFiles.size,
+      bytes: [...familyFiles.values()].reduce((total, value) => total + value.byteLength, 0),
+    },
+    runtimeAuditData: {
+      directory: "public/data/audit",
+      count: auditFiles.size,
+      bytes: [...auditFiles.values()].reduce((total, value) => total + value.byteLength, 0),
     },
     excel: {
       path: `public/exports/${exportFileName}`,

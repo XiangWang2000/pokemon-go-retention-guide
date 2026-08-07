@@ -1,7 +1,8 @@
 import { createHash } from "node:crypto";
-import { access, readFile } from "node:fs/promises";
+import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { DATA_VERSION } from "../src/config/release";
+import { auditDataFileName, familyDataFileName } from "../src/lib/site-data-paths";
 
 interface ManifestFile {
   path: string;
@@ -16,6 +17,9 @@ interface Manifest {
   counts: {
     dashboardRows: number;
     homeFamilies: number;
+    auditSummaryRows: number;
+    runtimeFamilyFiles: number;
+    runtimeAuditDetailFiles: number;
     openReviewIssues: number;
     sourceReferences: number;
     changeLogs: number;
@@ -24,6 +28,8 @@ interface Manifest {
   snapshotSha256: string;
   files: Record<string, ManifestFile>;
   runtimeHome: ManifestFile;
+  runtimeFamilyData: { directory: string; count: number; bytes: number };
+  runtimeAuditData: { directory: string; count: number; bytes: number };
   excel: { path: string; bytes: number; sha256: string; sheets: number };
 }
 
@@ -72,6 +78,16 @@ async function main() {
 
   const dashboard = parsed.dashboard as unknown[];
   const home = parsed.home as { schemaVersion: number; families: unknown[] };
+  const homeSummary = parsed.homeSummary as {
+    schemaVersion: number;
+    dataAsOf: string | null;
+    strategyCounts: Record<string, number>;
+  };
+  const auditSummary = parsed.auditSummary as {
+    schemaVersion: number;
+    dataAsOf: string | null;
+    rows: Array<{ id: string }>;
+  };
   const review = parsed.review as unknown[];
   const sources = parsed.sources as unknown[];
   const changes = parsed.changes as unknown[];
@@ -79,10 +95,60 @@ async function main() {
   assert(dashboard.length === manifest.counts.dashboardRows, "dashboard 筆數不一致。");
   assert(home.schemaVersion === 1, "home snapshot schemaVersion 不支援。");
   assert(home.families.length === manifest.counts.homeFamilies, "home 家族筆數不一致。");
+  assert(homeSummary.schemaVersion === 1, "home summary schemaVersion 不正確。");
+  assert(auditSummary.schemaVersion === 1, "audit summary schemaVersion 不正確。");
+  assert(
+    auditSummary.rows.length === manifest.counts.auditSummaryRows,
+    "audit summary 筆數不一致。",
+  );
+  assert(
+    manifest.counts.auditSummaryRows === manifest.counts.dashboardRows,
+    "audit summary 與 dashboard 筆數不一致。",
+  );
   assert(review.length === manifest.counts.openReviewIssues, "資料待補清單筆數不一致。");
   assert(sources.length === manifest.counts.sourceReferences, "來源筆數不一致。");
   assert(changes.length === manifest.counts.changeLogs, "變更紀錄筆數不一致。");
   assert(Object.keys(details).length === manifest.counts.detailRecords, "詳細資料筆數不一致。");
+
+  const familyDirectory = path.join(root, manifest.runtimeFamilyData.directory);
+  const familyEntries = (await readdir(familyDirectory)).filter((name) => name.endsWith(".json"));
+  assert(familyEntries.length === manifest.runtimeFamilyData.count, "家族詳細檔案數量不一致。");
+  assert(
+    familyEntries.length === manifest.counts.runtimeFamilyFiles,
+    "manifest 家族檔案數量不一致。",
+  );
+  let familyBytes = 0;
+  for (const family of home.families as Array<{ familyId: string }>) {
+    const file = path.join(familyDirectory, familyDataFileName(family.familyId));
+    const content = await readFile(file);
+    familyBytes += content.byteLength;
+    const payload = JSON.parse(content.toString("utf8")) as {
+      familyId: string;
+      detailsLoaded?: boolean;
+    };
+    assert(
+      payload.familyId === family.familyId && payload.detailsLoaded === true,
+      "家族詳細檔案內容不一致。",
+    );
+  }
+  assert(familyBytes === manifest.runtimeFamilyData.bytes, "家族詳細檔案總大小不一致。");
+
+  const auditDirectory = path.join(root, manifest.runtimeAuditData.directory);
+  const auditEntries = (await readdir(auditDirectory)).filter((name) => name.endsWith(".json"));
+  assert(auditEntries.length === manifest.runtimeAuditData.count, "Audit 詳細檔案數量不一致。");
+  assert(
+    auditEntries.length === manifest.counts.runtimeAuditDetailFiles,
+    "manifest Audit 檔案數量不一致。",
+  );
+  let auditBytes = 0;
+  for (const row of auditSummary.rows) {
+    const file = path.join(auditDirectory, auditDataFileName(row.id));
+    const content = await readFile(file);
+    auditBytes += content.byteLength;
+    const payload = JSON.parse(content.toString("utf8")) as { id: string };
+    assert(payload.id === row.id, "Audit 詳細檔案內容不一致。");
+  }
+  assert(auditBytes === manifest.runtimeAuditData.bytes, "Audit 詳細檔案總大小不一致。");
 
   const runtimeHomePath = path.join(root, manifest.runtimeHome.path);
   const runtimeHome = await readFile(runtimeHomePath);

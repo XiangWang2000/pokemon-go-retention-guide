@@ -11,11 +11,15 @@ export function FamilyMemberPanel({
   expandedForms,
   onToggleForm,
   layoutPrefix,
+  familyDetailError = false,
+  onRetryFamilyDetails,
 }: {
   family: FamilyOverview;
   expandedForms: Set<string>;
   onToggleForm: (formId: string) => void;
   layoutPrefix: "mobile" | "desktop";
+  familyDetailError?: boolean;
+  onRetryFamilyDetails?: () => void;
 }) {
   return (
     <div
@@ -34,7 +38,25 @@ export function FamilyMemberPanel({
         </div>
       ) : null}
 
-      {family.detailsLoaded === false ? (
+      {family.detailsLoaded === false && familyDetailError ? (
+        <div
+          className="rounded-xl border border-red-500/40 bg-red-500/10 p-4 text-sm"
+          data-testid="family-detail-error"
+          aria-live="polite"
+        >
+          <p className="font-black">家族詳細資料載入失敗</p>
+          <p className="mt-1 text-[var(--muted)]">其他家族不受影響，可單獨重試這個家族。</p>
+          <button
+            type="button"
+            onClick={onRetryFamilyDetails}
+            className="mt-3 min-h-11 rounded-lg border border-current px-3 text-sm font-bold"
+          >
+            重試家族詳細資料
+          </button>
+        </div>
+      ) : null}
+
+      {family.detailsLoaded === false && !familyDetailError ? (
         <div
           className="rounded-xl border bg-[var(--surface)] p-4 text-sm text-[var(--muted)]"
           data-testid="family-detail-loading"

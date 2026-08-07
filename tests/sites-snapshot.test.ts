@@ -99,7 +99,8 @@ describe("Sites 唯讀 snapshot", () => {
       readFile(path.join(process.cwd(), "public", "data", "home.json")),
       readFile(path.join(process.cwd(), "site-data", "home.json")),
     ]);
-    expect(pageSource).toContain("buildHomeSummary");
+    expect(pageSource).toContain("homeSummarySnapshot");
+    expect(pageSource).not.toContain("getDashboardRows");
     expect(pageSource).toContain("HomeDataLoader");
     expect(compactHome.byteLength).toBeLessThan(prettyHome.byteLength);
     expect(compactHome.byteLength).toBeLessThan(1_000_000);
