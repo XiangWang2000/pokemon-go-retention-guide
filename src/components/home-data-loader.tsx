@@ -251,6 +251,7 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
         loading={isLoading}
         familyDetailErrors={familyDetailErrors}
         onLoadFamilyDetails={loadFamilyDetails}
+        onRetryFamilyDetails={loadFamilyDetails}
         auditPage={auditPage}
         auditLoading={auditLoading}
         auditError={auditError}
