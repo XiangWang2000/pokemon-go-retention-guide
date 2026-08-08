@@ -95,21 +95,11 @@
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
-              "reviewIssues": [
-                {
-                  "id": "r8-issue-056-kanto-normal",
-                  "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
-                }
-              ],
+              "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #776；招式 KARATE_CHOP／CROSS_CHOP／BRICK_BREAK",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "548 · #776 · GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
               "pveSummaryZhTw": "無顯著用途。火爆猴：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -117,13 +107,13 @@
               "megaSummaryZhTw": "本批沒有已確認的 Mega 版本；家族不因假設 Mega 而整體升格。",
               "maxBattleSummaryZhTw": "此版本不是 Max 版本；Max 用途不會回推普通個體必留。",
               "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "requiredMovesSummaryZhTw": "沒有招式足以把此低用途版本自動升格為必留。",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：KARATE_CHOP／CROSS_CHOP／BRICK_BREAK；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（火爆猴）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "r8-eval-056-kanto-normal",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -384,21 +374,11 @@
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
-              "reviewIssues": [
-                {
-                  "id": "r8-issue-056-kanto-shadow",
-                  "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
-                }
-              ],
+              "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #766；招式 KARATE_CHOP／CROSS_CHOP／BRICK_BREAK",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "557 · #766 · GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
               "pveSummaryZhTw": "無顯著用途。火爆猴：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -406,13 +386,13 @@
               "megaSummaryZhTw": "本批沒有已確認的 Mega 版本；家族不因假設 Mega 而整體升格。",
               "maxBattleSummaryZhTw": "此版本不是 Max 版本；Max 用途不會回推普通個體必留。",
               "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "requiredMovesSummaryZhTw": "沒有招式足以把此低用途版本自動升格為必留。",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：KARATE_CHOP／CROSS_CHOP／BRICK_BREAK；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（火爆猴）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "r8-eval-056-kanto-shadow",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -676,8 +656,8 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -691,7 +671,7 @@
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
               "evaluationId": "r8-eval-056-kanto-purified",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": "056-kanto-normal",
                 "inheritanceMode": "NORMAL_BASE",
@@ -839,7 +819,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -908,8 +888,8 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -923,7 +903,7 @@
               "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
               "evaluationId": "r8-eval-056-kanto-dynamax",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -1071,8 +1051,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1130,9 +1110,9 @@
         ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
-        "hasDataIssues": true,
+        "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1177,8 +1157,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "GL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-ultra",
@@ -1209,8 +1189,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "UL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": true,
@@ -1233,11 +1213,11 @@
         "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
         "evolutionPaths": [
           {
-            "id": "evolution-cross-057-kanto-979-kanto",
+            "id": "evolution-cross-057-kanto-979-paldea",
             "fromFormId": "057-kanto",
-            "toFormId": "979-kanto",
+            "toFormId": "979-paldea",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "verifiedAt": "2026-08-08T16:00:00.000Z",
             "isEvolutionStub": true,
             "targetUseLevel": "USABLE_OR_BUDGET",
             "targetNameEn": "Annihilape",
@@ -1273,11 +1253,11 @@
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-057-kanto-979-kanto",
+                  "id": "evolution-cross-057-kanto-979-paldea",
                   "fromFormId": "057-kanto",
-                  "toFormId": "979-kanto",
+                  "toFormId": "979-paldea",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "Annihilape",
@@ -1306,21 +1286,11 @@
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
-              "reviewIssues": [
-                {
-                  "id": "r8-issue-057-kanto-normal",
-                  "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
-                }
-              ],
+              "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #185；招式 KARATE_CHOP／RAGE_FIST／ICE_PUNCH；UL（高級聯盟） Overall #113；招式 KARATE_CHOP／RAGE_FIST／CLOSE_COMBAT",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "660 · #185 · GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。；710 · #113 · UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
               "pveSummaryZhTw": "可用／預算型。棄世猴：可進化為後續世代的棄世猴，保留少量合適進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -1328,13 +1298,13 @@
               "megaSummaryZhTw": "本批沒有已確認的 Mega 版本；家族不因假設 Mega 而整體升格。",
               "maxBattleSummaryZhTw": "此版本不是 Max 版本；Max 用途不會回推普通個體必留。",
               "evolutionSummaryZhTw": "可進化為後續世代的棄世猴，保留少量合適進化候選。",
-              "requiredMovesSummaryZhTw": "依固定快照優先核對：KARATE_CHOP／RAGE_FIST／ICE_PUNCH／CLOSE_COMBAT",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：KARATE_CHOP／RAGE_FIST／ICE_PUNCH／CLOSE_COMBAT；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（棄世猴）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "r8-eval-057-kanto-normal",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -1614,8 +1584,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "GL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-ultra",
@@ -1646,8 +1616,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               }
             ],
             "ivShortLabels": [
@@ -1674,11 +1644,11 @@
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-057-kanto-979-kanto",
+                  "id": "evolution-cross-057-kanto-979-paldea",
                   "fromFormId": "057-kanto",
-                  "toFormId": "979-kanto",
+                  "toFormId": "979-paldea",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "Annihilape",
@@ -1707,21 +1677,11 @@
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
-              "reviewIssues": [
-                {
-                  "id": "r8-issue-057-kanto-shadow",
-                  "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
-                }
-              ],
+              "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #107；招式 KARATE_CHOP／RAGE_FIST／ICE_PUNCH；UL（高級聯盟） Overall #128；招式 KARATE_CHOP／RAGE_FIST／ICE_PUNCH",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "688 · #107 · GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。；662 · #128 · UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
               "pveSummaryZhTw": "可用／預算型。棄世猴：可進化為後續世代的棄世猴，保留少量合適進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -1729,13 +1689,13 @@
               "megaSummaryZhTw": "本批沒有已確認的 Mega 版本；家族不因假設 Mega 而整體升格。",
               "maxBattleSummaryZhTw": "此版本不是 Max 版本；Max 用途不會回推普通個體必留。",
               "evolutionSummaryZhTw": "可進化為後續世代的棄世猴，保留少量合適進化候選。",
-              "requiredMovesSummaryZhTw": "依固定快照優先核對：KARATE_CHOP／RAGE_FIST／ICE_PUNCH",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：KARATE_CHOP／RAGE_FIST／ICE_PUNCH；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（棄世猴）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "r8-eval-057-kanto-shadow",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -2015,8 +1975,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "GL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-ultra",
@@ -2047,8 +2007,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               }
             ],
             "ivShortLabels": [
@@ -2075,11 +2035,11 @@
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-057-kanto-979-kanto",
+                  "id": "evolution-cross-057-kanto-979-paldea",
                   "fromFormId": "057-kanto",
-                  "toFormId": "979-kanto",
+                  "toFormId": "979-paldea",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "Annihilape",
@@ -2111,8 +2071,8 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -2126,7 +2086,7 @@
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
               "evaluationId": "r8-eval-057-kanto-purified",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": "057-kanto-normal",
                 "inheritanceMode": "NORMAL_BASE",
@@ -2274,7 +2234,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2307,11 +2267,11 @@
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-057-kanto-979-kanto",
+                  "id": "evolution-cross-057-kanto-979-paldea",
                   "fromFormId": "057-kanto",
-                  "toFormId": "979-kanto",
+                  "toFormId": "979-paldea",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "Annihilape",
@@ -2343,8 +2303,8 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -2358,7 +2318,7 @@
               "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
               "evaluationId": "r8-eval-057-kanto-dynamax",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -2506,8 +2466,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -2584,8 +2544,8 @@
             "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
             "shortIvLabelZhTw": "GL：Rank≤100",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           },
           {
             "id": "iv-global-ultra",
@@ -2616,8 +2576,8 @@
             "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
             "shortIvLabelZhTw": "UL：Rank≤100",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           }
         ],
         "ivShortLabels": [
@@ -2636,9 +2596,9 @@
         ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
-        "hasDataIssues": true,
+        "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2683,8 +2643,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "GL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-ultra",
@@ -2715,8 +2675,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "UL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": false,
@@ -2818,8 +2778,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "GL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-ultra",
@@ -2850,8 +2810,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "UL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     }
   ],
   "ivSummaryZhTw": "依成員用途分開保留：GL：Rank≤100；UL：Rank≤100",
@@ -2861,9 +2821,9 @@
   ],
   "holdReasons": [],
   "notices": [],
-  "hasDataIssues": true,
+  "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
   "minDexNumber": 56,
   "maxDexNumber": 57,
   "detailsLoaded": true

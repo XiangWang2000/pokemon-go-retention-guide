@@ -26,7 +26,7 @@
             "fromFormId": "027-alola",
             "toFormId": "028-alola",
             "requiresEvent": false,
-            "verifiedAt": "2026-07-14T16:00:00.000Z",
+            "verifiedAt": "2026-08-08T16:00:00.000Z",
             "isEvolutionStub": false,
             "targetUseLevel": null,
             "targetNameEn": "Sandslash",
@@ -67,7 +67,7 @@
                   "fromFormId": "027-alola",
                   "toFormId": "028-alola",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Sandslash",
@@ -105,27 +105,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "644 · #343 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
               "pveSummaryZhTw": "無顯著用途。穿山王：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "requiredMovesSummaryZhTw": "來源建議招式：POWDER_SNOW、NIGHT_SLASH、GYRO_BALL。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：POWDER_SNOW／NIGHT_SLASH／GYRO_BALL；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（穿山王）已有用途；只保留少量符合條件的進化候選。",
-              "evaluationId": "evaluation-027-alola-normal-2026.08.06-v7",
+              "evaluationId": "evaluation-027-alola-normal-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -293,7 +293,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-gl-20260715",
@@ -311,7 +311,7 @@
                   "url": "https://pokemongo.com/post/alola-to-alola?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此 Pokémon GO 型態已推出。"
                 },
                 {
                   "id": "OFF-CD-SANDSHREW",
@@ -320,16 +320,7 @@
                   "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此 Pokémon GO 型態已推出。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -338,7 +329,7 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GREAT PvP 物種排名與招式資料。"
                 }
               ],
               "traces": [
@@ -382,7 +373,7 @@
                   "fromFormId": "027-alola",
                   "toFormId": "028-alola",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Sandslash",
@@ -420,27 +411,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "657 · #356 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
               "pveSummaryZhTw": "無顯著用途。穿山王：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "暗影輸出與承傷機制已由官方說明確認；物種級火箭隊實用性仍待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "requiredMovesSummaryZhTw": "來源建議招式：POWDER_SNOW、NIGHT_SLASH、GYRO_BALL。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：POWDER_SNOW／NIGHT_SLASH／GYRO_BALL；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（穿山王）已有用途；只保留少量符合條件的進化候選。",
-              "evaluationId": "evaluation-027-alola-shadow-2026.08.06-v7",
+              "evaluationId": "evaluation-027-alola-shadow-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -608,7 +599,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-gl-20260715",
@@ -620,31 +611,22 @@
               ],
               "sources": [
                 {
-                  "id": "OFF-ALOLA-FINALE",
+                  "id": "OFF-ROCKET-RETREAT",
                   "name": "Pokémon GO",
-                  "title": "Celebrate the Season of Alola during the Alola to Alola finale event!",
-                  "url": "https://pokemongo.com/post/alola-to-alola?hl=en",
+                  "title": "Salandit, Salazzle, and more debut during the All-Hands Rocket Retreat event",
+                  "url": "https://pokemongo.com/post/team-go-rocket-takeover-rocket-retreat?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
-                  "id": "OFF-CD-SANDSHREW",
-                  "name": "Pokémon GO",
-                  "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
-                  "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en",
+                  "id": "official-shadow-mechanic-20260715",
+                  "name": "Pokémon GO Help Center",
+                  "title": "Shadow Pokémon & Purified Pokémon",
+                  "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -653,7 +635,7 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GREAT PvP 物種排名與招式資料。"
                 }
               ],
               "traces": [
@@ -697,7 +679,7 @@
                   "fromFormId": "027-alola",
                   "toFormId": "028-alola",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Sandslash",
@@ -735,27 +717,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "Purified 個體本身不是 Mega 版本；Mega 候選價值由最終規則另行說明。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "Purified 一般個體不會自動成為 Dynamax／Gigantamax 個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：POWDER_SNOW／NIGHT_SLASH／GYRO_BALL；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "沒有主要用途時，不因 100% 自動產生保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
-              "evaluationId": "evaluation-027-alola-purified-2026.08.06-v7",
+              "evaluationId": "evaluation-027-alola-purified-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": "027-alola-normal",
                 "inheritanceMode": "NORMAL_BASE",
@@ -902,31 +884,22 @@
               "raw": [],
               "sources": [
                 {
-                  "id": "OFF-ALOLA-FINALE",
-                  "name": "Pokémon GO",
-                  "title": "Celebrate the Season of Alola during the Alola to Alola finale event!",
-                  "url": "https://pokemongo.com/post/alola-to-alola?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-CD-SANDSHREW",
-                  "name": "Pokémon GO",
-                  "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
-                  "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
                   "id": "OFF-ROCKET-INVASION",
                   "name": "Pokémon GO",
                   "title": "Team GO Rocket invades Pokémon GO!",
                   "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
+                },
+                {
+                  "id": "OFF-ROCKET-RETREAT",
+                  "name": "Pokémon GO",
+                  "title": "Salandit, Salazzle, and more debut during the All-Hands Rocket Retreat event",
+                  "url": "https://pokemongo.com/post/team-go-rocket-takeover-rocket-retreat?hl=en",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
                   "id": "official-shadow-mechanic-20260715",
@@ -935,21 +908,12 @@
                   "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -986,7 +950,7 @@
                   "fromFormId": "027-alola",
                   "toFormId": "028-alola",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Sandslash",
@@ -1016,25 +980,35 @@
               "confidence": "HIGH",
               "dataStatus": "VERIFIED",
               "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
+              "reviewIssues": [
+                {
+                  "id": "issue-027-alola-dynamax-2026.08.06-v7-rule-not-covered-0",
+                  "issueType": "RULE_NOT_COVERED",
+                  "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
+                }
+              ],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：POWDER_SNOW／NIGHT_SLASH／GYRO_BALL；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
-              "evaluationId": "evaluation-027-alola-dynamax-2026.08.06-v7",
+              "evaluationId": "evaluation-027-alola-dynamax-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -1179,21 +1153,11 @@
                 }
               ],
               "raw": [],
-              "sources": [
-                {
-                  "id": "battle1-GOHUB_DMAX_LIST",
-                  "name": "Pokémon GO Hub Database",
-                  "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
-                  "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
-                  "type": "MAX_BATTLE",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                }
-              ],
+              "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1251,7 +1215,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1296,8 +1260,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "GL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-ultra",
@@ -1328,8 +1292,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "UL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": true,
@@ -1405,27 +1369,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "668 · #121 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。；663 · #93 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "LOW",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "來源建議招式：POWDER_SNOW、BLIZZARD、ICE_PUNCH、DRILL_RUN。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：POWDER_SNOW／ICE_PUNCH／DRILL_RUN；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-              "evaluationId": "evaluation-028-alola-normal-2026.08.06-v7",
+              "evaluationId": "evaluation-028-alola-normal-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -1589,7 +1553,7 @@
                   "seasonOrVersion": "即時研究快照 2026-07-15",
                   "extractionMethod": null,
                   "reproducible": false,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "battle2-gohub-gym-defenders",
@@ -1620,7 +1584,7 @@
                   "seasonOrVersion": "即時研究快照 2026-07-15",
                   "extractionMethod": null,
                   "reproducible": false,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "battle2-gohub-sandslash-alola",
@@ -1652,7 +1616,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-gl-20260715",
@@ -1684,7 +1648,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-ul-20260715",
@@ -1702,16 +1666,7 @@
                   "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此 Pokémon GO 型態已推出。"
                 },
                 {
                   "id": "battle2-gohub-gym-defenders",
@@ -1720,7 +1675,7 @@
                   "url": "https://db.pokemongohub.net/best/gym-defenders",
                   "type": "GYM",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GYM 原始資料或交叉確認。"
                 },
                 {
                   "id": "battle2-gohub-sandslash-alola",
@@ -1729,7 +1684,7 @@
                   "url": "https://db.pokemongohub.net/pokemon/28-Alola",
                   "type": "PVE",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GYM 原始資料或交叉確認。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -1738,7 +1693,7 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GREAT PvP 物種排名與招式資料。"
                 },
                 {
                   "id": "pvpoke-ul-20260715",
@@ -1747,13 +1702,13 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 ULTRA PvP 物種排名與招式資料。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "MAJOR_BATTLE_VALUE",
-                  "priority": 900,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "KEEP",
                   "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
@@ -1798,8 +1753,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "GL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-ultra",
@@ -1830,8 +1785,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               }
             ],
             "ivShortLabels": [
@@ -1885,27 +1840,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "661 · #137 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。；665 · #83 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "暗影輸出與承傷機制已由官方說明確認；物種級火箭隊實用性仍待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "來源建議招式：POWDER_SNOW、BLIZZARD、ICE_PUNCH、DRILL_RUN。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：POWDER_SNOW／ICE_PUNCH／DRILL_RUN；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-              "evaluationId": "evaluation-028-alola-shadow-2026.08.06-v7",
+              "evaluationId": "evaluation-028-alola-shadow-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -2072,7 +2027,7 @@
                   "seasonOrVersion": "即時研究快照 2026-07-15",
                   "extractionMethod": null,
                   "reproducible": false,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "battle2-gohub-shadow-sandslash-alola",
@@ -2104,7 +2059,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-gl-20260715",
@@ -2136,7 +2091,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-ul-20260715",
@@ -2148,22 +2103,13 @@
               ],
               "sources": [
                 {
-                  "id": "OFF-CD-SANDSHREW",
+                  "id": "OFF-WORLDS-2023",
                   "name": "Pokémon GO",
-                  "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
-                  "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en",
+                  "title": "A Pokémon GO World Championships Celebration: A Basic Guide to Pokémon GO Battles",
+                  "url": "https://pokemongo.com/post/pokemon-go-world-championship-2023-pvp-basics?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
                   "id": "battle2-gohub-shadow-sandslash-alola",
@@ -2172,7 +2118,16 @@
                   "url": "https://db.pokemongohub.net/pokemon/28-Alola_Shadow",
                   "type": "PVE",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 PVE 原始資料或交叉確認。"
+                },
+                {
+                  "id": "official-shadow-mechanic-20260715",
+                  "name": "Pokémon GO Help Center",
+                  "title": "Shadow Pokémon & Purified Pokémon",
+                  "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -2181,7 +2136,7 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GREAT PvP 物種排名與招式資料。"
                 },
                 {
                   "id": "pvpoke-ul-20260715",
@@ -2190,13 +2145,13 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 ULTRA PvP 物種排名與招式資料。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "MAJOR_BATTLE_VALUE",
-                  "priority": 900,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "KEEP",
                   "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
@@ -2241,8 +2196,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "GL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-ultra",
@@ -2273,8 +2228,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               }
             ],
             "ivShortLabels": [
@@ -2328,27 +2283,36 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-028-alola-purified-2026.08.06-v7-rule-not-covered-1",
+                  "issueType": "RULE_NOT_COVERED",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "Purified 個體本身不是 Mega 版本；Mega 候選價值由最終規則另行說明。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "Purified 一般個體不會自動成為 Dynamax／Gigantamax 個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：POWDER_SNOW／ICE_PUNCH／DRILL_RUN；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "沒有主要用途時，不因 100% 自動產生保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
-              "evaluationId": "evaluation-028-alola-purified-2026.08.06-v7",
+              "evaluationId": "evaluation-028-alola-purified-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": "028-alola-normal",
                 "inheritanceMode": "NORMAL_BASE",
@@ -2495,40 +2459,22 @@
               "raw": [],
               "sources": [
                 {
-                  "id": "OFF-CD-SANDSHREW",
-                  "name": "Pokémon GO",
-                  "title": "March 2022 Community Day: Sandshrew and Alolan Sandshrew",
-                  "url": "https://pokemongo.com/post/communityday-mar22-sandshrew?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
                   "id": "OFF-ROCKET-INVASION",
                   "name": "Pokémon GO",
                   "title": "Team GO Rocket invades Pokémon GO!",
                   "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
-                  "id": "battle2-gohub-gym-defenders",
-                  "name": "GO Hub Database",
-                  "title": "Best Defenders Tier List (Pokémon GO)",
-                  "url": "https://db.pokemongohub.net/best/gym-defenders",
-                  "type": "GYM",
+                  "id": "OFF-WORLDS-2023",
+                  "name": "Pokémon GO",
+                  "title": "A Pokémon GO World Championships Celebration: A Basic Guide to Pokémon GO Battles",
+                  "url": "https://pokemongo.com/post/pokemon-go-world-championship-2023-pvp-basics?hl=en",
+                  "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "battle2-gohub-sandslash-alola",
-                  "name": "GO Hub Database",
-                  "title": "Alolan Sandslash: Best Moveset, Counters & Max CP | Pokémon GO",
-                  "url": "https://db.pokemongohub.net/pokemon/28-Alola",
-                  "type": "PVE",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
                   "id": "official-shadow-mechanic-20260715",
@@ -2537,30 +2483,12 @@
                   "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2612,25 +2540,35 @@
               "confidence": "HIGH",
               "dataStatus": "VERIFIED",
               "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
+              "reviewIssues": [
+                {
+                  "id": "issue-028-alola-dynamax-2026.08.06-v7-rule-not-covered-0",
+                  "issueType": "RULE_NOT_COVERED",
+                  "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
+                }
+              ],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：POWDER_SNOW／ICE_PUNCH／DRILL_RUN；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
-              "evaluationId": "evaluation-028-alola-dynamax-2026.08.06-v7",
+              "evaluationId": "evaluation-028-alola-dynamax-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -2775,21 +2713,11 @@
                 }
               ],
               "raw": [],
-              "sources": [
-                {
-                  "id": "battle1-GOHUB_DMAX_LIST",
-                  "name": "Pokémon GO Hub Database",
-                  "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
-                  "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
-                  "type": "MAX_BATTLE",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                }
-              ],
+              "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -2834,8 +2762,8 @@
           "label": "—",
           "tone": "NONE"
         },
-        "decision": "KEEP",
-        "decisionReason": "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。",
+        "decision": "TRANSFER_CANDIDATE",
+        "decisionReason": "一般重複個體通常可傳送。",
         "ivRecommendations": [
           {
             "id": "iv-global-great",
@@ -2866,8 +2794,8 @@
             "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
             "shortIvLabelZhTw": "GL：Rank≤100",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           },
           {
             "id": "iv-global-ultra",
@@ -2898,8 +2826,8 @@
             "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
             "shortIvLabelZhTw": "UL：Rank≤100",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           }
         ],
         "ivShortLabels": [
@@ -2918,7 +2846,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2963,8 +2891,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "GL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-ultra",
@@ -2995,8 +2923,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "UL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": false,
@@ -3084,8 +3012,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "GL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-ultra",
@@ -3116,8 +3044,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "UL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     }
   ],
   "ivSummaryZhTw": "依成員用途分開保留：GL：Rank≤100；UL：Rank≤100",
@@ -3129,7 +3057,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
   "minDexNumber": 27,
   "maxDexNumber": 28,
   "detailsLoaded": true

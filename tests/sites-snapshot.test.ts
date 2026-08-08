@@ -54,19 +54,19 @@ describe("Sites 唯讀 snapshot", () => {
   }, 30_000);
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
-    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.08-r20");
+    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.09-r21");
     expect(siteSnapshotManifest.counts).toMatchObject({
       pokemonSpecies: 277,
       pokemonForms: 315,
       battleVariants: 1190,
       rawEvaluationData: 825,
       sourceReferences: 167,
-      retentionEvaluations: 1967,
+      retentionEvaluations: 1355,
       categoryEvaluations: 8330,
       ivRecommendations: 11,
       dashboardRows: 1190,
       homeFamilies: 155,
-      openReviewIssues: 174,
+      openReviewIssues: 241,
     });
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
     expect(siteSnapshotManifest.snapshotSha256).toMatch(/^[a-f0-9]{64}$/);
@@ -78,7 +78,7 @@ describe("Sites 唯讀 snapshot", () => {
       path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-251.xlsx"),
     );
     await workbook.xlsx.load(buffer as unknown as Parameters<typeof workbook.xlsx.load>[0]);
-    expect(workbook.subject).toBe("2026.08.08-r20");
+    expect(workbook.subject).toBe("2026.08.09-r21");
     expect(workbook.worksheets).toHaveLength(10);
     expect(workbook.worksheets.map((sheet) => sheet.name)).toEqual([
       "寶可夢型態",
@@ -114,7 +114,7 @@ describe("Sites 唯讀 snapshot", () => {
       }>;
     };
     expect(runtimeHome.schemaVersion).toBe(2);
-    expect(runtimeHome.dataVersion).toBe("2026.08.08-r20");
+    expect(runtimeHome.dataVersion).toBe("2026.08.09-r21");
     expect(
       runtimeHome.families.every(
         (family) =>
@@ -128,11 +128,11 @@ describe("Sites 唯讀 snapshot", () => {
 
   it("首頁初始 HTML 直接輸出日期與搜尋入口，不重複輸出家族摘要", () => {
     const home = homeSnapshot as unknown as HomeSnapshot;
-    expect(home.dataVersion).toBe("2026.08.08-r20");
+    expect(home.dataVersion).toBe("2026.08.09-r21");
     const summary = buildHomeSummary(home);
     const html = renderToStaticMarkup(createElement(HomeDataLoader, { initialSummary: summary }));
 
-    expect(html).toContain("資料更新日期：2026/08/08");
+    expect(html).toContain("資料更新日期：2026/08/09");
     expect(html).toContain("搜尋編號、名稱、型態或進化名稱");
     expect(html).toContain("所有世代");
     expect(html).toContain("所有用途");

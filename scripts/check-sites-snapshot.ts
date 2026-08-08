@@ -29,6 +29,7 @@ interface Manifest {
   snapshotSha256: string;
   files: Record<string, ManifestFile>;
   runtimeHome: ManifestFile;
+  publicHeaders: ManifestFile;
   runtimeFamilyData: { directory: string; count: number; bytes: number };
   runtimeAuditData: { directory: string; count: number; bytes: number };
   excel: { path: string; bytes: number; sha256: string; sheets: number };
@@ -178,6 +179,21 @@ async function main() {
     ),
     "runtime home must contain summary-only family forms",
   );
+  const publicHeadersPath = path.join(root, manifest.publicHeaders.path);
+  const publicHeaders = await readFile(publicHeadersPath);
+  assert(
+    publicHeaders.byteLength === manifest.publicHeaders.bytes,
+    "public/_headers 大小與 manifest 不一致。",
+  );
+  assert(
+    sha256(publicHeaders) === manifest.publicHeaders.sha256,
+    "public/_headers SHA256 與 manifest 不一致。",
+  );
+  assert(
+    publicHeaders.toString("utf8").includes(`X-Data-Version: ${DATA_VERSION}`),
+    "public/_headers dataVersion 不正確。",
+  );
+
   const workbookPath = path.join(root, manifest.excel.path);
   const workbook = await readFile(workbookPath);
   assert(workbook.byteLength === manifest.excel.bytes, "Excel 大小與 manifest 不一致。");

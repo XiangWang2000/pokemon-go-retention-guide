@@ -26,7 +26,6 @@ Invoke-NpmScript "sites:snapshot:check"
 if ($Full) {
     Invoke-NpmScript "test:integration"
     Invoke-NpmScript "data:validate"
-    Invoke-NpmScript "review:generate"
     Invoke-NpmScript "review:validate"
     Invoke-NpmScript "sites:check"
     Invoke-NpmScript "build"

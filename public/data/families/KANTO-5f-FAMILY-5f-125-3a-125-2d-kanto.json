@@ -19,7 +19,7 @@
         "formNameZhTw": "城都",
         "regionKey": "JOHTO",
         "evolvesFromFormId": "125-kanto",
-        "evolutionFamilyNotesZhTw": "??????????????????????????????????????",
+        "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
         "evolutionPaths": [
           {
             "id": "evolution-r19-239-johto-125-kanto",
@@ -59,7 +59,7 @@
               "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "125-kanto",
-              "evolutionFamilyNotesZhTw": "??????????????????????????????????????",
+              "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [
                 {
                   "id": "evolution-r19-239-johto-125-kanto",
@@ -98,7 +98,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #703；招式 THUNDER_SHOCK／THUNDER_PUNCH／BRICK_BREAK",
               "pveSummaryZhTw": "可用／預算型。電擊魔獸：後續進化有可用或預算型用途；完整後續世代資料尚未納入本批展示範圍。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -347,7 +347,7 @@
               "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "125-kanto",
-              "evolutionFamilyNotesZhTw": "??????????????????????????????????????",
+              "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [
                 {
                   "id": "evolution-r19-239-johto-125-kanto",
@@ -386,7 +386,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "可用／預算型。電擊魔獸：後續進化有可用或預算型用途；完整後續世代資料尚未納入本批展示範圍。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -549,8 +549,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "VALUABLE_EVOLUTION",
+                  "priority": 850,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -558,11 +558,15 @@
               ],
               "moves": []
             },
-            "primaryUses": [],
-            "primaryUseKeys": [],
+            "primaryUses": [
+              "後續進化"
+            ],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+            "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
             "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
           },
           {
@@ -579,7 +583,7 @@
               "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "125-kanto",
-              "evolutionFamilyNotesZhTw": "??????????????????????????????????????",
+              "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [
                 {
                   "id": "evolution-r19-239-johto-125-kanto",
@@ -618,7 +622,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -781,8 +785,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -811,7 +815,7 @@
               "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "125-kanto",
-              "evolutionFamilyNotesZhTw": "??????????????????????????????????????",
+              "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [
                 {
                   "id": "evolution-r19-239-johto-125-kanto",
@@ -850,7 +854,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1013,8 +1017,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1072,7 +1076,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1105,11 +1109,11 @@
         "evolutionFamilyNotesZhTw": "後續重要進化仍在 #151 之後；只留符合本體或未來用途的少量候選，不需保留全部重複。",
         "evolutionPaths": [
           {
-            "id": "evolution-cross-125-kanto-466-kanto",
+            "id": "evolution-cross-125-kanto-466-other",
             "fromFormId": "125-kanto",
-            "toFormId": "466-kanto",
+            "toFormId": "466-other",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "verifiedAt": "2026-08-08T16:00:00.000Z",
             "isEvolutionStub": true,
             "targetUseLevel": "USABLE_OR_BUDGET",
             "targetNameEn": "Electivire",
@@ -1145,11 +1149,11 @@
               "evolutionFamilyNotesZhTw": "後續重要進化仍在 #151 之後；只留符合本體或未來用途的少量候選，不需保留全部重複。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-125-kanto-466-kanto",
+                  "id": "evolution-cross-125-kanto-466-other",
                   "fromFormId": "125-kanto",
-                  "toFormId": "466-kanto",
+                  "toFormId": "466-other",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "Electivire",
@@ -1186,12 +1190,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #635；招式 THUNDER_SHOCK／THUNDER_PUNCH／RETURN；UL（高級聯盟） Overall #457；招式 THUNDER_SHOCK／THUNDER_PUNCH／RETURN",
               "pveSummaryZhTw": "可用／預算型。電擊魔獸：可進化為電擊魔獸；屬於可用或預算型進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1484,11 +1488,11 @@
               "evolutionFamilyNotesZhTw": "後續重要進化仍在 #151 之後；只留符合本體或未來用途的少量候選，不需保留全部重複。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-125-kanto-466-kanto",
+                  "id": "evolution-cross-125-kanto-466-other",
                   "fromFormId": "125-kanto",
-                  "toFormId": "466-kanto",
+                  "toFormId": "466-other",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "Electivire",
@@ -1525,12 +1529,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #643；招式 THUNDER_SHOCK／THUNDER_PUNCH／THUNDERBOLT；UL（高級聯盟） Overall #373；招式 THUNDER_SHOCK／THUNDER_PUNCH／THUNDERBOLT",
               "pveSummaryZhTw": "可用／預算型。電擊魔獸：可進化為電擊魔獸；屬於可用或預算型進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1814,11 +1818,11 @@
               "evolutionFamilyNotesZhTw": "後續重要進化仍在 #151 之後；只留符合本體或未來用途的少量候選，不需保留全部重複。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-125-kanto-466-kanto",
+                  "id": "evolution-cross-125-kanto-466-other",
                   "fromFormId": "125-kanto",
-                  "toFormId": "466-kanto",
+                  "toFormId": "466-other",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "Electivire",
@@ -1850,7 +1854,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2013,7 +2017,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2046,11 +2050,11 @@
               "evolutionFamilyNotesZhTw": "後續重要進化仍在 #151 之後；只留符合本體或未來用途的少量候選，不需保留全部重複。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-125-kanto-466-kanto",
+                  "id": "evolution-cross-125-kanto-466-other",
                   "fromFormId": "125-kanto",
-                  "toFormId": "466-kanto",
+                  "toFormId": "466-other",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "Electivire",
@@ -2082,7 +2086,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2245,8 +2249,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -2306,7 +2310,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2390,7 +2394,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
   "minDexNumber": 125,
   "maxDexNumber": 239,
   "detailsLoaded": true

@@ -103,12 +103,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。刺龍王：可進化為刺龍王；保留少量分支進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -347,12 +347,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。刺龍王：可進化為刺龍王；保留少量分支進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -586,7 +586,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -749,7 +749,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -818,7 +818,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -981,8 +981,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1039,7 +1039,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1085,8 +1085,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "GL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-ultra",
@@ -1117,8 +1117,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "UL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-master",
@@ -1149,8 +1149,8 @@
           "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": true,
@@ -1177,7 +1177,7 @@
             "fromFormId": "117-kanto",
             "toFormId": "230-johto",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "verifiedAt": "2026-08-08T16:00:00.000Z",
             "isEvolutionStub": false,
             "targetUseLevel": "SPECIAL_USE",
             "targetNameEn": "Kingdra",
@@ -1217,7 +1217,7 @@
                   "fromFormId": "117-kanto",
                   "toFormId": "230-johto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Kingdra",
@@ -1254,12 +1254,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #1041；招式 DRAGON_BREATH／HYDRO_PUMP／DRAGON_PULSE；UL（高級聯盟） Overall #806；招式 DRAGON_BREATH／HYDRO_PUMP／DRAGON_PULSE",
               "pveSummaryZhTw": "特殊用途。刺龍王：可進化為刺龍王；與海刺龍本體用途分開判斷。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1518,7 +1518,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -1545,7 +1547,7 @@
                   "fromFormId": "117-kanto",
                   "toFormId": "230-johto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Kingdra",
@@ -1582,12 +1584,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #1089；招式 DRAGON_BREATH／DRAGON_PULSE／HYDRO_PUMP；UL（高級聯盟） Overall #824；招式 DRAGON_BREATH／DRAGON_PULSE／HYDRO_PUMP",
               "pveSummaryZhTw": "特殊用途。刺龍王：可進化為刺龍王；與海刺龍本體用途分開判斷。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1846,7 +1848,9 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -1873,7 +1877,7 @@
                   "fromFormId": "117-kanto",
                   "toFormId": "230-johto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Kingdra",
@@ -1905,7 +1909,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2068,7 +2072,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2105,7 +2109,7 @@
                   "fromFormId": "117-kanto",
                   "toFormId": "230-johto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Kingdra",
@@ -2137,7 +2141,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2300,8 +2304,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -2354,12 +2358,14 @@
         "primaryUses": [
           "後續進化"
         ],
-        "primaryUseKeys": [],
+        "primaryUseKeys": [
+          "EVOLUTION"
+        ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2369,7 +2375,7 @@
         "進化素材"
       ],
       "mainUseZhTw": "進化素材",
-      "memberSummaryZhTw": "海刺龍本體沒有獨立用途；前階主要作符合條件的進化候選。",
+      "memberSummaryZhTw": "主要保留海刺龍；IV以GL：Rank≤100、UL：Rank≤100、ML：15攻／98%優先為準。",
       "ivShortLabels": [
         "GL：Rank≤100",
         "UL：Rank≤100",
@@ -2405,8 +2411,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "GL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-ultra",
@@ -2437,8 +2443,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "UL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-master",
@@ -2469,8 +2475,8 @@
           "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": false,
@@ -2487,7 +2493,7 @@
         "nameEn": "Kingdra",
         "nameZhTw": "刺龍王",
         "formNameEn": "Johto",
-        "formNameZhTw": "??",
+        "formNameZhTw": "城都",
         "regionKey": "JOHTO",
         "evolvesFromFormId": "117-kanto",
         "evolutionFamilyNotesZhTw": "此為正式跨世代進化目標；完整戰鬥資料尚未納入目前展示批次。",
@@ -2513,7 +2519,7 @@
               "nameZhTw": "刺龍王",
               "formKey": "JOHTO",
               "formNameEn": "Johto",
-              "formNameZhTw": "??",
+              "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "117-kanto",
               "evolutionFamilyNotesZhTw": "此為正式跨世代進化目標；完整戰鬥資料尚未納入目前展示批次。",
@@ -2541,7 +2547,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #23；招式 DRAGON_BREATH／SURF／SWIFT；UL（高級聯盟） Overall #17；招式 DRAGON_BREATH／SURF／SWIFT；ML（大師聯盟） Overall #217；招式 DRAGON_BREATH／SURF／SWIFT",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -2838,8 +2844,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "MAJOR_BATTLE_VALUE",
-                  "priority": 900,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "KEEP",
                   "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
@@ -2885,8 +2891,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "GL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-ultra",
@@ -2917,8 +2923,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-master",
@@ -2949,8 +2955,8 @@
                 "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
                 "shortIvLabelZhTw": "ML：15攻／98%優先",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               }
             ],
             "ivShortLabels": [
@@ -2972,7 +2978,7 @@
               "nameZhTw": "刺龍王",
               "formKey": "JOHTO",
               "formNameEn": "Johto",
-              "formNameZhTw": "??",
+              "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "117-kanto",
               "evolutionFamilyNotesZhTw": "此為正式跨世代進化目標；完整戰鬥資料尚未納入目前展示批次。",
@@ -3000,7 +3006,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #28；招式 DRAGON_BREATH／SURF／SWIFT；UL（高級聯盟） Overall #37；招式 DRAGON_BREATH／SURF／SWIFT；ML（大師聯盟） Overall #216；招式 DRAGON_BREATH／SURF／SWIFT",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -3297,8 +3303,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "MAJOR_BATTLE_VALUE",
-                  "priority": 900,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "KEEP",
                   "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
@@ -3344,8 +3350,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "GL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-ultra",
@@ -3376,8 +3382,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-master",
@@ -3408,8 +3414,8 @@
                 "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
                 "shortIvLabelZhTw": "ML：15攻／98%優先",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               }
             ],
             "ivShortLabels": [
@@ -3431,7 +3437,7 @@
               "nameZhTw": "刺龍王",
               "formKey": "JOHTO",
               "formNameEn": "Johto",
-              "formNameZhTw": "??",
+              "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "117-kanto",
               "evolutionFamilyNotesZhTw": "此為正式跨世代進化目標；完整戰鬥資料尚未納入目前展示批次。",
@@ -3459,7 +3465,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -3622,7 +3628,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -3649,7 +3655,7 @@
               "nameZhTw": "刺龍王",
               "formKey": "JOHTO",
               "formNameEn": "Johto",
-              "formNameZhTw": "??",
+              "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "117-kanto",
               "evolutionFamilyNotesZhTw": "此為正式跨世代進化目標；完整戰鬥資料尚未納入目前展示批次。",
@@ -3677,7 +3683,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -3840,8 +3846,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -3886,8 +3892,8 @@
           "label": "—",
           "tone": "NONE"
         },
-        "decision": "KEEP",
-        "decisionReason": "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。",
+        "decision": "TRANSFER_CANDIDATE",
+        "decisionReason": "一般重複個體通常可傳送。",
         "ivRecommendations": [
           {
             "id": "iv-global-great",
@@ -3918,8 +3924,8 @@
             "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
             "shortIvLabelZhTw": "GL：Rank≤100",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           },
           {
             "id": "iv-global-ultra",
@@ -3950,8 +3956,8 @@
             "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
             "shortIvLabelZhTw": "UL：Rank≤100",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           },
           {
             "id": "iv-global-master",
@@ -3982,8 +3988,8 @@
             "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
             "shortIvLabelZhTw": "ML：15攻／98%優先",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           }
         ],
         "ivShortLabels": [
@@ -4004,7 +4010,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -4050,8 +4056,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "GL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-ultra",
@@ -4082,8 +4088,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "UL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-master",
@@ -4114,8 +4120,8 @@
           "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": false,
@@ -4147,9 +4153,22 @@
     "label": "—",
     "tone": "NONE"
   },
-  "familyValue": "MEDIUM",
-  "retentionStrategy": "SELECTIVE_KEEP",
+  "familyValue": "HIGH",
+  "retentionStrategy": "KEEP_TARGETS",
   "primaryRetentionTargets": [
+    {
+      "formId": "117-kanto",
+      "memberNameZhTw": "海刺龍",
+      "displayNameZhTw": "海刺龍",
+      "useKeys": [
+        "EVOLUTION"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW"
+      ],
+      "variantSpecificOnly": false
+    },
     {
       "formId": "230-johto",
       "memberNameZhTw": "刺龍王",
@@ -4166,10 +4185,10 @@
       "variantSpecificOnly": false
     }
   ],
-  "primaryTargetSummaryZhTw": "刺龍王",
+  "primaryTargetSummaryZhTw": "海刺龍、刺龍王",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
-  "handlingSummaryZhTw": "保留刺龍王（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留刺龍王；價值集中於特定版本或條件。前階主要作符合條件的進化候選。其餘普通重複個體大多可傳。IV：GL：Rank≤100；UL：Rank≤100；ML：15攻／98%優先。",
+  "handlingSummaryZhTw": "保留海刺龍（符合條件個體），以及刺龍王（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留海刺龍、刺龍王；前階主要作符合條件的進化候選。IV：GL：Rank≤100；UL：Rank≤100；ML：15攻／98%優先。",
   "ivShortLabels": [
     "GL：Rank≤100",
     "UL：Rank≤100",
@@ -4205,8 +4224,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "GL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-ultra",
@@ -4237,8 +4256,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "UL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-master",
@@ -4269,8 +4288,8 @@
       "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     }
   ],
   "ivSummaryZhTw": "依成員用途分開保留：GL：Rank≤100；UL：Rank≤100；ML：15攻／98%優先",
@@ -4282,7 +4301,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
   "minDexNumber": 116,
   "maxDexNumber": 230,
   "detailsLoaded": true

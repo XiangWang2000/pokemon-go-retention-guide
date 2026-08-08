@@ -7,7 +7,7 @@
 5. 沒有精確 rank 時只保存 tier、rating 或原始摘要，不自行換算。
 6. 一般、暗影、淨化、Mega、Dynamax、Gigantamax 不可合併。
 7. 來源衝突須同時保存、說明方法差異、降低 confidence 並建立 Review Queue。
-8. 更新後依序執行 `data:validate`、`review:generate`、`lint`、`typecheck`、`test`、`build`。
+8. 更新後先明確產生 review 與 Sites snapshot，再執行完整驗證；驗證不得代替產生步驟或隱性改寫受控產物。
 9. 人工確認本批 Markdown／JSON 報告後才可開始下一批。
 
 ## 目前批次執行順序
@@ -27,9 +27,10 @@ npm run data:recompute:001-251
 npm run data:validate
 npm run review:generate
 npm run sites:snapshot
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full
 ```
 
-`data:import:*` 只負責寫入批次來源、型態、原始資料與初步評估；目前 #152～#251 批次都完成後必須執行 `data:recompute:001-251`。這一步套用共用的 PvE 四級用途與逐版本資料處置，將後續世代進化、暗影、Mega／Primal、Max、道館與特殊用途納入同一判斷，並把缺口拆到 BattleVariant／類別欄位，不讓單一型態或次要欄位外推到整個家族。沒有執行重算前，不得把新 snapshot 視為最終驗收結果。
+`data:import:*` 只負責寫入批次來源、型態、原始資料與初步評估；目前 #152～#251 批次都完成後必須執行 `data:recompute:001-251`。這一步套用共用的 PvE 四級用途與逐版本資料處置，將後續世代進化、暗影、Mega／Primal、Max、道館與特殊用途納入同一判斷，並把缺口拆到 BattleVariant／類別欄位，不讓單一型態或次要欄位外推到整個家族。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
 
 ## 共用重算規則
 

@@ -22,11 +22,11 @@
         "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
         "evolutionPaths": [
           {
-            "id": "evolution-cross-052-galar-863-kanto",
+            "id": "evolution-cross-052-galar-863-galar",
             "fromFormId": "052-galar",
-            "toFormId": "863-kanto",
+            "toFormId": "863-galar",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "verifiedAt": "2026-08-08T16:00:00.000Z",
             "isEvolutionStub": true,
             "targetUseLevel": "SPECIAL_USE",
             "targetNameEn": "Perrserker",
@@ -64,11 +64,11 @@
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-052-galar-863-kanto",
+                  "id": "evolution-cross-052-galar-863-galar",
                   "fromFormId": "052-galar",
-                  "toFormId": "863-kanto",
+                  "toFormId": "863-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Perrserker",
@@ -99,21 +99,11 @@
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
-              "reviewIssues": [
-                {
-                  "id": "r8-issue-052-galar-normal",
-                  "issueType": "RULE_NOT_COVERED",
-                  "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
-                }
-              ],
+              "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "特殊用途。喵頭目：已補查 GO Hub PvP 頁：大聯盟 #408、超級聯盟 #174；超級聯盟有條件用途，應保留少量優質伽勒爾喵喵進化候選，不等同核心投資。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -127,7 +117,7 @@
               "reasonZhTw": "用途有限：後續進化（喵頭目）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "r8-eval-052-galar-normal",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -312,11 +302,11 @@
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-052-galar-863-kanto",
+                  "id": "evolution-cross-052-galar-863-galar",
                   "fromFormId": "052-galar",
-                  "toFormId": "863-kanto",
+                  "toFormId": "863-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Perrserker",
@@ -350,8 +340,8 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "特殊用途。喵頭目：已補查 GO Hub PvP 頁：大聯盟 #408、超級聯盟 #174；超級聯盟有條件用途，應保留少量優質伽勒爾喵喵進化候選，不等同核心投資。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -365,7 +355,7 @@
               "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
               "evaluationId": "r8-eval-052-galar-shadow",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -513,8 +503,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "VALUABLE_EVOLUTION",
+                  "priority": 850,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -522,11 +512,15 @@
               ],
               "moves": []
             },
-            "primaryUses": [],
-            "primaryUseKeys": [],
+            "primaryUses": [
+              "後續進化"
+            ],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+            "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
             "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
           },
           {
@@ -546,11 +540,11 @@
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-052-galar-863-kanto",
+                  "id": "evolution-cross-052-galar-863-galar",
                   "fromFormId": "052-galar",
-                  "toFormId": "863-kanto",
+                  "toFormId": "863-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Perrserker",
@@ -584,8 +578,8 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -599,7 +593,7 @@
               "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
               "evaluationId": "r8-eval-052-galar-purified",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -747,8 +741,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -780,11 +774,11 @@
               "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-052-galar-863-kanto",
+                  "id": "evolution-cross-052-galar-863-galar",
                   "fromFormId": "052-galar",
-                  "toFormId": "863-kanto",
+                  "toFormId": "863-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Perrserker",
@@ -818,8 +812,8 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -833,7 +827,7 @@
               "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
               "evaluationId": "r8-eval-052-galar-dynamax",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -981,8 +975,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1037,9 +1031,9 @@
         ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
-        "hasDataIssues": true,
+        "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1106,9 +1100,9 @@
   ],
   "holdReasons": [],
   "notices": [],
-  "hasDataIssues": true,
+  "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
   "minDexNumber": 52,
   "maxDexNumber": 52,
   "detailsLoaded": true

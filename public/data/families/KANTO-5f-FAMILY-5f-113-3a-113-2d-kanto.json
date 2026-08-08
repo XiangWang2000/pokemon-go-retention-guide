@@ -26,7 +26,7 @@
             "fromFormId": "113-kanto",
             "toFormId": "242-johto",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "verifiedAt": "2026-08-08T16:00:00.000Z",
             "isEvolutionStub": false,
             "targetUseLevel": "SPECIAL_USE",
             "targetNameEn": "Blissey",
@@ -66,7 +66,7 @@
                   "fromFormId": "113-kanto",
                   "toFormId": "242-johto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Blissey",
@@ -98,7 +98,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #630；招式 ZEN_HEADBUTT／DAZZLING_GLEAM／PSYCHIC；UL（高級聯盟） Overall #839；招式 ZEN_HEADBUTT／DAZZLING_GLEAM／HYPER_BEAM",
               "pveSummaryZhTw": "特殊用途。道館防守列為特殊用途；幸福蛋：可進化為幸福蛋；道館防守是特殊用途，不等於核心 PvE。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -368,7 +368,8 @@
               "後續進化"
             ],
             "primaryUseKeys": [
-              "GYM_DEFENSE"
+              "GYM_DEFENSE",
+              "EVOLUTION"
             ],
             "ivRecommendations": [
               {
@@ -400,8 +401,8 @@
                 "ivRecommendationZhTw": "道館防守不設固定IV門檻；同物種比較時，優先已高等級、高CP及較高防禦／HP的候選。",
                 "shortIvLabelZhTw": "道館：無固定門檻",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               }
             ],
             "ivShortLabels": [
@@ -431,7 +432,7 @@
                   "fromFormId": "113-kanto",
                   "toFormId": "242-johto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Blissey",
@@ -463,7 +464,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。幸福蛋：可進化為幸福蛋；道館防守是特殊用途，不等於核心 PvE。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -626,8 +627,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "VALUABLE_EVOLUTION",
+                  "priority": 850,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -635,11 +636,15 @@
               ],
               "moves": []
             },
-            "primaryUses": [],
-            "primaryUseKeys": [],
+            "primaryUses": [
+              "後續進化"
+            ],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+            "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
             "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
           },
           {
@@ -663,7 +668,7 @@
                   "fromFormId": "113-kanto",
                   "toFormId": "242-johto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Blissey",
@@ -695,7 +700,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -858,8 +863,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -895,7 +900,7 @@
                   "fromFormId": "113-kanto",
                   "toFormId": "242-johto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Blissey",
@@ -927,7 +932,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1090,8 +1095,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1167,8 +1172,8 @@
             "ivRecommendationZhTw": "道館防守不設固定IV門檻；同物種比較時，優先已高等級、高CP及較高防禦／HP的候選。",
             "shortIvLabelZhTw": "道館：無固定門檻",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           }
         ],
         "ivShortLabels": [
@@ -1180,13 +1185,14 @@
           "後續進化"
         ],
         "primaryUseKeys": [
-          "GYM_DEFENSE"
+          "GYM_DEFENSE",
+          "EVOLUTION"
         ],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1232,8 +1238,8 @@
           "ivRecommendationZhTw": "道館防守不設固定IV門檻；同物種比較時，優先已高等級、高CP及較高防禦／HP的候選。",
           "shortIvLabelZhTw": "道館：無固定門檻",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": true,
@@ -1250,7 +1256,7 @@
         "nameEn": "Blissey",
         "nameZhTw": "幸福蛋",
         "formNameEn": "Johto",
-        "formNameZhTw": "??",
+        "formNameZhTw": "城都",
         "regionKey": "JOHTO",
         "evolvesFromFormId": "113-kanto",
         "evolutionFamilyNotesZhTw": "此為正式跨世代進化目標；完整戰鬥資料尚未納入目前展示批次。",
@@ -1275,7 +1281,7 @@
               "nameZhTw": "幸福蛋",
               "formKey": "JOHTO",
               "formNameEn": "Johto",
-              "formNameZhTw": "??",
+              "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "113-kanto",
               "evolutionFamilyNotesZhTw": "此為正式跨世代進化目標；完整戰鬥資料尚未納入目前展示批次。",
@@ -1302,7 +1308,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #871；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM；UL（高級聯盟） Overall #616；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM；ML（大師聯盟） Overall #391；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM",
               "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估；Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1645,8 +1651,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限：其餘普通重複可傳；只留 Mega 候選或符合其他用途的少量個體。"
@@ -1690,8 +1696,8 @@
                 "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
                 "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
                 "rulesVersion": "2026.07.28-iv-v2",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-28T15:46:42.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:17:08.000Z"
               }
             ],
             "ivShortLabels": [
@@ -1711,7 +1717,7 @@
               "nameZhTw": "幸福蛋",
               "formKey": "JOHTO",
               "formNameEn": "Johto",
-              "formNameZhTw": "??",
+              "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "113-kanto",
               "evolutionFamilyNotesZhTw": "此為正式跨世代進化目標；完整戰鬥資料尚未納入目前展示批次。",
@@ -1738,7 +1744,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1930,8 +1936,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1975,8 +1981,8 @@
                 "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
                 "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
                 "rulesVersion": "2026.07.28-iv-v2",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-28T15:46:42.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:17:08.000Z"
               }
             ],
             "ivShortLabels": [
@@ -1996,7 +2002,7 @@
               "nameZhTw": "幸福蛋",
               "formKey": "JOHTO",
               "formNameEn": "Johto",
-              "formNameZhTw": "??",
+              "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "113-kanto",
               "evolutionFamilyNotesZhTw": "此為正式跨世代進化目標；完整戰鬥資料尚未納入目前展示批次。",
@@ -2023,7 +2029,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -2186,8 +2192,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -2213,7 +2219,7 @@
               "nameZhTw": "幸福蛋",
               "formKey": "JOHTO",
               "formNameEn": "Johto",
-              "formNameZhTw": "??",
+              "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": "113-kanto",
               "evolutionFamilyNotesZhTw": "此為正式跨世代進化目標；完整戰鬥資料尚未納入目前展示批次。",
@@ -2240,7 +2246,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -2413,8 +2419,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
@@ -2458,8 +2464,8 @@
           "label": "極巨：—",
           "tone": "NONE"
         },
-        "decision": "CONDITIONAL_KEEP",
-        "decisionReason": "依各戰鬥版本的數字IV門檻留少量個體。",
+        "decision": "TRANSFER_CANDIDATE",
+        "decisionReason": "一般重複個體通常可傳送。",
         "ivRecommendations": [
           {
             "id": "iv-global-pve",
@@ -2490,8 +2496,8 @@
             "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
             "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
             "rulesVersion": "2026.07.28-iv-v2",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-28T15:46:42.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:17:08.000Z"
           },
           {
             "id": "iv-global-shadow-pve",
@@ -2522,8 +2528,8 @@
             "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
             "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
             "rulesVersion": "2026.07.28-iv-v2",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-28T15:46:42.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:17:08.000Z"
           }
         ],
         "ivShortLabels": [
@@ -2542,7 +2548,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2587,8 +2593,8 @@
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -2619,8 +2625,8 @@
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         }
       ],
       "isRoot": false,
@@ -2659,7 +2665,8 @@
       "memberNameZhTw": "吉利蛋",
       "displayNameZhTw": "吉利蛋",
       "useKeys": [
-        "GYM_DEFENSE"
+        "GYM_DEFENSE",
+        "EVOLUTION"
       ],
       "variantKeys": [
         "NORMAL"
@@ -2718,8 +2725,8 @@
       "ivRecommendationZhTw": "道館防守不設固定IV門檻；同物種比較時，優先已高等級、高CP及較高防禦／HP的候選。",
       "shortIvLabelZhTw": "道館：無固定門檻",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-pve",
@@ -2750,8 +2757,8 @@
       "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
       "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-shadow-pve",
@@ -2782,8 +2789,8 @@
       "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
       "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     }
   ],
   "ivSummaryZhTw": "依成員用途分開保留：道館：無固定門檻；PvE：15攻優先；14攻高整體IV亦可留；暗影標準較寬；15攻優先，不設硬性最低IV",
@@ -2796,7 +2803,7 @@
   "notices": [],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
   "minDexNumber": 113,
   "maxDexNumber": 242,
   "detailsLoaded": true

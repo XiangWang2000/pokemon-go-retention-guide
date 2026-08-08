@@ -22,11 +22,11 @@
         "evolutionFamilyNotesZhTw": "可進化為後續 #866 踏冰人偶；關都魔牆人偶不使用此路徑，只留少量伽勒爾候選。",
         "evolutionPaths": [
           {
-            "id": "evolution-cross-122-galar-866-kanto",
+            "id": "evolution-cross-122-galar-866-galar",
             "fromFormId": "122-galar",
-            "toFormId": "866-kanto",
+            "toFormId": "866-galar",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-07T16:00:00.000Z",
+            "verifiedAt": "2026-08-08T16:00:00.000Z",
             "isEvolutionStub": true,
             "targetUseLevel": "SPECIAL_USE",
             "targetNameEn": "Mr. Rime",
@@ -65,11 +65,11 @@
               "evolutionFamilyNotesZhTw": "可進化為後續 #866 踏冰人偶；關都魔牆人偶不使用此路徑，只留少量伽勒爾候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-122-galar-866-kanto",
+                  "id": "evolution-cross-122-galar-866-galar",
                   "fromFormId": "122-galar",
-                  "toFormId": "866-kanto",
+                  "toFormId": "866-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Mr. Rime",
@@ -109,12 +109,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #885；招式 CONFUSION／ICE_PUNCH／TRIPLE_AXEL；UL（高級聯盟） Overall #785；招式 CONFUSION／ICE_PUNCH／TRIPLE_AXEL",
               "pveSummaryZhTw": "特殊用途。踏冰人偶：伽勒爾魔牆人偶可進化為踏冰人偶；屬於分支／特殊用途候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -407,11 +407,11 @@
               "evolutionFamilyNotesZhTw": "可進化為後續 #866 踏冰人偶；關都魔牆人偶不使用此路徑，只留少量伽勒爾候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-122-galar-866-kanto",
+                  "id": "evolution-cross-122-galar-866-galar",
                   "fromFormId": "122-galar",
-                  "toFormId": "866-kanto",
+                  "toFormId": "866-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Mr. Rime",
@@ -446,7 +446,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。踏冰人偶：伽勒爾魔牆人偶可進化為踏冰人偶；屬於分支／特殊用途候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -609,8 +609,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "VALUABLE_EVOLUTION",
+                  "priority": 850,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -618,11 +618,15 @@
               ],
               "moves": []
             },
-            "primaryUses": [],
-            "primaryUseKeys": [],
+            "primaryUses": [
+              "後續進化"
+            ],
+            "primaryUseKeys": [
+              "EVOLUTION"
+            ],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+            "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
             "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
           },
           {
@@ -642,11 +646,11 @@
               "evolutionFamilyNotesZhTw": "可進化為後續 #866 踏冰人偶；關都魔牆人偶不使用此路徑，只留少量伽勒爾候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-122-galar-866-kanto",
+                  "id": "evolution-cross-122-galar-866-galar",
                   "fromFormId": "122-galar",
-                  "toFormId": "866-kanto",
+                  "toFormId": "866-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Mr. Rime",
@@ -681,7 +685,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -844,8 +848,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -877,11 +881,11 @@
               "evolutionFamilyNotesZhTw": "可進化為後續 #866 踏冰人偶；關都魔牆人偶不使用此路徑，只留少量伽勒爾候選。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-122-galar-866-kanto",
+                  "id": "evolution-cross-122-galar-866-galar",
                   "fromFormId": "122-galar",
-                  "toFormId": "866-kanto",
+                  "toFormId": "866-galar",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-07T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": true,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Mr. Rime",
@@ -916,7 +920,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1079,8 +1083,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1138,7 +1142,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1207,7 +1211,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
   "minDexNumber": 122,
   "maxDexNumber": 122,
   "detailsLoaded": true

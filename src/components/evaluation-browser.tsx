@@ -2,6 +2,7 @@
 
 import { Download, Search } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { CURRENT_DATA_SCOPE } from "@/config/data-scope";
 import type { AuditPageResponse, AuditQuery } from "@/lib/audit-data";
 import type { DashboardRow } from "@/lib/data";
 import {
@@ -845,7 +846,7 @@ export function EvaluationBrowser({
           <div className="flex flex-wrap items-center gap-3">
             <PaginationControls page={activePage} pageCount={pageCount} onPageChange={changePage} />
             <a
-              href="/exports/pokemon-go-retention-001-181.xlsx"
+              href={`/exports/pokemon-go-retention-${CURRENT_DATA_SCOPE}.xlsx`}
               className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[var(--primary)] px-4 text-sm font-bold text-[var(--primary-contrast)] transition hover:brightness-95"
             >
               <Download aria-hidden size={17} />

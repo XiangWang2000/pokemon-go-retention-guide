@@ -12,6 +12,7 @@ const checkedAt = new Date("2026-07-28T12:00:00+08:00");
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
 });
+const baseDexRange = { gte: 1, lte: 30 } as const;
 
 const categories = [
   "PVP",
@@ -169,6 +170,7 @@ async function addChange(data: {
 
 async function latestDecisionMap() {
   const evaluations = await prisma.retentionEvaluation.findMany({
+    where: { battleVariant: { pokemonForm: { species: { dexNumber: baseDexRange } } } },
     orderBy: { generatedAt: "desc" },
   });
   const map = new Map<string, RetentionDecision>();
@@ -181,7 +183,10 @@ async function latestDecisionMap() {
 
 async function baselineDecisionMap() {
   const evaluations = await prisma.retentionEvaluation.findMany({
-    where: { rulesVersion: { not: RULES_VERSION } },
+    where: {
+      rulesVersion: { not: RULES_VERSION },
+      battleVariant: { pokemonForm: { species: { dexNumber: baseDexRange } } },
+    },
     orderBy: { generatedAt: "desc" },
   });
   const map = new Map<string, string>();
@@ -247,6 +252,7 @@ async function applyReleaseStatuses(
 ) {
   const officialByForm = new Map(official.forms.map((form) => [form.pokemonFormId, form]));
   const forms = await prisma.pokemonForm.findMany({
+    where: { species: { dexNumber: { gte: 1, lte: 30 } } },
     include: { battleVariants: true, species: true },
   });
   for (const form of forms) {
@@ -334,7 +340,10 @@ async function applyReleaseStatuses(
 
 async function reclassifyReturnRows() {
   const rows = await prisma.rawEvaluationData.findMany({
-    where: { recommendedMoves: { contains: "RETURN" } },
+    where: {
+      recommendedMoves: { contains: "RETURN" },
+      battleVariant: { pokemonForm: { species: { dexNumber: baseDexRange } } },
+    },
   });
   for (const row of rows) {
     const normal = await prisma.battleVariant.findUnique({ where: { id: row.battleVariantId } });
@@ -369,7 +378,10 @@ async function reclassifyReturnRows() {
 
 async function verifyPvpRows(sha: string, rankings: Map<string, RankingRow[]>) {
   const rows = await prisma.rawEvaluationData.findMany({
-    where: { category: "PVP" },
+    where: {
+      category: "PVP",
+      battleVariant: { pokemonForm: { species: { dexNumber: baseDexRange } } },
+    },
     include: { battleVariant: true, source: true },
   });
   const invalidVariants = new Set<string>();
@@ -435,7 +447,11 @@ async function verifyPvpRows(sha: string, rankings: Map<string, RankingRow[]>) {
 
 async function normalizeScopedRanks() {
   const rows = await prisma.rawEvaluationData.findMany({
-    where: { category: { not: "PVP" }, rank: { not: null } },
+    where: {
+      category: { not: "PVP" },
+      rank: { not: null },
+      battleVariant: { pokemonForm: { species: { dexNumber: baseDexRange } } },
+    },
   });
   const scopedRanks = new Map<string, number>();
   for (const row of rows) {
@@ -455,7 +471,10 @@ async function normalizeScopedRanks() {
 
 async function configurePurifiedInheritance() {
   const purified = await prisma.battleVariant.findMany({
-    where: { variantKey: "PURIFIED" },
+    where: {
+      variantKey: "PURIFIED",
+      pokemonForm: { species: { dexNumber: baseDexRange } },
+    },
     include: { rawEvaluationData: true },
   });
   for (const variant of purified) {
@@ -598,7 +617,10 @@ async function createBaseCategoryEvaluations(
 ) {
   const officialByForm = new Map(official.forms.map((form) => [form.pokemonFormId, form]));
   const variants = await prisma.battleVariant.findMany({
-    where: { variantKey: { not: "PURIFIED" } },
+    where: {
+      variantKey: { not: "PURIFIED" },
+      pokemonForm: { species: { dexNumber: baseDexRange } },
+    },
     include: {
       pokemonForm: { include: { species: true, evolutionPathsFrom: true } },
       rawEvaluationData: true,
@@ -781,7 +803,10 @@ async function createBaseCategoryEvaluations(
 
 async function createPurifiedCategoryEvaluations() {
   const variants = await prisma.battleVariant.findMany({
-    where: { variantKey: "PURIFIED" },
+    where: {
+      variantKey: "PURIFIED",
+      pokemonForm: { species: { dexNumber: baseDexRange } },
+    },
     include: {
       rawEvaluationData: true,
       pokemonForm: { include: { species: true } },
@@ -884,6 +909,7 @@ function categorySummary(
 async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
   const before = await latestDecisionMap();
   const variants = await prisma.battleVariant.findMany({
+    where: { pokemonForm: { species: { dexNumber: baseDexRange } } },
     include: {
       pokemonForm: { include: { species: true, evolutionPathsFrom: true } },
       rawEvaluationData: true,
@@ -1216,7 +1242,10 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
 
 async function createReviewIssues(invalidPvpVariants: Set<string>) {
   const decisions = await latestDecisionMap();
-  const variants = await prisma.battleVariant.findMany({ include: { categoryEvaluations: true } });
+  const variants = await prisma.battleVariant.findMany({
+    where: { pokemonForm: { species: { dexNumber: baseDexRange } } },
+    include: { categoryEvaluations: true },
+  });
   await prisma.dataIssue.deleteMany({ where: { batchKey: "001-030", status: "OPEN" } });
   for (const variant of variants) {
     const holdForNow = decisions.get(variant.id) === "HOLD_FOR_NOW";
@@ -1332,7 +1361,10 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
 
 async function writeMetrics(before: Map<string, string>) {
   const after = await latestDecisionMap();
-  const variants = await prisma.battleVariant.findMany({ include: { categoryEvaluations: true } });
+  const variants = await prisma.battleVariant.findMany({
+    where: { pokemonForm: { species: { dexNumber: baseDexRange } } },
+    include: { categoryEvaluations: true },
+  });
   const originalNeedsIds = new Set(
     [...before.entries()]
       .filter(([, decision]) => String(decision) === "NEEDS_REVIEW")

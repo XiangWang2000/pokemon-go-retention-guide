@@ -7,11 +7,11 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "npm run sites:snapshot:check && next dev",
+    "dev": "npm run sites:snapshot:check && vinext dev",
     "build": "npm run sites:snapshot:check && vinext build",
     "start": "node scripts/start-sites.mjs",
-    "dev:local": "npm run sites:snapshot && next dev",
-    "build:local": "npm run sites:snapshot && next build",
+    "dev:local": "npm run sites:snapshot:check && next dev",
+    "build:local": "npm run sites:snapshot:check && next build",
     "start:local": "next start",
     "sites:snapshot": "tsx scripts/generate-sites-snapshot.ts",
     "sites:snapshot:check": "tsx scripts/check-sites-snapshot.ts",

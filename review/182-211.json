@@ -1,7 +1,7 @@
 {
   "batch": "182-211",
-  "updatedAt": "2026-08-08",
-  "dataVersion": "2026.08.08-r20",
+  "updatedAt": "2026-08-09",
+  "dataVersion": "2026.08.09-r21",
   "rulesVersion": "2026.08.06-v7",
   "status": "ACCEPTED",
   "counts": {
@@ -10,8 +10,8 @@
     "battleVariants": 121,
     "families": 23,
     "strategyCounts": {
-      "KEEP_TARGETS": 6,
-      "SELECTIVE_KEEP": 11,
+      "KEEP_TARGETS": 8,
+      "SELECTIVE_KEEP": 9,
       "MOSTLY_TRANSFER": 6,
       "HOLD_FOR_NOW": 0
     },
@@ -95,8 +95,8 @@
   "immediateHandling": [
     {
       "familyId": "KANTO_FAMILY_043:043-kanto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留美麗花（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留臭臭花（符合條件個體），以及美麗花（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -108,13 +108,13 @@
     {
       "familyId": "KANTO_FAMILY_079:079-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留呆殼獸（PvP（UL Rank≤100）、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留呆呆獸（符合條件個體），以及呆殼獸（PvP（UL Rank≤100）、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "KANTO_FAMILY_095:095-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留大鋼蛇（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留大岩蛇（符合條件個體），以及大鋼蛇（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -209,8 +209,8 @@
     },
     {
       "familyId": "JOHTO_FAMILY_206:206-johto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留土龍弟弟（PvP（GL Rank≤100））；保留可進化為拖拖蚓的合適前階候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留土龍弟弟（PvP（GL Rank≤100））；保留可進化為土龍節節的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {

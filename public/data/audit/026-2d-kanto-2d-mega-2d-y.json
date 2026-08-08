@@ -32,19 +32,29 @@
   "confidence": "HIGH",
   "dataStatus": "VERIFIED",
   "reviewStatus": "RESOLVED",
-  "reviewIssues": [],
+  "reviewIssues": [
+    {
+      "id": "issue-026-kanto-mega-y-2026.08.06-v7-rule-not-covered-0",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此欄位待補，但不影響MEGA_Y 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "affectsFinalDecision": false,
+      "provisionalDecision": "TRANSFER_CANDIDATE",
+      "suggestedResearchActionZhTw": "此欄位待補，但不影響MEGA_Y 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "lastResearchedAt": "2026-08-08T16:00:00.000Z"
+    }
+  ],
   "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
   "reviewed": true,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
-  "pvpSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
+  "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-  "rocketSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+  "rocketSummaryZhTw": "尚未取得可重現的當季逐物種火箭隊資料。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
-  "megaSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+  "megaSummaryZhTw": "尚未完成 Mega 價值交叉確認。",
   "maxBattleSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-  "requiredMovesSummaryZhTw": "來源建議招式：THUNDER_SHOCK、WILD_CHARGE。請先確認限定招式取得方式。",
+  "requiredMovesSummaryZhTw": "尚無已驗證的必要招式結論。",
   "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
   "ivRecommendations": [
     {
@@ -76,8 +86,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "GL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-gym",
@@ -108,8 +118,8 @@
       "ivRecommendationZhTw": "道館防守不設固定IV門檻；同物種比較時，優先已高等級、高CP及較高防禦／HP的候選。",
       "shortIvLabelZhTw": "道館：無固定門檻",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-master",
@@ -140,8 +150,8 @@
       "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-attack",
@@ -172,8 +182,8 @@
       "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
       "shortIvLabelZhTw": "Max攻擊：15攻優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-flex",
@@ -204,8 +214,8 @@
       "ivRecommendationZhTw": "Max Battle 角色尚未細分時，應分別確認攻擊、坦克或支援用途，不套用單一總IV門檻。",
       "shortIvLabelZhTw": "Max：依角色分開",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-support",
@@ -236,8 +246,8 @@
       "ivRecommendationZhTw": "Max Battle 支援角色需依物種、耐久與Max招式建立專屬門檻，不套用統一15攻／96%條件。",
       "shortIvLabelZhTw": "Max支援：依角色門檻",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-tank",
@@ -268,8 +278,8 @@
       "ivRecommendationZhTw": "已確認為 Max Battle 坦克角色時，優先比較防禦IV、HP IV與整體耐久，不使用攻擊手的總IV門檻。",
       "shortIvLabelZhTw": "Max坦克：防禦／HP優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-mega",
@@ -300,8 +310,8 @@
       "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
       "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-pve",
@@ -332,8 +342,8 @@
       "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
       "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-shadow-pve",
@@ -364,8 +374,8 @@
       "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
       "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-ultra",
@@ -396,14 +406,14 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "UL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     }
   ],
   "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
-  "evaluationId": "evaluation-026-kanto-mega-y-2026.08.06-v7",
+  "evaluationId": "evaluation-026-kanto-mega-y-20260715",
   "rulesVersion": "2026.08.06-v7",
-  "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+  "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
   "inheritance": {
     "inheritsFromVariantId": null,
     "inheritanceMode": "NONE",
@@ -619,7 +629,7 @@
       "seasonOrVersion": "即時研究快照 2026-07-15",
       "extractionMethod": null,
       "reproducible": false,
-      "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+      "migrationNote": null,
       "checkedAt": "2026-07-14T16:00:00.000Z",
       "source": {
         "id": "battle2-gohub-mega-raichu-y",
@@ -637,13 +647,31 @@
       "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026",
       "type": "OFFICIAL",
       "accessedAt": "2026-07-14T16:00:00.000Z",
-      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+      "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
+    },
+    {
+      "id": "battle2-gohub-mega-raichu-y",
+      "name": "GO Hub Database",
+      "title": "Mega Raichu Y: Best Moveset, Counters & Max CP | Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon/26-Mega_Y",
+      "type": "PVE",
+      "accessedAt": "2026-07-14T16:00:00.000Z",
+      "usageZhTw": "支持 MEGA 原始資料或交叉確認。"
+    },
+    {
+      "id": "battle2-pokebattler-mega-raichu-y",
+      "name": "Pokebattler",
+      "title": "Mega Raichu-Y Counters - Pokemon GO Pokebattler",
+      "url": "https://www.pokebattler.com/raids/defenders/RAICHU_MEGA_Y/levels/RAID_LEVEL_MEGA/attackers/levels/40/strategies/CINEMATIC_ATTACK_WHEN_POSSIBLE/DEFENSE_RANDOM_MC?aggregation=AVERAGE&attackerTypes=POKEMON_TYPE_ALL&dodgeStrategy=DODGE_REACTION_TIME&includeLegendary=true&includeMegas=true&includeShadow=true&numParty=1&sort=ESTIMATOR&weatherCondition=NO_WEATHER",
+      "type": "PVE",
+      "accessedAt": "2026-07-14T16:00:00.000Z",
+      "usageZhTw": "支持 MEGA 原始資料或交叉確認。"
     }
   ],
   "traces": [
     {
-      "ruleKey": "UNRELEASED_VARIANT",
-      "priority": 950,
+      "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+      "priority": 100,
       "matched": true,
       "resultDecision": "TRANSFER_CANDIDATE",
       "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"

@@ -1,7 +1,7 @@
 {
   "batch": "091-120",
-  "updatedAt": "2026-08-08",
-  "dataVersion": "2026.08.08-r20",
+  "updatedAt": "2026-08-09",
+  "dataVersion": "2026.08.09-r21",
   "rulesVersion": "2026.08.06-v7",
   "status": "ACCEPTED",
   "counts": {
@@ -10,8 +10,8 @@
     "battleVariants": 144,
     "families": 19,
     "strategyCounts": {
-      "KEEP_TARGETS": 6,
-      "SELECTIVE_KEEP": 9,
+      "KEEP_TARGETS": 7,
+      "SELECTIVE_KEEP": 8,
       "MOSTLY_TRANSFER": 4,
       "HOLD_FOR_NOW": 0
     },
@@ -79,7 +79,7 @@
     {
       "familyId": "KANTO_FAMILY_095:095-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留大鋼蛇（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留大岩蛇（符合條件個體），以及大鋼蛇（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -162,8 +162,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_116:116-kanto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留刺龍王（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留海刺龍（符合條件個體），以及刺龍王（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {

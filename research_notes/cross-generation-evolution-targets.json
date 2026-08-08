@@ -1,6 +1,6 @@
 {
-  "dataVersion": "2026.08.08-cross-generation-evolution-v5",
-  "checkedAt": "2026-08-08",
+  "dataVersion": "2026-08-09-cross-generation-evolution-v6",
+  "checkedAt": "2026-08-09",
   "sources": [
     {
       "id": "pokeapi-evolution-targets-001-151",
@@ -254,7 +254,7 @@
       "nameZhTw": "巨鉗螳螂",
       "formKey": "JOHTO",
       "formNameEn": "Johto",
-      "formNameZhTw": "??",
+      "formNameZhTw": "城都",
       "regionKey": "JOHTO",
       "types": [
         "BUG",
@@ -266,7 +266,7 @@
       ],
       "fromFormId": "123-kanto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
-      "evolutionTargetNotesZhTw": "?????????????????????????????????????"
+      "evolutionTargetNotesZhTw": "正式後續進化；巨鉗螳螂具特殊用途，普通飛天螳螂保留符合進化與個體品質條件的候選。"
     },
     {
       "dexNumber": 230,
@@ -276,7 +276,7 @@
       "nameZhTw": "刺龍王",
       "formKey": "JOHTO",
       "formNameEn": "Johto",
-      "formNameZhTw": "??",
+      "formNameZhTw": "城都",
       "regionKey": "JOHTO",
       "types": [
         "WATER",
@@ -288,7 +288,7 @@
       ],
       "fromFormId": "117-kanto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
-      "evolutionTargetNotesZhTw": "?????????????????????????????????????"
+      "evolutionTargetNotesZhTw": "正式後續進化；刺龍王具特殊用途，普通海刺龍保留符合進化與個體品質條件的候選。"
     },
     {
       "dexNumber": 233,
@@ -298,7 +298,7 @@
       "nameZhTw": "多邊獸Ⅱ",
       "formKey": "JOHTO",
       "formNameEn": "Johto",
-      "formNameZhTw": "??",
+      "formNameZhTw": "城都",
       "regionKey": "JOHTO",
       "types": [
         "NORMAL"
@@ -310,7 +310,7 @@
       ],
       "fromFormId": "137-kanto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
-      "evolutionTargetNotesZhTw": "?????????????????????????????????????"
+      "evolutionTargetNotesZhTw": "正式後續進化；多邊獸Ⅱ可作特殊用途，普通多邊獸保留符合進化與個體品質條件的候選。"
     },
     {
       "dexNumber": 242,
@@ -320,7 +320,7 @@
       "nameZhTw": "幸福蛋",
       "formKey": "JOHTO",
       "formNameEn": "Johto",
-      "formNameZhTw": "??",
+      "formNameZhTw": "城都",
       "regionKey": "JOHTO",
       "types": [
         "NORMAL"
@@ -331,7 +331,7 @@
       ],
       "fromFormId": "113-kanto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
-      "evolutionTargetNotesZhTw": "?????????????????????????????????????"
+      "evolutionTargetNotesZhTw": "正式後續進化；幸福蛋具道館防守用途，普通吉利蛋保留高耐久與進化候選。"
     },
     {
       "dexNumber": 462,
@@ -339,10 +339,10 @@
       "familyKey": "KANTO_FAMILY_081",
       "nameEn": "Magnezone",
       "nameZhTw": "自爆磁怪",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "ELECTRIC",
         "STEEL"
@@ -361,10 +361,10 @@
       "familyKey": "KANTO_FAMILY_108",
       "nameEn": "Lickilicky",
       "nameZhTw": "大舌舔",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "NORMAL"
       ],
@@ -382,10 +382,10 @@
       "familyKey": "KANTO_FAMILY_111",
       "nameEn": "Rhyperior",
       "nameZhTw": "超甲狂犀",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "GROUND",
         "ROCK"
@@ -404,10 +404,10 @@
       "familyKey": "KANTO_FAMILY_114",
       "nameEn": "Tangrowth",
       "nameZhTw": "巨蔓藤",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "GRASS"
       ],
@@ -425,10 +425,10 @@
       "familyKey": "KANTO_FAMILY_125",
       "nameEn": "Electivire",
       "nameZhTw": "電擊魔獸",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "ELECTRIC"
       ],
@@ -446,10 +446,10 @@
       "familyKey": "KANTO_FAMILY_126",
       "nameEn": "Magmortar",
       "nameZhTw": "鴨嘴炎獸",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "FIRE"
       ],
@@ -467,10 +467,10 @@
       "familyKey": "KANTO_FAMILY_133",
       "nameEn": "Leafeon",
       "nameZhTw": "葉伊布",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "GRASS"
       ],
@@ -488,10 +488,10 @@
       "familyKey": "KANTO_FAMILY_133",
       "nameEn": "Glaceon",
       "nameZhTw": "冰伊布",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "ICE"
       ],
@@ -509,10 +509,10 @@
       "familyKey": "KANTO_FAMILY_137",
       "nameEn": "Porygon-Z",
       "nameZhTw": "多邊獸Ｚ",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "NORMAL"
       ],
@@ -531,10 +531,10 @@
       "familyKey": "KANTO_FAMILY_133",
       "nameEn": "Sylveon",
       "nameZhTw": "仙子伊布",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "FAIRY"
       ],
@@ -552,10 +552,10 @@
       "familyKey": "KANTO_FAMILY_083",
       "nameEn": "Sirfetch'd",
       "nameZhTw": "蔥遊兵",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "GALAR",
+      "formNameEn": "Galar",
+      "formNameZhTw": "伽勒爾",
+      "regionKey": "GALAR",
       "types": [
         "FIGHTING"
       ],
@@ -573,10 +573,10 @@
       "familyKey": "KANTO_FAMILY_122",
       "nameEn": "Mr. Rime",
       "nameZhTw": "踏冰人偶",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "GALAR",
+      "formNameEn": "Galar",
+      "formNameZhTw": "伽勒爾",
+      "regionKey": "GALAR",
       "types": [
         "ICE",
         "PSYCHIC"
@@ -595,10 +595,10 @@
       "familyKey": "KANTO_FAMILY_052",
       "nameEn": "Perrserker",
       "nameZhTw": "喵頭目",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "GALAR",
+      "formNameEn": "Galar",
+      "formNameZhTw": "伽勒爾",
+      "regionKey": "GALAR",
       "types": [
         "STEEL"
       ],
@@ -616,10 +616,10 @@
       "familyKey": "KANTO_FAMILY_056",
       "nameEn": "Annihilape",
       "nameZhTw": "棄世猴",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "PALDEA",
+      "formNameEn": "Paldea",
+      "formNameZhTw": "帕底亞",
+      "regionKey": "PALDEA",
       "types": [
         "FIGHTING",
         "GHOST"
@@ -638,10 +638,10 @@
       "familyKey": "JOHTO_FAMILY_175",
       "nameEn": "Togekiss",
       "nameZhTw": "波克基斯",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "FAIRY",
         "FLYING"
@@ -660,10 +660,10 @@
       "familyKey": "JOHTO_FAMILY_190",
       "nameEn": "Ambipom",
       "nameZhTw": "雙尾怪手",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "NORMAL"
       ],
@@ -681,10 +681,10 @@
       "familyKey": "JOHTO_FAMILY_200",
       "nameEn": "Mismagius",
       "nameZhTw": "夢妖魔",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "GHOST"
       ],
@@ -702,10 +702,10 @@
       "familyKey": "JOHTO_FAMILY_198",
       "nameEn": "Honchkrow",
       "nameZhTw": "烏鴉頭頭",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "DARK",
         "FLYING"
@@ -724,10 +724,10 @@
       "familyKey": "JOHTO_FAMILY_193",
       "nameEn": "Yanmega",
       "nameZhTw": "遠古巨蜓",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "BUG",
         "FLYING"
@@ -746,10 +746,10 @@
       "familyKey": "JOHTO_FAMILY_207",
       "nameEn": "Gliscor",
       "nameZhTw": "天蠍王",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "GROUND",
         "FLYING"
@@ -768,10 +768,10 @@
       "familyKey": "JOHTO_FAMILY_203",
       "nameEn": "Farigiraf",
       "nameZhTw": "奇麒麟",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "PALDEA",
+      "formNameEn": "Paldea",
+      "formNameZhTw": "帕底亞",
+      "regionKey": "PALDEA",
       "types": [
         "NORMAL",
         "PSYCHIC"
@@ -789,109 +789,109 @@
       "generation": 9,
       "familyKey": "JOHTO_FAMILY_206",
       "nameEn": "Dudunsparce",
-      "nameZhTw": "拖拖蚓",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "nameZhTw": "土龍節節",
+      "formKey": "PALDEA",
+      "formNameEn": "Paldea",
+      "formNameZhTw": "帕底亞",
+      "regionKey": "PALDEA",
       "types": [
         "NORMAL"
       ],
       "aliases": [
         "Dudunsparce",
-        "拖拖蚓"
+        "土龍節節"
       ],
       "fromFormId": "206-johto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
-      "evolutionTargetNotesZhTw": "後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。"
+      "evolutionTargetNotesZhTw": "正式後續進化；土龍節節目前以帕底亞型態 stub 保留，完整戰鬥資料待該世代批次納入。"
     },
     {
       "dexNumber": 461,
       "generation": 4,
       "familyKey": "JOHTO_FAMILY_215",
       "nameEn": "Weavile",
-      "nameZhTw": "???",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "??",
-      "regionKey": "KANTO",
+      "nameZhTw": "瑪狃拉",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "DARK",
         "ICE"
       ],
       "aliases": [
         "Weavile",
-        "???"
+        "瑪狃拉"
       ],
       "fromFormId": "215-johto",
       "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
-      "evolutionTargetNotesZhTw": "????????????? PvP ????????????????????????"
+      "evolutionTargetNotesZhTw": "正式後續進化；瑪狃拉具有限 PvP／PvE 用途，普通狃拉保留符合進化與個體品質條件的候選。"
     },
     {
       "dexNumber": 473,
       "generation": 4,
       "familyKey": "JOHTO_FAMILY_220",
       "nameEn": "Mamoswine",
-      "nameZhTw": "???",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "??",
-      "regionKey": "KANTO",
+      "nameZhTw": "象牙豬",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
       "types": [
         "ICE",
         "GROUND"
       ],
       "aliases": [
         "Mamoswine",
-        "???"
+        "象牙豬"
       ],
       "fromFormId": "221-johto",
       "evolutionTargetUseLevel": "CORE_INVESTMENT",
-      "evolutionTargetNotesZhTw": "??????? PvE?????????????????????????????????????"
+      "evolutionTargetNotesZhTw": "正式後續進化；象牙豬具核心 PvE／Max 用途，普通長毛豬保留優質進化候選。"
     },
     {
       "dexNumber": 899,
       "generation": 8,
       "familyKey": "JOHTO_FAMILY_234",
       "nameEn": "Wyrdeer",
-      "nameZhTw": "???",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "??",
-      "regionKey": "KANTO",
+      "nameZhTw": "詭角鹿",
+      "formKey": "HISUI",
+      "formNameEn": "Hisui",
+      "formNameZhTw": "洗翠",
+      "regionKey": "HISUI",
       "types": [
         "PSYCHIC",
         "NORMAL"
       ],
       "aliases": [
         "Wyrdeer",
-        "???"
+        "詭角鹿"
       ],
       "fromFormId": "234-johto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
-      "evolutionTargetNotesZhTw": "????????????????????????????????????"
+      "evolutionTargetNotesZhTw": "正式後續進化；詭角鹿目前以洗翠型態 stub 保留，完整戰鬥資料待後續批次。"
     },
     {
       "dexNumber": 901,
       "generation": 8,
       "familyKey": "JOHTO_FAMILY_216",
       "nameEn": "Ursaluna",
-      "nameZhTw": "???",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "??",
-      "regionKey": "KANTO",
+      "nameZhTw": "月月熊",
+      "formKey": "HISUI",
+      "formNameEn": "Hisui",
+      "formNameZhTw": "洗翠",
+      "regionKey": "HISUI",
       "types": [
         "GROUND",
         "NORMAL"
       ],
       "aliases": [
         "Ursaluna",
-        "???"
+        "月月熊"
       ],
       "fromFormId": "217-johto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
-      "evolutionTargetNotesZhTw": "???????????????????????????????????????????"
+      "evolutionTargetNotesZhTw": "正式後續進化；月月熊目前以洗翠型態 stub 保留，滿月進化候選先保留。"
     }
   ],
   "paths": [
@@ -1009,7 +1009,7 @@
     },
     {
       "fromFormId": "082-kanto",
-      "toFormId": "462-kanto",
+      "toFormId": "462-other",
       "evolutionMethodZhTw": "在磁力特殊磁場附近消耗糖果進化",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1021,7 +1021,7 @@
     },
     {
       "fromFormId": "108-kanto",
-      "toFormId": "463-kanto",
+      "toFormId": "463-other",
       "evolutionMethodZhTw": "消耗糖果進化",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1033,7 +1033,7 @@
     },
     {
       "fromFormId": "112-kanto",
-      "toFormId": "464-kanto",
+      "toFormId": "464-other",
       "evolutionMethodZhTw": "使用 Sinnoh Stone 並消耗糖果",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1045,7 +1045,7 @@
     },
     {
       "fromFormId": "114-kanto",
-      "toFormId": "465-kanto",
+      "toFormId": "465-other",
       "evolutionMethodZhTw": "在苔岩特殊磁場附近消耗糖果進化",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1057,7 +1057,7 @@
     },
     {
       "fromFormId": "125-kanto",
-      "toFormId": "466-kanto",
+      "toFormId": "466-other",
       "evolutionMethodZhTw": "使用 Sinnoh Stone 並消耗糖果",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1069,7 +1069,7 @@
     },
     {
       "fromFormId": "126-kanto",
-      "toFormId": "467-kanto",
+      "toFormId": "467-other",
       "evolutionMethodZhTw": "使用 Sinnoh Stone 並消耗糖果",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1105,7 +1105,7 @@
     },
     {
       "fromFormId": "133-kanto",
-      "toFormId": "470-kanto",
+      "toFormId": "470-other",
       "evolutionMethodZhTw": "在苔岩特殊磁場附近消耗糖果進化",
       "availabilityNotesZhTw": "正式後續分支；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1117,7 +1117,7 @@
     },
     {
       "fromFormId": "133-kanto",
-      "toFormId": "471-kanto",
+      "toFormId": "471-other",
       "evolutionMethodZhTw": "在冰岩特殊磁場附近消耗糖果進化",
       "availabilityNotesZhTw": "正式後續分支；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1129,7 +1129,7 @@
     },
     {
       "fromFormId": "133-kanto",
-      "toFormId": "700-kanto",
+      "toFormId": "700-other",
       "evolutionMethodZhTw": "成為夥伴並提升好感度後消耗糖果進化",
       "availabilityNotesZhTw": "正式後續分支；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1154,7 +1154,7 @@
     },
     {
       "fromFormId": "233-johto",
-      "toFormId": "474-kanto",
+      "toFormId": "474-other",
       "evolutionMethodZhTw": "使用 Dubious Disc 並消耗糖果",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1167,7 +1167,7 @@
     },
     {
       "fromFormId": "083-galar",
-      "toFormId": "865-kanto",
+      "toFormId": "865-galar",
       "evolutionMethodZhTw": "完成遊戲內指定夥伴條件並消耗糖果",
       "availabilityNotesZhTw": "伽勒爾形態的正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1179,7 +1179,7 @@
     },
     {
       "fromFormId": "122-galar",
-      "toFormId": "866-kanto",
+      "toFormId": "866-galar",
       "evolutionMethodZhTw": "消耗糖果進化",
       "availabilityNotesZhTw": "伽勒爾形態的正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1191,7 +1191,7 @@
     },
     {
       "fromFormId": "052-galar",
-      "toFormId": "863-kanto",
+      "toFormId": "863-galar",
       "evolutionMethodZhTw": "消耗糖果進化",
       "availabilityNotesZhTw": "伽勒爾喵喵的正式後續進化；已補查 Perrserker PvP 排名，保留少量優質進化候選。",
       "requiresEvent": false,
@@ -1204,7 +1204,7 @@
     },
     {
       "fromFormId": "057-kanto",
-      "toFormId": "979-kanto",
+      "toFormId": "979-paldea",
       "evolutionMethodZhTw": "完成遊戲內指定夥伴條件並消耗糖果",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -1216,7 +1216,7 @@
     },
     {
       "fromFormId": "176-johto",
-      "toFormId": "468-kanto",
+      "toFormId": "468-other",
       "evolutionMethodZhTw": "Earn buddy hearts with Togetic, then spend Candy to evolve.",
       "availabilityNotesZhTw": "Formal cross-generation evolution; Togekiss remains an explicit stub until its full battle data is added.",
       "requiresEvent": false,
@@ -1229,7 +1229,7 @@
     },
     {
       "fromFormId": "190-johto",
-      "toFormId": "424-kanto",
+      "toFormId": "424-other",
       "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
       "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
       "requiresEvent": false,
@@ -1241,7 +1241,7 @@
     },
     {
       "fromFormId": "200-johto",
-      "toFormId": "429-kanto",
+      "toFormId": "429-other",
       "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
       "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
       "requiresEvent": false,
@@ -1253,7 +1253,7 @@
     },
     {
       "fromFormId": "198-johto",
-      "toFormId": "430-kanto",
+      "toFormId": "430-other",
       "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
       "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
       "requiresEvent": false,
@@ -1265,7 +1265,7 @@
     },
     {
       "fromFormId": "193-johto",
-      "toFormId": "469-kanto",
+      "toFormId": "469-other",
       "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
       "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
       "requiresEvent": false,
@@ -1277,7 +1277,7 @@
     },
     {
       "fromFormId": "207-johto",
-      "toFormId": "472-kanto",
+      "toFormId": "472-other",
       "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
       "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
       "requiresEvent": false,
@@ -1289,7 +1289,7 @@
     },
     {
       "fromFormId": "203-johto",
-      "toFormId": "981-kanto",
+      "toFormId": "981-paldea",
       "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
       "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
       "requiresEvent": false,
@@ -1301,9 +1301,9 @@
     },
     {
       "fromFormId": "206-johto",
-      "toFormId": "982-kanto",
+      "toFormId": "982-paldea",
       "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
-      "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
+      "availabilityNotesZhTw": "正式後續世代進化；土龍節節以帕底亞型態 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [
@@ -1313,9 +1313,9 @@
     },
     {
       "fromFormId": "215-johto",
-      "toFormId": "461-kanto",
-      "evolutionMethodZhTw": "???????????????????????????",
-      "availabilityNotesZhTw": "????????????????????",
+      "toFormId": "461-other",
+      "evolutionMethodZhTw": "使用神奧之石並消耗糖果進化",
+      "availabilityNotesZhTw": "正式後續進化；瑪狃拉目前以 OTHER stub 表示，前階只保留符合條件的進化候選。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [
@@ -1325,9 +1325,9 @@
     },
     {
       "fromFormId": "221-johto",
-      "toFormId": "473-kanto",
-      "evolutionMethodZhTw": "???????????????????????????",
-      "availabilityNotesZhTw": "?????????????? PvE ?????",
+      "toFormId": "473-other",
+      "evolutionMethodZhTw": "使用神奧之石並消耗糖果進化",
+      "availabilityNotesZhTw": "正式後續進化；象牙豬目前以 OTHER stub 表示，具 PvE 用途，前階只保留符合條件的進化候選。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [
@@ -1337,9 +1337,9 @@
     },
     {
       "fromFormId": "234-johto",
-      "toFormId": "899-kanto",
-      "evolutionMethodZhTw": "???????????????????????????",
-      "availabilityNotesZhTw": "??????????????????????",
+      "toFormId": "899-hisui",
+      "evolutionMethodZhTw": "消耗糖果並完成進化條件",
+      "availabilityNotesZhTw": "正式後續進化；詭角鹿目前以洗翠型態 stub 保留，完整戰鬥資料待納入後續批次。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [
@@ -1349,9 +1349,9 @@
     },
     {
       "fromFormId": "217-johto",
-      "toFormId": "901-kanto",
-      "evolutionMethodZhTw": "???????????????????????????",
-      "availabilityNotesZhTw": "??????????????????????",
+      "toFormId": "901-hisui",
+      "evolutionMethodZhTw": "滿月期間使用泥炭塊並消耗糖果進化",
+      "availabilityNotesZhTw": "正式後續進化；月月熊目前以洗翠型態 stub 保留，滿月進化候選先保留。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [

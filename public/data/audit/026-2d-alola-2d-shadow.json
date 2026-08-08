@@ -26,7 +26,7 @@
   "isReleased": false,
   "releaseStatus": "UNRELEASED",
   "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
-  "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
+  "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：UNRELEASED）",
   "decision": "TRANSFER_CANDIDATE",
   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
   "provenance": "MANUAL_CURATED",
@@ -41,21 +41,21 @@
       "affectsFinalDecision": false,
       "provisionalDecision": "TRANSFER_CANDIDATE",
       "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+      "lastResearchedAt": "2026-08-08T16:00:00.000Z"
     }
   ],
   "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
   "reviewed": true,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
-  "pvpSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
+  "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-  "rocketSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+  "rocketSummaryZhTw": "暗影輸出與承傷機制已由官方說明確認；物種級火箭隊實用性仍待研究。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
-  "megaSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+  "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
   "maxBattleSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-  "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+  "requiredMovesSummaryZhTw": "尚無已驗證的必要招式結論。",
   "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
   "ivRecommendations": [
     {
@@ -87,8 +87,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "GL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-gym",
@@ -119,8 +119,8 @@
       "ivRecommendationZhTw": "道館防守不設固定IV門檻；同物種比較時，優先已高等級、高CP及較高防禦／HP的候選。",
       "shortIvLabelZhTw": "道館：無固定門檻",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-master",
@@ -151,8 +151,8 @@
       "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-attack",
@@ -183,8 +183,8 @@
       "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
       "shortIvLabelZhTw": "Max攻擊：15攻優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-flex",
@@ -215,8 +215,8 @@
       "ivRecommendationZhTw": "Max Battle 角色尚未細分時，應分別確認攻擊、坦克或支援用途，不套用單一總IV門檻。",
       "shortIvLabelZhTw": "Max：依角色分開",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-support",
@@ -247,8 +247,8 @@
       "ivRecommendationZhTw": "Max Battle 支援角色需依物種、耐久與Max招式建立專屬門檻，不套用統一15攻／96%條件。",
       "shortIvLabelZhTw": "Max支援：依角色門檻",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-tank",
@@ -279,8 +279,8 @@
       "ivRecommendationZhTw": "已確認為 Max Battle 坦克角色時，優先比較防禦IV、HP IV與整體耐久，不使用攻擊手的總IV門檻。",
       "shortIvLabelZhTw": "Max坦克：防禦／HP優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-mega",
@@ -311,8 +311,8 @@
       "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
       "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-pve",
@@ -343,8 +343,8 @@
       "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
       "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-shadow-pve",
@@ -375,8 +375,8 @@
       "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
       "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-ultra",
@@ -407,14 +407,14 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "UL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     }
   ],
   "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
-  "evaluationId": "evaluation-026-alola-shadow-2026.08.06-v7",
+  "evaluationId": "evaluation-026-alola-shadow-20260715",
   "rulesVersion": "2026.08.06-v7",
-  "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+  "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
   "inheritance": {
     "inheritsFromVariantId": null,
     "inheritanceMode": "NONE",
@@ -444,7 +444,7 @@
       "sources": [
         {
           "id": "BULBA-SHADOW-LIST-20260808",
-          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "title": "List of Shadow Pokémon in Pokémon GO",
           "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
           "usageZhTw": "EVOLUTION_VALUE 類別資料狀態與摘要的依據。"
         }
@@ -470,7 +470,7 @@
       "sources": [
         {
           "id": "BULBA-SHADOW-LIST-20260808",
-          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "title": "List of Shadow Pokémon in Pokémon GO",
           "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
           "usageZhTw": "GYM 類別資料狀態與摘要的依據。"
         }
@@ -496,7 +496,7 @@
       "sources": [
         {
           "id": "BULBA-SHADOW-LIST-20260808",
-          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "title": "List of Shadow Pokémon in Pokémon GO",
           "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
           "usageZhTw": "MAX_BATTLE 類別資料狀態與摘要的依據。"
         }
@@ -522,7 +522,7 @@
       "sources": [
         {
           "id": "BULBA-SHADOW-LIST-20260808",
-          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "title": "List of Shadow Pokémon in Pokémon GO",
           "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
           "usageZhTw": "MEGA 類別資料狀態與摘要的依據。"
         }
@@ -548,7 +548,7 @@
       "sources": [
         {
           "id": "BULBA-SHADOW-LIST-20260808",
-          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "title": "List of Shadow Pokémon in Pokémon GO",
           "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
           "usageZhTw": "PVE 類別資料狀態與摘要的依據。"
         }
@@ -574,7 +574,7 @@
       "sources": [
         {
           "id": "BULBA-SHADOW-LIST-20260808",
-          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "title": "List of Shadow Pokémon in Pokémon GO",
           "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         }
@@ -600,7 +600,7 @@
       "sources": [
         {
           "id": "BULBA-SHADOW-LIST-20260808",
-          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "title": "List of Shadow Pokémon in Pokémon GO",
           "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
           "usageZhTw": "ROCKET 類別資料狀態與摘要的依據。"
         }
@@ -612,17 +612,26 @@
     {
       "id": "BULBA-SHADOW-LIST-20260808",
       "name": "Bulbapedia",
-      "title": "List of Shadow Pok?mon in Pok?mon GO",
+      "title": "List of Shadow Pokémon in Pokémon GO",
       "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
       "type": "SECONDARY",
       "accessedAt": "2026-08-07T16:00:00.000Z",
-      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+      "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
+    },
+    {
+      "id": "official-shadow-mechanic-20260715",
+      "name": "Pokémon GO Help Center",
+      "title": "Shadow Pokémon & Purified Pokémon",
+      "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+      "type": "OFFICIAL",
+      "accessedAt": "2026-07-14T16:00:00.000Z",
+      "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
     }
   ],
   "traces": [
     {
-      "ruleKey": "UNRELEASED_VARIANT",
-      "priority": 950,
+      "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+      "priority": 100,
       "matched": true,
       "resultDecision": "TRANSFER_CANDIDATE",
       "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"

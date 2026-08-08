@@ -20,13 +20,13 @@ describe("cross-generation evolution targets", () => {
     const expectedPaths = [
       ["042-kanto", "169-johto"],
       ["044-kanto", "182-johto"],
-      ["052-galar", "863-kanto"],
-      ["082-kanto", "462-kanto"],
-      ["112-kanto", "464-kanto"],
-      ["114-kanto", "465-kanto"],
+      ["052-galar", "863-galar"],
+      ["082-kanto", "462-other"],
+      ["112-kanto", "464-other"],
+      ["114-kanto", "465-other"],
       ["123-kanto", "212-johto"],
-      ["125-kanto", "466-kanto"],
-      ["126-kanto", "467-kanto"],
+      ["125-kanto", "466-other"],
+      ["126-kanto", "467-other"],
     ];
     for (const [fromFormId, toFormId] of expectedPaths) {
       const form = forms.find((candidate) => candidate.formId === fromFormId);
@@ -38,7 +38,7 @@ describe("cross-generation evolution targets", () => {
     const expectedTargets = {
       "042-kanto": ["169-johto", "NO_SIGNIFICANT_USE"],
       "044-kanto": ["182-johto", "SPECIAL_USE"],
-      "052-galar": ["863-kanto", "SPECIAL_USE"],
+      "052-galar": ["863-galar", "SPECIAL_USE"],
     } as const;
     for (const [formId, [targetId, targetUseLevel]] of Object.entries(expectedTargets)) {
       const path = forms

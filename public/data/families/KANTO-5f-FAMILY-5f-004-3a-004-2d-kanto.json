@@ -26,7 +26,7 @@
             "fromFormId": "004-kanto",
             "toFormId": "005-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-07-14T16:00:00.000Z",
+            "verifiedAt": "2026-08-08T16:00:00.000Z",
             "isEvolutionStub": false,
             "targetUseLevel": null,
             "targetNameEn": "Charmeleon",
@@ -66,7 +66,7 @@
                   "fromFormId": "004-kanto",
                   "toFormId": "005-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Charmeleon",
@@ -103,27 +103,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "尚無已驗證的必要招式結論。",
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。",
-              "evaluationId": "evaluation-004-kanto-normal-2026.08.06-v7",
+              "evaluationId": "evaluation-004-kanto-normal-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -270,49 +270,13 @@
               "raw": [],
               "sources": [
                 {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
                   "id": "OFF-TCG-2022",
                   "name": "Pokémon GO",
                   "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
                   "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ml-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此 Pokémon GO 型態已推出。"
                 }
               ],
               "traces": [
@@ -356,7 +320,7 @@
                   "fromFormId": "004-kanto",
                   "toFormId": "005-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Charmeleon",
@@ -381,7 +345,7 @@
               "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
               "decision": "CONDITIONAL_KEEP",
               "assessmentDisposition": "CLEAR_USE",
-              "provenance": "DATA_UNAVAILABLE",
+              "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
               "reviewStatus": "RESOLVED",
@@ -393,27 +357,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "rocketSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+              "rocketSummaryZhTw": "暗影輸出與承傷機制已由官方說明確認；物種級火箭隊實用性仍待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
               "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "尚無已驗證的必要招式結論。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。",
-              "evaluationId": "evaluation-004-kanto-shadow-2026.08.06-v7",
+              "evaluationId": "evaluation-004-kanto-shadow-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -558,7 +522,17 @@
                 }
               ],
               "raw": [],
-              "sources": [],
+              "sources": [
+                {
+                  "id": "official-shadow-mechanic-20260715",
+                  "name": "Pokémon GO Help Center",
+                  "title": "Shadow Pokémon & Purified Pokémon",
+                  "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
+                }
+              ],
               "traces": [
                 {
                   "ruleKey": "VALUABLE_EVOLUTION",
@@ -600,7 +574,7 @@
                   "fromFormId": "004-kanto",
                   "toFormId": "005-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Charmeleon",
@@ -625,29 +599,29 @@
               "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
-              "provenance": "DATA_UNAVAILABLE",
+              "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "尚無已驗證的必要招式結論。",
               "recommendedIvStrategyZhTw": "沒有主要用途時，不因 100% 自動產生保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
-              "evaluationId": "evaluation-004-kanto-purified-2026.08.06-v7",
+              "evaluationId": "evaluation-004-kanto-purified-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": "004-kanto-normal",
                 "inheritanceMode": "NORMAL_BASE",
@@ -792,10 +766,20 @@
                 }
               ],
               "raw": [],
-              "sources": [],
+              "sources": [
+                {
+                  "id": "official-shadow-mechanic-20260715",
+                  "name": "Pokémon GO Help Center",
+                  "title": "Shadow Pokémon & Purified Pokémon",
+                  "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
+                }
+              ],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -832,7 +816,7 @@
                   "fromFormId": "004-kanto",
                   "toFormId": "005-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Charmeleon",
@@ -869,27 +853,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "尚無已驗證的必要招式結論。",
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
-              "evaluationId": "evaluation-004-kanto-dynamax-2026.08.06-v7",
+              "evaluationId": "evaluation-004-kanto-dynamax-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -1036,54 +1020,27 @@
               "raw": [],
               "sources": [
                 {
-                  "id": "OFF-ROCKET-INVASION",
+                  "id": "OFF-GO-BIG",
                   "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
+                  "title": "GO Big with Dynamax Pokémon in new Max Battles!",
+                  "url": "https://pokemongo.com/post/go-big-dynamax?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
-                  "id": "OFF-TCG-2022",
+                  "id": "OFF-MAX-MONDAYS",
                   "name": "Pokémon GO",
-                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
-                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
+                  "title": "Introducing Max Mondays to max out every week with Dynamax!",
+                  "url": "https://pokemongo.com/en/post/dynamax-max-mondays?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ml-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -1140,7 +1097,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1189,8 +1146,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "UL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-master",
@@ -1221,8 +1178,8 @@
           "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-pve",
@@ -1253,8 +1210,8 @@
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -1285,8 +1242,8 @@
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         },
         {
           "id": "iv-global-mega",
@@ -1317,8 +1274,8 @@
           "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
           "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         },
         {
           "id": "iv-global-max-attack",
@@ -1349,8 +1306,8 @@
           "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
           "shortIvLabelZhTw": "Max攻擊：15攻優先",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": true,
@@ -1377,7 +1334,7 @@
             "fromFormId": "005-kanto",
             "toFormId": "006-kanto",
             "requiresEvent": false,
-            "verifiedAt": "2026-07-14T16:00:00.000Z",
+            "verifiedAt": "2026-08-08T16:00:00.000Z",
             "isEvolutionStub": false,
             "targetUseLevel": null,
             "targetNameEn": "Charizard",
@@ -1417,7 +1374,7 @@
                   "fromFormId": "005-kanto",
                   "toFormId": "006-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Charizard",
@@ -1454,27 +1411,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "546 · #713 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
               "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：EMBER／FIRE_PUNCH／RETURN；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。",
-              "evaluationId": "evaluation-005-kanto-normal-2026.08.06-v7",
+              "evaluationId": "evaluation-005-kanto-normal-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -1627,16 +1584,7 @@
                   "url": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此 Pokémon GO 型態已推出。"
                 },
                 {
                   "id": "OFF-TCG-2022",
@@ -1645,7 +1593,7 @@
                   "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此 Pokémon GO 型態已推出。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -1654,25 +1602,7 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ml-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GREAT PvP 物種排名與招式資料。"
                 }
               ],
               "traces": [
@@ -1716,7 +1646,7 @@
                   "fromFormId": "005-kanto",
                   "toFormId": "006-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Charizard",
@@ -1753,27 +1683,36 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-005-kanto-shadow-2026.08.06-v7-rule-not-covered-1",
+                  "issueType": "RULE_NOT_COVERED",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "CONDITIONAL_KEEP",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "589 · #662 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
               "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "暗影輸出與承傷機制已由官方說明確認；物種級火箭隊實用性仍待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "requiredMovesSummaryZhTw": "來源建議招式：EMBER、FIRE_PUNCH、FLAMETHROWER。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：EMBER／FIRE_PUNCH／FLAMETHROWER；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。",
-              "evaluationId": "evaluation-005-kanto-shadow-2026.08.06-v7",
+              "evaluationId": "evaluation-005-kanto-shadow-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -1941,7 +1880,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-gl-20260715",
@@ -1953,31 +1892,13 @@
               ],
               "sources": [
                 {
-                  "id": "OFF-CD-CHARMANDER",
-                  "name": "Pokémon GO",
-                  "title": "September 2023 Community Day Classic: Charmander",
-                  "url": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en",
+                  "id": "official-shadow-mechanic-20260715",
+                  "name": "Pokémon GO Help Center",
+                  "title": "Shadow Pokémon & Purified Pokémon",
+                  "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-TCG-2022",
-                  "name": "Pokémon GO",
-                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
-                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -1986,7 +1907,7 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GREAT PvP 物種排名與招式資料。"
                 }
               ],
               "traces": [
@@ -2030,7 +1951,7 @@
                   "fromFormId": "005-kanto",
                   "toFormId": "006-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Charizard",
@@ -2067,27 +1988,36 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-005-kanto-purified-2026.08.06-v7-rule-not-covered-1",
+                  "issueType": "RULE_NOT_COVERED",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "基礎評價繼承普通版，另以報恩（Return）的可重現資料建立 Purified override。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "Purified 個體本身不是 Mega 版本；Mega 候選價值由最終規則另行說明。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "Purified 一般個體不會自動成為 Dynamax／Gigantamax 個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "來源建議招式：EMBER、FIRE_PUNCH、RETURN。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：EMBER／FIRE_PUNCH／RETURN；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "沒有主要用途時，不因 100% 自動產生保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
-              "evaluationId": "evaluation-005-kanto-purified-2026.08.06-v7",
+              "evaluationId": "evaluation-005-kanto-purified-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": "005-kanto-normal",
                 "inheritanceMode": "NORMAL_BASE_WITH_OVERRIDE",
@@ -2255,7 +2185,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved. Return 僅屬淨化後招式，已從普通版重新歸類至 Purified override。",
+                  "migrationNote": "Return 僅屬淨化後招式，已從普通版重新歸類至 Purified override。",
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-gl-20260715",
@@ -2267,72 +2197,18 @@
               ],
               "sources": [
                 {
-                  "id": "OFF-CD-CHARMANDER",
-                  "name": "Pokémon GO",
-                  "title": "September 2023 Community Day Classic: Charmander",
-                  "url": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-TCG-2022",
-                  "name": "Pokémon GO",
-                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
-                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
                   "id": "official-shadow-mechanic-20260715",
                   "name": "Pokémon GO Help Center",
                   "title": "Shadow Pokémon & Purified Pokémon",
                   "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ml-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2369,7 +2245,7 @@
                   "fromFormId": "005-kanto",
                   "toFormId": "006-kanto",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-07-14T16:00:00.000Z",
+                  "verifiedAt": "2026-08-08T16:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Charizard",
@@ -2406,27 +2282,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：EMBER／FIRE_PUNCH／RETURN；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
-              "evaluationId": "evaluation-005-kanto-dynamax-2026.08.06-v7",
+              "evaluationId": "evaluation-005-kanto-dynamax-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -2573,63 +2449,27 @@
               "raw": [],
               "sources": [
                 {
-                  "id": "OFF-CD-CHARMANDER",
+                  "id": "OFF-GO-BIG",
                   "name": "Pokémon GO",
-                  "title": "September 2023 Community Day Classic: Charmander",
-                  "url": "https://pokemongo.com/post/community-day-classic-charmander-september-2023?hl=en",
+                  "title": "GO Big with Dynamax Pokémon in new Max Battles!",
+                  "url": "https://pokemongo.com/post/go-big-dynamax?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
-                  "id": "OFF-ROCKET-INVASION",
+                  "id": "OFF-MAX-MONDAYS",
                   "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
+                  "title": "Introducing Max Mondays to max out every week with Dynamax!",
+                  "url": "https://pokemongo.com/en/post/dynamax-max-mondays?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-TCG-2022",
-                  "name": "Pokémon GO",
-                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
-                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ml-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2689,7 +2529,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2738,8 +2578,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "UL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-master",
@@ -2770,8 +2610,8 @@
           "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-pve",
@@ -2802,8 +2642,8 @@
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -2834,8 +2674,8 @@
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         },
         {
           "id": "iv-global-mega",
@@ -2866,8 +2706,8 @@
           "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
           "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         },
         {
           "id": "iv-global-max-attack",
@@ -2898,8 +2738,8 @@
           "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
           "shortIvLabelZhTw": "Max攻擊：15攻優先",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": false,
@@ -2975,27 +2815,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "662 · #432 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。；564 · #187 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。；666 · #206 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
               "pveSummaryZhTw": "可用／預算型。本版本有直接 PvE 證據",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "LOW",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "此型態具有 Mega 候選；只應保留少量符合15攻／96%以上優先門檻的個體，價值仍待交叉確認。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "來源建議招式：FIRE_SPIN、BLAST_BURN、EMBER、AIR_CUTTER、DRAGON_BREATH。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：EMBER／BLAST_BURN／AIR_CUTTER／DRAGON_BREATH；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
-              "evaluationId": "evaluation-006-kanto-normal-2026.08.06-v7",
+              "evaluationId": "evaluation-006-kanto-normal-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -3159,7 +2999,7 @@
                   "seasonOrVersion": "即時研究快照 2026-07-15",
                   "extractionMethod": null,
                   "reproducible": false,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved. 舊 rank=211 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
+                  "migrationNote": "舊 rank=211 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "battle1-GOHUB_006",
@@ -3190,7 +3030,7 @@
                   "seasonOrVersion": "即時研究快照 2026-07-15",
                   "extractionMethod": null,
                   "reproducible": false,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved. 舊 rank=36 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
+                  "migrationNote": "舊 rank=36 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "battle1-GOHUB_006",
@@ -3222,7 +3062,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-gl-20260715",
@@ -3254,7 +3094,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-ml-20260715",
@@ -3286,7 +3126,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-ul-20260715",
@@ -3304,16 +3144,7 @@
                   "url": "https://pokemongo.com/en/post/megaevolution-launch",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此 Pokémon GO 型態已推出。"
                 },
                 {
                   "id": "OFF-TCG-2022",
@@ -3322,7 +3153,7 @@
                   "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此 Pokémon GO 型態已推出。"
                 },
                 {
                   "id": "battle1-GOHUB_006",
@@ -3331,7 +3162,7 @@
                   "url": "https://db.pokemongohub.net/pokemon/6",
                   "type": "PVE",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GYM 原始資料或交叉確認。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -3340,7 +3171,7 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GREAT PvP 物種排名與招式資料。"
                 },
                 {
                   "id": "pvpoke-ml-20260715",
@@ -3349,7 +3180,7 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 MASTER PvP 物種排名與招式資料。"
                 },
                 {
                   "id": "pvpoke-ul-20260715",
@@ -3358,13 +3189,13 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 ULTRA PvP 物種排名與招式資料。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
@@ -3411,8 +3242,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-master",
@@ -3443,8 +3274,8 @@
                 "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
                 "shortIvLabelZhTw": "ML：15攻／98%優先",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-pve",
@@ -3475,8 +3306,8 @@
                 "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
                 "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
                 "rulesVersion": "2026.07.28-iv-v2",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-28T15:46:42.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:17:08.000Z"
               }
             ],
             "ivShortLabels": [
@@ -3531,27 +3362,36 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-006-kanto-shadow-2026.08.06-v7-rule-not-covered-1",
+                  "issueType": "RULE_NOT_COVERED",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "KEEP",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "677 · #372 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。；441 · #208 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。；682 · #239 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "暗影輸出與承傷機制已由官方說明確認；物種級火箭隊實用性仍待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "此型態具有 Mega 候選；只應保留少量符合15攻／96%以上優先門檻的個體，價值仍待交叉確認。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "來源建議招式：FIRE_SPIN、BLAST_BURN、EMBER、AIR_CUTTER、DRAGON_BREATH、DRAGON_CLAW。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "目前原始資料建議招式：EMBER／BLAST_BURN／AIR_CUTTER／DRAGON_BREATH／DRAGON_CLAW；取得方式須依官方招式來源確認。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-              "evaluationId": "evaluation-006-kanto-shadow-2026.08.06-v7",
+              "evaluationId": "evaluation-006-kanto-shadow-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -3718,7 +3558,7 @@
                   "seasonOrVersion": "即時研究快照 2026-07-15",
                   "extractionMethod": null,
                   "reproducible": false,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved. 舊 rank=12 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
+                  "migrationNote": "舊 rank=12 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "battle1-GOHUB_SHADOW_006",
@@ -3750,7 +3590,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-gl-20260715",
@@ -3782,7 +3622,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-ml-20260715",
@@ -3814,7 +3654,7 @@
                   "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved.",
+                  "migrationNote": null,
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "pvpoke-ul-20260715",
@@ -3826,40 +3666,22 @@
               ],
               "sources": [
                 {
-                  "id": "OFF-MEGA-LAUNCH",
-                  "name": "Pokémon GO",
-                  "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
-                  "url": "https://pokemongo.com/en/post/megaevolution-launch",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-TCG-2022",
-                  "name": "Pokémon GO",
-                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
-                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
                   "id": "battle1-GOHUB_SHADOW_006",
                   "name": "Pokémon GO Hub Database",
                   "title": "Shadow Charizard: Best Moveset, Counters & Max CP | Pokémon GO",
                   "url": "https://db.pokemongohub.net/pokemon/6-Shadow",
                   "type": "PVE",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 PVE 原始資料或交叉確認。"
+                },
+                {
+                  "id": "official-shadow-mechanic-20260715",
+                  "name": "Pokémon GO Help Center",
+                  "title": "Shadow Pokémon & Purified Pokémon",
+                  "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -3868,7 +3690,7 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 GREAT PvP 物種排名與招式資料。"
                 },
                 {
                   "id": "pvpoke-ml-20260715",
@@ -3877,7 +3699,7 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 MASTER PvP 物種排名與招式資料。"
                 },
                 {
                   "id": "pvpoke-ul-20260715",
@@ -3886,13 +3708,13 @@
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 ULTRA PvP 物種排名與招式資料。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "MAJOR_BATTLE_VALUE",
-                  "priority": 900,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "KEEP",
                   "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
@@ -3939,8 +3761,8 @@
                 "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-master",
@@ -3971,8 +3793,8 @@
                 "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
                 "shortIvLabelZhTw": "ML：15攻／98%優先",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               },
               {
                 "id": "iv-global-shadow-pve",
@@ -4003,8 +3825,8 @@
                 "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
                 "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
                 "rulesVersion": "2026.07.28-iv-v2",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-28T15:46:42.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:17:08.000Z"
               }
             ],
             "ivShortLabels": [
@@ -4059,27 +3881,36 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-006-kanto-purified-2026.08.06-v7-rule-not-covered-1",
+                  "issueType": "RULE_NOT_COVERED",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "Purified 個體本身不是 Mega 版本；Mega 候選價值由最終規則另行說明。",
+              "megaSummaryZhTw": "此型態具有 Mega 候選；只應保留少量符合15攻／96%以上優先門檻的個體，價值仍待交叉確認。",
               "maxBattleSummaryZhTw": "Purified 一般個體不會自動成為 Dynamax／Gigantamax 個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：DRAGON_BREATH／BLAST_BURN／AIR_CUTTER；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "沒有主要用途時，不因 100% 自動產生保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
-              "evaluationId": "evaluation-006-kanto-purified-2026.08.06-v7",
+              "evaluationId": "evaluation-006-kanto-purified-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": "006-kanto-normal",
                 "inheritanceMode": "NORMAL_BASE_WITH_OVERRIDE",
@@ -4226,81 +4057,18 @@
               "raw": [],
               "sources": [
                 {
-                  "id": "OFF-MEGA-LAUNCH",
-                  "name": "Pokémon GO",
-                  "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
-                  "url": "https://pokemongo.com/en/post/megaevolution-launch",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-TCG-2022",
-                  "name": "Pokémon GO",
-                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
-                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "battle1-GOHUB_006",
-                  "name": "Pokémon GO Hub Database",
-                  "title": "Charizard: Best Moveset, Counters & Max CP | Pokémon GO",
-                  "url": "https://db.pokemongohub.net/pokemon/6",
-                  "type": "PVE",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
                   "id": "official-shadow-mechanic-20260715",
                   "name": "Pokémon GO Help Center",
                   "title": "Shadow Pokémon & Purified Pokémon",
                   "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ml-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持暗影、遷怒、淨化不可逆與報恩機制說明。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -4360,27 +4128,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響MEGA_X 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "Mega 版本獨立評估；保存屬性定位與來源，不以普通版名次替代。",
+              "megaSummaryZhTw": "Mega 型態已獨立建模；物種級團體戰價值尚待 Pokebattler／GO Hub 交叉確認。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "來源建議招式：FIRE_SPIN、BLAST_BURN。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：DRAGON_BREATH／BLAST_BURN／AIR_CUTTER；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-              "evaluationId": "evaluation-006-kanto-mega-x-2026.08.06-v7",
+              "evaluationId": "evaluation-006-kanto-mega-x-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -4547,7 +4315,7 @@
                   "seasonOrVersion": "即時研究快照 2026-07-15",
                   "extractionMethod": null,
                   "reproducible": false,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved. 舊 rank=6 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
+                  "migrationNote": "舊 rank=6 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "battle1-GOHUB_MEGA_006_X",
@@ -4559,31 +4327,22 @@
               ],
               "sources": [
                 {
+                  "id": "OFF-JUNE-2022",
+                  "name": "Pokémon GO",
+                  "title": "June Content Update: Pokémon GO Fest 2022, Season of GO, Mewtwo returns to raids, and more!",
+                  "url": "https://pokemongo.com/en/post/june-2022-content-update",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
+                },
+                {
                   "id": "OFF-MEGA-LAUNCH",
                   "name": "Pokémon GO",
                   "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
                   "url": "https://pokemongo.com/en/post/megaevolution-launch",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-TCG-2022",
-                  "name": "Pokémon GO",
-                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
-                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
                   "id": "battle1-GOHUB_MEGA_006_X",
@@ -4592,40 +4351,22 @@
                   "url": "https://db.pokemongohub.net/pokemon/6-Mega_X",
                   "type": "PVE",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 PVE 原始資料或交叉確認。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
+                  "id": "official-mega-charizard-forms-20260715",
+                  "name": "Pokémon GO Help Center",
+                  "title": "How can I Mega Evolve my Pokémon?",
+                  "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/3332-how-to-mega-evolve-your-pokemon/",
+                  "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ml-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 Mega 機制與型態分離說明；不代表 PvE 排名已完成。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "MAJOR_BATTLE_VALUE",
-                  "priority": 900,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "KEEP",
                   "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
@@ -4671,8 +4412,8 @@
                 "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
                 "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
                 "rulesVersion": "2026.07.28-iv-v2",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-28T15:46:42.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:17:08.000Z"
               },
               {
                 "id": "iv-global-mega",
@@ -4703,8 +4444,8 @@
                 "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
                 "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
                 "rulesVersion": "2026.07.28-iv-v2",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-28T15:46:42.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:17:08.000Z"
               }
             ],
             "ivShortLabels": [
@@ -4758,27 +4499,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響MEGA_Y 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "Mega 版本獨立評估；保存屬性定位與來源，不以普通版名次替代。",
+              "megaSummaryZhTw": "Mega 型態已獨立建模；物種級團體戰價值尚待 Pokebattler／GO Hub 交叉確認。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "來源建議招式：FIRE_SPIN、BLAST_BURN。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：DRAGON_BREATH／BLAST_BURN／AIR_CUTTER；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-              "evaluationId": "evaluation-006-kanto-mega-y-2026.08.06-v7",
+              "evaluationId": "evaluation-006-kanto-mega-y-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -4945,7 +4686,7 @@
                   "seasonOrVersion": "即時研究快照 2026-07-15",
                   "extractionMethod": null,
                   "reproducible": false,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved. 舊 rank=1 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
+                  "migrationNote": "舊 rank=1 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "battle1-GOHUB_MEGA_006_Y",
@@ -4957,31 +4698,22 @@
               ],
               "sources": [
                 {
+                  "id": "OFF-JUNE-2022",
+                  "name": "Pokémon GO",
+                  "title": "June Content Update: Pokémon GO Fest 2022, Season of GO, Mewtwo returns to raids, and more!",
+                  "url": "https://pokemongo.com/en/post/june-2022-content-update",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
+                },
+                {
                   "id": "OFF-MEGA-LAUNCH",
                   "name": "Pokémon GO",
                   "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
                   "url": "https://pokemongo.com/en/post/megaevolution-launch",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-TCG-2022",
-                  "name": "Pokémon GO",
-                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
-                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
                   "id": "battle1-GOHUB_MEGA_006_Y",
@@ -4990,40 +4722,22 @@
                   "url": "https://db.pokemongohub.net/pokemon/6-Mega_Y",
                   "type": "PVE",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 PVE 原始資料或交叉確認。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
+                  "id": "official-mega-charizard-forms-20260715",
+                  "name": "Pokémon GO Help Center",
+                  "title": "How can I Mega Evolve my Pokémon?",
+                  "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/3332-how-to-mega-evolve-your-pokemon/",
+                  "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ml-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 Mega 機制與型態分離說明；不代表 PvE 排名已完成。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "MAJOR_BATTLE_VALUE",
-                  "priority": 900,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "KEEP",
                   "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
@@ -5069,8 +4783,8 @@
                 "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
                 "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
                 "rulesVersion": "2026.07.28-iv-v2",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-28T15:46:42.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:17:08.000Z"
               },
               {
                 "id": "iv-global-mega",
@@ -5101,8 +4815,8 @@
                 "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
                 "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
                 "rulesVersion": "2026.07.28-iv-v2",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-28T15:46:42.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:17:08.000Z"
               }
             ],
             "ivShortLabels": [
@@ -5156,27 +4870,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "此型態具有 Mega 候選；只應保留少量符合15攻／96%以上優先門檻的個體，價值仍待交叉確認。",
               "maxBattleSummaryZhTw": "屬性內排名與整體投資價值分欄保存，不把單一屬性名次當成全體 Max Battle 總排名。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "來源建議招式：WING_ATTACK、MAX_AIRSTREAM。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：DRAGON_BREATH／BLAST_BURN／AIR_CUTTER；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
-              "evaluationId": "evaluation-006-kanto-dynamax-2026.08.06-v7",
+              "evaluationId": "evaluation-006-kanto-dynamax-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -5343,7 +5057,7 @@
                   "seasonOrVersion": "即時研究快照 2026-07-15",
                   "extractionMethod": null,
                   "reproducible": false,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved. 舊 rank=3 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
+                  "migrationNote": "舊 rank=3 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "battle1-GOHUB_DMAX_006",
@@ -5355,31 +5069,22 @@
               ],
               "sources": [
                 {
-                  "id": "OFF-MEGA-LAUNCH",
+                  "id": "OFF-GO-BIG",
                   "name": "Pokémon GO",
-                  "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
-                  "url": "https://pokemongo.com/en/post/megaevolution-launch",
+                  "title": "GO Big with Dynamax Pokémon in new Max Battles!",
+                  "url": "https://pokemongo.com/post/go-big-dynamax?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
-                  "id": "OFF-ROCKET-INVASION",
+                  "id": "OFF-MAX-MONDAYS",
                   "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
+                  "title": "Introducing Max Mondays to max out every week with Dynamax!",
+                  "url": "https://pokemongo.com/en/post/dynamax-max-mondays?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-TCG-2022",
-                  "name": "Pokémon GO",
-                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
-                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
                   "id": "battle1-GOHUB_DMAX_006",
@@ -5388,40 +5093,13 @@
                   "url": "https://db.pokemongohub.net/pokemon/6-Dynamax",
                   "type": "MAX_BATTLE",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ml-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 MAX_BATTLE 原始資料或交叉確認。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
@@ -5465,8 +5143,8 @@
                 "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
                 "shortIvLabelZhTw": "Max攻擊：15攻優先",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               }
             ],
             "ivShortLabels": [
@@ -5519,27 +5197,27 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響GIGANTAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-08T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
-              "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
-              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+              "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "megaSummaryZhTw": "此型態具有 Mega 候選；只應保留少量符合15攻／96%以上優先門檻的個體，價值仍待交叉確認。",
               "maxBattleSummaryZhTw": "屬性內排名與整體投資價值分欄保存，不把單一屬性名次當成全體 Max Battle 總排名。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "來源建議招式：WING_ATTACK、G_MAX_WILDFIRE。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "PvPoke 建議招式代碼：DRAGON_BREATH／BLAST_BURN／AIR_CUTTER；限定招式取得方式須另行確認。",
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
-              "evaluationId": "evaluation-006-kanto-gigantamax-2026.08.06-v7",
+              "evaluationId": "evaluation-006-kanto-gigantamax-20260715",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -5706,7 +5384,7 @@
                   "seasonOrVersion": "即時研究快照 2026-07-15",
                   "extractionMethod": null,
                   "reproducible": false,
-                  "migrationNote": "Migrated from the pre-category-status schema; original rank, text, source, and checkedAt were preserved. 舊 rank=2 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
+                  "migrationNote": "舊 rank=2 為屬性／情境範圍名次，已移至類別專用維度，避免誤作全域名次。",
                   "checkedAt": "2026-07-14T16:00:00.000Z",
                   "source": {
                     "id": "battle1-GOHUB_GMAX_006",
@@ -5718,31 +5396,13 @@
               ],
               "sources": [
                 {
-                  "id": "OFF-MEGA-LAUNCH",
+                  "id": "OFF-GO-BIGGER",
                   "name": "Pokémon GO",
-                  "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
-                  "url": "https://pokemongo.com/en/post/megaevolution-launch",
+                  "title": "GO Bigger with Gigantamax Pokémon in new Max Battles!",
+                  "url": "https://pokemongo.com/en/post/go-bigger-gigantamax",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-ROCKET-INVASION",
-                  "name": "Pokémon GO",
-                  "title": "Team GO Rocket invades Pokémon GO!",
-                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "OFF-TCG-2022",
-                  "name": "Pokémon GO",
-                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
-                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
-                  "type": "OFFICIAL",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持此型態／戰鬥版本的官方推出狀態。"
                 },
                 {
                   "id": "battle1-GOHUB_GMAX_006",
@@ -5751,40 +5411,13 @@
                   "url": "https://db.pokemongohub.net/pokemon/6-Gigantamax",
                   "type": "MAX_BATTLE",
                   "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-gl-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ml-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-                },
-                {
-                  "id": "pvpoke-ul-20260715",
-                  "name": "PvPoke",
-                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-                  "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
-                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                  "usageZhTw": "支持 MAX_BATTLE 原始資料或交叉確認。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
@@ -5828,8 +5461,8 @@
                 "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
                 "shortIvLabelZhTw": "Max攻擊：15攻優先",
                 "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-07-17T16:45:17.000Z",
-                "updatedAt": "2026-07-17T16:45:17.000Z"
+                "createdAt": "2026-08-08T19:10:13.000Z",
+                "updatedAt": "2026-08-08T19:10:13.000Z"
               }
             ],
             "ivShortLabels": [
@@ -5876,8 +5509,8 @@
           "detail": "超極巨：高",
           "tone": "HIGH"
         },
-        "decision": "CONDITIONAL_KEEP",
-        "decisionReason": "PvP看目標聯盟個體Rank；PvE先看招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留。",
+        "decision": "TRANSFER_CANDIDATE",
+        "decisionReason": "一般重複個體通常可傳送。",
         "ivRecommendations": [
           {
             "id": "iv-global-ultra",
@@ -5908,8 +5541,8 @@
             "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
             "shortIvLabelZhTw": "UL：Rank≤100",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           },
           {
             "id": "iv-global-master",
@@ -5940,8 +5573,8 @@
             "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
             "shortIvLabelZhTw": "ML：15攻／98%優先",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           },
           {
             "id": "iv-global-pve",
@@ -5972,8 +5605,8 @@
             "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
             "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
             "rulesVersion": "2026.07.28-iv-v2",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-28T15:46:42.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:17:08.000Z"
           },
           {
             "id": "iv-global-shadow-pve",
@@ -6004,8 +5637,8 @@
             "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
             "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
             "rulesVersion": "2026.07.28-iv-v2",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-28T15:46:42.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:17:08.000Z"
           },
           {
             "id": "iv-global-mega",
@@ -6036,8 +5669,8 @@
             "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
             "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
             "rulesVersion": "2026.07.28-iv-v2",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-28T15:46:42.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:17:08.000Z"
           },
           {
             "id": "iv-global-max-attack",
@@ -6068,8 +5701,8 @@
             "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
             "shortIvLabelZhTw": "Max攻擊：15攻優先",
             "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-07-17T16:45:17.000Z",
-            "updatedAt": "2026-07-17T16:45:17.000Z"
+            "createdAt": "2026-08-08T19:10:13.000Z",
+            "updatedAt": "2026-08-08T19:10:13.000Z"
           }
         ],
         "ivShortLabels": [
@@ -6099,7 +5732,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -6154,8 +5787,8 @@
           "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
           "shortIvLabelZhTw": "UL：Rank≤100",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-master",
@@ -6186,8 +5819,8 @@
           "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         },
         {
           "id": "iv-global-pve",
@@ -6218,8 +5851,8 @@
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -6250,8 +5883,8 @@
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         },
         {
           "id": "iv-global-mega",
@@ -6282,8 +5915,8 @@
           "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
           "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-iv-v2",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-28T15:46:42.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:17:08.000Z"
         },
         {
           "id": "iv-global-max-attack",
@@ -6314,8 +5947,8 @@
           "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
           "shortIvLabelZhTw": "Max攻擊：15攻優先",
           "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-07-17T16:45:17.000Z",
-          "updatedAt": "2026-07-17T16:45:17.000Z"
+          "createdAt": "2026-08-08T19:10:13.000Z",
+          "updatedAt": "2026-08-08T19:10:13.000Z"
         }
       ],
       "isRoot": false,
@@ -6420,8 +6053,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "UL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-master",
@@ -6452,8 +6085,8 @@
       "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-pve",
@@ -6484,8 +6117,8 @@
       "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
       "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-shadow-pve",
@@ -6516,8 +6149,8 @@
       "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
       "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-mega",
@@ -6548,8 +6181,8 @@
       "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
       "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-max-attack",
@@ -6580,8 +6213,8 @@
       "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
       "shortIvLabelZhTw": "Max攻擊：15攻優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     }
   ],
   "ivSummaryZhTw": "依成員用途分開保留：UL：Rank≤100；ML：15攻／98%優先；PvE：15攻優先；14攻高整體IV亦可留；暗影標準較寬；15攻優先，不設硬性最低IV；Mega：15攻優先；14攻高整體IV亦可留；Max攻擊：15攻優先",
@@ -6596,7 +6229,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
   "minDexNumber": 4,
   "maxDexNumber": 6,
   "detailsLoaded": true

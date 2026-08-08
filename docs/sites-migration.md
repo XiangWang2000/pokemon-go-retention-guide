@@ -29,7 +29,9 @@ dev.db
        ├─ site-data/sources.json
        ├─ site-data/changes.json
        ├─ site-data/manifest.json
-       └─ public/exports/pokemon-go-retention-001-181.xlsx
+       ├─ public/data/
+       ├─ public/_headers
+       └─ public/exports/pokemon-go-retention-<batch>.xlsx
               │
               └─ Vinext → Cloudflare Worker／Sites
 ```
@@ -41,9 +43,10 @@ dev.db
 `site-data/manifest.json` 保存：
 
 - 根目錄 `dev.db` 大小與 SHA-256。
-- 15 個正式資料表的筆數。
+- 正式資料表的筆數。
 - dashboard、Review Queue、Sources、Change Log 與詳細資料筆數。
 - 每個 JSON 的大小與 SHA-256。
+- `public/_headers` 的大小與 SHA-256。
 - 合併 snapshot SHA-256。
 - Excel 大小、SHA-256 與工作表數。
 - rulesVersion 與資料日期。
@@ -55,7 +58,7 @@ npm run sites:snapshot
 npm run sites:snapshot:check
 ```
 
-在本機存在 `dev.db` 時，檢查器會要求資料庫雜湊與 snapshot 完全相同；如果資料庫已更新但忘記重新產生 snapshot，建置會失敗。部署建置沒有 SQLite 時，仍會驗證所有受版本控制的 JSON 與 Excel 雜湊。
+在本機存在 `dev.db` 時，檢查器會要求資料庫雜湊與 snapshot 完全相同；如果資料庫已更新但忘記重新產生 snapshot，建置會失敗。部署建置沒有 SQLite 時，仍會驗證所有受版本控制的 JSON、`public/_headers` 與 Excel 雜湊。
 
 ## 常用指令
 
@@ -78,25 +81,22 @@ npm run start:local
 ### 資料更新後建置
 
 ```powershell
+npm run data:recompute:001-251
 npm run data:validate
 npm run review:generate
-npm run review:remediation
 npm run sites:snapshot
-npm run sites:snapshot:check
-npm test
-npm run test:integration
-npm run lint
-npm run typecheck
-npm run build
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full
 ```
+
+完整匯入與目前 scope 的產生順序以 `docs/data-update.md` 為準；本節只列資料更新後的重算、產物與建置驗證階段。
+
+`verify.ps1 -Full` 會檢查既有 review、snapshot、資料一致性、整合測試、Sites 相容性與雙 runtime 建置，不會代替前述產生步驟；受控產物不同步時應直接失敗。
 
 ## Excel
 
-ExcelJS 只在本機 snapshot 產生流程與測試執行，不進入 Worker runtime。首頁直接下載：
+ExcelJS 只在本機 snapshot 產生流程與測試執行，不進入 Worker runtime。
 
-```text
-/exports/pokemon-go-retention-001-181.xlsx
-```
+首頁依 `site-data/manifest.json` 的 `excel.path` 下載 `/exports/pokemon-go-retention-<batch>.xlsx`，不在文件寫死目前批次。
 
 舊 `/api/export` 以 307 轉址保留相容性。這避免 Worker runtime 的 Node stream、記憶體、CPU 與 bundle 風險，同時保留十張繁中工作表、超連結、日期、穩定 ID、凍結列與自動篩選。
 

@@ -8,12 +8,12 @@
       "data/sources/pvpoke/rankings-2500.json",
       "data/sources/pvpoke/rankings-10000.json"
     ],
-    "method": "Open?Overall ???????????"
+    "method": "Open/Overall 評分與排名交叉核對；PvP 用途與 PvE、Mega、Max 版本分開評估。"
   },
   "pve": {
-    "214-johto": "???????????? PvE?",
-    "227-johto": "?????????",
-    "229-johto": "???? Mega ???????"
+    "214-johto": "赫拉克羅斯具 PvE 用途；Mega 版本與普通版本分開評估。",
+    "227-johto": "盔甲鳥目前 PvE 用途有限；Mega 版本與普通版本分開評估。",
+    "229-johto": "黑魯加具特殊 PvE／Mega 用途；Mega 版本與普通版本分開評估。"
   },
   "mega": [
     {
@@ -188,7 +188,7 @@
     },
     {
       "fromFormId": "215-johto",
-      "toFormId": "461-kanto",
+      "toFormId": "461-other",
       "sourceIds": [
         "pokeapi-evolution-targets-152-251",
         "pokemon-go-evolution-requirements"
@@ -196,7 +196,7 @@
     },
     {
       "fromFormId": "217-johto",
-      "toFormId": "901-kanto",
+      "toFormId": "901-hisui",
       "sourceIds": [
         "pokeapi-evolution-targets-152-251",
         "pokemon-go-evolution-requirements"
@@ -204,7 +204,7 @@
     },
     {
       "fromFormId": "221-johto",
-      "toFormId": "473-kanto",
+      "toFormId": "473-other",
       "sourceIds": [
         "pokeapi-evolution-targets-152-251",
         "pokemon-go-evolution-requirements"
@@ -212,7 +212,7 @@
     },
     {
       "fromFormId": "233-johto",
-      "toFormId": "474-kanto",
+      "toFormId": "474-other",
       "sourceIds": [
         "pokeapi-evolution-targets-152-251",
         "pokemon-go-evolution-requirements"
@@ -220,7 +220,7 @@
     },
     {
       "fromFormId": "234-johto",
-      "toFormId": "899-kanto",
+      "toFormId": "899-hisui",
       "sourceIds": [
         "pokeapi-evolution-targets-152-251",
         "pokemon-go-evolution-requirements"
@@ -230,7 +230,7 @@
   "review": {
     "materialGaps": [],
     "nonMaterialGaps": [
-      "??????????????????????????? HOLD ??????????????? material issue?"
+      "部分次要來源頁面未提供完整逐招資料，不影響本批普通個體的主要保留結論；後續補查時不升級為家族 HOLD_FOR_NOW。"
     ]
   }
 }

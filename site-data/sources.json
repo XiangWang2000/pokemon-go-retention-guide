@@ -4,17 +4,19 @@
     "sourceName": "Bulbapedia",
     "sourceUrl": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
     "sourceType": "SECONDARY",
-    "sourceTitleOriginal": "List of Shadow Pok?mon in Pok?mon GO",
+    "sourceTitleOriginal": "List of Shadow Pokémon in Pokémon GO",
     "sourceLanguage": "en",
-    "sourceSummaryZhTw": "?? 2026-08-08 ? Shadow Pok?mon ??????#019 Rattata ? #023 Ekans ????#021 Spearow?#022 Fearow?#025 Pikachu?#026 Kanto?Alola Raichu ?????????????????????????????????????",
+    "sourceSummaryZhTw": "截至 2026-08-08 的 Shadow Pokémon 名單；核對 #019 小拉達、#023 阿柏蛇、#021 烈雀、#022 大嘴雀、#025 皮卡丘，以及關都／阿羅拉雷丘等型態的暗影推出狀態。",
     "accessedAt": "2026-08-07T16:00:00.000Z",
     "publishedAt": null,
     "dataVersion": "live page accessed 2026-08-08",
-    "notes": "第一批研究來源；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 5,
+    "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
+    "evaluationCount": 12,
     "referencedPokemon": [
+      "#019 小拉達",
       "#021 烈雀",
       "#022 大嘴雀",
+      "#023 阿柏蛇",
       "#025 皮卡丘",
       "#026 雷丘"
     ],
@@ -311,92 +313,7 @@
     "sourceSummaryZhTw": "Togekiss source is used to verify the external evolution stub and a provisional SPECIAL_USE target; full battle data is outside this validation batch.",
     "accessedAt": "2026-08-07T16:00:00.000Z",
     "publishedAt": null,
-    "dataVersion": "2026.08.08-cross-generation-evolution-v5",
-    "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
-    "evaluationCount": 0,
-    "referencedPokemon": [],
-    "linkedEvidenceCount": 0,
-    "linkedEvidence": []
-  },
-  {
-    "id": "pokeapi-evolution-targets-001-151",
-    "sourceName": "PokéAPI",
-    "sourceUrl": "https://pokeapi.co/api/v2/pokemon-species/",
-    "sourceType": "SECONDARY",
-    "sourceTitleOriginal": "Pokémon species evolution relationships",
-    "sourceLanguage": "en",
-    "sourceSummaryZhTw": "用於核對國家圖鑑物種的 canonical evolves_from_species 關係；不以此來源推論 Pokémon GO 戰鬥強度。",
-    "accessedAt": "2026-08-07T16:00:00.000Z",
-    "publishedAt": null,
-    "dataVersion": "2026.08.08-cross-generation-evolution-v5",
-    "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
-    "evaluationCount": 0,
-    "referencedPokemon": [],
-    "linkedEvidenceCount": 0,
-    "linkedEvidence": []
-  },
-  {
-    "id": "pokemon-go-evolution-requirements",
-    "sourceName": "Pokémon GO evolution reference",
-    "sourceUrl": "https://pokemongohub.net/post/guide/pokemon-go-evolution-guide/",
-    "sourceType": "SECONDARY",
-    "sourceTitleOriginal": "Pokémon GO evolution requirements reference",
-    "sourceLanguage": "en",
-    "sourceSummaryZhTw": "用於核對 Pokémon GO 中的糖果、進化道具、夥伴或誘餌條件；實際可用性仍以遊戲內介面為準。",
-    "accessedAt": "2026-08-07T16:00:00.000Z",
-    "publishedAt": null,
-    "dataVersion": "2026.08.08-cross-generation-evolution-v5",
-    "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
-    "evaluationCount": 0,
-    "referencedPokemon": [],
-    "linkedEvidenceCount": 0,
-    "linkedEvidence": []
-  },
-  {
-    "id": "gohub-crobat-pvp-20260808",
-    "sourceName": "Pokémon GO Hub",
-    "sourceUrl": "https://db.pokemongohub.net/pokemon/169/pvp",
-    "sourceType": "PVP",
-    "sourceTitleOriginal": "Crobat PvP Guide: Great, Ultra & Master League",
-    "sourceLanguage": "en",
-    "sourceSummaryZhTw": "目前頁面列出 Crobat 大聯盟 #783、超級聯盟 #583、Master #395；未達本專案特殊用途門檻，後續進化不改變目前傳送結論。",
-    "accessedAt": "2026-08-07T16:00:00.000Z",
-    "publishedAt": null,
-    "dataVersion": "2026.08.08-cross-generation-evolution-v5",
-    "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
-    "evaluationCount": 0,
-    "referencedPokemon": [],
-    "linkedEvidenceCount": 0,
-    "linkedEvidence": []
-  },
-  {
-    "id": "gohub-bellossom-pvp-20260808",
-    "sourceName": "Pokémon GO Hub",
-    "sourceUrl": "https://db.pokemongohub.net/pokemon/182/pvp",
-    "sourceType": "PVP",
-    "sourceTitleOriginal": "Bellossom PvP Guide: Great, Ultra & Master League",
-    "sourceLanguage": "en",
-    "sourceSummaryZhTw": "目前頁面列出 Bellossom 大聯盟 #224、超級聯盟 #197；屬有限 PvP 用途，不等同核心投資。",
-    "accessedAt": "2026-08-07T16:00:00.000Z",
-    "publishedAt": null,
-    "dataVersion": "2026.08.08-cross-generation-evolution-v5",
-    "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
-    "evaluationCount": 0,
-    "referencedPokemon": [],
-    "linkedEvidenceCount": 0,
-    "linkedEvidence": []
-  },
-  {
-    "id": "gohub-perrserker-pvp-20260808",
-    "sourceName": "Pokémon GO Hub",
-    "sourceUrl": "https://db.pokemongohub.net/pokemon/863/pvp",
-    "sourceType": "PVP",
-    "sourceTitleOriginal": "Perrserker PvP Guide: Great, Ultra & Master League",
-    "sourceLanguage": "en",
-    "sourceSummaryZhTw": "目前頁面列出 Perrserker 大聯盟 #408、超級聯盟 #174；超級聯盟有條件用途，屬特殊用途／預算型進化目標。",
-    "accessedAt": "2026-08-07T16:00:00.000Z",
-    "publishedAt": null,
-    "dataVersion": "2026.08.08-cross-generation-evolution-v5",
+    "dataVersion": "2026-08-09-cross-generation-evolution-v6",
     "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
     "evaluationCount": 0,
     "referencedPokemon": [],
@@ -434,6 +351,91 @@
     "linkedEvidence": []
   },
   {
+    "id": "pokeapi-evolution-targets-001-151",
+    "sourceName": "PokéAPI",
+    "sourceUrl": "https://pokeapi.co/api/v2/pokemon-species/",
+    "sourceType": "SECONDARY",
+    "sourceTitleOriginal": "Pokémon species evolution relationships",
+    "sourceLanguage": "en",
+    "sourceSummaryZhTw": "用於核對國家圖鑑物種的 canonical evolves_from_species 關係；不以此來源推論 Pokémon GO 戰鬥強度。",
+    "accessedAt": "2026-08-07T16:00:00.000Z",
+    "publishedAt": null,
+    "dataVersion": "2026-08-09-cross-generation-evolution-v6",
+    "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
+    "evaluationCount": 0,
+    "referencedPokemon": [],
+    "linkedEvidenceCount": 0,
+    "linkedEvidence": []
+  },
+  {
+    "id": "pokemon-go-evolution-requirements",
+    "sourceName": "Pokémon GO evolution reference",
+    "sourceUrl": "https://pokemongohub.net/post/guide/pokemon-go-evolution-guide/",
+    "sourceType": "SECONDARY",
+    "sourceTitleOriginal": "Pokémon GO evolution requirements reference",
+    "sourceLanguage": "en",
+    "sourceSummaryZhTw": "用於核對 Pokémon GO 中的糖果、進化道具、夥伴或誘餌條件；實際可用性仍以遊戲內介面為準。",
+    "accessedAt": "2026-08-07T16:00:00.000Z",
+    "publishedAt": null,
+    "dataVersion": "2026-08-09-cross-generation-evolution-v6",
+    "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
+    "evaluationCount": 0,
+    "referencedPokemon": [],
+    "linkedEvidenceCount": 0,
+    "linkedEvidence": []
+  },
+  {
+    "id": "gohub-crobat-pvp-20260808",
+    "sourceName": "Pokémon GO Hub",
+    "sourceUrl": "https://db.pokemongohub.net/pokemon/169/pvp",
+    "sourceType": "PVP",
+    "sourceTitleOriginal": "Crobat PvP Guide: Great, Ultra & Master League",
+    "sourceLanguage": "en",
+    "sourceSummaryZhTw": "目前頁面列出 Crobat 大聯盟 #783、超級聯盟 #583、Master #395；未達本專案特殊用途門檻，後續進化不改變目前傳送結論。",
+    "accessedAt": "2026-08-07T16:00:00.000Z",
+    "publishedAt": null,
+    "dataVersion": "2026-08-09-cross-generation-evolution-v6",
+    "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
+    "evaluationCount": 0,
+    "referencedPokemon": [],
+    "linkedEvidenceCount": 0,
+    "linkedEvidence": []
+  },
+  {
+    "id": "gohub-bellossom-pvp-20260808",
+    "sourceName": "Pokémon GO Hub",
+    "sourceUrl": "https://db.pokemongohub.net/pokemon/182/pvp",
+    "sourceType": "PVP",
+    "sourceTitleOriginal": "Bellossom PvP Guide: Great, Ultra & Master League",
+    "sourceLanguage": "en",
+    "sourceSummaryZhTw": "目前頁面列出 Bellossom 大聯盟 #224、超級聯盟 #197；屬有限 PvP 用途，不等同核心投資。",
+    "accessedAt": "2026-08-07T16:00:00.000Z",
+    "publishedAt": null,
+    "dataVersion": "2026-08-09-cross-generation-evolution-v6",
+    "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
+    "evaluationCount": 0,
+    "referencedPokemon": [],
+    "linkedEvidenceCount": 0,
+    "linkedEvidence": []
+  },
+  {
+    "id": "gohub-perrserker-pvp-20260808",
+    "sourceName": "Pokémon GO Hub",
+    "sourceUrl": "https://db.pokemongohub.net/pokemon/863/pvp",
+    "sourceType": "PVP",
+    "sourceTitleOriginal": "Perrserker PvP Guide: Great, Ultra & Master League",
+    "sourceLanguage": "en",
+    "sourceSummaryZhTw": "目前頁面列出 Perrserker 大聯盟 #408、超級聯盟 #174；超級聯盟有條件用途，屬特殊用途／預算型進化目標。",
+    "accessedAt": "2026-08-07T16:00:00.000Z",
+    "publishedAt": null,
+    "dataVersion": "2026-08-09-cross-generation-evolution-v6",
+    "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
+    "evaluationCount": 0,
+    "referencedPokemon": [],
+    "linkedEvidenceCount": 0,
+    "linkedEvidence": []
+  },
+  {
     "id": "pokeapi-evolution-targets-152-251",
     "sourceName": "PokéAPI",
     "sourceUrl": "https://pokeapi.co/api/v2/pokemon-species/?generation=2",
@@ -443,7 +445,7 @@
     "sourceSummaryZhTw": "用於核對第 2 世代與後續世代的 canonical 物種進化關係；不以此來源單獨推論戰鬥強度。",
     "accessedAt": "2026-08-07T16:00:00.000Z",
     "publishedAt": null,
-    "dataVersion": "2026.08.08-cross-generation-evolution-v5",
+    "dataVersion": "2026-08-09-cross-generation-evolution-v6",
     "notes": "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
     "evaluationCount": 0,
     "referencedPokemon": [],
@@ -1779,6 +1781,41 @@
     ]
   },
   {
+    "id": "OFF-CD-POLIWAG-2023",
+    "sourceName": "Pokémon GO",
+    "sourceUrl": "https://pokemongo.com/en/post/communityday-july-2023-poliwag?hl=en",
+    "sourceType": "OFFICIAL",
+    "sourceTitleOriginal": "July 2023 Community Day: Poliwag",
+    "sourceLanguage": "en",
+    "sourceSummaryZhTw": "確認蚊香蝌蚪可進化為蚊香君，之後分支為蚊香泳士與蚊香蛙皇。",
+    "accessedAt": "2026-07-30T15:45:00.000Z",
+    "publishedAt": "2023-07-11T00:00:00.000Z",
+    "dataVersion": "accessed-2026-07-30",
+    "notes": "第 #061～#090 批次的版本、進化、招式與 PvE 證據。",
+    "evaluationCount": 2,
+    "referencedPokemon": [
+      "#060 蚊香蝌蚪"
+    ],
+    "linkedEvidenceCount": 3,
+    "linkedEvidence": [
+      {
+        "kind": "保留結論",
+        "target": "#060 蚊香蝌蚪（關都／普通）",
+        "usageZhTw": "確認蚊香蝌蚪後續包含蚊香泳士與蚊香蛙皇分支，支援暫時保留結論。"
+      },
+      {
+        "kind": "保留結論",
+        "target": "#060 蚊香蝌蚪（關都／普通）",
+        "usageZhTw": "跨批次家族與雙分支進化證據。"
+      },
+      {
+        "kind": "評估欄位",
+        "target": "#060 蚊香蝌蚪（關都／普通）",
+        "usageZhTw": "確認蚊香蝌蚪後續包含蚊香泳士與蚊香蛙皇分支，支援暫時保留結論。"
+      }
+    ]
+  },
+  {
     "id": "OFF-CD-DEC-2023",
     "sourceName": "Pokémon GO",
     "sourceUrl": "https://pokemongo.com/post/community-day-december-2023?hl=en",
@@ -1837,41 +1874,6 @@
         "kind": "評估欄位",
         "target": "#080 呆殼獸（伽勒爾／普通）",
         "usageZhTw": "確認伽勒爾呆殼獸可取得衝浪，且不與關都型態混用。"
-      }
-    ]
-  },
-  {
-    "id": "OFF-CD-POLIWAG-2023",
-    "sourceName": "Pokémon GO",
-    "sourceUrl": "https://pokemongo.com/en/post/communityday-july-2023-poliwag?hl=en",
-    "sourceType": "OFFICIAL",
-    "sourceTitleOriginal": "July 2023 Community Day: Poliwag",
-    "sourceLanguage": "en",
-    "sourceSummaryZhTw": "確認蚊香蝌蚪可進化為蚊香君，之後分支為蚊香泳士與蚊香蛙皇。",
-    "accessedAt": "2026-07-30T15:45:00.000Z",
-    "publishedAt": "2023-07-11T00:00:00.000Z",
-    "dataVersion": "accessed-2026-07-30",
-    "notes": "第 #061～#090 批次的版本、進化、招式與 PvE 證據。",
-    "evaluationCount": 2,
-    "referencedPokemon": [
-      "#060 蚊香蝌蚪"
-    ],
-    "linkedEvidenceCount": 3,
-    "linkedEvidence": [
-      {
-        "kind": "保留結論",
-        "target": "#060 蚊香蝌蚪（關都／普通）",
-        "usageZhTw": "確認蚊香蝌蚪後續包含蚊香泳士與蚊香蛙皇分支，支援暫時保留結論。"
-      },
-      {
-        "kind": "保留結論",
-        "target": "#060 蚊香蝌蚪（關都／普通）",
-        "usageZhTw": "跨批次家族與雙分支進化證據。"
-      },
-      {
-        "kind": "評估欄位",
-        "target": "#060 蚊香蝌蚪（關都／普通）",
-        "usageZhTw": "確認蚊香蝌蚪後續包含蚊香泳士與蚊香蛙皇分支，支援暫時保留結論。"
       }
     ]
   },
@@ -2298,7 +2300,7 @@
     "publishedAt": null,
     "dataVersion": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7; sha256=c6421842994d4dd7738a9ea8b3529f818500b0cc3fd9d724567ec9553a7314f4",
     "notes": "Open League／Overall 固定 commit 完整 JSON；名次以陣列索引加一重現，不使用搜尋摘要。",
-    "evaluationCount": 929,
+    "evaluationCount": 497,
     "referencedPokemon": [
       "#001 妙蛙種子",
       "#002 妙蛙草",
@@ -2521,7 +2523,7 @@
     "publishedAt": null,
     "dataVersion": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7; sha256=e4c7a8ef9c7f1b04b857562cc5b6ca4cf7618c42024183cfb4f0eca8046375cd",
     "notes": "Open League／Overall 固定 commit 完整 JSON；名次以陣列索引加一重現，不使用搜尋摘要。",
-    "evaluationCount": 662,
+    "evaluationCount": 338,
     "referencedPokemon": [
       "#003 妙蛙花",
       "#006 噴火龍",
@@ -2683,7 +2685,7 @@
     "publishedAt": null,
     "dataVersion": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7; sha256=8ed9a521ac82be653906c978d4addd941f9395fc04bac73b516767e7c1edb16f",
     "notes": "Open League／Overall 固定 commit 完整 JSON；名次以陣列索引加一重現，不使用搜尋摘要。",
-    "evaluationCount": 412,
+    "evaluationCount": 172,
     "referencedPokemon": [
       "#003 妙蛙花",
       "#006 噴火龍",
@@ -2773,7 +2775,7 @@
     "publishedAt": null,
     "dataVersion": "Help Center accessed 2026-07-15",
     "notes": "機制來源；不單獨證明特定物種的暗影推出狀態。",
-    "evaluationCount": 202,
+    "evaluationCount": 98,
     "referencedPokemon": [
       "#001 妙蛙種子",
       "#002 妙蛙草",
@@ -2851,6 +2853,42 @@
     "linkedEvidence": []
   },
   {
+    "id": "battle1-GOHUB_DMAX_LIST",
+    "sourceName": "Pok?mon GO Hub Database",
+    "sourceUrl": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
+    "sourceType": "MAX_BATTLE",
+    "sourceTitleOriginal": "Available Dynamax and Gigantamax Pok?mon in Pok?mon GO",
+    "sourceLanguage": "en",
+    "sourceSummaryZhTw": "第一批第三方戰鬥資料研究原始頁。",
+    "accessedAt": "2026-07-14T16:00:00.000Z",
+    "publishedAt": null,
+    "dataVersion": "live",
+    "notes": "研究通道：battle1",
+    "evaluationCount": 23,
+    "referencedPokemon": [
+      "#013 獨角蟲",
+      "#014 鐵殼蛹",
+      "#015 大針蜂",
+      "#016 波波",
+      "#017 比比鳥",
+      "#018 大比鳥",
+      "#019 小拉達",
+      "#020 拉達",
+      "#021 烈雀",
+      "#022 大嘴雀",
+      "#023 阿柏蛇",
+      "#024 阿柏怪",
+      "#025 皮卡丘",
+      "#026 雷丘",
+      "#027 穿山鼠",
+      "#028 穿山王",
+      "#029 尼多蘭",
+      "#030 尼多娜"
+    ],
+    "linkedEvidenceCount": 0,
+    "linkedEvidence": []
+  },
+  {
     "id": "OFF-KANTO-2024",
     "sourceName": "Pokémon GO",
     "sourceUrl": "https://pokemongo.com/post/rediscover-kanto-2024?hl=en",
@@ -2879,7 +2917,7 @@
     "publishedAt": "2021-02-11T16:00:00.000Z",
     "dataVersion": "2021-02-12",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 54,
+    "evaluationCount": 14,
     "referencedPokemon": [
       "#010 綠毛蟲",
       "#016 波波",
@@ -2901,7 +2939,7 @@
     "publishedAt": "2024-04-02T16:00:00.000Z",
     "dataVersion": "2024-04-03",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 58,
+    "evaluationCount": 14,
     "referencedPokemon": [
       "#010 綠毛蟲",
       "#013 獨角蟲",
@@ -2922,7 +2960,7 @@
     "publishedAt": "2022-06-09T16:00:00.000Z",
     "dataVersion": "2022-06-10",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 204,
+    "evaluationCount": 48,
     "referencedPokemon": [
       "#001 妙蛙種子",
       "#002 妙蛙草",
@@ -2949,7 +2987,7 @@
     "publishedAt": "2022-09-27T16:00:00.000Z",
     "dataVersion": "2022-09-28",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 32,
+    "evaluationCount": 8,
     "referencedPokemon": [
       "#014 鐵殼蛹",
       "#017 比比鳥"
@@ -2969,7 +3007,7 @@
     "publishedAt": "2022-01-03T16:00:00.000Z",
     "dataVersion": "2022-01-04",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 21,
+    "evaluationCount": 5,
     "referencedPokemon": [
       "#002 妙蛙草"
     ],
@@ -2988,7 +3026,7 @@
     "publishedAt": "2023-08-27T16:00:00.000Z",
     "dataVersion": "2023-08-28",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 21,
+    "evaluationCount": 5,
     "referencedPokemon": [
       "#005 火恐龍"
     ],
@@ -3007,7 +3045,7 @@
     "publishedAt": "2020-05-19T16:00:00.000Z",
     "dataVersion": "2020-05-20",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 16,
+    "evaluationCount": 4,
     "referencedPokemon": [
       "#014 鐵殼蛹"
     ],
@@ -3026,7 +3064,7 @@
     "publishedAt": "2020-09-08T16:00:00.000Z",
     "dataVersion": "2020-09-09",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 37,
+    "evaluationCount": 9,
     "referencedPokemon": [
       "#017 比比鳥",
       "#018 大比鳥"
@@ -3046,7 +3084,7 @@
     "publishedAt": "2018-01-11T16:00:00.000Z",
     "dataVersion": "2018-01-12",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#025 皮卡丘"
     ],
@@ -3065,7 +3103,7 @@
     "publishedAt": "2022-02-27T16:00:00.000Z",
     "dataVersion": "2022-02-28",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 64,
+    "evaluationCount": 16,
     "referencedPokemon": [
       "#027 穿山鼠",
       "#028 穿山王"
@@ -3085,7 +3123,7 @@
     "publishedAt": "2020-08-26T16:00:00.000Z",
     "dataVersion": "2020-08-27",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 124,
+    "evaluationCount": 32,
     "referencedPokemon": [
       "#003 妙蛙花",
       "#006 噴火龍",
@@ -3126,7 +3164,7 @@
     "publishedAt": "2021-07-25T16:00:00.000Z",
     "dataVersion": "2021-07-26",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 23,
+    "evaluationCount": 7,
     "referencedPokemon": [
       "#015 大針蜂",
       "#018 大比鳥"
@@ -3165,7 +3203,7 @@
     "publishedAt": "2026-07-06T16:00:00.000Z",
     "dataVersion": "2026-07-07",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 18,
+    "evaluationCount": 6,
     "referencedPokemon": [
       "#026 雷丘"
     ],
@@ -3259,7 +3297,7 @@
     "publishedAt": "2025-07-13T16:00:00.000Z",
     "dataVersion": "2025-07-14",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 27,
+    "evaluationCount": 7,
     "referencedPokemon": [
       "#012 巴大蝶"
     ],
@@ -3331,7 +3369,7 @@
     "publishedAt": "2022-02-27T16:00:00.000Z",
     "dataVersion": "2022-02-28",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#026 雷丘"
     ],
@@ -3350,7 +3388,7 @@
     "publishedAt": "2022-05-18T16:00:00.000Z",
     "dataVersion": "2022-05-19",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 38,
+    "evaluationCount": 10,
     "referencedPokemon": [
       "#019 小拉達",
       "#026 雷丘",
@@ -3371,7 +3409,7 @@
     "publishedAt": "2022-10-31T16:00:00.000Z",
     "dataVersion": "2022-11-01",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 32,
+    "evaluationCount": 8,
     "referencedPokemon": [
       "#019 小拉達",
       "#020 拉達"
@@ -3454,7 +3492,7 @@
     "publishedAt": "2024-03-20T16:00:00.000Z",
     "dataVersion": "2024-03-21",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 22,
+    "evaluationCount": 10,
     "referencedPokemon": [
       "#016 波波",
       "#017 比比鳥",
@@ -3475,7 +3513,7 @@
     "publishedAt": "2019-11-03T16:00:00.000Z",
     "dataVersion": "2019-11-04",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 20,
+    "evaluationCount": 12,
     "referencedPokemon": [
       "#019 小拉達",
       "#023 阿柏蛇",
@@ -3516,7 +3554,7 @@
     "publishedAt": "2020-07-08T16:00:00.000Z",
     "dataVersion": "2020-07-09",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 36,
+    "evaluationCount": 12,
     "referencedPokemon": [
       "#029 尼多蘭",
       "#030 尼多娜"
@@ -3536,7 +3574,7 @@
     "publishedAt": "2023-08-08T16:00:00.000Z",
     "dataVersion": "2023-08-09",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 18,
+    "evaluationCount": 6,
     "referencedPokemon": [
       "#029 尼多蘭"
     ],
@@ -3572,7 +3610,7 @@
     "publishedAt": "2019-07-24T16:00:00.000Z",
     "dataVersion": "2019-07-25",
     "notes": "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
-    "evaluationCount": 569,
+    "evaluationCount": 131,
     "referencedPokemon": [
       "#010 綠毛蟲",
       "#011 鐵甲蛹",
@@ -3671,7 +3709,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#008 卡咪龜"
     ],
@@ -3758,7 +3796,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#003 妙蛙花"
     ],
@@ -3777,7 +3815,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#006 噴火龍"
     ],
@@ -3796,7 +3834,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#009 水箭龜"
     ],
@@ -3815,7 +3853,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#012 巴大蝶"
     ],
@@ -3834,7 +3872,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#015 大針蜂"
     ],
@@ -3853,7 +3891,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#003 妙蛙花"
     ],
@@ -3872,7 +3910,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#006 噴火龍"
     ],
@@ -3891,7 +3929,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#009 水箭龜"
     ],
@@ -3910,7 +3948,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#012 巴大蝶"
     ],
@@ -3929,7 +3967,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#015 大針蜂"
     ],
@@ -3948,7 +3986,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#003 妙蛙花"
     ],
@@ -3967,7 +4005,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#006 噴火龍"
     ],
@@ -3986,7 +4024,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#006 噴火龍"
     ],
@@ -4005,7 +4043,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#009 水箭龜"
     ],
@@ -4024,7 +4062,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#015 大針蜂"
     ],
@@ -4043,7 +4081,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#003 妙蛙花"
     ],
@@ -4062,7 +4100,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#006 噴火龍"
     ],
@@ -4081,7 +4119,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#009 水箭龜"
     ],
@@ -4100,7 +4138,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#012 巴大蝶"
     ],
@@ -4119,7 +4157,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#003 妙蛙花"
     ],
@@ -4138,7 +4176,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#006 噴火龍"
     ],
@@ -4157,7 +4195,7 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#009 水箭龜"
     ],
@@ -4176,45 +4214,9 @@
     "publishedAt": null,
     "dataVersion": "live",
     "notes": "研究通道：battle1",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#012 巴大蝶"
-    ],
-    "linkedEvidenceCount": 0,
-    "linkedEvidence": []
-  },
-  {
-    "id": "battle1-GOHUB_DMAX_LIST",
-    "sourceName": "Pokémon GO Hub Database",
-    "sourceUrl": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
-    "sourceType": "MAX_BATTLE",
-    "sourceTitleOriginal": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
-    "sourceLanguage": "en",
-    "sourceSummaryZhTw": "第一批第三方戰鬥資料研究原始頁。",
-    "accessedAt": "2026-07-14T16:00:00.000Z",
-    "publishedAt": null,
-    "dataVersion": "live",
-    "notes": "研究通道：battle1",
-    "evaluationCount": 115,
-    "referencedPokemon": [
-      "#013 獨角蟲",
-      "#014 鐵殼蛹",
-      "#015 大針蜂",
-      "#016 波波",
-      "#017 比比鳥",
-      "#018 大比鳥",
-      "#019 小拉達",
-      "#020 拉達",
-      "#021 烈雀",
-      "#022 大嘴雀",
-      "#023 阿柏蛇",
-      "#024 阿柏怪",
-      "#025 皮卡丘",
-      "#026 雷丘",
-      "#027 穿山鼠",
-      "#028 穿山王",
-      "#029 尼多蘭",
-      "#030 尼多娜"
     ],
     "linkedEvidenceCount": 0,
     "linkedEvidence": []
@@ -4350,7 +4352,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#018 大比鳥"
     ],
@@ -4388,7 +4390,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#018 大比鳥"
     ],
@@ -4407,7 +4409,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#018 大比鳥"
     ],
@@ -4426,7 +4428,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#020 拉達"
     ],
@@ -4445,7 +4447,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#020 拉達"
     ],
@@ -4464,7 +4466,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#022 大嘴雀"
     ],
@@ -4483,7 +4485,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#024 阿柏怪"
     ],
@@ -4502,7 +4504,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 8,
+    "evaluationCount": 4,
     "referencedPokemon": [
       "#025 皮卡丘"
     ],
@@ -4521,7 +4523,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#026 雷丘"
     ],
@@ -4540,7 +4542,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#026 雷丘"
     ],
@@ -4635,7 +4637,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#028 穿山王"
     ],
@@ -4654,7 +4656,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#028 穿山王"
     ],
@@ -4673,7 +4675,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#028 穿山王"
     ],
@@ -4692,7 +4694,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#028 穿山王"
     ],
@@ -4711,7 +4713,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 11,
+    "evaluationCount": 3,
     "referencedPokemon": [
       "#030 尼多娜"
     ],
@@ -4730,7 +4732,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#030 尼多娜"
     ],
@@ -4749,7 +4751,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 22,
+    "evaluationCount": 6,
     "referencedPokemon": [
       "#018 大比鳥",
       "#028 穿山王"
@@ -4786,7 +4788,7 @@
     "publishedAt": null,
     "dataVersion": "頁面未標資料版本；查閱日快照",
     "notes": "研究通道：battle2",
-    "evaluationCount": 6,
+    "evaluationCount": 2,
     "referencedPokemon": [
       "#025 皮卡丘"
     ],

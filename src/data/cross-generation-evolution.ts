@@ -1,5 +1,6 @@
 import { readFile } from "node:fs/promises";
 import type { PrismaClient } from "../../generated/prisma/client";
+import { assertNoTextIntegrityIssues } from "./text-integrity";
 
 const sourceFile = "research_notes/cross-generation-evolution-targets.json";
 
@@ -63,6 +64,7 @@ function formId(dexNumber: number, formKey: string) {
 }
 
 function assertEvolutionData(data: CrossGenerationEvolutionData) {
+  assertNoTextIntegrityIssues(data, "cross-generation evolution manifest");
   const sourceIds = new Set(data.sources.map((source) => source.id));
   if (sourceIds.size !== data.sources.length) throw new Error("Duplicate evolution source id.");
   for (const source of data.sources) {
@@ -76,6 +78,12 @@ function assertEvolutionData(data: CrossGenerationEvolutionData) {
     const id = formId(target.dexNumber, target.formKey);
     if (targetIds.has(id)) throw new Error(`重複跨世代進化 target：${id}`);
     targetIds.add(id);
+    if (!["KANTO", "JOHTO", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"].includes(target.regionKey)) {
+      throw new Error(`Evolution target has an invalid region: ${id}.`);
+    }
+    if (target.generation >= 4 && target.formKey === "KANTO") {
+      throw new Error(`Future-generation evolution target cannot use KANTO: ${id}.`);
+    }
     if (targetSpecies.has(target.dexNumber) && target.formKey === "KANTO") {
       throw new Error(`重複跨世代進化 species default form：${target.dexNumber}`);
     }
@@ -127,6 +135,35 @@ export async function ensureCrossGenerationEvolutionTargets(prisma: PrismaClient
   const data = await loadCrossGenerationEvolutionData();
   const checkedDate = optionalDate(data.checkedAt) ?? checkedAt;
   const targetIds = new Set(data.targets.map((target) => formId(target.dexNumber, target.formKey)));
+  const existingFormIds = new Set(
+    (await prisma.pokemonForm.findMany({ select: { id: true } })).map((form) => form.id),
+  );
+  const activeTargets = data.targets.filter((target) => existingFormIds.has(target.fromFormId));
+  const activeTargetIds = new Set(
+    activeTargets.map((target) => formId(target.dexNumber, target.formKey)),
+  );
+
+  const staleKantoStubs = await prisma.pokemonForm.findMany({
+    where: {
+      isEvolutionStub: true,
+      formKey: "KANTO",
+      id: { notIn: [...targetIds] },
+      battleVariants: { none: {} },
+    },
+    select: { id: true },
+  });
+  const staleStubIds = staleKantoStubs.map((stub) => stub.id);
+  if (staleStubIds.length) {
+    await prisma.evolutionPath.deleteMany({
+      where: {
+        OR: [
+          { fromFormId: { in: staleStubIds } },
+          { toFormId: { in: staleStubIds } },
+        ],
+      },
+    });
+    await prisma.pokemonForm.deleteMany({ where: { id: { in: staleStubIds } } });
+  }
 
   for (const source of data.sources) {
     await prisma.sourceReference.upsert({
@@ -158,7 +195,7 @@ export async function ensureCrossGenerationEvolutionTargets(prisma: PrismaClient
     });
   }
 
-  for (const target of data.targets) {
+  for (const target of activeTargets) {
     const id = formId(target.dexNumber, target.formKey);
     await prisma.pokemonSpecies.upsert({
       where: { id: `species-${String(target.dexNumber).padStart(3, "0")}` },
@@ -236,6 +273,7 @@ export async function ensureCrossGenerationEvolutionTargets(prisma: PrismaClient
   }
 
   for (const path of data.paths) {
+    if (!existingFormIds.has(path.fromFormId) || !activeTargetIds.has(path.toFormId)) continue;
     const from = await prisma.pokemonForm.findUnique({
       where: { id: path.fromFormId },
       select: { id: true },
@@ -270,5 +308,5 @@ export async function ensureCrossGenerationEvolutionTargets(prisma: PrismaClient
     }
   }
 
-  return { ...data, targetIds };
+  return { ...data, targetIds: activeTargetIds };
 }

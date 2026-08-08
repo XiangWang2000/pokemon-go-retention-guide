@@ -267,7 +267,19 @@ type VariantRecord = {
 };
 
 async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
-  await prisma.changeLog.deleteMany({ where: { id: { startsWith: "r19-batch-152-181" } } });
+  await prisma.changeLog.deleteMany({
+    where: {
+      id: {
+        in: [
+          "r19-batch-152-181",
+          "r19-family-baby-pikachu",
+          "r19-family-baby-clefairy",
+          "r19-family-baby-jigglypuff",
+          "r19-family-crobat",
+        ],
+      },
+    },
+  });
   await prisma.pokemonSpecies.deleteMany({
     where: { dexNumber: { gte: batchStart, lte: batchEnd } },
   });

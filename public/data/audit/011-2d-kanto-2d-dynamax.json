@@ -55,21 +55,30 @@
       "affectsFinalDecision": false,
       "provisionalDecision": "TRANSFER_CANDIDATE",
       "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "lastResearchedAt": "2026-08-07T16:00:00.000Z"
+      "lastResearchedAt": "2026-08-08T16:00:00.000Z"
+    },
+    {
+      "id": "issue-011-kanto-dynamax-2026.08.06-v7-rule-not-covered-1",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "affectsFinalDecision": false,
+      "provisionalDecision": "TRANSFER_CANDIDATE",
+      "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "lastResearchedAt": "2026-08-08T16:00:00.000Z"
     }
   ],
   "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
-  "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
+  "pvpSummaryZhTw": "尚未取得此版本的主要 PvP 聯盟資料。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-  "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
+  "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
-  "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+  "megaSummaryZhTw": "目前沒有本型態的 Mega 記錄。",
   "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-  "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
+  "requiredMovesSummaryZhTw": "尚無已驗證的必要招式結論。",
   "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
   "ivRecommendations": [
     {
@@ -101,8 +110,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "GL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-gym",
@@ -133,8 +142,8 @@
       "ivRecommendationZhTw": "道館防守不設固定IV門檻；同物種比較時，優先已高等級、高CP及較高防禦／HP的候選。",
       "shortIvLabelZhTw": "道館：無固定門檻",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-master",
@@ -165,8 +174,8 @@
       "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-attack",
@@ -197,8 +206,8 @@
       "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
       "shortIvLabelZhTw": "Max攻擊：15攻優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-flex",
@@ -229,8 +238,8 @@
       "ivRecommendationZhTw": "Max Battle 角色尚未細分時，應分別確認攻擊、坦克或支援用途，不套用單一總IV門檻。",
       "shortIvLabelZhTw": "Max：依角色分開",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-support",
@@ -261,8 +270,8 @@
       "ivRecommendationZhTw": "Max Battle 支援角色需依物種、耐久與Max招式建立專屬門檻，不套用統一15攻／96%條件。",
       "shortIvLabelZhTw": "Max支援：依角色門檻",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-max-tank",
@@ -293,8 +302,8 @@
       "ivRecommendationZhTw": "已確認為 Max Battle 坦克角色時，優先比較防禦IV、HP IV與整體耐久，不使用攻擊手的總IV門檻。",
       "shortIvLabelZhTw": "Max坦克：防禦／HP優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     },
     {
       "id": "iv-global-mega",
@@ -325,8 +334,8 @@
       "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
       "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-pve",
@@ -357,8 +366,8 @@
       "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
       "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-shadow-pve",
@@ -389,8 +398,8 @@
       "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
       "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-28T15:46:42.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:17:08.000Z"
     },
     {
       "id": "iv-global-ultra",
@@ -421,14 +430,14 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "UL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-07-17T16:45:17.000Z",
-      "updatedAt": "2026-07-17T16:45:17.000Z"
+      "createdAt": "2026-08-08T19:10:13.000Z",
+      "updatedAt": "2026-08-08T19:10:13.000Z"
     }
   ],
   "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
-  "evaluationId": "evaluation-011-kanto-dynamax-2026.08.06-v7",
+  "evaluationId": "evaluation-011-kanto-dynamax-20260715",
   "rulesVersion": "2026.08.06-v7",
-  "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+  "reviewNotesZhTw": "第一批研究整合結果；資料維護狀態與使用者建議分開。",
   "inheritance": {
     "inheritsFromVariantId": null,
     "inheritanceMode": "NONE",
@@ -599,47 +608,10 @@
     }
   ],
   "raw": [],
-  "sources": [
-    {
-      "id": "OFF-ROCKET-INVASION",
-      "name": "Pokémon GO",
-      "title": "Team GO Rocket invades Pokémon GO!",
-      "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
-      "type": "OFFICIAL",
-      "accessedAt": "2026-07-14T16:00:00.000Z",
-      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-    },
-    {
-      "id": "pvpoke-gl-20260715",
-      "name": "PvPoke",
-      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
-      "type": "PVP",
-      "accessedAt": "2026-07-14T16:00:00.000Z",
-      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-    },
-    {
-      "id": "pvpoke-ml-20260715",
-      "name": "PvPoke",
-      "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
-      "type": "PVP",
-      "accessedAt": "2026-07-14T16:00:00.000Z",
-      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-    },
-    {
-      "id": "pvpoke-ul-20260715",
-      "name": "PvPoke",
-      "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
-      "type": "PVP",
-      "accessedAt": "2026-07-14T16:00:00.000Z",
-      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
-    }
-  ],
+  "sources": [],
   "traces": [
     {
-      "ruleKey": "LOW_GENERAL_VALUE",
+      "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
       "priority": 100,
       "matched": true,
       "resultDecision": "TRANSFER_CANDIDATE",

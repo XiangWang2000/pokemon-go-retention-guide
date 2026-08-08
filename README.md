@@ -123,19 +123,22 @@ npm run data:import:061-090
 npm run data:import:091-120
 npm run data:import:121-151
 npm run data:import:152-181
-npm run data:recompute:001-181
+npm run data:import:182-211
+npm run data:import:212-241
+npm run data:import:242-251
+npm run data:recompute:001-251
 npm run data:validate
 npm run review:generate
-npm run review:remediation
 npm run sites:snapshot
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full
 npm run dev
 ```
 
 `db:seed` 在偵測到既有資料時會停止寫入，不會清空來源、歷史評估或變更紀錄。要重跑本批修正使用 `npm run data:remediate`；腳本使用 upsert／append-only 評估版本，可安全重跑。
 
-## #001～#181 共用重算規則（2026-08-06）
+## #001～#251 共用重算規則
 
-關都 #001～#181 的批次初步匯入不等於最終驗收。六批資料完成後，必須執行 `npm run data:recompute:001-181`，再產生 Sites snapshot。
+#001～#251 的批次初步匯入不等於最終驗收。完成目前批次後，必須執行 `npm run data:recompute:001-251`，再產生 review 與 Sites snapshot，最後執行完整驗證。
 
 - PvE 固定分為四級：`CORE_INVESTMENT`（核心投資）、`USABLE_OR_BUDGET`（可用／預算型）、`SPECIAL_USE`（特殊用途）、`NO_SIGNIFICANT_USE`（無顯著用途）。判斷會分開標示團體戰、火箭隊、道館防守、Mega／Primal、Max Battle、暗影與後續世代進化，而不是只看關都本體。
 - 每個 `BattleVariant` 另存五種資料處置：已有明確用途、用途有限、無顯著用途、不適用／尚未推出、真正待補資料。單一型態或次要欄位缺來源不再外推到整個家族。
@@ -145,9 +148,9 @@ npm run dev
 ## 已完成範圍
 
 - Next.js 16 App Router、TypeScript、Tailwind CSS、SQLite、Prisma 7。
-- #001～#060，共 60 個物種、74 個關都／阿羅拉／伽勒爾／洗翠型態。
-- 310 個普通、暗影、淨化、Mega、Dynamax、Gigantamax 獨立戰鬥版本。
-- 193 筆結構化原始評估資料、112 筆來源記錄。
+- #001～#251，共 277 個物種、315 個關都／城都及跨世代地區型態。
+- 1190 個普通、暗影、淨化、Mega、Dynamax、Gigantamax 獨立戰鬥版本。
+- 825 筆結構化原始評估資料、167 筆來源記錄。
 - PvPoke GL／UL／ML 原始排名 JSON 本機快照與 commit 版本。
 - Pokémon GO 官方推出狀態、Mega／Max／暗影／進化／活動招式研究記錄。
 - GO Hub Database 的 PvE、Mega、Max Battle、道館資料與來源衝突記錄。
@@ -170,13 +173,11 @@ npm run dev
 ```powershell
 npm install
 npm run db:generate
-npm run db:deploy
-npm run db:seed
-npm run data:remediate
-npm run data:import:031-060
-npm run sites:snapshot
+npm run sites:snapshot:check
 npm run dev
 ```
+
+此啟動流程直接使用版控中的受控 snapshot，不會建立或改寫研究資料庫。需要建立或更新 `dev.db` 時，請依「建立或更新資料庫」與 `docs/data-update.md` 的完整流程執行。
 
 `npm run dev` 啟動 Sites／Vinext 開發預覽；使用終端機顯示的網址。完成 `npm run build` 後，可用 `npm run start` 透過 Wrangler 啟動與 Sites 部署環境一致的 production 預覽。若需驗證原本的 Next.js Node server，使用 `npm run dev:local`，預設開啟 [http://localhost:3000](http://localhost:3000)。
 
@@ -195,17 +196,11 @@ npm rebuild better-sqlite3
 ## 驗證指令
 
 ```powershell
-npm run lint
-npm run typecheck
-npm test
-npm run test:integration
-npm run data:validate
-npm run review:generate
-npm run sites:check
-npm run sites:snapshot:check
-npm run build
-npm run build:local
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full
 ```
+
+兩個驗證入口都不會產生 review 或 snapshot；資料更新須先依 `docs/data-update.md` 明確執行產生步驟。
 
 測試包含：
 
@@ -239,7 +234,7 @@ npm run build:local
 
 ### Excel 匯出
 
-首頁「匯出 Excel」下載 `/exports/pokemon-go-retention-001-181.xlsx`；檔案由 `npm run sites:snapshot` 從本機可信資料庫預先產生，舊 `/api/export` 會以 307 轉址到同一檔案。內容包含：
+首頁「匯出 Excel」依 `site-data/manifest.json` 的 `excel.path` 下載目前批次檔案；檔案由 `npm run sites:snapshot` 從本機可信資料庫預先產生，舊 `/api/export` 會以 307 轉址到同一檔案。內容包含：
 
 1. 寶可夢型態
 2. 評估總覽
@@ -282,10 +277,10 @@ PvPoke 本機快照版本為 commit `86847e535b7e0a0f4e91f9628b3fc713ae6adca7`�
 4. 下載 PvPoke 當期 GL／UL／ML 原始 JSON，記錄 commit 或版本。
 5. 由 Pokebattler／GO Hub 原始頁研究 PvE、Mega、Max Battle、道館。
 6. 將研究 JSON 放入 `research_notes`，或使用匯入工具更新資料表。
-7. 執行 `npm run data:validate`。
-8. 重新執行 seed／規則引擎與 `npm run review:generate`。
+7. 執行目前 scope 的共用重算（`npm run data:recompute:001-251`）。
+8. 執行 `npm run data:validate` 與 `npm run review:generate`。
 9. 執行 `npm run sites:snapshot`，檢查 `site-data/`、manifest 與預建 Excel 差異。
-10. 執行 lint、typecheck、tests、`npm run sites:snapshot:check` 與 production build。
+10. 執行 `powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full`。
 11. 人工審核後才開始下一批。
 
 資料新鮮期限集中於 `src/config/freshness.ts`：PvP 90 天、PvE／招式 180 天、型態推出／官方機制／道館 365 天、Max Battle 180 天。
@@ -331,7 +326,7 @@ npm run data:import -- data\import\forms.csv --entity PokemonForm
 
 - 規則設定：`src/rules/rules.ts`
 - 規則執行：`src/rules/engine.ts`
-- 版本：`2026.07.16-v3`
+- 版本：`2026.08.06-v7`
 
 優先序先判斷是否真的無法形成實用結論，再判斷主要戰鬥價值、重要進化、條件式用途及已確認低價值。類別缺資料只會在沒有其他可靠定性、人工整理或繼承依據時阻止正式決策；React 元件及 API route 不包含保留判斷條件。
 
@@ -343,12 +338,14 @@ Pokemon/
 ├─ build/sites-vite-plugin.ts # 封裝 Sites metadata
 ├─ worker/index.ts            # Cloudflare Worker 入口
 ├─ site-data/                 # 受版本控制的唯讀網站 snapshot 與 manifest
+├─ public/data/               # Sites runtime 的分片 JSON
 ├─ public/exports/            # 預建 Excel 靜態資產
+├─ public/_headers            # Sites 靜態資料的快取與版本 header
 ├─ prisma/
 │  ├─ schema.prisma
 │  ├─ migrations/20260714162646_init/migration.sql
 │  └─ seed.ts
-├─ data/sources/pvpoke/        # 可稽核 PvPoke 原始快照
+├─ data/sources/               # 可稽核的來源快照
 ├─ research_notes/             # 官方與第三方研究結果
 ├─ review/                     # 批次人工／機器審核報告
 ├─ scripts/

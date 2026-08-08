@@ -19,7 +19,7 @@
         "formNameZhTw": "城都",
         "regionKey": "JOHTO",
         "evolvesFromFormId": null,
-        "evolutionFamilyNotesZhTw": "? 2 ?????????????????? Max ???????????????? stub ???",
+        "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
         "evolutionPaths": [],
         "types": [
           "BUG",
@@ -45,7 +45,7 @@
               "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": null,
-              "evolutionFamilyNotesZhTw": "? 2 ?????????????????? Max ???????????????? stub ???",
+              "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [],
               "types": [
                 "BUG",
@@ -70,7 +70,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -252,8 +252,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
@@ -282,7 +282,7 @@
               "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": null,
-              "evolutionFamilyNotesZhTw": "? 2 ?????????????????? Max ???????????????? stub ???",
+              "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [],
               "types": [
                 "BUG",
@@ -307,7 +307,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -480,7 +480,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -510,7 +510,7 @@
               "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": null,
-              "evolutionFamilyNotesZhTw": "? 2 ?????????????????? Max ???????????????? stub ???",
+              "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [],
               "types": [
                 "BUG",
@@ -535,7 +535,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -698,7 +698,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -728,7 +728,7 @@
               "formNameZhTw": "城都",
               "regionKey": "JOHTO",
               "evolvesFromFormId": null,
-              "evolutionFamilyNotesZhTw": "? 2 ?????????????????? Max ???????????????? stub ???",
+              "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [],
               "types": [
                 "BUG",
@@ -753,7 +753,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-07T16:00:00.000Z",
+              "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -926,8 +926,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
@@ -972,8 +972,8 @@
           "label": "極巨：—",
           "tone": "NONE"
         },
-        "decision": "CONDITIONAL_KEEP",
-        "decisionReason": "依各戰鬥版本的數字IV門檻留少量個體。",
+        "decision": "TRANSFER_CANDIDATE",
+        "decisionReason": "一般重複個體通常可傳送。",
         "ivRecommendations": [],
         "ivShortLabels": [],
         "ivDirection": "目前沒有會改變保留結論的通用IV門檻。",
@@ -983,7 +983,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-07T16:00:00.000Z",
+        "updatedAt": "2026-08-08T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1040,7 +1040,7 @@
   "notices": [],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-07T16:00:00.000Z",
+  "updatedAt": "2026-08-08T16:00:00.000Z",
   "minDexNumber": 213,
   "maxDexNumber": 213,
   "detailsLoaded": true

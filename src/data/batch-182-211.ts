@@ -954,31 +954,31 @@ export const evolutionPairs182211: readonly [string,string][] = [
   ],
   [
     "190-johto",
-    "424-kanto"
+    "424-other"
   ],
   [
     "193-johto",
-    "469-kanto"
+    "469-other"
   ],
   [
     "198-johto",
-    "430-kanto"
+    "430-other"
   ],
   [
     "200-johto",
-    "429-kanto"
+    "429-other"
   ],
   [
     "203-johto",
-    "981-kanto"
+    "981-paldea"
   ],
   [
     "206-johto",
-    "982-kanto"
+    "982-paldea"
   ],
   [
     "207-johto",
-    "472-kanto"
+    "472-other"
   ]
 ];
 export const releasedShadowForms182211 = new Set<string>(["182-johto","185-johto","186-johto","187-johto","188-johto","189-johto","190-johto","194-johto","195-johto","198-johto","199-johto","200-johto","202-johto","203-johto","204-johto","205-johto","207-johto","208-johto","209-johto","210-johto","211-johto"]);

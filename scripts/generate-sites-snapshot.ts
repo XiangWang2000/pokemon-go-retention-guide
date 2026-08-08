@@ -289,7 +289,10 @@ async function main() {
 
   await mkdir(siteDataDirectory, { recursive: true });
   await mkdir(exportDirectory, { recursive: true });
-  if (legacyExportFileName !== exportFileName && (await exists(path.join(exportDirectory, legacyExportFileName)))) {
+  if (
+    legacyExportFileName !== exportFileName &&
+    (await exists(path.join(exportDirectory, legacyExportFileName)))
+  ) {
     await unlink(path.join(exportDirectory, legacyExportFileName));
   }
   await mkdir(publicDataDirectory, { recursive: true });
@@ -380,6 +383,11 @@ async function main() {
       path: "public/data/home.json",
       bytes: publicHome.byteLength,
       sha256: sha256(publicHome),
+    },
+    publicHeaders: {
+      path: "public/_headers",
+      bytes: publicHeaders.byteLength,
+      sha256: sha256(publicHeaders),
     },
     runtimeFamilyData: {
       directory: "public/data/families",

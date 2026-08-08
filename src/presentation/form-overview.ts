@@ -744,7 +744,10 @@ export function buildFormOverviews(rows: DashboardRow[]) {
     return false;
   };
   return forms.map((form) => {
-    if (!hasStubDescendant(form.formId)) return form;
+    const hasAssessedEvolutionTarget = form.evolutionPaths.some(
+      (path) => Boolean(path.targetUseLevel) && path.targetUseLevel !== "NO_SIGNIFICANT_USE",
+    );
+    if (!hasStubDescendant(form.formId) && !hasAssessedEvolutionTarget) return form;
     const variants = form.variants.map((variant) => {
       if (!matchedRule(variant.row, "VALUABLE_EVOLUTION")) return variant;
       return {

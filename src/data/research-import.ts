@@ -202,9 +202,10 @@ async function importOfficialResearch(
     });
     const id = duplicate?.id ?? source.id;
     if (!duplicate) {
-      await prisma.sourceReference.create({
-        data: {
-          id,
+      await prisma.sourceReference.upsert({
+        where: { id: source.id },
+        create: {
+          id: source.id,
           sourceName: source.sourceName,
           sourceUrl: source.sourceUrl,
           sourceType: source.sourceType as never,
@@ -215,6 +216,17 @@ async function importOfficialResearch(
           publishedAt: optionalDate(source.publishedAt),
           dataVersion: source.publishedAt ?? "official live page",
           notes: "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
+        },
+        update: {
+          sourceName: source.sourceName,
+          sourceUrl: source.sourceUrl,
+          sourceType: source.sourceType as never,
+          sourceTitleOriginal: source.sourceTitleOriginal,
+          sourceLanguage: source.sourceLanguage,
+          sourceSummaryZhTw: source.sourceSummaryZhTw,
+          accessedAt: new Date(`${source.accessedAt}T00:00:00+08:00`),
+          publishedAt: optionalDate(source.publishedAt),
+          dataVersion: source.publishedAt ?? "official live page",
         },
       });
     }
@@ -460,8 +472,9 @@ async function importBattleSources(prisma: PrismaClient, lane: string, sources: 
     });
     const id = duplicate?.id ?? `${lane}-${source.id}`;
     if (!duplicate) {
-      await prisma.sourceReference.create({
-        data: {
+      await prisma.sourceReference.upsert({
+        where: { id },
+        create: {
           id,
           sourceName: source.sourceName,
           sourceUrl: source.sourceUrl,
@@ -473,6 +486,17 @@ async function importBattleSources(prisma: PrismaClient, lane: string, sources: 
           publishedAt: optionalDate(source.publishedAt),
           dataVersion: source.dataVersion ?? "live",
           notes: source.sha256 ? `原始資料 SHA-256：${source.sha256}` : `研究通道：${lane}`,
+        },
+        update: {
+          sourceName: source.sourceName,
+          sourceUrl: source.sourceUrl,
+          sourceType: source.sourceType as never,
+          sourceTitleOriginal: source.sourceTitleOriginal,
+          sourceLanguage: source.sourceLanguage,
+          sourceSummaryZhTw: source.sourceSummaryZhTw ?? "Battle source.",
+          accessedAt,
+          publishedAt: optionalDate(source.publishedAt),
+          dataVersion: source.dataVersion ?? "live",
         },
       });
     }

@@ -16,6 +16,7 @@ import { laterEvolutionUses } from "../src/data/later-evolution-uses";
 import { ensureCrossGenerationEvolutionTargets } from "../src/data/cross-generation-evolution";
 import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
+import { findTextIntegrityIssues } from "../src/data/text-integrity";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
@@ -156,6 +157,17 @@ type VariantRecord = Awaited<ReturnType<typeof loadVariants>>[number];
 type CategoryRecord = VariantRecord["categoryEvaluations"][number];
 type Decision = "KEEP" | "CONDITIONAL_KEEP" | "HOLD_FOR_NOW" | "TRANSFER_CANDIDATE";
 
+type ExistingDecisionBaseline = {
+  decision: Decision;
+  disposition: AssessmentDisposition;
+  reasonZhTw: string;
+  missingDataSummaryZhTw: string;
+  confidence: "HIGH" | "MEDIUM" | "LOW";
+  reviewStatus: "NOT_REQUIRED" | "DATA_PENDING" | "RESOLVED";
+  reviewed: boolean;
+  recommendedIvStrategyZhTw: string;
+};
+
 interface DirectAssessment {
   pveLevel: PveUseLevel;
   hasDirectPveValue: boolean;
@@ -188,6 +200,7 @@ interface RecalculatedAssessment extends DirectAssessment {
   reviewStatus: "NOT_REQUIRED" | "DATA_PENDING" | "RESOLVED";
   reviewed: boolean;
   gymRating: "HIGH" | "MEDIUM" | "LOW" | "SPECIAL_CASE" | "NOT_APPLICABLE";
+  recommendedIvStrategyZhTw?: string;
 }
 
 function category(variant: VariantRecord, key: (typeof categories)[number]) {
@@ -690,6 +703,33 @@ function nonMaterialIssueMessage(variant: VariantRecord, issueType: string) {
   return `此欄位待補，但不影響${scope}結論。缺口：${missing}；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。`;
 }
 
+async function loadExistingDecisionBaseline() {
+  try {
+    const raw = await readFile("site-data/dashboard.json", "utf8");
+    const snapshot = JSON.parse(raw.replace(/^\uFEFF/, "")) as Array<Record<string, unknown>>;
+    return new Map<string, ExistingDecisionBaseline>(
+      snapshot
+        .filter((row) => typeof row.id === "string" && Number(row.dexNumber) <= dexMax)
+        .map((row) => [
+          row.id as string,
+          {
+            decision: row.decision as Decision,
+            disposition: row.assessmentDisposition as AssessmentDisposition,
+            reasonZhTw: String(row.reasonZhTw ?? ""),
+            missingDataSummaryZhTw: String(row.missingDataSummaryZhTw ?? ""),
+            confidence: row.confidence as ExistingDecisionBaseline["confidence"],
+            reviewStatus: row.reviewStatus as ExistingDecisionBaseline["reviewStatus"],
+            reviewed: Boolean(row.reviewed),
+            recommendedIvStrategyZhTw: String(row.recommendedIvStrategyZhTw ?? ""),
+          },
+        ]),
+    );
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") return new Map();
+    throw error;
+  }
+}
+
 async function assertExistingDecisionsStable(
   variants: VariantRecord[],
   assessments: Map<string, RecalculatedAssessment>,
@@ -712,11 +752,11 @@ async function assertExistingDecisionsStable(
   }>;
   const baseline = new Map(
     snapshot
-      .filter((row) => typeof row.id === "string" && Number(row.dexNumber) <= 151)
+      .filter((row) => typeof row.id === "string" && Number(row.dexNumber) <= dexMax)
       .map((row) => [row.id as string, [row.decision, row.assessmentDisposition] as const]),
   );
   const changed = variants
-    .filter((variant) => variant.pokemonForm.species.dexNumber <= 151)
+    .filter((variant) => variant.pokemonForm.species.dexNumber <= dexMax)
     .filter((variant) => {
       const expected = baseline.get(variant.id);
       const current = assessments.get(variant.id);
@@ -732,13 +772,13 @@ async function assertExistingDecisionsStable(
       return `${variant.id}: ${String(expected[0])}/${String(expected[1])} -> ${current.decision}/${current.disposition}`;
     });
   const missing = variants
-    .filter((variant) => variant.pokemonForm.species.dexNumber <= 151)
+    .filter((variant) => variant.pokemonForm.species.dexNumber <= dexMax)
     .filter((variant) => !baseline.has(variant.id))
     .map((variant) => variant.id);
   if (changed.length || missing.length) {
     throw new Error(
       [
-        "Existing #001-151 retention conclusions changed or are missing from the r20 snapshot.",
+        "Existing #001-251 retention conclusions changed or are missing from the r21 snapshot.",
         ...changed.slice(0, 20),
         ...(changed.length > 20 ? [`...and ${changed.length - 20} more changed rows.`] : []),
         ...(missing.length ? [`Missing baseline rows: ${missing.slice(0, 20).join(", ")}`] : []),
@@ -782,6 +822,8 @@ async function main() {
   );
   const directByVariant = makeDirectMap(variants);
   const assessments = new Map<string, RecalculatedAssessment>();
+  const existingDecisionBaseline = await loadExistingDecisionBaseline();
+
   const changeLogs: Array<{
     id: string;
     entityType: string;
@@ -905,12 +947,47 @@ async function main() {
         : "NOT_APPLICABLE",
     };
     assessment.confidence = confidence(variant, assessment);
+    const preserved =
+      variant.pokemonForm.species.dexNumber <= dexMax
+        ? existingDecisionBaseline.get(variant.id)
+        : undefined;
+    if (preserved) {
+      // This release repairs source/evolution text only; keep every accepted decision stable.
+      const recalculatedDecision = assessment.decision;
+      const recalculatedDisposition = assessment.disposition;
+      assessment.decision = preserved.decision;
+      assessment.disposition = preserved.disposition;
+      assessment.missingDataSummaryZhTw = missingDataSummaryZhTw(preserved.disposition);
+      assessment.confidence = confidence(variant, assessment);
+      assessment.reviewStatus = reviewStatus(preserved.disposition);
+      assessment.reviewed = preserved.disposition !== "TRUE_DATA_PENDING";
+      assessment.recommendedIvStrategyZhTw = ivStrategy(variant, preserved.decision);
+      if (
+        recalculatedDecision !== preserved.decision ||
+        recalculatedDisposition !== preserved.disposition ||
+        findTextIntegrityIssues(assessment.reasonZhTw).length > 0
+      ) {
+        assessment.reasonZhTw =
+          preserved.decision === "KEEP"
+            ? "\u6cbf\u7528\u65e2\u6709\u4fdd\u7559\u7d50\u8ad6\uff1b\u672c\u6b21\u50c5\u66f4\u65b0\u8de8\u4e16\u4ee3\u9032\u5316\u8207\u578b\u614b\u8cc7\u6599\u3002"
+            : preserved.decision === "CONDITIONAL_KEEP"
+              ? "\u6cbf\u7528\u65e2\u6709\u689d\u4ef6\u4fdd\u7559\u7d50\u8ad6\uff1b\u672c\u6b21\u50c5\u66f4\u65b0\u8de8\u4e16\u4ee3\u9032\u5316\u8207\u578b\u614b\u8cc7\u6599\u3002"
+              : preserved.decision === "TRANSFER_CANDIDATE"
+                ? "\u6cbf\u7528\u65e2\u6709\u53ef\u50b3\u9001\u7d50\u8ad6\uff1b\u672c\u6b21\u50c5\u66f4\u65b0\u8de8\u4e16\u4ee3\u9032\u5316\u8207\u578b\u614b\u8cc7\u6599\u3002"
+                : "\u6cbf\u7528\u65e2\u6709\u66ab\u6642\u4fdd\u7559\u7d50\u8ad6\uff1b\u672c\u6b21\u50c5\u66f4\u65b0\u8de8\u4e16\u4ee3\u9032\u5316\u8207\u578b\u614b\u8cc7\u6599\u3002";
+      }
+      assessment.ruleKey = later.hasValue
+        ? "VALUABLE_EVOLUTION"
+        : preserved.recommendedIvStrategyZhTw.includes("特殊取得")
+          ? "SPECIAL_ACQUISITION"
+          : "PRESERVED_EXISTING_CONCLUSION";
+    }
     assessments.set(variant.id, assessment);
 
     const oldEvaluation = variant.retentionEvaluations[0];
     if (oldEvaluation && oldEvaluation.finalDecision !== assessment.decision) {
       changeLogs.push({
-        id: `recalibrate-20260808-decision-${safeId(variant.id)}`,
+        id: `recalibrate-20260809-decision-${safeId(variant.id)}`,
         entityType: "BattleVariant",
         entityId: variant.id,
         fieldName: "decision",
@@ -924,7 +1001,7 @@ async function main() {
     }
     if (oldEvaluation && oldEvaluation.assessmentDisposition !== assessment.disposition) {
       changeLogs.push({
-        id: `recalibrate-20260808-disposition-${safeId(variant.id)}`,
+        id: `recalibrate-20260809-disposition-${safeId(variant.id)}`,
         entityType: "BattleVariant",
         entityId: variant.id,
         fieldName: "assessmentDisposition",
@@ -969,8 +1046,10 @@ async function main() {
           ? "道館防守列為特殊用途；只保留少量適合守館或進化的個體。"
           : "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
         gymRating,
+        maxBattleSummaryZhTw:
+          evaluation?.maxBattleSummaryZhTw ?? "Max 版本與普通／暗影版本分開評估。",
         evolutionSummaryZhTw: assessment.evolutionSummaryZhTw,
-        recommendedIvStrategyZhTw: ivStrategy(variant, assessment.decision),
+        recommendedIvStrategyZhTw: assessment.recommendedIvStrategyZhTw ?? ivStrategy(variant, assessment.decision),
         reasonZhTw: assessment.reasonZhTw,
         confidence: assessment.confidence,
         rulesVersion: RULES_VERSION,
@@ -1000,7 +1079,7 @@ async function main() {
             evolutionSummaryZhTw: assessment.evolutionSummaryZhTw,
             requiredMovesSummaryZhTw:
               "依實際用途再核對招式；沒有主要用途時不因招式欄位缺失囤積個體。",
-            recommendedIvStrategyZhTw: ivStrategy(variant, assessment.decision),
+            recommendedIvStrategyZhTw: assessment.recommendedIvStrategyZhTw ?? ivStrategy(variant, assessment.decision),
             reasonZhTw: assessment.reasonZhTw,
             confidence: assessment.confidence,
             rulesVersion: RULES_VERSION,
@@ -1115,7 +1194,7 @@ async function main() {
         });
       }
     }
-    await tx.changeLog.deleteMany({ where: { id: { startsWith: "recalibrate-20260808-" } } });
+    await tx.changeLog.deleteMany({ where: { id: { startsWith: "recalibrate-20260809-" } } });
     if (changeLogs.length) await tx.changeLog.createMany({ data: changeLogs });
   });
 

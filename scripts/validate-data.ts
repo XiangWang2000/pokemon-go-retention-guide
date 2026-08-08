@@ -4,6 +4,7 @@ import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
 import { getDatabaseUrl } from "../src/lib/database";
 import { loadCrossGenerationEvolutionData } from "../src/data/cross-generation-evolution";
+import { findTextIntegrityIssues } from "../src/data/text-integrity";
 import { RULES_VERSION } from "../src/rules/rules";
 
 const prisma = new PrismaClient({
@@ -51,6 +52,15 @@ async function main() {
     ).values(),
   ];
   const evolutionData = await loadCrossGenerationEvolutionData();
+  const databaseTextIssues = findTextIntegrityIssues(
+    { species, forms, variants, raw, evaluations, sources, categoryEvaluations, issues, ivRecommendations },
+    "$database",
+  );
+  errors.push(
+    ...databaseTextIssues.map(
+      (issue) => `Corrupted database text at ${issue.path}: ${issue.value}`,
+    ),
+  );
   const formIds = new Set(forms.map((item) => item.id));
   const variantIds = new Set(variants.map((item) => item.id));
   const sourceIds = new Set(sources.map((item) => item.id));
@@ -99,6 +109,12 @@ async function main() {
     }
     if (form.evolvesFromFormId !== target.fromFormId) {
       errors.push(`${targetId} has an unexpected evolvesFromFormId.`);
+    }
+    if (!["KANTO", "JOHTO", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"].includes(target.regionKey)) {
+      errors.push(`${targetId} has an invalid region.`);
+    }
+    if (target.generation >= 4 && target.formKey === "KANTO") {
+      errors.push(`${targetId} incorrectly uses KANTO for a future-generation target.`);
     }
     if (form.isEvolutionStub && (variantCountByForm.get(targetId) ?? 0) !== 0) {
       errors.push(`${targetId} is marked as a stub but has battle variants.`);
@@ -247,7 +263,13 @@ async function main() {
     "research_notes/battle-242-251.json",
     "research_notes/cross-generation-evolution-targets.json",
   ]) {
-    JSON.parse((await readFile(file, "utf8")).replace(/^\uFEFF/, ""));
+    const parsed = JSON.parse((await readFile(file, "utf8")).replace(/^\uFEFF/, ""));
+    const textIssues = findTextIntegrityIssues(parsed, file);
+    errors.push(
+      ...textIssues.map(
+        (issue) => `Corrupted source text at ${issue.path}: ${issue.value}`,
+      ),
+    );
   }
   if (errors.length) throw new Error(`資料驗證失敗：\n- ${errors.join("\n- ")}`);
   console.log(

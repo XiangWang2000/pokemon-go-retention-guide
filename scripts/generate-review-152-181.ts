@@ -85,7 +85,7 @@ async function main() {
   const hasTogekissStub = Boolean(
     togepi?.members.some((member) =>
       member.form.evolutionPaths.some(
-        (path) => path.toFormId === "468-kanto" && path.isEvolutionStub,
+        (path) => path.toFormId === "468-other" && path.isEvolutionStub,
       ),
     ),
   );
