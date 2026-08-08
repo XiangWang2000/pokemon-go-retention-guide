@@ -70,10 +70,10 @@
       "familyKey": "KANTO_FAMILY_041",
       "nameEn": "Crobat",
       "nameZhTw": "叉字蝠",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "JOHTO",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "regionKey": "JOHTO",
       "types": [
         "POISON",
         "FLYING"
@@ -640,7 +640,7 @@
         "Togekiss",
         "波克基斯"
       ],
-      "fromFormId": "176-kanto",
+      "fromFormId": "176-johto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
       "evolutionTargetNotesZhTw": "External evolution target with provisional special use; full battle data is outside this validation batch."
     }
@@ -648,7 +648,7 @@
   "paths": [
     {
       "fromFormId": "042-kanto",
-      "toFormId": "169-kanto",
+      "toFormId": "169-johto",
       "evolutionMethodZhTw": "Buddy 後消耗糖果進化",
       "availabilityNotesZhTw": "正式後續進化；已補查目標 PvP 排名，目前評估為無顯著用途，不把範圍外目標再升級成待判斷。",
       "requiresEvent": false,
@@ -962,7 +962,7 @@
       ]
     },
     {
-      "fromFormId": "176-kanto",
+      "fromFormId": "176-johto",
       "toFormId": "468-kanto",
       "evolutionMethodZhTw": "Earn buddy hearts with Togetic, then spend Candy to evolve.",
       "availabilityNotesZhTw": "Formal cross-generation evolution; Togekiss remains an explicit stub until its full battle data is added.",

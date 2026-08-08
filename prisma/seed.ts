@@ -2,6 +2,7 @@ import "dotenv/config";
 import { readFile } from "node:fs/promises";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
+import { getDatabaseUrl } from "../src/lib/database";
 import {
   batchSpecies,
   evolutionPairs,
@@ -17,7 +18,7 @@ import { RULES_VERSION } from "../src/rules/rules";
 import { integrateResearchData } from "../src/data/research-import";
 
 const adapter = new PrismaBetterSqlite3({
-  url: process.env.DATABASE_URL ?? "file:./prisma/dev.db",
+  url: getDatabaseUrl(),
 });
 const prisma = new PrismaClient({ adapter });
 const checkedAt = new Date("2026-07-15T00:00:00+08:00");

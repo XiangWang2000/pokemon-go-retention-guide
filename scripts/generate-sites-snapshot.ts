@@ -17,13 +17,14 @@ import { auditDataFileName, familyDataFileName } from "../src/lib/site-data-path
 import { buildHomeSnapshot } from "../src/presentation/home-snapshot";
 import { buildHomeSummary } from "../src/presentation/home-summary";
 import type { HomeRuntimeSnapshot } from "../src/presentation/home-snapshot";
+import { resolveDatabaseLocation } from "../src/lib/database";
 
 const root = process.cwd();
 const siteDataDirectory = path.join(root, "site-data");
 const exportDirectory = path.join(root, "public", "exports");
 const publicDataDirectory = path.join(root, "public", "data");
 const publicHeadersPath = path.join(root, "public", "_headers");
-const databasePath = path.join(root, "dev.db");
+const databaseLocation = resolveDatabaseLocation();
 const exportFileName: string = `pokemon-go-retention-${CURRENT_DATA_SCOPE}.xlsx`;
 const legacyExportFileName: string = "pokemon-go-retention-001-151.xlsx";
 const workbookPath = path.join(exportDirectory, exportFileName);
@@ -239,8 +240,10 @@ async function tableCounts() {
 }
 
 async function main() {
-  const database = await readFile(databasePath);
-  if (database.byteLength === 0) throw new Error("根目錄 dev.db 是空檔，拒絕產生 Sites snapshot。");
+  const database = await readFile(databaseLocation.absolutePath);
+  if (database.byteLength === 0) {
+    throw new Error(`DATABASE_URL 指向的 SQLite 檔案是空檔：${databaseLocation.absolutePath}`);
+  }
 
   const [dashboard, review, sources, changes, counts] = await Promise.all([
     getDashboardRows(),
@@ -355,7 +358,7 @@ async function main() {
     dataVersion: DATA_VERSION,
     dataAsOf,
     sourceDatabase: {
-      path: "dev.db",
+      path: databaseLocation.manifestPath,
       bytes: database.byteLength,
       sha256: sha256(database),
     },

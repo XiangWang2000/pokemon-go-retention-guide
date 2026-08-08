@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
+import { getDatabaseUrl } from "../src/lib/database";
 import {
   conditionalKeepOverrides091120,
   eventEvolutionPairs091120,
@@ -18,7 +19,7 @@ import {
 import { RULES_VERSION } from "../src/rules/rules";
 
 const prisma = new PrismaClient({
-  adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
+  adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
 });
 
 const checkedAt = new Date("2026-08-03T16:30:00+08:00");

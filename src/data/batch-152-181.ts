@@ -12,7 +12,7 @@ export interface Form152181 {
   formKey: string;
   formNameEn: string;
   formNameZhTw: string;
-  regionKey: "KANTO";
+  regionKey: "JOHTO";
   types: string[];
   aliases: string[];
   evolvesFromFormId?: string;
@@ -79,18 +79,18 @@ const togepiNote =
 const ampharosNote =
   "電龍可進化為 Mega 電龍；Mega 與普通、暗影版本分開，且 Mega 電龍不可 Dynamax。";
 
-function kanto(
+function johto(
   dexNumber: number,
   options: { evolvesFromFormId?: string; note?: string } = {},
 ): Form152181 {
   const species = species152181.find((item) => item.dexNumber === dexNumber)!;
   return {
-    id: `${String(dexNumber).padStart(3, "0")}-kanto`,
+    id: `${String(dexNumber).padStart(3, "0")}-johto`,
     dexNumber,
-    formKey: "KANTO",
-    formNameEn: "Kanto",
-    formNameZhTw: "關都",
-    regionKey: "KANTO",
+    formKey: "JOHTO",
+    formNameEn: "Johto",
+    formNameZhTw: "城都",
+    regionKey: "JOHTO",
     types: species.types,
     aliases: [species.nameEn, species.nameZhTw],
     evolvesFromFormId: options.evolvesFromFormId,
@@ -99,97 +99,97 @@ function kanto(
 }
 
 export const forms152181: Form152181[] = [
-  kanto(152),
-  kanto(153, { evolvesFromFormId: "152-kanto" }),
-  kanto(154, { evolvesFromFormId: "153-kanto" }),
-  kanto(155),
-  kanto(156, { evolvesFromFormId: "155-kanto" }),
-  kanto(157, { evolvesFromFormId: "156-kanto" }),
-  kanto(158),
-  kanto(159, { evolvesFromFormId: "158-kanto" }),
-  kanto(160, { evolvesFromFormId: "159-kanto" }),
-  kanto(161),
-  kanto(162, { evolvesFromFormId: "161-kanto" }),
-  kanto(163),
-  kanto(164, { evolvesFromFormId: "163-kanto" }),
-  kanto(165),
-  kanto(166, { evolvesFromFormId: "165-kanto" }),
-  kanto(167),
-  kanto(168, { evolvesFromFormId: "167-kanto" }),
-  kanto(169, { evolvesFromFormId: "042-kanto", note: crobatNote }),
-  kanto(170),
-  kanto(171, { evolvesFromFormId: "170-kanto" }),
-  { ...kanto(172, { note: babyNote }), evolvesFromFormId: undefined },
-  { ...kanto(173, { note: babyNote }), evolvesFromFormId: undefined },
-  { ...kanto(174, { note: babyNote }), evolvesFromFormId: undefined },
-  kanto(175, { note: togepiNote }),
-  kanto(176, { evolvesFromFormId: "175-kanto", note: togepiNote }),
-  kanto(177),
-  kanto(178, { evolvesFromFormId: "177-kanto" }),
-  kanto(179),
-  kanto(180, { evolvesFromFormId: "179-kanto" }),
-  kanto(181, { evolvesFromFormId: "180-kanto", note: ampharosNote }),
+  johto(152),
+  johto(153, { evolvesFromFormId: "152-johto" }),
+  johto(154, { evolvesFromFormId: "153-johto" }),
+  johto(155),
+  johto(156, { evolvesFromFormId: "155-johto" }),
+  johto(157, { evolvesFromFormId: "156-johto" }),
+  johto(158),
+  johto(159, { evolvesFromFormId: "158-johto" }),
+  johto(160, { evolvesFromFormId: "159-johto" }),
+  johto(161),
+  johto(162, { evolvesFromFormId: "161-johto" }),
+  johto(163),
+  johto(164, { evolvesFromFormId: "163-johto" }),
+  johto(165),
+  johto(166, { evolvesFromFormId: "165-johto" }),
+  johto(167),
+  johto(168, { evolvesFromFormId: "167-johto" }),
+  johto(169, { evolvesFromFormId: "042-kanto", note: crobatNote }),
+  johto(170),
+  johto(171, { evolvesFromFormId: "170-johto" }),
+  { ...johto(172, { note: babyNote }), evolvesFromFormId: undefined },
+  { ...johto(173, { note: babyNote }), evolvesFromFormId: undefined },
+  { ...johto(174, { note: babyNote }), evolvesFromFormId: undefined },
+  johto(175, { note: togepiNote }),
+  johto(176, { evolvesFromFormId: "175-johto", note: togepiNote }),
+  johto(177),
+  johto(178, { evolvesFromFormId: "177-johto" }),
+  johto(179),
+  johto(180, { evolvesFromFormId: "179-johto" }),
+  johto(181, { evolvesFromFormId: "180-johto", note: ampharosNote }),
 ];
 
 export const evolutionPairs152181 = [
-  ["152-kanto", "153-kanto"],
-  ["153-kanto", "154-kanto"],
-  ["155-kanto", "156-kanto"],
-  ["156-kanto", "157-kanto"],
-  ["158-kanto", "159-kanto"],
-  ["159-kanto", "160-kanto"],
-  ["161-kanto", "162-kanto"],
-  ["163-kanto", "164-kanto"],
-  ["165-kanto", "166-kanto"],
-  ["167-kanto", "168-kanto"],
-  ["042-kanto", "169-kanto"],
-  ["170-kanto", "171-kanto"],
-  ["172-kanto", "025-kanto"],
-  ["173-kanto", "035-kanto"],
-  ["174-kanto", "039-kanto"],
-  ["175-kanto", "176-kanto"],
-  ["177-kanto", "178-kanto"],
-  ["179-kanto", "180-kanto"],
-  ["180-kanto", "181-kanto"],
+  ["152-johto", "153-johto"],
+  ["153-johto", "154-johto"],
+  ["155-johto", "156-johto"],
+  ["156-johto", "157-johto"],
+  ["158-johto", "159-johto"],
+  ["159-johto", "160-johto"],
+  ["161-johto", "162-johto"],
+  ["163-johto", "164-johto"],
+  ["165-johto", "166-johto"],
+  ["167-johto", "168-johto"],
+  ["042-kanto", "169-johto"],
+  ["170-johto", "171-johto"],
+  ["172-johto", "025-kanto"],
+  ["173-johto", "035-kanto"],
+  ["174-johto", "039-kanto"],
+  ["175-johto", "176-johto"],
+  ["177-johto", "178-johto"],
+  ["179-johto", "180-johto"],
+  ["180-johto", "181-johto"],
 ] as const;
 
 export const releasedShadowForms152181 = new Set([
-  "152-kanto",
-  "153-kanto",
-  "154-kanto",
-  "155-kanto",
-  "156-kanto",
-  "157-kanto",
-  "158-kanto",
-  "159-kanto",
-  "160-kanto",
-  "163-kanto",
-  "164-kanto",
-  "165-kanto",
-  "166-kanto",
-  "169-kanto",
-  "177-kanto",
-  "178-kanto",
-  "179-kanto",
-  "180-kanto",
-  "181-kanto",
+  "152-johto",
+  "153-johto",
+  "154-johto",
+  "155-johto",
+  "156-johto",
+  "157-johto",
+  "158-johto",
+  "159-johto",
+  "160-johto",
+  "163-johto",
+  "164-johto",
+  "165-johto",
+  "166-johto",
+  "169-johto",
+  "177-johto",
+  "178-johto",
+  "179-johto",
+  "180-johto",
+  "181-johto",
 ]);
 
-export const releasedMegaForms152181 = new Set(["181-kanto"]);
+export const releasedMegaForms152181 = new Set(["181-johto"]);
 export const releasedDynamaxForms152181 = new Set<string>();
 export const releasedGigantamaxForms152181 = new Set<string>();
 
 export const specialVariants152181: SpecialVariant152181[] = [
   {
-    id: "181-kanto-mega",
-    formId: "181-kanto",
+    id: "181-johto-mega",
+    formId: "181-johto",
     variantKey: "MEGA",
     released: true,
     nameZhTw: "Mega 電龍",
   },
 ];
 
-export const truncatedForms152181 = new Set(["176-kanto"]);
+export const truncatedForms152181 = new Set(["176-johto"]);
 
 export function pvpokeSpeciesId152181(form: Form152181, shadow: boolean) {
   const species = species152181.find((item) => item.dexNumber === form.dexNumber)!;

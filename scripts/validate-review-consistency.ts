@@ -155,7 +155,7 @@ async function main() {
     "123-kanto",
     "125-kanto",
     "126-kanto",
-    "181-kanto",
+    "181-johto",
   ];
   for (const formId of highRiskForms) {
     const family = families.find((candidate) =>

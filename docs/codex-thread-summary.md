@@ -43,6 +43,6 @@
 
 ## 2026-08-08 #152-#181 Gen2 first-batch integration
 
-- DATA_VERSION is 2026.08.08-r18; the controlled pipeline now imports #152-#181 and recomputes the full #001-#181 scope.
+- DATA_VERSION is 2026.08.08-r19; the controlled pipeline imports #152-#181 and recomputes the full #001-#181 scope.
 - Pichu, Cleffa, and Igglybuff are linked to the existing Kanto families; Crobat is an actual member, while Togekiss remains an explicit external evolution stub.
 - Runtime snapshot, review, Excel, schema validation, review consistency, and regression tests are generated for this checkpoint; #182+ is intentionally out of scope.

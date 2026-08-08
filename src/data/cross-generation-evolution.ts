@@ -32,7 +32,7 @@ export interface EvolutionTargetStubSeed {
   formKey: string;
   formNameEn: string;
   formNameZhTw: string;
-  regionKey: "KANTO" | "ALOLA" | "GALAR" | "HISUI" | "PALDEA" | "OTHER";
+  regionKey: "KANTO" | "JOHTO" | "ALOLA" | "GALAR" | "HISUI" | "PALDEA" | "OTHER";
   types: string[];
   aliases: string[];
   fromFormId: string;

@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
+import { getDatabaseUrl } from "../src/lib/database";
 import {
   evolutionPairs152181,
   forms152181,
@@ -19,7 +20,7 @@ import {
 import { RULES_VERSION } from "../src/rules/rules";
 
 const prisma = new PrismaClient({
-  adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
+  adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
 });
 
 const batchStart = 152;
@@ -219,7 +220,7 @@ function initialDecision(variantKey: VariantKey, released: boolean, ranks: RankR
   if (variantKey === "MEGA") return "KEEP" as const;
   const best = Math.min(...ranks.map((rank) => rank.rank), Number.POSITIVE_INFINITY);
   if (best <= 100) return "KEEP" as const;
-  if (best <= 250 || (variantKey === "NORMAL" && formId === "181-kanto")) {
+  if (best <= 250 || (variantKey === "NORMAL" && formId === "181-johto")) {
     return "CONDITIONAL_KEEP" as const;
   }
   return "TRANSFER_CANDIDATE" as const;
@@ -235,7 +236,7 @@ function initialDisposition(decision: Decision, released: boolean): Disposition 
 function pvpSourceRows(variants: VariantRecord[], rankMap: Map<string, RankResult[]>) {
   return variants.flatMap((variant) =>
     (rankMap.get(variant.id) ?? []).map((rank) => ({
-      id: `raw-r18-${variant.id}-${rank.league.toLowerCase()}`,
+      id: `raw-r19-${variant.id}-${rank.league.toLowerCase()}`,
       battleVariantId: variant.id,
       category: "PVP" as const,
       status: "VERIFIED" as const,
@@ -266,7 +267,7 @@ type VariantRecord = {
 };
 
 async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
-  await prisma.changeLog.deleteMany({ where: { id: { startsWith: "r18-batch-152-181" } } });
+  await prisma.changeLog.deleteMany({ where: { id: { startsWith: "r19-batch-152-181" } } });
   await prisma.pokemonSpecies.deleteMany({
     where: { dexNumber: { gte: batchStart, lte: batchEnd } },
   });
@@ -293,7 +294,9 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         regionKey: form.regionKey,
         types: JSON.stringify(form.types),
         searchAliases: JSON.stringify([...new Set([...form.aliases, species.nameEn, species.nameZhTw])]),
-        evolvesFromFormId: form.evolvesFromFormId ?? null,
+        // Insert the batch before wiring self-referencing evolution rows; SQLite
+        // enforces this foreign key immediately during createMany.
+        evolvesFromFormId: null,
         evolutionFamilyNotesZhTw: form.evolutionFamilyNotesZhTw,
         isReleasedInPokemonGo: true,
         releaseStatus: "RELEASED" as const,
@@ -304,18 +307,26 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       };
     }),
   });
+  for (const form of forms152181) {
+    if (form.evolvesFromFormId) {
+      await prisma.pokemonForm.update({
+        where: { id: form.id },
+        data: { evolvesFromFormId: form.evolvesFromFormId },
+      });
+    }
+  }
 
   await prisma.pokemonForm.update({
     where: { id: "042-kanto" },
     data: {
       evolutionFamilyNotesZhTw:
-        forms152181.find((form) => form.id === "169-kanto")!.evolutionFamilyNotesZhTw,
+        forms152181.find((form) => form.id === "169-johto")!.evolutionFamilyNotesZhTw,
     },
   });
 
   await prisma.evolutionPath.createMany({
     data: evolutionPairs152181.map(([fromFormId, toFormId]) => ({
-      id: `evolution-r18-${fromFormId}-${toFormId}`,
+      id: `evolution-r19-${fromFormId}-${toFormId}`,
       fromFormId,
       toFormId,
       evolutionMethodZhTw:
@@ -323,7 +334,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           ? "提升友好度後消耗糖果進化"
           : "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
       availabilityNotesZhTw:
-        toFormId === "169-kanto"
+        toFormId === "169-johto"
           ? "#169 叉字蝠為本批正式納入成員，接回 #041～#042 家族。"
           : "此進化路徑已在 #152～#181 整合資料中核對。",
       requiresEvent: false,
@@ -392,15 +403,15 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
   const rawRows = [
     ...pvpSourceRows(variants, rankMap),
     {
-    id: "raw-r18-181-kanto-mega-pve",
-    battleVariantId: "181-kanto-mega",
+    id: "raw-r19-181-johto-mega-pve",
+    battleVariantId: "181-johto-mega",
     category: "PVE",
     status: "PARTIALLY_VERIFIED",
     league: "NOT_APPLICABLE",
     cup: null,
     pvpCategory: null,
     speciesKey: "ampharos",
-    formKey: "181-kanto",
+    formKey: "181-johto",
     variantKey: "MEGA",
     rank: null,
     rating: "A",
@@ -457,7 +468,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       } else if (category === "PVE") {
         if (!variant.released || ["DYNAMAX", "GIGANTAMAX"].includes(variant.variantKey)) {
           status = variant.released ? "NOT_APPLICABLE" : "UNRELEASED";
-        } else if (variant.id === "181-kanto-mega") {
+        } else if (variant.id === "181-johto-mega") {
           status = "PARTIALLY_VERIFIED";
           provenance = "SOURCE_VERIFIED";
           materialToDecision = true;
@@ -566,13 +577,13 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
     const result = decisions.get(variant.id)!;
     const pvpUseful = result.ranks.some((rank) => rank.rank <= 250);
     return {
-      id: `r18-eval-${variant.id}`,
+      id: `r19-eval-${variant.id}`,
       battleVariantId: variant.id,
       finalDecision: result.decision,
       provenance: "MANUAL_CURATED" as const,
       pvpSummaryZhTw: rankSummary(result.ranks),
       pveSummaryZhTw:
-        variant.id === "181-kanto-mega"
+        variant.id === "181-johto-mega"
           ? "Mega 電龍有特殊 PvE 與 Mega boost 用途，非核心投資；先核對 Volt Switch／Zap Cannon、等級與投入。"
           : "未列為本批普通版本的核心 PvE 投資目標；不因 100% 自動升格為實戰必留。",
       rocketSummaryZhTw: "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -581,7 +592,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       megaSummaryZhTw:
         variant.variantKey === "MEGA"
           ? "Mega 電龍已推出且與其他版本分開；只留實際投入候選。"
-          : variant.form.id === "181-kanto" && variant.variantKey === "NORMAL"
+          : variant.form.id === "181-johto" && variant.variantKey === "NORMAL"
             ? "普通電龍可作 Mega 基底候選；不把 Mega 用途回推成全家族必留。"
             : "此版本沒有獨立 Mega 型態用途。",
       maxBattleSummaryZhTw:
@@ -630,8 +641,8 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
     data: variants.map((variant) => {
       const result = decisions.get(variant.id)!;
       return {
-        id: `r18-trace-${variant.id}`,
-        evaluationId: `r18-eval-${variant.id}`,
+        id: `r19-trace-${variant.id}`,
+        evaluationId: `r19-eval-${variant.id}`,
         ruleKey: result.decision === "KEEP" ? "MAJOR_BATTLE_VALUE" : result.decision === "CONDITIONAL_KEEP" ? "CONDITIONAL_USE" : "LOW_GENERAL_VALUE",
         ruleVersion: RULES_VERSION,
         priority: result.decision === "KEEP" ? 900 : result.decision === "CONDITIONAL_KEEP" ? 700 : 100,
@@ -645,22 +656,22 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
   const evaluationSources = new Map<string, { evaluationId: string; sourceId: string; usageZhTw: string }>();
   for (const variant of variants) {
     for (const rank of rankMap.get(variant.id) ?? []) {
-      evaluationSources.set(`r18-eval-${variant.id}|${rank.sourceId}`, {
-        evaluationId: `r18-eval-${variant.id}`,
+      evaluationSources.set(`r19-eval-${variant.id}|${rank.sourceId}`, {
+        evaluationId: `r19-eval-${variant.id}`,
         sourceId: rank.sourceId,
         usageZhTw: "Open League／Overall 名次與推薦招式。",
       });
     }
     for (const link of officialEvidenceLinks.filter((candidate) => candidate.variantId === variant.id)) {
-      evaluationSources.set(`r18-eval-${variant.id}|${link.sourceId}`, {
-        evaluationId: `r18-eval-${variant.id}`,
+      evaluationSources.set(`r19-eval-${variant.id}|${link.sourceId}`, {
+        evaluationId: `r19-eval-${variant.id}`,
         sourceId: link.sourceId,
         usageZhTw: "官方或研究來源確認此精確型態、進化或用途邊界。",
       });
     }
   }
-  evaluationSources.set("r18-eval-181-kanto-mega|PVE-MEGA-AMPHAROS-20260808", {
-    evaluationId: "r18-eval-181-kanto-mega",
+  evaluationSources.set("r19-eval-181-johto-mega|PVE-MEGA-AMPHAROS-20260808", {
+    evaluationId: "r19-eval-181-johto-mega",
     sourceId: "PVE-MEGA-AMPHAROS-20260808",
     usageZhTw: "GO Hub PvE tier、團體戰攻擊者排名與 Mega 分析。",
   });
@@ -669,7 +680,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
   await prisma.changeLog.createMany({
     data: [
       {
-        id: "r18-batch-152-181",
+        id: "r19-batch-152-181",
         entityType: "Batch",
         entityId: "152-181",
         fieldName: "status",
@@ -681,7 +692,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         rulesVersion: RULES_VERSION,
       },
       {
-        id: "r18-family-baby-pikachu",
+        id: "r19-family-baby-pikachu",
         entityType: "EvolutionFamily",
         entityId: "KANTO_FAMILY_025",
         fieldName: "members",
@@ -693,7 +704,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         rulesVersion: RULES_VERSION,
       },
       {
-        id: "r18-family-baby-clefairy",
+        id: "r19-family-baby-clefairy",
         entityType: "EvolutionFamily",
         entityId: "KANTO_FAMILY_035",
         fieldName: "members",
@@ -705,7 +716,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         rulesVersion: RULES_VERSION,
       },
       {
-        id: "r18-family-baby-jigglypuff",
+        id: "r19-family-baby-jigglypuff",
         entityType: "EvolutionFamily",
         entityId: "KANTO_FAMILY_039",
         fieldName: "members",
@@ -717,7 +728,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         rulesVersion: RULES_VERSION,
       },
       {
-        id: "r18-family-crobat",
+        id: "r19-family-crobat",
         entityType: "EvolutionFamily",
         entityId: "KANTO_FAMILY_041",
         fieldName: "members",

@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { DATA_VERSION } from "../src/config/release";
+import { resolveDatabaseLocation } from "../src/lib/database";
 import { auditDataFileName, familyDataFileName } from "../src/lib/site-data-paths";
 
 interface ManifestFile {
@@ -35,6 +36,7 @@ interface Manifest {
 
 const root = process.cwd();
 const siteDataDirectory = path.join(root, "site-data");
+const databaseLocation = resolveDatabaseLocation();
 
 function sha256(value: Uint8Array) {
   return createHash("sha256").update(value).digest("hex");
@@ -178,9 +180,12 @@ async function main() {
   assert(workbook[0] === 0x50 && workbook[1] === 0x4b, "Excel 檔案不是有效 ZIP/XLSX 開頭。");
   assert(manifest.excel.sheets === 10, "Excel 工作表數量宣告不正確。");
 
-  const databasePath = path.join(root, manifest.sourceDatabase.path);
-  if (await exists(databasePath)) {
-    const database = await readFile(databasePath);
+  assert(
+    manifest.sourceDatabase.path === databaseLocation.manifestPath,
+    `snapshot provenance 指向 ${manifest.sourceDatabase.path}，但目前 DATABASE_URL 實際解析為 ${databaseLocation.manifestPath}。`,
+  );
+  if (await exists(databaseLocation.absolutePath)) {
+    const database = await readFile(databaseLocation.absolutePath);
     assert(database.byteLength > 0, "本機 dev.db 是空檔。");
     assert(
       database.byteLength === manifest.sourceDatabase.bytes,

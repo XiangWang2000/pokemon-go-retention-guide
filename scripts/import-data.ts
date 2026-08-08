@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import { extname } from "node:path";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
+import { getDatabaseUrl } from "../src/lib/database";
 import { parseCsv } from "../src/data/csv";
 import {
   importEntityNames,
@@ -12,7 +13,7 @@ import {
   type ImportEntityName,
 } from "../src/data/import-schema";
 
-const adapter = new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" });
+const adapter = new PrismaBetterSqlite3({ url: getDatabaseUrl() });
 const prisma = new PrismaClient({ adapter });
 
 function argument(name: string) {

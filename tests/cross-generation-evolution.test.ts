@@ -18,7 +18,7 @@ function familyContaining(formId: string) {
 describe("cross-generation evolution targets", () => {
   it("keeps formal later-generation paths for high-risk families", () => {
     const expectedPaths = [
-      ["042-kanto", "169-kanto"],
+      ["042-kanto", "169-johto"],
       ["044-kanto", "182-kanto"],
       ["052-galar", "863-kanto"],
       ["082-kanto", "462-kanto"],
@@ -36,7 +36,7 @@ describe("cross-generation evolution targets", () => {
 
   it("records an assessed use level for material out-of-batch targets", () => {
     const expectedTargets = {
-      "042-kanto": ["169-kanto", "NO_SIGNIFICANT_USE"],
+      "042-kanto": ["169-johto", "NO_SIGNIFICANT_USE"],
       "044-kanto": ["182-kanto", "SPECIAL_USE"],
       "052-galar": ["863-kanto", "SPECIAL_USE"],
     } as const;

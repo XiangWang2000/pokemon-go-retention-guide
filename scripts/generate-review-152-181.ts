@@ -45,30 +45,30 @@ async function main() {
     ]),
   );
 
-  const pichu = familyWithMember(families, "172-kanto");
-  const cleffa = familyWithMember(families, "173-kanto");
-  const igglybuff = familyWithMember(families, "174-kanto");
-  const crobat = familyWithMember(families, "169-kanto");
-  const togepi = familyWithMember(families, "175-kanto");
+  const pichu = familyWithMember(families, "172-johto");
+  const cleffa = familyWithMember(families, "173-johto");
+  const igglybuff = familyWithMember(families, "174-johto");
+  const crobat = familyWithMember(families, "169-johto");
+  const togepi = familyWithMember(families, "175-johto");
 
   const familyMerges = {
     pichuToPikachu: {
       familyId: pichu?.familyId,
       familyKey: pichu?.familyKey,
       members: memberIds(pichu),
-      result: hasMembers(pichu, ["172-kanto", "025-kanto", "026-kanto"]) ? "PASS" : "FAIL",
+      result: hasMembers(pichu, ["172-johto", "025-kanto", "026-kanto"]) ? "PASS" : "FAIL",
     },
     cleffaToClefairy: {
       familyId: cleffa?.familyId,
       familyKey: cleffa?.familyKey,
       members: memberIds(cleffa),
-      result: hasMembers(cleffa, ["173-kanto", "035-kanto", "036-kanto"]) ? "PASS" : "FAIL",
+      result: hasMembers(cleffa, ["173-johto", "035-kanto", "036-kanto"]) ? "PASS" : "FAIL",
     },
     igglybuffToJigglypuff: {
       familyId: igglybuff?.familyId,
       familyKey: igglybuff?.familyKey,
       members: memberIds(igglybuff),
-      result: hasMembers(igglybuff, ["174-kanto", "039-kanto", "040-kanto"]) ? "PASS" : "FAIL",
+      result: hasMembers(igglybuff, ["174-johto", "039-kanto", "040-kanto"]) ? "PASS" : "FAIL",
     },
     crobatJohtoExtension: {
       familyId: crobat?.familyId,
@@ -76,7 +76,7 @@ async function main() {
       members: memberIds(crobat),
       isBatchTruncated: crobat?.isBatchTruncated,
       result:
-        hasMembers(crobat, ["041-kanto", "042-kanto", "169-kanto"]) && !crobat?.isBatchTruncated
+        hasMembers(crobat, ["041-kanto", "042-kanto", "169-johto"]) && !crobat?.isBatchTruncated
           ? "PASS"
           : "FAIL",
     },
@@ -101,10 +101,10 @@ async function main() {
 
   const versionBoundaries = {
     megaAmpharosReleased: rows.some(
-      (row) => row.id === "181-kanto-mega" && row.releaseStatus === "RELEASED",
+      (row) => row.id === "181-johto-mega" && row.releaseStatus === "RELEASED",
     ),
     shadowCrobatReleased: rows.some(
-      (row) => row.id === "169-kanto-shadow" && row.releaseStatus === "RELEASED",
+      (row) => row.id === "169-johto-shadow" && row.releaseStatus === "RELEASED",
     ),
     dynamaxRowsRemainUnreleased: rows
       .filter((row) => row.variantKey === "DYNAMAX")

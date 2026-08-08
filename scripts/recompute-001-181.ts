@@ -2,6 +2,7 @@ import "dotenv/config";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
+import { getDatabaseUrl } from "../src/lib/database";
 import {
   classifyAssessmentDisposition,
   classifyPveUse,
@@ -17,7 +18,7 @@ import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
 
 const prisma = new PrismaClient({
-  adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
+  adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
 });
 
 const checkedAt = new Date(`${DATA_VERSION_DATE_ISO}T00:00:00+08:00`);
@@ -49,7 +50,7 @@ const normalMegaCandidateForms = new Set([
   "142-kanto",
   "149-kanto",
   "150-kanto",
-  "181-kanto",
+  "181-johto",
 ]);
 
 const categories = [

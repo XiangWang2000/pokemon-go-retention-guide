@@ -47,6 +47,7 @@ export const generationFilterValues = [
 export const regionFilterValues = [
   "ALL",
   "KANTO",
+  "JOHTO",
   "ALOLA",
   "GALAR",
   "HISUI",

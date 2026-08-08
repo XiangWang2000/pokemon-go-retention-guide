@@ -1,7 +1,7 @@
 {
   "batch": "152-181",
   "updatedAt": "2026-08-08",
-  "dataVersion": "2026.08.08-r18",
+  "dataVersion": "2026.08.08-r19",
   "rulesVersion": "2026.08.06-v7",
   "status": "ACCEPTED",
   "counts": {
@@ -24,7 +24,7 @@
       "familyId": "KANTO_FAMILY_025:025-kanto",
       "familyKey": "KANTO_FAMILY_025",
       "members": [
-        "172-kanto",
+        "172-johto",
         "025-kanto",
         "026-kanto"
       ],
@@ -34,7 +34,7 @@
       "familyId": "KANTO_FAMILY_035:035-kanto",
       "familyKey": "KANTO_FAMILY_035",
       "members": [
-        "173-kanto",
+        "173-johto",
         "035-kanto",
         "036-kanto"
       ],
@@ -44,7 +44,7 @@
       "familyId": "KANTO_FAMILY_039:039-kanto",
       "familyKey": "KANTO_FAMILY_039",
       "members": [
-        "174-kanto",
+        "174-johto",
         "039-kanto",
         "040-kanto"
       ],
@@ -56,7 +56,7 @@
       "members": [
         "041-kanto",
         "042-kanto",
-        "169-kanto"
+        "169-johto"
       ],
       "isBatchTruncated": false,
       "result": "PASS"
@@ -64,10 +64,10 @@
   },
   "stubBoundaries": {
     "togekiss": {
-      "familyId": "JOHTO_FAMILY_175:175-kanto",
+      "familyId": "JOHTO_FAMILY_175:175-johto",
       "members": [
-        "175-kanto",
-        "176-kanto"
+        "175-johto",
+        "176-johto"
       ],
       "isBatchTruncated": true,
       "hasExternalTarget": true,
@@ -115,67 +115,67 @@
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_152:152-kanto",
+      "familyId": "JOHTO_FAMILY_152:152-johto",
       "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留大竺葵（PvP（UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_155:155-kanto",
+      "familyId": "JOHTO_FAMILY_155:155-johto",
       "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留火暴獸（PvP（UL Rank≤100）、ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_158:158-kanto",
+      "familyId": "JOHTO_FAMILY_158:158-johto",
       "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留大力鱷（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_161:161-kanto",
+      "familyId": "JOHTO_FAMILY_161:161-johto",
       "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留大尾立（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_163:163-kanto",
+      "familyId": "JOHTO_FAMILY_163:163-johto",
       "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留貓頭夜鷹（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_165:165-kanto",
+      "familyId": "JOHTO_FAMILY_165:165-johto",
       "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留安瓢蟲（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_167:167-kanto",
+      "familyId": "JOHTO_FAMILY_167:167-johto",
       "strategy": "MOSTLY_TRANSFER",
       "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_170:170-kanto",
+      "familyId": "JOHTO_FAMILY_170:170-johto",
       "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留電燈怪（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_175:175-kanto",
+      "familyId": "JOHTO_FAMILY_175:175-johto",
       "strategy": "KEEP_TARGETS",
       "conclusion": "保留可進化為波克基斯的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_177:177-kanto",
+      "familyId": "JOHTO_FAMILY_177:177-johto",
       "strategy": "MOSTLY_TRANSFER",
       "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
-      "familyId": "JOHTO_FAMILY_179:179-kanto",
+      "familyId": "JOHTO_FAMILY_179:179-johto",
       "strategy": "KEEP_TARGETS",
       "conclusion": "保留電龍（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."

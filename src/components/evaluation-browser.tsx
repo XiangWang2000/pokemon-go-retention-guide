@@ -29,6 +29,7 @@ export type ViewMode = "FAMILY" | "POKEDEX" | "AUDIT";
 
 const regionLabels: Record<string, string> = {
   KANTO: "關都",
+  JOHTO: "城都",
   ALOLA: "阿羅拉",
   GALAR: "伽勒爾",
   HISUI: "洗翠",

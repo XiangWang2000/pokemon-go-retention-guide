@@ -3,13 +3,14 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient, type RetentionDecision } from "../generated/prisma/client";
+import { getDatabaseUrl } from "../src/lib/database";
 import { pvpokeSpeciesId } from "../src/data/batch-001-030";
 import { evaluateRetention, type EvaluationFacts } from "../src/rules/engine";
 import { RULES_VERSION } from "../src/rules/rules";
 
 const checkedAt = new Date("2026-07-28T12:00:00+08:00");
 const prisma = new PrismaClient({
-  adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
+  adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
 });
 
 const categories = [

@@ -36,52 +36,55 @@ describe("#152-181 generated runtime and review data", () => {
     const rows = dashboardRows.filter((candidate) => candidate.dexNumber >= 152 && candidate.dexNumber <= 181);
     expect(new Set(rows.map((candidate) => candidate.speciesId)).size).toBe(30);
     expect(new Set(rows.map((candidate) => candidate.formId)).size).toBe(30);
+    expect(new Set(rows.map((candidate) => candidate.regionKey))).toEqual(new Set(["JOHTO"]));
+    expect(rows.every((candidate) => candidate.formNameEn === "Johto")).toBe(true);
+    expect(rows.every((candidate) => candidate.formNameZhTw === "城都")).toBe(true);
     expect(rows).toHaveLength(121);
     expect(rows.reduce((sum, candidate) => sum + candidate.categoryStatuses.length, 0)).toBe(847);
-    expect(review.dataVersion).toBe("2026.08.08-r18");
+    expect(review.dataVersion).toBe("2026.08.08-r19");
     expect(review.counts).toMatchObject({ species: 30, forms: 30, battleVariants: 121, trueDataPending: 0 });
     expect(review.crossBatchIntegration.result).toBe("PASS");
   });
 
   it("merges baby Pokemon into the existing Kanto families", () => {
-    expect(row("172-kanto-normal")?.familyKey).toBe("KANTO_FAMILY_025");
-    expect(row("173-kanto-normal")?.familyKey).toBe("KANTO_FAMILY_035");
-    expect(row("174-kanto-normal")?.familyKey).toBe("KANTO_FAMILY_039");
-    expect(row("172-kanto-normal")?.evolutionPaths).toEqual(
+    expect(row("172-johto-normal")?.familyKey).toBe("KANTO_FAMILY_025");
+    expect(row("173-johto-normal")?.familyKey).toBe("KANTO_FAMILY_035");
+    expect(row("174-johto-normal")?.familyKey).toBe("KANTO_FAMILY_039");
+    expect(row("172-johto-normal")?.evolutionPaths).toEqual(
       expect.arrayContaining([expect.objectContaining({ toFormId: "025-kanto" })]),
     );
-    expect(row("173-kanto-normal")?.evolutionPaths).toEqual(
+    expect(row("173-johto-normal")?.evolutionPaths).toEqual(
       expect.arrayContaining([expect.objectContaining({ toFormId: "035-kanto" })]),
     );
-    expect(row("174-kanto-normal")?.evolutionPaths).toEqual(
+    expect(row("174-johto-normal")?.evolutionPaths).toEqual(
       expect.arrayContaining([expect.objectContaining({ toFormId: "039-kanto" })]),
     );
-    expect(familyContaining("172-kanto")?.familyId).toBe("KANTO_FAMILY_025:025-kanto");
-    expect(new Set(familyContaining("172-kanto")?.members.map((member) => member.form.formId))).toEqual(
-      new Set(["172-kanto", "025-kanto", "026-kanto"]),
+    expect(familyContaining("172-johto")?.familyId).toBe("KANTO_FAMILY_025:025-kanto");
+    expect(new Set(familyContaining("172-johto")?.members.map((member) => member.form.formId))).toEqual(
+      new Set(["172-johto", "025-kanto", "026-kanto"]),
     );
-    expect(familyContaining("173-kanto")?.familyId).toBe("KANTO_FAMILY_035:035-kanto");
-    expect(new Set(familyContaining("173-kanto")?.members.map((member) => member.form.formId))).toEqual(
-      new Set(["173-kanto", "035-kanto", "036-kanto"]),
+    expect(familyContaining("173-johto")?.familyId).toBe("KANTO_FAMILY_035:035-kanto");
+    expect(new Set(familyContaining("173-johto")?.members.map((member) => member.form.formId))).toEqual(
+      new Set(["173-johto", "035-kanto", "036-kanto"]),
     );
-    expect(familyContaining("174-kanto")?.familyId).toBe("KANTO_FAMILY_039:039-kanto");
-    expect(new Set(familyContaining("174-kanto")?.members.map((member) => member.form.formId))).toEqual(
-      new Set(["174-kanto", "039-kanto", "040-kanto"]),
+    expect(familyContaining("174-johto")?.familyId).toBe("KANTO_FAMILY_039:039-kanto");
+    expect(new Set(familyContaining("174-johto")?.members.map((member) => member.form.formId))).toEqual(
+      new Set(["174-johto", "039-kanto", "040-kanto"]),
     );
   });
 
   it("keeps actual Johto extensions distinct from future evolution stubs", () => {
-    expect(row("169-kanto-normal")?.familyKey).toBe("KANTO_FAMILY_041");
-    expect(new Set(familyContaining("169-kanto")?.members.map((member) => member.form.formId))).toEqual(
-      new Set(["041-kanto", "042-kanto", "169-kanto"]),
+    expect(row("169-johto-normal")?.familyKey).toBe("KANTO_FAMILY_041");
+    expect(new Set(familyContaining("169-johto")?.members.map((member) => member.form.formId))).toEqual(
+      new Set(["041-kanto", "042-kanto", "169-johto"]),
     );
-    expect(familyContaining("169-kanto")?.isBatchTruncated).toBe(false);
-    expect(row("176-kanto-normal")?.evolutionPaths).toEqual(
+    expect(familyContaining("169-johto")?.isBatchTruncated).toBe(false);
+    expect(row("176-johto-normal")?.evolutionPaths).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ toFormId: "468-kanto", isEvolutionStub: true }),
       ]),
     );
-    expect(familyContaining("175-kanto")?.isBatchTruncated).toBe(true);
+    expect(familyContaining("175-johto")?.isBatchTruncated).toBe(true);
   });
 
   it("preserves representative existing Kanto conclusions while adding Johto rows", () => {

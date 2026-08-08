@@ -2,11 +2,12 @@ import "dotenv/config";
 import { readFile } from "node:fs/promises";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
+import { getDatabaseUrl } from "../src/lib/database";
 import { loadCrossGenerationEvolutionData } from "../src/data/cross-generation-evolution";
 import { RULES_VERSION } from "../src/rules/rules";
 
 const prisma = new PrismaClient({
-  adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL ?? "file:./dev.db" }),
+  adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
 });
 
 async function main() {

@@ -18,6 +18,6 @@
 ## 整合驗收重點
 
 - 家族鍵不是由圖鑑編號區間推算；三個寶寶寶可夢使用既有 `KANTO_FAMILY_025`、`KANTO_FAMILY_035`、`KANTO_FAMILY_039`。
-- #169 使用正式 `042-kanto -> 169-kanto` 路徑，實體 form 不再標記 `isEvolutionStub`。
+- #169 使用正式 `042-kanto -> 169-johto` 路徑，實體 form 不再標記 `isEvolutionStub`。
 - #176 只連到正式 `468-kanto` stub；不得因未納入 #182 之後而遺失波克基古的後續進化價值。
 - 活動招式是投入前的條件提示，不把次要招式來源缺漏升級為整個家族 `HOLD_FOR_NOW`。
