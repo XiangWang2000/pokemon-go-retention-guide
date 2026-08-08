@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026.08.08-cross-generation-evolution-v3",
+  "dataVersion": "2026.08.08-cross-generation-evolution-v4",
   "checkedAt": "2026-08-08",
   "sources": [
     {
@@ -252,10 +252,10 @@
       "familyKey": "KANTO_FAMILY_123",
       "nameEn": "Scizor",
       "nameZhTw": "巨鉗螳螂",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "JOHTO",
+      "formNameEn": "Johto",
+      "formNameZhTw": "??",
+      "regionKey": "JOHTO",
       "types": [
         "BUG",
         "STEEL"
@@ -266,7 +266,7 @@
       ],
       "fromFormId": "123-kanto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
-      "evolutionTargetNotesZhTw": "後續進化屬特殊用途；完整後續世代資料尚未納入本批展示範圍。"
+      "evolutionTargetNotesZhTw": "?????????????????????????????????????"
     },
     {
       "dexNumber": 230,
@@ -274,10 +274,10 @@
       "familyKey": "KANTO_FAMILY_116",
       "nameEn": "Kingdra",
       "nameZhTw": "刺龍王",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "JOHTO",
+      "formNameEn": "Johto",
+      "formNameZhTw": "??",
+      "regionKey": "JOHTO",
       "types": [
         "WATER",
         "DRAGON"
@@ -288,7 +288,7 @@
       ],
       "fromFormId": "117-kanto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
-      "evolutionTargetNotesZhTw": "後續進化屬特殊用途；完整後續世代資料尚未納入本批展示範圍。"
+      "evolutionTargetNotesZhTw": "?????????????????????????????????????"
     },
     {
       "dexNumber": 233,
@@ -296,10 +296,10 @@
       "familyKey": "KANTO_FAMILY_137",
       "nameEn": "Porygon2",
       "nameZhTw": "多邊獸Ⅱ",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "JOHTO",
+      "formNameEn": "Johto",
+      "formNameZhTw": "??",
+      "regionKey": "JOHTO",
       "types": [
         "NORMAL"
       ],
@@ -310,7 +310,7 @@
       ],
       "fromFormId": "137-kanto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
-      "evolutionTargetNotesZhTw": "後續進化鏈屬特殊用途；完整後續世代資料尚未納入本批展示範圍。"
+      "evolutionTargetNotesZhTw": "?????????????????????????????????????"
     },
     {
       "dexNumber": 242,
@@ -521,7 +521,7 @@
         "Porygon Z",
         "多邊獸Ｚ"
       ],
-      "fromFormId": "233-kanto",
+      "fromFormId": "233-johto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
       "evolutionTargetNotesZhTw": "後續進化鏈屬特殊用途；完整後續世代資料尚未納入本批展示範圍。"
     },
@@ -804,6 +804,94 @@
       "fromFormId": "206-johto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
       "evolutionTargetNotesZhTw": "後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。"
+    },
+    {
+      "dexNumber": 461,
+      "generation": 4,
+      "familyKey": "JOHTO_FAMILY_215",
+      "nameEn": "Weavile",
+      "nameZhTw": "???",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "??",
+      "regionKey": "KANTO",
+      "types": [
+        "DARK",
+        "ICE"
+      ],
+      "aliases": [
+        "Weavile",
+        "???"
+      ],
+      "fromFormId": "215-johto",
+      "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
+      "evolutionTargetNotesZhTw": "????????????? PvP ????????????????????????"
+    },
+    {
+      "dexNumber": 473,
+      "generation": 4,
+      "familyKey": "JOHTO_FAMILY_220",
+      "nameEn": "Mamoswine",
+      "nameZhTw": "???",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "??",
+      "regionKey": "KANTO",
+      "types": [
+        "ICE",
+        "GROUND"
+      ],
+      "aliases": [
+        "Mamoswine",
+        "???"
+      ],
+      "fromFormId": "221-johto",
+      "evolutionTargetUseLevel": "CORE_INVESTMENT",
+      "evolutionTargetNotesZhTw": "??????? PvE?????????????????????????????????????"
+    },
+    {
+      "dexNumber": 899,
+      "generation": 8,
+      "familyKey": "JOHTO_FAMILY_234",
+      "nameEn": "Wyrdeer",
+      "nameZhTw": "???",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "??",
+      "regionKey": "KANTO",
+      "types": [
+        "PSYCHIC",
+        "NORMAL"
+      ],
+      "aliases": [
+        "Wyrdeer",
+        "???"
+      ],
+      "fromFormId": "234-johto",
+      "evolutionTargetUseLevel": "SPECIAL_USE",
+      "evolutionTargetNotesZhTw": "????????????????????????????????????"
+    },
+    {
+      "dexNumber": 901,
+      "generation": 8,
+      "familyKey": "JOHTO_FAMILY_216",
+      "nameEn": "Ursaluna",
+      "nameZhTw": "???",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "??",
+      "regionKey": "KANTO",
+      "types": [
+        "GROUND",
+        "NORMAL"
+      ],
+      "aliases": [
+        "Ursaluna",
+        "???"
+      ],
+      "fromFormId": "217-johto",
+      "evolutionTargetUseLevel": "SPECIAL_USE",
+      "evolutionTargetNotesZhTw": "???????????????????????????????????????????"
     }
   ],
   "paths": [
@@ -883,25 +971,27 @@
     },
     {
       "fromFormId": "123-kanto",
-      "toFormId": "212-kanto",
+      "toFormId": "212-johto",
       "evolutionMethodZhTw": "使用金屬膜並消耗糖果",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [
         "pokeapi-evolution-targets-001-151",
+        "pokeapi-evolution-targets-152-251",
         "pokemon-go-evolution-requirements"
       ]
     },
     {
       "fromFormId": "117-kanto",
-      "toFormId": "230-kanto",
+      "toFormId": "230-johto",
       "evolutionMethodZhTw": "使用龍之鱗片並消耗糖果",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [
         "pokeapi-evolution-targets-001-151",
+        "pokeapi-evolution-targets-152-251",
         "pokemon-go-evolution-requirements"
       ]
     },
@@ -1051,18 +1141,19 @@
     },
     {
       "fromFormId": "137-kanto",
-      "toFormId": "233-kanto",
+      "toFormId": "233-johto",
       "evolutionMethodZhTw": "使用升級道具並消耗糖果",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [
         "pokeapi-evolution-targets-001-151",
+        "pokeapi-evolution-targets-152-251",
         "pokemon-go-evolution-requirements"
       ]
     },
     {
-      "fromFormId": "233-kanto",
+      "fromFormId": "233-johto",
       "toFormId": "474-kanto",
       "evolutionMethodZhTw": "使用 Dubious Disc 並消耗糖果",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
@@ -1070,6 +1161,7 @@
       "verificationStatus": "VERIFIED",
       "sourceIds": [
         "pokeapi-evolution-targets-001-151",
+        "pokeapi-evolution-targets-152-251",
         "pokemon-go-evolution-requirements"
       ]
     },
@@ -1212,6 +1304,54 @@
       "toFormId": "982-kanto",
       "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
       "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "215-johto",
+      "toFormId": "461-kanto",
+      "evolutionMethodZhTw": "???????????????????????????",
+      "availabilityNotesZhTw": "????????????????????",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "221-johto",
+      "toFormId": "473-kanto",
+      "evolutionMethodZhTw": "???????????????????????????",
+      "availabilityNotesZhTw": "?????????????? PvE ?????",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "234-johto",
+      "toFormId": "899-kanto",
+      "evolutionMethodZhTw": "???????????????????????????",
+      "availabilityNotesZhTw": "??????????????????????",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "217-johto",
+      "toFormId": "901-kanto",
+      "evolutionMethodZhTw": "???????????????????????????",
+      "availabilityNotesZhTw": "??????????????????????",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [

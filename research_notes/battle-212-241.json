@@ -1,0 +1,236 @@
+{
+  "batch": "212-241",
+  "checkedAt": "2026-08-08",
+  "pvpoke": {
+    "commit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+    "files": [
+      "data/sources/pvpoke/rankings-1500.json",
+      "data/sources/pvpoke/rankings-2500.json",
+      "data/sources/pvpoke/rankings-10000.json"
+    ],
+    "method": "Open?Overall ???????????"
+  },
+  "pve": {
+    "214-johto": "???????????? PvE?",
+    "227-johto": "?????????",
+    "229-johto": "???? Mega ???????"
+  },
+  "mega": [
+    {
+      "formId": "212-johto",
+      "sourceId": "PVE-GEN2-20260808"
+    },
+    {
+      "formId": "214-johto",
+      "sourceId": "PVE-GEN2-20260808"
+    },
+    {
+      "formId": "227-johto",
+      "sourceId": "PVE-GEN2-20260808"
+    },
+    {
+      "formId": "229-johto",
+      "sourceId": "PVE-GEN2-20260808"
+    }
+  ],
+  "maxBattle": [
+    {
+      "formId": "213-johto",
+      "sourceId": "MAX-GEN2-20260808"
+    },
+    {
+      "formId": "237-johto",
+      "sourceId": "MAX-GEN2-20260808"
+    }
+  ],
+  "shadow": [
+    {
+      "formId": "212-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "213-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "215-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "216-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "217-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "220-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "221-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "225-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "227-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "228-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "229-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "230-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "231-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "232-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "233-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "234-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "237-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    }
+  ],
+  "evolution": [
+    {
+      "fromFormId": "123-kanto",
+      "toFormId": "212-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "117-kanto",
+      "toFormId": "230-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "137-kanto",
+      "toFormId": "233-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "223-johto",
+      "toFormId": "224-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "228-johto",
+      "toFormId": "229-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "231-johto",
+      "toFormId": "232-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "236-johto",
+      "toFormId": "106-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "236-johto",
+      "toFormId": "107-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "236-johto",
+      "toFormId": "237-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "215-johto",
+      "toFormId": "461-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "217-johto",
+      "toFormId": "901-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "221-johto",
+      "toFormId": "473-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "233-johto",
+      "toFormId": "474-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "234-johto",
+      "toFormId": "899-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    }
+  ],
+  "review": {
+    "materialGaps": [],
+    "nonMaterialGaps": [
+      "??????????????????????????? HOLD ??????????????? material issue?"
+    ]
+  }
+}

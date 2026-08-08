@@ -1,0 +1,267 @@
+{
+  "batch": "212-241",
+  "updatedAt": "2026-08-08",
+  "dataVersion": "2026.08.08-r19",
+  "rulesVersion": "2026.08.06-v7",
+  "status": "ACCEPTED",
+  "counts": {
+    "species": 30,
+    "forms": 30,
+    "battleVariants": 124,
+    "families": 26,
+    "strategyCounts": {
+      "KEEP_TARGETS": 8,
+      "SELECTIVE_KEEP": 7,
+      "MOSTLY_TRANSFER": 11,
+      "HOLD_FOR_NOW": 0
+    },
+    "openIssues": 0,
+    "safetyAffectingIssues": 0,
+    "trueDataPending": 0
+  },
+  "formalJohtoMigrations": [
+    {
+      "familyId": "KANTO_FAMILY_123:123-kanto",
+      "name": "Scizor",
+      "members": [
+        "123-kanto",
+        "212-johto"
+      ],
+      "result": "PASS"
+    },
+    {
+      "familyId": "KANTO_FAMILY_116:116-kanto",
+      "name": "Kingdra",
+      "members": [
+        "116-kanto",
+        "117-kanto",
+        "230-johto"
+      ],
+      "result": "PASS"
+    },
+    {
+      "familyId": "KANTO_FAMILY_137:137-kanto",
+      "name": "Porygon2",
+      "members": [
+        "137-kanto",
+        "233-johto"
+      ],
+      "result": "PASS"
+    },
+    {
+      "familyId": "KANTO_FAMILY_236:106-kanto",
+      "name": "Tyrogue branch",
+      "members": [
+        "236-johto",
+        "106-kanto",
+        "107-kanto",
+        "237-johto"
+      ],
+      "result": "PASS"
+    },
+    {
+      "familyId": "KANTO_FAMILY_124:124-kanto",
+      "name": "Smoochum baby",
+      "members": [
+        "238-johto",
+        "124-kanto"
+      ],
+      "result": "PASS"
+    },
+    {
+      "familyId": "KANTO_FAMILY_125:125-kanto",
+      "name": "Elekid baby",
+      "members": [
+        "239-johto",
+        "125-kanto"
+      ],
+      "result": "PASS"
+    },
+    {
+      "familyId": "KANTO_FAMILY_126:126-kanto",
+      "name": "Magby baby",
+      "members": [
+        "240-johto",
+        "126-kanto"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "versionBoundaries": {
+    "formalJohtoForms": true,
+    "releasedMegaForms": true,
+    "releasedMaxForms": true,
+    "noTrueDataPending": true
+  },
+  "crossBatchIntegration": {
+    "result": "PASS",
+    "checkedFamilies": [
+      "Scizor",
+      "Kingdra",
+      "Porygon2",
+      "Tyrogue branch",
+      "Smoochum baby",
+      "Elekid baby",
+      "Magby baby"
+    ]
+  },
+  "scopedHolds": [],
+  "immediateHandling": [
+    {
+      "familyId": "KANTO_FAMILY_236:106-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "KANTO_FAMILY_116:116-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留刺龍王（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "KANTO_FAMILY_123:123-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留巨鉗螳螂（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "KANTO_FAMILY_124:124-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "KANTO_FAMILY_125:125-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留可進化為電擊魔獸的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "KANTO_FAMILY_126:126-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留可進化為鴨嘴炎獸的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "KANTO_FAMILY_137:137-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留可進化為多邊獸Ｚ的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_213:213-johto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_214:214-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留赫拉克羅斯（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、Mega 候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_215:215-johto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留可進化為???的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_216:216-johto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_217:217-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留圈圈熊（ML 高 IV 投資候選）；保留可進化為???的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_218:218-johto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_219:219-johto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_220:220-johto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_221:221-johto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留可進化為???的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_222:222-johto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_223:223-johto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_225:225-johto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_226:226-johto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留巨翅飛魚（PvP（GL Rank≤100、UL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_227:227-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留盔甲鳥（PvE 實戰候選、Mega 候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_228:228-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留黑魯加（PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_231:231-johto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留頓甲（ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_234:234-johto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留可進化為???的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_235:235-johto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_241:241-johto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留大奶罐（PvP（GL Rank≤100、UL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    }
+  ]
+}

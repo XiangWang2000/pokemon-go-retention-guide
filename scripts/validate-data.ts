@@ -241,6 +241,8 @@ async function main() {
     "research_notes/battle-152-181.json",
     "research_notes/official-182-211.json",
     "research_notes/battle-182-211.json",
+    "research_notes/official-212-241.json",
+    "research_notes/battle-212-241.json",
     "research_notes/cross-generation-evolution-targets.json",
   ]) {
     JSON.parse((await readFile(file, "utf8")).replace(/^\uFEFF/, ""));

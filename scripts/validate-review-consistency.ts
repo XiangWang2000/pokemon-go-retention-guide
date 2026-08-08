@@ -29,6 +29,7 @@ const batchFiles = [
   ["121-151", "review/121-151.json"],
   ["152-181", "review/152-181.json"],
   ["182-211", "review/182-211.json"],
+  ["212-241", "review/212-241.json"],
 ] as const;
 
 async function loadJson(path: string) {
@@ -141,7 +142,7 @@ async function main() {
     }
   }
 
-  const recalibrationPath = "review/001-211-recalibration.json";
+  const recalibrationPath = "review/001-241-recalibration.json";
   const recalibration = await loadJson(recalibrationPath);
   checkVersion(recalibration, recalibrationPath, errors);
   const expectedPending = rows.filter((row) => row.assessmentDisposition === "TRUE_DATA_PENDING");
@@ -163,6 +164,9 @@ async function main() {
     "197-johto",
     "199-johto",
     "208-johto",
+    "212-johto",
+    "230-johto",
+    "233-johto",
   ];
   for (const formId of highRiskForms) {
     const family = families.find((candidate) =>

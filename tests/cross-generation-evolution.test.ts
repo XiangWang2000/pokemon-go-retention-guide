@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { getDashboardRows } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
 import { buildFormOverviews } from "@/presentation/form-overview";
-import recalibrationReport from "../review/001-211-recalibration.json";
+import recalibrationReport from "../review/001-241-recalibration.json";
 
 const forms = buildFormOverviews(await getDashboardRows());
 const families = buildFamilyOverviews(forms);
@@ -24,7 +24,7 @@ describe("cross-generation evolution targets", () => {
       ["082-kanto", "462-kanto"],
       ["112-kanto", "464-kanto"],
       ["114-kanto", "465-kanto"],
-      ["123-kanto", "212-kanto"],
+      ["123-kanto", "212-johto"],
       ["125-kanto", "466-kanto"],
       ["126-kanto", "467-kanto"],
     ];
@@ -66,7 +66,6 @@ describe("cross-generation evolution targets", () => {
       "081-kanto": "自爆磁怪",
       "111-kanto": "超甲狂犀",
       "114-kanto": "巨蔓藤",
-      "123-kanto": "巨鉗螳螂",
       "125-kanto": "電擊魔獸",
       "126-kanto": "鴨嘴炎獸",
     } as const;
