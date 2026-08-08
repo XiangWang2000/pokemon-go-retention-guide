@@ -140,6 +140,8 @@ export async function getDashboardRows() {
         verifiedAt: path.verifiedAt?.toISOString() ?? null,
         isEvolutionStub: path.toForm.isEvolutionStub,
         targetUseLevel: path.toForm.evolutionTargetUseLevel,
+        targetNameEn: path.toForm.species.nameEn,
+        targetNameZhTw: path.toForm.species.nameZhTw,
       })),
       types: parseArray(variant.pokemonForm.types),
       aliases: parseArray(variant.pokemonForm.searchAliases),

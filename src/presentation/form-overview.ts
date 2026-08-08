@@ -501,10 +501,12 @@ function buildVariantIvUseKeys(row: DashboardRow): PrimaryUseKey[] {
 
 type EvolutionPathOverview = Omit<
   DashboardRow["evolutionPaths"][number],
-  "isEvolutionStub" | "targetUseLevel"
+  "isEvolutionStub" | "targetUseLevel" | "targetNameEn" | "targetNameZhTw"
 > & {
   isEvolutionStub?: boolean;
   targetUseLevel?: string | null;
+  targetNameEn?: string;
+  targetNameZhTw?: string;
 };
 
 function buildVariantIvRecommendations(row: DashboardRow, uses: PrimaryUseKey[]) {

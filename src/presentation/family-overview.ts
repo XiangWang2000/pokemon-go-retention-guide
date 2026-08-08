@@ -714,9 +714,68 @@ function targetHandlingParts(target: FamilyRetentionTarget, members: FamilyMembe
   }
   if (variants.has("DYNAMAX")) parts.push("極巨候選");
   if (variants.has("GIGANTAMAX")) parts.push("超極巨版本本身");
-  if (variants.has("SHADOW")) parts.push("有用途的暗影版");
+  if (uses.has("SHADOW_PVE")) parts.push("有用途的暗影版");
 
   return `${target.memberNameZhTw}（${parts.join("、") || "符合條件個體"}）`;
+}
+
+function isEvolutionOnlyTarget(target: FamilyRetentionTarget) {
+  return target.useKeys.length > 0 && target.useKeys.every((key) => key === "EVOLUTION");
+}
+
+function fallbackExternalTargetName(
+  member: FamilyMemberSummary,
+  pathIndex: number,
+  externalPathCount: number,
+) {
+  const names = member.form.evolutionNames.filter((name) => /[\u4e00-\u9fff]/.test(name));
+  if (externalPathCount === names.length) return names[pathIndex] ?? null;
+  return externalPathCount === 1 && names.length === 1 ? names[0] : null;
+}
+
+function buildExternalEvolutionHandlingSummary(members: FamilyMemberSummary[]) {
+  const targetByKey = new Map<
+    string,
+    { sourceFormId: string; targetFormId: string; targetNameZhTw: string }
+  >();
+  for (const member of members) {
+    const externalPaths = member.form.evolutionPaths.filter(
+      (path) => path.isEvolutionStub || Number(path.toFormId.slice(0, 3)) > 151,
+    );
+    for (const [index, path] of externalPaths.entries()) {
+      if (!path.targetUseLevel) continue;
+      const targetNameZhTw =
+        path.targetNameZhTw ?? fallbackExternalTargetName(member, index, externalPaths.length);
+      if (!targetNameZhTw) continue;
+      targetByKey.set(`${member.form.formId}->${path.toFormId}`, {
+        sourceFormId: member.form.formId,
+        targetFormId: path.toFormId,
+        targetNameZhTw,
+      });
+    }
+  }
+  const targets = [...targetByKey.values()];
+  if (!targets.length) return null;
+
+  const targetNames = unique(targets.map((target) => target.targetNameZhTw));
+  const hasNormalEvolutionCandidate = members.some((member) =>
+    member.form.variants.some(
+      (variant) =>
+        variant.row.variantKey === "NORMAL" &&
+        isUsefulVariant(variant) &&
+        variant.primaryUseKeys.includes("EVOLUTION"),
+    ),
+  );
+  const hasShadowCandidate = members.some((member) =>
+    member.form.variants.some(
+      (variant) => variant.row.variantKey === "SHADOW" && isUsefulVariant(variant),
+    ),
+  );
+  const candidateText = hasNormalEvolutionCandidate
+    ? `保留可進化為${targetNames.join("、")}的優質普通候選`
+    : `保留可進化為${targetNames.join("、")}的合適前階候選`;
+  const shadowText = hasShadowCandidate ? "；暗影版本另按暗影用途判斷，不與普通進化候選混用" : "";
+  return `${candidateText}${shadowText}`;
 }
 
 export function buildFamilyHandlingSummaryZhTw({
@@ -743,15 +802,26 @@ export function buildFamilyHandlingSummaryZhTw({
     return `先不要大量傳送；${reasonText || "關鍵資料待補"}，保留現有最佳候選，待影響結論的資料補齊後再判斷。`;
   }
 
-  const targetText = targets.map((target) => targetHandlingParts(target, members)).join("，以及");
+  const externalEvolutionText = buildExternalEvolutionHandlingSummary(members);
+  const handlingTargets = externalEvolutionText
+    ? targets.filter((target) => !isEvolutionOnlyTarget(target))
+    : targets;
+  const targetText = handlingTargets
+    .map((target) => targetHandlingParts(target, members))
+    .join("，以及");
+  const clauses: string[] = [];
+  if (targetText) clauses.push(`保留${targetText}`);
+  if (externalEvolutionText) clauses.push(externalEvolutionText);
+  if (!clauses.length) clauses.push("保留符合條件個體");
   if (targets.some((target) => target.useKeys.includes("SPECIAL_ACQUISITION"))) {
-    return `保留${targetText}；特殊取得個體不以 IV 作傳送門檻。`;
+    return `${clauses.join("；")}；特殊取得個體不以 IV 作傳送門檻。`;
   }
   const hasEvolutionOnlyMember = members.some(
     (member) => member.roles.includes("EVOLUTION_MATERIAL") && !member.hasIndependentUse,
   );
-  const clauses = [`保留${targetText}`];
-  if (hasEvolutionOnlyMember) clauses.push("前階只留能進化成上述用途的候選");
+  if (hasEvolutionOnlyMember && !externalEvolutionText) {
+    clauses.push("前階只留能進化成上述用途的候選");
+  }
   clauses.push("其餘不符合上述用途的普通重複個體可傳");
   return `${clauses.join("；")}。`;
 }

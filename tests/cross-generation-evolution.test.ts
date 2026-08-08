@@ -42,4 +42,22 @@ describe("cross-generation evolution targets", () => {
       expect(familyContaining(formId).retentionStrategy).not.toBe("MOSTLY_TRANSFER");
     }
   });
+
+  it("shows important external evolution targets in the first-layer handling summary", () => {
+    const expectedTargets = {
+      "081-kanto": "自爆磁怪",
+      "111-kanto": "超甲狂犀",
+      "114-kanto": "巨蔓藤",
+      "123-kanto": "巨鉗螳螂",
+      "125-kanto": "電擊魔獸",
+      "126-kanto": "鴨嘴炎獸",
+    } as const;
+
+    for (const [formId, targetName] of Object.entries(expectedTargets)) {
+      const summary = familyContaining(formId).handlingSummaryZhTw;
+      expect(summary, formId).toContain(`可進化為${targetName}`);
+      expect(summary, formId).toContain("優質普通候選");
+      expect(summary, formId).toContain("暗影版本另按暗影用途判斷");
+    }
+  });
 });
