@@ -11,15 +11,15 @@
   "formNameZhTw": "關都",
   "regionKey": "KANTO",
   "evolvesFromFormId": "041-kanto",
-  "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
+  "evolutionFamilyNotesZhTw": "正式接回 #041 超音蝠／#042 大嘴蝠家族；#169 叉字蝠為實際納入本批的後續進化，不再保留空白 stub。",
   "evolutionPaths": [
     {
-      "id": "evolution-cross-042-kanto-169-kanto",
+      "id": "evolution-r18-042-kanto-169-kanto",
       "fromFormId": "042-kanto",
       "toFormId": "169-kanto",
       "requiresEvent": false,
       "verifiedAt": "2026-08-07T16:00:00.000Z",
-      "isEvolutionStub": true,
+      "isEvolutionStub": false,
       "targetUseLevel": "NO_SIGNIFICANT_USE",
       "targetNameEn": "Crobat",
       "targetNameZhTw": "叉字蝠"

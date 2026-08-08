@@ -1,5 +1,6 @@
 import type { IvRecommendation } from "@/iv/strategy";
 import { isTrueDataPending, pveUseLevelLabelZhTw } from "@/rules/battle-assessment";
+import { CURRENT_DATA_MAX_DEX } from "@/config/data-scope";
 import type { CompactOverview, FormOverview, OverviewTone } from "./form-overview";
 
 export type MemberRoleKey =
@@ -741,7 +742,7 @@ function buildExternalEvolutionHandlingSummary(members: FamilyMemberSummary[]) {
   for (const member of members) {
     const externalPaths = member.form.evolutionPaths.filter(
       (path) =>
-        (path.isEvolutionStub || Number(path.toFormId.slice(0, 3)) > 151) &&
+        (path.isEvolutionStub || Number(path.toFormId.slice(0, 3)) > CURRENT_DATA_MAX_DEX) &&
         path.targetUseLevel !== "NO_SIGNIFICANT_USE",
     );
     for (const [index, path] of externalPaths.entries()) {
@@ -897,12 +898,15 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
   const isBatchTruncated =
     forms.some((form) => /範圍外|可繼續進化/.test(form.evolutionFamilyNotesZhTw)) ||
     forms.some((form) =>
-      form.evolutionPaths.some((path) => Number(path.toFormId.slice(0, 3)) > 151),
+      form.evolutionPaths.some(
+        (path) => Number(path.toFormId.slice(0, 3)) > CURRENT_DATA_MAX_DEX,
+      ),
     );
   const regionKeys = unique(forms.map((form) => form.regionKey));
   const regionHintZhTw =
     regionKeys.length === 1 && regionKeys[0] !== "KANTO" ? regionLabel[regionKeys[0]!] : null;
-  const root = roots[0] ?? members[0];
+  const canonicalRoots = members.filter((member) => member.form.dexNumber === minDexNumber);
+  const root = canonicalRoots[0] ?? roots[0] ?? members[0];
   const terminal = terminals[0] ?? members.at(-1)!;
   const baseName = isBatchTruncated
     ? `${root.form.nameZhTw}家族（本批至${terminal.form.nameZhTw}）`
@@ -966,7 +970,7 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
   if (heldNames.length) notices.push(`${unique(heldNames).join("、")}仍有暫時保留版本`);
 
   return {
-    familyId: `${familyKey}:${roots
+    familyId: `${familyKey}:${(canonicalRoots.length ? canonicalRoots : roots)
       .map((member) => member.form.formId)
       .sort()
       .join("+")}`,

@@ -201,7 +201,7 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
       <section className="subtle-grid surface overflow-hidden rounded-3xl p-4 sm:p-5">
         <div className="max-w-4xl">
           <p className="text-sm font-bold tracking-widest text-[var(--primary)]">
-            五批研究 · #001～#151
+            六批研究 · #001～#181
           </p>
           <h1 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">
             搜尋後直接看保留結論

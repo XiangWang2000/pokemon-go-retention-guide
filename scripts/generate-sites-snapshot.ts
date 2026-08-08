@@ -11,6 +11,7 @@ import {
 } from "../src/lib/data-prisma";
 import { prisma } from "../src/lib/prisma";
 import { DATA_VERSION } from "../src/config/release";
+import { CURRENT_DATA_SCOPE } from "../src/config/data-scope";
 import { buildAuditSummary } from "../src/lib/audit-data";
 import { auditDataFileName, familyDataFileName } from "../src/lib/site-data-paths";
 import { buildHomeSnapshot } from "../src/presentation/home-snapshot";
@@ -23,7 +24,8 @@ const exportDirectory = path.join(root, "public", "exports");
 const publicDataDirectory = path.join(root, "public", "data");
 const publicHeadersPath = path.join(root, "public", "_headers");
 const databasePath = path.join(root, "dev.db");
-const exportFileName = "pokemon-go-retention-001-151.xlsx";
+const exportFileName: string = `pokemon-go-retention-${CURRENT_DATA_SCOPE}.xlsx`;
+const legacyExportFileName: string = "pokemon-go-retention-001-151.xlsx";
 const workbookPath = path.join(exportDirectory, exportFileName);
 const manifestPath = path.join(siteDataDirectory, "manifest.json");
 
@@ -283,6 +285,9 @@ async function main() {
 
   await mkdir(siteDataDirectory, { recursive: true });
   await mkdir(exportDirectory, { recursive: true });
+  if (legacyExportFileName !== exportFileName && (await exists(path.join(exportDirectory, legacyExportFileName)))) {
+    await unlink(path.join(exportDirectory, legacyExportFileName));
+  }
   await mkdir(publicDataDirectory, { recursive: true });
   for (const [name, value] of Object.entries(payloads)) {
     await writeIfChanged(path.join(siteDataDirectory, `${name}.json`), value);
@@ -346,7 +351,7 @@ async function main() {
 
   const manifest = {
     schemaVersion: 1,
-    batch: "001-151",
+    batch: CURRENT_DATA_SCOPE,
     dataVersion: DATA_VERSION,
     dataAsOf,
     sourceDatabase: {

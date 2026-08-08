@@ -122,7 +122,8 @@ npm run data:import:031-060
 npm run data:import:061-090
 npm run data:import:091-120
 npm run data:import:121-151
-npm run data:recompute:001-151
+npm run data:import:152-181
+npm run data:recompute:001-181
 npm run data:validate
 npm run review:generate
 npm run review:remediation
@@ -132,9 +133,9 @@ npm run dev
 
 `db:seed` 在偵測到既有資料時會停止寫入，不會清空來源、歷史評估或變更紀錄。要重跑本批修正使用 `npm run data:remediate`；腳本使用 upsert／append-only 評估版本，可安全重跑。
 
-## #001～#151 共用重算規則（2026-08-06）
+## #001～#181 共用重算規則（2026-08-06）
 
-關都 #001～#151 的批次初步匯入不等於最終驗收。四批資料完成後，必須執行 `npm run data:recompute:001-151`，再產生 Sites snapshot。
+關都 #001～#181 的批次初步匯入不等於最終驗收。六批資料完成後，必須執行 `npm run data:recompute:001-181`，再產生 Sites snapshot。
 
 - PvE 固定分為四級：`CORE_INVESTMENT`（核心投資）、`USABLE_OR_BUDGET`（可用／預算型）、`SPECIAL_USE`（特殊用途）、`NO_SIGNIFICANT_USE`（無顯著用途）。判斷會分開標示團體戰、火箭隊、道館防守、Mega／Primal、Max Battle、暗影與後續世代進化，而不是只看關都本體。
 - 每個 `BattleVariant` 另存五種資料處置：已有明確用途、用途有限、無顯著用途、不適用／尚未推出、真正待補資料。單一型態或次要欄位缺來源不再外推到整個家族。
@@ -153,9 +154,9 @@ npm run dev
 - 集中式規則引擎、規則追蹤、資料待補清單、來源頁、變更紀錄。
 - 10 張繁體中文工作表的 `.xlsx` 匯出。
 - JSON／CSV 匯入、交易式寫入、資料一致性驗證。
-- `review/001-030.md`～`review/121-151.md`／`.json` 批次審核報告，以及 `review/001-151-recalibration.md` 共用規則重算報告。
+- `review/001-030.md`～`review/121-151.md`／`.json` 批次審核報告，以及 `review/001-181-recalibration.md` 共用規則重算報告。
 
-目前 #001～#151（含本批已納入的地區型態）重算為 54 筆 `KEEP`、189 筆 `CONDITIONAL_KEEP`、21 筆 `HOLD_FOR_NOW`、519 筆 `TRANSFER_CANDIDATE`；PvE 四級用途分布與逐版本資料處置均寫入 snapshot。只有真正可能改變結論的資料缺口才暫時保留。
+目前 #001～#181（含本批已納入的地區型態）重算為 60 筆 `KEEP`、228 筆 `CONDITIONAL_KEEP`、0 筆 `HOLD_FOR_NOW`、616 筆 `TRANSFER_CANDIDATE`；PvE 四級用途分布與逐版本資料處置均寫入 snapshot。只有真正可能改變結論的資料缺口才暫時保留。
 
 ## 本機需求
 
@@ -238,7 +239,7 @@ npm run build:local
 
 ### Excel 匯出
 
-首頁「匯出 Excel」下載 `/exports/pokemon-go-retention-001-151.xlsx`；檔案由 `npm run sites:snapshot` 從本機可信資料庫預先產生，舊 `/api/export` 會以 307 轉址到同一檔案。內容包含：
+首頁「匯出 Excel」下載 `/exports/pokemon-go-retention-001-181.xlsx`；檔案由 `npm run sites:snapshot` 從本機可信資料庫預先產生，舊 `/api/export` 會以 307 轉址到同一檔案。內容包含：
 
 1. 寶可夢型態
 2. 評估總覽

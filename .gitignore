@@ -27,8 +27,12 @@ prisma/dev.db-journal
 # Local databases and SQLite sidecars
 *.sqlite
 *.sqlite3
+rebuild-*.db
 *.db-wal
 *.db-shm
+
+# Codex task-local state
+.codex-wake-pid.txt
 
 # Environment variants (keep the committed template)
 .env.*

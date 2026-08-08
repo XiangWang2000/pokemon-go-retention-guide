@@ -128,6 +128,36 @@ export async function ensureCrossGenerationEvolutionTargets(prisma: PrismaClient
   const checkedDate = optionalDate(data.checkedAt) ?? checkedAt;
   const targetIds = new Set(data.targets.map((target) => formId(target.dexNumber, target.formKey)));
 
+  for (const source of data.sources) {
+    await prisma.sourceReference.upsert({
+      where: { id: source.id },
+      create: {
+        id: source.id,
+        sourceName: source.sourceName,
+        sourceUrl: source.sourceUrl,
+        sourceType: source.sourceType as never,
+        sourceTitleOriginal: source.sourceTitleOriginal,
+        sourceLanguage: source.sourceLanguage,
+        sourceSummaryZhTw: source.sourceSummaryZhTw,
+        accessedAt: optionalDate(source.accessedAt) ?? checkedDate,
+        publishedAt: null,
+        dataVersion: data.dataVersion,
+        notes: "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
+      },
+      update: {
+        sourceName: source.sourceName,
+        sourceUrl: source.sourceUrl,
+        sourceType: source.sourceType as never,
+        sourceTitleOriginal: source.sourceTitleOriginal,
+        sourceLanguage: source.sourceLanguage,
+        sourceSummaryZhTw: source.sourceSummaryZhTw,
+        accessedAt: optionalDate(source.accessedAt) ?? checkedDate,
+        dataVersion: data.dataVersion,
+        notes: "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
+      },
+    });
+  }
+
   for (const target of data.targets) {
     const id = formId(target.dexNumber, target.formKey);
     await prisma.pokemonSpecies.upsert({

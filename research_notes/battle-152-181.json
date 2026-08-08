@@ -1,0 +1,85 @@
+{
+  "batch": "152-181",
+  "checkedAt": "2026-08-08",
+  "pvpokeCommit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+  "format": "Open League / Overall",
+  "rankingMethod": "fixed JSON array index + 1",
+  "notableRanks": [
+    {
+      "speciesId": "feraligatr_shadow",
+      "league": "GREAT",
+      "rank": 22
+    },
+    {
+      "speciesId": "feraligatr",
+      "league": "GREAT",
+      "rank": 14
+    },
+    {
+      "speciesId": "meganium",
+      "league": "ULTRA",
+      "rank": 250
+    },
+    {
+      "speciesId": "meganium_shadow",
+      "league": "ULTRA",
+      "rank": 221
+    },
+    {
+      "speciesId": "lanturn",
+      "league": "GREAT",
+      "rank": 141
+    },
+    {
+      "speciesId": "noctowl",
+      "league": "ULTRA",
+      "rank": 279
+    },
+    {
+      "speciesId": "crobat",
+      "league": "ULTRA",
+      "rank": 583
+    },
+    {
+      "speciesId": "ampharos",
+      "league": "ULTRA",
+      "rank": 57
+    },
+    {
+      "speciesId": "typhlosion_shadow",
+      "league": "GREAT",
+      "rank": 339
+    },
+    {
+      "speciesId": "xatu",
+      "league": "ULTRA",
+      "rank": 381
+    }
+  ],
+  "pveEvidence": [
+    {
+      "battleVariantId": "181-kanto-mega",
+      "tier": "SPECIAL",
+      "raidAttackerRank": 74,
+      "electricTypeRank": 11,
+      "sourceId": "PVE-MEGA-AMPHAROS-20260808",
+      "notes": "Mega Ampharos 有 Mega boost 與特定電系用途，但 GO Hub 明確指出其非核心投資；歸入特殊用途。"
+    }
+  ],
+  "decisionBands": {
+    "keep": "rank <= 100",
+    "conditional": "rank 101-250",
+    "note": "物種排名只決定用途層級，不等於個體 IV Rank，也不構成硬性 IV 淘汰線。"
+  },
+  "ivSafety": {
+    "pve": "15攻優先；14攻高整體IV亦可留。",
+    "shadow": "暗影標準較寬；15攻優先，不設硬性最低IV。",
+    "breakpoints": "沒有可靠資料時不宣稱15/10/10一定優於14/15/15。"
+  },
+  "review": {
+    "shadowRowsUseCurrentPvpokeSnapshot": true,
+    "megaAndMaxVersionsSeparated": true,
+    "babyPokemonDoNotCreateNewFamilies": true,
+    "togekissRemainsOutOfBatchStub": true
+  }
+}

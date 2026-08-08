@@ -1,0 +1,184 @@
+{
+  "batch": "152-181",
+  "updatedAt": "2026-08-08",
+  "dataVersion": "2026.08.08-r18",
+  "rulesVersion": "2026.08.06-v7",
+  "status": "ACCEPTED",
+  "counts": {
+    "species": 30,
+    "forms": 30,
+    "battleVariants": 121,
+    "families": 15,
+    "strategyCounts": {
+      "KEEP_TARGETS": 3,
+      "SELECTIVE_KEEP": 9,
+      "MOSTLY_TRANSFER": 3,
+      "HOLD_FOR_NOW": 0
+    },
+    "openIssues": 0,
+    "safetyAffectingIssues": 0,
+    "trueDataPending": 0
+  },
+  "familyMerges": {
+    "pichuToPikachu": {
+      "familyId": "KANTO_FAMILY_025:025-kanto",
+      "familyKey": "KANTO_FAMILY_025",
+      "members": [
+        "172-kanto",
+        "025-kanto",
+        "026-kanto"
+      ],
+      "result": "PASS"
+    },
+    "cleffaToClefairy": {
+      "familyId": "KANTO_FAMILY_035:035-kanto",
+      "familyKey": "KANTO_FAMILY_035",
+      "members": [
+        "173-kanto",
+        "035-kanto",
+        "036-kanto"
+      ],
+      "result": "PASS"
+    },
+    "igglybuffToJigglypuff": {
+      "familyId": "KANTO_FAMILY_039:039-kanto",
+      "familyKey": "KANTO_FAMILY_039",
+      "members": [
+        "174-kanto",
+        "039-kanto",
+        "040-kanto"
+      ],
+      "result": "PASS"
+    },
+    "crobatJohtoExtension": {
+      "familyId": "KANTO_FAMILY_041:041-kanto",
+      "familyKey": "KANTO_FAMILY_041",
+      "members": [
+        "041-kanto",
+        "042-kanto",
+        "169-kanto"
+      ],
+      "isBatchTruncated": false,
+      "result": "PASS"
+    }
+  },
+  "stubBoundaries": {
+    "togekiss": {
+      "familyId": "JOHTO_FAMILY_175:175-kanto",
+      "members": [
+        "175-kanto",
+        "176-kanto"
+      ],
+      "isBatchTruncated": true,
+      "hasExternalTarget": true,
+      "result": "PASS"
+    }
+  },
+  "versionBoundaries": {
+    "megaAmpharosReleased": true,
+    "shadowCrobatReleased": true,
+    "dynamaxRowsRemainUnreleased": true
+  },
+  "crossBatchIntegration": {
+    "result": "PASS",
+    "checkedFamilies": [
+      "pichuToPikachu",
+      "cleffaToClefairy",
+      "igglybuffToJigglypuff",
+      "crobatJohtoExtension"
+    ]
+  },
+  "scopedHolds": [],
+  "immediateHandling": [
+    {
+      "familyId": "KANTO_FAMILY_025:025-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留皮卡丘（超極巨版本本身），以及雷丘（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "KANTO_FAMILY_035:035-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留皮可西（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "KANTO_FAMILY_039:039-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留胖可丁（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "KANTO_FAMILY_041:041-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_152:152-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留大竺葵（PvP（UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_155:155-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留火暴獸（PvP（UL Rank≤100）、ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_158:158-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留大力鱷（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_161:161-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留大尾立（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_163:163-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留貓頭夜鷹（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_165:165-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留安瓢蟲（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_167:167-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_170:170-kanto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留電燈怪（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_175:175-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留可進化為波克基斯的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_177:177-kanto",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_179:179-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留電龍（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    }
+  ]
+}

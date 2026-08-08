@@ -1,6 +1,7 @@
 import type { DashboardRow } from "@/lib/data";
 import { resolveIvRecommendation, type IvRecommendation, type PrimaryUseKey } from "@/iv/strategy";
 import { zhTw } from "@/locales/zh-TW";
+import { CURRENT_DATA_MAX_DEX } from "@/config/data-scope";
 import {
   isTrueDataPending,
   pveUseLevelLabelZhTw,
@@ -734,7 +735,8 @@ export function buildFormOverviews(rows: DashboardRow[]) {
       const current = byId.get(currentId);
       if (!current) continue;
       for (const path of current.evolutionPaths) {
-        if (path.isEvolutionStub || Number(path.toFormId.slice(0, 3)) > 151) return true;
+        if (path.isEvolutionStub || Number(path.toFormId.slice(0, 3)) > CURRENT_DATA_MAX_DEX)
+          return true;
         if (byId.has(path.toFormId)) queue.push(path.toFormId);
       }
     }

@@ -54,18 +54,18 @@ describe("Sites 唯讀 snapshot", () => {
   }, 30_000);
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
-    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.08-r17");
+    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.08-r18");
     expect(siteSnapshotManifest.counts).toMatchObject({
-      pokemonSpecies: 176,
-      pokemonForms: 214,
-      battleVariants: 783,
-      rawEvaluationData: 542,
-      sourceReferences: 152,
-      retentionEvaluations: 1560,
-      categoryEvaluations: 5481,
+      pokemonSpecies: 206,
+      pokemonForms: 244,
+      battleVariants: 904,
+      rawEvaluationData: 599,
+      sourceReferences: 164,
+      retentionEvaluations: 1681,
+      categoryEvaluations: 6328,
       ivRecommendations: 11,
-      dashboardRows: 783,
-      homeFamilies: 101,
+      dashboardRows: 904,
+      homeFamilies: 112,
       openReviewIssues: 174,
     });
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
@@ -75,7 +75,7 @@ describe("Sites 唯讀 snapshot", () => {
   it("預建 Excel 可開啟且包含十張繁中工作表", async () => {
     const workbook = new ExcelJS.Workbook();
     const buffer = await readFile(
-      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-151.xlsx"),
+      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-181.xlsx"),
     );
     await workbook.xlsx.load(buffer as unknown as Parameters<typeof workbook.xlsx.load>[0]);
     expect(workbook.worksheets).toHaveLength(10);
@@ -158,7 +158,7 @@ describe("Sites 唯讀 snapshot", () => {
     const response = exportRedirect(new Request("https://example.test/api/export"));
     expect(response.status).toBe(307);
     expect(response.headers.get("location")).toBe(
-      "https://example.test/exports/pokemon-go-retention-001-151.xlsx",
+      "https://example.test/exports/pokemon-go-retention-001-181.xlsx",
     );
   });
 });
@@ -170,9 +170,9 @@ describe("首頁 snapshot", () => {
     const variants = forms.flatMap((form) => form.variants);
 
     expect(home.schemaVersion).toBe(1);
-    expect(home.families).toHaveLength(101);
-    expect(forms).toHaveLength(188);
-    expect(variants).toHaveLength(783);
+    expect(home.families).toHaveLength(112);
+    expect(forms).toHaveLength(218);
+    expect(variants).toHaveLength(904);
     expect(variants.every((variant) => variant.row.ivRecommendations.length === 0)).toBe(true);
     expect(forms.some((form) => form.ivRecommendations.length > 0)).toBe(true);
     expect(variants.some((variant) => variant.ivRecommendations.length > 0)).toBe(true);
