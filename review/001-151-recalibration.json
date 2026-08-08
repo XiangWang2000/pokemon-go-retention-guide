@@ -7,88 +7,25 @@
   "counts": {
     "variants": 783,
     "decisions": {
-      "TRANSFER_CANDIDATE": 528,
-      "CONDITIONAL_KEEP": 189,
-      "KEEP": 54,
-      "HOLD_FOR_NOW": 12
+      "TRANSFER_CANDIDATE": 535,
+      "CONDITIONAL_KEEP": 194,
+      "KEEP": 54
     },
     "dispositions": {
-      "NO_SIGNIFICANT_USE": 324,
-      "LIMITED_USE": 205,
+      "NO_SIGNIFICANT_USE": 326,
+      "LIMITED_USE": 210,
       "CLEAR_USE": 38,
-      "NOT_APPLICABLE_OR_UNRELEASED": 204,
-      "TRUE_DATA_PENDING": 12
+      "NOT_APPLICABLE_OR_UNRELEASED": 209
     },
     "pveUseLevels": {
-      "NO_SIGNIFICANT_USE": 645,
-      "SPECIAL_USE": 78,
+      "NO_SIGNIFICANT_USE": 639,
+      "SPECIAL_USE": 84,
       "CORE_INVESTMENT": 38,
       "USABLE_OR_BUDGET": 22
     },
-    "changedFields": 0
+    "changedFields": 878
   },
-  "trueDataPending": [
-    {
-      "id": "019-kanto-shadow",
-      "formId": "019-kanto",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "021-kanto-shadow",
-      "formId": "021-kanto",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "022-kanto-shadow",
-      "formId": "022-kanto",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "023-kanto-shadow",
-      "formId": "023-kanto",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "025-kanto-shadow",
-      "formId": "025-kanto",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "026-alola-shadow",
-      "formId": "026-alola",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "026-kanto-shadow",
-      "formId": "026-kanto",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "042-kanto-normal",
-      "formId": "042-kanto",
-      "variantKey": "NORMAL"
-    },
-    {
-      "id": "042-kanto-shadow",
-      "formId": "042-kanto",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "044-kanto-normal",
-      "formId": "044-kanto",
-      "variantKey": "NORMAL"
-    },
-    {
-      "id": "044-kanto-shadow",
-      "formId": "044-kanto",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "052-galar-normal",
-      "formId": "052-galar",
-      "variantKey": "NORMAL"
-    }
-  ],
+  "trueDataPending": [],
   "highRiskReview": [
     {
       "id": "063-kanto-dynamax",

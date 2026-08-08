@@ -21,11 +21,41 @@
       "sourceUrl": "https://pokemongohub.net/post/guide/pokemon-go-evolution-guide/",
       "accessedAt": "2026-08-08",
       "sourceSummaryZhTw": "用於核對 Pokémon GO 中的糖果、進化道具、夥伴或誘餌條件；實際可用性仍以遊戲內介面為準。"
+    },
+    {
+      "id": "gohub-crobat-pvp-20260808",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "Crobat PvP Guide: Great, Ultra & Master League",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/169/pvp",
+      "accessedAt": "2026-08-08",
+      "sourceSummaryZhTw": "目前頁面列出 Crobat 大聯盟 #783、超級聯盟 #583、Master #395；未達本專案特殊用途門檻，後續進化不改變目前傳送結論。"
+    },
+    {
+      "id": "gohub-bellossom-pvp-20260808",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "Bellossom PvP Guide: Great, Ultra & Master League",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/182/pvp",
+      "accessedAt": "2026-08-08",
+      "sourceSummaryZhTw": "目前頁面列出 Bellossom 大聯盟 #224、超級聯盟 #197；屬有限 PvP 用途，不等同核心投資。"
+    },
+    {
+      "id": "gohub-perrserker-pvp-20260808",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "PVP",
+      "sourceTitleOriginal": "Perrserker PvP Guide: Great, Ultra & Master League",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/863/pvp",
+      "accessedAt": "2026-08-08",
+      "sourceSummaryZhTw": "目前頁面列出 Perrserker 大聯盟 #408、超級聯盟 #174；超級聯盟有條件用途，屬特殊用途／預算型進化目標。"
     }
   ],
   "targets": [
-    {"dexNumber":169,"generation":2,"familyKey":"KANTO_FAMILY_041","nameEn":"Crobat","nameZhTw":"叉字蝠","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["POISON","FLYING"],"aliases":["Crobat","叉字蝠"],"fromFormId":"042-kanto","evolutionTargetUseLevel":null,"evolutionTargetNotesZhTw":null},
-    {"dexNumber":182,"generation":2,"familyKey":"KANTO_FAMILY_043","nameEn":"Bellossom","nameZhTw":"美麗花","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["GRASS"],"aliases":["Bellossom","美麗花"],"fromFormId":"044-kanto","evolutionTargetUseLevel":null,"evolutionTargetNotesZhTw":null},
+    {"dexNumber":169,"generation":2,"familyKey":"KANTO_FAMILY_041","nameEn":"Crobat","nameZhTw":"叉字蝠","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["POISON","FLYING"],"aliases":["Crobat","叉字蝠"],"fromFormId":"042-kanto","evolutionTargetUseLevel":"NO_SIGNIFICANT_USE","evolutionTargetNotesZhTw":"已補查 GO Hub PvP 頁：大聯盟 #783、超級聯盟 #583、Master #395，且團體戰未列入排名；目前沒有會改變超音蝠／大嘴蝠傳送結論的顯著進化用途。"},
+    {"dexNumber":182,"generation":2,"familyKey":"KANTO_FAMILY_043","nameEn":"Bellossom","nameZhTw":"美麗花","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["GRASS"],"aliases":["Bellossom","美麗花"],"fromFormId":"044-kanto","evolutionTargetUseLevel":"SPECIAL_USE","evolutionTargetNotesZhTw":"已補查 GO Hub PvP 頁：大聯盟 #224、超級聯盟 #197；屬有限 PvP 用途，會影響優質普通／暗影進化候選，但不代表需要大量投資。"},
     {"dexNumber":186,"generation":2,"familyKey":"KANTO_FAMILY_060","nameEn":"Politoed","nameZhTw":"蚊香蛙皇","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["WATER"],"aliases":["Politoed","蚊香蛙皇"],"fromFormId":"061-kanto","evolutionTargetUseLevel":null,"evolutionTargetNotesZhTw":null},
     {"dexNumber":196,"generation":2,"familyKey":"KANTO_FAMILY_133","nameEn":"Espeon","nameZhTw":"太陽伊布","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["PSYCHIC"],"aliases":["Espeon","太陽伊布"],"fromFormId":"133-kanto","evolutionTargetUseLevel":"SPECIAL_USE","evolutionTargetNotesZhTw":"後續伊布進化屬特殊用途；完整後續世代資料尚未納入本批展示範圍。"},
     {"dexNumber":197,"generation":2,"familyKey":"KANTO_FAMILY_133","nameEn":"Umbreon","nameZhTw":"月亮伊布","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["DARK"],"aliases":["Umbreon","月亮伊布"],"fromFormId":"133-kanto","evolutionTargetUseLevel":"SPECIAL_USE","evolutionTargetNotesZhTw":"後續伊布進化屬特殊用途；完整後續世代資料尚未納入本批展示範圍。"},
@@ -48,11 +78,12 @@
     {"dexNumber":700,"generation":6,"familyKey":"KANTO_FAMILY_133","nameEn":"Sylveon","nameZhTw":"仙子伊布","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["FAIRY"],"aliases":["Sylveon","仙子伊布"],"fromFormId":"133-kanto","evolutionTargetUseLevel":"SPECIAL_USE","evolutionTargetNotesZhTw":"後續伊布進化屬特殊用途；完整後續世代資料尚未納入本批展示範圍。"},
     {"dexNumber":865,"generation":8,"familyKey":"KANTO_FAMILY_083","nameEn":"Sirfetch'd","nameZhTw":"蔥遊兵","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["FIGHTING"],"aliases":["Sirfetch'd","蔥遊兵"],"fromFormId":"083-galar","evolutionTargetUseLevel":"USABLE_OR_BUDGET","evolutionTargetNotesZhTw":"伽勒爾形態的後續進化有可用或預算型用途；完整後續世代資料尚未納入本批展示範圍。"},
     {"dexNumber":866,"generation":8,"familyKey":"KANTO_FAMILY_122","nameEn":"Mr. Rime","nameZhTw":"踏冰人偶","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["ICE","PSYCHIC"],"aliases":["Mr. Rime","踏冰人偶"],"fromFormId":"122-galar","evolutionTargetUseLevel":"SPECIAL_USE","evolutionTargetNotesZhTw":"伽勒爾形態的後續進化屬特殊用途；完整後續世代資料尚未納入本批展示範圍。"},
+    {"dexNumber":863,"generation":8,"familyKey":"KANTO_FAMILY_052","nameEn":"Perrserker","nameZhTw":"喵頭目","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["STEEL"],"aliases":["Perrserker","喵頭目"],"fromFormId":"052-galar","evolutionTargetUseLevel":"SPECIAL_USE","evolutionTargetNotesZhTw":"已補查 GO Hub PvP 頁：大聯盟 #408、超級聯盟 #174；超級聯盟有條件用途，應保留少量優質伽勒爾喵喵進化候選，不等同核心投資。"},
     {"dexNumber":979,"generation":9,"familyKey":"KANTO_FAMILY_056","nameEn":"Annihilape","nameZhTw":"棄世猴","formKey":"KANTO","formNameEn":"Kanto","formNameZhTw":"關都","regionKey":"KANTO","types":["FIGHTING","GHOST"],"aliases":["Annihilape","棄世猴"],"fromFormId":"057-kanto","evolutionTargetUseLevel":"USABLE_OR_BUDGET","evolutionTargetNotesZhTw":"後續進化有可用或預算型用途；完整後續世代資料尚未納入本批展示範圍。"}
   ],
   "paths": [
-    {"fromFormId":"042-kanto","toFormId":"169-kanto","evolutionMethodZhTw":"Buddy 後消耗糖果進化","availabilityNotesZhTw":"正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements"]},
-    {"fromFormId":"044-kanto","toFormId":"182-kanto","evolutionMethodZhTw":"使用日之石並消耗糖果","availabilityNotesZhTw":"正式分支進化；目標完整戰鬥資料尚未納入本批展示範圍。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements"]},
+    {"fromFormId":"042-kanto","toFormId":"169-kanto","evolutionMethodZhTw":"Buddy 後消耗糖果進化","availabilityNotesZhTw":"正式後續進化；已補查目標 PvP 排名，目前評估為無顯著用途，不把範圍外目標再升級成待判斷。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements","gohub-crobat-pvp-20260808"]},
+    {"fromFormId":"044-kanto","toFormId":"182-kanto","evolutionMethodZhTw":"使用日之石並消耗糖果","availabilityNotesZhTw":"正式分支進化；已補查目標 PvP 排名，保留有限用途的優質普通／暗影進化候選。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements","gohub-bellossom-pvp-20260808"]},
     {"fromFormId":"061-kanto","toFormId":"186-kanto","evolutionMethodZhTw":"使用王者之證並消耗糖果","availabilityNotesZhTw":"正式分支進化；目標完整戰鬥資料尚未納入本批展示範圍。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements"]},
     {"fromFormId":"079-kanto","toFormId":"199-kanto","evolutionMethodZhTw":"使用王者之證並消耗糖果","availabilityNotesZhTw":"正式分支進化；目標完整戰鬥資料尚未納入本批展示範圍。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements"]},
     {"fromFormId":"079-galar","toFormId":"199-galar","evolutionMethodZhTw":"依伽勒爾形態的遊戲內條件消耗糖果進化","availabilityNotesZhTw":"正式伽勒爾分支進化；目標完整戰鬥資料尚未納入本批展示範圍。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements"]},
@@ -75,6 +106,7 @@
     {"fromFormId":"233-kanto","toFormId":"474-kanto","evolutionMethodZhTw":"使用 Dubious Disc 並消耗糖果","availabilityNotesZhTw":"正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements"]},
     {"fromFormId":"083-galar","toFormId":"865-kanto","evolutionMethodZhTw":"完成遊戲內指定夥伴條件並消耗糖果","availabilityNotesZhTw":"伽勒爾形態的正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements"]},
     {"fromFormId":"122-galar","toFormId":"866-kanto","evolutionMethodZhTw":"消耗糖果進化","availabilityNotesZhTw":"伽勒爾形態的正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements"]},
+    {"fromFormId":"052-galar","toFormId":"863-kanto","evolutionMethodZhTw":"消耗糖果進化","availabilityNotesZhTw":"伽勒爾喵喵的正式後續進化；已補查 Perrserker PvP 排名，保留少量優質進化候選。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements","gohub-perrserker-pvp-20260808"]},
     {"fromFormId":"057-kanto","toFormId":"979-kanto","evolutionMethodZhTw":"完成遊戲內指定夥伴條件並消耗糖果","availabilityNotesZhTw":"正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。","requiresEvent":false,"verificationStatus":"VERIFIED","sourceIds":["pokeapi-evolution-targets-001-151","pokemon-go-evolution-requirements"]}
   ]
 }

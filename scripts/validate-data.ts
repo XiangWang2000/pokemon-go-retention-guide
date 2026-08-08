@@ -16,7 +16,7 @@ async function main() {
     forms,
     variants,
     raw,
-    evaluations,
+    allEvaluations,
     sources,
     categoryEvaluations,
     issues,
@@ -39,6 +39,16 @@ async function main() {
       select: { id: true, fromFormId: true, toFormId: true },
     }),
   ]);
+  // Historical evaluations are retained for auditability. Validate only the
+  // newest current-rules evaluation per variant so an old conclusion cannot
+  // fail validation after a later recomputation has replaced it.
+  const evaluations = [
+    ...new Map(
+      allEvaluations
+        .sort((a, b) => a.generatedAt.getTime() - b.generatedAt.getTime())
+        .map((item) => [item.battleVariantId, item]),
+    ).values(),
+  ];
   const evolutionData = await loadCrossGenerationEvolutionData();
   const formIds = new Set(forms.map((item) => item.id));
   const variantIds = new Set(variants.map((item) => item.id));

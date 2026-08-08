@@ -17,6 +17,9 @@ function familyContaining(formId: string) {
 describe("cross-generation evolution targets", () => {
   it("keeps formal later-generation paths for high-risk families", () => {
     const expectedPaths = [
+      ["042-kanto", "169-kanto"],
+      ["044-kanto", "182-kanto"],
+      ["052-galar", "863-kanto"],
       ["082-kanto", "462-kanto"],
       ["112-kanto", "464-kanto"],
       ["114-kanto", "465-kanto"],
@@ -27,6 +30,20 @@ describe("cross-generation evolution targets", () => {
     for (const [fromFormId, toFormId] of expectedPaths) {
       const form = forms.find((candidate) => candidate.formId === fromFormId);
       expect(form?.evolutionPaths.some((path) => path.toFormId === toFormId)).toBe(true);
+    }
+  });
+
+  it("records an assessed use level for material out-of-batch targets", () => {
+    const expectedTargets = {
+      "042-kanto": ["169-kanto", "NO_SIGNIFICANT_USE"],
+      "044-kanto": ["182-kanto", "SPECIAL_USE"],
+      "052-galar": ["863-kanto", "SPECIAL_USE"],
+    } as const;
+    for (const [formId, [targetId, targetUseLevel]] of Object.entries(expectedTargets)) {
+      const path = forms
+        .find((candidate) => candidate.formId === formId)
+        ?.evolutionPaths.find((candidate) => candidate.toFormId === targetId);
+      expect(path, `${formId}->${targetId}`).toMatchObject({ targetUseLevel });
     }
   });
 

@@ -42,8 +42,8 @@
   "releaseStatus": "RELEASED",
   "releaseVerifiedAt": "2026-07-30T08:00:00.000Z",
   "notesZhTw": "暗影個體使用較寬鬆的獨立 IV 規則；不要因低總 IV 自動淨化。",
-  "decision": "TRANSFER_CANDIDATE",
-  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+  "decision": "CONDITIONAL_KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
@@ -54,22 +54,22 @@
       "issueType": "RULE_NOT_COVERED",
       "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
       "affectsFinalDecision": false,
-      "provisionalDecision": "TRANSFER_CANDIDATE",
+      "provisionalDecision": "CONDITIONAL_KEEP",
       "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
       "lastResearchedAt": "2026-08-07T16:00:00.000Z"
     }
   ],
-  "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
+  "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-08-07T16:00:00.000Z",
   "pvpSummaryZhTw": "GL（超級聯盟） Overall #793；招式 ACID／SEED_BOMB／SLUDGE_BOMB",
-  "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+  "pveSummaryZhTw": "特殊用途。美麗花：已補查 GO Hub PvP 頁：大聯盟 #224、超級聯盟 #197；屬有限 PvP 用途，會影響優質普通／暗影進化候選，但不代表需要大量投資。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "本批沒有已確認的 Mega 版本；家族不因假設 Mega 而整體升格。",
   "maxBattleSummaryZhTw": "此版本不是 Max 版本；Max 用途不會回推普通個體必留。",
-  "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
+  "evolutionSummaryZhTw": "已補查 GO Hub PvP 頁：大聯盟 #224、超級聯盟 #197；屬有限 PvP 用途，會影響優質普通／暗影進化候選，但不代表需要大量投資。",
   "requiredMovesSummaryZhTw": "沒有招式足以把此低用途版本自動升格為必留。",
   "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
   "ivRecommendations": [
@@ -426,7 +426,7 @@
       "updatedAt": "2026-07-17T16:45:17.000Z"
     }
   ],
-  "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
+  "reasonZhTw": "用途有限：後續進化（美麗花）已有用途；只保留少量符合條件的進化候選。",
   "evaluationId": "r8-eval-043-kanto-shadow",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -454,7 +454,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-07-30T08:00:00.000Z",
       "sources": []
     },
@@ -473,7 +473,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-07-30T08:00:00.000Z",
       "sources": []
     },
@@ -492,7 +492,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-07-30T08:00:00.000Z",
       "sources": []
     },
@@ -511,7 +511,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-07-30T08:00:00.000Z",
       "sources": []
     },
@@ -519,7 +519,7 @@
       "category": "PVE",
       "status": "DATA_UNAVAILABLE",
       "provenance": "DATA_UNAVAILABLE",
-      "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+      "summaryZhTw": "特殊用途。美麗花：已補查 GO Hub PvP 頁：大聯盟 #224、超級聯盟 #197；屬有限 PvP 用途，會影響優質普通／暗影進化候選，但不代表需要大量投資。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -529,8 +529,8 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "pveUseLevel": "SPECIAL_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-07-30T08:00:00.000Z",
       "sources": []
     },
@@ -549,7 +549,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-07-30T08:00:00.000Z",
       "sources": [
         {
@@ -575,7 +575,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-07-30T08:00:00.000Z",
       "sources": []
     }
@@ -627,11 +627,11 @@
   ],
   "traces": [
     {
-      "ruleKey": "LOW_GENERAL_VALUE",
-      "priority": 100,
+      "ruleKey": "VALUABLE_EVOLUTION",
+      "priority": 850,
       "matched": true,
-      "resultDecision": "TRANSFER_CANDIDATE",
-      "explanationZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。"
+      "resultDecision": "CONDITIONAL_KEEP",
+      "explanationZhTw": "用途有限：後續進化（美麗花）已有用途；只保留少量符合條件的進化候選。"
     }
   ],
   "moves": []

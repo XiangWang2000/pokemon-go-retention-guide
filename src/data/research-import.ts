@@ -100,7 +100,7 @@ function releasedValue(status: string) {
     ["RELEASED", "RELEASED_BY_EVOLUTION_INFERENCE", "AVAILABLE_FROM_PURIFICATION"].includes(status)
   )
     return true;
-  if (status === "ANNOUNCED_NOT_YET_RELEASED") return false;
+  if (["ANNOUNCED_NOT_YET_RELEASED", "UNRELEASED"].includes(status)) return false;
   return null;
 }
 

@@ -42,6 +42,17 @@ type ReleaseStatus = "RELEASED" | "UNRELEASED" | "UNKNOWN";
 type EvaluationProvenance = "SOURCE_VERIFIED" | "MANUAL_CURATED" | "INHERITED" | "DATA_UNAVAILABLE";
 
 interface OfficialResearch {
+  sources: Array<{
+    id: string;
+    sourceName: string;
+    sourceType: string;
+    sourceTitleOriginal: string;
+    sourceLanguage: string;
+    sourceUrl: string;
+    accessedAt: string;
+    publishedAt?: string;
+    sourceSummaryZhTw: string;
+  }>;
   forms: Array<{
     pokemonFormId: string;
     releaseStatus: string;
@@ -82,6 +93,42 @@ function isLowTier(tier: string | null) {
 
 async function readJson<T>(path: string) {
   return JSON.parse((await readFile(path, "utf8")).replace(/^\uFEFF/, "")) as T;
+}
+
+async function ensureOfficialSources(official: OfficialResearch) {
+  for (const source of official.sources) {
+    const accessedAt = new Date(`${source.accessedAt}T00:00:00+08:00`);
+    const publishedAt = source.publishedAt
+      ? new Date(`${source.publishedAt}T00:00:00+08:00`)
+      : null;
+    await prisma.sourceReference.upsert({
+      where: { id: source.id },
+      create: {
+        id: source.id,
+        sourceName: source.sourceName,
+        sourceUrl: source.sourceUrl,
+        sourceType: source.sourceType as never,
+        sourceTitleOriginal: source.sourceTitleOriginal,
+        sourceLanguage: source.sourceLanguage,
+        sourceSummaryZhTw: source.sourceSummaryZhTw,
+        accessedAt,
+        publishedAt,
+        dataVersion: source.publishedAt ?? "live page accessed 2026-08-08",
+        notes: "第一批研究來源；保存於 research_notes/official-001-030.json。",
+      },
+      update: {
+        sourceName: source.sourceName,
+        sourceUrl: source.sourceUrl,
+        sourceType: source.sourceType as never,
+        sourceTitleOriginal: source.sourceTitleOriginal,
+        sourceLanguage: source.sourceLanguage,
+        sourceSummaryZhTw: source.sourceSummaryZhTw,
+        accessedAt,
+        publishedAt,
+        dataVersion: source.publishedAt ?? "live page accessed 2026-08-08",
+      },
+    });
+  }
 }
 
 async function addChange(data: {
@@ -188,7 +235,8 @@ function mapOfficialStatus(value: string | undefined): ReleaseStatus | null {
     )
   )
     return "RELEASED";
-  if (value === "ANNOUNCED_NOT_YET_RELEASED") return "UNRELEASED";
+  if (["ANNOUNCED_NOT_YET_RELEASED", "UNRELEASED"].includes(value ?? ""))
+    return "UNRELEASED";
   return null;
 }
 
@@ -1365,6 +1413,7 @@ async function main() {
   const before = await baselineDecisionMap();
   const official = await readJson<OfficialResearch>("research_notes/official-001-030.json");
   const { sha, rankings } = await loadPvpRankings();
+  await ensureOfficialSources(official);
   await applyReleaseStatuses(official, rankings);
   await reclassifyReturnRows();
   const invalidPvpVariants = await verifyPvpRows(sha, rankings);

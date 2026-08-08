@@ -97,7 +97,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-004-kanto-normal-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-004-kanto-normal-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -121,7 +121,7 @@
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
-              "evaluationId": "evaluation-004-kanto-normal-2026.07.28-v5",
+              "evaluationId": "evaluation-004-kanto-normal-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -387,16 +387,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "recalibrate-issue-004-kanto-shadow",
-                  "issueType": "MATERIAL_DATA_GAP",
-                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
-                },
-                {
-                  "id": "issue-004-kanto-shadow-2026.07.28-v5-unknown-release-status-0",
+                  "id": "issue-004-kanto-shadow-2026.08.06-v7-unknown-release-status-0",
                   "issueType": "UNKNOWN_RELEASE_STATUS",
                   "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -420,7 +411,7 @@
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
-              "evaluationId": "evaluation-004-kanto-shadow-2026.07.28-v5",
+              "evaluationId": "evaluation-004-kanto-shadow-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
               "inheritance": {
@@ -638,17 +629,7 @@
               "confidence": "MEDIUM",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
               "reviewStatus": "RESOLVED",
-              "reviewIssues": [
-                {
-                  "id": "recalibrate-issue-004-kanto-purified",
-                  "issueType": "MATERIAL_DATA_GAP",
-                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-07T16:00:00.000Z"
-                }
-              ],
+              "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
               "updatedAt": "2026-08-07T16:00:00.000Z",
@@ -664,7 +645,7 @@
               "recommendedIvStrategyZhTw": "沒有主要用途時，不因 100% 自動產生保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
-              "evaluationId": "evaluation-004-kanto-purified-2026.07.28-v5",
+              "evaluationId": "evaluation-004-kanto-purified-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
               "inheritance": {
@@ -882,7 +863,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-004-kanto-dynamax-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-004-kanto-dynamax-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -906,7 +887,7 @@
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
-              "evaluationId": "evaluation-004-kanto-dynamax-2026.07.28-v5",
+              "evaluationId": "evaluation-004-kanto-dynamax-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -1467,7 +1448,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-005-kanto-normal-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-005-kanto-normal-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -1491,7 +1472,7 @@
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
-              "evaluationId": "evaluation-005-kanto-normal-2026.07.28-v5",
+              "evaluationId": "evaluation-005-kanto-normal-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -1766,7 +1747,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-005-kanto-shadow-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-005-kanto-shadow-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -1790,7 +1771,7 @@
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
-              "evaluationId": "evaluation-005-kanto-shadow-2026.07.28-v5",
+              "evaluationId": "evaluation-005-kanto-shadow-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -2080,7 +2061,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-005-kanto-purified-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-005-kanto-purified-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -2104,7 +2085,7 @@
               "recommendedIvStrategyZhTw": "沒有主要用途時，不因 100% 自動產生保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
-              "evaluationId": "evaluation-005-kanto-purified-2026.07.28-v5",
+              "evaluationId": "evaluation-005-kanto-purified-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -2419,7 +2400,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-005-kanto-dynamax-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-005-kanto-dynamax-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -2443,7 +2424,7 @@
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
-              "evaluationId": "evaluation-005-kanto-dynamax-2026.07.28-v5",
+              "evaluationId": "evaluation-005-kanto-dynamax-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -2988,7 +2969,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-normal-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-006-kanto-normal-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -3012,7 +2993,7 @@
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
-              "evaluationId": "evaluation-006-kanto-normal-2026.07.28-v5",
+              "evaluationId": "evaluation-006-kanto-normal-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -3544,7 +3525,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-shadow-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-006-kanto-shadow-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -3568,7 +3549,7 @@
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-              "evaluationId": "evaluation-006-kanto-shadow-2026.07.28-v5",
+              "evaluationId": "evaluation-006-kanto-shadow-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -4072,7 +4053,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-purified-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-006-kanto-purified-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -4096,7 +4077,7 @@
               "recommendedIvStrategyZhTw": "沒有主要用途時，不因 100% 自動產生保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
-              "evaluationId": "evaluation-006-kanto-purified-2026.07.28-v5",
+              "evaluationId": "evaluation-006-kanto-purified-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -4373,7 +4354,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-mega-x-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-006-kanto-mega-x-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響MEGA_X 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -4397,7 +4378,7 @@
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-              "evaluationId": "evaluation-006-kanto-mega-x-2026.07.28-v5",
+              "evaluationId": "evaluation-006-kanto-mega-x-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -4771,7 +4752,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-mega-y-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-006-kanto-mega-y-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響MEGA_Y 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -4795,7 +4776,7 @@
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-              "evaluationId": "evaluation-006-kanto-mega-y-2026.07.28-v5",
+              "evaluationId": "evaluation-006-kanto-mega-y-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -5169,7 +5150,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-dynamax-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-006-kanto-dynamax-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -5193,7 +5174,7 @@
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
-              "evaluationId": "evaluation-006-kanto-dynamax-2026.07.28-v5",
+              "evaluationId": "evaluation-006-kanto-dynamax-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
@@ -5532,7 +5513,7 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-gigantamax-2026.07.28-v5-optional-data-missing-0",
+                  "id": "issue-006-kanto-gigantamax-2026.08.06-v7-optional-data-missing-0",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響GIGANTAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
@@ -5556,7 +5537,7 @@
               "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
-              "evaluationId": "evaluation-006-kanto-gigantamax-2026.07.28-v5",
+              "evaluationId": "evaluation-006-kanto-gigantamax-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {

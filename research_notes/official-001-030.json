@@ -1,14 +1,15 @@
 {
   "batch": "001-030",
   "accessedAt": "2026-07-15",
-  "researchLane": "OFFICIAL_ONLY",
+  "researchLane": "OFFICIAL_AND_SECONDARY",
   "scopeNoteZhTw": "僅保存 Pokémon GO 官方網站／官方新聞的可追溯證據。本檔不做 PvP/PvE 排名或保留結論；沒有逐物種官方證據者保留 NEEDS_REVIEW，不以模型記憶補值。",
   "statusDefinitions": {
     "RELEASED": "官方原始頁面明確列名或明示首次登場已發生。",
     "RELEASED_BY_EVOLUTION_INFERENCE": "暗影前階已確認，進化後型態依進化鏈推導；仍需人工覆核。",
     "AVAILABLE_FROM_PURIFICATION": "由已確認暗影型態與官方淨化機制推導。",
     "ANNOUNCED_NOT_YET_RELEASED": "官方已公告，但以 accessedAt 判斷首次登場日期尚未到。",
-    "NEEDS_REVIEW": "證據缺失、不足或只可間接推導；不可解讀為未推出。"
+    "NEEDS_REVIEW": "證據缺失、不足或只可間接推導；不可解讀為未推出。",
+    "UNRELEASED": "?????????????????????????"
   },
   "sources": [
     {
@@ -417,6 +418,16 @@
       "accessedAt": "2026-07-15",
       "publishedAt": "2019-07-25",
       "sourceSummaryZhTw": "官方暗影與淨化基本機制。"
+    },
+    {
+      "id": "BULBA-SHADOW-LIST-20260808",
+      "sourceName": "Bulbapedia",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "List of Shadow Pok?mon in Pok?mon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
+      "accessedAt": "2026-08-08",
+      "sourceSummaryZhTw": "?? 2026-08-08 ? Shadow Pok?mon ??????#019 Rattata ? #023 Ekans ????#021 Spearow?#022 Fearow?#025 Pikachu?#026 Kanto?Alola Raichu ?????????????????????????????????????"
     }
   ],
   "forms": [
@@ -1675,9 +1686,11 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "RELEASED",
+          "sourceIds": [
+            "BULBA-SHADOW-LIST-20260808"
+          ],
+          "noteZhTw": "???????????????????????"
         },
         "PURIFIED": {
           "status": "NEEDS_REVIEW",
@@ -1854,9 +1867,11 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "UNRELEASED",
+          "sourceIds": [
+            "BULBA-SHADOW-LIST-20260808"
+          ],
+          "noteZhTw": "??????????????????????????????"
         },
         "PURIFIED": {
           "status": "NEEDS_REVIEW",
@@ -1908,9 +1923,11 @@
           "noteZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "UNRELEASED",
+          "sourceIds": [
+            "BULBA-SHADOW-LIST-20260808"
+          ],
+          "noteZhTw": "??????????????????????????????"
         },
         "PURIFIED": {
           "status": "NEEDS_REVIEW",
@@ -1968,9 +1985,11 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "RELEASED",
+          "sourceIds": [
+            "BULBA-SHADOW-LIST-20260808"
+          ],
+          "noteZhTw": "???????????????????????"
         },
         "PURIFIED": {
           "status": "NEEDS_REVIEW",
@@ -2084,9 +2103,11 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "UNRELEASED",
+          "sourceIds": [
+            "BULBA-SHADOW-LIST-20260808"
+          ],
+          "noteZhTw": "??????????????????????????????"
         },
         "PURIFIED": {
           "status": "NEEDS_REVIEW",
@@ -2146,9 +2167,11 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "UNRELEASED",
+          "sourceIds": [
+            "BULBA-SHADOW-LIST-20260808"
+          ],
+          "noteZhTw": "??????????????????????????????"
         },
         "PURIFIED": {
           "status": "NEEDS_REVIEW",
@@ -2206,9 +2229,11 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "UNRELEASED",
+          "sourceIds": [
+            "BULBA-SHADOW-LIST-20260808"
+          ],
+          "noteZhTw": "??????????????????????????????"
         },
         "PURIFIED": {
           "status": "NEEDS_REVIEW",

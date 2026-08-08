@@ -22,49 +22,40 @@
   ],
   "evolutionNames": [],
   "variantKey": "SHADOW",
-  "isReleased": null,
-  "releaseStatus": "UNKNOWN",
-  "releaseVerifiedAt": null,
+  "isReleased": false,
+  "releaseStatus": "UNRELEASED",
+  "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
   "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
-  "decision": "HOLD_FOR_NOW",
-  "assessmentDisposition": "TRUE_DATA_PENDING",
-  "provenance": "DATA_UNAVAILABLE",
-  "confidence": "LOW",
-  "dataStatus": "UNKNOWN_RELEASE_STATUS",
-  "reviewStatus": "DATA_PENDING",
+  "decision": "TRANSFER_CANDIDATE",
+  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+  "provenance": "MANUAL_CURATED",
+  "confidence": "HIGH",
+  "dataStatus": "VERIFIED",
+  "reviewStatus": "RESOLVED",
   "reviewIssues": [
     {
-      "id": "recalibrate-issue-026-kanto-shadow",
-      "issueType": "MATERIAL_DATA_GAP",
-      "messageZhTw": "真正待補資料：缺少PvP／PvE／火箭隊／道館／Mega／Max 的關鍵原始資料；影響暗影用途與普通個體保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
-      "affectsFinalDecision": true,
-      "provisionalDecision": "HOLD_FOR_NOW",
-      "suggestedResearchActionZhTw": "真正待補資料：缺少PvP／PvE／火箭隊／道館／Mega／Max 的關鍵原始資料；影響暗影用途與普通個體保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
-      "lastResearchedAt": "2026-08-07T16:00:00.000Z"
-    },
-    {
-      "id": "issue-026-kanto-shadow-2026.07.28-v5-unknown-release-status-0",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "id": "issue-026-kanto-shadow-2026.08.06-v7-rule-not-covered-0",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
       "affectsFinalDecision": false,
-      "provisionalDecision": "HOLD_FOR_NOW",
-      "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "provisionalDecision": "TRANSFER_CANDIDATE",
+      "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
       "lastResearchedAt": "2026-08-07T16:00:00.000Z"
     }
   ],
-  "missingDataSummaryZhTw": "無法判斷，暫時不要傳。",
-  "reviewed": false,
+  "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+  "reviewed": true,
   "updatedAt": "2026-08-07T16:00:00.000Z",
-  "pvpSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+  "pvpSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-  "rocketSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+  "rocketSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
-  "megaSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
-  "maxBattleSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+  "megaSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+  "maxBattleSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
-  "recommendedIvStrategyZhTw": "無法判斷，暫時不要傳；資料補齊前不以 IV 大量篩除。",
+  "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
   "ivRecommendations": [
     {
       "id": "iv-global-great",
@@ -419,10 +410,10 @@
       "updatedAt": "2026-07-17T16:45:17.000Z"
     }
   ],
-  "reasonZhTw": "真正待補資料：無法判斷，暫時不要傳；請補齊主要來源後再重算。",
-  "evaluationId": "evaluation-026-kanto-shadow-2026.07.28-v5",
+  "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
+  "evaluationId": "evaluation-026-kanto-shadow-2026.08.06-v7",
   "rulesVersion": "2026.08.06-v7",
-  "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+  "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
   "inheritance": {
     "inheritsFromVariantId": null,
     "inheritanceMode": "NONE",
@@ -434,9 +425,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "UNKNOWN_RELEASE_STATUS",
-      "provenance": "DATA_UNAVAILABLE",
-      "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+      "status": "UNRELEASED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -447,15 +438,22 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "BULBA-SHADOW-LIST-20260808",
+          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
+          "usageZhTw": "EVOLUTION_VALUE 類別資料狀態與摘要的依據。"
+        }
+      ]
     },
     {
       "category": "GYM",
-      "status": "UNKNOWN_RELEASE_STATUS",
-      "provenance": "DATA_UNAVAILABLE",
-      "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+      "status": "UNRELEASED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -466,15 +464,22 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "BULBA-SHADOW-LIST-20260808",
+          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
+          "usageZhTw": "GYM 類別資料狀態與摘要的依據。"
+        }
+      ]
     },
     {
       "category": "MAX_BATTLE",
-      "status": "UNKNOWN_RELEASE_STATUS",
-      "provenance": "DATA_UNAVAILABLE",
-      "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+      "status": "UNRELEASED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -485,15 +490,22 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "BULBA-SHADOW-LIST-20260808",
+          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
+          "usageZhTw": "MAX_BATTLE 類別資料狀態與摘要的依據。"
+        }
+      ]
     },
     {
       "category": "MEGA",
-      "status": "UNKNOWN_RELEASE_STATUS",
-      "provenance": "DATA_UNAVAILABLE",
-      "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+      "status": "UNRELEASED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -504,14 +516,21 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "BULBA-SHADOW-LIST-20260808",
+          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
+          "usageZhTw": "MEGA 類別資料狀態與摘要的依據。"
+        }
+      ]
     },
     {
       "category": "PVE",
-      "status": "UNKNOWN_RELEASE_STATUS",
-      "provenance": "DATA_UNAVAILABLE",
+      "status": "UNRELEASED",
+      "provenance": "SOURCE_VERIFIED",
       "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
       "materialToDecision": false,
       "rocketRating": null,
@@ -523,15 +542,22 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "BULBA-SHADOW-LIST-20260808",
+          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
+          "usageZhTw": "PVE 類別資料狀態與摘要的依據。"
+        }
+      ]
     },
     {
       "category": "PVP",
-      "status": "UNKNOWN_RELEASE_STATUS",
-      "provenance": "DATA_UNAVAILABLE",
-      "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+      "status": "UNRELEASED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -542,15 +568,22 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "BULBA-SHADOW-LIST-20260808",
+          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
+          "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
+        }
+      ]
     },
     {
       "category": "ROCKET",
-      "status": "UNKNOWN_RELEASE_STATUS",
-      "provenance": "DATA_UNAVAILABLE",
-      "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+      "status": "UNRELEASED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
       "materialToDecision": false,
       "rocketRating": "NOT_APPLICABLE",
       "rocketRoles": [],
@@ -561,20 +594,37 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "BULBA-SHADOW-LIST-20260808",
+          "title": "List of Shadow Pok?mon in Pok?mon GO",
+          "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
+          "usageZhTw": "ROCKET 類別資料狀態與摘要的依據。"
+        }
+      ]
     }
   ],
   "raw": [],
-  "sources": [],
+  "sources": [
+    {
+      "id": "BULBA-SHADOW-LIST-20260808",
+      "name": "Bulbapedia",
+      "title": "List of Shadow Pok?mon in Pok?mon GO",
+      "url": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
+      "type": "SECONDARY",
+      "accessedAt": "2026-08-07T16:00:00.000Z",
+      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+    }
+  ],
   "traces": [
     {
-      "ruleKey": "MATERIAL_UNCERTAINTY",
-      "priority": 1000,
+      "ruleKey": "UNRELEASED_VARIANT",
+      "priority": 950,
       "matched": true,
-      "resultDecision": "HOLD_FOR_NOW",
-      "explanationZhTw": "真正待補資料：無法判斷，暫時不要傳；請補齊主要來源後再重算。"
+      "resultDecision": "TRANSFER_CANDIDATE",
+      "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
     }
   ],
   "moves": []

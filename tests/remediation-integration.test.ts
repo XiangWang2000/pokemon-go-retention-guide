@@ -3,18 +3,25 @@ import { prisma } from "@/lib/prisma";
 import { RULES_VERSION } from "@/rules/rules";
 
 describe("#001～#030 修正後資料一致性", () => {
-  it("8. 暗影 UNKNOWN_RELEASE_STATUS 保存在版本層級且不影響家族總結", async () => {
-    const issue = await prisma.dataIssue.findFirst({
-      where: {
-        battleVariantId: "019-kanto-shadow",
-        issueType: "UNKNOWN_RELEASE_STATUS",
-        status: "OPEN",
-      },
-    });
-    expect(issue).not.toBeNull();
-    expect(issue?.affectsFinalDecision).toBe(false);
-    expect(issue?.provisionalDecision).toBe("HOLD_FOR_NOW");
-    expect(issue?.suggestedResearchActionZhTw.length).toBeGreaterThan(10);
+  it("8. 暗影推出狀態補證後不再留下會影響結論的開放 issue", async () => {
+    const [openMaterialCount, openUnknownRelease] = await Promise.all([
+      prisma.dataIssue.count({
+        where: {
+          battleVariantId: "019-kanto-shadow",
+          status: "OPEN",
+          affectsFinalDecision: true,
+        },
+      }),
+      prisma.dataIssue.findFirst({
+        where: {
+          battleVariantId: "019-kanto-shadow",
+          issueType: "UNKNOWN_RELEASE_STATUS",
+          status: "OPEN",
+        },
+      }),
+    ]);
+    expect(openMaterialCount).toBe(0);
+    expect(openUnknownRelease).toBeNull();
   });
 
   it("6b. Purified 資料庫記錄指向同型態 Normal", async () => {

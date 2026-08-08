@@ -1,7 +1,7 @@
 {
   "batch": "001-030",
   "generatedAt": "2026-07-28T04:00:00.000Z",
-  "rulesVersion": "2026.07.28-v5",
+  "rulesVersion": "2026.08.06-v7",
   "originalNeedsReviewCount": 0,
   "reclassificationCounts": {
     "KEEP": 0,
@@ -25,70 +25,99 @@
     {
       "battleVariantId": "007-kanto-shadow",
       "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "019-kanto-purified",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "019-kanto-shadow",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "021-kanto-purified",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "021-kanto-shadow",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "022-kanto-purified",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "022-kanto-shadow",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "023-kanto-purified",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "023-kanto-shadow",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "025-kanto-purified",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "025-kanto-shadow",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "026-alola-purified",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "026-alola-shadow",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "026-kanto-purified",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
-    },
-    {
-      "battleVariantId": "026-kanto-shadow",
-      "reasonZhTw": "此戰鬥版本是否已在 Pokémon GO 推出仍無法確認；若實際已推出，可能具有獨立用途。傳送不可逆，確認前建議暫時保留。"
     }
   ],
-  "nonImpactingOpenIssueCount": 122,
+  "nonImpactingOpenIssueCount": 119,
   "resolvedWithNotApplicable": 0,
   "decidedWithDataUnavailable": 0,
   "resolvedByPurifiedInheritance": 0,
   "resolvedByPracticalDecisionBasis": 0,
   "purifiedInheritedCategoryCount": 140,
   "purifiedOverrides": 5,
-  "remainingMaterialIssues": []
+  "remainingMaterialIssues": [
+    {
+      "battleVariantId": "019-kanto-shadow",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "019-kanto-purified",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "021-kanto-shadow",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "021-kanto-purified",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "022-kanto-shadow",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "022-kanto-purified",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "023-kanto-shadow",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "023-kanto-purified",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "025-kanto-shadow",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "025-kanto-purified",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "026-kanto-shadow",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "026-kanto-purified",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "026-alola-shadow",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    },
+    {
+      "battleVariantId": "026-alola-purified",
+      "issueType": "RULE_NOT_COVERED",
+      "messageZhTw": "此特殊型態尚未被現行規則完整處理，可能改變保留結論。",
+      "suggestedActionZhTw": "確認該型態的價值維度，新增具版本的規則或補充關鍵原始資料後重新計算。"
+    }
+  ]
 }

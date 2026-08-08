@@ -47,17 +47,7 @@
   "confidence": "MEDIUM",
   "dataStatus": "UNKNOWN_RELEASE_STATUS",
   "reviewStatus": "RESOLVED",
-  "reviewIssues": [
-    {
-      "id": "recalibrate-issue-004-kanto-purified",
-      "issueType": "MATERIAL_DATA_GAP",
-      "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "affectsFinalDecision": false,
-      "provisionalDecision": "TRANSFER_CANDIDATE",
-      "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "lastResearchedAt": "2026-08-07T16:00:00.000Z"
-    }
-  ],
+  "reviewIssues": [],
   "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
   "updatedAt": "2026-08-07T16:00:00.000Z",
@@ -426,7 +416,7 @@
     }
   ],
   "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
-  "evaluationId": "evaluation-004-kanto-purified-2026.07.28-v5",
+  "evaluationId": "evaluation-004-kanto-purified-2026.08.06-v7",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
   "inheritance": {

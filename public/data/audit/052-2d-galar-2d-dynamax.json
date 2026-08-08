@@ -12,7 +12,19 @@
   "regionKey": "GALAR",
   "evolvesFromFormId": null,
   "evolutionFamilyNotesZhTw": "可繼續進化至本批範圍外成員；完整家族補齊前先保留少量最佳候選。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-cross-052-galar-863-kanto",
+      "fromFormId": "052-galar",
+      "toFormId": "863-kanto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-07T16:00:00.000Z",
+      "isEvolutionStub": true,
+      "targetUseLevel": "SPECIAL_USE",
+      "targetNameEn": "Perrserker",
+      "targetNameZhTw": "喵頭目"
+    }
+  ],
   "types": [
     "STEEL"
   ],
@@ -22,7 +34,10 @@
     "Meowth",
     "喵喵"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "Perrserker",
+    "喵頭目"
+  ],
   "variantKey": "DYNAMAX",
   "isReleased": false,
   "releaseStatus": "UNRELEASED",

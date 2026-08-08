@@ -106,6 +106,7 @@ interface RecalculatedAssessment extends DirectAssessment {
   pveUseLevel: PveUseLevel;
   disposition: AssessmentDisposition;
   hasLaterEvolutionValue: boolean;
+  familyBoundaryResolved: boolean;
   laterEvolutionTarget: string | null;
   laterEvolutionNote: string | null;
   laterEvolutionLevel: PveUseLevel | null;
@@ -158,7 +159,13 @@ function hasMatchedRule(variant: VariantRecord, ruleKey: string) {
 }
 
 function issueIsCritical(issue: VariantRecord["dataIssues"][number]) {
-  return issue.affectsFinalDecision && criticalIssueTypes.has(issue.issueType);
+  // This is generated output, not source evidence; do not let a previous run
+  // reproduce its own material gap forever.
+  return (
+    !issue.id.startsWith("recalibrate-issue-") &&
+    issue.affectsFinalDecision &&
+    criticalIssueTypes.has(issue.issueType)
+  );
 }
 
 function directAssessment(variant: VariantRecord): DirectAssessment {
@@ -245,8 +252,17 @@ function descendantForms(formId: string, outgoing: Map<string, string[]>) {
   return result;
 }
 
-function hasResolvedFamilyBoundary(variant: VariantRecord, hasLaterEvolutionValue: boolean) {
-  if (hasLaterEvolutionValue || variant.pokemonForm.id === "090-kanto") return true;
+function hasResolvedFamilyBoundary(
+  variant: VariantRecord,
+  hasLaterEvolutionValue: boolean,
+  hasAssessedLaterEvolution = false,
+) {
+  if (
+    hasLaterEvolutionValue ||
+    hasAssessedLaterEvolution ||
+    variant.pokemonForm.id === "090-kanto"
+  )
+    return true;
   return !/範圍外|後續重要進化|可繼續進化/.test(variant.pokemonForm.evolutionFamilyNotesZhTw);
 }
 
@@ -272,6 +288,7 @@ function laterEvolutionAssessment(
   if (!["NORMAL", "SHADOW"].includes(variant.variantKey)) {
     return {
       hasValue: false,
+      boundaryResolved: false,
       target: null,
       note: null,
       level: null,
@@ -294,6 +311,7 @@ function laterEvolutionAssessment(
   if (curated) {
     return {
       hasValue: true,
+      boundaryResolved: true,
       target: curated.targetZhTw,
       note: curated.noteZhTw,
       level: curated.level,
@@ -312,18 +330,37 @@ function laterEvolutionAssessment(
           noteZhTw: string | null;
         } => Boolean(target?.useLevel),
       );
-    const stubTarget = stubTargets.sort((a, b) =>
+    const valuableStubTargets = stubTargets.filter(
+      (target) => target.useLevel !== "NO_SIGNIFICANT_USE",
+    );
+    const stubTarget = valuableStubTargets.sort((a, b) =>
       strongestPveUseLevel([b.useLevel]).localeCompare(strongestPveUseLevel([a.useLevel])),
     )[0];
     if (stubTarget) {
       return {
         hasValue: true,
+        boundaryResolved: true,
         target: stubTarget.nameZhTw,
         note: stubTarget.noteZhTw ?? "正式後續進化目標；完整戰鬥資料尚未納入目前展示批次。",
         level: stubTarget.useLevel,
       };
     }
-    return { hasValue: false, target: null, note: null, level: null };
+    if (stubTargets.some((target) => target.useLevel === "NO_SIGNIFICANT_USE")) {
+      return {
+        hasValue: false,
+        boundaryResolved: true,
+        target: null,
+        note: "後續進化目標已補查，現有資料未顯示會改變保留結論的顯著用途。",
+        level: null,
+      };
+    }
+    return {
+      hasValue: false,
+      boundaryResolved: false,
+      target: null,
+      note: null,
+      level: null,
+    };
   }
   const best = descendantUseful
     .map((candidate) => ({ candidate, assessment: directByVariant.get(candidate.id)! }))
@@ -334,6 +371,7 @@ function laterEvolutionAssessment(
     })[0];
   return {
     hasValue: true,
+    boundaryResolved: true,
     target:
       best?.candidate.pokemonForm.formNameZhTw ??
       best?.candidate.pokemonForm.species.nameZhTw ??
@@ -512,7 +550,7 @@ function categoryDisposition(
 function shouldKeepRuleNotCovered(variant: VariantRecord, assessment: RecalculatedAssessment) {
   return (
     assessment.disposition === "TRUE_DATA_PENDING" &&
-    !hasResolvedFamilyBoundary(variant, assessment.hasLaterEvolutionValue)
+    !assessment.familyBoundaryResolved
   );
 }
 
@@ -649,6 +687,11 @@ async function main() {
       direct.hasMaxValue ||
       direct.hasSpecialAcquisition ||
       later.hasValue;
+    const familyBoundaryResolved = hasResolvedFamilyBoundary(
+      variant,
+      later.hasValue,
+      later.boundaryResolved,
+    );
     const hasCriticalIssue =
       variant.variantKey !== "PURIFIED" &&
       variant.dataIssues.some(
@@ -659,7 +702,7 @@ async function main() {
       variant.dataIssues.some(
         (issue) => issue.issueType === "RULE_NOT_COVERED" && issue.affectsFinalDecision,
       ) &&
-      !hasResolvedFamilyBoundary(variant, later.hasValue);
+      !familyBoundaryResolved;
     const hasTrueDataGap =
       variant.variantKey !== "PURIFIED" &&
       variant.releaseStatus !== "UNRELEASED" &&
@@ -709,6 +752,7 @@ async function main() {
       pveUseLevel,
       disposition,
       hasLaterEvolutionValue: later.hasValue,
+      familyBoundaryResolved,
       laterEvolutionTarget: later.target,
       laterEvolutionNote: later.note,
       laterEvolutionLevel: later.level,
@@ -896,15 +940,19 @@ async function main() {
         const messageZhTw = shouldAffect
           ? materialGapMessage(variant, assessment)
           : nonMaterialIssueMessage(variant, issue.issueType);
+        const generatedIssueResolved =
+          issue.id.startsWith("recalibrate-issue-") && !criticalIssue;
         await tx.dataIssue.update({
           where: { id: issue.id },
           data: {
+            status: generatedIssueResolved ? "RESOLVED" : "OPEN",
             affectsFinalDecision: shouldAffect,
             provisionalDecision: assessment.decision,
             messageZhTw,
             suggestedActionZhTw: messageZhTw,
             suggestedResearchActionZhTw: messageZhTw,
             lastResearchedAt: checkedAt,
+            resolvedAt: generatedIssueResolved ? checkedAt : null,
           },
         });
       }
