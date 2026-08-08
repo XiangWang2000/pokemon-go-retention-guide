@@ -61,6 +61,55 @@ const categories = [
   "EVOLUTION_VALUE",
 ] as const;
 
+const nonSpeciesEvolutionTargetNames = new Set([
+  "關都",
+  "城都",
+  "豐緣",
+  "神奧",
+  "合眾",
+  "卡洛斯",
+  "阿羅拉",
+  "伽勒爾",
+  "洗翠",
+  "帕底亞",
+  "Kanto",
+  "Johto",
+  "Hoenn",
+  "Sinnoh",
+  "Unova",
+  "Kalos",
+  "Alola",
+  "Galar",
+  "Hisui",
+  "Paldea",
+  "一般",
+  "普通",
+  "Normal",
+  "Shadow",
+  "Purified",
+  "Dynamax",
+  "Gigantamax",
+  "Mega",
+]);
+
+const pveUseLevelWeight: Record<PveUseLevel, number> = {
+  NO_SIGNIFICANT_USE: 0,
+  SPECIAL_USE: 1,
+  USABLE_OR_BUDGET: 2,
+  CORE_INVESTMENT: 3,
+};
+
+function safeLaterEvolutionTargetName(name: string | null | undefined) {
+  const normalized = name?.trim();
+  return normalized && !nonSpeciesEvolutionTargetNames.has(normalized) ? normalized : null;
+}
+
+function descendantEvolutionTargetName(candidate: VariantRecord) {
+  const speciesName = safeLaterEvolutionTargetName(candidate.pokemonForm.species.nameZhTw);
+  if (speciesName) return speciesName;
+  return safeLaterEvolutionTargetName(candidate.pokemonForm.formNameZhTw) ?? "後續進化目標";
+}
+
 async function loadVariants() {
   return prisma.battleVariant.findMany({
     where: { pokemonForm: { species: { dexNumber: { gte: dexMin, lte: dexMax } } } },
@@ -312,7 +361,7 @@ function laterEvolutionAssessment(
     return {
       hasValue: true,
       boundaryResolved: true,
-      target: curated.targetZhTw,
+      target: safeLaterEvolutionTargetName(curated.targetZhTw) ?? "後續進化目標",
       note: curated.noteZhTw,
       level: curated.level,
     };
@@ -340,7 +389,7 @@ function laterEvolutionAssessment(
       return {
         hasValue: true,
         boundaryResolved: true,
-        target: stubTarget.nameZhTw,
+        target: safeLaterEvolutionTargetName(stubTarget.nameZhTw) ?? "後續進化目標",
         note: stubTarget.noteZhTw ?? "正式後續進化目標；完整戰鬥資料尚未納入目前展示批次。",
         level: stubTarget.useLevel,
       };
@@ -365,17 +414,17 @@ function laterEvolutionAssessment(
   const best = descendantUseful
     .map((candidate) => ({ candidate, assessment: directByVariant.get(candidate.id)! }))
     .sort((a, b) => {
-      const aLevel = a.assessment.pveLevel;
-      const bLevel = b.assessment.pveLevel;
-      return strongestPveUseLevel([bLevel]).localeCompare(strongestPveUseLevel([aLevel]));
+      const aIsTerminal = (outgoing.get(a.candidate.pokemonForm.id) ?? []).length === 0;
+      const bIsTerminal = (outgoing.get(b.candidate.pokemonForm.id) ?? []).length === 0;
+      if (aIsTerminal !== bIsTerminal) return Number(bIsTerminal) - Number(aIsTerminal);
+      return (
+        pveUseLevelWeight[b.assessment.pveLevel] - pveUseLevelWeight[a.assessment.pveLevel]
+      );
     })[0];
   return {
     hasValue: true,
     boundaryResolved: true,
-    target:
-      best?.candidate.pokemonForm.formNameZhTw ??
-      best?.candidate.pokemonForm.species.nameZhTw ??
-      "後續進化",
+    target: best ? descendantEvolutionTargetName(best.candidate) : "後續進化目標",
     note: "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     level: best?.assessment.pveLevel ?? "SPECIAL_USE",
   };

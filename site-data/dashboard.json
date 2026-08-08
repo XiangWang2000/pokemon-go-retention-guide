@@ -711,7 +711,7 @@
     "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
     "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "SOURCE_MISSING",
@@ -727,11 +727,11 @@
         "lastResearchedAt": "2026-08-07T16:00:00.000Z"
       }
     ],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -1094,7 +1094,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（妙蛙花）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-001-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -1122,7 +1122,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -1148,7 +1148,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -1167,7 +1167,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -1186,7 +1186,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -1194,7 +1194,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -1204,8 +1204,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "SPECIAL_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -1224,7 +1224,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -1250,7 +1250,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -1331,7 +1331,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（妙蛙花）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -2093,7 +2093,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -2456,7 +2456,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（妙蛙花）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-001-kanto-shadow-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -2556,7 +2556,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -2693,7 +2693,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（妙蛙花）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -3425,7 +3425,7 @@
     "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
     "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "SOURCE_MISSING",
@@ -3441,11 +3441,11 @@
         "lastResearchedAt": "2026-08-07T16:00:00.000Z"
       }
     ],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -3808,7 +3808,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（妙蛙花）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-002-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -3836,7 +3836,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -3868,7 +3868,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -3887,7 +3887,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -3906,7 +3906,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -3914,7 +3914,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -3924,8 +3924,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "SPECIAL_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -3944,7 +3944,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -3970,7 +3970,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -4060,7 +4060,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（妙蛙花）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -4837,7 +4837,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -5200,7 +5200,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（妙蛙花）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-002-kanto-shadow-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -5306,7 +5306,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -5452,7 +5452,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（妙蛙花）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -10741,7 +10741,7 @@
     "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
     "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "SOURCE_MISSING",
@@ -10757,11 +10757,11 @@
         "lastResearchedAt": "2026-08-07T16:00:00.000Z"
       }
     ],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-    "pveSummaryZhTw": "可用／預算型。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -11124,7 +11124,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-004-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -11152,7 +11152,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -11178,7 +11178,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -11197,7 +11197,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -11216,7 +11216,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -11224,7 +11224,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "可用／預算型。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -11234,8 +11234,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "USABLE_OR_BUDGET",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -11254,7 +11254,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -11292,7 +11292,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -11358,7 +11358,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -12004,7 +12004,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -12367,7 +12367,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-004-kanto-shadow-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
@@ -12460,7 +12460,7 @@
         "category": "PVE",
         "status": "UNKNOWN_RELEASE_STATUS",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -12522,7 +12522,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -13252,7 +13252,7 @@
     "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
     "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "SOURCE_MISSING",
@@ -13268,11 +13268,11 @@
         "lastResearchedAt": "2026-08-07T16:00:00.000Z"
       }
     ],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-    "pveSummaryZhTw": "可用／預算型。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -13635,7 +13635,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-005-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -13663,7 +13663,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -13695,7 +13695,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -13714,7 +13714,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -13733,7 +13733,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -13741,7 +13741,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "可用／預算型。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -13751,8 +13751,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "USABLE_OR_BUDGET",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -13771,7 +13771,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -13809,7 +13809,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -13884,7 +13884,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -14722,7 +14722,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -15085,7 +15085,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-005-kanto-shadow-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -15191,7 +15191,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -15337,7 +15337,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -21355,7 +21355,7 @@
     "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
     "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "SOURCE_MISSING",
@@ -21371,11 +21371,11 @@
         "lastResearchedAt": "2026-08-07T16:00:00.000Z"
       }
     ],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -21738,7 +21738,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-007-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -21766,7 +21766,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -21792,7 +21792,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -21811,7 +21811,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -21830,7 +21830,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -21838,7 +21838,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -21848,8 +21848,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "SPECIAL_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -21868,7 +21868,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -21906,7 +21906,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -21972,7 +21972,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -22618,7 +22618,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -22981,7 +22981,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-007-kanto-shadow-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
@@ -23074,7 +23074,7 @@
         "category": "PVE",
         "status": "UNKNOWN_RELEASE_STATUS",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -23136,7 +23136,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -23851,7 +23851,7 @@
     "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
     "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "SOURCE_MISSING",
@@ -23867,11 +23867,11 @@
         "lastResearchedAt": "2026-08-07T16:00:00.000Z"
       }
     ],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "LOW",
@@ -24234,7 +24234,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-008-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -24262,7 +24262,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -24288,7 +24288,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -24314,7 +24314,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -24333,7 +24333,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -24341,7 +24341,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -24351,8 +24351,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "SPECIAL_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": []
       },
@@ -24371,7 +24371,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -24397,7 +24397,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-28T04:00:00.000Z",
         "sources": [
           {
@@ -24515,7 +24515,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -25290,7 +25290,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -25653,7 +25653,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-008-kanto-shadow-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -25753,7 +25753,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -25890,7 +25890,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -31208,7 +31208,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "特殊用途。巴大蝶：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -31571,7 +31571,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（巴大蝶）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-010-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -31677,7 +31677,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "特殊用途。巴大蝶：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -31820,7 +31820,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（巴大蝶）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -33956,7 +33956,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "特殊用途。巴大蝶：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -34319,7 +34319,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（巴大蝶）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-011-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -34412,7 +34412,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "特殊用途。巴大蝶：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -34537,7 +34537,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（巴大蝶）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -40110,7 +40110,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。大針蜂：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -40473,7 +40473,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（大針蜂）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-013-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -40573,7 +40573,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。大針蜂：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -40707,7 +40707,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（大針蜂）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -42803,7 +42803,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。大針蜂：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -43166,7 +43166,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（大針蜂）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-014-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -43272,7 +43272,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。大針蜂：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -43415,7 +43415,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（大針蜂）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -49157,7 +49157,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-    "pveSummaryZhTw": "可用／預算型。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "可用／預算型。大比鳥：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -49520,7 +49520,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（大比鳥）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-016-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -49626,7 +49626,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "可用／預算型。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "可用／預算型。大比鳥：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -49769,7 +49769,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（大比鳥）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -51895,7 +51895,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "可用／預算型。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "可用／預算型。大比鳥：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -52258,7 +52258,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（大比鳥）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-017-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -52364,7 +52364,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "可用／預算型。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "可用／預算型。大比鳥：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -52510,7 +52510,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（大比鳥）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -69175,7 +69175,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。大嘴雀：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -69538,7 +69538,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（大嘴雀）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-021-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -69638,7 +69638,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。大嘴雀：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -69772,7 +69772,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（大嘴雀）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -80562,7 +80562,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。雷丘：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -80925,7 +80925,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（雷丘）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-025-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -81038,7 +81038,7 @@
         "category": "PVE",
         "status": "PARTIALLY_VERIFIED",
         "provenance": "SOURCE_VERIFIED",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。雷丘：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -81226,7 +81226,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（雷丘）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": [
@@ -90363,7 +90363,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "無顯著用途。阿羅拉：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。穿山王：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -90726,7 +90726,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（阿羅拉）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（穿山王）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-027-alola-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -90832,7 +90832,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。阿羅拉：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。穿山王：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -90978,7 +90978,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（阿羅拉）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（穿山王）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -91047,7 +91047,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。穿山王：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -91410,7 +91410,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（穿山王）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-027-kanto-normal-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -91510,7 +91510,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。穿山王：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -91647,7 +91647,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（穿山王）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -93115,7 +93115,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-    "pveSummaryZhTw": "無顯著用途。阿羅拉：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。穿山王：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -93478,7 +93478,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（阿羅拉）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（穿山王）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "evaluation-027-alola-shadow-2026.08.06-v7",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -93584,7 +93584,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。阿羅拉：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。穿山王：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -93730,7 +93730,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（阿羅拉）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（穿山王）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -100890,7 +100890,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。尼多后：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -101253,7 +101253,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（尼多后）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-cross-029-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "#029、#030、#031 已使用同一 familyKey 與連續進化路徑。",
@@ -101359,7 +101359,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。尼多后：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -101447,7 +101447,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（尼多后）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -102190,7 +102190,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。尼多后：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -102553,7 +102553,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（尼多后）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-cross-029-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "#029、#030、#031 已使用同一 familyKey 與連續進化路徑。",
@@ -102659,7 +102659,7 @@
         "category": "PVE",
         "status": "SOURCE_MISSING",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。尼多后：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -102747,7 +102747,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（尼多后）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -103442,7 +103442,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。尼多后：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -103805,7 +103805,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（尼多后）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-cross-030-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "#029、#030、#031 已使用同一 familyKey 與連續進化路徑。",
@@ -103912,7 +103912,7 @@
         "category": "PVE",
         "status": "PARTIALLY_VERIFIED",
         "provenance": "SOURCE_VERIFIED",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。尼多后：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": true,
         "rocketRating": null,
         "rocketRoles": [],
@@ -104059,7 +104059,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（尼多后）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -104788,7 +104788,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。尼多后：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -105151,7 +105151,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（尼多后）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-cross-030-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "#029、#030、#031 已使用同一 familyKey 與連續進化路徑。",
@@ -105258,7 +105258,7 @@
         "category": "PVE",
         "status": "PARTIALLY_VERIFIED",
         "provenance": "SOURCE_VERIFIED",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。尼多后：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": true,
         "rocketRating": null,
         "rocketRoles": [],
@@ -105405,7 +105405,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（尼多后）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -115649,7 +115649,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #1137；招式 ZEN_HEADBUTT／DISARMING_VOICE／BODY_SLAM",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。皮可西：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -116012,7 +116012,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（皮可西）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-eval-035-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -116105,7 +116105,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。皮可西：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -116217,7 +116217,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（皮可西）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -120933,7 +120933,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。阿羅拉：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。九尾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -121296,7 +121296,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（阿羅拉）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（九尾）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-eval-037-alola-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -121396,7 +121396,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。阿羅拉：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。九尾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -121468,7 +121468,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（阿羅拉）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（九尾）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -121527,7 +121527,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。九尾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -121890,7 +121890,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（九尾）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-eval-037-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -121990,7 +121990,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。九尾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -122062,7 +122062,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（九尾）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -123279,7 +123279,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。阿羅拉：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。九尾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -123642,7 +123642,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（阿羅拉）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（九尾）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-eval-037-alola-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -123735,7 +123735,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。阿羅拉：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。九尾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -123797,7 +123797,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（阿羅拉）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（九尾）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -123856,7 +123856,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。九尾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -124219,7 +124219,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（九尾）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-eval-037-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -124312,7 +124312,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。九尾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -124374,7 +124374,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（九尾）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -129938,7 +129938,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。胖可丁：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -130301,7 +130301,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（胖可丁）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-eval-039-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -130394,7 +130394,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。胖可丁：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -130456,7 +130456,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（胖可丁）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -182560,7 +182560,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #776；招式 KARATE_CHOP／CROSS_CHOP／BRICK_BREAK",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。火爆猴：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -182923,7 +182923,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（火爆猴）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-eval-056-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -183016,7 +183016,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。火爆猴：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -183128,7 +183128,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（火爆猴）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -183774,7 +183774,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #766；招式 KARATE_CHOP／CROSS_CHOP／BRICK_BREAK",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。火爆猴：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -184137,7 +184137,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（火爆猴）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-eval-056-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -184230,7 +184230,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。火爆猴：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -184342,7 +184342,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（火爆猴）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -188710,7 +188710,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #674；招式 EMBER／FLAME_WHEEL／BODY_SLAM",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。風速狗：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -189073,7 +189073,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（風速狗）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-eval-058-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -189166,7 +189166,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。風速狗：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -189278,7 +189278,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（風速狗）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -191074,7 +191074,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #567；招式 EMBER／FLAME_WHEEL／BODY_SLAM",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。風速狗：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -191437,7 +191437,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（風速狗）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r8-eval-058-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -191530,7 +191530,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。風速狗：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -191651,7 +191651,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（風速狗）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -197227,7 +197227,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。蚊香泳士：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -197590,7 +197590,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（蚊香泳士）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-cross-060-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "#060、#061、#062 已使用同一 familyKey 與連續進化路徑。",
@@ -197690,7 +197690,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。蚊香泳士：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -197762,7 +197762,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（蚊香泳士）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -198398,7 +198398,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "前階本體未列為本批主要 Open League 目標。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。蚊香泳士：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊缺少統一排名不會觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -198761,7 +198761,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（蚊香泳士）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-cross-060-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "#060、#061、#062 已使用同一 familyKey 與連續進化路徑。",
@@ -198854,7 +198854,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。蚊香泳士：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -198916,7 +198916,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（蚊香泳士）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -199578,7 +199578,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #739；招式 BUBBLE／SCALD／MUD_BOMB",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。蚊香泳士：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -199941,7 +199941,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（蚊香泳士）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-061-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -200034,7 +200034,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。蚊香泳士：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -200146,7 +200146,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（蚊香泳士）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -200808,7 +200808,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #830；招式 BUBBLE／SCALD／MUD_BOMB",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。蚊香泳士：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -201171,7 +201171,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（蚊香泳士）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-061-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -201264,7 +201264,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。蚊香泳士：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -201376,7 +201376,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（蚊香泳士）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -212463,17 +212463,17 @@
     "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
     "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "DATA_UNAVAILABLE",
     "reviewStatus": "RESOLVED",
     "reviewIssues": [],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #458；招式 KARATE_CHOP／CROSS_CHOP／BRICK_BREAK",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。怪力：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -212836,7 +212836,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（怪力）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-066-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -212864,7 +212864,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -212883,7 +212883,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -212902,7 +212902,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -212921,7 +212921,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -212929,7 +212929,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。怪力：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -212939,8 +212939,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "SPECIAL_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -212959,7 +212959,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": [
           {
@@ -212985,7 +212985,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       }
@@ -213041,7 +213041,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（怪力）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -213667,17 +213667,17 @@
     "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
     "notesZhTw": "暗影個體使用較寬鬆的獨立 IV 規則；不要因低總 IV 自動淨化。",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "DATA_UNAVAILABLE",
     "reviewStatus": "RESOLVED",
     "reviewIssues": [],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #420；招式 KARATE_CHOP／CROSS_CHOP／BRICK_BREAK",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。怪力：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -214040,7 +214040,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（怪力）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-066-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -214068,7 +214068,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -214087,7 +214087,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -214106,7 +214106,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -214125,7 +214125,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -214133,7 +214133,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。怪力：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -214143,8 +214143,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "NO_SIGNIFICANT_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -214163,7 +214163,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": [
           {
@@ -214189,7 +214189,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       }
@@ -214245,7 +214245,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（怪力）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -214888,17 +214888,17 @@
     "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
     "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "DATA_UNAVAILABLE",
     "reviewStatus": "RESOLVED",
     "reviewIssues": [],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #431；招式 KARATE_CHOP／CROSS_CHOP／RETURN；UL（高級聯盟） Overall #458；招式 KARATE_CHOP／CROSS_CHOP／DYNAMIC_PUNCH",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。怪力：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -215261,7 +215261,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（怪力）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-067-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -215289,7 +215289,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -215308,7 +215308,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -215327,7 +215327,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -215346,7 +215346,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -215354,7 +215354,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。怪力：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -215364,8 +215364,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "SPECIAL_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -215384,7 +215384,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": [
           {
@@ -215416,7 +215416,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       }
@@ -215513,7 +215513,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（怪力）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -216149,7 +216149,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #212；招式 KARATE_CHOP／CROSS_CHOP／DYNAMIC_PUNCH；UL（高級聯盟） Overall #342；招式 KARATE_CHOP／CROSS_CHOP／DYNAMIC_PUNCH",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。怪力：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -216512,7 +216512,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（怪力）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-067-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -216605,7 +216605,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。怪力：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -216764,7 +216764,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（怪力）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -220540,17 +220540,17 @@
     "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
     "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "DATA_UNAVAILABLE",
     "reviewStatus": "RESOLVED",
     "reviewIssues": [],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -220913,7 +220913,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（大食花）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-069-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -220941,7 +220941,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -220960,7 +220960,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -220979,7 +220979,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -220998,7 +220998,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -221006,7 +221006,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -221016,8 +221016,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "NO_SIGNIFICANT_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -221036,7 +221036,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -221055,7 +221055,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       }
@@ -221068,7 +221068,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（大食花）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -221706,7 +221706,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -222069,7 +222069,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（大食花）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-069-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -222162,7 +222162,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -222224,7 +222224,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（大食花）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -222852,17 +222852,17 @@
     "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
     "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "DATA_UNAVAILABLE",
     "reviewStatus": "RESOLVED",
     "reviewIssues": [],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #707；招式 ACID／POWER_WHIP／SEED_BOMB",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -223225,7 +223225,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（大食花）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-070-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -223253,7 +223253,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -223272,7 +223272,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -223291,7 +223291,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -223310,7 +223310,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -223318,7 +223318,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -223328,8 +223328,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "NO_SIGNIFICANT_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       },
@@ -223348,7 +223348,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": [
           {
@@ -223374,7 +223374,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-07-30T15:45:00.000Z",
         "sources": []
       }
@@ -223430,7 +223430,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（大食花）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -224068,7 +224068,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #977；招式 ACID／POWER_WHIP／SLUDGE_BOMB",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -224431,7 +224431,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（大食花）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-070-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -224524,7 +224524,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -224636,7 +224636,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（大食花）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -228307,7 +228307,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #883；招式 POISON_STING／WRAP／WATER_PULSE",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。毒刺水母：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -228670,7 +228670,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（毒刺水母）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-072-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -228763,7 +228763,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。毒刺水母：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -228875,7 +228875,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（毒刺水母）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -229513,7 +229513,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #903；招式 POISON_STING／WRAP／WATER_PULSE",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。毒刺水母：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -229876,7 +229876,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（毒刺水母）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-072-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -229969,7 +229969,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。毒刺水母：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -230081,7 +230081,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（毒刺水母）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -249420,7 +249420,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #746；招式 EMBER／FLAME_WHEEL／STOMP",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。烈焰馬：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -249783,7 +249783,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（烈焰馬）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-077-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -249876,7 +249876,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。烈焰馬：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -249988,7 +249988,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（烈焰馬）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -251782,7 +251782,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #665；招式 EMBER／FLAME_WHEEL／STOMP",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。烈焰馬：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -252145,7 +252145,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（烈焰馬）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-077-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -252238,7 +252238,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。烈焰馬：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -252350,7 +252350,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（烈焰馬）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -277812,7 +277812,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。嘟嘟利：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -278175,7 +278175,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（嘟嘟利）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-084-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -278268,7 +278268,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。嘟嘟利：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -278330,7 +278330,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（嘟嘟利）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -282471,7 +282471,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #916；招式 WATER_GUN／AQUA_TAIL／ICY_WIND",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。白海獅：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -282834,7 +282834,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（白海獅）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-086-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -282927,7 +282927,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。白海獅：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -283039,7 +283039,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（白海獅）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -283675,7 +283675,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #960；招式 WATER_GUN／AQUA_TAIL／ICY_WIND",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。白海獅：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -284038,7 +284038,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（白海獅）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r10-eval-086-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -284131,7 +284131,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。白海獅：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -284243,7 +284243,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（白海獅）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -302000,17 +302000,17 @@
     "releaseVerifiedAt": "2026-08-03T08:30:00.000Z",
     "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "DATA_UNAVAILABLE",
     "reviewStatus": "RESOLVED",
     "reviewIssues": [],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。耿鬼：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -302373,7 +302373,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（耿鬼）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-092-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -302401,7 +302401,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -302420,7 +302420,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -302439,7 +302439,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -302458,7 +302458,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -302466,7 +302466,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。耿鬼：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -302476,8 +302476,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "SPECIAL_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -302496,7 +302496,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -302515,7 +302515,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       }
@@ -302528,7 +302528,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（耿鬼）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -303166,7 +303166,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。耿鬼：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -303529,7 +303529,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（耿鬼）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-092-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -303622,7 +303622,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。耿鬼：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -303684,7 +303684,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（耿鬼）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -304329,17 +304329,17 @@
     "releaseVerifiedAt": "2026-08-03T08:30:00.000Z",
     "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "DATA_UNAVAILABLE",
     "reviewStatus": "RESOLVED",
     "reviewIssues": [],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #536；招式 SHADOW_CLAW／SHADOW_PUNCH／ICE_PUNCH",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。耿鬼：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -304702,7 +304702,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（耿鬼）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-093-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -304730,7 +304730,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -304749,7 +304749,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -304768,7 +304768,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -304787,7 +304787,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -304795,7 +304795,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。耿鬼：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -304805,8 +304805,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "SPECIAL_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -304825,7 +304825,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": [
           {
@@ -304851,7 +304851,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       }
@@ -304907,7 +304907,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（耿鬼）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -305545,7 +305545,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #685；招式 SHADOW_CLAW／ICE_PUNCH／SHADOW_BALL",
-    "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。耿鬼：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -305908,7 +305908,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（耿鬼）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-093-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -306001,7 +306001,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。耿鬼：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -306113,7 +306113,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（耿鬼）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -312811,7 +312811,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #943；招式 CONFUSION／PSYSHOCK／RETURN",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。引夢貘人：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -313174,7 +313174,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（引夢貘人）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-096-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -313267,7 +313267,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。引夢貘人：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -313379,7 +313379,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（引夢貘人）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -317668,17 +317668,17 @@
     "releaseVerifiedAt": "2026-08-03T08:30:00.000Z",
     "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
     "decision": "CONDITIONAL_KEEP",
-    "assessmentDisposition": "LIMITED_USE",
+    "assessmentDisposition": "CLEAR_USE",
     "provenance": "MANUAL_CURATED",
     "confidence": "MEDIUM",
     "dataStatus": "DATA_UNAVAILABLE",
     "reviewStatus": "RESOLVED",
     "reviewIssues": [],
-    "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+    "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #1048；招式 BUBBLE／VICE_GRIP／RAZOR_SHELL",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "核心投資。巨鉗蟹：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -318041,7 +318041,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（巨鉗蟹）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-098-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -318069,7 +318069,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -318088,7 +318088,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -318107,7 +318107,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -318126,7 +318126,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -318134,7 +318134,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "核心投資。巨鉗蟹：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -318144,8 +318144,8 @@
         "maxOverallRating": null,
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
-        "pveUseLevel": "SPECIAL_USE",
-        "assessmentDisposition": "LIMITED_USE",
+        "pveUseLevel": "CORE_INVESTMENT",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       },
@@ -318164,7 +318164,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": [
           {
@@ -318190,7 +318190,7 @@
         "maxInvestmentRating": null,
         "maxUseCaseBreadth": null,
         "pveUseLevel": null,
-        "assessmentDisposition": "LIMITED_USE",
+        "assessmentDisposition": "CLEAR_USE",
         "checkedAt": "2026-08-03T08:30:00.000Z",
         "sources": []
       }
@@ -318246,7 +318246,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（巨鉗蟹）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -323707,7 +323707,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。洗翠：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。頑皮雷彈：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -324070,7 +324070,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（洗翠）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（頑皮雷彈）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-100-hisui-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -324170,7 +324170,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。洗翠：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。頑皮雷彈：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -324242,7 +324242,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（洗翠）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（頑皮雷彈）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -354839,7 +354839,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #1047；招式 INFESTATION／SLUDGE／DARK_PULSE",
-    "pveSummaryZhTw": "無顯著用途。伽勒爾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。雙彈瓦斯：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -355202,7 +355202,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（伽勒爾）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（雙彈瓦斯）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-109-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -355302,7 +355302,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。伽勒爾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。雙彈瓦斯：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -355423,7 +355423,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（伽勒爾）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（雙彈瓦斯）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -356085,7 +356085,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #1076；招式 INFESTATION／SLUDGE／DARK_PULSE",
-    "pveSummaryZhTw": "無顯著用途。伽勒爾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。雙彈瓦斯：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -356448,7 +356448,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（伽勒爾）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（雙彈瓦斯）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-109-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -356541,7 +356541,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。伽勒爾：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。雙彈瓦斯：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -356653,7 +356653,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（伽勒爾）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（雙彈瓦斯）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -380032,7 +380032,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #860；招式 PECK／AQUA_TAIL／HORN_ATTACK",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。金魚王：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -380395,7 +380395,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（金魚王）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-118-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -380488,7 +380488,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。金魚王：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -380600,7 +380600,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（金魚王）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -384735,7 +384735,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。寶石海星：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -385098,7 +385098,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（寶石海星）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-120-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -385198,7 +385198,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。寶石海星：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -385270,7 +385270,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（寶石海星）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -385923,7 +385923,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。寶石海星：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "官方已確認暗影海星星於 2025 年開放；沒有排行榜不等於未推出。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -386286,7 +386286,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（寶石海星）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r12-eval-120-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -386379,7 +386379,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。寶石海星：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -386458,7 +386458,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（寶石海星）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -417690,7 +417690,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "特殊用途。暴鯉龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -418053,7 +418053,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（暴鯉龍）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r13-eval-129-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -418146,7 +418146,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "特殊用途。暴鯉龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -418208,7 +418208,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（暴鯉龍）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -418844,7 +418844,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。暴鯉龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -419207,7 +419207,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（暴鯉龍）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r13-eval-129-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -419300,7 +419300,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。暴鯉龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -419362,7 +419362,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（暴鯉龍）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -471918,7 +471918,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "特殊用途。快龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -472281,7 +472281,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（快龍）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r13-eval-147-kanto-normal",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -472374,7 +472374,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "特殊用途。快龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -472436,7 +472436,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（快龍）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -473072,7 +473072,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。快龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -473435,7 +473435,7 @@
         "updatedAt": "2026-07-17T16:45:17.000Z"
       }
     ],
-    "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+    "reasonZhTw": "用途有限：後續進化（快龍）已有用途；只保留少量符合條件的進化候選。",
     "evaluationId": "r13-eval-147-kanto-shadow",
     "rulesVersion": "2026.08.06-v7",
     "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -473528,7 +473528,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。快龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -473590,7 +473590,7 @@
         "priority": 850,
         "matched": true,
         "resultDecision": "CONDITIONAL_KEEP",
-        "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+        "explanationZhTw": "用途有限：後續進化（快龍）已有用途；只保留少量符合條件的進化候選。"
       }
     ],
     "moves": []
@@ -474226,7 +474226,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #35；招式 DRAGON_BREATH／AQUA_TAIL／DRAGON_PULSE",
-    "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "特殊用途。快龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -474682,7 +474682,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "特殊用途。快龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],
@@ -475430,7 +475430,7 @@
     "reviewed": true,
     "updatedAt": "2026-08-07T16:00:00.000Z",
     "pvpSummaryZhTw": "GL（超級聯盟） Overall #29；招式 DRAGON_BREATH／WRAP／AQUA_TAIL",
-    "pveSummaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+    "pveSummaryZhTw": "無顯著用途。快龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
     "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
     "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
     "gymRating": "NOT_APPLICABLE",
@@ -475886,7 +475886,7 @@
         "category": "PVE",
         "status": "DATA_UNAVAILABLE",
         "provenance": "DATA_UNAVAILABLE",
-        "summaryZhTw": "無顯著用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+        "summaryZhTw": "無顯著用途。快龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
         "materialToDecision": false,
         "rocketRating": null,
         "rocketRoles": [],

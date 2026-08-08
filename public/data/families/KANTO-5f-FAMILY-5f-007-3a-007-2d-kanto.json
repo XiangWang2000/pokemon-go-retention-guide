@@ -90,7 +90,7 @@
               "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
               "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
               "decision": "CONDITIONAL_KEEP",
-              "assessmentDisposition": "LIMITED_USE",
+              "assessmentDisposition": "CLEAR_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "SOURCE_MISSING",
@@ -106,11 +106,11 @@
                   "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
-              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+              "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
               "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
-              "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+              "pveSummaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -120,7 +120,7 @@
               "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
-              "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+              "reasonZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "evaluation-007-kanto-normal-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -148,7 +148,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -167,7 +167,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -186,7 +186,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -205,7 +205,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -213,7 +213,7 @@
                   "category": "PVE",
                   "status": "SOURCE_MISSING",
                   "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+                  "summaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -223,8 +223,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "SPECIAL_USE",
-                  "assessmentDisposition": "LIMITED_USE",
+                  "pveUseLevel": "CORE_INVESTMENT",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -243,7 +243,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -262,7 +262,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 }
@@ -321,7 +321,7 @@
                   "priority": 850,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
-                  "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+                  "explanationZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。"
                 }
               ],
               "moves": []
@@ -400,7 +400,7 @@
               "reviewed": true,
               "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
-              "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+              "pveSummaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -410,7 +410,7 @@
               "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
-              "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+              "reasonZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "evaluation-007-kanto-shadow-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
@@ -503,7 +503,7 @@
                   "category": "PVE",
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+                  "summaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -565,7 +565,7 @@
                   "priority": 850,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
-                  "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+                  "explanationZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。"
                 }
               ],
               "moves": []
@@ -1115,9 +1115,9 @@
           "tone": "NONE"
         },
         "pve": {
-          "label": "特殊用途",
-          "detail": "後續世代進化：關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-          "tone": "SPECIAL"
+          "label": "核心投資",
+          "detail": "後續世代進化：水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+          "tone": "HIGH"
         },
         "gym": {
           "label": "—",
@@ -1474,7 +1474,7 @@
               "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
               "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
               "decision": "CONDITIONAL_KEEP",
-              "assessmentDisposition": "LIMITED_USE",
+              "assessmentDisposition": "CLEAR_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "SOURCE_MISSING",
@@ -1490,11 +1490,11 @@
                   "lastResearchedAt": "2026-08-07T16:00:00.000Z"
                 }
               ],
-              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+              "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
               "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-              "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+              "pveSummaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "LOW",
@@ -1504,7 +1504,7 @@
               "requiredMovesSummaryZhTw": "來源建議招式：WATER_GUN、AQUA_JET、ICE_BEAM。請先確認限定招式取得方式。",
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
-              "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+              "reasonZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "evaluation-008-kanto-normal-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -1532,7 +1532,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -1551,7 +1551,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -1570,7 +1570,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -1589,7 +1589,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -1597,7 +1597,7 @@
                   "category": "PVE",
                   "status": "SOURCE_MISSING",
                   "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+                  "summaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1607,8 +1607,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "SPECIAL_USE",
-                  "assessmentDisposition": "LIMITED_USE",
+                  "pveUseLevel": "CORE_INVESTMENT",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -1627,7 +1627,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 },
@@ -1646,7 +1646,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-28T04:00:00.000Z",
                   "sources": []
                 }
@@ -1757,7 +1757,7 @@
                   "priority": 850,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
-                  "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+                  "explanationZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。"
                 }
               ],
               "moves": []
@@ -1836,7 +1836,7 @@
               "reviewed": true,
               "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
-              "pveSummaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+              "pveSummaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -1846,7 +1846,7 @@
               "requiredMovesSummaryZhTw": "來源建議招式：WATER_GUN、AQUA_JET、ICE_BEAM。請先確認限定招式取得方式。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
               "ivRecommendations": [],
-              "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+              "reasonZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "evaluation-008-kanto-shadow-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -1939,7 +1939,7 @@
                   "category": "PVE",
                   "status": "SOURCE_MISSING",
                   "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "核心投資。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+                  "summaryZhTw": "核心投資。水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -2062,7 +2062,7 @@
                   "priority": 850,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
-                  "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+                  "explanationZhTw": "用途有限：後續進化（水箭龜）已有用途；只保留少量符合條件的進化候選。"
                 }
               ],
               "moves": []
@@ -2672,7 +2672,7 @@
         },
         "pve": {
           "label": "核心投資",
-          "detail": "暗影／後續世代進化：關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+          "detail": "後續世代進化：水箭龜：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
           "tone": "HIGH"
         },
         "gym": {

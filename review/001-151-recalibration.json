@@ -1,6 +1,6 @@
 {
   "scope": "1-151",
-  "dataVersion": "2026.08.08-r16",
+  "dataVersion": "2026.08.08-r17",
   "updatedAt": "2026-08-08",
   "generatedAt": "2026-08-07T16:00:00.000Z",
   "rulesVersion": "2026.08.06-v7",
@@ -13,17 +13,17 @@
     },
     "dispositions": {
       "NO_SIGNIFICANT_USE": 326,
-      "LIMITED_USE": 210,
-      "CLEAR_USE": 38,
+      "CLEAR_USE": 52,
+      "LIMITED_USE": 196,
       "NOT_APPLICABLE_OR_UNRELEASED": 209
     },
     "pveUseLevels": {
-      "NO_SIGNIFICANT_USE": 639,
-      "SPECIAL_USE": 84,
-      "CORE_INVESTMENT": 38,
-      "USABLE_OR_BUDGET": 22
+      "NO_SIGNIFICANT_USE": 636,
+      "CORE_INVESTMENT": 52,
+      "SPECIAL_USE": 75,
+      "USABLE_OR_BUDGET": 20
     },
-    "changedFields": 878
+    "changedFields": 14
   },
   "trueDataPending": [],
   "highRiskReview": [
@@ -83,9 +83,9 @@
       "nameZhTw": "腕力",
       "variantKey": "NORMAL",
       "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
-      "disposition": "LIMITED_USE",
-      "laterEvolutionTarget": "關都"
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "怪力"
     },
     {
       "id": "066-kanto-purified",
@@ -103,9 +103,9 @@
       "nameZhTw": "腕力",
       "variantKey": "SHADOW",
       "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "LIMITED_USE",
-      "laterEvolutionTarget": "關都"
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "怪力"
     },
     {
       "id": "081-kanto-dynamax",
@@ -163,9 +163,9 @@
       "nameZhTw": "鬼斯",
       "variantKey": "NORMAL",
       "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
-      "disposition": "LIMITED_USE",
-      "laterEvolutionTarget": "關都"
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "耿鬼"
     },
     {
       "id": "092-kanto-purified",
@@ -185,7 +185,7 @@
       "decision": "CONDITIONAL_KEEP",
       "pveUseLevel": "CORE_INVESTMENT",
       "disposition": "CLEAR_USE",
-      "laterEvolutionTarget": "關都"
+      "laterEvolutionTarget": "耿鬼"
     },
     {
       "id": "111-kanto-dynamax",
@@ -785,7 +785,7 @@
       "decision": "CONDITIONAL_KEEP",
       "pveUseLevel": "SPECIAL_USE",
       "disposition": "LIMITED_USE",
-      "laterEvolutionTarget": "關都"
+      "laterEvolutionTarget": "快龍"
     },
     {
       "id": "147-kanto-purified",
@@ -805,7 +805,7 @@
       "decision": "CONDITIONAL_KEEP",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
       "disposition": "LIMITED_USE",
-      "laterEvolutionTarget": "關都"
+      "laterEvolutionTarget": "快龍"
     },
     {
       "id": "150-armored-dynamax",

@@ -90,17 +90,17 @@
               "releaseVerifiedAt": "2026-08-03T08:30:00.000Z",
               "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
               "decision": "CONDITIONAL_KEEP",
-              "assessmentDisposition": "LIMITED_USE",
+              "assessmentDisposition": "CLEAR_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+              "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
               "updatedAt": "2026-08-07T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #1048；招式 BUBBLE／VICE_GRIP／RAZOR_SHELL",
-              "pveSummaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+              "pveSummaryZhTw": "核心投資。巨鉗蟹：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -110,7 +110,7 @@
               "requiredMovesSummaryZhTw": "沒有招式足以把此低用途版本自動升格為必留。",
               "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
               "ivRecommendations": [],
-              "reasonZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。",
+              "reasonZhTw": "用途有限：後續進化（巨鉗蟹）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "r12-eval-098-kanto-normal",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -138,7 +138,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-03T08:30:00.000Z",
                   "sources": []
                 },
@@ -157,7 +157,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-03T08:30:00.000Z",
                   "sources": []
                 },
@@ -176,7 +176,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-03T08:30:00.000Z",
                   "sources": []
                 },
@@ -195,7 +195,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-03T08:30:00.000Z",
                   "sources": []
                 },
@@ -203,7 +203,7 @@
                   "category": "PVE",
                   "status": "DATA_UNAVAILABLE",
                   "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "特殊用途。關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+                  "summaryZhTw": "核心投資。巨鉗蟹：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -213,8 +213,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "SPECIAL_USE",
-                  "assessmentDisposition": "LIMITED_USE",
+                  "pveUseLevel": "CORE_INVESTMENT",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-03T08:30:00.000Z",
                   "sources": []
                 },
@@ -233,7 +233,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-03T08:30:00.000Z",
                   "sources": []
                 },
@@ -252,7 +252,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-03T08:30:00.000Z",
                   "sources": []
                 }
@@ -308,7 +308,7 @@
                   "priority": 850,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
-                  "explanationZhTw": "用途有限：後續進化（關都）已有用途；只保留少量符合條件的進化候選。"
+                  "explanationZhTw": "用途有限：後續進化（巨鉗蟹）已有用途；只保留少量符合條件的進化候選。"
                 }
               ],
               "moves": []
@@ -1090,9 +1090,9 @@
           "tone": "LOW"
         },
         "pve": {
-          "label": "特殊用途",
-          "detail": "後續世代進化：關都：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-          "tone": "SPECIAL"
+          "label": "核心投資",
+          "detail": "後續世代進化：巨鉗蟹：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+          "tone": "HIGH"
         },
         "gym": {
           "label": "—",

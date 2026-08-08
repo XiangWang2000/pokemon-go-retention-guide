@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { getDashboardRows } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
 import { buildFormOverviews } from "@/presentation/form-overview";
+import recalibrationReport from "../review/001-151-recalibration.json";
 
 const forms = buildFormOverviews(await getDashboardRows());
 const families = buildFamilyOverviews(forms);
@@ -75,6 +76,34 @@ describe("cross-generation evolution targets", () => {
       expect(summary, formId).toContain(`可進化為${targetName}`);
       expect(summary, formId).toContain("優質普通候選");
       expect(summary, formId).toContain("暗影版本另按暗影用途判斷");
+    }
+  });
+
+  it("uses descendant species names instead of regional form names", () => {
+    const expectedTargets = {
+      66: "怪力",
+      92: "耿鬼",
+      147: "快龍",
+    } as const;
+
+    for (const [dexNumber, targetName] of Object.entries(expectedTargets)) {
+      const rows = recalibrationReport.highRiskReview.filter(
+        (item) => item.dexNumber === Number(dexNumber) && ["NORMAL", "SHADOW"].includes(item.variantKey),
+      );
+      expect(rows, `#${dexNumber}`).toHaveLength(2);
+      expect(rows.map((item) => item.laterEvolutionTarget), `#${dexNumber}`).toEqual([
+        targetName,
+        targetName,
+      ]);
+    }
+  });
+
+  it("never emits a pure region or form label as a later evolution target", () => {
+    const invalidNames = new Set(["關都", "阿羅拉", "伽勒爾", "Kanto", "Alola", "Galar"]);
+    for (const item of recalibrationReport.highRiskReview) {
+      if (item.laterEvolutionTarget) {
+        expect(invalidNames.has(item.laterEvolutionTarget), item.id).toBe(false);
+      }
     }
   });
 });
