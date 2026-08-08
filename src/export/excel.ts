@@ -53,15 +53,8 @@ function hyperlink(url: string, text: string) {
 }
 
 export async function buildExportWorkbook(prisma: PrismaClient) {
-  const [forms, variants, raw, moves, evolutions, issues, sources, changes] = await Promise.all([
+  const [forms, raw, moves, evolutions, issues, sources, changes] = await Promise.all([
     prisma.pokemonForm.findMany({ include: { species: true } }),
-    prisma.battleVariant.findMany({
-      include: {
-        pokemonForm: { include: { species: true } },
-        retentionEvaluations: { orderBy: { generatedAt: "desc" }, take: 1 },
-        categoryEvaluations: true,
-      },
-    }),
     prisma.rawEvaluationData.findMany({
       include: {
         battleVariant: { include: { pokemonForm: { include: { species: true } } } },
@@ -84,6 +77,20 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
     prisma.sourceReference.findMany(),
     prisma.changeLog.findMany({ include: { source: true } }),
   ]);
+  const variants = [];
+  for (let skip = 0; ; skip += 150) {
+    const page = await prisma.battleVariant.findMany({
+      take: 150,
+      skip,
+      include: {
+        pokemonForm: { include: { species: true } },
+        retentionEvaluations: { orderBy: { generatedAt: "desc" }, take: 1 },
+        categoryEvaluations: true,
+      },
+    });
+    variants.push(...page);
+    if (page.length < 150) break;
+  }
   const sheets: ExportSheet[] = [
     {
       name: "寶可夢型態",

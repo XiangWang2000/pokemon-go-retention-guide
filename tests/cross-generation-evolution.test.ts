@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { getDashboardRows } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
 import { buildFormOverviews } from "@/presentation/form-overview";
-import recalibrationReport from "../review/001-181-recalibration.json";
+import recalibrationReport from "../review/001-211-recalibration.json";
 
 const forms = buildFormOverviews(await getDashboardRows());
 const families = buildFamilyOverviews(forms);
@@ -19,7 +19,7 @@ describe("cross-generation evolution targets", () => {
   it("keeps formal later-generation paths for high-risk families", () => {
     const expectedPaths = [
       ["042-kanto", "169-johto"],
-      ["044-kanto", "182-kanto"],
+      ["044-kanto", "182-johto"],
       ["052-galar", "863-kanto"],
       ["082-kanto", "462-kanto"],
       ["112-kanto", "464-kanto"],
@@ -37,7 +37,7 @@ describe("cross-generation evolution targets", () => {
   it("records an assessed use level for material out-of-batch targets", () => {
     const expectedTargets = {
       "042-kanto": ["169-johto", "NO_SIGNIFICANT_USE"],
-      "044-kanto": ["182-kanto", "SPECIAL_USE"],
+      "044-kanto": ["182-johto", "SPECIAL_USE"],
       "052-galar": ["863-kanto", "SPECIAL_USE"],
     } as const;
     for (const [formId, [targetId, targetUseLevel]] of Object.entries(expectedTargets)) {

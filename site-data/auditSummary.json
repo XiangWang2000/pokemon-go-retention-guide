@@ -7756,13 +7756,13 @@
       "sourceCount": 1,
       "hasPvpUse": true,
       "pveUseLevels": [
-        "SPECIAL_USE"
+        "NO_SIGNIFICANT_USE"
       ],
       "hasRocketUse": false,
       "gymRating": "NOT_APPLICABLE",
       "hasMegaUse": false,
       "hasMaxUse": false,
-      "hasEvolutionUse": false
+      "hasEvolutionUse": true
     },
     {
       "id": "043-kanto-purified",
@@ -7832,13 +7832,13 @@
       "sourceCount": 1,
       "hasPvpUse": true,
       "pveUseLevels": [
-        "SPECIAL_USE"
+        "NO_SIGNIFICANT_USE"
       ],
       "hasRocketUse": false,
       "gymRating": "NOT_APPLICABLE",
       "hasMegaUse": false,
       "hasMaxUse": false,
-      "hasEvolutionUse": false
+      "hasEvolutionUse": true
     },
     {
       "id": "044-kanto-dynamax",
@@ -7912,13 +7912,13 @@
       "sourceCount": 1,
       "hasPvpUse": true,
       "pveUseLevels": [
-        "SPECIAL_USE"
+        "NO_SIGNIFICANT_USE"
       ],
       "hasRocketUse": false,
       "gymRating": "NOT_APPLICABLE",
       "hasMegaUse": false,
       "hasMaxUse": false,
-      "hasEvolutionUse": false
+      "hasEvolutionUse": true
     },
     {
       "id": "044-kanto-purified",
@@ -7992,13 +7992,13 @@
       "sourceCount": 1,
       "hasPvpUse": true,
       "pveUseLevels": [
-        "SPECIAL_USE"
+        "NO_SIGNIFICANT_USE"
       ],
       "hasRocketUse": false,
       "gymRating": "NOT_APPLICABLE",
       "hasMegaUse": false,
       "hasMaxUse": false,
-      "hasEvolutionUse": false
+      "hasEvolutionUse": true
     },
     {
       "id": "045-kanto-dynamax",
@@ -33414,6 +33414,4397 @@
         "MASTER": 268
       },
       "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "182-johto-dynamax",
+      "formId": "182-johto",
+      "dexNumber": 182,
+      "nameEn": "Bellossom",
+      "nameZhTw": "美麗花",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Bellossom",
+        "美麗花"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "182-johto-normal",
+      "formId": "182-johto",
+      "dexNumber": 182,
+      "nameEn": "Bellossom",
+      "nameZhTw": "美麗花",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Bellossom",
+        "美麗花"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 224,
+        "ULTRA": 197,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "182-johto-purified",
+      "formId": "182-johto",
+      "dexNumber": 182,
+      "nameEn": "Bellossom",
+      "nameZhTw": "美麗花",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Bellossom",
+        "美麗花"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "182-johto-shadow",
+      "formId": "182-johto",
+      "dexNumber": 182,
+      "nameEn": "Bellossom",
+      "nameZhTw": "美麗花",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Bellossom",
+        "美麗花"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 277,
+        "ULTRA": 160,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "183-johto-dynamax",
+      "formId": "183-johto",
+      "dexNumber": 183,
+      "nameEn": "marill",
+      "nameZhTw": "瑪力露",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "marill",
+        "瑪力露"
+      ],
+      "evolutionNames": [
+        "azumarill",
+        "瑪力露麗"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "183-johto-normal",
+      "formId": "183-johto",
+      "dexNumber": 183,
+      "nameEn": "marill",
+      "nameZhTw": "瑪力露",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "marill",
+        "瑪力露"
+      ],
+      "evolutionNames": [
+        "azumarill",
+        "瑪力露麗"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "183-johto-purified",
+      "formId": "183-johto",
+      "dexNumber": 183,
+      "nameEn": "marill",
+      "nameZhTw": "瑪力露",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "marill",
+        "瑪力露"
+      ],
+      "evolutionNames": [
+        "azumarill",
+        "瑪力露麗"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "183-johto-shadow",
+      "formId": "183-johto",
+      "dexNumber": 183,
+      "nameEn": "marill",
+      "nameZhTw": "瑪力露",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "marill",
+        "瑪力露"
+      ],
+      "evolutionNames": [
+        "azumarill",
+        "瑪力露麗"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "184-johto-dynamax",
+      "formId": "184-johto",
+      "dexNumber": 184,
+      "nameEn": "azumarill",
+      "nameZhTw": "瑪力露麗",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "azumarill",
+        "瑪力露麗"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "184-johto-normal",
+      "formId": "184-johto",
+      "dexNumber": 184,
+      "nameEn": "azumarill",
+      "nameZhTw": "瑪力露麗",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "azumarill",
+        "瑪力露麗"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 21,
+        "ULTRA": 794,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "184-johto-purified",
+      "formId": "184-johto",
+      "dexNumber": 184,
+      "nameEn": "azumarill",
+      "nameZhTw": "瑪力露麗",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "azumarill",
+        "瑪力露麗"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "184-johto-shadow",
+      "formId": "184-johto",
+      "dexNumber": 184,
+      "nameEn": "azumarill",
+      "nameZhTw": "瑪力露麗",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "azumarill",
+        "瑪力露麗"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "185-johto-dynamax",
+      "formId": "185-johto",
+      "dexNumber": 185,
+      "nameEn": "sudowoodo",
+      "nameZhTw": "樹才怪",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sudowoodo",
+        "樹才怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "185-johto-normal",
+      "formId": "185-johto",
+      "dexNumber": 185,
+      "nameEn": "sudowoodo",
+      "nameZhTw": "樹才怪",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sudowoodo",
+        "樹才怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 846,
+        "ULTRA": 679,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "185-johto-purified",
+      "formId": "185-johto",
+      "dexNumber": 185,
+      "nameEn": "sudowoodo",
+      "nameZhTw": "樹才怪",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sudowoodo",
+        "樹才怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "185-johto-shadow",
+      "formId": "185-johto",
+      "dexNumber": 185,
+      "nameEn": "sudowoodo",
+      "nameZhTw": "樹才怪",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sudowoodo",
+        "樹才怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1007,
+        "ULTRA": 751,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "186-johto-dynamax",
+      "formId": "186-johto",
+      "dexNumber": 186,
+      "nameEn": "Politoed",
+      "nameZhTw": "蚊香蛙皇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Politoed",
+        "蚊香蛙皇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "186-johto-normal",
+      "formId": "186-johto",
+      "dexNumber": 186,
+      "nameEn": "Politoed",
+      "nameZhTw": "蚊香蛙皇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Politoed",
+        "蚊香蛙皇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 160,
+        "ULTRA": 126,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "186-johto-purified",
+      "formId": "186-johto",
+      "dexNumber": 186,
+      "nameEn": "Politoed",
+      "nameZhTw": "蚊香蛙皇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Politoed",
+        "蚊香蛙皇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "186-johto-shadow",
+      "formId": "186-johto",
+      "dexNumber": 186,
+      "nameEn": "Politoed",
+      "nameZhTw": "蚊香蛙皇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Politoed",
+        "蚊香蛙皇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 111,
+        "ULTRA": 107,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "187-johto-dynamax",
+      "formId": "187-johto",
+      "dexNumber": 187,
+      "nameEn": "hoppip",
+      "nameZhTw": "毽子草",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "hoppip",
+        "毽子草"
+      ],
+      "evolutionNames": [
+        "skiploom",
+        "毽子花"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "187-johto-normal",
+      "formId": "187-johto",
+      "dexNumber": 187,
+      "nameEn": "hoppip",
+      "nameZhTw": "毽子草",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "hoppip",
+        "毽子草"
+      ],
+      "evolutionNames": [
+        "skiploom",
+        "毽子花"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "187-johto-purified",
+      "formId": "187-johto",
+      "dexNumber": 187,
+      "nameEn": "hoppip",
+      "nameZhTw": "毽子草",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "hoppip",
+        "毽子草"
+      ],
+      "evolutionNames": [
+        "skiploom",
+        "毽子花"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "187-johto-shadow",
+      "formId": "187-johto",
+      "dexNumber": 187,
+      "nameEn": "hoppip",
+      "nameZhTw": "毽子草",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "hoppip",
+        "毽子草"
+      ],
+      "evolutionNames": [
+        "skiploom",
+        "毽子花"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "188-johto-dynamax",
+      "formId": "188-johto",
+      "dexNumber": 188,
+      "nameEn": "skiploom",
+      "nameZhTw": "毽子花",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "skiploom",
+        "毽子花"
+      ],
+      "evolutionNames": [
+        "jumpluff",
+        "毽子棉"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "188-johto-normal",
+      "formId": "188-johto",
+      "dexNumber": 188,
+      "nameEn": "skiploom",
+      "nameZhTw": "毽子花",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "skiploom",
+        "毽子花"
+      ],
+      "evolutionNames": [
+        "jumpluff",
+        "毽子棉"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "188-johto-purified",
+      "formId": "188-johto",
+      "dexNumber": 188,
+      "nameEn": "skiploom",
+      "nameZhTw": "毽子花",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "skiploom",
+        "毽子花"
+      ],
+      "evolutionNames": [
+        "jumpluff",
+        "毽子棉"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "188-johto-shadow",
+      "formId": "188-johto",
+      "dexNumber": 188,
+      "nameEn": "skiploom",
+      "nameZhTw": "毽子花",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "skiploom",
+        "毽子花"
+      ],
+      "evolutionNames": [
+        "jumpluff",
+        "毽子棉"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "189-johto-dynamax",
+      "formId": "189-johto",
+      "dexNumber": 189,
+      "nameEn": "jumpluff",
+      "nameZhTw": "毽子棉",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "jumpluff",
+        "毽子棉"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "189-johto-normal",
+      "formId": "189-johto",
+      "dexNumber": 189,
+      "nameEn": "jumpluff",
+      "nameZhTw": "毽子棉",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "jumpluff",
+        "毽子棉"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 17,
+        "ULTRA": 677,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "189-johto-purified",
+      "formId": "189-johto",
+      "dexNumber": 189,
+      "nameEn": "jumpluff",
+      "nameZhTw": "毽子棉",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "jumpluff",
+        "毽子棉"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "189-johto-shadow",
+      "formId": "189-johto",
+      "dexNumber": 189,
+      "nameEn": "jumpluff",
+      "nameZhTw": "毽子棉",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "jumpluff",
+        "毽子棉"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 75,
+        "ULTRA": 667,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "190-johto-dynamax",
+      "formId": "190-johto",
+      "dexNumber": 190,
+      "nameEn": "aipom",
+      "nameZhTw": "長尾怪手",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "aipom",
+        "長尾怪手"
+      ],
+      "evolutionNames": [
+        "Ambipom",
+        "雙尾怪手"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "190-johto-normal",
+      "formId": "190-johto",
+      "dexNumber": 190,
+      "nameEn": "aipom",
+      "nameZhTw": "長尾怪手",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "aipom",
+        "長尾怪手"
+      ],
+      "evolutionNames": [
+        "Ambipom",
+        "雙尾怪手"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 538,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "190-johto-purified",
+      "formId": "190-johto",
+      "dexNumber": 190,
+      "nameEn": "aipom",
+      "nameZhTw": "長尾怪手",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "aipom",
+        "長尾怪手"
+      ],
+      "evolutionNames": [
+        "Ambipom",
+        "雙尾怪手"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "190-johto-shadow",
+      "formId": "190-johto",
+      "dexNumber": 190,
+      "nameEn": "aipom",
+      "nameZhTw": "長尾怪手",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "aipom",
+        "長尾怪手"
+      ],
+      "evolutionNames": [
+        "Ambipom",
+        "雙尾怪手"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 507,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "191-johto-dynamax",
+      "formId": "191-johto",
+      "dexNumber": 191,
+      "nameEn": "sunkern",
+      "nameZhTw": "向日種子",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sunkern",
+        "向日種子"
+      ],
+      "evolutionNames": [
+        "sunflora",
+        "向日花怪"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "191-johto-normal",
+      "formId": "191-johto",
+      "dexNumber": 191,
+      "nameEn": "sunkern",
+      "nameZhTw": "向日種子",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sunkern",
+        "向日種子"
+      ],
+      "evolutionNames": [
+        "sunflora",
+        "向日花怪"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "191-johto-purified",
+      "formId": "191-johto",
+      "dexNumber": 191,
+      "nameEn": "sunkern",
+      "nameZhTw": "向日種子",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sunkern",
+        "向日種子"
+      ],
+      "evolutionNames": [
+        "sunflora",
+        "向日花怪"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "191-johto-shadow",
+      "formId": "191-johto",
+      "dexNumber": 191,
+      "nameEn": "sunkern",
+      "nameZhTw": "向日種子",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sunkern",
+        "向日種子"
+      ],
+      "evolutionNames": [
+        "sunflora",
+        "向日花怪"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "192-johto-dynamax",
+      "formId": "192-johto",
+      "dexNumber": 192,
+      "nameEn": "sunflora",
+      "nameZhTw": "向日花怪",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sunflora",
+        "向日花怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "192-johto-normal",
+      "formId": "192-johto",
+      "dexNumber": 192,
+      "nameEn": "sunflora",
+      "nameZhTw": "向日花怪",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sunflora",
+        "向日花怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1042,
+        "ULTRA": 800,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "192-johto-purified",
+      "formId": "192-johto",
+      "dexNumber": 192,
+      "nameEn": "sunflora",
+      "nameZhTw": "向日花怪",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sunflora",
+        "向日花怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "192-johto-shadow",
+      "formId": "192-johto",
+      "dexNumber": 192,
+      "nameEn": "sunflora",
+      "nameZhTw": "向日花怪",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "sunflora",
+        "向日花怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "193-johto-dynamax",
+      "formId": "193-johto",
+      "dexNumber": 193,
+      "nameEn": "yanma",
+      "nameZhTw": "蜻蜻蜓",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "yanma",
+        "蜻蜻蜓"
+      ],
+      "evolutionNames": [
+        "Yanmega",
+        "遠古巨蜓"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "193-johto-normal",
+      "formId": "193-johto",
+      "dexNumber": 193,
+      "nameEn": "yanma",
+      "nameZhTw": "蜻蜻蜓",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "yanma",
+        "蜻蜻蜓"
+      ],
+      "evolutionNames": [
+        "Yanmega",
+        "遠古巨蜓"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 925,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "193-johto-purified",
+      "formId": "193-johto",
+      "dexNumber": 193,
+      "nameEn": "yanma",
+      "nameZhTw": "蜻蜻蜓",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "yanma",
+        "蜻蜻蜓"
+      ],
+      "evolutionNames": [
+        "Yanmega",
+        "遠古巨蜓"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "193-johto-shadow",
+      "formId": "193-johto",
+      "dexNumber": 193,
+      "nameEn": "yanma",
+      "nameZhTw": "蜻蜻蜓",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "yanma",
+        "蜻蜻蜓"
+      ],
+      "evolutionNames": [
+        "Yanmega",
+        "遠古巨蜓"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "194-johto-dynamax",
+      "formId": "194-johto",
+      "dexNumber": 194,
+      "nameEn": "wooper",
+      "nameZhTw": "烏波",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "wooper",
+        "烏波"
+      ],
+      "evolutionNames": [
+        "quagsire",
+        "沼王"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "194-johto-normal",
+      "formId": "194-johto",
+      "dexNumber": 194,
+      "nameEn": "wooper",
+      "nameZhTw": "烏波",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "wooper",
+        "烏波"
+      ],
+      "evolutionNames": [
+        "quagsire",
+        "沼王"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "194-johto-purified",
+      "formId": "194-johto",
+      "dexNumber": 194,
+      "nameEn": "wooper",
+      "nameZhTw": "烏波",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "wooper",
+        "烏波"
+      ],
+      "evolutionNames": [
+        "quagsire",
+        "沼王"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "194-johto-shadow",
+      "formId": "194-johto",
+      "dexNumber": 194,
+      "nameEn": "wooper",
+      "nameZhTw": "烏波",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "wooper",
+        "烏波"
+      ],
+      "evolutionNames": [
+        "quagsire",
+        "沼王"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "195-johto-dynamax",
+      "formId": "195-johto",
+      "dexNumber": 195,
+      "nameEn": "quagsire",
+      "nameZhTw": "沼王",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "quagsire",
+        "沼王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "195-johto-normal",
+      "formId": "195-johto",
+      "dexNumber": 195,
+      "nameEn": "quagsire",
+      "nameZhTw": "沼王",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "quagsire",
+        "沼王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 9,
+        "ULTRA": 428,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "195-johto-purified",
+      "formId": "195-johto",
+      "dexNumber": 195,
+      "nameEn": "quagsire",
+      "nameZhTw": "沼王",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "quagsire",
+        "沼王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "195-johto-shadow",
+      "formId": "195-johto",
+      "dexNumber": 195,
+      "nameEn": "quagsire",
+      "nameZhTw": "沼王",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "quagsire",
+        "沼王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 8,
+        "ULTRA": 411,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "196-johto-dynamax",
+      "formId": "196-johto",
+      "dexNumber": 196,
+      "nameEn": "Espeon",
+      "nameZhTw": "太陽伊布",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Espeon",
+        "太陽伊布"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "196-johto-normal",
+      "formId": "196-johto",
+      "dexNumber": 196,
+      "nameEn": "Espeon",
+      "nameZhTw": "太陽伊布",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Espeon",
+        "太陽伊布"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 775,
+        "ULTRA": 619,
+        "MASTER": 274
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "196-johto-purified",
+      "formId": "196-johto",
+      "dexNumber": 196,
+      "nameEn": "Espeon",
+      "nameZhTw": "太陽伊布",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Espeon",
+        "太陽伊布"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "196-johto-shadow",
+      "formId": "196-johto",
+      "dexNumber": 196,
+      "nameEn": "Espeon",
+      "nameZhTw": "太陽伊布",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Espeon",
+        "太陽伊布"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "197-johto-dynamax",
+      "formId": "197-johto",
+      "dexNumber": 197,
+      "nameEn": "Umbreon",
+      "nameZhTw": "月亮伊布",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Umbreon",
+        "月亮伊布"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "197-johto-normal",
+      "formId": "197-johto",
+      "dexNumber": 197,
+      "nameEn": "Umbreon",
+      "nameZhTw": "月亮伊布",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Umbreon",
+        "月亮伊布"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 32,
+        "ULTRA": 159,
+        "MASTER": 393
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "197-johto-purified",
+      "formId": "197-johto",
+      "dexNumber": 197,
+      "nameEn": "Umbreon",
+      "nameZhTw": "月亮伊布",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Umbreon",
+        "月亮伊布"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "197-johto-shadow",
+      "formId": "197-johto",
+      "dexNumber": 197,
+      "nameEn": "Umbreon",
+      "nameZhTw": "月亮伊布",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Umbreon",
+        "月亮伊布"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "198-johto-dynamax",
+      "formId": "198-johto",
+      "dexNumber": 198,
+      "nameEn": "murkrow",
+      "nameZhTw": "黑暗鴉",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "murkrow",
+        "黑暗鴉"
+      ],
+      "evolutionNames": [
+        "Honchkrow",
+        "烏鴉頭頭"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "198-johto-normal",
+      "formId": "198-johto",
+      "dexNumber": 198,
+      "nameEn": "murkrow",
+      "nameZhTw": "黑暗鴉",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "murkrow",
+        "黑暗鴉"
+      ],
+      "evolutionNames": [
+        "Honchkrow",
+        "烏鴉頭頭"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 245,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "198-johto-purified",
+      "formId": "198-johto",
+      "dexNumber": 198,
+      "nameEn": "murkrow",
+      "nameZhTw": "黑暗鴉",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "murkrow",
+        "黑暗鴉"
+      ],
+      "evolutionNames": [
+        "Honchkrow",
+        "烏鴉頭頭"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "198-johto-shadow",
+      "formId": "198-johto",
+      "dexNumber": 198,
+      "nameEn": "murkrow",
+      "nameZhTw": "黑暗鴉",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "murkrow",
+        "黑暗鴉"
+      ],
+      "evolutionNames": [
+        "Honchkrow",
+        "烏鴉頭頭"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 130,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "199-johto-dynamax",
+      "formId": "199-johto",
+      "dexNumber": 199,
+      "nameEn": "Slowking",
+      "nameZhTw": "呆呆王",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Slowking",
+        "呆呆王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "199-johto-normal",
+      "formId": "199-johto",
+      "dexNumber": 199,
+      "nameEn": "Slowking",
+      "nameZhTw": "呆呆王",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Slowking",
+        "呆呆王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 696,
+        "ULTRA": 423,
+        "MASTER": 347
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "199-johto-purified",
+      "formId": "199-johto",
+      "dexNumber": 199,
+      "nameEn": "Slowking",
+      "nameZhTw": "呆呆王",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Slowking",
+        "呆呆王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "199-johto-shadow",
+      "formId": "199-johto",
+      "dexNumber": 199,
+      "nameEn": "Slowking",
+      "nameZhTw": "呆呆王",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Slowking",
+        "呆呆王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 781,
+        "ULTRA": 507,
+        "MASTER": 373
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "200-johto-dynamax",
+      "formId": "200-johto",
+      "dexNumber": 200,
+      "nameEn": "misdreavus",
+      "nameZhTw": "夢妖",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "misdreavus",
+        "夢妖"
+      ],
+      "evolutionNames": [
+        "Mismagius",
+        "夢妖魔"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "200-johto-normal",
+      "formId": "200-johto",
+      "dexNumber": 200,
+      "nameEn": "misdreavus",
+      "nameZhTw": "夢妖",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "misdreavus",
+        "夢妖"
+      ],
+      "evolutionNames": [
+        "Mismagius",
+        "夢妖魔"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 737,
+        "ULTRA": 783,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "200-johto-purified",
+      "formId": "200-johto",
+      "dexNumber": 200,
+      "nameEn": "misdreavus",
+      "nameZhTw": "夢妖",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "misdreavus",
+        "夢妖"
+      ],
+      "evolutionNames": [
+        "Mismagius",
+        "夢妖魔"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "200-johto-shadow",
+      "formId": "200-johto",
+      "dexNumber": 200,
+      "nameEn": "misdreavus",
+      "nameZhTw": "夢妖",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "misdreavus",
+        "夢妖"
+      ],
+      "evolutionNames": [
+        "Mismagius",
+        "夢妖魔"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 757,
+        "ULTRA": 779,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "201-johto-dynamax",
+      "formId": "201-johto",
+      "dexNumber": 201,
+      "nameEn": "unown",
+      "nameZhTw": "未知圖騰",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "unown",
+        "未知圖騰"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "201-johto-normal",
+      "formId": "201-johto",
+      "dexNumber": 201,
+      "nameEn": "unown",
+      "nameZhTw": "未知圖騰",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "unown",
+        "未知圖騰"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1139,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "201-johto-purified",
+      "formId": "201-johto",
+      "dexNumber": 201,
+      "nameEn": "unown",
+      "nameZhTw": "未知圖騰",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "unown",
+        "未知圖騰"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "201-johto-shadow",
+      "formId": "201-johto",
+      "dexNumber": 201,
+      "nameEn": "unown",
+      "nameZhTw": "未知圖騰",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "unown",
+        "未知圖騰"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "202-johto-dynamax",
+      "formId": "202-johto",
+      "dexNumber": 202,
+      "nameEn": "wobbuffet",
+      "nameZhTw": "果然翁",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "wobbuffet",
+        "果然翁"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "202-johto-normal",
+      "formId": "202-johto",
+      "dexNumber": 202,
+      "nameEn": "wobbuffet",
+      "nameZhTw": "果然翁",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "wobbuffet",
+        "果然翁"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 661,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "202-johto-purified",
+      "formId": "202-johto",
+      "dexNumber": 202,
+      "nameEn": "wobbuffet",
+      "nameZhTw": "果然翁",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "wobbuffet",
+        "果然翁"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "202-johto-shadow",
+      "formId": "202-johto",
+      "dexNumber": 202,
+      "nameEn": "wobbuffet",
+      "nameZhTw": "果然翁",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "wobbuffet",
+        "果然翁"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 898,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "203-johto-dynamax",
+      "formId": "203-johto",
+      "dexNumber": 203,
+      "nameEn": "girafarig",
+      "nameZhTw": "麒麟奇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "girafarig",
+        "麒麟奇"
+      ],
+      "evolutionNames": [
+        "Farigiraf",
+        "奇麒麟"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "203-johto-normal",
+      "formId": "203-johto",
+      "dexNumber": 203,
+      "nameEn": "girafarig",
+      "nameZhTw": "麒麟奇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "girafarig",
+        "麒麟奇"
+      ],
+      "evolutionNames": [
+        "Farigiraf",
+        "奇麒麟"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 380,
+        "ULTRA": 525,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "203-johto-purified",
+      "formId": "203-johto",
+      "dexNumber": 203,
+      "nameEn": "girafarig",
+      "nameZhTw": "麒麟奇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "girafarig",
+        "麒麟奇"
+      ],
+      "evolutionNames": [
+        "Farigiraf",
+        "奇麒麟"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "203-johto-shadow",
+      "formId": "203-johto",
+      "dexNumber": 203,
+      "nameEn": "girafarig",
+      "nameZhTw": "麒麟奇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "girafarig",
+        "麒麟奇"
+      ],
+      "evolutionNames": [
+        "Farigiraf",
+        "奇麒麟"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 357,
+        "ULTRA": 526,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "204-johto-dynamax",
+      "formId": "204-johto",
+      "dexNumber": 204,
+      "nameEn": "pineco",
+      "nameZhTw": "榛果球",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "pineco",
+        "榛果球"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "204-johto-normal",
+      "formId": "204-johto",
+      "dexNumber": 204,
+      "nameEn": "pineco",
+      "nameZhTw": "榛果球",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "pineco",
+        "榛果球"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 887,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "204-johto-purified",
+      "formId": "204-johto",
+      "dexNumber": 204,
+      "nameEn": "pineco",
+      "nameZhTw": "榛果球",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "pineco",
+        "榛果球"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "204-johto-shadow",
+      "formId": "204-johto",
+      "dexNumber": 204,
+      "nameEn": "pineco",
+      "nameZhTw": "榛果球",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "pineco",
+        "榛果球"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 940,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "205-johto-dynamax",
+      "formId": "205-johto",
+      "dexNumber": 205,
+      "nameEn": "forretress",
+      "nameZhTw": "佛烈托斯",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "forretress",
+        "佛烈托斯"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "205-johto-normal",
+      "formId": "205-johto",
+      "dexNumber": 205,
+      "nameEn": "forretress",
+      "nameZhTw": "佛烈托斯",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "forretress",
+        "佛烈托斯"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 11,
+        "ULTRA": 12,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "205-johto-purified",
+      "formId": "205-johto",
+      "dexNumber": 205,
+      "nameEn": "forretress",
+      "nameZhTw": "佛烈托斯",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "forretress",
+        "佛烈托斯"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "205-johto-shadow",
+      "formId": "205-johto",
+      "dexNumber": 205,
+      "nameEn": "forretress",
+      "nameZhTw": "佛烈托斯",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "forretress",
+        "佛烈托斯"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 15,
+        "ULTRA": 16,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "206-johto-dynamax",
+      "formId": "206-johto",
+      "dexNumber": 206,
+      "nameEn": "dunsparce",
+      "nameZhTw": "土龍弟弟",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "dunsparce",
+        "土龍弟弟"
+      ],
+      "evolutionNames": [
+        "Dudunsparce",
+        "拖拖蚓"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "206-johto-normal",
+      "formId": "206-johto",
+      "dexNumber": 206,
+      "nameEn": "dunsparce",
+      "nameZhTw": "土龍弟弟",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "dunsparce",
+        "土龍弟弟"
+      ],
+      "evolutionNames": [
+        "Dudunsparce",
+        "拖拖蚓"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 74,
+        "ULTRA": 755,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "206-johto-purified",
+      "formId": "206-johto",
+      "dexNumber": 206,
+      "nameEn": "dunsparce",
+      "nameZhTw": "土龍弟弟",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "dunsparce",
+        "土龍弟弟"
+      ],
+      "evolutionNames": [
+        "Dudunsparce",
+        "拖拖蚓"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "206-johto-shadow",
+      "formId": "206-johto",
+      "dexNumber": 206,
+      "nameEn": "dunsparce",
+      "nameZhTw": "土龍弟弟",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "dunsparce",
+        "土龍弟弟"
+      ],
+      "evolutionNames": [
+        "Dudunsparce",
+        "拖拖蚓"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "207-johto-dynamax",
+      "formId": "207-johto",
+      "dexNumber": 207,
+      "nameEn": "gligar",
+      "nameZhTw": "天蠍",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "gligar",
+        "天蠍"
+      ],
+      "evolutionNames": [
+        "Gliscor",
+        "天蠍王"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "207-johto-normal",
+      "formId": "207-johto",
+      "dexNumber": 207,
+      "nameEn": "gligar",
+      "nameZhTw": "天蠍",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "gligar",
+        "天蠍"
+      ],
+      "evolutionNames": [
+        "Gliscor",
+        "天蠍王"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 110,
+        "ULTRA": 654,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "207-johto-purified",
+      "formId": "207-johto",
+      "dexNumber": 207,
+      "nameEn": "gligar",
+      "nameZhTw": "天蠍",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "gligar",
+        "天蠍"
+      ],
+      "evolutionNames": [
+        "Gliscor",
+        "天蠍王"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "207-johto-shadow",
+      "formId": "207-johto",
+      "dexNumber": 207,
+      "nameEn": "gligar",
+      "nameZhTw": "天蠍",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "gligar",
+        "天蠍"
+      ],
+      "evolutionNames": [
+        "Gliscor",
+        "天蠍王"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 120,
+        "ULTRA": 689,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "208-johto-dynamax",
+      "formId": "208-johto",
+      "dexNumber": 208,
+      "nameEn": "Steelix",
+      "nameZhTw": "大鋼蛇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Steelix",
+        "大鋼蛇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "208-johto-mega",
+      "formId": "208-johto",
+      "dexNumber": 208,
+      "nameEn": "Steelix",
+      "nameZhTw": "大鋼蛇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Steelix",
+        "大鋼蛇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": true,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "208-johto-normal",
+      "formId": "208-johto",
+      "dexNumber": 208,
+      "nameEn": "Steelix",
+      "nameZhTw": "大鋼蛇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Steelix",
+        "大鋼蛇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 138,
+        "ULTRA": 41,
+        "MASTER": 330
+      },
+      "sourceCount": 5,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "208-johto-purified",
+      "formId": "208-johto",
+      "dexNumber": 208,
+      "nameEn": "Steelix",
+      "nameZhTw": "大鋼蛇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Steelix",
+        "大鋼蛇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "208-johto-shadow",
+      "formId": "208-johto",
+      "dexNumber": 208,
+      "nameEn": "Steelix",
+      "nameZhTw": "大鋼蛇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "Steelix",
+        "大鋼蛇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 59,
+        "ULTRA": 49,
+        "MASTER": 309
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "209-johto-dynamax",
+      "formId": "209-johto",
+      "dexNumber": 209,
+      "nameEn": "snubbull",
+      "nameZhTw": "布魯",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "snubbull",
+        "布魯"
+      ],
+      "evolutionNames": [
+        "granbull",
+        "布魯皇"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "209-johto-normal",
+      "formId": "209-johto",
+      "dexNumber": 209,
+      "nameEn": "snubbull",
+      "nameZhTw": "布魯",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "snubbull",
+        "布魯"
+      ],
+      "evolutionNames": [
+        "granbull",
+        "布魯皇"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1062,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "209-johto-purified",
+      "formId": "209-johto",
+      "dexNumber": 209,
+      "nameEn": "snubbull",
+      "nameZhTw": "布魯",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "snubbull",
+        "布魯"
+      ],
+      "evolutionNames": [
+        "granbull",
+        "布魯皇"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "209-johto-shadow",
+      "formId": "209-johto",
+      "dexNumber": 209,
+      "nameEn": "snubbull",
+      "nameZhTw": "布魯",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "snubbull",
+        "布魯"
+      ],
+      "evolutionNames": [
+        "granbull",
+        "布魯皇"
+      ],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1087,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "210-johto-dynamax",
+      "formId": "210-johto",
+      "dexNumber": 210,
+      "nameEn": "granbull",
+      "nameZhTw": "布魯皇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "granbull",
+        "布魯皇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "210-johto-normal",
+      "formId": "210-johto",
+      "dexNumber": 210,
+      "nameEn": "granbull",
+      "nameZhTw": "布魯皇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "granbull",
+        "布魯皇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 932,
+        "ULTRA": 584,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "210-johto-purified",
+      "formId": "210-johto",
+      "dexNumber": 210,
+      "nameEn": "granbull",
+      "nameZhTw": "布魯皇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "granbull",
+        "布魯皇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "210-johto-shadow",
+      "formId": "210-johto",
+      "dexNumber": 210,
+      "nameEn": "granbull",
+      "nameZhTw": "布魯皇",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "granbull",
+        "布魯皇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 844,
+        "ULTRA": 660,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "211-johto-dynamax",
+      "formId": "211-johto",
+      "dexNumber": 211,
+      "nameEn": "qwilfish",
+      "nameZhTw": "千針魚",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "qwilfish",
+        "千針魚"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "211-johto-normal",
+      "formId": "211-johto",
+      "dexNumber": 211,
+      "nameEn": "qwilfish",
+      "nameZhTw": "千針魚",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "qwilfish",
+        "千針魚"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 192,
+        "ULTRA": 429,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "211-johto-purified",
+      "formId": "211-johto",
+      "dexNumber": 211,
+      "nameEn": "qwilfish",
+      "nameZhTw": "千針魚",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "qwilfish",
+        "千針魚"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "211-johto-shadow",
+      "formId": "211-johto",
+      "dexNumber": 211,
+      "nameEn": "qwilfish",
+      "nameZhTw": "千針魚",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "aliases": [
+        "qwilfish",
+        "千針魚"
+      ],
+      "evolutionNames": [],
+      "regionKey": "JOHTO",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-07T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 145,
+        "ULTRA": 327,
+        "MASTER": null
+      },
+      "sourceCount": 3,
       "hasPvpUse": true,
       "pveUseLevels": [
         "NO_SIGNIFICANT_USE"

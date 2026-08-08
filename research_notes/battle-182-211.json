@@ -1,0 +1,270 @@
+{
+  "batch": "182-211",
+  "checkedAt": "2026-08-08",
+  "pvpoke": {
+    "commit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+    "files": [
+      "data/sources/pvpoke/rankings-1500.json",
+      "data/sources/pvpoke/rankings-2500.json",
+      "data/sources/pvpoke/rankings-10000.json"
+    ],
+    "method": "Open／Overall 陣列索引加一重現名次。"
+  },
+  "pve": {
+    "208-johto": "Mega Steelix 屬特殊用途；不把一般 Onix 個體全部視為核心投資。"
+  },
+  "shadow": [
+    {
+      "formId": "182-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "185-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "186-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "187-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "188-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "189-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "190-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "194-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "195-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "198-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "199-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "200-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "202-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "203-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "204-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "205-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "207-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "208-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "209-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "210-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "211-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    }
+  ],
+  "evolution": [
+    {
+      "fromFormId": "044-kanto",
+      "toFormId": "182-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "061-kanto",
+      "toFormId": "186-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "133-kanto",
+      "toFormId": "196-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "133-kanto",
+      "toFormId": "197-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "079-kanto",
+      "toFormId": "199-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "095-kanto",
+      "toFormId": "208-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "183-johto",
+      "toFormId": "184-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "187-johto",
+      "toFormId": "188-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "188-johto",
+      "toFormId": "189-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "191-johto",
+      "toFormId": "192-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "194-johto",
+      "toFormId": "195-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "209-johto",
+      "toFormId": "210-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "079-galar",
+      "toFormId": "199-galar",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "190-johto",
+      "toFormId": "424-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "193-johto",
+      "toFormId": "469-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "198-johto",
+      "toFormId": "430-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "200-johto",
+      "toFormId": "429-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "203-johto",
+      "toFormId": "981-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "206-johto",
+      "toFormId": "982-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "207-johto",
+      "toFormId": "472-kanto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    }
+  ],
+  "review": {
+    "materialGaps": [],
+    "nonMaterialGaps": [
+      "火箭隊逐物種排名、道館細項未作為整個家族 HOLD 條件。"
+    ]
+  }
+}

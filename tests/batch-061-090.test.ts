@@ -47,11 +47,12 @@ describe("#061～#090 批次與跨批次家族", () => {
       "060-kanto",
       "061-kanto",
       "062-kanto",
+      "186-johto",
     ]);
-    expect(family.isBatchTruncated).toBe(true);
+    expect(family.isBatchTruncated).toBe(false);
     expect(
       family.members.some((member) =>
-        member.form.evolutionPaths.some((path) => path.toFormId === "186-kanto"),
+        member.form.evolutionPaths.some((path) => path.toFormId === "186-johto"),
       ),
     ).toBe(true);
     expect(family.retentionStrategy).toBe("KEEP_TARGETS");
@@ -110,6 +111,7 @@ describe("#061～#090 批次與跨批次家族", () => {
     expect(familyByMember("079-kanto").members.map((member) => member.form.formId)).toEqual([
       "079-kanto",
       "080-kanto",
+      "199-johto",
     ]);
     expect(familyByMember("079-galar").members.map((member) => member.form.formId)).toEqual([
       "079-galar",

@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026.08.08-cross-generation-evolution-v2",
+  "dataVersion": "2026.08.08-cross-generation-evolution-v3",
   "checkedAt": "2026-08-08",
   "sources": [
     {
@@ -61,6 +61,16 @@
       "sourceUrl": "https://db.pokemongohub.net/pokemon/468/pvp",
       "accessedAt": "2026-08-08",
       "sourceSummaryZhTw": "Togekiss source is used to verify the external evolution stub and a provisional SPECIAL_USE target; full battle data is outside this validation batch."
+    },
+    {
+      "id": "pokeapi-evolution-targets-152-251",
+      "sourceName": "PokéAPI",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Pokémon species evolution relationships",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokeapi.co/api/v2/pokemon-species/?generation=2",
+      "accessedAt": "2026-08-08",
+      "sourceSummaryZhTw": "用於核對第 2 世代與後續世代的 canonical 物種進化關係；不以此來源單獨推論戰鬥強度。"
     }
   ],
   "targets": [
@@ -92,10 +102,10 @@
       "familyKey": "KANTO_FAMILY_043",
       "nameEn": "Bellossom",
       "nameZhTw": "美麗花",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "JOHTO",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "regionKey": "JOHTO",
       "types": [
         "GRASS"
       ],
@@ -113,10 +123,10 @@
       "familyKey": "KANTO_FAMILY_060",
       "nameEn": "Politoed",
       "nameZhTw": "蚊香蛙皇",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "JOHTO",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "regionKey": "JOHTO",
       "types": [
         "WATER"
       ],
@@ -134,10 +144,10 @@
       "familyKey": "KANTO_FAMILY_133",
       "nameEn": "Espeon",
       "nameZhTw": "太陽伊布",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "JOHTO",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "regionKey": "JOHTO",
       "types": [
         "PSYCHIC"
       ],
@@ -155,10 +165,10 @@
       "familyKey": "KANTO_FAMILY_133",
       "nameEn": "Umbreon",
       "nameZhTw": "月亮伊布",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "JOHTO",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "regionKey": "JOHTO",
       "types": [
         "DARK"
       ],
@@ -176,10 +186,10 @@
       "familyKey": "KANTO_FAMILY_079",
       "nameEn": "Slowking",
       "nameZhTw": "呆呆王",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "JOHTO",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "regionKey": "JOHTO",
       "types": [
         "WATER",
         "PSYCHIC"
@@ -220,10 +230,10 @@
       "familyKey": "KANTO_FAMILY_095",
       "nameEn": "Steelix",
       "nameZhTw": "大鋼蛇",
-      "formKey": "KANTO",
-      "formNameEn": "Kanto",
-      "formNameZhTw": "關都",
-      "regionKey": "KANTO",
+      "formKey": "JOHTO",
+      "formNameEn": "Johto",
+      "formNameZhTw": "城都",
+      "regionKey": "JOHTO",
       "types": [
         "STEEL",
         "GROUND"
@@ -643,6 +653,157 @@
       "fromFormId": "176-johto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
       "evolutionTargetNotesZhTw": "External evolution target with provisional special use; full battle data is outside this validation batch."
+    },
+    {
+      "dexNumber": 424,
+      "generation": 4,
+      "familyKey": "JOHTO_FAMILY_190",
+      "nameEn": "Ambipom",
+      "nameZhTw": "雙尾怪手",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "regionKey": "KANTO",
+      "types": [
+        "NORMAL"
+      ],
+      "aliases": [
+        "Ambipom",
+        "雙尾怪手"
+      ],
+      "fromFormId": "190-johto",
+      "evolutionTargetUseLevel": "SPECIAL_USE",
+      "evolutionTargetNotesZhTw": "後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。"
+    },
+    {
+      "dexNumber": 429,
+      "generation": 4,
+      "familyKey": "JOHTO_FAMILY_200",
+      "nameEn": "Mismagius",
+      "nameZhTw": "夢妖魔",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "regionKey": "KANTO",
+      "types": [
+        "GHOST"
+      ],
+      "aliases": [
+        "Mismagius",
+        "夢妖魔"
+      ],
+      "fromFormId": "200-johto",
+      "evolutionTargetUseLevel": "SPECIAL_USE",
+      "evolutionTargetNotesZhTw": "後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。"
+    },
+    {
+      "dexNumber": 430,
+      "generation": 4,
+      "familyKey": "JOHTO_FAMILY_198",
+      "nameEn": "Honchkrow",
+      "nameZhTw": "烏鴉頭頭",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "regionKey": "KANTO",
+      "types": [
+        "DARK",
+        "FLYING"
+      ],
+      "aliases": [
+        "Honchkrow",
+        "烏鴉頭頭"
+      ],
+      "fromFormId": "198-johto",
+      "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
+      "evolutionTargetNotesZhTw": "後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。"
+    },
+    {
+      "dexNumber": 469,
+      "generation": 4,
+      "familyKey": "JOHTO_FAMILY_193",
+      "nameEn": "Yanmega",
+      "nameZhTw": "遠古巨蜓",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "regionKey": "KANTO",
+      "types": [
+        "BUG",
+        "FLYING"
+      ],
+      "aliases": [
+        "Yanmega",
+        "遠古巨蜓"
+      ],
+      "fromFormId": "193-johto",
+      "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
+      "evolutionTargetNotesZhTw": "後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。"
+    },
+    {
+      "dexNumber": 472,
+      "generation": 4,
+      "familyKey": "JOHTO_FAMILY_207",
+      "nameEn": "Gliscor",
+      "nameZhTw": "天蠍王",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "regionKey": "KANTO",
+      "types": [
+        "GROUND",
+        "FLYING"
+      ],
+      "aliases": [
+        "Gliscor",
+        "天蠍王"
+      ],
+      "fromFormId": "207-johto",
+      "evolutionTargetUseLevel": "SPECIAL_USE",
+      "evolutionTargetNotesZhTw": "後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。"
+    },
+    {
+      "dexNumber": 981,
+      "generation": 9,
+      "familyKey": "JOHTO_FAMILY_203",
+      "nameEn": "Farigiraf",
+      "nameZhTw": "奇麒麟",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "regionKey": "KANTO",
+      "types": [
+        "NORMAL",
+        "PSYCHIC"
+      ],
+      "aliases": [
+        "Farigiraf",
+        "奇麒麟"
+      ],
+      "fromFormId": "203-johto",
+      "evolutionTargetUseLevel": "SPECIAL_USE",
+      "evolutionTargetNotesZhTw": "後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。"
+    },
+    {
+      "dexNumber": 982,
+      "generation": 9,
+      "familyKey": "JOHTO_FAMILY_206",
+      "nameEn": "Dudunsparce",
+      "nameZhTw": "拖拖蚓",
+      "formKey": "KANTO",
+      "formNameEn": "Kanto",
+      "formNameZhTw": "關都",
+      "regionKey": "KANTO",
+      "types": [
+        "NORMAL"
+      ],
+      "aliases": [
+        "Dudunsparce",
+        "拖拖蚓"
+      ],
+      "fromFormId": "206-johto",
+      "evolutionTargetUseLevel": "SPECIAL_USE",
+      "evolutionTargetNotesZhTw": "後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。"
     }
   ],
   "paths": [
@@ -661,7 +822,7 @@
     },
     {
       "fromFormId": "044-kanto",
-      "toFormId": "182-kanto",
+      "toFormId": "182-johto",
       "evolutionMethodZhTw": "使用日之石並消耗糖果",
       "availabilityNotesZhTw": "正式分支進化；已補查目標 PvP 排名，保留有限用途的優質普通／暗影進化候選。",
       "requiresEvent": false,
@@ -674,7 +835,7 @@
     },
     {
       "fromFormId": "061-kanto",
-      "toFormId": "186-kanto",
+      "toFormId": "186-johto",
       "evolutionMethodZhTw": "使用王者之證並消耗糖果",
       "availabilityNotesZhTw": "正式分支進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -686,7 +847,7 @@
     },
     {
       "fromFormId": "079-kanto",
-      "toFormId": "199-kanto",
+      "toFormId": "199-johto",
       "evolutionMethodZhTw": "使用王者之證並消耗糖果",
       "availabilityNotesZhTw": "正式分支進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -710,7 +871,7 @@
     },
     {
       "fromFormId": "095-kanto",
-      "toFormId": "208-kanto",
+      "toFormId": "208-johto",
       "evolutionMethodZhTw": "使用金屬膜並消耗糖果",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -830,7 +991,7 @@
     },
     {
       "fromFormId": "133-kanto",
-      "toFormId": "196-kanto",
+      "toFormId": "196-johto",
       "evolutionMethodZhTw": "成為夥伴並在白天消耗糖果進化",
       "availabilityNotesZhTw": "正式後續分支；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -842,7 +1003,7 @@
     },
     {
       "fromFormId": "133-kanto",
-      "toFormId": "197-kanto",
+      "toFormId": "197-johto",
       "evolutionMethodZhTw": "成為夥伴並在夜晚消耗糖果進化",
       "availabilityNotesZhTw": "正式後續分支；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
@@ -972,6 +1133,90 @@
         "pokeapi-evolution-targets-001-151",
         "pokemon-go-evolution-requirements",
         "gohub-togekiss-pvp-20260808"
+      ]
+    },
+    {
+      "fromFormId": "190-johto",
+      "toFormId": "424-kanto",
+      "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
+      "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "200-johto",
+      "toFormId": "429-kanto",
+      "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
+      "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "198-johto",
+      "toFormId": "430-kanto",
+      "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
+      "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "193-johto",
+      "toFormId": "469-kanto",
+      "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
+      "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "207-johto",
+      "toFormId": "472-kanto",
+      "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
+      "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "203-johto",
+      "toFormId": "981-kanto",
+      "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
+      "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "206-johto",
+      "toFormId": "982-kanto",
+      "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
+      "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
       ]
     }
   ]

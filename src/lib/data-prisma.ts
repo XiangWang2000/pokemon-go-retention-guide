@@ -80,8 +80,11 @@ function formatSourceTarget(variant: {
 }
 
 export async function getDashboardRows() {
-  const [variants, ivRecommendations] = await Promise.all([
-    prisma.battleVariant.findMany({
+  const variants = [];
+  for (let skip = 0; ; skip += 150) {
+    const page = await prisma.battleVariant.findMany({
+      take: 150,
+      skip,
       include: {
         pokemonForm: {
           include: {
@@ -112,9 +115,13 @@ export async function getDashboardRows() {
         dataIssues: { where: { status: "OPEN" }, orderBy: { detectedAt: "desc" } },
       },
       orderBy: [{ pokemonForm: { species: { dexNumber: "asc" } } }, { variantKey: "asc" }],
-    }),
-    prisma.ivRecommendation.findMany({ orderBy: [{ scopeType: "asc" }, { primaryUseKey: "asc" }] }),
-  ]);
+    });
+    variants.push(...page);
+    if (page.length < 150) break;
+  }
+  const ivRecommendations = await prisma.ivRecommendation.findMany({
+    orderBy: [{ scopeType: "asc" }, { primaryUseKey: "asc" }],
+  });
 
   return variants.map((variant) => {
     const evaluation = variant.retentionEvaluations[0] ?? null;

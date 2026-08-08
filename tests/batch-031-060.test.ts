@@ -94,7 +94,7 @@ describe("#031～#060 批次與跨批次家族", () => {
       retentionStrategy: "KEEP_TARGETS",
     });
     expect(familyByMember("060-kanto")).toMatchObject({
-      isBatchTruncated: true,
+      isBatchTruncated: false,
       retentionStrategy: "KEEP_TARGETS",
     });
     expect(familyByMember("047-kanto").retentionStrategy).not.toBe("HOLD_FOR_NOW");

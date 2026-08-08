@@ -10,8 +10,8 @@
     "battleVariants": 144,
     "families": 20,
     "strategyCounts": {
-      "KEEP_TARGETS": 6,
-      "SELECTIVE_KEEP": 9,
+      "KEEP_TARGETS": 7,
+      "SELECTIVE_KEEP": 8,
       "MOSTLY_TRANSFER": 5,
       "HOLD_FOR_NOW": 0
     },
@@ -78,8 +78,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_095:095-kanto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留可進化為大鋼蛇的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留大鋼蛇（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {

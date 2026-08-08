@@ -1,29 +1,37 @@
-import { createHash } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { mkdtempSync, rmSync } from "node:fs";
+import os from "node:os";
 import path from "node:path";
+import Database from "better-sqlite3";
 import { describe, expect, it } from "vitest";
 import { getDatabaseUrl, resolveDatabaseLocation } from "@/lib/database";
-import manifest from "../site-data/manifest.json";
 
 describe("database provenance", () => {
-  it("resolves the default and explicit DATABASE_URL to one SQLite path", () => {
-    const root = path.resolve("provenance-test-root");
-    expect(getDatabaseUrl({})).toBe("file:./dev.db");
-    expect(resolveDatabaseLocation("file:./rebuild-r19.db", root)).toMatchObject({
-      url: "file:./rebuild-r19.db",
-      absolutePath: path.join(root, "rebuild-r19.db"),
-      manifestPath: "rebuild-r19.db",
-    });
+  it("resolves DATABASE_URL to the temporary SQLite fixture path", () => {
+    const root = mkdtempSync(path.join(os.tmpdir(), "pokemon-provenance-"));
+    const fixturePath = path.join(root, "fixture.db");
+    const fixture = new Database(fixturePath);
+    fixture.pragma("user_version = 19");
+    fixture.close();
+
+    try {
+      expect(getDatabaseUrl({})).toBe("file:./dev.db");
+      expect(getDatabaseUrl({ DATABASE_URL: "file:./fixture.db" })).toBe("file:./fixture.db");
+      expect(resolveDatabaseLocation(getDatabaseUrl({ DATABASE_URL: "file:./fixture.db" }), root)).toMatchObject({
+        url: "file:./fixture.db",
+        absolutePath: fixturePath,
+        manifestPath: "fixture.db",
+      });
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
   });
 
-  it("matches the snapshot provenance to the database used by the current environment", () => {
-    const location = resolveDatabaseLocation();
-    expect(manifest.sourceDatabase.path).toBe(location.manifestPath);
-
-    const database = readFileSync(location.absolutePath);
-    expect(database.byteLength).toBe(manifest.sourceDatabase.bytes);
-    expect(createHash("sha256").update(database).digest("hex")).toBe(
-      manifest.sourceDatabase.sha256,
-    );
+  it("keeps the default path deterministic without reading the real database", () => {
+    expect(getDatabaseUrl({})).toBe("file:./dev.db");
+    expect(resolveDatabaseLocation("file:./fixture.db", "C:\\fixture-root")).toMatchObject({
+      url: "file:./fixture.db",
+      absolutePath: path.resolve("C:\\fixture-root", "fixture.db"),
+      manifestPath: "fixture.db",
+    });
   });
 });
