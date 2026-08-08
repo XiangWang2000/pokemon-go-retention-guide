@@ -65,6 +65,7 @@ export async function GET(request: Request) {
     return new Response(
       JSON.stringify({
         schemaVersion: 1,
+        dataVersion: DATA_VERSION,
         dataAsOf: siteSnapshotManifest.dataAsOf ?? null,
         family: markFamilyLoaded(family),
       }),

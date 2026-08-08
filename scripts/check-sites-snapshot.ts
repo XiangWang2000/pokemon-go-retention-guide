@@ -79,9 +79,10 @@ async function main() {
   );
 
   const dashboard = parsed.dashboard as unknown[];
-  const home = parsed.home as { schemaVersion: number; families: unknown[] };
+  const home = parsed.home as { schemaVersion: number; dataVersion: string; families: unknown[] };
   const homeSummary = parsed.homeSummary as {
     schemaVersion: number;
+    dataVersion: string;
     dataAsOf: string | null;
     strategyCounts: Record<string, number>;
   };
@@ -96,8 +97,10 @@ async function main() {
   const details = parsed.details as Record<string, unknown>;
   assert(dashboard.length === manifest.counts.dashboardRows, "dashboard 筆數不一致。");
   assert(home.schemaVersion === 1, "home snapshot schemaVersion 不支援。");
+  assert(home.dataVersion === DATA_VERSION, "home snapshot dataVersion 不正確。");
   assert(home.families.length === manifest.counts.homeFamilies, "home 家族筆數不一致。");
   assert(homeSummary.schemaVersion === 1, "home summary schemaVersion 不正確。");
+  assert(homeSummary.dataVersion === DATA_VERSION, "home summary dataVersion 不正確。");
   assert(auditSummary.schemaVersion === 1, "audit summary schemaVersion 不正確。");
   assert(
     auditSummary.rows.length === manifest.counts.auditSummaryRows,
@@ -163,8 +166,10 @@ async function main() {
 
   const runtimeHomePayload = JSON.parse(runtimeHome.toString("utf8")) as {
     schemaVersion: number;
+    dataVersion: string;
     families: Array<{ detailsLoaded?: boolean; members: Array<{ form: { variants: unknown[] } }> }>;
   };
+  assert(runtimeHomePayload.dataVersion === DATA_VERSION, "首頁 runtime dataVersion 不正確。");
   assert(
     runtimeHomePayload.families.every(
       (family) =>

@@ -1,5 +1,6 @@
 import ExcelJS from "exceljs";
 import type { PrismaClient } from "../../generated/prisma/client";
+import { DATA_VERSION } from "@/config/release";
 import { zhTw } from "@/locales/zh-TW";
 
 export const exportSheetNames = [
@@ -29,6 +30,10 @@ export interface ExportSheet {
 export function createExportWorkbook(sheets: ExportSheet[]) {
   const workbook = new ExcelJS.Workbook();
   workbook.creator = "Pokémon GO Retention Guide";
+  workbook.title = `Pokémon GO Retention Guide ${DATA_VERSION}`;
+  workbook.subject = DATA_VERSION;
+  workbook.description = `資料版本：${DATA_VERSION}`;
+  workbook.keywords = DATA_VERSION;
   workbook.created = new Date("2026-07-15T00:00:00+08:00");
   for (const spec of sheets) {
     const sheet = workbook.addWorksheet(spec.name, { views: [{ state: "frozen", ySplit: 1 }] });

@@ -86,6 +86,7 @@ function buildRuntimeHome(home: ReturnType<typeof buildHomeSnapshot>) {
   const lazyIvLabel = "展開後載入 IV 建議";
   return {
     schemaVersion: 2,
+    dataVersion: home.dataVersion,
     dataAsOf: home.dataAsOf,
     families: home.families.map((family) => ({
       familyId: family.familyId,
@@ -263,7 +264,7 @@ async function main() {
     ...sources.map((source) => source.accessedAt),
     ...changes.map((change) => change.changedAt),
   ]);
-  const home = buildHomeSnapshot(dashboard, dataAsOf);
+  const home = buildHomeSnapshot(dashboard, dataAsOf, DATA_VERSION);
   const homeSummary = buildHomeSummary(home);
   const auditSummary = buildAuditSummary(dashboard, dataAsOf);
   const payloads = {

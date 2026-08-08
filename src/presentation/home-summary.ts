@@ -10,6 +10,7 @@ export const familyRetentionStrategies = [
 
 export interface HomeSummary {
   schemaVersion: 1;
+  dataVersion: string;
   dataAsOf: string | null;
   strategyCounts: Record<FamilyRetentionStrategy, number>;
 }
@@ -26,6 +27,7 @@ function strategyCounts(families: HomeSnapshot["families"]) {
 export function buildHomeSummary(home: HomeSnapshot): HomeSummary {
   return {
     schemaVersion: 1,
+    dataVersion: home.dataVersion,
     dataAsOf: home.dataAsOf,
     strategyCounts: strategyCounts(home.families),
   };

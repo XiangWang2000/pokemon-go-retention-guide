@@ -1,0 +1,107 @@
+{
+  "batch": "242-251",
+  "updatedAt": "2026-08-08",
+  "dataVersion": "2026.08.08-r20",
+  "rulesVersion": "2026.08.06-v7",
+  "status": "ACCEPTED",
+  "counts": {
+    "species": 10,
+    "forms": 10,
+    "battleVariants": 41,
+    "families": 8,
+    "strategyCounts": {
+      "KEEP_TARGETS": 7,
+      "SELECTIVE_KEEP": 1,
+      "MOSTLY_TRANSFER": 0,
+      "HOLD_FOR_NOW": 0
+    },
+    "openIssues": 0,
+    "safetyAffectingIssues": 0,
+    "trueDataPending": 0
+  },
+  "formalJohtoMigrations": [
+    {
+      "familyId": "KANTO_FAMILY_113:113-kanto",
+      "name": "Blissey",
+      "members": [
+        "113-kanto",
+        "242-johto"
+      ],
+      "result": "PASS"
+    },
+    {
+      "familyId": "JOHTO_FAMILY_246:246-johto",
+      "name": "Larvitar family",
+      "members": [
+        "246-johto",
+        "247-johto",
+        "248-johto"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "versionBoundaries": {
+    "formalJohtoForms": true,
+    "releasedMegaForms": true,
+    "releasedMaxForms": true,
+    "noTrueDataPending": true
+  },
+  "crossBatchIntegration": {
+    "result": "PASS",
+    "checkedFamilies": [
+      "Blissey",
+      "Larvitar family"
+    ]
+  },
+  "scopedHolds": [],
+  "immediateHandling": [
+    {
+      "familyId": "KANTO_FAMILY_113:113-kanto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留吉利蛋（道館防守候選），以及幸福蛋（PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_243:243-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留雷公（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_244:244-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留炎帝（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_245:245-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留水君（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_246:246-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留班基拉斯（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_249:249-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留洛奇亞（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_250:250-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留鳳王（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "JOHTO_FAMILY_251:251-johto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留時拉比（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    }
+  ]
+}

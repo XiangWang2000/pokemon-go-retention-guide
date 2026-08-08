@@ -54,18 +54,18 @@ describe("Sites 唯讀 snapshot", () => {
   }, 30_000);
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
-    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.08-r19");
+    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.08-r20");
     expect(siteSnapshotManifest.counts).toMatchObject({
-      pokemonSpecies: 268,
-      pokemonForms: 306,
-      battleVariants: 1149,
-      rawEvaluationData: 766,
+      pokemonSpecies: 277,
+      pokemonForms: 315,
+      battleVariants: 1190,
+      rawEvaluationData: 825,
       sourceReferences: 167,
-      retentionEvaluations: 1926,
-      categoryEvaluations: 8043,
+      retentionEvaluations: 1967,
+      categoryEvaluations: 8330,
       ivRecommendations: 11,
-      dashboardRows: 1149,
-      homeFamilies: 148,
+      dashboardRows: 1190,
+      homeFamilies: 155,
       openReviewIssues: 174,
     });
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
@@ -75,9 +75,10 @@ describe("Sites 唯讀 snapshot", () => {
   it("預建 Excel 可開啟且包含十張繁中工作表", async () => {
     const workbook = new ExcelJS.Workbook();
     const buffer = await readFile(
-      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-241.xlsx"),
+      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-251.xlsx"),
     );
     await workbook.xlsx.load(buffer as unknown as Parameters<typeof workbook.xlsx.load>[0]);
+    expect(workbook.subject).toBe("2026.08.08-r20");
     expect(workbook.worksheets).toHaveLength(10);
     expect(workbook.worksheets.map((sheet) => sheet.name)).toEqual([
       "寶可夢型態",
@@ -106,12 +107,14 @@ describe("Sites 唯讀 snapshot", () => {
     expect(compactHome.byteLength).toBeLessThan(1_000_000);
     const runtimeHome = JSON.parse(compactHome.toString("utf8")) as {
       schemaVersion: number;
+      dataVersion: string;
       families: Array<{
         detailsLoaded?: boolean;
         members: Array<{ form: { variants: unknown[]; detailsLoaded?: boolean } }>;
       }>;
     };
     expect(runtimeHome.schemaVersion).toBe(2);
+    expect(runtimeHome.dataVersion).toBe("2026.08.08-r20");
     expect(
       runtimeHome.families.every(
         (family) =>
@@ -125,6 +128,7 @@ describe("Sites 唯讀 snapshot", () => {
 
   it("首頁初始 HTML 直接輸出日期與搜尋入口，不重複輸出家族摘要", () => {
     const home = homeSnapshot as unknown as HomeSnapshot;
+    expect(home.dataVersion).toBe("2026.08.08-r20");
     const summary = buildHomeSummary(home);
     const html = renderToStaticMarkup(createElement(HomeDataLoader, { initialSummary: summary }));
 
@@ -158,7 +162,7 @@ describe("Sites 唯讀 snapshot", () => {
     const response = exportRedirect(new Request("https://example.test/api/export"));
     expect(response.status).toBe(307);
     expect(response.headers.get("location")).toBe(
-      "https://example.test/exports/pokemon-go-retention-001-241.xlsx",
+      "https://example.test/exports/pokemon-go-retention-001-251.xlsx",
     );
   });
 });
@@ -170,9 +174,9 @@ describe("首頁 snapshot", () => {
     const variants = forms.flatMap((form) => form.variants);
 
     expect(home.schemaVersion).toBe(1);
-    expect(home.families).toHaveLength(148);
-    expect(forms).toHaveLength(278);
-    expect(variants).toHaveLength(1149);
+    expect(home.families).toHaveLength(155);
+    expect(forms).toHaveLength(288);
+    expect(variants).toHaveLength(1190);
     expect(variants.every((variant) => variant.row.ivRecommendations.length === 0)).toBe(true);
     expect(forms.some((form) => form.ivRecommendations.length > 0)).toBe(true);
     expect(variants.some((variant) => variant.ivRecommendations.length > 0)).toBe(true);

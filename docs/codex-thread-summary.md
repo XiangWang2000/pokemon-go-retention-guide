@@ -1,6 +1,6 @@
 # Pokémon GO Retention Guide Codex Context
 
-> 更新日期：2026-07-23。只記錄會影響後續 task 的持久決策；產品細節與完整命令請回到 `README.md`。
+> 更新日期：2026-08-08。只記錄會影響後續 task 的持久決策；產品細節與完整命令請回到 `README.md`。
 
 ## 持久決策
 
@@ -41,8 +41,8 @@
 - 首頁由 server build 產生精簡摘要，直接輸出更新日期、PvE 四級分類統計與重要家族連結；完整 `HomeSnapshot` 仍由瀏覽器載入。
 - `worker/index.ts` 與 `scripts/purge-sites-cache.mjs` 形成部署後 CDN purge hook；正式部署成功後必須執行 `npm run sites:purge`，`/` 與 `/api/home` 驗證 `X-Data-Version`，`/data/home.json` 驗證公開檔案雜湊。Sites runtime 若拒絕 Cache API，hook 會退回 no-store 與 canonical revalidation，不得讓請求失敗。
 
-## 2026-08-08 #152-#181 Gen2 first-batch integration
+## 2026-08-08 #152-#251 Gen2 integration checkpoint
 
-- DATA_VERSION is 2026.08.08-r19; the controlled pipeline imports #152-#181 and recomputes the full #001-#181 scope.
-- Pichu, Cleffa, and Igglybuff are linked to the existing Kanto families; Crobat is an actual member, while Togekiss remains an explicit external evolution stub.
-- Runtime snapshot, review, Excel, schema validation, review consistency, and regression tests are generated for this checkpoint; #182+ is intentionally out of scope.
+- DATA_VERSION is 2026.08.08-r20; the controlled pipeline imports #152-#251 and recomputes the full #001-#251 scope.
+- Gen2 members are linked to existing Kanto families where appropriate; formal Johto migrations remove same-species `*-kanto` stubs, while future-generation targets remain explicit evolution stubs.
+- Runtime snapshot, review, Excel, schema validation, review consistency, snapshot provenance checks, and regression tests are generated for this checkpoint; #252+ is intentionally out of scope.

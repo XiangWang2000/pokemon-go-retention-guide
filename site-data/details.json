@@ -16109,13 +16109,13 @@
   "113-kanto-dynamax": {
     "paths": [
       {
-        "id": "evolution-cross-113-kanto-242-kanto",
+        "id": "evolution-cross-113-kanto-242-johto",
         "fromFormId": "113-kanto",
         "fromNameZhTw": "吉利蛋",
         "fromFormNameZhTw": "關都",
-        "toFormId": "242-kanto",
+        "toFormId": "242-johto",
         "toNameZhTw": "幸福蛋",
-        "toFormNameZhTw": "關都",
+        "toFormNameZhTw": "??",
         "evolutionMethodZhTw": "消耗糖果進化",
         "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
         "requiresEvent": false,
@@ -16128,13 +16128,13 @@
   "113-kanto-normal": {
     "paths": [
       {
-        "id": "evolution-cross-113-kanto-242-kanto",
+        "id": "evolution-cross-113-kanto-242-johto",
         "fromFormId": "113-kanto",
         "fromNameZhTw": "吉利蛋",
         "fromFormNameZhTw": "關都",
-        "toFormId": "242-kanto",
+        "toFormId": "242-johto",
         "toNameZhTw": "幸福蛋",
-        "toFormNameZhTw": "關都",
+        "toFormNameZhTw": "??",
         "evolutionMethodZhTw": "消耗糖果進化",
         "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
         "requiresEvent": false,
@@ -16147,13 +16147,13 @@
   "113-kanto-purified": {
     "paths": [
       {
-        "id": "evolution-cross-113-kanto-242-kanto",
+        "id": "evolution-cross-113-kanto-242-johto",
         "fromFormId": "113-kanto",
         "fromNameZhTw": "吉利蛋",
         "fromFormNameZhTw": "關都",
-        "toFormId": "242-kanto",
+        "toFormId": "242-johto",
         "toNameZhTw": "幸福蛋",
-        "toFormNameZhTw": "關都",
+        "toFormNameZhTw": "??",
         "evolutionMethodZhTw": "消耗糖果進化",
         "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
         "requiresEvent": false,
@@ -16166,13 +16166,13 @@
   "113-kanto-shadow": {
     "paths": [
       {
-        "id": "evolution-cross-113-kanto-242-kanto",
+        "id": "evolution-cross-113-kanto-242-johto",
         "fromFormId": "113-kanto",
         "fromNameZhTw": "吉利蛋",
         "fromFormNameZhTw": "關都",
-        "toFormId": "242-kanto",
+        "toFormId": "242-johto",
         "toNameZhTw": "幸福蛋",
-        "toFormNameZhTw": "關都",
+        "toFormNameZhTw": "??",
         "evolutionMethodZhTw": "消耗糖果進化",
         "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
         "requiresEvent": false,
@@ -23902,18 +23902,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-212-johto-mega",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "212-johto-normal": {
     "paths": [
@@ -23970,70 +23959,17 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-212-johto-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "213-johto-dynamax": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-213-johto-dynamax",
-        "fieldName": "decision",
-        "previousValue": "KEEP",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-213-johto-dynamax",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "213-johto-normal": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-213-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-213-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "213-johto-purified": {
     "paths": [],
@@ -24053,18 +23989,7 @@
   "214-johto-mega": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-214-johto-mega",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "214-johto-normal": {
     "paths": [],
@@ -24074,18 +23999,7 @@
   "214-johto-purified": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-214-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "214-johto-shadow": {
     "paths": [],
@@ -24128,28 +24042,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-215-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-215-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "215-johto-purified": {
     "paths": [
@@ -24187,28 +24080,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-215-johto-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-215-johto-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "216-johto-dynamax": {
     "paths": [],
@@ -24266,28 +24138,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-217-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-217-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "217-johto-purified": {
     "paths": [
@@ -24340,18 +24191,7 @@
   "218-johto-purified": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-218-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "218-johto-shadow": {
     "paths": [],
@@ -24371,18 +24211,7 @@
   "219-johto-purified": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-219-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "219-johto-shadow": {
     "paths": [],
@@ -24445,28 +24274,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-221-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-221-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "221-johto-purified": {
     "paths": [
@@ -24504,28 +24312,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-221-johto-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-221-johto-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "222-johto-dynamax": {
     "paths": [],
@@ -24540,18 +24327,7 @@
   "222-johto-purified": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-222-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "222-johto-shadow": {
     "paths": [],
@@ -24613,18 +24389,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-223-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "223-johto-shadow": {
     "paths": [
@@ -24700,18 +24465,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-224-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "224-johto-shadow": {
     "paths": [
@@ -24760,34 +24514,12 @@
   "226-johto-normal": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-226-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "226-johto-purified": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-226-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "226-johto-shadow": {
     "paths": [],
@@ -24802,18 +24534,7 @@
   "227-johto-mega": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-227-johto-mega",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "227-johto-normal": {
     "paths": [],
@@ -24823,28 +24544,7 @@
   "227-johto-purified": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-227-johto-purified",
-        "fieldName": "decision",
-        "previousValue": "CONDITIONAL_KEEP",
-        "newValue": "TRANSFER_CANDIDATE",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-227-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "LIMITED_USE",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "227-johto-shadow": {
     "paths": [],
@@ -24887,28 +24587,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-228-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-228-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "228-johto-purified": {
     "paths": [
@@ -24946,28 +24625,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-228-johto-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-228-johto-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "229-johto-dynamax": {
     "paths": [
@@ -25005,18 +24663,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-229-johto-mega",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "229-johto-normal": {
     "paths": [
@@ -25054,28 +24701,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-229-johto-purified",
-        "fieldName": "decision",
-        "previousValue": "CONDITIONAL_KEEP",
-        "newValue": "TRANSFER_CANDIDATE",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-229-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "LIMITED_USE",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "229-johto-shadow": {
     "paths": [
@@ -25132,18 +24758,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-230-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "230-johto-purified": {
     "paths": [
@@ -25181,18 +24796,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-230-johto-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "231-johto-dynamax": {
     "paths": [
@@ -25230,28 +24834,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-231-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-231-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "231-johto-purified": {
     "paths": [
@@ -25289,28 +24872,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-231-johto-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-231-johto-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "232-johto-dynamax": {
     "paths": [
@@ -25450,28 +25012,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-233-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-233-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "233-johto-purified": {
     "paths": [
@@ -25535,28 +25076,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-233-johto-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-233-johto-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "234-johto-dynamax": {
     "paths": [
@@ -25594,28 +25114,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-234-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-234-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "234-johto-purified": {
     "paths": [
@@ -25653,28 +25152,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-234-johto-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-234-johto-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "235-johto-dynamax": {
     "paths": [],
@@ -25689,18 +25167,7 @@
   "235-johto-purified": {
     "paths": [],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-235-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "235-johto-shadow": {
     "paths": [],
@@ -25795,28 +25262,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-236-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-236-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "236-johto-purified": {
     "paths": [
@@ -25861,18 +25307,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-236-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "236-johto-shadow": {
     "paths": [
@@ -25936,28 +25371,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-237-johto-dynamax",
-        "fieldName": "decision",
-        "previousValue": "KEEP",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-237-johto-dynamax",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "237-johto-normal": {
     "paths": [
@@ -25976,28 +25390,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-237-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-237-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "237-johto-purified": {
     "paths": [
@@ -26092,18 +25485,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-238-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "238-johto-shadow": {
     "paths": [
@@ -26160,28 +25542,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-239-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-239-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "239-johto-purified": {
     "paths": [
@@ -26200,18 +25561,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-239-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "239-johto-shadow": {
     "paths": [
@@ -26268,28 +25618,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-decision-240-johto-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260808-disposition-240-johto-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "240-johto-purified": {
     "paths": [
@@ -26308,18 +25637,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260808-disposition-240-johto-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-07T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "240-johto-shadow": {
     "paths": [
@@ -26353,9 +25671,92 @@
   "241-johto-purified": {
     "paths": [],
     "conflicts": [],
+    "changeLogs": []
+  },
+  "241-johto-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "242-johto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-cross-113-kanto-242-johto",
+        "fromFormId": "113-kanto",
+        "fromNameZhTw": "吉利蛋",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "242-johto",
+        "toNameZhTw": "幸福蛋",
+        "toFormNameZhTw": "??",
+        "evolutionMethodZhTw": "消耗糖果進化",
+        "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-07T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
     "changeLogs": [
       {
-        "id": "recalibrate-20260808-disposition-241-johto-purified",
+        "id": "recalibrate-20260808-decision-242-johto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-242-johto-dynamax",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "242-johto-normal": {
+    "paths": [
+      {
+        "id": "evolution-cross-113-kanto-242-johto",
+        "fromFormId": "113-kanto",
+        "fromNameZhTw": "吉利蛋",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "242-johto",
+        "toNameZhTw": "幸福蛋",
+        "toFormNameZhTw": "??",
+        "evolutionMethodZhTw": "消耗糖果進化",
+        "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-07T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "242-johto-purified": {
+    "paths": [
+      {
+        "id": "evolution-cross-113-kanto-242-johto",
+        "fromFormId": "113-kanto",
+        "fromNameZhTw": "吉利蛋",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "242-johto",
+        "toNameZhTw": "幸福蛋",
+        "toFormNameZhTw": "??",
+        "evolutionMethodZhTw": "消耗糖果進化",
+        "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-07T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-disposition-242-johto-purified",
         "fieldName": "assessmentDisposition",
         "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
         "newValue": "NO_SIGNIFICANT_USE",
@@ -26366,7 +25767,799 @@
       }
     ]
   },
-  "241-johto-shadow": {
+  "242-johto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-cross-113-kanto-242-johto",
+        "fromFormId": "113-kanto",
+        "fromNameZhTw": "吉利蛋",
+        "fromFormNameZhTw": "關都",
+        "toFormId": "242-johto",
+        "toNameZhTw": "幸福蛋",
+        "toFormNameZhTw": "??",
+        "evolutionMethodZhTw": "消耗糖果進化",
+        "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-07T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "243-johto-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-243-johto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-243-johto-dynamax",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "243-johto-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "243-johto-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-243-johto-purified",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-243-johto-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "243-johto-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "244-johto-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-244-johto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-244-johto-dynamax",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "244-johto-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "244-johto-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-244-johto-purified",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-244-johto-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "244-johto-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "245-johto-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-245-johto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-245-johto-dynamax",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "245-johto-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "245-johto-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-245-johto-purified",
+        "fieldName": "decision",
+        "previousValue": "CONDITIONAL_KEEP",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-245-johto-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "LIMITED_USE",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "245-johto-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "246-johto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-r20-246-johto-247-johto",
+        "fromFormId": "246-johto",
+        "fromNameZhTw": "幼基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "247-johto",
+        "toNameZhTw": "沙基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "246-johto-normal": {
+    "paths": [
+      {
+        "id": "evolution-r20-246-johto-247-johto",
+        "fromFormId": "246-johto",
+        "fromNameZhTw": "幼基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "247-johto",
+        "toNameZhTw": "沙基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-246-johto-normal",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-246-johto-normal",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "CLEAR_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "246-johto-purified": {
+    "paths": [
+      {
+        "id": "evolution-r20-246-johto-247-johto",
+        "fromFormId": "246-johto",
+        "fromNameZhTw": "幼基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "247-johto",
+        "toNameZhTw": "沙基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "246-johto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-r20-246-johto-247-johto",
+        "fromFormId": "246-johto",
+        "fromNameZhTw": "幼基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "247-johto",
+        "toNameZhTw": "沙基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-246-johto-shadow",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-246-johto-shadow",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "CLEAR_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "247-johto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-r20-246-johto-247-johto",
+        "fromFormId": "246-johto",
+        "fromNameZhTw": "幼基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "247-johto",
+        "toNameZhTw": "沙基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      },
+      {
+        "id": "evolution-r20-247-johto-248-johto",
+        "fromFormId": "247-johto",
+        "fromNameZhTw": "沙基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "248-johto",
+        "toNameZhTw": "班基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "247-johto-normal": {
+    "paths": [
+      {
+        "id": "evolution-r20-246-johto-247-johto",
+        "fromFormId": "246-johto",
+        "fromNameZhTw": "幼基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "247-johto",
+        "toNameZhTw": "沙基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      },
+      {
+        "id": "evolution-r20-247-johto-248-johto",
+        "fromFormId": "247-johto",
+        "fromNameZhTw": "沙基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "248-johto",
+        "toNameZhTw": "班基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-247-johto-normal",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-247-johto-normal",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "CLEAR_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "247-johto-purified": {
+    "paths": [
+      {
+        "id": "evolution-r20-246-johto-247-johto",
+        "fromFormId": "246-johto",
+        "fromNameZhTw": "幼基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "247-johto",
+        "toNameZhTw": "沙基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      },
+      {
+        "id": "evolution-r20-247-johto-248-johto",
+        "fromFormId": "247-johto",
+        "fromNameZhTw": "沙基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "248-johto",
+        "toNameZhTw": "班基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "247-johto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-r20-246-johto-247-johto",
+        "fromFormId": "246-johto",
+        "fromNameZhTw": "幼基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "247-johto",
+        "toNameZhTw": "沙基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      },
+      {
+        "id": "evolution-r20-247-johto-248-johto",
+        "fromFormId": "247-johto",
+        "fromNameZhTw": "沙基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "248-johto",
+        "toNameZhTw": "班基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-247-johto-shadow",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-247-johto-shadow",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "CLEAR_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "248-johto-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-r20-247-johto-248-johto",
+        "fromFormId": "247-johto",
+        "fromNameZhTw": "沙基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "248-johto",
+        "toNameZhTw": "班基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "248-johto-mega": {
+    "paths": [
+      {
+        "id": "evolution-r20-247-johto-248-johto",
+        "fromFormId": "247-johto",
+        "fromNameZhTw": "沙基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "248-johto",
+        "toNameZhTw": "班基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-disposition-248-johto-mega",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "248-johto-normal": {
+    "paths": [
+      {
+        "id": "evolution-r20-247-johto-248-johto",
+        "fromFormId": "247-johto",
+        "fromNameZhTw": "沙基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "248-johto",
+        "toNameZhTw": "班基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "248-johto-purified": {
+    "paths": [
+      {
+        "id": "evolution-r20-247-johto-248-johto",
+        "fromFormId": "247-johto",
+        "fromNameZhTw": "沙基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "248-johto",
+        "toNameZhTw": "班基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-248-johto-purified",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-248-johto-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "248-johto-shadow": {
+    "paths": [
+      {
+        "id": "evolution-r20-247-johto-248-johto",
+        "fromFormId": "247-johto",
+        "fromNameZhTw": "沙基拉斯",
+        "fromFormNameZhTw": "城都",
+        "toFormId": "248-johto",
+        "toNameZhTw": "班基拉斯",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T10:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "249-johto-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-249-johto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-249-johto-dynamax",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "249-johto-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-249-johto-normal",
+        "fieldName": "decision",
+        "previousValue": "CONDITIONAL_KEEP",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "249-johto-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-249-johto-purified",
+        "fieldName": "decision",
+        "previousValue": "CONDITIONAL_KEEP",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-249-johto-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "LIMITED_USE",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "249-johto-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-249-johto-shadow",
+        "fieldName": "decision",
+        "previousValue": "CONDITIONAL_KEEP",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "250-johto-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-250-johto-dynamax",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-250-johto-dynamax",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "250-johto-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "250-johto-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-decision-250-johto-purified",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260808-disposition-250-johto-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "250-johto-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "251-johto-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "251-johto-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "251-johto-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260808-disposition-251-johto-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-07T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "251-johto-shadow": {
     "paths": [],
     "conflicts": [],
     "changeLogs": []

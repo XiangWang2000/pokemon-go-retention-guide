@@ -1,0 +1,3301 @@
+{
+  "scope": "1-251",
+  "dataVersion": "2026.08.08-r20",
+  "updatedAt": "2026-08-08",
+  "generatedAt": "2026-08-07T16:00:00.000Z",
+  "rulesVersion": "2026.08.06-v7",
+  "counts": {
+    "variants": 1190,
+    "decisions": {
+      "TRANSFER_CANDIDATE": 803,
+      "CONDITIONAL_KEEP": 296,
+      "KEEP": 91
+    },
+    "dispositions": {
+      "NO_SIGNIFICANT_USE": 467,
+      "CLEAR_USE": 66,
+      "LIMITED_USE": 321,
+      "NOT_APPLICABLE_OR_UNRELEASED": 336
+    },
+    "pveUseLevels": {
+      "NO_SIGNIFICANT_USE": 969,
+      "CORE_INVESTMENT": 66,
+      "SPECIAL_USE": 123,
+      "USABLE_OR_BUDGET": 32
+    },
+    "changedFields": 37
+  },
+  "trueDataPending": [],
+  "highRiskReview": [
+    {
+      "id": "063-kanto-dynamax",
+      "dexNumber": 63,
+      "nameZhTw": "凱西",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "063-kanto-normal",
+      "dexNumber": 63,
+      "nameZhTw": "凱西",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "胡地"
+    },
+    {
+      "id": "063-kanto-purified",
+      "dexNumber": 63,
+      "nameZhTw": "凱西",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "063-kanto-shadow",
+      "dexNumber": 63,
+      "nameZhTw": "凱西",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "胡地"
+    },
+    {
+      "id": "066-kanto-dynamax",
+      "dexNumber": 66,
+      "nameZhTw": "腕力",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "066-kanto-normal",
+      "dexNumber": 66,
+      "nameZhTw": "腕力",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "怪力"
+    },
+    {
+      "id": "066-kanto-purified",
+      "dexNumber": 66,
+      "nameZhTw": "腕力",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "066-kanto-shadow",
+      "dexNumber": 66,
+      "nameZhTw": "腕力",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "怪力"
+    },
+    {
+      "id": "081-kanto-dynamax",
+      "dexNumber": 81,
+      "nameZhTw": "小磁怪",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "081-kanto-normal",
+      "dexNumber": 81,
+      "nameZhTw": "小磁怪",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "自爆磁怪"
+    },
+    {
+      "id": "081-kanto-purified",
+      "dexNumber": 81,
+      "nameZhTw": "小磁怪",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "081-kanto-shadow",
+      "dexNumber": 81,
+      "nameZhTw": "小磁怪",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "自爆磁怪"
+    },
+    {
+      "id": "092-kanto-dynamax",
+      "dexNumber": 92,
+      "nameZhTw": "鬼斯",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "092-kanto-normal",
+      "dexNumber": 92,
+      "nameZhTw": "鬼斯",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "耿鬼"
+    },
+    {
+      "id": "092-kanto-purified",
+      "dexNumber": 92,
+      "nameZhTw": "鬼斯",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "092-kanto-shadow",
+      "dexNumber": 92,
+      "nameZhTw": "鬼斯",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "耿鬼"
+    },
+    {
+      "id": "111-kanto-dynamax",
+      "dexNumber": 111,
+      "nameZhTw": "獨角犀牛",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "111-kanto-normal",
+      "dexNumber": 111,
+      "nameZhTw": "獨角犀牛",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "超甲狂犀"
+    },
+    {
+      "id": "111-kanto-purified",
+      "dexNumber": 111,
+      "nameZhTw": "獨角犀牛",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "111-kanto-shadow",
+      "dexNumber": 111,
+      "nameZhTw": "獨角犀牛",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "超甲狂犀"
+    },
+    {
+      "id": "113-kanto-dynamax",
+      "dexNumber": 113,
+      "nameZhTw": "吉利蛋",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "113-kanto-normal",
+      "dexNumber": 113,
+      "nameZhTw": "吉利蛋",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "幸福蛋"
+    },
+    {
+      "id": "113-kanto-purified",
+      "dexNumber": 113,
+      "nameZhTw": "吉利蛋",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "113-kanto-shadow",
+      "dexNumber": 113,
+      "nameZhTw": "吉利蛋",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": "幸福蛋"
+    },
+    {
+      "id": "114-kanto-dynamax",
+      "dexNumber": 114,
+      "nameZhTw": "蔓藤怪",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "114-kanto-normal",
+      "dexNumber": 114,
+      "nameZhTw": "蔓藤怪",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "巨蔓藤"
+    },
+    {
+      "id": "114-kanto-purified",
+      "dexNumber": 114,
+      "nameZhTw": "蔓藤怪",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "114-kanto-shadow",
+      "dexNumber": 114,
+      "nameZhTw": "蔓藤怪",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "巨蔓藤"
+    },
+    {
+      "id": "123-kanto-dynamax",
+      "dexNumber": 123,
+      "nameZhTw": "飛天螳螂",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "123-kanto-normal",
+      "dexNumber": 123,
+      "nameZhTw": "飛天螳螂",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "巨鉗螳螂"
+    },
+    {
+      "id": "123-kanto-purified",
+      "dexNumber": 123,
+      "nameZhTw": "飛天螳螂",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "123-kanto-shadow",
+      "dexNumber": 123,
+      "nameZhTw": "飛天螳螂",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "巨鉗螳螂"
+    },
+    {
+      "id": "125-kanto-dynamax",
+      "dexNumber": 125,
+      "nameZhTw": "電擊獸",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "125-kanto-normal",
+      "dexNumber": 125,
+      "nameZhTw": "電擊獸",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "電擊魔獸"
+    },
+    {
+      "id": "125-kanto-purified",
+      "dexNumber": 125,
+      "nameZhTw": "電擊獸",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "125-kanto-shadow",
+      "dexNumber": 125,
+      "nameZhTw": "電擊獸",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "電擊魔獸"
+    },
+    {
+      "id": "126-kanto-dynamax",
+      "dexNumber": 126,
+      "nameZhTw": "鴨嘴火獸",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "126-kanto-normal",
+      "dexNumber": 126,
+      "nameZhTw": "鴨嘴火獸",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "鴨嘴炎獸"
+    },
+    {
+      "id": "126-kanto-purified",
+      "dexNumber": 126,
+      "nameZhTw": "鴨嘴火獸",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "126-kanto-shadow",
+      "dexNumber": 126,
+      "nameZhTw": "鴨嘴火獸",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "鴨嘴炎獸"
+    },
+    {
+      "id": "131-kanto-dynamax",
+      "dexNumber": 131,
+      "nameZhTw": "拉普拉斯",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "131-kanto-gigantamax",
+      "dexNumber": 131,
+      "nameZhTw": "拉普拉斯",
+      "variantKey": "GIGANTAMAX",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "131-kanto-normal",
+      "dexNumber": 131,
+      "nameZhTw": "拉普拉斯",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "131-kanto-purified",
+      "dexNumber": 131,
+      "nameZhTw": "拉普拉斯",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "131-kanto-shadow",
+      "dexNumber": 131,
+      "nameZhTw": "拉普拉斯",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "143-kanto-dynamax",
+      "dexNumber": 143,
+      "nameZhTw": "卡比獸",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "143-kanto-gigantamax",
+      "dexNumber": 143,
+      "nameZhTw": "卡比獸",
+      "variantKey": "GIGANTAMAX",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "143-kanto-normal",
+      "dexNumber": 143,
+      "nameZhTw": "卡比獸",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "143-kanto-purified",
+      "dexNumber": 143,
+      "nameZhTw": "卡比獸",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "143-kanto-shadow",
+      "dexNumber": 143,
+      "nameZhTw": "卡比獸",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "144-galar-dynamax",
+      "dexNumber": 144,
+      "nameZhTw": "急凍鳥",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "144-kanto-dynamax",
+      "dexNumber": 144,
+      "nameZhTw": "急凍鳥",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "144-galar-normal",
+      "dexNumber": 144,
+      "nameZhTw": "急凍鳥",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "144-kanto-normal",
+      "dexNumber": 144,
+      "nameZhTw": "急凍鳥",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "144-galar-purified",
+      "dexNumber": 144,
+      "nameZhTw": "急凍鳥",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "144-kanto-purified",
+      "dexNumber": 144,
+      "nameZhTw": "急凍鳥",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "144-galar-shadow",
+      "dexNumber": 144,
+      "nameZhTw": "急凍鳥",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "144-kanto-shadow",
+      "dexNumber": 144,
+      "nameZhTw": "急凍鳥",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "145-galar-dynamax",
+      "dexNumber": 145,
+      "nameZhTw": "閃電鳥",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "145-kanto-dynamax",
+      "dexNumber": 145,
+      "nameZhTw": "閃電鳥",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "145-galar-normal",
+      "dexNumber": 145,
+      "nameZhTw": "閃電鳥",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "145-kanto-normal",
+      "dexNumber": 145,
+      "nameZhTw": "閃電鳥",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "145-galar-purified",
+      "dexNumber": 145,
+      "nameZhTw": "閃電鳥",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "145-kanto-purified",
+      "dexNumber": 145,
+      "nameZhTw": "閃電鳥",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "145-galar-shadow",
+      "dexNumber": 145,
+      "nameZhTw": "閃電鳥",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "145-kanto-shadow",
+      "dexNumber": 145,
+      "nameZhTw": "閃電鳥",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "146-galar-dynamax",
+      "dexNumber": 146,
+      "nameZhTw": "火焰鳥",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "146-kanto-dynamax",
+      "dexNumber": 146,
+      "nameZhTw": "火焰鳥",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "146-galar-normal",
+      "dexNumber": 146,
+      "nameZhTw": "火焰鳥",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "146-kanto-normal",
+      "dexNumber": 146,
+      "nameZhTw": "火焰鳥",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "146-galar-purified",
+      "dexNumber": 146,
+      "nameZhTw": "火焰鳥",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "146-kanto-purified",
+      "dexNumber": 146,
+      "nameZhTw": "火焰鳥",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "146-galar-shadow",
+      "dexNumber": 146,
+      "nameZhTw": "火焰鳥",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "146-kanto-shadow",
+      "dexNumber": 146,
+      "nameZhTw": "火焰鳥",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "147-kanto-dynamax",
+      "dexNumber": 147,
+      "nameZhTw": "迷你龍",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "147-kanto-normal",
+      "dexNumber": 147,
+      "nameZhTw": "迷你龍",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "快龍"
+    },
+    {
+      "id": "147-kanto-purified",
+      "dexNumber": 147,
+      "nameZhTw": "迷你龍",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "147-kanto-shadow",
+      "dexNumber": 147,
+      "nameZhTw": "迷你龍",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "快龍"
+    },
+    {
+      "id": "150-armored-dynamax",
+      "dexNumber": 150,
+      "nameZhTw": "超夢",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "150-kanto-dynamax",
+      "dexNumber": 150,
+      "nameZhTw": "超夢",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "150-kanto-mega-x",
+      "dexNumber": 150,
+      "nameZhTw": "超夢",
+      "variantKey": "MEGA_X",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "150-kanto-mega-y",
+      "dexNumber": 150,
+      "nameZhTw": "超夢",
+      "variantKey": "MEGA_Y",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "150-armored-normal",
+      "dexNumber": 150,
+      "nameZhTw": "超夢",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "150-kanto-normal",
+      "dexNumber": 150,
+      "nameZhTw": "超夢",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "150-armored-purified",
+      "dexNumber": 150,
+      "nameZhTw": "超夢",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "150-kanto-purified",
+      "dexNumber": 150,
+      "nameZhTw": "超夢",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "150-armored-shadow",
+      "dexNumber": 150,
+      "nameZhTw": "超夢",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "150-kanto-shadow",
+      "dexNumber": 150,
+      "nameZhTw": "超夢",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "154-johto-dynamax",
+      "dexNumber": 154,
+      "nameZhTw": "大竺葵",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "154-johto-normal",
+      "dexNumber": 154,
+      "nameZhTw": "大竺葵",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "154-johto-purified",
+      "dexNumber": 154,
+      "nameZhTw": "大竺葵",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "154-johto-shadow",
+      "dexNumber": 154,
+      "nameZhTw": "大竺葵",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "157-johto-dynamax",
+      "dexNumber": 157,
+      "nameZhTw": "火暴獸",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "157-johto-normal",
+      "dexNumber": 157,
+      "nameZhTw": "火暴獸",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "157-johto-purified",
+      "dexNumber": 157,
+      "nameZhTw": "火暴獸",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "157-johto-shadow",
+      "dexNumber": 157,
+      "nameZhTw": "火暴獸",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "160-johto-dynamax",
+      "dexNumber": 160,
+      "nameZhTw": "大力鱷",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "160-johto-normal",
+      "dexNumber": 160,
+      "nameZhTw": "大力鱷",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "160-johto-purified",
+      "dexNumber": 160,
+      "nameZhTw": "大力鱷",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "160-johto-shadow",
+      "dexNumber": 160,
+      "nameZhTw": "大力鱷",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "164-johto-dynamax",
+      "dexNumber": 164,
+      "nameZhTw": "貓頭夜鷹",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "164-johto-normal",
+      "dexNumber": 164,
+      "nameZhTw": "貓頭夜鷹",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "164-johto-purified",
+      "dexNumber": 164,
+      "nameZhTw": "貓頭夜鷹",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "164-johto-shadow",
+      "dexNumber": 164,
+      "nameZhTw": "貓頭夜鷹",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "166-johto-dynamax",
+      "dexNumber": 166,
+      "nameZhTw": "安瓢蟲",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "166-johto-normal",
+      "dexNumber": 166,
+      "nameZhTw": "安瓢蟲",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "166-johto-purified",
+      "dexNumber": 166,
+      "nameZhTw": "安瓢蟲",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "166-johto-shadow",
+      "dexNumber": 166,
+      "nameZhTw": "安瓢蟲",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "168-johto-dynamax",
+      "dexNumber": 168,
+      "nameZhTw": "阿利多斯",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "168-johto-normal",
+      "dexNumber": 168,
+      "nameZhTw": "阿利多斯",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "168-johto-purified",
+      "dexNumber": 168,
+      "nameZhTw": "阿利多斯",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "168-johto-shadow",
+      "dexNumber": 168,
+      "nameZhTw": "阿利多斯",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "169-johto-dynamax",
+      "dexNumber": 169,
+      "nameZhTw": "叉字蝠",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "169-johto-normal",
+      "dexNumber": 169,
+      "nameZhTw": "叉字蝠",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "169-johto-purified",
+      "dexNumber": 169,
+      "nameZhTw": "叉字蝠",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "169-johto-shadow",
+      "dexNumber": 169,
+      "nameZhTw": "叉字蝠",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "171-johto-dynamax",
+      "dexNumber": 171,
+      "nameZhTw": "電燈怪",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "171-johto-normal",
+      "dexNumber": 171,
+      "nameZhTw": "電燈怪",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "171-johto-purified",
+      "dexNumber": 171,
+      "nameZhTw": "電燈怪",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "171-johto-shadow",
+      "dexNumber": 171,
+      "nameZhTw": "電燈怪",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "176-johto-dynamax",
+      "dexNumber": 176,
+      "nameZhTw": "波克基古",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "176-johto-normal",
+      "dexNumber": 176,
+      "nameZhTw": "波克基古",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "波克基斯"
+    },
+    {
+      "id": "176-johto-purified",
+      "dexNumber": 176,
+      "nameZhTw": "波克基古",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "176-johto-shadow",
+      "dexNumber": 176,
+      "nameZhTw": "波克基古",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": "波克基斯"
+    },
+    {
+      "id": "178-johto-dynamax",
+      "dexNumber": 178,
+      "nameZhTw": "天然鳥",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "178-johto-normal",
+      "dexNumber": 178,
+      "nameZhTw": "天然鳥",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "178-johto-purified",
+      "dexNumber": 178,
+      "nameZhTw": "天然鳥",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "178-johto-shadow",
+      "dexNumber": 178,
+      "nameZhTw": "天然鳥",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "181-johto-dynamax",
+      "dexNumber": 181,
+      "nameZhTw": "電龍",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "181-johto-mega",
+      "dexNumber": 181,
+      "nameZhTw": "電龍",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "181-johto-normal",
+      "dexNumber": 181,
+      "nameZhTw": "電龍",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "181-johto-purified",
+      "dexNumber": 181,
+      "nameZhTw": "電龍",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "181-johto-shadow",
+      "dexNumber": 181,
+      "nameZhTw": "電龍",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "182-johto-dynamax",
+      "dexNumber": 182,
+      "nameZhTw": "美麗花",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "182-johto-normal",
+      "dexNumber": 182,
+      "nameZhTw": "美麗花",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "182-johto-purified",
+      "dexNumber": 182,
+      "nameZhTw": "美麗花",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "182-johto-shadow",
+      "dexNumber": 182,
+      "nameZhTw": "美麗花",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "185-johto-dynamax",
+      "dexNumber": 185,
+      "nameZhTw": "樹才怪",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "185-johto-normal",
+      "dexNumber": 185,
+      "nameZhTw": "樹才怪",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "185-johto-purified",
+      "dexNumber": 185,
+      "nameZhTw": "樹才怪",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "185-johto-shadow",
+      "dexNumber": 185,
+      "nameZhTw": "樹才怪",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "186-johto-dynamax",
+      "dexNumber": 186,
+      "nameZhTw": "蚊香蛙皇",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "186-johto-normal",
+      "dexNumber": 186,
+      "nameZhTw": "蚊香蛙皇",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "186-johto-purified",
+      "dexNumber": 186,
+      "nameZhTw": "蚊香蛙皇",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "186-johto-shadow",
+      "dexNumber": 186,
+      "nameZhTw": "蚊香蛙皇",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "194-johto-dynamax",
+      "dexNumber": 194,
+      "nameZhTw": "烏波",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "194-johto-normal",
+      "dexNumber": 194,
+      "nameZhTw": "烏波",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "沼王"
+    },
+    {
+      "id": "194-johto-purified",
+      "dexNumber": 194,
+      "nameZhTw": "烏波",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "194-johto-shadow",
+      "dexNumber": 194,
+      "nameZhTw": "烏波",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "沼王"
+    },
+    {
+      "id": "195-johto-dynamax",
+      "dexNumber": 195,
+      "nameZhTw": "沼王",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "195-johto-normal",
+      "dexNumber": 195,
+      "nameZhTw": "沼王",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "195-johto-purified",
+      "dexNumber": 195,
+      "nameZhTw": "沼王",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "195-johto-shadow",
+      "dexNumber": 195,
+      "nameZhTw": "沼王",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "196-johto-dynamax",
+      "dexNumber": 196,
+      "nameZhTw": "太陽伊布",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "196-johto-normal",
+      "dexNumber": 196,
+      "nameZhTw": "太陽伊布",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "196-johto-purified",
+      "dexNumber": 196,
+      "nameZhTw": "太陽伊布",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "196-johto-shadow",
+      "dexNumber": 196,
+      "nameZhTw": "太陽伊布",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "197-johto-dynamax",
+      "dexNumber": 197,
+      "nameZhTw": "月亮伊布",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "197-johto-normal",
+      "dexNumber": 197,
+      "nameZhTw": "月亮伊布",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "197-johto-purified",
+      "dexNumber": 197,
+      "nameZhTw": "月亮伊布",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "197-johto-shadow",
+      "dexNumber": 197,
+      "nameZhTw": "月亮伊布",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "198-johto-dynamax",
+      "dexNumber": 198,
+      "nameZhTw": "黑暗鴉",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "198-johto-normal",
+      "dexNumber": 198,
+      "nameZhTw": "黑暗鴉",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "烏鴉頭頭"
+    },
+    {
+      "id": "198-johto-purified",
+      "dexNumber": 198,
+      "nameZhTw": "黑暗鴉",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "198-johto-shadow",
+      "dexNumber": 198,
+      "nameZhTw": "黑暗鴉",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "烏鴉頭頭"
+    },
+    {
+      "id": "199-johto-dynamax",
+      "dexNumber": 199,
+      "nameZhTw": "呆呆王",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "199-johto-normal",
+      "dexNumber": 199,
+      "nameZhTw": "呆呆王",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "199-johto-purified",
+      "dexNumber": 199,
+      "nameZhTw": "呆呆王",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "199-johto-shadow",
+      "dexNumber": 199,
+      "nameZhTw": "呆呆王",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "200-johto-dynamax",
+      "dexNumber": 200,
+      "nameZhTw": "夢妖",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "200-johto-normal",
+      "dexNumber": 200,
+      "nameZhTw": "夢妖",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "夢妖魔"
+    },
+    {
+      "id": "200-johto-purified",
+      "dexNumber": 200,
+      "nameZhTw": "夢妖",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "200-johto-shadow",
+      "dexNumber": 200,
+      "nameZhTw": "夢妖",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "夢妖魔"
+    },
+    {
+      "id": "202-johto-dynamax",
+      "dexNumber": 202,
+      "nameZhTw": "果然翁",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "202-johto-normal",
+      "dexNumber": 202,
+      "nameZhTw": "果然翁",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "202-johto-purified",
+      "dexNumber": 202,
+      "nameZhTw": "果然翁",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "202-johto-shadow",
+      "dexNumber": 202,
+      "nameZhTw": "果然翁",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "203-johto-dynamax",
+      "dexNumber": 203,
+      "nameZhTw": "麒麟奇",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "203-johto-normal",
+      "dexNumber": 203,
+      "nameZhTw": "麒麟奇",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "奇麒麟"
+    },
+    {
+      "id": "203-johto-purified",
+      "dexNumber": 203,
+      "nameZhTw": "麒麟奇",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "203-johto-shadow",
+      "dexNumber": 203,
+      "nameZhTw": "麒麟奇",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "奇麒麟"
+    },
+    {
+      "id": "204-johto-dynamax",
+      "dexNumber": 204,
+      "nameZhTw": "榛果球",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "204-johto-normal",
+      "dexNumber": 204,
+      "nameZhTw": "榛果球",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "204-johto-purified",
+      "dexNumber": 204,
+      "nameZhTw": "榛果球",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "204-johto-shadow",
+      "dexNumber": 204,
+      "nameZhTw": "榛果球",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "205-johto-dynamax",
+      "dexNumber": 205,
+      "nameZhTw": "佛烈托斯",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "205-johto-normal",
+      "dexNumber": 205,
+      "nameZhTw": "佛烈托斯",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "205-johto-purified",
+      "dexNumber": 205,
+      "nameZhTw": "佛烈托斯",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "205-johto-shadow",
+      "dexNumber": 205,
+      "nameZhTw": "佛烈托斯",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "207-johto-dynamax",
+      "dexNumber": 207,
+      "nameZhTw": "天蠍",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "207-johto-normal",
+      "dexNumber": 207,
+      "nameZhTw": "天蠍",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "天蠍王"
+    },
+    {
+      "id": "207-johto-purified",
+      "dexNumber": 207,
+      "nameZhTw": "天蠍",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "207-johto-shadow",
+      "dexNumber": 207,
+      "nameZhTw": "天蠍",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "天蠍王"
+    },
+    {
+      "id": "208-johto-dynamax",
+      "dexNumber": 208,
+      "nameZhTw": "大鋼蛇",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "208-johto-mega",
+      "dexNumber": 208,
+      "nameZhTw": "大鋼蛇",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "208-johto-normal",
+      "dexNumber": 208,
+      "nameZhTw": "大鋼蛇",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "208-johto-purified",
+      "dexNumber": 208,
+      "nameZhTw": "大鋼蛇",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "208-johto-shadow",
+      "dexNumber": 208,
+      "nameZhTw": "大鋼蛇",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "209-johto-dynamax",
+      "dexNumber": 209,
+      "nameZhTw": "布魯",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "209-johto-normal",
+      "dexNumber": 209,
+      "nameZhTw": "布魯",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "209-johto-purified",
+      "dexNumber": 209,
+      "nameZhTw": "布魯",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "209-johto-shadow",
+      "dexNumber": 209,
+      "nameZhTw": "布魯",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "210-johto-dynamax",
+      "dexNumber": 210,
+      "nameZhTw": "布魯皇",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "210-johto-normal",
+      "dexNumber": 210,
+      "nameZhTw": "布魯皇",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "210-johto-purified",
+      "dexNumber": 210,
+      "nameZhTw": "布魯皇",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "210-johto-shadow",
+      "dexNumber": 210,
+      "nameZhTw": "布魯皇",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "211-johto-dynamax",
+      "dexNumber": 211,
+      "nameZhTw": "千針魚",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "211-johto-normal",
+      "dexNumber": 211,
+      "nameZhTw": "千針魚",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "211-johto-purified",
+      "dexNumber": 211,
+      "nameZhTw": "千針魚",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "211-johto-shadow",
+      "dexNumber": 211,
+      "nameZhTw": "千針魚",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "212-johto-dynamax",
+      "dexNumber": 212,
+      "nameZhTw": "巨鉗螳螂",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "212-johto-mega",
+      "dexNumber": 212,
+      "nameZhTw": "巨鉗螳螂",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "212-johto-normal",
+      "dexNumber": 212,
+      "nameZhTw": "巨鉗螳螂",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "212-johto-purified",
+      "dexNumber": 212,
+      "nameZhTw": "巨鉗螳螂",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "212-johto-shadow",
+      "dexNumber": 212,
+      "nameZhTw": "巨鉗螳螂",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "213-johto-dynamax",
+      "dexNumber": 213,
+      "nameZhTw": "壺壺",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "213-johto-normal",
+      "dexNumber": 213,
+      "nameZhTw": "壺壺",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "213-johto-purified",
+      "dexNumber": 213,
+      "nameZhTw": "壺壺",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "213-johto-shadow",
+      "dexNumber": 213,
+      "nameZhTw": "壺壺",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "214-johto-dynamax",
+      "dexNumber": 214,
+      "nameZhTw": "赫拉克羅斯",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "214-johto-mega",
+      "dexNumber": 214,
+      "nameZhTw": "赫拉克羅斯",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "214-johto-normal",
+      "dexNumber": 214,
+      "nameZhTw": "赫拉克羅斯",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "214-johto-purified",
+      "dexNumber": 214,
+      "nameZhTw": "赫拉克羅斯",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "214-johto-shadow",
+      "dexNumber": 214,
+      "nameZhTw": "赫拉克羅斯",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "215-johto-dynamax",
+      "dexNumber": 215,
+      "nameZhTw": "狃拉",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "215-johto-normal",
+      "dexNumber": 215,
+      "nameZhTw": "狃拉",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "???"
+    },
+    {
+      "id": "215-johto-purified",
+      "dexNumber": 215,
+      "nameZhTw": "狃拉",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "215-johto-shadow",
+      "dexNumber": 215,
+      "nameZhTw": "狃拉",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "???"
+    },
+    {
+      "id": "216-johto-dynamax",
+      "dexNumber": 216,
+      "nameZhTw": "熊寶寶",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "216-johto-normal",
+      "dexNumber": 216,
+      "nameZhTw": "熊寶寶",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "216-johto-purified",
+      "dexNumber": 216,
+      "nameZhTw": "熊寶寶",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "216-johto-shadow",
+      "dexNumber": 216,
+      "nameZhTw": "熊寶寶",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "217-johto-dynamax",
+      "dexNumber": 217,
+      "nameZhTw": "圈圈熊",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "217-johto-normal",
+      "dexNumber": 217,
+      "nameZhTw": "圈圈熊",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "???"
+    },
+    {
+      "id": "217-johto-purified",
+      "dexNumber": 217,
+      "nameZhTw": "圈圈熊",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "217-johto-shadow",
+      "dexNumber": 217,
+      "nameZhTw": "圈圈熊",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "???"
+    },
+    {
+      "id": "220-johto-dynamax",
+      "dexNumber": 220,
+      "nameZhTw": "小山豬",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "220-johto-normal",
+      "dexNumber": 220,
+      "nameZhTw": "小山豬",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "220-johto-purified",
+      "dexNumber": 220,
+      "nameZhTw": "小山豬",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "220-johto-shadow",
+      "dexNumber": 220,
+      "nameZhTw": "小山豬",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "221-johto-dynamax",
+      "dexNumber": 221,
+      "nameZhTw": "長毛豬",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "221-johto-normal",
+      "dexNumber": 221,
+      "nameZhTw": "長毛豬",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "???"
+    },
+    {
+      "id": "221-johto-purified",
+      "dexNumber": 221,
+      "nameZhTw": "長毛豬",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "221-johto-shadow",
+      "dexNumber": 221,
+      "nameZhTw": "長毛豬",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "???"
+    },
+    {
+      "id": "227-johto-dynamax",
+      "dexNumber": 227,
+      "nameZhTw": "盔甲鳥",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "227-johto-mega",
+      "dexNumber": 227,
+      "nameZhTw": "盔甲鳥",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "227-johto-normal",
+      "dexNumber": 227,
+      "nameZhTw": "盔甲鳥",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "227-johto-purified",
+      "dexNumber": 227,
+      "nameZhTw": "盔甲鳥",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "227-johto-shadow",
+      "dexNumber": 227,
+      "nameZhTw": "盔甲鳥",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "229-johto-dynamax",
+      "dexNumber": 229,
+      "nameZhTw": "黑魯加",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "229-johto-mega",
+      "dexNumber": 229,
+      "nameZhTw": "黑魯加",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "229-johto-normal",
+      "dexNumber": 229,
+      "nameZhTw": "黑魯加",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "229-johto-purified",
+      "dexNumber": 229,
+      "nameZhTw": "黑魯加",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "229-johto-shadow",
+      "dexNumber": 229,
+      "nameZhTw": "黑魯加",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "230-johto-dynamax",
+      "dexNumber": 230,
+      "nameZhTw": "刺龍王",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "230-johto-normal",
+      "dexNumber": 230,
+      "nameZhTw": "刺龍王",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "230-johto-purified",
+      "dexNumber": 230,
+      "nameZhTw": "刺龍王",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "230-johto-shadow",
+      "dexNumber": 230,
+      "nameZhTw": "刺龍王",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "233-johto-dynamax",
+      "dexNumber": 233,
+      "nameZhTw": "多邊獸Ⅱ",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "233-johto-normal",
+      "dexNumber": 233,
+      "nameZhTw": "多邊獸Ⅱ",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "多邊獸Ｚ"
+    },
+    {
+      "id": "233-johto-purified",
+      "dexNumber": 233,
+      "nameZhTw": "多邊獸Ⅱ",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "233-johto-shadow",
+      "dexNumber": 233,
+      "nameZhTw": "多邊獸Ⅱ",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "多邊獸Ｚ"
+    },
+    {
+      "id": "234-johto-dynamax",
+      "dexNumber": 234,
+      "nameZhTw": "驚角鹿",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "234-johto-normal",
+      "dexNumber": 234,
+      "nameZhTw": "驚角鹿",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "???"
+    },
+    {
+      "id": "234-johto-purified",
+      "dexNumber": 234,
+      "nameZhTw": "驚角鹿",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "234-johto-shadow",
+      "dexNumber": 234,
+      "nameZhTw": "驚角鹿",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "???"
+    },
+    {
+      "id": "236-johto-dynamax",
+      "dexNumber": 236,
+      "nameZhTw": "無畏小子",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "236-johto-normal",
+      "dexNumber": 236,
+      "nameZhTw": "無畏小子",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "戰舞郎"
+    },
+    {
+      "id": "236-johto-purified",
+      "dexNumber": 236,
+      "nameZhTw": "無畏小子",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "236-johto-shadow",
+      "dexNumber": 236,
+      "nameZhTw": "無畏小子",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "237-johto-dynamax",
+      "dexNumber": 237,
+      "nameZhTw": "戰舞郎",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "237-johto-normal",
+      "dexNumber": 237,
+      "nameZhTw": "戰舞郎",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "237-johto-purified",
+      "dexNumber": 237,
+      "nameZhTw": "戰舞郎",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "237-johto-shadow",
+      "dexNumber": 237,
+      "nameZhTw": "戰舞郎",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "238-johto-dynamax",
+      "dexNumber": 238,
+      "nameZhTw": "迷唇娃",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "238-johto-normal",
+      "dexNumber": 238,
+      "nameZhTw": "迷唇娃",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "238-johto-purified",
+      "dexNumber": 238,
+      "nameZhTw": "迷唇娃",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "238-johto-shadow",
+      "dexNumber": 238,
+      "nameZhTw": "迷唇娃",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "239-johto-dynamax",
+      "dexNumber": 239,
+      "nameZhTw": "電擊怪",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "239-johto-normal",
+      "dexNumber": 239,
+      "nameZhTw": "電擊怪",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "電擊魔獸"
+    },
+    {
+      "id": "239-johto-purified",
+      "dexNumber": 239,
+      "nameZhTw": "電擊怪",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "239-johto-shadow",
+      "dexNumber": 239,
+      "nameZhTw": "電擊怪",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": "電擊魔獸"
+    },
+    {
+      "id": "240-johto-dynamax",
+      "dexNumber": 240,
+      "nameZhTw": "鴨嘴寶寶",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "240-johto-normal",
+      "dexNumber": 240,
+      "nameZhTw": "鴨嘴寶寶",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "鴨嘴炎獸"
+    },
+    {
+      "id": "240-johto-purified",
+      "dexNumber": 240,
+      "nameZhTw": "鴨嘴寶寶",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "240-johto-shadow",
+      "dexNumber": 240,
+      "nameZhTw": "鴨嘴寶寶",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": "鴨嘴炎獸"
+    },
+    {
+      "id": "242-johto-dynamax",
+      "dexNumber": 242,
+      "nameZhTw": "幸福蛋",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "242-johto-normal",
+      "dexNumber": 242,
+      "nameZhTw": "幸福蛋",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "242-johto-purified",
+      "dexNumber": 242,
+      "nameZhTw": "幸福蛋",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "242-johto-shadow",
+      "dexNumber": 242,
+      "nameZhTw": "幸福蛋",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "243-johto-dynamax",
+      "dexNumber": 243,
+      "nameZhTw": "雷公",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "243-johto-normal",
+      "dexNumber": 243,
+      "nameZhTw": "雷公",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "243-johto-purified",
+      "dexNumber": 243,
+      "nameZhTw": "雷公",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "243-johto-shadow",
+      "dexNumber": 243,
+      "nameZhTw": "雷公",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "244-johto-dynamax",
+      "dexNumber": 244,
+      "nameZhTw": "炎帝",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "244-johto-normal",
+      "dexNumber": 244,
+      "nameZhTw": "炎帝",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "244-johto-purified",
+      "dexNumber": 244,
+      "nameZhTw": "炎帝",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "244-johto-shadow",
+      "dexNumber": 244,
+      "nameZhTw": "炎帝",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "245-johto-dynamax",
+      "dexNumber": 245,
+      "nameZhTw": "水君",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "245-johto-normal",
+      "dexNumber": 245,
+      "nameZhTw": "水君",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "245-johto-purified",
+      "dexNumber": 245,
+      "nameZhTw": "水君",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "245-johto-shadow",
+      "dexNumber": 245,
+      "nameZhTw": "水君",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "246-johto-dynamax",
+      "dexNumber": 246,
+      "nameZhTw": "幼基拉斯",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "246-johto-normal",
+      "dexNumber": 246,
+      "nameZhTw": "幼基拉斯",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "班基拉斯"
+    },
+    {
+      "id": "246-johto-purified",
+      "dexNumber": 246,
+      "nameZhTw": "幼基拉斯",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "246-johto-shadow",
+      "dexNumber": 246,
+      "nameZhTw": "幼基拉斯",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "班基拉斯"
+    },
+    {
+      "id": "247-johto-dynamax",
+      "dexNumber": 247,
+      "nameZhTw": "沙基拉斯",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "247-johto-normal",
+      "dexNumber": 247,
+      "nameZhTw": "沙基拉斯",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "班基拉斯"
+    },
+    {
+      "id": "247-johto-purified",
+      "dexNumber": 247,
+      "nameZhTw": "沙基拉斯",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "247-johto-shadow",
+      "dexNumber": 247,
+      "nameZhTw": "沙基拉斯",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "班基拉斯"
+    },
+    {
+      "id": "248-johto-dynamax",
+      "dexNumber": 248,
+      "nameZhTw": "班基拉斯",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "248-johto-mega",
+      "dexNumber": 248,
+      "nameZhTw": "班基拉斯",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "248-johto-normal",
+      "dexNumber": 248,
+      "nameZhTw": "班基拉斯",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "248-johto-purified",
+      "dexNumber": 248,
+      "nameZhTw": "班基拉斯",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "248-johto-shadow",
+      "dexNumber": 248,
+      "nameZhTw": "班基拉斯",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "249-johto-dynamax",
+      "dexNumber": 249,
+      "nameZhTw": "洛奇亞",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "249-johto-normal",
+      "dexNumber": 249,
+      "nameZhTw": "洛奇亞",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "249-johto-purified",
+      "dexNumber": 249,
+      "nameZhTw": "洛奇亞",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "249-johto-shadow",
+      "dexNumber": 249,
+      "nameZhTw": "洛奇亞",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "250-johto-dynamax",
+      "dexNumber": 250,
+      "nameZhTw": "鳳王",
+      "variantKey": "DYNAMAX",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "250-johto-normal",
+      "dexNumber": 250,
+      "nameZhTw": "鳳王",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "250-johto-purified",
+      "dexNumber": 250,
+      "nameZhTw": "鳳王",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "250-johto-shadow",
+      "dexNumber": 250,
+      "nameZhTw": "鳳王",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "251-johto-dynamax",
+      "dexNumber": 251,
+      "nameZhTw": "時拉比",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "251-johto-normal",
+      "dexNumber": 251,
+      "nameZhTw": "時拉比",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "251-johto-purified",
+      "dexNumber": 251,
+      "nameZhTw": "時拉比",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "251-johto-shadow",
+      "dexNumber": 251,
+      "nameZhTw": "時拉比",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    }
+  ]
+}

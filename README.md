@@ -12,7 +12,7 @@
 4. 不同地區型態若沒有互相連接的進化路徑，會形成獨立子群組，例如關都與阿羅拉小拉達。
 5. 分支進化使用完整 `EvolutionPath` 圖，不以圖鑑編號連續性推測，且會顯示分支數與需分開保留的提示。
 
-目前 #001～#060 依進化圖與地區分支整理為顯示群組。小個體與中間進化各自具有 `memberSummary`，角色可為 `EVOLUTION_MATERIAL`、`INDEPENDENT_PVP`、`INDEPENDENT_PVE`、`GYM_DEFENDER`、`MEGA_CANDIDATE`、`MAX_CANDIDATE`、`COLLECTION_ONLY` 或 `NO_DISTINCT_USE`。若小個體或中間進化有獨立用途，家族摘要會明確提醒不要把最佳個體全部進化。
+目前 #001～#251 依進化圖與地區分支整理為顯示群組。小個體與中間進化各自具有 `memberSummary`，角色可為 `EVOLUTION_MATERIAL`、`INDEPENDENT_PVP`、`INDEPENDENT_PVE`、`GYM_DEFENDER`、`MEGA_CANDIDATE`、`MAX_CANDIDATE`、`COLLECTION_ONLY` 或 `NO_DISTINCT_USE`。若小個體或中間進化有獨立用途，家族摘要會明確提醒不要把最佳個體全部進化。
 
 ### 家族價值與清包策略
 
@@ -154,9 +154,9 @@ npm run dev
 - 集中式規則引擎、規則追蹤、資料待補清單、來源頁、變更紀錄。
 - 10 張繁體中文工作表的 `.xlsx` 匯出。
 - JSON／CSV 匯入、交易式寫入、資料一致性驗證。
-- `review/001-030.md`～`review/121-151.md`／`.json` 批次審核報告，以及 `review/001-181-recalibration.md` 共用規則重算報告。
+- `review/001-030.md`～`review/242-251.md`／`.json` 批次審核報告，以及 `review/001-251-recalibration.md` 共用規則重算報告。
 
-目前 #001～#181（含本批已納入的地區型態）重算為 60 筆 `KEEP`、228 筆 `CONDITIONAL_KEEP`、0 筆 `HOLD_FOR_NOW`、616 筆 `TRANSFER_CANDIDATE`；PvE 四級用途分布與逐版本資料處置均寫入 snapshot。只有真正可能改變結論的資料缺口才暫時保留。
+目前 #001～#251（含已納入的城都型態與跨世代家族）重算為 91 筆 `KEEP`、296 筆 `CONDITIONAL_KEEP`、0 筆 `HOLD_FOR_NOW`、803 筆 `TRANSFER_CANDIDATE`；PvE 四級用途分布與逐版本資料處置均寫入 snapshot。只有真正可能改變結論的資料缺口才暫時保留。
 
 ## 本機需求
 

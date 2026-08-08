@@ -5,23 +5,30 @@ import { buildFormOverviews } from "./form-overview";
 
 export interface HomeSnapshot {
   schemaVersion: 1;
+  dataVersion: string;
   dataAsOf: string | null;
   families: FamilyOverview[];
 }
 
 export interface HomeRuntimeSnapshot {
   schemaVersion: 2;
+  dataVersion: string;
   dataAsOf: string | null;
   families: FamilyOverview[];
 }
 
 export interface HomeFamilyDetailResponse {
   schemaVersion: 1;
+  dataVersion: string;
   dataAsOf: string | null;
   family: FamilyOverview;
 }
 
-export function buildHomeSnapshot(rows: DashboardRow[], dataAsOf: string | null): HomeSnapshot {
+export function buildHomeSnapshot(
+  rows: DashboardRow[],
+  dataAsOf: string | null,
+  dataVersion: string,
+): HomeSnapshot {
   const families = buildFamilyOverviews(buildFormOverviews(rows)).map((family) => ({
     ...family,
     members: family.members.map((member) => ({
@@ -47,5 +54,5 @@ export function buildHomeSnapshot(rows: DashboardRow[], dataAsOf: string | null)
     })),
   }));
 
-  return { schemaVersion: 1, dataAsOf, families };
+  return { schemaVersion: 1, dataVersion, dataAsOf, families };
 }

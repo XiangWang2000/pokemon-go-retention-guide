@@ -1,0 +1,120 @@
+{
+  "batch": "242-251",
+  "checkedAt": "2026-08-08",
+  "pvpoke": {
+    "commit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+    "files": [
+      "data/sources/pvpoke/rankings-1500.json",
+      "data/sources/pvpoke/rankings-2500.json",
+      "data/sources/pvpoke/rankings-10000.json"
+    ],
+    "method": "Open League／Overall 固定快照；名次以完整 JSON 陣列索引重現，不使用搜尋摘要。"
+  },
+  "pve": {
+    "242-johto": "SPECIAL_USE",
+    "243-johto": "CORE_INVESTMENT",
+    "244-johto": "CORE_INVESTMENT",
+    "245-johto": "SPECIAL_USE",
+    "248-johto": "CORE_INVESTMENT",
+    "249-johto": "SPECIAL_USE",
+    "250-johto": "CORE_INVESTMENT"
+  },
+  "mega": [
+    {
+      "formId": "248-johto",
+      "sourceId": "PVE-GEN2-20260808"
+    }
+  ],
+  "maxBattle": [
+    {
+      "formId": "242-johto",
+      "sourceId": "MAX-GEN2-20260808"
+    },
+    {
+      "formId": "243-johto",
+      "sourceId": "MAX-GEN2-20260808"
+    },
+    {
+      "formId": "244-johto",
+      "sourceId": "MAX-GEN2-20260808"
+    },
+    {
+      "formId": "245-johto",
+      "sourceId": "MAX-GEN2-20260808"
+    },
+    {
+      "formId": "249-johto",
+      "sourceId": "MAX-GEN2-20260808"
+    },
+    {
+      "formId": "250-johto",
+      "sourceId": "MAX-GEN2-20260808"
+    }
+  ],
+  "shadow": [
+    {
+      "formId": "243-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "244-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "245-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "246-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "247-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "248-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "249-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    },
+    {
+      "formId": "250-johto",
+      "sourceId": "SECONDARY-SHADOW-JOHTO-2026"
+    }
+  ],
+  "evolution": [
+    {
+      "fromFormId": "113-kanto",
+      "toFormId": "242-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "246-johto",
+      "toFormId": "247-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "247-johto",
+      "toFormId": "248-johto",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    }
+  ],
+  "review": {
+    "materialGaps": [],
+    "nonMaterialGaps": [
+      "火箭隊、道館等次要欄位若缺來源，不覆蓋已明確的留／傳結論，也不升級為 HOLD_FOR_NOW。"
+    ]
+  }
+}
