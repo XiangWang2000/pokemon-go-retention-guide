@@ -267,6 +267,19 @@ function hasMatchedRule(variant: VariantRecord, ruleKey: string) {
   );
 }
 
+function hasCuratedPvpUse(variant: VariantRecord) {
+  const pvp = category(variant, "PVP");
+  const hasRankedPvpUse = pvpRanks(variant).some((rank) => rank <= 250);
+  return (
+    variant.variantKey === "NORMAL" &&
+    variant.retentionEvaluations[0]?.finalDecision === "CONDITIONAL_KEEP" &&
+    hasMatchedRule(variant, "CONDITIONAL_USE") &&
+    Boolean(pvp?.materialToDecision) &&
+    ["VERIFIED", "PARTIALLY_VERIFIED"].includes(pvp?.status ?? "") &&
+    !hasRankedPvpUse
+  );
+}
+
 function issueIsCritical(issue: VariantRecord["dataIssues"][number]) {
   // This is generated output, not source evidence; do not let a previous run
   // reproduce its own material gap forever.
@@ -284,7 +297,7 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
   const gym = category(variant, "GYM");
   const ranks = pvpRanks(variant);
   const bestPvpRank = ranks.length ? Math.min(...ranks) : null;
-  const pvpValue = bestPvpRank !== null && bestPvpRank <= 250;
+  const pvpValue = (bestPvpRank !== null && bestPvpRank <= 250) || hasCuratedPvpUse(variant);
   const directPve = directPveLevel(variant, pve);
   const hasDirectPveValue = directPve !== "NO_SIGNIFICANT_USE";
   const hasDirectPveCore = directPve === "CORE_INVESTMENT";
@@ -548,7 +561,7 @@ function makeDecision(input: {
       reasonZhTw: "真正待補資料：無法判斷，暫時不要傳；請補齊主要來源後再重算。",
     };
   }
-  if (variant.pokemonFormId === "386-defense" && variant.variantKey === "NORMAL") {
+  if (hasCuratedPvpUse(variant)) {
     return {
       decision: "CONDITIONAL_KEEP",
       ruleKey: "CONDITIONAL_USE",
@@ -626,7 +639,7 @@ function ivStrategy(variant: VariantRecord, decision: Decision) {
   if (variant.variantKey === "SHADOW") {
     return "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。";
   }
-  if (variant.pokemonFormId === "386-defense" && variant.variantKey === "NORMAL") {
+  if (hasCuratedPvpUse(variant)) {
     return "先以 Great League PvP 用途與個體 Rank 篩選防禦形態；不要把其他 Forme 的結論套用到此型態。";
   }
   if (["MEGA", "MEGA_X", "MEGA_Y", "DYNAMAX", "GIGANTAMAX"].includes(variant.variantKey)) {

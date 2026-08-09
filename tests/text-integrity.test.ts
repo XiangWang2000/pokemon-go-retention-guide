@@ -25,6 +25,9 @@ function loadJson(file: string) {
 describe("visible text integrity and cross-generation target provenance", () => {
   it("rejects obvious encoding damage but ignores URL query punctuation", () => {
     expect(findTextIntegrityIssues({ nameZhTw: "??" })).toHaveLength(1);
+    expect(findTextIntegrityIssues({ sourceName: "Pok?API" })).toHaveLength(1);
+    expect(findTextIntegrityIssues({ note: "條件?實際" })).toHaveLength(1);
+    expect(findTextIntegrityIssues({ note: "What is Mega Evolution?" })).toHaveLength(0);
     expect(findTextIntegrityIssues({ sourceUrl: "https://example.test/page?a=1??b=2" })).toHaveLength(0);
     expect(findTextIntegrityIssues({ nameZhTw: "\u6b63\u5e38\u540d\u7a31" })).toHaveLength(0);
   });

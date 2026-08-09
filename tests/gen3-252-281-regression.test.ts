@@ -18,6 +18,9 @@ type DashboardRow = {
   formKey: string;
   formNameZhTw: string;
   regionKey: string;
+  variantKey: string;
+  isReleased: boolean;
+  releaseStatus: string;
   decision: string;
   assessmentDisposition: string;
   evolutionPaths: Array<{ toFormId: string; isEvolutionStub?: boolean }>;
@@ -65,6 +68,13 @@ describe("Gen 3 #252-#281 integration", () => {
       expect.objectContaining({ id: "257-hoenn-mega", formId: "257-hoenn", released: true }),
       expect.objectContaining({ id: "260-hoenn-mega", formId: "260-hoenn", released: true }),
     ]));
+    expect(row("260-hoenn-mega")).toMatchObject({
+      formId: "260-hoenn",
+      variantKey: "MEGA",
+      isReleased: true,
+      releaseStatus: "RELEASED",
+      decision: "KEEP",
+    });
     expect([...releasedShadowForms252281]).toEqual([
       "252-hoenn", "253-hoenn", "254-hoenn", "255-hoenn", "256-hoenn", "257-hoenn",
       "258-hoenn", "259-hoenn", "260-hoenn", "261-hoenn", "262-hoenn", "263-hoenn",

@@ -68,6 +68,10 @@ describe("checkpoint validation", () => {
     expect(findSourceTextIntegrityIssues('const label = "繁中名稱??";')).toHaveLength(1);
     expect(findSourceTextIntegrityIssues('const label = "繁中名稱\uFFFD";')).toHaveLength(1);
     expect(findSourceTextIntegrityIssues('<span>繁中名稱??</span>', "sample.tsx")).toHaveLength(1);
+    expect(findSourceTextIntegrityIssues('const label = "Pok?mon";')).toHaveLength(1);
+    expect(findSourceTextIntegrityIssues('const label = "正常？";')).toEqual([]);
+    expect(findSourceTextIntegrityIssues('const label = "What is Mega Evolution?";')).toEqual([]);
+    expect(findSourceTextIntegrityIssues('const href = "/api/home?scope=family";')).toEqual([]);
   });
 
   it("scans active review and runtime family JSON for visible text corruption", () => {

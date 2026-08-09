@@ -2,9 +2,25 @@ import ts from "typescript";
 
 const REPLACEMENT_CHARACTER = String.fromCharCode(0xfffd);
 const QUESTION_MARK_RUN = /\?{2,}/;
+const EMBEDDED_SINGLE_QUESTION_MARK = /[\p{L}\p{N}\u4e00-\u9fff]\?(?=[\p{L}\p{N}\u4e00-\u9fff])/u;
+const HAN_TERMINAL_SINGLE_QUESTION_MARK = /[\u4e00-\u9fff]\?(?:$|[。！？；，、：])/u;
 const URL_PATH = /(?:^|\.)(?:sourceUrl|url|href)$/i;
 const VISIBLE_KEY = /(?:ZhTw|name|title|summary|note|method|availability|conclusion|strategy|reason|description|message|action|target|formName|alias|label|detail|review|pve|pvp|gym|mega|max|rocket|evolution|family|member|status|supports|text|scope)/i;
 const URL_LITERAL = /^(?:https?|ftp):\/\/\S+$/i;
+const URL_QUERY_LITERAL = /^\/[A-Za-z0-9_.~!$&'()*+,;=:@%/-]*\?[A-Za-z][A-Za-z0-9_-]*=/;
+
+function hasCorruptedSingleQuestionMark(value: string) {
+  return (
+    EMBEDDED_SINGLE_QUESTION_MARK.test(value) ||
+    HAN_TERMINAL_SINGLE_QUESTION_MARK.test(value)
+  );
+}
+
+function hasCorruptedText(value: string) {
+  return value.includes(REPLACEMENT_CHARACTER) ||
+    QUESTION_MARK_RUN.test(value) ||
+    hasCorruptedSingleQuestionMark(value);
+}
 
 export interface TextIntegrityIssue {
   path: string;
@@ -16,7 +32,11 @@ export function findTextIntegrityIssues(value: unknown, path = "$", visible = fa
   const visit = (current: unknown, currentPath: string, isVisible: boolean) => {
     if (typeof current === "string") {
       if (URL_PATH.test(currentPath)) return;
-      if (current.includes(REPLACEMENT_CHARACTER) || QUESTION_MARK_RUN.test(current)) {
+      if (
+        current.includes(REPLACEMENT_CHARACTER) ||
+        QUESTION_MARK_RUN.test(current) ||
+        (isVisible && hasCorruptedSingleQuestionMark(current))
+      ) {
         issues.push({ path: currentPath, value: current });
       }
       return;
@@ -54,8 +74,8 @@ export function findSourceTextIntegrityIssues(source: string, filePath = "$sourc
   );
   const issues: TextIntegrityIssue[] = [];
   const inspect = (node: { getStart(sourceFile: ts.SourceFile): number; text: string }) => {
-    if (URL_LITERAL.test(node.text.trim())) return;
-    if (!node.text.includes(REPLACEMENT_CHARACTER) && !QUESTION_MARK_RUN.test(node.text)) return;
+    if (URL_LITERAL.test(node.text.trim()) || URL_QUERY_LITERAL.test(node.text.trim())) return;
+    if (!hasCorruptedText(node.text)) return;
     const position = sourceFile.getLineAndCharacterOfPosition(node.getStart(sourceFile));
     issues.push({
       path: `${filePath}:${position.line + 1}:${position.character + 1}`,

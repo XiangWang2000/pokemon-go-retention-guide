@@ -62,13 +62,13 @@
               "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
               "notesZhTw": "普通版本；與暗影、淨化、Mega 及 Max 分開評估。",
               "decision": "CONDITIONAL_KEEP",
-              "assessmentDisposition": "NO_SIGNIFICANT_USE",
+              "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
+              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-08-08T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #539；招式 COUNTER／PSYCHO_BOOST／THUNDERBOLT；UL（高級聯盟） Overall #402；招式 COUNTER／PSYCHO_BOOST／ROCK_SLIDE；ML（大師聯盟） Overall #394；招式 COUNTER／PSYCHO_BOOST／ROCK_SLIDE",
@@ -110,7 +110,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-08-08T16:00:00.000Z",
                   "sources": []
                 },
@@ -129,7 +129,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-08-08T16:00:00.000Z",
                   "sources": []
                 },
@@ -148,7 +148,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-08-08T16:00:00.000Z",
                   "sources": []
                 },
@@ -167,7 +167,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-08-08T16:00:00.000Z",
                   "sources": []
                 },
@@ -186,7 +186,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-08-08T16:00:00.000Z",
                   "sources": []
                 },
@@ -205,7 +205,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-08-08T16:00:00.000Z",
                   "sources": []
                 },
@@ -224,7 +224,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-08-08T16:00:00.000Z",
                   "sources": []
                 }
@@ -385,12 +385,51 @@
               ],
               "moves": []
             },
-            "primaryUses": [],
-            "primaryUseKeys": [],
-            "ivRecommendations": [],
-            "ivShortLabels": [],
-            "ivDirection": "目前沒有會改變保留結論的通用IV門檻。",
-            "shortReason": "用途有限，只需依個人需求少量保留。"
+            "primaryUses": [
+              "PvP"
+            ],
+            "primaryUseKeys": [
+              "GREAT_LEAGUE"
+            ],
+            "ivRecommendations": [
+              {
+                "id": "iv-global-great",
+                "scopeType": "GLOBAL",
+                "scopeKey": "GLOBAL",
+                "primaryUseKey": "GREAT_LEAGUE",
+                "ivStrategyKey": "GREAT_LEAGUE_RANK",
+                "maxBattleRole": null,
+                "attackIvMin": null,
+                "attackIvPriority": null,
+                "attackIvConditionalMin": null,
+                "secondaryAttackIv": null,
+                "defenseIvMin": null,
+                "defenseIvPriority": null,
+                "staminaIvMin": null,
+                "staminaIvPriority": null,
+                "totalIvPercentMin": null,
+                "totalIvPercentPriority": null,
+                "secondaryTotalIvPercentMin": null,
+                "pvpRankMax": 100,
+                "pvpRankConditionalMax": 200,
+                "pvpPrMin": 97.5,
+                "recommendedQuantity": null,
+                "hundoPriority": false,
+                "appliesOnlyWhenUseConfirmed": true,
+                "speciesSpecificOverride": false,
+                "overrideReasonZhTw": "",
+                "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+                "shortIvLabelZhTw": "GL：Rank≤100",
+                "rulesVersion": "2026.07.18-iv-v1",
+                "createdAt": "2026-08-09T02:24:36.000Z",
+                "updatedAt": "2026-08-09T02:24:36.000Z"
+              }
+            ],
+            "ivShortLabels": [
+              "GL：Rank≤100"
+            ],
+            "ivDirection": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+            "shortReason": "主要用途：PvP。"
           },
           {
             "row": {
@@ -1057,9 +1096,9 @@
           "NORMAL"
         ],
         "pvp": {
-          "label": "低",
-          "detail": "大師聯盟",
-          "tone": "LOW"
+          "label": "特殊用途",
+          "detail": "GL（超級聯盟） Overall #539；招式 COUNTER／PSYCHO_BOOST／THUNDERBOLT；UL（高級聯盟） Overall #402；招式 COUNTER／PSYCHO_BOOST／ROCK_SLIDE；ML（大師聯盟） Overall #394；招式 COUNTER／PSYCHO_BOOST／ROCK_SLIDE",
+          "tone": "SPECIAL"
         },
         "pve": {
           "label": "無顯著用途",
@@ -1075,12 +1114,51 @@
           "tone": "NONE"
         },
         "decision": "CONDITIONAL_KEEP",
-        "decisionReason": "依各戰鬥版本的數字IV門檻留少量個體。",
-        "ivRecommendations": [],
-        "ivShortLabels": [],
-        "ivDirection": "目前沒有會改變保留結論的通用IV門檻。",
-        "primaryUses": [],
-        "primaryUseKeys": [],
+        "decisionReason": "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。",
+        "ivRecommendations": [
+          {
+            "id": "iv-global-great",
+            "scopeType": "GLOBAL",
+            "scopeKey": "GLOBAL",
+            "primaryUseKey": "GREAT_LEAGUE",
+            "ivStrategyKey": "GREAT_LEAGUE_RANK",
+            "maxBattleRole": null,
+            "attackIvMin": null,
+            "attackIvPriority": null,
+            "attackIvConditionalMin": null,
+            "secondaryAttackIv": null,
+            "defenseIvMin": null,
+            "defenseIvPriority": null,
+            "staminaIvMin": null,
+            "staminaIvPriority": null,
+            "totalIvPercentMin": null,
+            "totalIvPercentPriority": null,
+            "secondaryTotalIvPercentMin": null,
+            "pvpRankMax": 100,
+            "pvpRankConditionalMax": 200,
+            "pvpPrMin": 97.5,
+            "recommendedQuantity": null,
+            "hundoPriority": false,
+            "appliesOnlyWhenUseConfirmed": true,
+            "speciesSpecificOverride": false,
+            "overrideReasonZhTw": "",
+            "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+            "shortIvLabelZhTw": "GL：Rank≤100",
+            "rulesVersion": "2026.07.18-iv-v1",
+            "createdAt": "2026-08-09T02:24:36.000Z",
+            "updatedAt": "2026-08-09T02:24:36.000Z"
+          }
+        ],
+        "ivShortLabels": [
+          "GL：Rank≤100"
+        ],
+        "ivDirection": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+        "primaryUses": [
+          "PvP"
+        ],
+        "primaryUseKeys": [
+          "GREAT_LEAGUE"
+        ],
         "hasRocketUse": false,
         "hasEvolutionUse": false,
         "hasDataIssues": false,
@@ -1089,27 +1167,63 @@
         "detailsLoaded": true
       },
       "roles": [
-        "NO_DISTINCT_USE"
+        "INDEPENDENT_PVP"
       ],
       "roleLabelsZhTw": [
-        "無獨立用途"
+        "獨立PvP用途"
       ],
-      "mainUseZhTw": "無獨立用途",
-      "memberSummaryZhTw": "代歐奇希斯沒有獨立用途；普通重複個體大多可傳。",
-      "ivShortLabels": [],
-      "ivRecommendations": [],
+      "mainUseZhTw": "獨立PvP用途",
+      "memberSummaryZhTw": "主要保留代歐奇希斯；IV以GL：Rank≤100為準。",
+      "ivShortLabels": [
+        "GL：Rank≤100"
+      ],
+      "ivRecommendations": [
+        {
+          "id": "iv-global-great",
+          "scopeType": "GLOBAL",
+          "scopeKey": "GLOBAL",
+          "primaryUseKey": "GREAT_LEAGUE",
+          "ivStrategyKey": "GREAT_LEAGUE_RANK",
+          "maxBattleRole": null,
+          "attackIvMin": null,
+          "attackIvPriority": null,
+          "attackIvConditionalMin": null,
+          "secondaryAttackIv": null,
+          "defenseIvMin": null,
+          "defenseIvPriority": null,
+          "staminaIvMin": null,
+          "staminaIvPriority": null,
+          "totalIvPercentMin": null,
+          "totalIvPercentPriority": null,
+          "secondaryTotalIvPercentMin": null,
+          "pvpRankMax": 100,
+          "pvpRankConditionalMax": 200,
+          "pvpPrMin": 97.5,
+          "recommendedQuantity": null,
+          "hundoPriority": false,
+          "appliesOnlyWhenUseConfirmed": true,
+          "speciesSpecificOverride": false,
+          "overrideReasonZhTw": "",
+          "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+          "shortIvLabelZhTw": "GL：Rank≤100",
+          "rulesVersion": "2026.07.18-iv-v1",
+          "createdAt": "2026-08-09T02:24:36.000Z",
+          "updatedAt": "2026-08-09T02:24:36.000Z"
+        }
+      ],
       "isRoot": true,
       "isIntermediate": false,
       "isTerminal": true,
-      "hasIndependentUse": false
+      "hasIndependentUse": true
     }
   ],
   "releasedVariantKeys": [
     "NORMAL"
   ],
   "pvp": {
-    "label": "無明確用途",
-    "tone": "NONE"
+    "label": "特殊用途",
+    "detail": "小個體代歐奇希斯有獨立PvP用途",
+    "tone": "SPECIAL"
   },
   "pve": {
     "label": "無顯著用途",
@@ -1124,19 +1238,71 @@
     "label": "—",
     "tone": "NONE"
   },
-  "familyValue": "LOW",
-  "retentionStrategy": "MOSTLY_TRANSFER",
-  "primaryRetentionTargets": [],
-  "primaryTargetSummaryZhTw": "無主要保留目標",
+  "familyValue": "MEDIUM",
+  "retentionStrategy": "SELECTIVE_KEEP",
+  "primaryRetentionTargets": [
+    {
+      "formId": "386-defense",
+      "memberNameZhTw": "代歐奇希斯",
+      "displayNameZhTw": "代歐奇希斯",
+      "useKeys": [
+        "GREAT_LEAGUE"
+      ],
+      "variantKeys": [
+        "NORMAL"
+      ],
+      "variantSpecificOnly": false
+    }
+  ],
+  "primaryTargetSummaryZhTw": "代歐奇希斯",
   "preEvolutionActionZhTw": "沒有僅作進化素材的前階成員。",
-  "handlingSummaryZhTw": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
-  "actionSummaryZhTw": "家族目前沒有明確主要PvP、PvE、Mega、Max或道館用途；排除收藏價值後，普通重複個體大多可傳。",
-  "ivShortLabels": [],
-  "ivRecommendations": [],
-  "ivSummaryZhTw": "IV不構成額外保留理由",
-  "primaryUses": [],
+  "handlingSummaryZhTw": "保留代歐奇希斯（PvP（GL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留代歐奇希斯；價值集中於特定版本或條件。沒有僅作進化素材的前階成員。其餘普通重複個體大多可傳。IV：GL：Rank≤100。",
+  "ivShortLabels": [
+    "GL：Rank≤100"
+  ],
+  "ivRecommendations": [
+    {
+      "id": "iv-global-great",
+      "scopeType": "GLOBAL",
+      "scopeKey": "GLOBAL",
+      "primaryUseKey": "GREAT_LEAGUE",
+      "ivStrategyKey": "GREAT_LEAGUE_RANK",
+      "maxBattleRole": null,
+      "attackIvMin": null,
+      "attackIvPriority": null,
+      "attackIvConditionalMin": null,
+      "secondaryAttackIv": null,
+      "defenseIvMin": null,
+      "defenseIvPriority": null,
+      "staminaIvMin": null,
+      "staminaIvPriority": null,
+      "totalIvPercentMin": null,
+      "totalIvPercentPriority": null,
+      "secondaryTotalIvPercentMin": null,
+      "pvpRankMax": 100,
+      "pvpRankConditionalMax": 200,
+      "pvpPrMin": 97.5,
+      "recommendedQuantity": null,
+      "hundoPriority": false,
+      "appliesOnlyWhenUseConfirmed": true,
+      "speciesSpecificOverride": false,
+      "overrideReasonZhTw": "",
+      "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+      "shortIvLabelZhTw": "GL：Rank≤100",
+      "rulesVersion": "2026.07.18-iv-v1",
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:24:36.000Z"
+    }
+  ],
+  "ivSummaryZhTw": "GL：Rank≤100",
+  "primaryUses": [
+    "PvP"
+  ],
   "holdReasons": [],
-  "notices": [],
+  "notices": [
+    "小個體有獨立PvP用途，不要將最好的個體全部進化"
+  ],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
   "updatedAt": "2026-08-08T16:00:00.000Z",

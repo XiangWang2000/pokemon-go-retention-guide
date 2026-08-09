@@ -31,6 +31,16 @@ import { deriveShadowReleaseEvidence } from "@/data/evolution-release";
 import { findTextIntegrityIssues } from "@/data/text-integrity";
 
 describe("Gen3 #312-#386 canonical and graph regression", () => {
+  it("keeps formal Gen3 importer boundaries explicit", () => {
+    const packageJson = JSON.parse(
+      readFileSync(new URL("../package.json", import.meta.url), "utf8"),
+    ) as { scripts: Record<string, string> };
+    expect(packageJson.scripts["data:import:312-386"]).toBeUndefined();
+    expect(packageJson.scripts["data:import:312-341"]).toBeDefined();
+    expect(packageJson.scripts["data:import:342-371"]).toBeDefined();
+    expect(packageJson.scripts["data:import:372-386"]).toBeDefined();
+  });
+
   it("keeps the three independent batch units bounded at 30 dex numbers", () => {
     expect(species312341).toHaveLength(30);
     expect(species342371).toHaveLength(30);

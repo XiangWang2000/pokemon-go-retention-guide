@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-08-09-cross-generation-evolution-v9-gen3",
+  "dataVersion": "2026-08-09-cross-generation-evolution-v10-r23-correction",
   "checkedAt": "2026-08-09",
   "sources": [
     {
@@ -74,13 +74,13 @@
     },
     {
       "id": "pokeapi-evolution-targets-252-386",
-      "sourceName": "Pok?API",
+      "sourceName": "PokéAPI",
       "sourceType": "SECONDARY",
-      "sourceTitleOriginal": "Pok?mon species evolution relationships",
+      "sourceTitleOriginal": "Pokémon species evolution relationships",
       "sourceLanguage": "en",
       "sourceUrl": "https://pokeapi.co/api/v2/pokemon-species/?generation=3",
       "accessedAt": "2026-08-09",
-      "sourceSummaryZhTw": "Canonical evolution data for Gen 3 and later targets; Pokemon GO requirements are checked separately and this source does not infer battle strength."
+      "sourceSummaryZhTw": "Canonical evolution data for Gen 3 and later targets; Pokémon GO requirements are checked separately and this source does not infer battle strength."
     }
   ],
   "targets": [
@@ -496,8 +496,8 @@
       "dexNumber": 471,
       "generation": 4,
       "familyKey": "KANTO_FAMILY_133",
-      "nameEn": "Froslass",
-      "nameZhTw": "雪妖女",
+      "nameEn": "Glaceon",
+      "nameZhTw": "冰伊布",
       "formKey": "OTHER",
       "formNameEn": "Other",
       "formNameZhTw": "其他",
@@ -506,8 +506,8 @@
         "ICE"
       ],
       "aliases": [
-        "Froslass",
-        "雪妖女"
+        "Glaceon",
+        "冰伊布"
       ],
       "fromFormId": "133-kanto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
@@ -967,7 +967,7 @@
       ],
       "fromFormId": "315-hoenn",
       "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
-      "evolutionTargetNotesZhTw": "毒薔薇的後續進化目標；以 OTHER stub 保留進化價值，不將普通毒薔薇自動改判為必留?"
+      "evolutionTargetNotesZhTw": "毒薔薇的後續進化目標；以 OTHER stub 保留進化價值，不將普通毒薔薇自動改判為必留。"
     },
     {
       "dexNumber": 477,
@@ -988,7 +988,7 @@
       ],
       "fromFormId": "356-hoenn",
       "evolutionTargetUseLevel": "NO_SIGNIFICANT_USE",
-      "evolutionTargetNotesZhTw": "後續進化路徑已結構化?目前用途不足以單獨改變前階保留結論?"
+      "evolutionTargetNotesZhTw": "後續進化路徑已結構化；目前用途不足以單獨改變前階保留結論。"
     },
     {
       "dexNumber": 478,
@@ -1010,7 +1010,7 @@
       ],
       "fromFormId": "361-hoenn",
       "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
-      "evolutionTargetNotesZhTw": "雪童子的分支進化目標?依性別與進化條件處理?不將所有雪童子自動改判為必留?"
+      "evolutionTargetNotesZhTw": "雪童子的分支進化目標；依性別與進化條件處理；不將所有雪童子自動改判為必留。"
     }
   ],
   "paths": [
@@ -1506,7 +1506,7 @@
       "fromFormId": "315-hoenn",
       "toFormId": "407-other",
       "evolutionMethodZhTw": "使用太陽之石進化",
-      "availabilityNotesZhTw": "毒薔薇→羅絲雷朵的後續進化 path?實際條件以 Pok?mon GO 當期進化介面為準?",
+      "availabilityNotesZhTw": "毒薔薇→羅絲雷朵的後續進化 path；實際條件以 Pokémon GO 當期進化介面為準。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [
@@ -1518,7 +1518,7 @@
       "fromFormId": "356-hoenn",
       "toFormId": "477-other",
       "evolutionMethodZhTw": "使用進化道具進化",
-      "availabilityNotesZhTw": "後續世代進化 path；實際條件以 Pok?mon GO 當期進化介面為準?",
+      "availabilityNotesZhTw": "後續世代進化 path；實際條件以 Pokémon GO 當期進化介面為準。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [
@@ -1530,7 +1530,7 @@
       "fromFormId": "361-hoenn",
       "toFormId": "478-other",
       "evolutionMethodZhTw": "冰之石分支進化",
-      "availabilityNotesZhTw": "雪童子的雪妖女分支進化 path；需依性別與當期進化條件?",
+      "availabilityNotesZhTw": "雪童子的雪妖女分支進化 path；需依性別與當期進化條件。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [

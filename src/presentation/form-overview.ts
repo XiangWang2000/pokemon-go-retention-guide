@@ -112,6 +112,21 @@ function matchedRule(row: DashboardRow, ruleKey: string) {
   return row.traces.some((trace) => trace.ruleKey === ruleKey && trace.matched);
 }
 
+function hasCuratedPvpUse(row: DashboardRow) {
+  const pvp = category(row, "PVP");
+  const hasRankedPvpUse = row.raw.some(
+    (item) => item.category === "PVP" && item.rank !== null && item.rank <= 250,
+  );
+  return (
+    row.variantKey === "NORMAL" &&
+    row.decision === "CONDITIONAL_KEEP" &&
+    matchedRule(row, "CONDITIONAL_USE") &&
+    Boolean(pvp?.materialToDecision) &&
+    ["VERIFIED", "PARTIALLY_VERIFIED"].includes(pvp?.status ?? "") &&
+    !hasRankedPvpUse
+  );
+}
+
 function hasEvolutionValue(rows: DashboardRow[]) {
   return rows.some((row) => matchedRule(row, "VALUABLE_EVOLUTION"));
 }
@@ -299,6 +314,9 @@ export function buildPvpOverview(rows: DashboardRow[]): CompactOverview {
     if (rank <= 250) {
       return { label: "中", detail: `${league}${variant ? `｜${variant}` : ""}`, tone: "MEDIUM" };
     }
+    if (hasCuratedPvpUse(ranked.row)) {
+      return { label: "特殊用途", detail: ranked.row.pvpSummaryZhTw, tone: "SPECIAL" };
+    }
     return { label: "低", detail: league, tone: "LOW" };
   }
 
@@ -418,6 +436,7 @@ function buildVariantPrimaryUses(row: DashboardRow) {
   const uses: string[] = [];
   const pvp = bestRank([row]);
   if (pvp && ((pvp.raw.rank ?? 9999) <= 250 || pvp.raw.league === "SPECIAL_CUP")) uses.push("PvP");
+  if (hasCuratedPvpUse(row)) uses.push("PvP");
   const pveTone = bestPveEntry([row])?.tone;
   if (["HIGH", "MEDIUM", "SPECIAL"].includes(pveTone ?? "") && hasDirectPveUse(row))
     uses.push("PvE");
@@ -477,6 +496,7 @@ function maxPrimaryUse(row: DashboardRow): PrimaryUseKey {
 
 function buildVariantIvUseKeys(row: DashboardRow): PrimaryUseKey[] {
   const uses: PrimaryUseKey[] = [];
+  if (hasCuratedPvpUse(row)) uses.push("GREAT_LEAGUE");
   if (hasSpeciesLeagueUse(row, "GREAT")) uses.push("GREAT_LEAGUE");
   if (hasSpeciesLeagueUse(row, "ULTRA")) uses.push("ULTRA_LEAGUE");
   if (hasSpeciesLeagueUse(row, "MASTER")) uses.push("MASTER_LEAGUE");

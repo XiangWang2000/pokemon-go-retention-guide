@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { getDashboardRows } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
@@ -6,6 +7,12 @@ import recalibrationReport from "../review/001-311-recalibration.json";
 
 const forms = buildFormOverviews(await getDashboardRows());
 const families = buildFamilyOverviews(forms);
+const crossGenerationManifest = JSON.parse(
+  readFileSync("research_notes/cross-generation-evolution-targets.json", "utf8"),
+) as {
+  targets: Array<Record<string, unknown>>;
+  paths: Array<Record<string, unknown>>;
+};
 
 function familyContaining(formId: string) {
   const family = families.find((candidate) =>
@@ -104,5 +111,44 @@ describe("cross-generation evolution targets", () => {
         expect(invalidNames.has(item.laterEvolutionTarget), item.id).toBe(false);
       }
     }
+  });
+
+  it("keeps Eevee and Snowrunt cross-generation targets distinct", () => {
+    const targetById = new Map(
+      crossGenerationManifest.targets.map((target) => [
+        `${String(target.dexNumber).padStart(3, "0")}-${String(target.formKey).toLowerCase()}`,
+        target,
+      ]),
+    );
+    expect(targetById.get("471-other")).toMatchObject({
+      nameEn: "Glaceon",
+      nameZhTw: "冰伊布",
+      aliases: expect.arrayContaining(["Glaceon", "冰伊布"]),
+    });
+    expect(targetById.get("478-other")).toMatchObject({
+      nameEn: "Froslass",
+      nameZhTw: "雪妖女",
+      aliases: expect.arrayContaining(["Froslass", "雪妖女"]),
+    });
+    expect(crossGenerationManifest.paths).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ fromFormId: "133-kanto", toFormId: "471-other" }),
+        expect.objectContaining({ fromFormId: "361-hoenn", toFormId: "478-other" }),
+      ]),
+    );
+  });
+
+  it("keeps Deoxys Defense retention layers aligned", () => {
+    const defense = forms.find((form) => form.formId === "386-defense");
+    expect(defense?.decision).toBe("CONDITIONAL_KEEP");
+    expect(defense?.variants.find((variant) => variant.row.variantKey === "NORMAL")?.row)
+      .toMatchObject({ assessmentDisposition: "LIMITED_USE", decision: "CONDITIONAL_KEEP" });
+
+    const family = familyContaining("386-defense");
+    expect(family.retentionStrategy).toBe("SELECTIVE_KEEP");
+    expect(family.primaryRetentionTargets).toEqual(
+      expect.arrayContaining([expect.objectContaining({ formId: "386-defense" })]),
+    );
+    expect(family.handlingSummaryZhTw).toContain("PvP");
   });
 });

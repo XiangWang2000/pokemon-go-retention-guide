@@ -168,8 +168,8 @@ export async function runReview(
       name: "Deoxys Defense retention override",
       result:
         defense &&
-        defense.decision !== "TRANSFER_CANDIDATE" &&
-        defense.assessmentDisposition !== "TRUE_DATA_PENDING"
+        defense.decision === "CONDITIONAL_KEEP" &&
+        defense.assessmentDisposition === "LIMITED_USE"
           ? "PASS"
           : "FAIL",
     });
