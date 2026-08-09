@@ -728,7 +728,7 @@
       "url": "https://pokeapi.co/docs/v2#evolution-chains",
       "type": "SECONDARY",
       "accessedAt": "2026-08-08T16:00:00.000Z",
-      "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
       "id": "OFF-HOENN-TOUR-2023",
@@ -737,7 +737,7 @@
       "url": "https://gotour.pokemongolive.com/hoenn-global?hl=en",
       "type": "OFFICIAL",
       "accessedAt": "2026-08-08T16:00:00.000Z",
-      "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
       "id": "OFF-MEGA-HOENN-20260809",
@@ -746,7 +746,7 @@
       "url": "https://pokemongolive.com/post/mega-evolution",
       "type": "OFFICIAL",
       "accessedAt": "2026-08-08T16:00:00.000Z",
-      "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
       "id": "PVE-HOENN-20260809",
@@ -755,7 +755,7 @@
       "url": "https://db.pokemongohub.net/pokedex/hoenn",
       "type": "PVE",
       "accessedAt": "2026-08-08T16:00:00.000Z",
-      "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
       "id": "pvpoke-gl-20260715",
@@ -787,8 +787,8 @@
   ],
   "traces": [
     {
-      "ruleKey": "CONDITIONAL_USE",
-      "priority": 700,
+      "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+      "priority": 100,
       "matched": true,
       "resultDecision": "CONDITIONAL_KEEP",
       "explanationZhTw": "用途有限：其餘普通重複可傳；只留 Mega 候選或符合其他用途的少量個體。"

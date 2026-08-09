@@ -431,7 +431,7 @@
     {
       "category": "EVOLUTION_VALUE",
       "status": "VERIFIED",
-      "provenance": "MANUAL_CURATED",
+      "provenance": "SOURCE_VERIFIED",
       "summaryZhTw": "本批或既有家族的正式進化關係已結構化；是否保留仍取決於後續用途與版本。",
       "materialToDecision": false,
       "rocketRating": null,
@@ -445,7 +445,14 @@
       "pveUseLevel": null,
       "assessmentDisposition": "CLEAR_USE",
       "checkedAt": "2026-08-08T16:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "EVOLUTION-HOENN-20260809",
+          "title": "Pokemon species evolution chains and Pokemon GO evolution requirements",
+          "url": "https://pokeapi.co/docs/v2#evolution-chains",
+          "usageZhTw": "該物種實際 evolution path 來源（formal evolution edge）；只標示此 Shadow/Purified 目標可沿該正式路徑取得。"
+        }
+      ]
     },
     {
       "category": "GYM",
@@ -571,7 +578,13 @@
           "id": "SECONDARY-SHADOW-HOENN-2026",
           "title": "Shadow Pokemon",
           "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
-          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+          "usageZhTw": "Shadow 起始物種發布來源（direct roster source）；僅證明來源名單直接列出的起始物種。"
+        },
+        {
+          "id": "SHADOW-EVOLUTION-MECHANISM-HOENN-20260809",
+          "title": "Shadow Pokemon evolution and purification availability",
+          "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml#evolution-closure",
+          "usageZhTw": "Shadow 可正常進化機制來源（derived/inherited closure）；由已發布 Shadow 起始物種沿正式 evolution path 推導，不代表來源 roster 直接列出。"
         }
       ]
     }
@@ -612,13 +625,31 @@
   ],
   "sources": [
     {
+      "id": "EVOLUTION-HOENN-20260809",
+      "name": "PokeAPI and Pokemon GO evolution data",
+      "title": "Pokemon species evolution chains and Pokemon GO evolution requirements",
+      "url": "https://pokeapi.co/docs/v2#evolution-chains",
+      "type": "SECONDARY",
+      "accessedAt": "2026-08-08T16:00:00.000Z",
+      "usageZhTw": "該物種實際 evolution path 來源（formal evolution edge）；只標示此 Shadow/Purified 目標可沿該正式路徑取得。"
+    },
+    {
       "id": "SECONDARY-SHADOW-HOENN-2026",
       "name": "Serebii Pokemon GO Shadow Pokemon",
       "title": "Shadow Pokemon",
       "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
       "type": "SECONDARY",
       "accessedAt": "2026-08-08T16:00:00.000Z",
-      "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+      "usageZhTw": "Shadow 起始物種發布來源（direct roster source）；僅證明來源名單直接列出的起始物種。"
+    },
+    {
+      "id": "SHADOW-EVOLUTION-MECHANISM-HOENN-20260809",
+      "name": "Shadow evolution release mechanism research",
+      "title": "Shadow Pokemon evolution and purification availability",
+      "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml#evolution-closure",
+      "type": "SECONDARY",
+      "accessedAt": "2026-08-08T16:00:00.000Z",
+      "usageZhTw": "Shadow 可正常進化機制來源（derived/inherited closure）；由已發布 Shadow 起始物種沿正式 evolution path 推導，不代表來源 roster 直接列出。"
     },
     {
       "id": "pvpoke-gl-20260715",

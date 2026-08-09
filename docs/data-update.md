@@ -25,14 +25,15 @@ npm run data:import:212-241
 npm run data:import:242-251
 npm run data:import:252-281
 npm run data:import:282-311
-npm run data:recompute:001-311
+npm run data:import:312-386
+npm run data:recompute:001-386
 npm run data:validate
 npm run review:generate
 npm run sites:snapshot
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full
 ```
 
-`data:import:*` 只負責寫入批次來源、型態、原始資料與初步評估；目前 #152～#251 批次都完成後必須執行 `data:recompute:001-311`。這一步套用共用的 PvE 四級用途與逐版本資料處置，將後續世代進化、暗影、Mega／Primal、Max、道館與特殊用途納入同一判斷，並把缺口拆到 BattleVariant／類別欄位，不讓單一型態或次要欄位外推到整個家族。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
+`data:import:*` 只負責寫入批次來源、型態、原始資料與初步評估；#152～#386 的第二、三世代整合資料完成後執行 `data:recompute:001-386`。第三世代 canonical identity 以獨立的 `src/data/canonical/gen3.ts` 驗證 batch source 與資料庫，不以 batch source 自己產生 expected；Shadow roster 直接來源、沿正式進化邊推導的 closure 與實際 evolution path 來源分開記錄。共用重算會套用 PvE 四級用途與逐版本資料處置，將後續世代進化、暗影、Mega／Primal、Max、道館與特殊用途納入同一判斷，並把缺口拆到 BattleVariant／類別欄位，不讓單一型態或次要欄位外推到整個家族。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
 
 ## 共用重算規則
 

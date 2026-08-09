@@ -271,7 +271,7 @@
                   "url": "https://pokeapi.co/docs/v2#evolution-chains",
                   "type": "SECONDARY",
                   "accessedAt": "2026-08-08T16:00:00.000Z",
-                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
                 },
                 {
                   "id": "OFF-HOENN-TOUR-2023",
@@ -280,7 +280,7 @@
                   "url": "https://gotour.pokemongolive.com/hoenn-global?hl=en",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-08-08T16:00:00.000Z",
-                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
                 },
                 {
                   "id": "OFF-MEGA-HOENN-20260809",
@@ -289,7 +289,7 @@
                   "url": "https://pokemongolive.com/post/mega-evolution",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-08-08T16:00:00.000Z",
-                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -303,8 +303,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限：其餘普通重複可傳；只留 Mega 候選或符合其他用途的少量個體。"
@@ -598,7 +598,7 @@
                   "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
                   "type": "SECONDARY",
                   "accessedAt": "2026-08-08T16:00:00.000Z",
-                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                  "usageZhTw": "Shadow 起始物種發布來源（direct roster source）；僅證明來源名單直接列出的起始物種。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -612,7 +612,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -835,12 +835,12 @@
                   "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
                   "type": "SECONDARY",
                   "accessedAt": "2026-08-08T16:00:00.000Z",
-                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                  "usageZhTw": "Shadow 起始物種發布來源（direct roster source）；僅證明來源名單直接列出的起始物種。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -1092,7 +1092,7 @@
                   "url": "https://pokemongolive.com/post/mega-evolution",
                   "type": "OFFICIAL",
                   "accessedAt": "2026-08-08T16:00:00.000Z",
-                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
                 },
                 {
                   "id": "PVE-HOENN-20260809",
@@ -1101,13 +1101,13 @@
                   "url": "https://db.pokemongohub.net/pokedex/hoenn",
                   "type": "PVE",
                   "accessedAt": "2026-08-08T16:00:00.000Z",
-                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "MAJOR_BATTLE_VALUE",
-                  "priority": 900,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "KEEP",
                   "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
@@ -1398,8 +1398,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1443,11 +1443,11 @@
           "tone": "NONE"
         },
         "megaMax": {
-          "label": "Mega／Primal：高",
-          "tone": "HIGH"
+          "label": "Mega／Primal：限定用途",
+          "tone": "SPECIAL"
         },
-        "decision": "CONDITIONAL_KEEP",
-        "decisionReason": "普通重複個體通常可傳送；Mega候選先看招式與既有投入，15攻優先，14攻高整體IV亦可留。",
+        "decision": "TRANSFER_CANDIDATE",
+        "decisionReason": "一般重複個體通常可傳送。",
         "ivRecommendations": [
           {
             "id": "iv-global-great",
@@ -1711,9 +1711,9 @@
     "tone": "NONE"
   },
   "megaMax": {
-    "label": "Mega／Primal：高",
+    "label": "Mega／Primal：限定用途",
     "detail": "大嘴娃適用；前階可進化為候選",
-    "tone": "HIGH"
+    "tone": "SPECIAL"
   },
   "familyValue": "HIGH",
   "retentionStrategy": "KEEP_TARGETS",

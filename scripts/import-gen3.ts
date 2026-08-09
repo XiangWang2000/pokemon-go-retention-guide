@@ -30,12 +30,28 @@ import {
   pveUseLevels282311,
 } from "../src/data/batch-282-311";
 import {
+  forms312386,
+  evolutionPairs312386,
+  pvpokeSpeciesId312386,
+  releasedDynamaxForms312386,
+  releasedGigantamaxForms312386,
+  releasedMegaForms312386,
+  releasedShadowForms312386,
+  specialVariants312386,
+  species312386,
+  pveUseLevels312386,
+} from "../src/data/batch-312-386";
+import {
   ensureCrossGenerationEvolutionTargets,
   loadCrossGenerationEvolutionData,
 } from "../src/data/cross-generation-evolution";
 import { RULES_VERSION } from "../src/rules/rules";
 import { getDatabaseUrl } from "../src/lib/database";
-import { deriveEvolutionReleaseClosure } from "../src/data/evolution-release";
+import {
+  deriveEvolutionReleaseClosure,
+  deriveShadowReleaseEvidence,
+} from "../src/data/evolution-release";
+import { validateGen3DexConsistency } from "../src/data/checkpoint-validation";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
@@ -92,6 +108,12 @@ type OfficialSource = {
   supports: string[];
 };
 type OfficialResearch = { sources: OfficialSource[] };
+type EvidenceLink = {
+  sourceId: string;
+  variantId: string;
+  category: Category;
+  usageZhTw: string;
+};
 type VariantRecord = {
   id: string;
   form: Gen3Form;
@@ -99,7 +121,7 @@ type VariantRecord = {
   released: boolean;
 };
 type BatchDefinition = {
-  batch: "252-281" | "282-311";
+  batch: "252-281" | "282-311" | "312-386";
   start: number;
   end: number;
   species: Gen3Species[];
@@ -169,7 +191,42 @@ function definitionFor(batch: string): BatchDefinition {
       shadowUnavailableFormIds: new Set(),
     };
   }
+  if (batch === "312-386") {
+    return {
+      batch,
+      start: 312,
+      end: 386,
+      species: species312386,
+      forms: forms312386,
+      evolutionPairs: evolutionPairs312386,
+      releasedShadowForms: releasedShadowForms312386,
+      releasedMegaForms: releasedMegaForms312386,
+      releasedDynamaxForms: releasedDynamaxForms312386,
+      releasedGigantamaxForms: releasedGigantamaxForms312386,
+      specialVariants: specialVariants312386,
+      pveUseLevels: pveUseLevels312386,
+      pvpokeSpeciesId: pvpokeSpeciesId312386,
+      shadowUnavailableFormIds: new Set(),
+    };
+  }
   throw new Error("未知 Gen3 批次：" + batch);
+}
+
+function assertBatchCanonical(batch: BatchDefinition) {
+  const errors = validateGen3DexConsistency(
+    batch.species,
+    batch.forms.map((form) => ({
+      id: form.id,
+      speciesId: `species-${String(form.dexNumber).padStart(3, "0")}`,
+      formNameEn: form.formNameEn,
+      formNameZhTw: form.formNameZhTw,
+      types: form.types,
+    })),
+    { min: batch.start, max: batch.end },
+  );
+  if (errors.length) {
+    throw new Error(`Gen3 canonical identity mismatch for #${batch.start}-${batch.end}:\n${errors.join("\n")}`);
+  }
 }
 
 function optionalDate(value: string | null | undefined) {
@@ -354,18 +411,44 @@ function officialEvidenceLinksForBatch(
   batch: BatchDefinition,
   research: OfficialResearch,
   releasedShadowForms: ReadonlySet<string>,
-) {
-  const directLinks = research.sources.flatMap((source) =>
-    source.supports.map((variantId) => ({
-      sourceId: source.id,
-      variantId,
-      category: evidenceCategory(variantId, source.id),
-    })),
+) : EvidenceLink[] {
+  const shadowRosterSourceIds = new Set(
+    research.sources
+      .filter((source) => /shadow/i.test(`${source.id} ${source.sourceName}`))
+      .map((source) => source.id),
   );
-  const links = [...directLinks];
-  const seen = new Set(directLinks.map((link) => `${link.sourceId}|${link.variantId}|${link.category}`));
+  const mechanismSourceId = research.sources.find((source) =>
+    source.id.startsWith("SHADOW-EVOLUTION-MECHANISM-"),
+  )?.id;
+  const evolutionSourceId = research.sources.find((source) =>
+    source.id.startsWith("EVOLUTION-"),
+  )?.id;
+  const defaultUsage = "第三世代批次來源確認精確型態、進化或用途邊界。";
+  const links: EvidenceLink[] = [];
+  const seen = new Set<string>();
+  const addLink = (link: EvidenceLink) => {
+    const key = `${link.sourceId}|${link.variantId}|${link.category}`;
+    if (seen.has(key)) return;
+    seen.add(key);
+    links.push(link);
+  };
   for (const source of research.sources) {
-    if (!/shadow/i.test(`${source.id} ${source.sourceName}`)) continue;
+    for (const variantId of source.supports) {
+      const isDirectShadowRoster =
+        shadowRosterSourceIds.has(source.id) &&
+        /-(shadow|purified)$/.test(variantId);
+      addLink({
+        sourceId: source.id,
+        variantId,
+        category: evidenceCategory(variantId, source.id),
+        usageZhTw: isDirectShadowRoster
+          ? "Shadow 起始物種發布來源（direct roster source）；僅證明來源名單直接列出的起始物種。"
+          : defaultUsage,
+      });
+    }
+  }
+  for (const source of research.sources) {
+    if (!shadowRosterSourceIds.has(source.id)) continue;
     for (const support of source.supports) {
       const match = /^(.*)-(shadow|purified)$/.exec(support);
       if (!match || !batch.releasedShadowForms.has(match[1])) continue;
@@ -378,11 +461,31 @@ function officialEvidenceLinksForBatch(
       for (const formId of descendants) {
         if (!releasedShadowForms.has(formId)) continue;
         const variantId = `${formId}-${variantSuffix}`;
-        const category = evidenceCategory(variantId, source.id);
-        const key = `${source.id}|${variantId}|${category}`;
-        if (seen.has(key)) continue;
-        seen.add(key);
-        links.push({ sourceId: source.id, variantId, category });
+        if (formId === match[1]) continue;
+        if (!mechanismSourceId) {
+          throw new Error(
+            `Shadow closure ${match[1]} -> ${formId} 缺少 SHADOW-EVOLUTION-MECHANISM source。`,
+          );
+        }
+        addLink({
+          sourceId: mechanismSourceId,
+          variantId,
+          category: "ROCKET",
+          usageZhTw: "Shadow 可正常進化機制來源（derived/inherited closure）；由已發布 Shadow 起始物種沿正式 evolution path 推導，不代表來源 roster 直接列出。",
+        });
+      }
+    }
+  }
+  if (evolutionSourceId) {
+    for (const [fromFormId, toFormId] of batch.evolutionPairs) {
+      if (!releasedShadowForms.has(fromFormId) || !releasedShadowForms.has(toFormId)) continue;
+      for (const variantSuffix of ["shadow", "purified"] as const) {
+        addLink({
+          sourceId: evolutionSourceId,
+          variantId: `${toFormId}-${variantSuffix}`,
+          category: "EVOLUTION_VALUE",
+          usageZhTw: "該物種實際 evolution path 來源（formal evolution edge）；只標示此 Shadow/Purified 目標可沿該正式路徑取得。",
+        });
       }
     }
   }
@@ -391,11 +494,13 @@ function officialEvidenceLinksForBatch(
 
 export async function runImport(batchName: string) {
   const batch = definitionFor(batchName);
-  const releasedShadowForms = deriveEvolutionReleaseClosure(
+  assertBatchCanonical(batch);
+  const shadowEvidence = deriveShadowReleaseEvidence(
     batch.releasedShadowForms,
     batch.evolutionPairs,
     batch.shadowUnavailableFormIds,
   );
+  const releasedShadowForms = shadowEvidence.releasedFormIds;
   const research = readResearch(batch);
   const rankings = await readRankings();
   const officialEvidenceLinks = officialEvidenceLinksForBatch(batch, research, releasedShadowForms);
@@ -632,20 +737,19 @@ export async function runImport(batchName: string) {
           summaryZhTw = "固定 PvPoke Open／Overall 快照未列入可重現名次；不把沒有排名誤當成全家族資料缺口。";
         }
       } else if (category === "PVE") {
+        pveUseLevel = variant.variantKey === "MEGA"
+          ? "SPECIAL_USE"
+          : batch.pveUseLevels[variant.form.id] ?? "NO_SIGNIFICANT_USE";
         if (!variant.released || ["DYNAMAX", "GIGANTAMAX"].includes(variant.variantKey)) {
           status = variant.released ? "NOT_APPLICABLE" : "UNRELEASED";
         } else if (variant.variantKey === "MEGA" || batch.pveUseLevels[variant.form.id]) {
           status = "PARTIALLY_VERIFIED";
           provenance = "SOURCE_VERIFIED";
           materialToDecision = true;
-          pveUseLevel = variant.variantKey === "MEGA"
-            ? "SPECIAL_USE"
-            : batch.pveUseLevels[variant.form.id]!;
           summaryZhTw = "PvE 用途依研究表分成核心投資、可用／預算型、特殊用途或無顯著用途；不把缺少精確斷點誤當成整個家族待判斷。";
         } else {
           status = "DATA_UNAVAILABLE";
           provenance = "DATA_UNAVAILABLE";
-          pveUseLevel = "NO_SIGNIFICANT_USE";
           summaryZhTw = "目前未列為普通版本的主要 PvE 投資目標；不因缺少精確斷點虛構 IV 淘汰線。";
         }
       } else if (category === "ROCKET") {
@@ -740,7 +844,7 @@ export async function runImport(batchName: string) {
       categorySources.set(categoryId + "|" + link.sourceId, {
         categoryEvaluationId: categoryId,
         sourceId: link.sourceId,
-        usageZhTw: "第三世代批次來源確認精確型態、進化或用途邊界。",
+        usageZhTw: link.usageZhTw,
       });
     }
   }
@@ -837,7 +941,7 @@ export async function runImport(batchName: string) {
       evaluationSources.set("gen3-" + batch.batch + "-eval-" + variant.id + "|" + link.sourceId, {
         evaluationId: "gen3-" + batch.batch + "-eval-" + variant.id,
         sourceId: link.sourceId,
-        usageZhTw: "批次來源確認此精確型態、進化或用途邊界。",
+        usageZhTw: link.usageZhTw,
       });
     }
   }

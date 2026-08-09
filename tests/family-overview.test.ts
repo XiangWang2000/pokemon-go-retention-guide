@@ -45,7 +45,7 @@ describe("EvolutionPath 進化家族分組", () => {
     ).toEqual(expect.arrayContaining(rows.map((row) => row.id)));
     expect(
       families.flatMap((family) => family.members.flatMap((member) => member.form.variants)),
-    ).toHaveLength(1439);
+    ).toHaveLength(1752);
   });
 
   it("3. 相同 familyKey 的不同地區進化路徑形成不同子群組", () => {
@@ -134,7 +134,7 @@ describe("EvolutionPath 進化家族分組", () => {
   });
 
   it("8. 單隻圖鑑模式的 FormOverview 數量保持不變", () => {
-    expect(forms).toHaveLength(348);
+    expect(forms).toHaveLength(423);
     expect(forms.map((form) => form.formId)).toContain("026-alola");
   });
 });

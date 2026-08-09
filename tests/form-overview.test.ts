@@ -23,7 +23,7 @@ function form(formId: string) {
 describe("PokemonForm 快速總覽 presentation layer", () => {
   it("同一 PokemonForm 只產生一列，且不同地區型態保持分開", () => {
     expect(forms).toHaveLength(new Set(rows.map((row) => row.formId)).size);
-    expect(forms).toHaveLength(348);
+    expect(forms).toHaveLength(423);
     expect(forms.filter((item) => item.dexNumber === 19).map((item) => item.formId)).toEqual([
       "019-kanto",
       "019-alola",
@@ -36,7 +36,7 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
       .flatMap((item) => item.variants.map((variant) => variant.row.id))
       .sort();
     expect(overviewIds).toEqual(sourceIds);
-    expect(overviewIds).toHaveLength(1439);
+    expect(overviewIds).toHaveLength(1752);
   });
 
   it("妙蛙種子總覽只顯示已推出徽章，展開仍保留所有版本", () => {

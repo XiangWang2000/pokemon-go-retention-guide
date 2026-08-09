@@ -18,6 +18,7 @@ import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
 import { findTextIntegrityIssues } from "../src/data/text-integrity";
 import { validateEvolutionParentPaths } from "../src/data/checkpoint-validation";
+import { CURRENT_DATA_MAX_DEX } from "../src/config/data-scope";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
@@ -25,7 +26,7 @@ const prisma = new PrismaClient({
 
 const checkedAt = new Date(`${DATA_VERSION_DATE_ISO}T00:00:00+08:00`);
 const dexMin = 1;
-const dexMax = Number(process.argv[process.argv.indexOf("--max") + 1] || "311");
+const dexMax = Number(process.argv[process.argv.indexOf("--max") + 1] || String(CURRENT_DATA_MAX_DEX));
 const baselineDexMax = Number(process.argv[process.argv.indexOf("--baseline-max") + 1] || String(Math.min(251, dexMax)));
 if (!Number.isInteger(dexMax) || dexMax < 251 || !Number.isInteger(baselineDexMax) || baselineDexMax > dexMax) {
   throw new Error("無效的 --max 或 --baseline-max 參數。");
@@ -73,6 +74,19 @@ const normalMegaCandidateForms = new Set([
   "306-hoenn",
   "308-hoenn",
   "310-hoenn",
+  "319-hoenn",
+  "323-hoenn",
+  "334-hoenn",
+  "354-hoenn",
+  "359-hoenn",
+  "362-hoenn",
+  "373-hoenn",
+  "376-hoenn",
+  "380-hoenn",
+  "381-hoenn",
+  "382-hoenn",
+  "383-hoenn",
+  "384-hoenn",
 ]);
 
 const categories = [

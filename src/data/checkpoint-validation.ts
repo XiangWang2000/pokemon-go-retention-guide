@@ -1,8 +1,12 @@
-import { forms252281, species252281 } from "./batch-252-281";
-import { forms282311, species282311 } from "./batch-282-311";
+import {
+  canonicalGen3Species,
+  GEN3_CANONICAL_MAX,
+  GEN3_CANONICAL_MIN,
+} from "./canonical/gen3";
 
-export const GEN3_CHECKPOINT_MIN = 252;
-export const GEN3_CHECKPOINT_MAX = 311;
+/** Backwards-compatible names for callers that validate the active Gen 3 scope. */
+export const GEN3_CHECKPOINT_MIN = GEN3_CANONICAL_MIN;
+export const GEN3_CHECKPOINT_MAX = GEN3_CANONICAL_MAX;
 
 export type EvolutionFormForValidation = {
   id: string;
@@ -43,19 +47,14 @@ type CanonicalForm = {
   types: readonly string[];
 };
 
-const canonicalSpecies: CanonicalSpecies[] = [...species252281, ...species282311].map((species) => ({
-  dexNumber: species.dexNumber,
-  nameEn: species.nameEn,
-  nameZhTw: species.nameZhTw,
-  types: species.types,
-}));
+const canonicalSpecies: readonly CanonicalSpecies[] = canonicalGen3Species;
 
-const canonicalForms: CanonicalForm[] = [...forms252281, ...forms282311].map((form) => ({
-  id: form.id,
-  dexNumber: form.dexNumber,
-  formNameEn: form.formNameEn,
-  formNameZhTw: form.formNameZhTw,
-  types: form.types,
+const canonicalForms: readonly CanonicalForm[] = canonicalGen3Species.map((species) => ({
+  id: `${String(species.dexNumber).padStart(3, "0")}-hoenn`,
+  dexNumber: species.dexNumber,
+  formNameEn: "Hoenn",
+  formNameZhTw: "豐緣",
+  types: species.types,
 }));
 
 type SpeciesForValidation = {
@@ -70,6 +69,11 @@ type FormForValidation = {
   formNameEn: string;
   formNameZhTw: string;
   types: unknown;
+};
+
+export type Gen3ValidationRange = {
+  min: number;
+  max: number;
 };
 
 function parseTypes(value: unknown) {
@@ -95,18 +99,26 @@ function sameTypes(actual: unknown, expected: readonly string[]) {
 export function validateGen3DexConsistency(
   speciesRecords: readonly SpeciesForValidation[],
   formRecords: readonly FormForValidation[],
+  range: Gen3ValidationRange = {
+    min: GEN3_CANONICAL_MIN,
+    max: GEN3_CANONICAL_MAX,
+  },
 ) {
   const errors: string[] = [];
   const expectedSpeciesByDex = new Map<number, CanonicalSpecies>();
   const expectedFormByDex = new Map<number, CanonicalForm>();
 
-  for (const species of canonicalSpecies) {
+  for (const species of canonicalSpecies.filter(
+    (item) => item.dexNumber >= range.min && item.dexNumber <= range.max,
+  )) {
     if (expectedSpeciesByDex.has(species.dexNumber)) {
       errors.push(`Duplicate canonical Gen3 species #${species.dexNumber}.`);
     }
     expectedSpeciesByDex.set(species.dexNumber, species);
   }
-  for (const form of canonicalForms) {
+  for (const form of canonicalForms.filter(
+    (item) => item.dexNumber >= range.min && item.dexNumber <= range.max,
+  )) {
     if (expectedFormByDex.has(form.dexNumber)) {
       errors.push(`Duplicate canonical Gen3 form for #${form.dexNumber}.`);
     }
@@ -115,7 +127,7 @@ export function validateGen3DexConsistency(
 
   const actualSpeciesByDex = new Map<number, SpeciesForValidation>();
   for (const species of speciesRecords.filter(
-    (item) => item.dexNumber >= GEN3_CHECKPOINT_MIN && item.dexNumber <= GEN3_CHECKPOINT_MAX,
+    (item) => item.dexNumber >= range.min && item.dexNumber <= range.max,
   )) {
     if (actualSpeciesByDex.has(species.dexNumber)) {
       errors.push(`Duplicate database species for #${species.dexNumber}.`);

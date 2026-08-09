@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-08-09-cross-generation-evolution-v8-gen3",
+  "dataVersion": "2026-08-09-cross-generation-evolution-v9-gen3",
   "checkedAt": "2026-08-09",
   "sources": [
     {
@@ -71,6 +71,16 @@
       "sourceUrl": "https://pokeapi.co/api/v2/pokemon-species/?generation=2",
       "accessedAt": "2026-08-08",
       "sourceSummaryZhTw": "用於核對第 2 世代與後續世代的 canonical 物種進化關係；不以此來源單獨推論戰鬥強度。"
+    },
+    {
+      "id": "pokeapi-evolution-targets-252-386",
+      "sourceName": "Pok?API",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Pok?mon species evolution relationships",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokeapi.co/api/v2/pokemon-species/?generation=3",
+      "accessedAt": "2026-08-09",
+      "sourceSummaryZhTw": "Canonical evolution data for Gen 3 and later targets; Pokemon GO requirements are checked separately and this source does not infer battle strength."
     }
   ],
   "targets": [
@@ -936,6 +946,71 @@
       "fromFormId": "299-hoenn",
       "evolutionTargetUseLevel": "SPECIAL_USE",
       "evolutionTargetNotesZhTw": "正式後續進化；大朝北鼻目前以 OTHER stub 表示，前階朝北鼻保留符合進化與個體品質條件的候選。"
+    },
+    {
+      "dexNumber": 407,
+      "generation": 4,
+      "familyKey": "HOENN_FAMILY_315",
+      "nameEn": "Roserade",
+      "nameZhTw": "羅絲雷朵",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
+      "types": [
+        "GRASS",
+        "POISON"
+      ],
+      "aliases": [
+        "Roserade",
+        "羅絲雷朵"
+      ],
+      "fromFormId": "315-hoenn",
+      "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
+      "evolutionTargetNotesZhTw": "毒薔薇的後續進化目標；以 OTHER stub 保留進化價值，不將普通毒薔薇自動改判為必留?"
+    },
+    {
+      "dexNumber": 477,
+      "generation": 4,
+      "familyKey": "HOENN_FAMILY_355",
+      "nameEn": "Dusknoir",
+      "nameZhTw": "黑夜魔靈",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
+      "types": [
+        "GHOST"
+      ],
+      "aliases": [
+        "Dusknoir",
+        "黑夜魔靈"
+      ],
+      "fromFormId": "356-hoenn",
+      "evolutionTargetUseLevel": "NO_SIGNIFICANT_USE",
+      "evolutionTargetNotesZhTw": "後續進化路徑已結構化?目前用途不足以單獨改變前階保留結論?"
+    },
+    {
+      "dexNumber": 478,
+      "generation": 4,
+      "familyKey": "HOENN_FAMILY_361",
+      "nameEn": "Froslass",
+      "nameZhTw": "雪妖女",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
+      "types": [
+        "ICE",
+        "GHOST"
+      ],
+      "aliases": [
+        "Froslass",
+        "雪妖女"
+      ],
+      "fromFormId": "361-hoenn",
+      "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
+      "evolutionTargetNotesZhTw": "雪童子的分支進化目標?依性別與進化條件處理?不將所有雪童子自動改判為必留?"
     }
   ],
   "paths": [
@@ -1424,6 +1499,42 @@
       "verificationStatus": "VERIFIED",
       "sourceIds": [
         "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "315-hoenn",
+      "toFormId": "407-other",
+      "evolutionMethodZhTw": "使用太陽之石進化",
+      "availabilityNotesZhTw": "毒薔薇→羅絲雷朵的後續進化 path?實際條件以 Pok?mon GO 當期進化介面為準?",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-252-386",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "356-hoenn",
+      "toFormId": "477-other",
+      "evolutionMethodZhTw": "使用進化道具進化",
+      "availabilityNotesZhTw": "後續世代進化 path；實際條件以 Pok?mon GO 當期進化介面為準?",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-252-386",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "361-hoenn",
+      "toFormId": "478-other",
+      "evolutionMethodZhTw": "冰之石分支進化",
+      "availabilityNotesZhTw": "雪童子的冰伊布分支進化 path；需依性別與當期進化條件?",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-252-386",
         "pokemon-go-evolution-requirements"
       ]
     }

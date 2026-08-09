@@ -41,9 +41,11 @@
 - 首頁由 server build 產生精簡摘要，直接輸出更新日期、PvE 四級分類統計與重要家族連結；完整 `HomeSnapshot` 仍由瀏覽器載入。
 - `worker/index.ts` 與 `scripts/purge-sites-cache.mjs` 形成部署後 CDN purge hook；正式部署成功後必須執行 `npm run sites:purge`，`/` 與 `/api/home` 驗證 `X-Data-Version`，`/data/home.json` 驗證公開檔案雜湊。Sites runtime 若拒絕 Cache API，hook 會退回 no-store 與 canonical revalidation，不得讓請求失敗。
 
-## 2026-08-09 #152-#311 Gen2 and Gen3 integration checkpoint
+## 2026-08-09 #152-#386 Gen2 and Gen3 integration checkpoint
 
-- DATA_VERSION is 2026.08.09-r22; the controlled pipeline imports #152-#311 and recomputes the full #001-#311 scope.
+- DATA_VERSION is 2026.08.09-r22; the controlled pipeline imports #152-#386 and recomputes the full #001-#386 scope.
 - Gen2 members are linked to existing Kanto families where appropriate; formal Johto migrations remove same-species `*-kanto` stubs, while future-generation targets remain explicit evolution stubs.
 - Gen3 standard forms use `HOENN` / `豐緣`; Wurmple branches, Nincada's special-family association, the Ralts/Gallade branch, Azurill's Johto-family merge, and the Probopass stub are represented without fake evolution edges.
-- Runtime snapshot, review, Excel, schema validation, review consistency, snapshot provenance checks, and regression tests are generated for this checkpoint; #312+ is intentionally out of scope.
+- `src/data/canonical/gen3.ts` is the independent #252-#386 identity fixture. Batch sources and the database are both checked against it, so a batch cannot make a wrong name or type pass by defining its own expected value.
+- Shadow evidence distinguishes direct roster release, derived/inherited evolution closure, and the actual formal evolution edge. Derived descendants are not presented as if the roster source listed them directly.
+- Runtime snapshot, review, Excel, schema validation, review consistency, snapshot provenance checks, and regression tests are generated for this checkpoint; the next expansion point is after #386.

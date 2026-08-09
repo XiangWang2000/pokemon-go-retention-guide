@@ -2,11 +2,13 @@ import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { forms252281, species252281 } from "@/data/batch-252-281";
 import { forms282311, species282311 } from "@/data/batch-282-311";
+import { canonicalGen3Species, GEN3_CANONICAL_MAX, GEN3_CANONICAL_MIN } from "@/data/canonical/gen3";
 import { DATA_VERSION } from "@/config/release";
 import {
   validateEvolutionParentPaths,
   validateGen3DexConsistency,
 } from "@/data/checkpoint-validation";
+import { deriveShadowReleaseEvidence } from "@/data/evolution-release";
 import { findSourceTextIntegrityIssues, findTextIntegrityIssues } from "@/data/text-integrity";
 
 describe("checkpoint validation", () => {
@@ -20,7 +22,7 @@ describe("checkpoint validation", () => {
     ]);
   });
 
-  it("checks the Gen3 dex, names, and types against the checkpoint definitions", () => {
+  it("checks batch source names and types against an independent Gen3 canonical fixture", () => {
     const species = [...species252281, ...species282311];
     const forms = [...forms252281, ...forms282311].map((form) => ({
       id: form.id,
@@ -29,13 +31,35 @@ describe("checkpoint validation", () => {
       formNameZhTw: form.formNameZhTw,
       types: JSON.stringify(form.types),
     }));
-    expect(validateGen3DexConsistency(species, forms)).toEqual([]);
+    expect([GEN3_CANONICAL_MIN, GEN3_CANONICAL_MAX]).toEqual([252, 386]);
+    expect(validateGen3DexConsistency(species, forms, { min: 252, max: 311 })).toEqual([]);
     expect(
       validateGen3DexConsistency(
         species,
         forms.map((form) => (form.id === "311-hoenn" ? { ...form, types: '["WATER"]' } : form)),
+        { min: 252, max: 311 },
       ),
     ).toEqual([expect.stringContaining("311-hoenn types mismatch")]);
+    expect(
+      validateGen3DexConsistency(
+        species.map((item) =>
+          item.dexNumber === 273 ? { ...item, nameZhTw: "長鼻葉" } : item,
+        ),
+        forms,
+        { min: 252, max: 311 },
+      ),
+    ).toEqual([expect.stringContaining("#273 Traditional Chinese name mismatch")]);
+    expect(canonicalGen3Species).toHaveLength(135);
+  });
+
+  it("keeps Shadow roster provenance separate from evolution closure", () => {
+    const evidence = deriveShadowReleaseEvidence(
+      new Set(["283-hoenn"]),
+      [["283-hoenn", "284-hoenn"]],
+    );
+    expect(evidence.directRosterFormIds).toEqual(["283-hoenn"]);
+    expect(evidence.derivedFormIds).toEqual(["284-hoenn"]);
+    expect(evidence.formalEvolutionEdges).toEqual([["283-hoenn", "284-hoenn"]]);
   });
 
   it("scans string literals without treating nullish coalescing as text", () => {
@@ -56,6 +80,9 @@ describe("checkpoint validation", () => {
       })
       .concat([
         "research_notes/cross-generation-evolution-targets.json",
+        ...readdirSync("research_notes")
+          .filter((name) => /^(official|battle)-.*\.json$/.test(name))
+          .map((name) => `research_notes/${name}`),
         "site-data/manifest.json",
         "site-data/home.json",
         "site-data/details.json",

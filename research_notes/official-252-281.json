@@ -11,7 +11,7 @@
       "sourceUrl": "https://gotour.pokemongolive.com/hoenn-global?hl=en",
       "accessedAt": "2026-08-09",
       "publishedAt": "2023-02-17",
-      "sourceSummaryZhTw": "Official Hoenn Tour material confirming the Gen 3 Hoenn standard forms in this batch.",
+      "sourceSummaryZhTw": "Official Hoenn records confirm the Gen 3 standard species and Hoenn forms in this batch.",
       "supports": [
         "252-hoenn-normal",
         "253-hoenn-normal",
@@ -54,7 +54,7 @@
       "sourceUrl": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
       "accessedAt": "2026-08-09",
       "publishedAt": null,
-      "sourceSummaryZhTw": "Shadow roster used to verify the released Shadow forms in this batch.",
+      "sourceSummaryZhTw": "Shadow roster direct entries are the only direct release evidence; descendants are marked derived/inherited only when reachable through a formal evolution path from a released starting form.",
       "supports": [
         "252-hoenn-shadow",
         "252-hoenn-purified",
@@ -119,7 +119,7 @@
       "sourceUrl": "https://db.pokemongohub.net/pokedex/hoenn",
       "accessedAt": "2026-08-09",
       "publishedAt": null,
-      "sourceSummaryZhTw": "Hoenn PVE and Mega data used to separate core investment, usable budget, and special use.",
+      "sourceSummaryZhTw": "PVE evidence separates core investment, usable or budget, special use, and no significant use; absent detail does not become a family-wide hold.",
       "supports": [
         "254-hoenn-normal",
         "257-hoenn-normal",
@@ -147,7 +147,7 @@
       "sourceUrl": "https://pokemongolive.com/post/mega-evolution",
       "accessedAt": "2026-08-09",
       "publishedAt": null,
-      "sourceSummaryZhTw": "Official Mega mechanics and Hoenn Mega release boundaries; Mega is evaluated separately from ordinary, Shadow, and Max.",
+      "sourceSummaryZhTw": "Official Mega and Primal release boundaries are evaluated separately from ordinary, Shadow, and Max variants.",
       "supports": [
         "254-hoenn-normal",
         "257-hoenn-normal",
@@ -166,7 +166,7 @@
       "sourceUrl": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
       "accessedAt": "2026-08-09",
       "publishedAt": null,
-      "sourceSummaryZhTw": "Max Battle list used to verify Max release status; no unverified Hoenn Max form is marked released.",
+      "sourceSummaryZhTw": "Max Battle evidence confirms which Max variants are released; unverified variants remain unreleased.",
       "supports": []
     },
     {
@@ -178,7 +178,7 @@
       "sourceUrl": "https://pokeapi.co/docs/v2#evolution-chains",
       "accessedAt": "2026-08-09",
       "publishedAt": null,
-      "sourceSummaryZhTw": "Evolution-chain and Pokemon GO requirement data used to verify real Hoenn paths and branch boundaries.",
+      "sourceSummaryZhTw": "Evolution-chain and Pokemon GO requirement evidence confirms formal edges, branches, cross-generation stubs, and Shadow closure boundaries.",
       "supports": [
         "252-hoenn-normal",
         "253-hoenn-normal",
@@ -211,6 +211,18 @@
         "280-hoenn-normal",
         "281-hoenn-normal"
       ]
+    },
+    {
+      "id": "SHADOW-EVOLUTION-MECHANISM-HOENN-20260809",
+      "sourceName": "Shadow evolution release mechanism research",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Shadow Pokemon evolution and purification availability",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/shadowpokemon.shtml#evolution-closure",
+      "accessedAt": "2026-08-09",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "Shadow evolution mechanism source: a descendant is derived/inherited only through a formal evolution path from a directly released Shadow starting form; it is not treated as a direct roster entry.",
+      "supports": []
     }
   ],
   "notes": "Hoenn standard forms, evolution paths, Shadow, Mega, and Max boundaries for #252-#281."

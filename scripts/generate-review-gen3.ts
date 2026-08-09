@@ -38,7 +38,7 @@ function formRows(rows: Dashboard, formId: string) {
   return rows.filter((row) => row.formId === formId);
 }
 
-export async function runReview(batch: "252-281" | "282-311") {
+export async function runReview(batch: "252-281" | "282-311" | "312-386") {
   const [allRows, allIssues] = await Promise.all([getDashboardRows(), getReviewIssues()]);
   const batchStart = Number(batch.slice(0, 3));
   const batchEnd = Number(batch.slice(4, 7));
@@ -124,9 +124,33 @@ export async function runReview(batch: "252-281" | "282-311") {
         : "FAIL",
     });
   }
+  if (batch === "312-386") {
+    checks.push(
+      checkFamily(families, "Wynaut merge", "360-hoenn", ["360-hoenn", "202-johto"]),
+      checkFamily(families, "Clamperl branches", "366-hoenn", ["366-hoenn", "367-hoenn", "368-hoenn"]),
+    );
+    for (const [name, formId, targetId] of [
+      ["Roserade evolution stub", "315-hoenn", "407-other"],
+      ["Dusknoir evolution stub", "356-hoenn", "477-other"],
+      ["Froslass evolution stub", "361-hoenn", "478-other"],
+    ] as const) {
+      const row = formRows(allRows, formId).find((item) => item.variantKey === "NORMAL");
+      checks.push({
+        name,
+        result: row?.evolutionPaths.some((path) => path.toFormId === targetId && path.isEvolutionStub)
+          ? "PASS"
+          : "FAIL",
+      });
+    }
+  }
   const megaIds = batch === "252-281"
     ? ["254-hoenn", "257-hoenn"]
-    : ["282-hoenn", "302-hoenn", "303-hoenn", "306-hoenn", "308-hoenn", "310-hoenn"];
+    : batch === "282-311"
+      ? ["282-hoenn", "302-hoenn", "303-hoenn", "306-hoenn", "308-hoenn", "310-hoenn"]
+      : [
+        "319-hoenn", "323-hoenn", "334-hoenn", "354-hoenn", "359-hoenn", "362-hoenn",
+        "373-hoenn", "376-hoenn", "380-hoenn", "381-hoenn", "382-hoenn", "383-hoenn", "384-hoenn",
+      ];
   checks.push({
     name: "Mega release boundaries",
     result: megaIds.every((formId) =>
