@@ -322,7 +322,10 @@ export function FamilyOverview({
                       </p>
                     </td>
                     <td className="px-3 py-2">
-                      <VariantBadges variants={family.releasedVariantKeys} />
+                      <VariantBadges
+                        variants={family.releasedVariantKeys}
+                        formId={family.members.length === 1 ? family.members[0]?.form.formId : null}
+                      />
                     </td>
                     <td className="px-3 py-2">
                       <CompactRating overview={family.pvp} />

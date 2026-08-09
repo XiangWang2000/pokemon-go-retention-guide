@@ -1,0 +1,201 @@
+{
+  "batch": "312-341",
+  "updatedAt": "2026-08-09",
+  "dataVersion": "2026.08.09-r23",
+  "rulesVersion": "2026.08.06-v7",
+  "status": "ACCEPTED",
+  "counts": {
+    "species": 30,
+    "forms": 30,
+    "battleVariants": 123,
+    "families": 20,
+    "strategyCounts": {
+      "KEEP_TARGETS": 6,
+      "SELECTIVE_KEEP": 7,
+      "MOSTLY_TRANSFER": 7,
+      "HOLD_FOR_NOW": 0
+    },
+    "openIssues": 0,
+    "safetyAffectingIssues": 0,
+    "trueDataPending": 0
+  },
+  "formalHoennForms": {
+    "result": "PASS",
+    "forms": [
+      "312-hoenn",
+      "313-hoenn",
+      "314-hoenn",
+      "315-hoenn",
+      "316-hoenn",
+      "317-hoenn",
+      "318-hoenn",
+      "319-hoenn",
+      "320-hoenn",
+      "321-hoenn",
+      "322-hoenn",
+      "323-hoenn",
+      "324-hoenn",
+      "325-hoenn",
+      "326-hoenn",
+      "327-hoenn",
+      "328-hoenn",
+      "329-hoenn",
+      "330-hoenn",
+      "331-hoenn",
+      "332-hoenn",
+      "333-hoenn",
+      "334-hoenn",
+      "335-hoenn",
+      "336-hoenn",
+      "337-hoenn",
+      "338-hoenn",
+      "339-hoenn",
+      "340-hoenn",
+      "341-hoenn"
+    ]
+  },
+  "crossBatchIntegration": {
+    "result": "PASS",
+    "checks": [
+      {
+        "name": "Gen 3 form identity",
+        "result": "PASS"
+      },
+      {
+        "name": "Ralts family Gallade stub",
+        "result": "PASS"
+      },
+      {
+        "name": "Mega release boundaries",
+        "result": "PASS"
+      },
+      {
+        "name": "無真正待補資料",
+        "result": "PASS"
+      }
+    ]
+  },
+  "scopedHolds": [],
+  "immediateHandling": [
+    {
+      "familyId": "HOENN_FAMILY_312:312-hoenn",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_313:313-hoenn",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_314:314-hoenn",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_315:315-hoenn",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留可進化為羅絲雷朵的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_316:316-hoenn",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留吞食獸（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_318:318-hoenn",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留巨牙鯊（PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_320:320-hoenn",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留吼鯨王（PvP（UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_322:322-hoenn",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留噴火駝（PvP（UL Rank≤100）、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_324:324-hoenn",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留煤炭龜（PvP（GL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_325:325-hoenn",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留噗噗豬（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_327:327-hoenn",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_328:328-hoenn",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留沙漠蜻蜓（PvP（UL Rank≤100）、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_331:331-hoenn",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_333:333-hoenn",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留七夕青鳥（PvP（GL Rank≤100）、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_335:335-hoenn",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_336:336-hoenn",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_337:337-hoenn",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留月石（PvP（GL Rank≤100、UL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_338:338-hoenn",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留太陽岩（PvP（GL Rank≤100、UL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_339:339-hoenn",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留鯰魚王（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "HOENN_FAMILY_341:341-hoenn",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留鐵螯龍蝦（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    }
+  ]
+}

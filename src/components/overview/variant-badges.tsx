@@ -1,7 +1,13 @@
-import { zhTw } from "@/locales/zh-TW";
 import type { FormOverview } from "@/presentation/form-overview";
+import { variantShortLabelZhTw } from "@/presentation/variant-label";
 
-export function VariantBadges({ variants }: { variants: FormOverview["releasedVariantKeys"] }) {
+export function VariantBadges({
+  variants,
+  formId,
+}: {
+  variants: FormOverview["releasedVariantKeys"];
+  formId?: string | null;
+}) {
   if (!variants.length) return <span className="text-sm text-[var(--muted)]">—</span>;
   return (
     <div className="flex flex-wrap gap-1.5" aria-label="已推出戰鬥版本">
@@ -10,7 +16,7 @@ export function VariantBadges({ variants }: { variants: FormOverview["releasedVa
           key={variant}
           className="inline-flex rounded-full border bg-[var(--surface-muted)] px-2 py-0.5 text-[11px] font-bold whitespace-nowrap"
         >
-          {zhTw.variantShort[variant]}
+          {variantShortLabelZhTw(variant, formId)}
         </span>
       ))}
     </div>

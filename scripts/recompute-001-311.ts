@@ -548,6 +548,13 @@ function makeDecision(input: {
       reasonZhTw: "真正待補資料：無法判斷，暫時不要傳；請補齊主要來源後再重算。",
     };
   }
+  if (variant.pokemonFormId === "386-defense" && variant.variantKey === "NORMAL") {
+    return {
+      decision: "CONDITIONAL_KEEP",
+      ruleKey: "CONDITIONAL_USE",
+      reasonZhTw: "代歐奇希斯防禦形態具 Great League PvP 保留價值；與其他 Forme 分開評估，不能沿用單一轉送結論。",
+    };
+  }
   if (variant.variantKey === "PURIFIED") {
     return {
       decision: "TRANSFER_CANDIDATE",
@@ -619,6 +626,9 @@ function ivStrategy(variant: VariantRecord, decision: Decision) {
   if (variant.variantKey === "SHADOW") {
     return "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。";
   }
+  if (variant.pokemonFormId === "386-defense" && variant.variantKey === "NORMAL") {
+    return "先以 Great League PvP 用途與個體 Rank 篩選防禦形態；不要把其他 Forme 的結論套用到此型態。";
+  }
   if (["MEGA", "MEGA_X", "MEGA_Y", "DYNAMAX", "GIGANTAMAX"].includes(variant.variantKey)) {
     return "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。";
   }
@@ -626,6 +636,28 @@ function ivStrategy(variant: VariantRecord, decision: Decision) {
     return "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。";
   }
   return "沒有主要用途時，不因 100% 自動產生保留理由。";
+}
+
+function isPrimalFormId(formId: string) {
+  return formId === "382-hoenn" || formId === "383-hoenn";
+}
+
+function normalizePrimalVisibleText(variant: VariantRecord, assessment: RecalculatedAssessment) {
+  if (!isPrimalFormId(variant.pokemonFormId)) return;
+  const fields: Array<keyof RecalculatedAssessment> = [
+    "reasonZhTw",
+    "pveSummaryZhTw",
+    "evolutionSummaryZhTw",
+    "recommendedIvStrategyZhTw",
+  ];
+  for (const field of fields) {
+    const value = assessment[field];
+    if (typeof value === "string") {
+      Object.assign(assessment, {
+        [field]: value.replaceAll("Mega／Primal", "原始回歸").replaceAll("Mega", "原始回歸"),
+      });
+    }
+  }
 }
 
 function reviewStatus(disposition: AssessmentDisposition) {
@@ -1015,6 +1047,7 @@ async function main() {
           ? "SPECIAL_ACQUISITION"
           : "PRESERVED_EXISTING_CONCLUSION";
     }
+    normalizePrimalVisibleText(variant, assessment);
     assessments.set(variant.id, assessment);
 
     const oldEvaluation = variant.retentionEvaluations[0];

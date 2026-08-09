@@ -156,3 +156,5 @@ export const GEN3_CANONICAL_MAX = canonicalGen3Species[canonicalGen3Species.leng
 export const canonicalGen3SpeciesByDex = new Map(
   canonicalGen3Species.map((species) => [species.dexNumber, species] as const),
 );
+
+export { canonicalGen3Forms, canonicalGen3FormsById } from "./gen3-forms";

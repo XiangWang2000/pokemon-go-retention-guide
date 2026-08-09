@@ -402,7 +402,7 @@
     }
   ],
   "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-  "evaluationId": "gen3-312-386-eval-376-hoenn-normal",
+  "evaluationId": "gen3-372-386-eval-376-hoenn-normal",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已核對第三世代家族、分支進化、特殊取得、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
   "inheritance": {
@@ -436,6 +436,12 @@
           "id": "EVOLUTION-HOENN-20260809",
           "title": "Pokemon species evolution chains and Pokemon GO evolution requirements",
           "url": "https://pokeapi.co/docs/v2#evolution-chains",
+          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+        },
+        {
+          "id": "OFF-HOENN-FORMS-20260809",
+          "title": "Pokemon GO Tour: Hoenn - Global",
+          "url": "https://gotour.pokemongolive.com/hoenn-global?hl=en#pokemon",
           "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
         },
         {
@@ -505,7 +511,7 @@
         {
           "id": "OFF-MEGA-HOENN-20260809",
           "title": "Mega Evolution in Pokemon GO",
-          "url": "https://pokemongolive.com/post/mega-evolution",
+          "url": "https://pokemongo.com/en/news/mega-evolution-2026-update",
           "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
         }
       ]
@@ -596,7 +602,7 @@
   ],
   "raw": [
     {
-      "id": "raw-gen3-312-386-376-hoenn-normal-pve",
+      "id": "raw-gen3-372-386-376-hoenn-normal-pve",
       "category": "PVE",
       "status": "PARTIALLY_VERIFIED",
       "league": "NOT_APPLICABLE",
@@ -624,7 +630,7 @@
       }
     },
     {
-      "id": "raw-gen3-312-386-376-hoenn-normal-great",
+      "id": "raw-gen3-372-386-376-hoenn-normal-great",
       "category": "PVP",
       "status": "VERIFIED",
       "league": "GREAT",
@@ -656,7 +662,7 @@
       }
     },
     {
-      "id": "raw-gen3-312-386-376-hoenn-normal-master",
+      "id": "raw-gen3-372-386-376-hoenn-normal-master",
       "category": "PVP",
       "status": "VERIFIED",
       "league": "MASTER",
@@ -688,7 +694,7 @@
       }
     },
     {
-      "id": "raw-gen3-312-386-376-hoenn-normal-ultra",
+      "id": "raw-gen3-372-386-376-hoenn-normal-ultra",
       "category": "PVP",
       "status": "VERIFIED",
       "league": "ULTRA",
@@ -731,6 +737,15 @@
       "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
+      "id": "OFF-HOENN-FORMS-20260809",
+      "name": "Pokemon GO Hoenn form identity record",
+      "title": "Pokemon GO Tour: Hoenn - Global",
+      "url": "https://gotour.pokemongolive.com/hoenn-global?hl=en#pokemon",
+      "type": "OFFICIAL",
+      "accessedAt": "2026-08-08T16:00:00.000Z",
+      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+    },
+    {
       "id": "OFF-HOENN-TOUR-2023",
       "name": "Pokemon GO Hoenn Tour official data",
       "title": "Pokemon GO Tour: Hoenn - Global",
@@ -741,9 +756,9 @@
     },
     {
       "id": "OFF-MEGA-HOENN-20260809",
-      "name": "Pokemon GO Mega Evolution data",
+      "name": "Pokemon GO Mega Evolution 2026 official update",
       "title": "Mega Evolution in Pokemon GO",
-      "url": "https://pokemongolive.com/post/mega-evolution",
+      "url": "https://pokemongo.com/en/news/mega-evolution-2026-update",
       "type": "OFFICIAL",
       "accessedAt": "2026-08-08T16:00:00.000Z",
       "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"

@@ -8,6 +8,7 @@ import { freshnessDays } from "@/config/freshness";
 import type { DashboardRow } from "@/lib/data";
 import { matchesPokemonSearch } from "@/lib/search";
 import { zhTw } from "@/locales/zh-TW";
+import { variantLabelZhTw } from "@/presentation/variant-label";
 import { scopedCategoryDataNote } from "@/presentation/data-status";
 import { StatusBadge } from "./status-badge";
 
@@ -245,7 +246,7 @@ export function EvaluationTable({
                 </p>
                 <h2 className="text-lg font-bold">{row.nameZhTw}</h2>
                 <p className="text-sm text-[var(--muted)]">
-                  {row.nameEn} · {row.formNameZhTw} · {zhTw.variant[row.variantKey]}
+                  {row.nameEn} · {row.formNameZhTw} · {variantLabelZhTw(row.variantKey, row.formId)}
                 </p>
               </div>
               <StatusBadge decision={row.decision} />
@@ -336,7 +337,7 @@ function FragmentRow({
             onClick={toggle}
             className="grid size-11 cursor-pointer place-items-center rounded-lg border"
             aria-expanded={open}
-            aria-label={`${open ? "收合" : "展開"}${row.nameZhTw}${zhTw.variant[row.variantKey]}資料`}
+            aria-label={`${open ? "收合" : "展開"}${row.nameZhTw}${variantLabelZhTw(row.variantKey, row.formId)}資料`}
           >
             {open ? <ChevronDown aria-hidden size={18} /> : <ChevronRight aria-hidden size={18} />}
           </button>
@@ -356,7 +357,7 @@ function FragmentRow({
           <div className="text-xs text-[var(--muted)]">{row.formNameEn}</div>
         </td>
         <td className="px-3 py-3 font-semibold">
-          {zhTw.variant[row.variantKey]}
+          {variantLabelZhTw(row.variantKey, row.formId)}
           <div className="text-xs text-[var(--muted)]">{zhTw.releaseStatus[row.releaseStatus]}</div>
         </td>
         <RankCell value={rank(row, "GREAT")} />

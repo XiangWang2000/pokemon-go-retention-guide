@@ -1,6 +1,7 @@
 import type { FormOverview } from "@/presentation/form-overview";
 import { scopedCategoryDataNote } from "@/presentation/data-status";
 import { zhTw } from "@/locales/zh-TW";
+import { variantLabelZhTw } from "@/presentation/variant-label";
 import { EvaluationStatusBadge } from "./evaluation-status-badge";
 import { IvRecommendationDetails } from "./iv-recommendation";
 import { RetentionDecisionBadge } from "./retention-decision-badge";
@@ -60,7 +61,7 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
                 key={variant.row.id}
                 className="rounded-xl bg-[var(--surface-muted)] p-3 text-sm"
               >
-                <p className="font-bold">{zhTw.variant[variant.row.variantKey]}</p>
+                <p className="font-bold">{variantLabelZhTw(variant.row.variantKey, variant.row.formId)}</p>
                 <p className="mt-1 font-mono text-xs text-[var(--muted)]">
                   GL {rank(variant, "GREAT") ?? "—"} · UL {rank(variant, "ULTRA") ?? "—"} · ML{" "}
                   {rank(variant, "MASTER") ?? "—"}
@@ -78,7 +79,7 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
                 key={variant.row.id}
                 className="rounded-xl bg-[var(--surface-muted)] p-3 text-sm leading-6"
               >
-                <p className="font-bold">{zhTw.variant[variant.row.variantKey]}</p>
+                <p className="font-bold">{variantLabelZhTw(variant.row.variantKey, variant.row.formId)}</p>
                 <p className="mt-1">PvE：{variant.row.pveSummaryZhTw}</p>
                 <p className="mt-1">火箭隊：{variant.row.rocketSummaryZhTw}</p>
               </div>
@@ -94,7 +95,7 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
                 className="rounded-xl bg-[var(--surface-muted)] p-3 text-sm leading-6"
               >
                 <p className="font-bold">
-                  {zhTw.variant[variant.row.variantKey]} · {zhTw.gymRating[variant.row.gymRating]}
+                  {variantLabelZhTw(variant.row.variantKey, variant.row.formId)} · {zhTw.gymRating[variant.row.gymRating]}
                 </p>
                 <p className="mt-1">{variant.row.gymSummaryZhTw}</p>
               </div>
@@ -109,7 +110,7 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
                 key={variant.row.id}
                 className="rounded-xl bg-[var(--surface-muted)] p-3 text-sm leading-6"
               >
-                <p className="font-bold">{zhTw.variant[variant.row.variantKey]}</p>
+                <p className="font-bold">{variantLabelZhTw(variant.row.variantKey, variant.row.formId)}</p>
                 <p className="mt-1">Mega／Primal：{variant.row.megaSummaryZhTw}</p>
                 <p className="mt-1">Max：{variant.row.maxBattleSummaryZhTw}</p>
               </div>
@@ -121,7 +122,7 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
           <div className="mt-3 space-y-3 text-sm leading-6">
             {form.variants.map((variant) => (
               <div key={variant.row.id} className="rounded-xl bg-[var(--surface-muted)] p-3">
-                <p className="font-bold">{zhTw.variant[variant.row.variantKey]}</p>
+                <p className="font-bold">{variantLabelZhTw(variant.row.variantKey, variant.row.formId)}</p>
                 <p className="mt-1">進化：{variant.row.evolutionSummaryZhTw}</p>
                 <p className="mt-1">招式：{variant.row.requiredMovesSummaryZhTw}</p>
               </div>
@@ -133,7 +134,7 @@ export function FormDetailPanel({ form, panelId }: { form: FormOverview; panelId
           <div className="mt-3 space-y-4">
             {form.variants.map((variant) => (
               <div key={variant.row.id} className="rounded-xl bg-[var(--surface-muted)] p-3">
-                <p className="font-bold">{zhTw.variant[variant.row.variantKey]}</p>
+                <p className="font-bold">{variantLabelZhTw(variant.row.variantKey, variant.row.formId)}</p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {variant.row.categoryStatuses.map((status) => (
                     <span key={status.category} className="inline-flex items-center gap-1 text-xs">

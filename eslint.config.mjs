@@ -9,6 +9,7 @@ export default defineConfig([
   prettier,
   globalIgnores([
     ".next/**",
+    ".tmp/**",
     "dist/**",
     ".wrangler/**",
     "site-data/**",

@@ -25,7 +25,9 @@ npm run data:import:212-241
 npm run data:import:242-251
 npm run data:import:252-281
 npm run data:import:282-311
-npm run data:import:312-386
+npm run data:import:312-341
+npm run data:import:342-371
+npm run data:import:372-386
 npm run data:recompute:001-386
 npm run data:validate
 npm run review:generate
@@ -33,7 +35,7 @@ npm run sites:snapshot
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full
 ```
 
-`data:import:*` 只負責寫入批次來源、型態、原始資料與初步評估；#152～#386 的第二、三世代整合資料完成後執行 `data:recompute:001-386`。第三世代 canonical identity 以獨立的 `src/data/canonical/gen3.ts` 驗證 batch source 與資料庫，不以 batch source 自己產生 expected；Shadow roster 直接來源、沿正式進化邊推導的 closure 與實際 evolution path 來源分開記錄。共用重算會套用 PvE 四級用途與逐版本資料處置，將後續世代進化、暗影、Mega／Primal、Max、道館與特殊用途納入同一判斷，並把缺口拆到 BattleVariant／類別欄位，不讓單一型態或次要欄位外推到整個家族。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
+`data:import:*` 依每批最多 30 個圖鑑編號切開；#312～#386 使用 `312-341`、`342-371`、`372-386` 三個可獨立驗證的來源、batch、form 與 review 單位，再連續執行 `data:recompute:001-386`、資料驗證與 Sites snapshot。第三世代的 `canonicalGen3Species` 與獨立 `canonicalGen3Forms` 分別驗證物種、正式型態、型態名稱、屬性與 BattleVariant 邊界；Castform 天氣型態、Deoxys 四種 Forme、Shadow evolution closure、Primal 與 Mega 顯示名稱都不可由 batch 自己同時產生 expected 值繞過檢查。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
 
 ## 共用重算規則
 

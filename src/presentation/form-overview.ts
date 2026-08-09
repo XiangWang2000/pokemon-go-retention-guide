@@ -7,6 +7,10 @@ import {
   pveUseLevelLabelZhTw,
   type PveUseLevel,
 } from "@/rules/battle-assessment";
+import {
+  isPrimalFormId,
+  variantShortLabelZhTw,
+} from "@/presentation/variant-label";
 
 export type OverviewTone = "HIGH" | "MEDIUM" | "LOW" | "SPECIAL" | "NONE" | "REVIEW";
 
@@ -281,7 +285,7 @@ export function buildPvpOverview(rows: DashboardRow[]): CompactOverview {
     const rank = ranked.raw.rank ?? Number.MAX_SAFE_INTEGER;
     const league = zhTw.league[ranked.raw.league as keyof typeof zhTw.league] ?? "主要聯盟";
     const variant =
-      ranked.row.variantKey === "NORMAL" ? "" : `${zhTw.variantShort[ranked.row.variantKey]}版`;
+      ranked.row.variantKey === "NORMAL" ? "" : `${variantShortLabelZhTw(ranked.row.variantKey, ranked.row.formId)}版`;
     if (ranked.raw.league === "SPECIAL_CUP") {
       return {
         label: "特殊盃",
@@ -309,7 +313,7 @@ export function buildPvpOverview(rows: DashboardRow[]): CompactOverview {
       detail:
         special.variantKey === "NORMAL"
           ? "限定用途"
-          : `${zhTw.variantShort[special.variantKey]}版限定`,
+          : `${variantShortLabelZhTw(special.variantKey, special.formId)}版限定`,
       tone: "SPECIAL",
     };
   }
@@ -425,7 +429,7 @@ function buildVariantPrimaryUses(row: DashboardRow) {
     row.variantKey.startsWith("MEGA") &&
     ["HIGH", "MEDIUM", "SPECIAL"].includes(megaVariantTone(row))
   ) {
-    uses.push("Mega");
+    uses.push(isPrimalFormId(row.formId) ? "原始回歸" : "Mega");
   }
   if (
     ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey) &&
@@ -522,6 +526,14 @@ function buildVariantIvRecommendations(row: DashboardRow, uses: PrimaryUseKey[])
   };
   return uses
     .map((use) => resolveIvRecommendation(available, context, use))
+    .map((item) => {
+      if (!item || !isPrimalFormId(row.formId)) return item;
+      return {
+        ...item,
+        ivRecommendationZhTw: item.ivRecommendationZhTw.replaceAll("Mega", "原始回歸"),
+        shortIvLabelZhTw: item.shortIvLabelZhTw.replaceAll("Mega", "原始回歸"),
+      };
+    })
     .filter((item): item is IvRecommendation => Boolean(item));
 }
 
@@ -530,7 +542,9 @@ function buildIvDirection(row: DashboardRow, recommendations: IvRecommendation[]
     return recommendations.map((item) => item.ivRecommendationZhTw).join("；");
   }
   if (hasEvolutionValue([row])) {
-    return "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。";
+    return isPrimalFormId(row.formId)
+      ? "依目標進化結果套用 GL／UL 個體Rank；PvE／原始回歸先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。"
+      : "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。";
   }
   if (row.decision === "HOLD_FOR_NOW") return "先保留一隻；關鍵用途確認前不以IV篩除。";
   if (row.decision === "TRANSFER_CANDIDATE") {
@@ -579,7 +593,7 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
   if (specialAcquisition) return "特殊取得個體應保留；不以 IV 作傳送門檻。";
   if (holdRows.length) {
     const heldVariants = [
-      ...new Set(holdRows.map((row) => zhTw.variantShort[row.variantKey])),
+      ...new Set(holdRows.map((row) => variantShortLabelZhTw(row.variantKey, row.formId))),
     ].join("、");
     return evolutionOnly
       ? `保留適合進化的個體；${heldVariants}版本推出狀態未確認，先暫時保留。`
@@ -588,7 +602,9 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
   if (decision === "TRANSFER_CANDIDATE") return "一般重複個體通常可傳送。";
   if (onlyShadow) return "普通版用途有限；暗影標準較寬，15攻優先，不設硬性最低IV。";
   if (onlyMega)
-    return "普通重複個體通常可傳送；Mega候選先看招式與既有投入，15攻優先，14攻高整體IV亦可留。";
+    return isPrimalFormId(direct[0]?.formId)
+      ? "普通重複個體通常可傳送；原始回歸候選先看招式與既有投入，15攻優先，14攻高整體IV亦可留。"
+      : "普通重複個體通常可傳送；Mega候選先看招式與既有投入，15攻優先，14攻高整體IV亦可留。";
   if (onlyMax) return "只留可極巨版本；一般舊個體不具 Max 能力。";
   if (evolutionOnly) return "本體用途有限；依目標進化結果的數字門檻保留個體。";
   if (
@@ -597,7 +613,7 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
   ) {
     return `普通重複個體通常可傳送；優先留${direct
       .filter((row) => row.variantKey !== "NORMAL")
-      .map((row) => zhTw.variantShort[row.variantKey])
+      .map((row) => variantShortLabelZhTw(row.variantKey, row.formId))
       .join("、")}版。`;
   }
   const hasPvp = ["HIGH", "MEDIUM", "SPECIAL"].includes(pvp.tone);
@@ -622,7 +638,9 @@ function buildVariantShortReason(row: DashboardRow, uses: string[]) {
   if (uses.includes("後續進化") && uses.length === 1) return "主要價值來自後續進化，不是本體戰力。";
   if (row.variantKey === "SHADOW") return "暗影版需獨立判斷，淨化前先確認用途。";
   if (row.variantKey.startsWith("MEGA"))
-    return "作為 Mega 候選，通常只需少量；15攻優先，14攻高整體IV亦可留。";
+    return isPrimalFormId(row.formId)
+      ? "作為原始回歸候選，通常只需少量；15攻優先，14攻高整體IV亦可留。"
+      : "作為 Mega 候選，通常只需少量；15攻優先，14攻高整體IV亦可留。";
   if (["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey)) {
     return "只有具 Max 能力的個體適用，一般舊個體不能替代。";
   }

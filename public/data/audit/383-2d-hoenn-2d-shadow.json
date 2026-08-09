@@ -11,7 +11,7 @@
   "formNameZhTw": "豐緣",
   "regionKey": "HOENN",
   "evolvesFromFormId": null,
-  "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+  "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、原始回歸、Max 與後續進化用途分門評估。",
   "evolutionPaths": [],
   "types": [
     "GROUND"
@@ -41,8 +41,8 @@
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
-  "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-  "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
+  "megaSummaryZhTw": "此版本沒有獨立原始回歸型態用途。",
+  "maxBattleSummaryZhTw": "Max 用途與普通、暗影、原始回歸分開評估；尚未發布版本不替代現有個體。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "依固定快照優先核對：DRAGON_TAIL／FIRE_PUNCH／PRECIPICE_BLADES",
   "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
@@ -297,8 +297,8 @@
       "appliesOnlyWhenUseConfirmed": true,
       "speciesSpecificOverride": false,
       "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-      "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
+      "ivRecommendationZhTw": "原始回歸／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+      "shortIvLabelZhTw": "原始回歸：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
       "createdAt": "2026-08-09T02:24:36.000Z",
       "updatedAt": "2026-08-09T02:25:12.000Z"
@@ -400,10 +400,10 @@
       "updatedAt": "2026-08-09T02:24:36.000Z"
     }
   ],
-  "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-  "evaluationId": "gen3-312-386-eval-383-hoenn-shadow",
+  "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／原始回歸／Max 或高道館用途；保留符合版本與用途的候選。",
+  "evaluationId": "gen3-372-386-eval-383-hoenn-shadow",
   "rulesVersion": "2026.08.06-v7",
-  "reviewNotesZhTw": "已核對第三世代家族、分支進化、特殊取得、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
+  "reviewNotesZhTw": "已核對第三世代家族、原始回歸、普通／暗影／淨化／Max 邊界與固定 PvPoke 快照。",
   "inheritance": {
     "inheritsFromVariantId": null,
     "inheritanceMode": "NONE",
@@ -455,7 +455,7 @@
       "category": "MAX_BATTLE",
       "status": "NOT_APPLICABLE",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "普通、暗影或 Mega 個體不等於極巨／超極巨個體。",
+      "summaryZhTw": "普通、暗影或原始回歸個體不等於極巨／超極巨個體。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -474,7 +474,7 @@
       "category": "MEGA",
       "status": "NOT_APPLICABLE",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "此版本不是 Mega 型態；家族有 Mega 不代表所有成員都必須保留。",
+      "summaryZhTw": "此版本不是原始回歸型態；家族有原始回歸不代表所有版本都必須保留。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -582,7 +582,7 @@
   ],
   "raw": [
     {
-      "id": "raw-gen3-312-386-383-hoenn-shadow-pve",
+      "id": "raw-gen3-372-386-383-hoenn-shadow-pve",
       "category": "PVE",
       "status": "PARTIALLY_VERIFIED",
       "league": "NOT_APPLICABLE",
@@ -610,7 +610,7 @@
       }
     },
     {
-      "id": "raw-gen3-312-386-383-hoenn-shadow-great",
+      "id": "raw-gen3-372-386-383-hoenn-shadow-great",
       "category": "PVP",
       "status": "VERIFIED",
       "league": "GREAT",
@@ -642,7 +642,7 @@
       }
     },
     {
-      "id": "raw-gen3-312-386-383-hoenn-shadow-master",
+      "id": "raw-gen3-372-386-383-hoenn-shadow-master",
       "category": "PVP",
       "status": "VERIFIED",
       "league": "MASTER",
@@ -674,7 +674,7 @@
       }
     },
     {
-      "id": "raw-gen3-312-386-383-hoenn-shadow-ultra",
+      "id": "raw-gen3-372-386-383-hoenn-shadow-ultra",
       "category": "PVP",
       "status": "VERIFIED",
       "league": "ULTRA",
@@ -759,7 +759,7 @@
       "priority": 900,
       "matched": true,
       "resultDecision": "KEEP",
-      "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
+      "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／原始回歸／Max 或高道館用途；保留符合版本與用途的候選。"
     }
   ],
   "moves": []

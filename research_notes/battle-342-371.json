@@ -1,0 +1,806 @@
+{
+  "batch": "342-371",
+  "checkedAt": "2026-08-09",
+  "pvpoke": {
+    "commit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+    "files": [
+      "data/sources/pvpoke/rankings-1500.json",
+      "data/sources/pvpoke/rankings-2500.json",
+      "data/sources/pvpoke/rankings-10000.json"
+    ],
+    "method": "Open League Overall fixed snapshot; rank is reproducible as complete JSON array index plus one."
+  },
+  "formCompleteness": [
+    {
+      "id": "342-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "WATER",
+        "DARK"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "343-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "GROUND",
+        "PSYCHIC"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "344-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "GROUND",
+        "PSYCHIC"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "345-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "ROCK",
+        "GRASS"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "346-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "ROCK",
+        "GRASS"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "347-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "ROCK",
+        "BUG"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "348-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "ROCK",
+        "BUG"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "349-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "WATER"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "350-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "WATER"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "351-normal",
+      "formKey": "NORMAL",
+      "formNameEn": "Normal Forme",
+      "formNameZhTw": "一般型態",
+      "regionKey": "HOENN",
+      "types": [
+        "NORMAL"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "351-rainy",
+      "formKey": "RAINY",
+      "formNameEn": "Rainy Forme",
+      "formNameZhTw": "雨水型態",
+      "regionKey": "HOENN",
+      "types": [
+        "WATER"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "351-snowy",
+      "formKey": "SNOWY",
+      "formNameEn": "Snowy Forme",
+      "formNameZhTw": "雪雲型態",
+      "regionKey": "HOENN",
+      "types": [
+        "ICE"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "351-sunny",
+      "formKey": "SUNNY",
+      "formNameEn": "Sunny Forme",
+      "formNameZhTw": "晴天型態",
+      "regionKey": "HOENN",
+      "types": [
+        "FIRE"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "352-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "NORMAL"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "353-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "GHOST"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "354-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "GHOST"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX",
+        "MEGA"
+      ]
+    },
+    {
+      "id": "355-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "GHOST"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "356-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "GHOST"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "357-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "GRASS",
+        "FLYING"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "358-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "PSYCHIC"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "359-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "DARK"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX",
+        "MEGA"
+      ]
+    },
+    {
+      "id": "360-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "PSYCHIC"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "361-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "ICE"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "362-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "ICE"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX",
+        "MEGA"
+      ]
+    },
+    {
+      "id": "363-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "ICE",
+        "WATER"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "364-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "ICE",
+        "WATER"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "365-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "ICE",
+        "WATER"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "366-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "WATER"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "367-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "WATER"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "368-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "WATER"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "369-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "WATER",
+        "ROCK"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "370-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "WATER"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    },
+    {
+      "id": "371-hoenn",
+      "formKey": "HOENN",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "regionKey": "HOENN",
+      "types": [
+        "DRAGON"
+      ],
+      "variantKeys": [
+        "NORMAL",
+        "SHADOW",
+        "PURIFIED",
+        "DYNAMAX"
+      ]
+    }
+  ],
+  "pve": {
+    "342-hoenn": "SPECIAL_USE",
+    "350-hoenn": "USABLE_OR_BUDGET",
+    "354-hoenn": "SPECIAL_USE",
+    "359-hoenn": "SPECIAL_USE",
+    "362-hoenn": "SPECIAL_USE",
+    "365-hoenn": "USABLE_OR_BUDGET"
+  },
+  "pveClassification": {
+    "342-hoenn": "SPECIAL_USE",
+    "343-hoenn": "NO_SIGNIFICANT_USE",
+    "344-hoenn": "NO_SIGNIFICANT_USE",
+    "345-hoenn": "NO_SIGNIFICANT_USE",
+    "346-hoenn": "NO_SIGNIFICANT_USE",
+    "347-hoenn": "NO_SIGNIFICANT_USE",
+    "348-hoenn": "NO_SIGNIFICANT_USE",
+    "349-hoenn": "NO_SIGNIFICANT_USE",
+    "350-hoenn": "USABLE_OR_BUDGET",
+    "351-normal": "NO_SIGNIFICANT_USE",
+    "351-rainy": "NO_SIGNIFICANT_USE",
+    "351-snowy": "NO_SIGNIFICANT_USE",
+    "351-sunny": "NO_SIGNIFICANT_USE",
+    "352-hoenn": "NO_SIGNIFICANT_USE",
+    "353-hoenn": "NO_SIGNIFICANT_USE",
+    "354-hoenn": "SPECIAL_USE",
+    "355-hoenn": "NO_SIGNIFICANT_USE",
+    "356-hoenn": "NO_SIGNIFICANT_USE",
+    "357-hoenn": "NO_SIGNIFICANT_USE",
+    "358-hoenn": "NO_SIGNIFICANT_USE",
+    "359-hoenn": "SPECIAL_USE",
+    "360-hoenn": "NO_SIGNIFICANT_USE",
+    "361-hoenn": "NO_SIGNIFICANT_USE",
+    "362-hoenn": "SPECIAL_USE",
+    "363-hoenn": "NO_SIGNIFICANT_USE",
+    "364-hoenn": "NO_SIGNIFICANT_USE",
+    "365-hoenn": "USABLE_OR_BUDGET",
+    "366-hoenn": "NO_SIGNIFICANT_USE",
+    "367-hoenn": "NO_SIGNIFICANT_USE",
+    "368-hoenn": "NO_SIGNIFICANT_USE",
+    "369-hoenn": "NO_SIGNIFICANT_USE",
+    "370-hoenn": "NO_SIGNIFICANT_USE",
+    "371-hoenn": "NO_SIGNIFICANT_USE"
+  },
+  "retentionOverrides": {},
+  "mega": [
+    {
+      "formId": "354-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    },
+    {
+      "formId": "359-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    },
+    {
+      "formId": "362-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    }
+  ],
+  "maxBattle": [],
+  "shadow": [
+    {
+      "formId": "342-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "343-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "344-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "345-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "346-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "347-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "348-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "349-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "350-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "353-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "354-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "355-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "356-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "359-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "361-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "362-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "363-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "364-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "365-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "371-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    }
+  ],
+  "evolution": [
+    {
+      "fromFormId": "343-hoenn",
+      "toFormId": "344-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "345-hoenn",
+      "toFormId": "346-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "347-hoenn",
+      "toFormId": "348-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "349-hoenn",
+      "toFormId": "350-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "353-hoenn",
+      "toFormId": "354-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "355-hoenn",
+      "toFormId": "356-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "356-hoenn",
+      "toFormId": "477-other",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "360-hoenn",
+      "toFormId": "202-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "361-hoenn",
+      "toFormId": "362-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "361-hoenn",
+      "toFormId": "478-other",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "363-hoenn",
+      "toFormId": "364-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "364-hoenn",
+      "toFormId": "365-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "366-hoenn",
+      "toFormId": "367-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "366-hoenn",
+      "toFormId": "368-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "371-hoenn",
+      "toFormId": "372-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    }
+  ]
+}

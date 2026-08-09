@@ -1,4 +1,5 @@
 import { prisma } from "./prisma";
+import { isPrimalFormId, variantLabelZhTw } from "@/presentation/variant-label";
 
 function parseArray(value: string) {
   try {
@@ -9,16 +10,6 @@ function parseArray(value: string) {
   }
 }
 
-const sourceVariantLabels: Record<string, string> = {
-  NORMAL: "普通",
-  SHADOW: "暗影",
-  PURIFIED: "淨化",
-  MEGA: "Mega",
-  MEGA_X: "Mega X",
-  MEGA_Y: "Mega Y",
-  DYNAMAX: "極巨",
-  GIGANTAMAX: "超極巨",
-};
 
 const batchEvidenceSourceIds = new Set([
   "OFF-GMAX-MEOWTH-2026",
@@ -71,12 +62,13 @@ const batchEvidenceSourceIds = new Set([
 function formatSourceTarget(variant: {
   variantKey: string;
   pokemonForm: {
+    id: string;
     formNameZhTw: string;
     species: { dexNumber: number; nameZhTw: string };
   };
 }) {
   const { species } = variant.pokemonForm;
-  return `#${String(species.dexNumber).padStart(3, "0")} ${species.nameZhTw}（${variant.pokemonForm.formNameZhTw}／${sourceVariantLabels[variant.variantKey] ?? "其他版本"}）`;
+  return `#${String(species.dexNumber).padStart(3, "0")} ${species.nameZhTw}（${variant.pokemonForm.formNameZhTw}／${variantLabelZhTw(variant.variantKey, variant.pokemonForm.id) ?? "其他版本"}）`;
 }
 
 export async function getDashboardRows() {
@@ -215,6 +207,12 @@ export async function getDashboardRows() {
         })
         .map((recommendation) => ({
           ...recommendation,
+          ivRecommendationZhTw: isPrimalFormId(variant.pokemonForm.id)
+            ? recommendation.ivRecommendationZhTw.replaceAll("Mega", "原始回歸")
+            : recommendation.ivRecommendationZhTw,
+          shortIvLabelZhTw: isPrimalFormId(variant.pokemonForm.id)
+            ? recommendation.shortIvLabelZhTw.replaceAll("Mega", "原始回歸")
+            : recommendation.shortIvLabelZhTw,
           createdAt: recommendation.createdAt.toISOString(),
           updatedAt: recommendation.updatedAt.toISOString(),
         })),
@@ -409,6 +407,7 @@ export async function getReviewIssues() {
   });
   return issues.map((issue) => ({
     id: issue.id,
+    formId: issue.pokemonForm?.id ?? null,
     dexNumber: issue.pokemonForm?.species.dexNumber ?? null,
     nameZhTw: issue.pokemonForm?.species.nameZhTw ?? "未指定",
     formNameZhTw: issue.pokemonForm?.formNameZhTw ?? "未指定",

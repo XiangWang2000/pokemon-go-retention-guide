@@ -12,6 +12,7 @@ import {
 import {
   validateEvolutionParentPaths,
   validateGen3DexConsistency,
+  validateGen3FormCompleteness,
 } from "../src/data/checkpoint-validation";
 import { DATA_VERSION } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
@@ -130,6 +131,25 @@ async function main() {
   }
   errors.push(...validateEvolutionParentPaths(forms, evolutionPaths));
   errors.push(...validateGen3DexConsistency(species, forms));
+  errors.push(
+    ...validateGen3FormCompleteness(
+      forms.map((form) => ({
+        id: form.id,
+        dexNumber: form.species.dexNumber,
+        speciesId: form.speciesId,
+        formKey: form.formKey,
+        formNameEn: form.formNameEn,
+        formNameZhTw: form.formNameZhTw,
+        regionKey: form.regionKey,
+        types: form.types,
+      })),
+      variants.map((variant) => ({
+        id: variant.id,
+        pokemonFormId: variant.pokemonFormId,
+        variantKey: variant.variantKey,
+      })),
+    ),
+  );
   const manifestTargetIds = new Set(
     evolutionData.targets.map(
       (target) => `${String(target.dexNumber).padStart(3, "0")}-${target.formKey.toLowerCase()}`,

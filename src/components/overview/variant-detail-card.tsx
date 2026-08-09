@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { zhTw } from "@/locales/zh-TW";
+import { variantLabelZhTw } from "@/presentation/variant-label";
 import type { VariantOverview } from "@/presentation/form-overview";
 import { IvRecommendationDetails } from "./iv-recommendation";
 import { RetentionDecisionBadge } from "./retention-decision-badge";
@@ -11,7 +11,7 @@ export function VariantDetailCard({ variant }: { variant: VariantOverview }) {
     <article className="rounded-2xl border bg-[var(--surface)] p-4" data-variant-id={row.id}>
       <div className="flex flex-wrap items-start justify-between gap-2">
         <div>
-          <h4 className="font-black">{zhTw.variant[row.variantKey]}</h4>
+          <h4 className="font-black">{variantLabelZhTw(row.variantKey, row.formId)}</h4>
           <p className="mt-1 text-xs text-[var(--muted)]">
             {row.isReleased ? "已推出" : "尚未推出／待確認"}
           </p>

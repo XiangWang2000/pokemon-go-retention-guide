@@ -4,9 +4,11 @@ import { useMemo, useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { StatusBadge } from "@/components/status-badge";
 import { zhTw } from "@/locales/zh-TW";
+import { variantLabelZhTw } from "@/presentation/variant-label";
 
 interface Issue {
   id: string;
+  formId: string | null;
   dexNumber: number | null;
   nameZhTw: string;
   formNameZhTw: string;
@@ -149,7 +151,7 @@ export function ReviewTable({ issues }: { issues: Issue[] }) {
                   {issue.nameZhTw}（{issue.formNameZhTw}）
                 </h2>
                 <p className="text-sm text-[var(--muted)]">
-                  {zhTw.variant[issue.variantKey as keyof typeof zhTw.variant] ?? issue.variantKey}
+                  {variantLabelZhTw(issue.variantKey, issue.formId)}
                 </p>
               </div>
               <StatusBadge decision={issue.provisionalDecision} />

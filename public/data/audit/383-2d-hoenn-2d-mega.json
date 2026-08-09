@@ -11,7 +11,7 @@
   "formNameZhTw": "豐緣",
   "regionKey": "HOENN",
   "evolvesFromFormId": null,
-  "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+  "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、原始回歸、Max 與後續進化用途分門評估。",
   "evolutionPaths": [],
   "types": [
     "GROUND"
@@ -25,7 +25,7 @@
   "isReleased": true,
   "releaseStatus": "RELEASED",
   "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
-  "notesZhTw": "Mega 型態獨立評估；不與普通、暗影或 Max 混用。",
+  "notesZhTw": "原始固拉多 型態獨立評估；不與普通、暗影或 Max 混用。",
   "decision": "KEEP",
   "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
@@ -37,12 +37,12 @@
   "reviewed": true,
   "updatedAt": "2026-08-08T16:00:00.000Z",
   "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
-  "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+  "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；原始回歸 用途需與普通／暗影版本分開評估",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
-  "megaSummaryZhTw": "此 Mega 版本已推出且與其他版本分開；只留實際投入候選。",
-  "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
+  "megaSummaryZhTw": "原始固拉多已推出且與其他版本分開；只留實際投入候選。",
+  "maxBattleSummaryZhTw": "Max 用途與普通、暗影、原始回歸分開評估；尚未發布版本不替代現有個體。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
   "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
@@ -297,8 +297,8 @@
       "appliesOnlyWhenUseConfirmed": true,
       "speciesSpecificOverride": false,
       "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-      "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
+      "ivRecommendationZhTw": "原始回歸／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+      "shortIvLabelZhTw": "原始回歸：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
       "createdAt": "2026-08-09T02:24:36.000Z",
       "updatedAt": "2026-08-09T02:25:12.000Z"
@@ -400,10 +400,10 @@
       "updatedAt": "2026-08-09T02:24:36.000Z"
     }
   ],
-  "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
-  "evaluationId": "gen3-312-386-eval-383-hoenn-mega",
+  "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／原始回歸／Max 或高道館用途；保留符合版本與用途的候選。",
+  "evaluationId": "gen3-372-386-eval-383-hoenn-mega",
   "rulesVersion": "2026.08.06-v7",
-  "reviewNotesZhTw": "已核對第三世代家族、分支進化、特殊取得、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
+  "reviewNotesZhTw": "已核對第三世代家族、原始回歸、普通／暗影／淨化／Max 邊界與固定 PvPoke 快照。",
   "inheritance": {
     "inheritsFromVariantId": null,
     "inheritanceMode": "NONE",
@@ -455,7 +455,7 @@
       "category": "MAX_BATTLE",
       "status": "NOT_APPLICABLE",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "普通、暗影或 Mega 個體不等於極巨／超極巨個體。",
+      "summaryZhTw": "普通、暗影或原始回歸個體不等於極巨／超極巨個體。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -474,7 +474,7 @@
       "category": "MEGA",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "此 Mega 已推出；只保留實際要投入的候選，與普通、暗影及 Max 分開。",
+      "summaryZhTw": "原始固拉多 已推出；只保留實際要投入的候選，與普通、暗影及 Max 分開。",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -491,7 +491,13 @@
         {
           "id": "OFF-MEGA-HOENN-20260809",
           "title": "Mega Evolution in Pokemon GO",
-          "url": "https://pokemongolive.com/post/mega-evolution",
+          "url": "https://pokemongo.com/en/news/mega-evolution-2026-update",
+          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+        },
+        {
+          "id": "OFF-PRIMAL-HOENN-20260809",
+          "title": "Pokemon GO Wild Area: Global",
+          "url": "https://gotour.pokemongolive.com/gowildarea/global/",
           "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
         },
         {
@@ -506,7 +512,7 @@
       "category": "PVE",
       "status": "PARTIALLY_VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+      "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；原始回歸 用途需與普通／暗影版本分開評估",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -569,7 +575,7 @@
   ],
   "raw": [
     {
-      "id": "raw-gen3-312-386-383-hoenn-mega-pve",
+      "id": "raw-gen3-372-386-383-hoenn-mega-pve",
       "category": "PVE",
       "status": "PARTIALLY_VERIFIED",
       "league": "NOT_APPLICABLE",
@@ -600,9 +606,18 @@
   "sources": [
     {
       "id": "OFF-MEGA-HOENN-20260809",
-      "name": "Pokemon GO Mega Evolution data",
+      "name": "Pokemon GO Mega Evolution 2026 official update",
       "title": "Mega Evolution in Pokemon GO",
-      "url": "https://pokemongolive.com/post/mega-evolution",
+      "url": "https://pokemongo.com/en/news/mega-evolution-2026-update",
+      "type": "OFFICIAL",
+      "accessedAt": "2026-08-08T16:00:00.000Z",
+      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+    },
+    {
+      "id": "OFF-PRIMAL-HOENN-20260809",
+      "name": "Pokemon GO Primal Kyogre and Primal Groudon record",
+      "title": "Pokemon GO Wild Area: Global",
+      "url": "https://gotour.pokemongolive.com/gowildarea/global/",
       "type": "OFFICIAL",
       "accessedAt": "2026-08-08T16:00:00.000Z",
       "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
@@ -623,7 +638,7 @@
       "priority": 900,
       "matched": true,
       "resultDecision": "KEEP",
-      "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
+      "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／原始回歸／Max 或高道館用途；保留符合版本與用途的候選。"
     }
   ],
   "moves": []

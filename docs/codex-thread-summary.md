@@ -43,9 +43,10 @@
 
 ## 2026-08-09 #152-#386 Gen2 and Gen3 integration checkpoint
 
-- DATA_VERSION is 2026.08.09-r22; the controlled pipeline imports #152-#386 and recomputes the full #001-#386 scope.
+- DATA_VERSION is 2026.08.09-r23; the controlled pipeline imports #152-#386 and recomputes the full #001-#386 scope from canonical `dev.db`.
 - Gen2 members are linked to existing Kanto families where appropriate; formal Johto migrations remove same-species `*-kanto` stubs, while future-generation targets remain explicit evolution stubs.
-- Gen3 standard forms use `HOENN` / `豐緣`; Wurmple branches, Nincada's special-family association, the Ralts/Gallade branch, Azurill's Johto-family merge, and the Probopass stub are represented without fake evolution edges.
-- `src/data/canonical/gen3.ts` is the independent #252-#386 identity fixture. Batch sources and the database are both checked against it, so a batch cannot make a wrong name or type pass by defining its own expected value.
+- Gen3 standard forms use `HOENN` / `豐緣`; the controlled source/review units are `312-341`, `342-371`, and `372-386`, each at most 30 dex numbers. Wurmple branches, Nincada's special-family association, the Ralts/Gallade branch, Azurill's Johto-family merge, and the Probopass stub are represented without fake evolution edges.
+- `src/data/canonical/gen3.ts` and `src/data/canonical/gen3-forms.ts` are independent #252-#386 identity fixtures. Batch sources and the database are both checked against the species and form fixtures, including Castform's four weather forms and Deoxys's four Formes, so a batch cannot make a wrong name, type, form key, or variant boundary pass by defining its own expected value.
 - Shadow evidence distinguishes direct roster release, derived/inherited evolution closure, and the actual formal evolution edge. Derived descendants are not presented as if the roster source listed them directly.
+- Kyogre/Groudon retain the internal `MEGA` variant key for compatibility but use 原始蓋歐卡／原始固拉多 and 原始回歸候選 in user-facing summaries; Rayquaza remains Mega.
 - Runtime snapshot, review, Excel, schema validation, review consistency, snapshot provenance checks, and regression tests are generated for this checkpoint; the next expansion point is after #386.

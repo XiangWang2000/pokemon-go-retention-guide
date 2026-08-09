@@ -30,17 +30,47 @@ import {
   pveUseLevels282311,
 } from "../src/data/batch-282-311";
 import {
-  forms312386,
-  evolutionPairs312386,
-  pvpokeSpeciesId312386,
-  releasedDynamaxForms312386,
-  releasedGigantamaxForms312386,
-  releasedMegaForms312386,
-  releasedShadowForms312386,
-  specialVariants312386,
-  species312386,
-  pveUseLevels312386,
-} from "../src/data/batch-312-386";
+  forms312341,
+  evolutionPairs312341,
+  pvpokeSpeciesId312341,
+  releasedDynamaxForms312341,
+  releasedGigantamaxForms312341,
+  releasedMegaForms312341,
+  releasedShadowForms312341,
+  specialVariants312341,
+  species312341,
+  pveClassifications312341,
+  pveUseLevels312341,
+  retentionDecisionOverrides312341,
+} from "../src/data/batch-312-341";
+import {
+  forms342371,
+  evolutionPairs342371,
+  pvpokeSpeciesId342371,
+  releasedDynamaxForms342371,
+  releasedGigantamaxForms342371,
+  releasedMegaForms342371,
+  releasedShadowForms342371,
+  specialVariants342371,
+  species342371,
+  pveClassifications342371,
+  pveUseLevels342371,
+  retentionDecisionOverrides342371,
+} from "../src/data/batch-342-371";
+import {
+  forms372386,
+  evolutionPairs372386,
+  pvpokeSpeciesId372386,
+  releasedDynamaxForms372386,
+  releasedGigantamaxForms372386,
+  releasedMegaForms372386,
+  releasedShadowForms372386,
+  specialVariants372386,
+  species372386,
+  pveClassifications372386,
+  pveUseLevels372386,
+  retentionDecisionOverrides372386,
+} from "../src/data/batch-372-386";
 import {
   ensureCrossGenerationEvolutionTargets,
   loadCrossGenerationEvolutionData,
@@ -51,7 +81,11 @@ import {
   deriveEvolutionReleaseClosure,
   deriveShadowReleaseEvidence,
 } from "../src/data/evolution-release";
-import { validateGen3DexConsistency } from "../src/data/checkpoint-validation";
+import {
+  validateGen3DexConsistency,
+  validateGen3FormCompleteness,
+  type VariantForValidation,
+} from "../src/data/checkpoint-validation";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
@@ -121,7 +155,7 @@ type VariantRecord = {
   released: boolean;
 };
 type BatchDefinition = {
-  batch: "252-281" | "282-311" | "312-386";
+  batch: "252-281" | "282-311" | "312-341" | "342-371" | "372-386";
   start: number;
   end: number;
   species: Gen3Species[];
@@ -132,7 +166,9 @@ type BatchDefinition = {
   releasedDynamaxForms: Set<string>;
   releasedGigantamaxForms: Set<string>;
   specialVariants: Gen3SpecialVariant[];
+  pveClassifications: Record<string, PveUseLevel>;
   pveUseLevels: Record<string, PveUseLevel>;
+  retentionDecisionOverrides: Record<string, Decision>;
   pvpokeSpeciesId: (form: Gen3Form, shadow: boolean) => string;
   shadowUnavailableFormIds: ReadonlySet<string>;
 };
@@ -168,7 +204,9 @@ function definitionFor(batch: string): BatchDefinition {
       releasedDynamaxForms: releasedDynamaxForms252281,
       releasedGigantamaxForms: releasedGigantamaxForms252281,
       specialVariants: specialVariants252281,
+      pveClassifications: pveUseLevels252281,
       pveUseLevels: pveUseLevels252281,
+      retentionDecisionOverrides: {},
       pvpokeSpeciesId: pvpokeSpeciesId252281,
       shadowUnavailableFormIds: new Set(),
     };
@@ -186,26 +224,73 @@ function definitionFor(batch: string): BatchDefinition {
       releasedDynamaxForms: releasedDynamaxForms282311,
       releasedGigantamaxForms: releasedGigantamaxForms282311,
       specialVariants: specialVariants282311,
+      pveClassifications: pveUseLevels282311,
       pveUseLevels: pveUseLevels282311,
+      retentionDecisionOverrides: {},
       pvpokeSpeciesId: pvpokeSpeciesId282311,
       shadowUnavailableFormIds: new Set(),
     };
   }
   if (batch === "312-386") {
+    throw new Error("312-386 is no longer an import unit; use 312-341, 342-371, or 372-386.");
+  }
+  if (batch === "312-341") {
     return {
       batch,
       start: 312,
+      end: 341,
+      species: species312341,
+      forms: forms312341,
+      evolutionPairs: evolutionPairs312341,
+      releasedShadowForms: releasedShadowForms312341,
+      releasedMegaForms: releasedMegaForms312341,
+      releasedDynamaxForms: releasedDynamaxForms312341,
+      releasedGigantamaxForms: releasedGigantamaxForms312341,
+      specialVariants: specialVariants312341,
+      pveClassifications: pveClassifications312341,
+      pveUseLevels: pveUseLevels312341,
+      retentionDecisionOverrides: retentionDecisionOverrides312341,
+      pvpokeSpeciesId: pvpokeSpeciesId312341,
+      shadowUnavailableFormIds: new Set(),
+    };
+  }
+  if (batch === "342-371") {
+    return {
+      batch,
+      start: 342,
+      end: 371,
+      species: species342371,
+      forms: forms342371,
+      evolutionPairs: evolutionPairs342371,
+      releasedShadowForms: releasedShadowForms342371,
+      releasedMegaForms: releasedMegaForms342371,
+      releasedDynamaxForms: releasedDynamaxForms342371,
+      releasedGigantamaxForms: releasedGigantamaxForms342371,
+      specialVariants: specialVariants342371,
+      pveClassifications: pveClassifications342371,
+      pveUseLevels: pveUseLevels342371,
+      retentionDecisionOverrides: retentionDecisionOverrides342371,
+      pvpokeSpeciesId: pvpokeSpeciesId342371,
+      shadowUnavailableFormIds: new Set(),
+    };
+  }
+  if (batch === "372-386") {
+    return {
+      batch,
+      start: 372,
       end: 386,
-      species: species312386,
-      forms: forms312386,
-      evolutionPairs: evolutionPairs312386,
-      releasedShadowForms: releasedShadowForms312386,
-      releasedMegaForms: releasedMegaForms312386,
-      releasedDynamaxForms: releasedDynamaxForms312386,
-      releasedGigantamaxForms: releasedGigantamaxForms312386,
-      specialVariants: specialVariants312386,
-      pveUseLevels: pveUseLevels312386,
-      pvpokeSpeciesId: pvpokeSpeciesId312386,
+      species: species372386,
+      forms: forms372386,
+      evolutionPairs: evolutionPairs372386,
+      releasedShadowForms: releasedShadowForms372386,
+      releasedMegaForms: releasedMegaForms372386,
+      releasedDynamaxForms: releasedDynamaxForms372386,
+      releasedGigantamaxForms: releasedGigantamaxForms372386,
+      specialVariants: specialVariants372386,
+      pveClassifications: pveClassifications372386,
+      pveUseLevels: pveUseLevels372386,
+      retentionDecisionOverrides: retentionDecisionOverrides372386,
+      pvpokeSpeciesId: pvpokeSpeciesId372386,
       shadowUnavailableFormIds: new Set(),
     };
   }
@@ -218,15 +303,55 @@ function assertBatchCanonical(batch: BatchDefinition) {
     batch.forms.map((form) => ({
       id: form.id,
       speciesId: `species-${String(form.dexNumber).padStart(3, "0")}`,
+      dexNumber: form.dexNumber,
+      formKey: form.formKey,
       formNameEn: form.formNameEn,
       formNameZhTw: form.formNameZhTw,
+      regionKey: form.regionKey,
       types: form.types,
     })),
     { min: batch.start, max: batch.end },
   );
-  if (errors.length) {
-    throw new Error(`Gen3 canonical identity mismatch for #${batch.start}-${batch.end}:\n${errors.join("\n")}`);
+  const formErrors = validateGen3FormCompleteness(
+    batch.forms.map((form) => ({
+      id: form.id,
+      dexNumber: form.dexNumber,
+      formKey: form.formKey,
+      formNameEn: form.formNameEn,
+      formNameZhTw: form.formNameZhTw,
+      regionKey: form.regionKey,
+      types: form.types,
+    })),
+    expectedVariantBoundaryRecords(batch),
+    { min: batch.start, max: batch.end },
+  );
+  if (errors.length || formErrors.length) {
+    throw new Error(
+      `Gen3 canonical identity mismatch for #${batch.start}-${batch.end}:\n${[...errors, ...formErrors].join("\n")}`,
+    );
   }
+}
+
+function expectedVariantBoundaryRecords(batch: BatchDefinition): VariantForValidation[] {
+  const rows: VariantForValidation[] = [];
+  for (const form of batch.forms) {
+    if (form.isStub || form.includeVariants === false) continue;
+    for (const variantKey of ["NORMAL", "SHADOW", "PURIFIED", "DYNAMAX"] as const) {
+      rows.push({
+        id: `${form.id}-${variantKey.toLowerCase()}`,
+        pokemonFormId: form.id,
+        variantKey,
+      });
+    }
+  }
+  for (const special of batch.specialVariants) {
+    rows.push({
+      id: special.id,
+      pokemonFormId: special.formId,
+      variantKey: special.variantKey,
+    });
+  }
+  return rows;
 }
 
 function optionalDate(value: string | null | undefined) {
@@ -271,6 +396,38 @@ async function upsertSources(research: OfficialResearch) {
         notes: "第三世代批次來源研究表。",
       },
     });
+  }
+}
+
+async function assertDatabaseCanonical(batch: BatchDefinition) {
+  const [forms, variants] = await Promise.all([
+    prisma.pokemonForm.findMany({
+      where: { species: { dexNumber: { gte: batch.start, lte: batch.end } } },
+      include: { species: { select: { dexNumber: true } } },
+    }),
+    prisma.battleVariant.findMany({
+      where: { pokemonForm: { species: { dexNumber: { gte: batch.start, lte: batch.end } } } },
+      select: { id: true, pokemonFormId: true, variantKey: true },
+    }),
+  ]);
+  const errors = validateGen3FormCompleteness(
+    forms.map((form) => ({
+      id: form.id,
+      dexNumber: form.species.dexNumber,
+      speciesId: form.speciesId,
+      formKey: form.formKey,
+      formNameEn: form.formNameEn,
+      formNameZhTw: form.formNameZhTw,
+      regionKey: form.regionKey,
+      types: form.types,
+    })),
+    variants,
+    { min: batch.start, max: batch.end },
+  );
+  if (errors.length) {
+    throw new Error(
+      `Database Gen3 form/variant completeness mismatch for #${batch.start}-${batch.end}:\n${errors.join("\n")}`,
+    );
   }
 }
 
@@ -360,6 +517,8 @@ function initialDecision(
   formId: string,
 ) {
   if (!released) return "TRANSFER_CANDIDATE" as const;
+  const override = batch.retentionDecisionOverrides[formId];
+  if (override) return override;
   if (variantKey === "MEGA") return "KEEP" as const;
   if (variantKey === "DYNAMAX" || batch.pveUseLevels[formId] === "CORE_INVESTMENT") {
     return "KEEP" as const;
@@ -385,8 +544,21 @@ function pveTier(level: PveUseLevel | undefined) {
   return null;
 }
 
-function notesForVariant(variantKey: VariantKey, released: boolean) {
-  if (variantKey === "MEGA") return "Mega 型態獨立評估；不與普通、暗影或 Max 混用。";
+function isPrimalFormId(formId: string) {
+  return formId === "382-hoenn" || formId === "383-hoenn";
+}
+
+function specialVariantNameZhTw(formId: string, variantKey: VariantKey) {
+  if (variantKey === "MEGA" && formId === "382-hoenn") return "原始蓋歐卡";
+  if (variantKey === "MEGA" && formId === "383-hoenn") return "原始固拉多";
+  return variantKey === "MEGA" ? "Mega" : variantKey;
+}
+
+function notesForVariant(variantKey: VariantKey, released: boolean, formId: string) {
+  if (variantKey === "MEGA") {
+    const name = specialVariantNameZhTw(formId, variantKey);
+    return `${name} 型態獨立評估；不與普通、暗影或 Max 混用。`;
+  }
   if (variantKey === "DYNAMAX" || variantKey === "GIGANTAMAX") {
     return released
       ? "此 Max 版本已由來源核對為已推出；普通個體不能替代 Max 個體。"
@@ -394,7 +566,9 @@ function notesForVariant(variantKey: VariantKey, released: boolean) {
   }
   if (variantKey === "SHADOW") return "暗影個體獨立評估；暗影標準較寬，不因低總 IV 自動淨化。";
   if (variantKey === "PURIFIED") return "淨化不可逆；先確認暗影用途與招式，不以淨化取代暗影候選。";
-  return "普通版本；與暗影、淨化、Mega 及 Max 分開評估。";
+  return isPrimalFormId(formId)
+    ? "普通版本；與暗影、淨化、原始回歸及 Max 分開評估。"
+    : "普通版本；與暗影、淨化、Mega 及 Max 分開評估。";
 }
 
 function evidenceCategory(variantId: string, sourceId: string): Category {
@@ -608,10 +782,13 @@ export async function runImport(batchName: string) {
       released: special.released,
     });
   }
-  if (variants.length !== batch.forms.length * 4 + batch.specialVariants.length) {
+  const expectedVariantCount =
+    batch.forms.filter((form) => !form.isStub && form.includeVariants !== false).length * 4 +
+    batch.specialVariants.length;
+  if (variants.length !== expectedVariantCount) {
     throw new Error(
       "#" + batch.batch + " variant 計數錯誤：預期 " +
-      (batch.forms.length * 4 + batch.specialVariants.length) + "，實際 " + variants.length,
+      expectedVariantCount + "，實際 " + variants.length,
     );
   }
   await prisma.battleVariant.createMany({
@@ -622,7 +799,7 @@ export async function runImport(batchName: string) {
       isReleased: released,
       releaseStatus: released ? "RELEASED" as const : "UNRELEASED" as const,
       releaseVerifiedAt: checkedAt,
-      notesZhTw: notesForVariant(variantKey, released),
+      notesZhTw: notesForVariant(variantKey, released, form.id),
       inheritsFromVariantId: variantKey === "PURIFIED" && released ? form.id + "-normal" : null,
       inheritanceMode: variantKey === "PURIFIED" && released ? "NORMAL_BASE" as const : "NONE" as const,
       purificationCostModifier: variantKey === "PURIFIED" && released ? 0.9 : null,
@@ -633,6 +810,7 @@ export async function runImport(batchName: string) {
       purifiedOverrideRequired: false,
     })),
   });
+  await assertDatabaseCanonical(batch);
   await ensureCrossGenerationEvolutionTargets(prisma, checkedAt);
 
   const rankMap = new Map<string, RankResult[]>();
@@ -712,6 +890,7 @@ export async function runImport(batchName: string) {
   const categoryRows = variants.flatMap((variant) => {
     const result = decisions.get(variant.id)!;
     const links = officialEvidenceLinks.filter((link) => link.variantId === variant.id);
+    const variantNameZhTw = specialVariantNameZhTw(variant.form.id, variant.variantKey);
     return categories.map((category) => {
       let status:
         | "VERIFIED"
@@ -731,7 +910,9 @@ export async function runImport(batchName: string) {
           status = "VERIFIED";
           provenance = "SOURCE_VERIFIED";
           summaryZhTw = rankSummary(result.ranks);
-          materialToDecision = result.ranks.some((rank) => rank.rank <= 250);
+          materialToDecision =
+            result.ranks.some((rank) => rank.rank <= 250) ||
+            Boolean(batch.retentionDecisionOverrides[variant.form.id]);
         } else {
           status = "UNRANKED";
           summaryZhTw = "固定 PvPoke Open／Overall 快照未列入可重現名次；不把沒有排名誤當成全家族資料缺口。";
@@ -739,7 +920,7 @@ export async function runImport(batchName: string) {
       } else if (category === "PVE") {
         pveUseLevel = variant.variantKey === "MEGA"
           ? "SPECIAL_USE"
-          : batch.pveUseLevels[variant.form.id] ?? "NO_SIGNIFICANT_USE";
+          : batch.pveClassifications[variant.form.id] ?? "NO_SIGNIFICANT_USE";
         if (!variant.released || ["DYNAMAX", "GIGANTAMAX"].includes(variant.variantKey)) {
           status = variant.released ? "NOT_APPLICABLE" : "UNRELEASED";
         } else if (variant.variantKey === "MEGA" || batch.pveUseLevels[variant.form.id]) {
@@ -765,15 +946,15 @@ export async function runImport(batchName: string) {
           status = variant.released ? "VERIFIED" : "UNRELEASED";
           provenance = variant.released ? "SOURCE_VERIFIED" : "MANUAL_CURATED";
           materialToDecision = variant.released;
-          summaryZhTw = variant.released ? "此 Mega 已推出；只保留實際要投入的候選，與普通、暗影及 Max 分開。" : "此 Mega 尚未推出。";
+          summaryZhTw = variant.released ? variantNameZhTw + " 已推出；只保留實際要投入的候選，與普通、暗影及 Max 分開。" : variantNameZhTw + " 尚未推出。";
         } else if (variant.variantKey === "NORMAL" && batch.releasedMegaForms.has(variant.form.id)) {
           status = "PARTIALLY_VERIFIED";
           provenance = "SOURCE_VERIFIED";
           materialToDecision = true;
-          summaryZhTw = "此普通型態是已推出 Mega 的基底；不把 Mega 用途回推成全家族必留。";
+          summaryZhTw = isPrimalFormId(variant.form.id) ? "此普通型態是" + variantNameZhTw + "的基底；不把原始回歸用途回推成全家族必留。" : "此普通型態是已推出 Mega 的基底；不把 Mega 用途回推成全家族必留。";
         } else {
           status = "NOT_APPLICABLE";
-          summaryZhTw = "此版本不是 Mega 型態；家族有 Mega 不代表所有成員都必須保留。";
+          summaryZhTw = isPrimalFormId(variant.form.id) ? "此版本不是原始回歸型態；家族有原始回歸不代表所有版本都必須保留。" : "此版本不是 Mega 型態；家族有 Mega 不代表所有成員都必須保留。";
         }
       } else if (category === "MAX_BATTLE") {
         const maxVariant = variant.variantKey === "DYNAMAX" || variant.variantKey === "GIGANTAMAX";
@@ -789,7 +970,11 @@ export async function runImport(batchName: string) {
         }
         summaryZhTw = maxVariant
           ? (variant.released ? "此 Max 版本已推出；與普通／暗影版本分開保留。" : "此 Max 版本尚未推出。")
-          : (hasReleasedMax ? "此普通型態是已推出 Max 的基底；不把 Max 用途回推成全家族必留。" : "普通、暗影或 Mega 個體不等於極巨／超極巨個體。");
+          : (hasReleasedMax
+            ? "此普通型態是已推出 Max 的基底；不把 Max 用途回推成全家族必留。"
+            : isPrimalFormId(variant.form.id)
+              ? "普通、暗影或原始回歸個體不等於極巨／超極巨個體。"
+              : "普通、暗影或 Mega 個體不等於極巨／超極巨個體。");
       } else {
         const hasEvolution = batch.evolutionPairs.some(([from]) => from === variant.form.id) || Boolean(variant.form.evolvesFromFormId);
         status = hasEvolution ? "VERIFIED" : "NOT_APPLICABLE";
@@ -856,6 +1041,7 @@ export async function runImport(batchName: string) {
     const result = decisions.get(variant.id)!;
     const pvpUseful = result.ranks.some((rank) => rank.rank <= 250);
     const hasEvolution = batch.evolutionPairs.some(([from]) => from === variant.form.id) || Boolean(variant.form.evolvesFromFormId);
+    const variantNameZhTw = specialVariantNameZhTw(variant.form.id, variant.variantKey);
     return {
       id: "gen3-" + batch.batch + "-eval-" + variant.id,
       battleVariantId: variant.id,
@@ -863,7 +1049,7 @@ export async function runImport(batchName: string) {
       provenance: "MANUAL_CURATED" as const,
       pvpSummaryZhTw: rankSummary(result.ranks),
       pveSummaryZhTw: variant.variantKey === "MEGA"
-        ? "此 Mega 版本有獨立 PvE 與團體戰 boost 用途；先核對招式、等級與實際投入。"
+        ? variantNameZhTw + "有獨立 PvE 與團體戰 boost 用途；先核對招式、等級與實際投入。"
         : batch.pveUseLevels[variant.form.id]
           ? "PvE 用途依研究表分成核心投資、可用／預算型或特殊用途；不把缺少精確斷點誤當成整個家族待判斷。"
           : "未列為本批普通版本的核心 PvE 投資目標；不因 100% 自動升格為實戰必留。",
@@ -871,11 +1057,17 @@ export async function runImport(batchName: string) {
       gymSummaryZhTw: "未列為主要道館保留用途；缺少次要欄位來源不覆蓋其他結論。",
       gymRating: "NOT_APPLICABLE" as const,
       megaSummaryZhTw: variant.variantKey === "MEGA"
-        ? "此 Mega 版本已推出且與其他版本分開；只留實際投入候選。"
+        ? variantNameZhTw + "已推出且與其他版本分開；只留實際投入候選。"
         : batch.releasedMegaForms.has(variant.form.id) && variant.variantKey === "NORMAL"
-          ? "此普通型態可作 Mega 基底候選；不把 Mega 用途回推成全家族必留。"
-          : "此版本沒有獨立 Mega 型態用途。",
-      maxBattleSummaryZhTw: "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
+          ? isPrimalFormId(variant.form.id)
+            ? "此普通型態可作" + variantNameZhTw + "基底候選；不把原始回歸用途回推成全家族必留。"
+            : "此普通型態可作 Mega 基底候選；不把 Mega 用途回推成全家族必留。"
+          : isPrimalFormId(variant.form.id)
+            ? "此版本沒有獨立原始回歸型態用途。"
+            : "此版本沒有獨立 Mega 型態用途。",
+      maxBattleSummaryZhTw: isPrimalFormId(variant.form.id)
+        ? "Max 用途與普通、暗影、原始回歸分開評估；尚未發布版本不替代現有個體。"
+        : "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
       evolutionSummaryZhTw: hasEvolution
         ? "本批進化關係已結構化；前階是否保留由後續目標用途決定。"
         : "單純存在家族關係不會自動產生大量保留理由。",
@@ -885,16 +1077,24 @@ export async function runImport(batchName: string) {
       recommendedIvStrategyZhTw: variant.variantKey === "SHADOW"
         ? "暗影標準較寬；15攻優先，不設硬性最低 IV。"
         : variant.variantKey === "MEGA"
-          ? "先看精確 Mega 版本、招式、等級與投入；15攻優先，14攻高整體 IV 亦可留。"
+          ? isPrimalFormId(variant.form.id)
+            ? "先看精確原始回歸版本、招式、等級與投入；15攻優先，14攻高整體 IV 亦可留。"
+            : "先看精確 Mega 版本、招式、等級與投入；15攻優先，14攻高整體 IV 亦可留。"
           : result.decision === "TRANSFER_CANDIDATE"
             ? "目前沒有主要用途時，不因 100% 自動產生保留理由。"
+          : isPrimalFormId(variant.form.id)
+            ? "依實際用途分開篩選；PvP 看同聯盟 IV Rank，PvE／原始回歸先看招式與投入；15攻優先，14攻高整體 IV 亦可留。"
             : "依實際用途分開篩選；PvP 看同聯盟 IV Rank，PvE／Mega 先看招式與投入；15攻優先，14攻高整體 IV 亦可留。",
       reasonZhTw: result.decision === "KEEP"
-        ? "目前已有明確 PvP、PvE、Mega 或其他實戰用途；保留符合版本與用途的候選。"
+        ? isPrimalFormId(variant.form.id)
+          ? "目前已有明確 PvP、PvE、原始回歸或其他實戰用途；保留符合版本與用途的候選。"
+          : "目前已有明確 PvP、PvE、Mega 或其他實戰用途；保留符合版本與用途的候選。"
         : result.decision === "CONDITIONAL_KEEP"
           ? "用途有限或屬進化／版本候選；只留少量符合條件的個體。"
           : variant.released
-            ? "目前缺乏明確主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體大多可傳。"
+            ? isPrimalFormId(variant.form.id)
+              ? "目前缺乏明確主要 PvP、PvE、道館、原始回歸、Max 或後續進化理由，一般重複個體大多可傳。"
+              : "目前缺乏明確主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體大多可傳。"
             : "此版本尚未在 Pokémon GO 推出，不把現有個體誤當成此版本候選。",
       confidence: "HIGH" as const,
       rulesVersion: RULES_VERSION,
@@ -908,7 +1108,9 @@ export async function runImport(batchName: string) {
           ? "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。"
           : "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
       assessmentDisposition: initialDisposition(result.decision, variant.released),
-      reviewNotesZhTw: "已核對第三世代家族、分支進化、特殊取得、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
+      reviewNotesZhTw: isPrimalFormId(variant.form.id)
+        ? "已核對第三世代家族、原始回歸、普通／暗影／淨化／Max 邊界與固定 PvPoke 快照。"
+        : "已核對第三世代家族、分支進化、特殊取得、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
     };
   });
   await prisma.retentionEvaluation.createMany({ data: evaluationRows });

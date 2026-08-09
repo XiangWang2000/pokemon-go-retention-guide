@@ -54,18 +54,18 @@ describe("Sites 唯讀 snapshot", () => {
   }, 30_000);
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
-    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.09-r22");
+    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.09-r23");
     expect(siteSnapshotManifest.counts).toMatchObject({
       pokemonSpecies: 417,
-      pokemonForms: 455,
-      battleVariants: 1752,
-      rawEvaluationData: 1195,
-      sourceReferences: 175,
-      retentionEvaluations: 1917,
-      categoryEvaluations: 12264,
+      pokemonForms: 461,
+      battleVariants: 1776,
+      rawEvaluationData: 1200,
+      sourceReferences: 178,
+      retentionEvaluations: 1941,
+      categoryEvaluations: 12432,
       ivRecommendations: 11,
-      dashboardRows: 1752,
-      homeFamilies: 228,
+      dashboardRows: 1776,
+      homeFamilies: 234,
       openReviewIssues: 241,
     });
     expect(siteSnapshotManifest.sourceDatabase.path).toBe("dev.db");
@@ -79,7 +79,7 @@ describe("Sites 唯讀 snapshot", () => {
       path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-386.xlsx"),
     );
     await workbook.xlsx.load(buffer as unknown as Parameters<typeof workbook.xlsx.load>[0]);
-    expect(workbook.subject).toBe("2026.08.09-r22");
+    expect(workbook.subject).toBe("2026.08.09-r23");
     expect(workbook.worksheets).toHaveLength(10);
     expect(workbook.worksheets.map((sheet) => sheet.name)).toEqual([
       "寶可夢型態",
@@ -115,7 +115,7 @@ describe("Sites 唯讀 snapshot", () => {
       }>;
     };
     expect(runtimeHome.schemaVersion).toBe(2);
-    expect(runtimeHome.dataVersion).toBe("2026.08.09-r22");
+    expect(runtimeHome.dataVersion).toBe("2026.08.09-r23");
     expect(
       runtimeHome.families.every(
         (family) =>
@@ -129,7 +129,7 @@ describe("Sites 唯讀 snapshot", () => {
 
   it("首頁初始 HTML 直接輸出日期與搜尋入口，不重複輸出家族摘要", () => {
     const home = homeSnapshot as unknown as HomeSnapshot;
-    expect(home.dataVersion).toBe("2026.08.09-r22");
+    expect(home.dataVersion).toBe("2026.08.09-r23");
     const summary = buildHomeSummary(home);
     const html = renderToStaticMarkup(createElement(HomeDataLoader, { initialSummary: summary }));
 
@@ -175,9 +175,9 @@ describe("首頁 snapshot", () => {
     const variants = forms.flatMap((form) => form.variants);
 
     expect(home.schemaVersion).toBe(1);
-    expect(home.families).toHaveLength(228);
-    expect(forms).toHaveLength(423);
-    expect(variants).toHaveLength(1752);
+    expect(home.families).toHaveLength(234);
+    expect(forms).toHaveLength(429);
+    expect(variants).toHaveLength(1776);
     expect(variants.every((variant) => variant.row.ivRecommendations.length === 0)).toBe(true);
     expect(forms.some((form) => form.ivRecommendations.length > 0)).toBe(true);
     expect(variants.some((variant) => variant.ivRecommendations.length > 0)).toBe(true);

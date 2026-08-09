@@ -1,42 +1,43 @@
 {
-  "id": "351-hoenn-dynamax",
-  "formId": "351-hoenn",
+  "id": "351-sunny-normal",
+  "formId": "351-sunny",
   "speciesId": "species-351",
   "familyKey": "HOENN_FAMILY_351",
   "dexNumber": 351,
   "nameEn": "castform",
   "nameZhTw": "飄浮泡泡",
-  "formKey": "HOENN",
-  "formNameEn": "Hoenn",
-  "formNameZhTw": "豐緣",
+  "formKey": "SUNNY",
+  "formNameEn": "Sunny Forme",
+  "formNameZhTw": "晴天型態",
   "regionKey": "HOENN",
   "evolvesFromFormId": null,
-  "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+  "evolutionFamilyNotesZhTw": "飄浮泡泡的一般、晴天、雨水與雪雲型態分開評估；型態差異不代表進化關係。",
   "evolutionPaths": [],
   "types": [
-    "NORMAL"
+    "FIRE"
   ],
   "aliases": [
-    "castform",
-    "飄浮泡泡"
+    "castform_sunny",
+    "飄浮泡泡晴天型態",
+    "sunny"
   ],
   "evolutionNames": [],
-  "variantKey": "DYNAMAX",
-  "isReleased": false,
-  "releaseStatus": "UNRELEASED",
+  "variantKey": "NORMAL",
+  "isReleased": true,
+  "releaseStatus": "RELEASED",
   "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
-  "notesZhTw": "此 Max 版本尚未核實為已推出；普通個體不能替代 Max 個體。",
-  "decision": "TRANSFER_CANDIDATE",
-  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+  "notesZhTw": "普通版本；與暗影、淨化、Mega 及 Max 分開評估。",
+  "decision": "KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
-  "dataStatus": "VERIFIED",
+  "dataStatus": "DATA_UNAVAILABLE",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+  "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-08-08T16:00:00.000Z",
-  "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #95；招式 EMBER／WEATHER_BALL_FIRE／SOLAR_BEAM",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -44,8 +45,8 @@
   "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
   "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-  "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-  "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
+  "requiredMovesSummaryZhTw": "依固定快照優先核對：EMBER／WEATHER_BALL_FIRE／SOLAR_BEAM",
+  "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
   "ivRecommendations": [
     {
       "id": "iv-global-great",
@@ -400,8 +401,8 @@
       "updatedAt": "2026-08-09T02:24:36.000Z"
     }
   ],
-  "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
-  "evaluationId": "gen3-312-386-eval-351-hoenn-dynamax",
+  "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
+  "evaluationId": "gen3-342-371-eval-351-sunny-normal",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已核對第三世代家族、分支進化、特殊取得、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
   "inheritance": {
@@ -416,7 +417,7 @@
     {
       "category": "EVOLUTION_VALUE",
       "status": "NOT_APPLICABLE",
-      "provenance": "MANUAL_CURATED",
+      "provenance": "SOURCE_VERIFIED",
       "summaryZhTw": "沒有額外需要回推的本批進化用途。",
       "materialToDecision": false,
       "rocketRating": null,
@@ -428,14 +429,21 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T16:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "OFF-HOENN-FORMS-20260809",
+          "title": "Pokemon GO Tour: Hoenn - Global",
+          "url": "https://gotour.pokemongolive.com/hoenn-global?hl=en#pokemon",
+          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+        }
+      ]
     },
     {
       "category": "GYM",
-      "status": "UNRELEASED",
-      "provenance": "MANUAL_CURATED",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
       "summaryZhTw": "未找到足以構成主要保留理由的道館用途；次要資料缺失不覆蓋其他結論。",
       "materialToDecision": false,
       "rocketRating": null,
@@ -447,15 +455,15 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "MAX_BATTLE",
-      "status": "UNRELEASED",
+      "status": "NOT_APPLICABLE",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "此 Max 版本尚未推出。",
+      "summaryZhTw": "普通、暗影或 Mega 個體不等於極巨／超極巨個體。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -466,7 +474,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T16:00:00.000Z",
       "sources": []
     },
@@ -485,14 +493,14 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "PVE",
-      "status": "UNRELEASED",
-      "provenance": "MANUAL_CURATED",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
       "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
       "materialToDecision": false,
       "rocketRating": null,
@@ -504,16 +512,16 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "PVP",
-      "status": "UNRELEASED",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
-      "materialToDecision": false,
+      "status": "VERIFIED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "GL（超級聯盟） Overall #95；招式 EMBER／WEATHER_BALL_FIRE／SOLAR_BEAM",
+      "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
@@ -523,14 +531,21 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T16:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "pvpoke-gl-20260715",
+          "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
+        }
+      ]
     },
     {
       "category": "ROCKET",
-      "status": "UNRELEASED",
-      "provenance": "MANUAL_CURATED",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
       "summaryZhTw": "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。",
       "materialToDecision": false,
       "rocketRating": "DATA_UNAVAILABLE",
@@ -542,20 +557,72 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T16:00:00.000Z",
       "sources": []
     }
   ],
-  "raw": [],
-  "sources": [],
+  "raw": [
+    {
+      "id": "raw-gen3-342-371-351-sunny-normal-great",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "GREAT",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "castform_sunny",
+      "formKey": "351-sunny",
+      "variantKey": "NORMAL",
+      "rank": 95,
+      "rating": "647",
+      "score": null,
+      "tier": null,
+      "recommendedMoves": [
+        "EMBER",
+        "WEATHER_BALL_FIRE",
+        "SOLAR_BEAM"
+      ],
+      "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
+      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-gl-20260715",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "OFF-HOENN-FORMS-20260809",
+      "name": "Pokemon GO Hoenn form identity record",
+      "title": "Pokemon GO Tour: Hoenn - Global",
+      "url": "https://gotour.pokemongolive.com/hoenn-global?hl=en#pokemon",
+      "type": "OFFICIAL",
+      "accessedAt": "2026-08-08T16:00:00.000Z",
+      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+    },
+    {
+      "id": "pvpoke-gl-20260715",
+      "name": "PvPoke",
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "type": "PVP",
+      "accessedAt": "2026-07-14T16:00:00.000Z",
+      "usageZhTw": "Open League／Overall 名次與推薦招式。"
+    }
+  ],
   "traces": [
     {
-      "ruleKey": "UNRELEASED_VARIANT",
-      "priority": 950,
+      "ruleKey": "MAJOR_BATTLE_VALUE",
+      "priority": 900,
       "matched": true,
-      "resultDecision": "TRANSFER_CANDIDATE",
-      "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
+      "resultDecision": "KEEP",
+      "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
     }
   ],
   "moves": []

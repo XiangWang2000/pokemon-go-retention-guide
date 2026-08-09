@@ -122,7 +122,7 @@ export function FamilyMemberPanel({
                   <div>
                     <p className="text-[11px] font-bold text-[var(--muted)]">可用版本</p>
                     <div className="mt-1">
-                      <VariantBadges variants={form.releasedVariantKeys} />
+                      <VariantBadges variants={form.releasedVariantKeys} formId={form.formId} />
                     </div>
                   </div>
                   <div>

@@ -3,6 +3,7 @@ import { Fragment } from "react";
 import { toAuditRowSummary, type AuditRowSummary } from "@/lib/audit-data";
 import type { DashboardRow } from "@/lib/data";
 import { zhTw } from "@/locales/zh-TW";
+import { variantLabelZhTw } from "@/presentation/variant-label";
 import { scopedCategoryDataNote } from "@/presentation/data-status";
 import { EvaluationStatusBadge } from "./evaluation-status-badge";
 import { RetentionDecisionBadge } from "./retention-decision-badge";
@@ -204,7 +205,7 @@ export function DataAuditTable({
                     </p>
                     <h2 className="font-black">{row.nameZhTw}</h2>
                     <p className="text-xs text-[var(--muted)]">
-                      {row.formNameZhTw} · {zhTw.variant[row.variantKey]}
+                      {row.formNameZhTw} · {variantLabelZhTw(row.variantKey, row.formId)}
                     </p>
                   </div>
                   <RetentionDecisionBadge decision={row.decision} />
@@ -294,7 +295,7 @@ export function DataAuditTable({
                       <p className="text-xs text-[var(--muted)]">{row.nameEn}</p>
                     </td>
                     <td className="px-3 py-3">
-                      {row.formNameZhTw}／{zhTw.variant[row.variantKey]}
+                      {row.formNameZhTw}／{variantLabelZhTw(row.variantKey, row.formId)}
                     </td>
                     <td className="px-3 py-3 font-mono">{rank(row, "GREAT") ?? "—"}</td>
                     <td className="px-3 py-3 font-mono">{rank(row, "ULTRA") ?? "—"}</td>

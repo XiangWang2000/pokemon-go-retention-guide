@@ -87,7 +87,7 @@ export function QuickOverview({
                   </div>
                 </div>
                 <div className="mt-4">
-                  <VariantBadges variants={form.releasedVariantKeys} />
+                  <VariantBadges variants={form.releasedVariantKeys} formId={form.formId} />
                 </div>
                 <div className="mt-4 grid grid-cols-3 gap-2 rounded-xl bg-[var(--surface-muted)] p-3">
                   <div>
@@ -183,7 +183,7 @@ export function QuickOverview({
                       />
                     </th>
                     <td className="px-3 py-2">
-                      <VariantBadges variants={form.releasedVariantKeys} />
+                      <VariantBadges variants={form.releasedVariantKeys} formId={form.formId} />
                     </td>
                     <td className="px-3 py-2">
                       <CompactRating overview={form.pvp} />

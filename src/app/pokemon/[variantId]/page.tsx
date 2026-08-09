@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { StatusBadge } from "@/components/status-badge";
 import { getDashboardRows, getVariantDetailMeta } from "@/lib/data";
+import { variantLabelZhTw } from "@/presentation/variant-label";
 import { zhTw } from "@/locales/zh-TW";
 import { scopedCategoryDataNote } from "@/presentation/data-status";
 import { buildFormOverview } from "@/presentation/form-overview";
@@ -50,7 +51,7 @@ export default async function PokemonDetailPage({
               {row.nameZhTw}（{row.formNameZhTw}）
             </h1>
             <p className="mt-1 text-[var(--muted)]">
-              {row.nameEn} · {row.formNameEn} · {zhTw.variant[row.variantKey]}
+              {row.nameEn} · {row.formNameEn} · {variantLabelZhTw(row.variantKey, row.formId)}
             </p>
             <div className="mt-3 flex flex-wrap gap-2">
               {row.types.map((type) => (
@@ -179,7 +180,7 @@ export default async function PokemonDetailPage({
               href={`/pokemon/${encodeURIComponent(item.id)}`}
               className={`min-h-11 rounded-lg border px-3 py-2 text-sm font-bold ${item.id === row.id ? "bg-[var(--primary)] text-[var(--primary-contrast)]" : "hover:bg-[var(--surface-muted)]"}`}
             >
-              {zhTw.variant[item.variantKey]} · {zhTw.decision[item.decision]}
+              {variantLabelZhTw(item.variantKey, item.formId)} · {zhTw.decision[item.decision]}
             </Link>
           ))}
         </div>

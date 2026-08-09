@@ -1,0 +1,1150 @@
+import type { Gen3Form, Gen3Species, Gen3SpecialVariant, PveUseLevel } from "./batch-gen3-types";
+
+export const species312341: Gen3Species[] = [
+  {
+    "dexNumber": 312,
+    "nameEn": "minun",
+    "nameZhTw": "負電拍拍",
+    "types": [
+      "ELECTRIC"
+    ],
+    "familyKey": "HOENN_FAMILY_312"
+  },
+  {
+    "dexNumber": 313,
+    "nameEn": "volbeat",
+    "nameZhTw": "電螢蟲",
+    "types": [
+      "BUG"
+    ],
+    "familyKey": "HOENN_FAMILY_313"
+  },
+  {
+    "dexNumber": 314,
+    "nameEn": "illumise",
+    "nameZhTw": "甜甜螢",
+    "types": [
+      "BUG"
+    ],
+    "familyKey": "HOENN_FAMILY_314"
+  },
+  {
+    "dexNumber": 315,
+    "nameEn": "roselia",
+    "nameZhTw": "毒薔薇",
+    "types": [
+      "GRASS",
+      "POISON"
+    ],
+    "familyKey": "HOENN_FAMILY_315"
+  },
+  {
+    "dexNumber": 316,
+    "nameEn": "gulpin",
+    "nameZhTw": "溶食獸",
+    "types": [
+      "POISON"
+    ],
+    "familyKey": "HOENN_FAMILY_316"
+  },
+  {
+    "dexNumber": 317,
+    "nameEn": "swalot",
+    "nameZhTw": "吞食獸",
+    "types": [
+      "POISON"
+    ],
+    "familyKey": "HOENN_FAMILY_316"
+  },
+  {
+    "dexNumber": 318,
+    "nameEn": "carvanha",
+    "nameZhTw": "利牙鯊",
+    "types": [
+      "WATER",
+      "DARK"
+    ],
+    "familyKey": "HOENN_FAMILY_318"
+  },
+  {
+    "dexNumber": 319,
+    "nameEn": "sharpedo",
+    "nameZhTw": "巨牙鯊",
+    "types": [
+      "WATER",
+      "DARK"
+    ],
+    "familyKey": "HOENN_FAMILY_318"
+  },
+  {
+    "dexNumber": 320,
+    "nameEn": "wailmer",
+    "nameZhTw": "吼吼鯨",
+    "types": [
+      "WATER"
+    ],
+    "familyKey": "HOENN_FAMILY_320"
+  },
+  {
+    "dexNumber": 321,
+    "nameEn": "wailord",
+    "nameZhTw": "吼鯨王",
+    "types": [
+      "WATER"
+    ],
+    "familyKey": "HOENN_FAMILY_320"
+  },
+  {
+    "dexNumber": 322,
+    "nameEn": "numel",
+    "nameZhTw": "呆火駝",
+    "types": [
+      "FIRE",
+      "GROUND"
+    ],
+    "familyKey": "HOENN_FAMILY_322"
+  },
+  {
+    "dexNumber": 323,
+    "nameEn": "camerupt",
+    "nameZhTw": "噴火駝",
+    "types": [
+      "FIRE",
+      "GROUND"
+    ],
+    "familyKey": "HOENN_FAMILY_322"
+  },
+  {
+    "dexNumber": 324,
+    "nameEn": "torkoal",
+    "nameZhTw": "煤炭龜",
+    "types": [
+      "FIRE"
+    ],
+    "familyKey": "HOENN_FAMILY_324"
+  },
+  {
+    "dexNumber": 325,
+    "nameEn": "spoink",
+    "nameZhTw": "跳跳豬",
+    "types": [
+      "PSYCHIC"
+    ],
+    "familyKey": "HOENN_FAMILY_325"
+  },
+  {
+    "dexNumber": 326,
+    "nameEn": "grumpig",
+    "nameZhTw": "噗噗豬",
+    "types": [
+      "PSYCHIC"
+    ],
+    "familyKey": "HOENN_FAMILY_325"
+  },
+  {
+    "dexNumber": 327,
+    "nameEn": "spinda",
+    "nameZhTw": "晃晃斑",
+    "types": [
+      "NORMAL"
+    ],
+    "familyKey": "HOENN_FAMILY_327"
+  },
+  {
+    "dexNumber": 328,
+    "nameEn": "trapinch",
+    "nameZhTw": "大顎蟻",
+    "types": [
+      "GROUND"
+    ],
+    "familyKey": "HOENN_FAMILY_328"
+  },
+  {
+    "dexNumber": 329,
+    "nameEn": "vibrava",
+    "nameZhTw": "超音波幼蟲",
+    "types": [
+      "GROUND",
+      "DRAGON"
+    ],
+    "familyKey": "HOENN_FAMILY_328"
+  },
+  {
+    "dexNumber": 330,
+    "nameEn": "flygon",
+    "nameZhTw": "沙漠蜻蜓",
+    "types": [
+      "GROUND",
+      "DRAGON"
+    ],
+    "familyKey": "HOENN_FAMILY_328"
+  },
+  {
+    "dexNumber": 331,
+    "nameEn": "cacnea",
+    "nameZhTw": "刺球仙人掌",
+    "types": [
+      "GRASS"
+    ],
+    "familyKey": "HOENN_FAMILY_331"
+  },
+  {
+    "dexNumber": 332,
+    "nameEn": "cacturne",
+    "nameZhTw": "夢歌仙人掌",
+    "types": [
+      "GRASS",
+      "DARK"
+    ],
+    "familyKey": "HOENN_FAMILY_331"
+  },
+  {
+    "dexNumber": 333,
+    "nameEn": "swablu",
+    "nameZhTw": "青綿鳥",
+    "types": [
+      "NORMAL",
+      "FLYING"
+    ],
+    "familyKey": "HOENN_FAMILY_333"
+  },
+  {
+    "dexNumber": 334,
+    "nameEn": "altaria",
+    "nameZhTw": "七夕青鳥",
+    "types": [
+      "DRAGON",
+      "FLYING"
+    ],
+    "familyKey": "HOENN_FAMILY_333"
+  },
+  {
+    "dexNumber": 335,
+    "nameEn": "zangoose",
+    "nameZhTw": "貓鼬斬",
+    "types": [
+      "NORMAL"
+    ],
+    "familyKey": "HOENN_FAMILY_335"
+  },
+  {
+    "dexNumber": 336,
+    "nameEn": "seviper",
+    "nameZhTw": "飯匙蛇",
+    "types": [
+      "POISON"
+    ],
+    "familyKey": "HOENN_FAMILY_336"
+  },
+  {
+    "dexNumber": 337,
+    "nameEn": "lunatone",
+    "nameZhTw": "月石",
+    "types": [
+      "ROCK",
+      "PSYCHIC"
+    ],
+    "familyKey": "HOENN_FAMILY_337"
+  },
+  {
+    "dexNumber": 338,
+    "nameEn": "solrock",
+    "nameZhTw": "太陽岩",
+    "types": [
+      "ROCK",
+      "PSYCHIC"
+    ],
+    "familyKey": "HOENN_FAMILY_338"
+  },
+  {
+    "dexNumber": 339,
+    "nameEn": "barboach",
+    "nameZhTw": "泥泥鰍",
+    "types": [
+      "WATER",
+      "GROUND"
+    ],
+    "familyKey": "HOENN_FAMILY_339"
+  },
+  {
+    "dexNumber": 340,
+    "nameEn": "whiscash",
+    "nameZhTw": "鯰魚王",
+    "types": [
+      "WATER",
+      "GROUND"
+    ],
+    "familyKey": "HOENN_FAMILY_339"
+  },
+  {
+    "dexNumber": 341,
+    "nameEn": "corphish",
+    "nameZhTw": "龍蝦小兵",
+    "types": [
+      "WATER"
+    ],
+    "familyKey": "HOENN_FAMILY_341"
+  }
+];
+
+export const forms312341: Gen3Form[] = [
+  {
+    "id": "312-hoenn",
+    "dexNumber": 312,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "ELECTRIC"
+    ],
+    "aliases": [
+      "minun",
+      "負電拍拍"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "313-hoenn",
+    "dexNumber": 313,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "BUG"
+    ],
+    "aliases": [
+      "volbeat",
+      "電螢蟲"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "314-hoenn",
+    "dexNumber": 314,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "BUG"
+    ],
+    "aliases": [
+      "illumise",
+      "甜甜螢"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "315-hoenn",
+    "dexNumber": 315,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "GRASS",
+      "POISON"
+    ],
+    "aliases": [
+      "roselia",
+      "毒薔薇"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "毒薔薇家族保留後續世代羅絲雷朵的正式進化 stub；不因目前展示批次尚未納入而遺失進化價值。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "316-hoenn",
+    "dexNumber": 316,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "POISON"
+    ],
+    "aliases": [
+      "gulpin",
+      "溶食獸"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "317-hoenn",
+    "dexNumber": 317,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "POISON"
+    ],
+    "aliases": [
+      "swalot",
+      "吞食獸"
+    ],
+    "evolvesFromFormId": "316-hoenn",
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "318-hoenn",
+    "dexNumber": 318,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "WATER",
+      "DARK"
+    ],
+    "aliases": [
+      "carvanha",
+      "利牙鯊"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "319-hoenn",
+    "dexNumber": 319,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "WATER",
+      "DARK"
+    ],
+    "aliases": [
+      "sharpedo",
+      "巨牙鯊"
+    ],
+    "evolvesFromFormId": "318-hoenn",
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "320-hoenn",
+    "dexNumber": 320,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "WATER"
+    ],
+    "aliases": [
+      "wailmer",
+      "吼吼鯨"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "321-hoenn",
+    "dexNumber": 321,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "WATER"
+    ],
+    "aliases": [
+      "wailord",
+      "吼鯨王"
+    ],
+    "evolvesFromFormId": "320-hoenn",
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "322-hoenn",
+    "dexNumber": 322,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "FIRE",
+      "GROUND"
+    ],
+    "aliases": [
+      "numel",
+      "呆火駝"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "323-hoenn",
+    "dexNumber": 323,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "FIRE",
+      "GROUND"
+    ],
+    "aliases": [
+      "camerupt",
+      "噴火駝"
+    ],
+    "evolvesFromFormId": "322-hoenn",
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "324-hoenn",
+    "dexNumber": 324,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "FIRE"
+    ],
+    "aliases": [
+      "torkoal",
+      "煤炭龜"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "325-hoenn",
+    "dexNumber": 325,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "PSYCHIC"
+    ],
+    "aliases": [
+      "spoink",
+      "跳跳豬"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "326-hoenn",
+    "dexNumber": 326,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "PSYCHIC"
+    ],
+    "aliases": [
+      "grumpig",
+      "噗噗豬"
+    ],
+    "evolvesFromFormId": "325-hoenn",
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "327-hoenn",
+    "dexNumber": 327,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "NORMAL"
+    ],
+    "aliases": [
+      "spinda",
+      "晃晃斑"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "328-hoenn",
+    "dexNumber": 328,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "GROUND"
+    ],
+    "aliases": [
+      "trapinch",
+      "大顎蟻"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "329-hoenn",
+    "dexNumber": 329,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "GROUND",
+      "DRAGON"
+    ],
+    "aliases": [
+      "vibrava",
+      "超音波幼蟲"
+    ],
+    "evolvesFromFormId": "328-hoenn",
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "330-hoenn",
+    "dexNumber": 330,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "GROUND",
+      "DRAGON"
+    ],
+    "aliases": [
+      "flygon",
+      "沙漠蜻蜓"
+    ],
+    "evolvesFromFormId": "329-hoenn",
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "331-hoenn",
+    "dexNumber": 331,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "GRASS"
+    ],
+    "aliases": [
+      "cacnea",
+      "刺球仙人掌"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "332-hoenn",
+    "dexNumber": 332,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "GRASS",
+      "DARK"
+    ],
+    "aliases": [
+      "cacturne",
+      "夢歌仙人掌"
+    ],
+    "evolvesFromFormId": "331-hoenn",
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "333-hoenn",
+    "dexNumber": 333,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "NORMAL",
+      "FLYING"
+    ],
+    "aliases": [
+      "swablu",
+      "青綿鳥"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "334-hoenn",
+    "dexNumber": 334,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "DRAGON",
+      "FLYING"
+    ],
+    "aliases": [
+      "altaria",
+      "七夕青鳥"
+    ],
+    "evolvesFromFormId": "333-hoenn",
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "335-hoenn",
+    "dexNumber": 335,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "NORMAL"
+    ],
+    "aliases": [
+      "zangoose",
+      "貓鼬斬"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "336-hoenn",
+    "dexNumber": 336,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "POISON"
+    ],
+    "aliases": [
+      "seviper",
+      "飯匙蛇"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "337-hoenn",
+    "dexNumber": 337,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "ROCK",
+      "PSYCHIC"
+    ],
+    "aliases": [
+      "lunatone",
+      "月石"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "338-hoenn",
+    "dexNumber": 338,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "ROCK",
+      "PSYCHIC"
+    ],
+    "aliases": [
+      "solrock",
+      "太陽岩"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "339-hoenn",
+    "dexNumber": 339,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "WATER",
+      "GROUND"
+    ],
+    "aliases": [
+      "barboach",
+      "泥泥鰍"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "340-hoenn",
+    "dexNumber": 340,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "WATER",
+      "GROUND"
+    ],
+    "aliases": [
+      "whiscash",
+      "鯰魚王"
+    ],
+    "evolvesFromFormId": "339-hoenn",
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  },
+  {
+    "id": "341-hoenn",
+    "dexNumber": 341,
+    "formKey": "HOENN",
+    "formNameEn": "Hoenn",
+    "formNameZhTw": "豐緣",
+    "regionKey": "HOENN",
+    "types": [
+      "WATER"
+    ],
+    "aliases": [
+      "corphish",
+      "龍蝦小兵"
+    ],
+    "evolvesFromFormId": null,
+    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    "isStub": false,
+    "includeVariants": true
+  }
+];
+
+export const evolutionPairs312341: readonly [string, string][] = [
+  [
+    "316-hoenn",
+    "317-hoenn"
+  ],
+  [
+    "318-hoenn",
+    "319-hoenn"
+  ],
+  [
+    "320-hoenn",
+    "321-hoenn"
+  ],
+  [
+    "322-hoenn",
+    "323-hoenn"
+  ],
+  [
+    "325-hoenn",
+    "326-hoenn"
+  ],
+  [
+    "328-hoenn",
+    "329-hoenn"
+  ],
+  [
+    "329-hoenn",
+    "330-hoenn"
+  ],
+  [
+    "331-hoenn",
+    "332-hoenn"
+  ],
+  [
+    "333-hoenn",
+    "334-hoenn"
+  ],
+  [
+    "339-hoenn",
+    "340-hoenn"
+  ],
+  [
+    "341-hoenn",
+    "342-hoenn"
+  ],
+  [
+    "315-hoenn",
+    "407-other"
+  ]
+];
+
+export const releasedShadowForms312341 = new Set<string>([
+  "318-hoenn",
+  "319-hoenn",
+  "320-hoenn",
+  "321-hoenn",
+  "322-hoenn",
+  "323-hoenn",
+  "325-hoenn",
+  "326-hoenn",
+  "328-hoenn",
+  "329-hoenn",
+  "330-hoenn",
+  "331-hoenn",
+  "332-hoenn",
+  "333-hoenn",
+  "334-hoenn",
+  "339-hoenn",
+  "340-hoenn",
+  "341-hoenn"
+]);
+export const releasedMegaForms312341 = new Set<string>([
+  "319-hoenn",
+  "323-hoenn",
+  "334-hoenn"
+]);
+export const releasedDynamaxForms312341 = new Set<string>();
+export const releasedGigantamaxForms312341 = new Set<string>();
+
+export const specialVariants312341: Gen3SpecialVariant[] = [
+  {
+    "id": "319-hoenn-mega",
+    "formId": "319-hoenn",
+    "variantKey": "MEGA",
+    "released": true,
+    "nameZhTw": "Mega 巨牙鯊"
+  },
+  {
+    "id": "323-hoenn-mega",
+    "formId": "323-hoenn",
+    "variantKey": "MEGA",
+    "released": true,
+    "nameZhTw": "Mega 噴火駝"
+  },
+  {
+    "id": "334-hoenn-mega",
+    "formId": "334-hoenn",
+    "variantKey": "MEGA",
+    "released": true,
+    "nameZhTw": "Mega 七夕青鳥"
+  }
+];
+
+export const pveClassifications312341: Record<string, PveUseLevel> = {
+  "312-hoenn": "NO_SIGNIFICANT_USE",
+  "313-hoenn": "NO_SIGNIFICANT_USE",
+  "314-hoenn": "NO_SIGNIFICANT_USE",
+  "315-hoenn": "NO_SIGNIFICANT_USE",
+  "316-hoenn": "NO_SIGNIFICANT_USE",
+  "317-hoenn": "NO_SIGNIFICANT_USE",
+  "318-hoenn": "NO_SIGNIFICANT_USE",
+  "319-hoenn": "SPECIAL_USE",
+  "320-hoenn": "NO_SIGNIFICANT_USE",
+  "321-hoenn": "NO_SIGNIFICANT_USE",
+  "322-hoenn": "NO_SIGNIFICANT_USE",
+  "323-hoenn": "SPECIAL_USE",
+  "324-hoenn": "NO_SIGNIFICANT_USE",
+  "325-hoenn": "NO_SIGNIFICANT_USE",
+  "326-hoenn": "NO_SIGNIFICANT_USE",
+  "327-hoenn": "NO_SIGNIFICANT_USE",
+  "328-hoenn": "NO_SIGNIFICANT_USE",
+  "329-hoenn": "NO_SIGNIFICANT_USE",
+  "330-hoenn": "USABLE_OR_BUDGET",
+  "331-hoenn": "NO_SIGNIFICANT_USE",
+  "332-hoenn": "NO_SIGNIFICANT_USE",
+  "333-hoenn": "NO_SIGNIFICANT_USE",
+  "334-hoenn": "USABLE_OR_BUDGET",
+  "335-hoenn": "NO_SIGNIFICANT_USE",
+  "336-hoenn": "NO_SIGNIFICANT_USE",
+  "337-hoenn": "NO_SIGNIFICANT_USE",
+  "338-hoenn": "NO_SIGNIFICANT_USE",
+  "339-hoenn": "NO_SIGNIFICANT_USE",
+  "340-hoenn": "USABLE_OR_BUDGET",
+  "341-hoenn": "NO_SIGNIFICANT_USE"
+};
+export const pveUseLevels312341: Record<string, PveUseLevel> = {
+  "319-hoenn": "SPECIAL_USE",
+  "323-hoenn": "SPECIAL_USE",
+  "330-hoenn": "USABLE_OR_BUDGET",
+  "334-hoenn": "USABLE_OR_BUDGET",
+  "340-hoenn": "USABLE_OR_BUDGET"
+};
+export const retentionDecisionOverrides312341: Record<string, "CONDITIONAL_KEEP"> = {};
+
+const pvpokeIds312341: Record<string, { normal: string; shadow: string }> = {
+  "312-hoenn": {
+    "normal": "minun",
+    "shadow": "minun_shadow"
+  },
+  "313-hoenn": {
+    "normal": "volbeat",
+    "shadow": "volbeat_shadow"
+  },
+  "314-hoenn": {
+    "normal": "illumise",
+    "shadow": "illumise_shadow"
+  },
+  "315-hoenn": {
+    "normal": "roselia",
+    "shadow": "roselia_shadow"
+  },
+  "316-hoenn": {
+    "normal": "gulpin",
+    "shadow": "gulpin_shadow"
+  },
+  "317-hoenn": {
+    "normal": "swalot",
+    "shadow": "swalot_shadow"
+  },
+  "318-hoenn": {
+    "normal": "carvanha",
+    "shadow": "carvanha_shadow"
+  },
+  "319-hoenn": {
+    "normal": "sharpedo",
+    "shadow": "sharpedo_shadow"
+  },
+  "320-hoenn": {
+    "normal": "wailmer",
+    "shadow": "wailmer_shadow"
+  },
+  "321-hoenn": {
+    "normal": "wailord",
+    "shadow": "wailord_shadow"
+  },
+  "322-hoenn": {
+    "normal": "numel",
+    "shadow": "numel_shadow"
+  },
+  "323-hoenn": {
+    "normal": "camerupt",
+    "shadow": "camerupt_shadow"
+  },
+  "324-hoenn": {
+    "normal": "torkoal",
+    "shadow": "torkoal_shadow"
+  },
+  "325-hoenn": {
+    "normal": "spoink",
+    "shadow": "spoink_shadow"
+  },
+  "326-hoenn": {
+    "normal": "grumpig",
+    "shadow": "grumpig_shadow"
+  },
+  "327-hoenn": {
+    "normal": "spinda",
+    "shadow": "spinda_shadow"
+  },
+  "328-hoenn": {
+    "normal": "trapinch",
+    "shadow": "trapinch_shadow"
+  },
+  "329-hoenn": {
+    "normal": "vibrava",
+    "shadow": "vibrava_shadow"
+  },
+  "330-hoenn": {
+    "normal": "flygon",
+    "shadow": "flygon_shadow"
+  },
+  "331-hoenn": {
+    "normal": "cacnea",
+    "shadow": "cacnea_shadow"
+  },
+  "332-hoenn": {
+    "normal": "cacturne",
+    "shadow": "cacturne_shadow"
+  },
+  "333-hoenn": {
+    "normal": "swablu",
+    "shadow": "swablu_shadow"
+  },
+  "334-hoenn": {
+    "normal": "altaria",
+    "shadow": "altaria_shadow"
+  },
+  "335-hoenn": {
+    "normal": "zangoose",
+    "shadow": "zangoose_shadow"
+  },
+  "336-hoenn": {
+    "normal": "seviper",
+    "shadow": "seviper_shadow"
+  },
+  "337-hoenn": {
+    "normal": "lunatone",
+    "shadow": "lunatone_shadow"
+  },
+  "338-hoenn": {
+    "normal": "solrock",
+    "shadow": "solrock_shadow"
+  },
+  "339-hoenn": {
+    "normal": "barboach",
+    "shadow": "barboach_shadow"
+  },
+  "340-hoenn": {
+    "normal": "whiscash",
+    "shadow": "whiscash_shadow"
+  },
+  "341-hoenn": {
+    "normal": "corphish",
+    "shadow": "corphish_shadow"
+  }
+};
+export function pvpokeSpeciesId312341(form: Gen3Form, shadow: boolean) {
+  const ids = pvpokeIds312341[form.id];
+  if (!ids) throw new Error("Missing PvPoke species mapping for " + form.id);
+  return shadow ? ids.shadow : ids.normal;
+}
+
+export const truncatedForms312341 = new Set<string>();
+export const migratedStubIds312341 = new Set<string>();

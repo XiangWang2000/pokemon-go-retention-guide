@@ -3,6 +3,7 @@ import { isTrueDataPending, pveUseLevelLabelZhTw } from "@/rules/battle-assessme
 import { CURRENT_DATA_MAX_DEX } from "@/config/data-scope";
 import { specialFamilyAssociations } from "@/data/family-associations";
 import type { CompactOverview, FormOverview, OverviewTone } from "./form-overview";
+import { isPrimalFormId } from "./variant-label";
 
 export type MemberRoleKey =
   | "EVOLUTION_MATERIAL"
@@ -255,7 +256,11 @@ export function buildFamilyMemberSummaries(graph: ComponentGraph): FamilyMemberS
     return {
       form,
       roles,
-      roleLabelsZhTw: roles.map((role) => roleLabel[role]),
+      roleLabelsZhTw: roles.map((role) =>
+        role === "MEGA_CANDIDATE" && isPrimalFormId(form.formId)
+          ? "原始回歸候選"
+          : roleLabel[role],
+      ),
       mainUseZhTw,
       memberSummaryZhTw,
       ivShortLabels,
@@ -416,13 +421,16 @@ export function findVariantSpecificUses(members: FamilyMemberSummary[]): Variant
 
 function targetDisplayName(
   memberNameZhTw: string,
+  formId: string,
   variants: FormOverview["variants"],
   variantSpecificOnly: boolean,
 ) {
   if (!variantSpecificOnly) return memberNameZhTw;
   const keys = new Set(variants.map((variant) => variant.row.variantKey));
   if ([...keys].some((key) => ["MEGA", "MEGA_X", "MEGA_Y"].includes(key))) {
-    return `${memberNameZhTw}（Mega 候選）`;
+    return isPrimalFormId(formId)
+      ? `${memberNameZhTw}（原始回歸候選）`
+      : `${memberNameZhTw}（Mega 候選）`;
   }
   if (keys.has("GIGANTAMAX")) return `超極巨${memberNameZhTw}`;
   if (keys.has("DYNAMAX")) return `極巨${memberNameZhTw}`;
@@ -445,6 +453,7 @@ export function findPrimaryRetentionTargets(
         memberNameZhTw: member.form.nameZhTw,
         displayNameZhTw: targetDisplayName(
           member.form.nameZhTw,
+          member.form.formId,
           usefulVariants,
           variantSpecificOnly,
         ),
@@ -714,7 +723,7 @@ function targetHandlingParts(target: FamilyRetentionTarget, members: FamilyMembe
   if (uses.has("GYM_DEFENSE")) parts.push("道館防守候選");
   if (uses.has("SPECIAL_ACQUISITION")) parts.push("特殊取得，應保留");
   if ([...variants].some((key) => ["MEGA", "MEGA_X", "MEGA_Y"].includes(key))) {
-    parts.push("Mega 候選");
+    parts.push(isPrimalFormId(member?.form.formId) ? "原始回歸候選" : "Mega 候選");
   }
   if (variants.has("DYNAMAX")) parts.push("極巨候選");
   if (variants.has("GIGANTAMAX")) parts.push("超極巨版本本身");

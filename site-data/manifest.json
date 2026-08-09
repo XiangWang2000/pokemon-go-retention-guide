@@ -1,108 +1,108 @@
 {
   "schemaVersion": 1,
   "batch": "001-386",
-  "dataVersion": "2026.08.09-r22",
+  "dataVersion": "2026.08.09-r23",
   "dataAsOf": "2026-08-08T16:00:00.000Z",
   "sourceDatabase": {
     "path": "dev.db",
-    "bytes": 13938688,
-    "sha256": "4bc298a6c3030b77953ae21b1136649ca1c6d6cf935ff63c5efe9c24c11b9444"
+    "bytes": 14180352,
+    "sha256": "703fb345e5eaabc4ecc743b4b6dd5e115ee7948e5b73c5cff532fec3f733ef0c"
   },
   "rulesVersions": [
     "2026.08.06-v7"
   ],
   "counts": {
     "pokemonSpecies": 417,
-    "pokemonForms": 455,
-    "battleVariants": 1752,
+    "pokemonForms": 461,
+    "battleVariants": 1776,
     "evolutionPaths": 226,
     "moves": 9,
     "variantMoves": 9,
-    "sourceReferences": 175,
-    "rawEvaluationData": 1195,
-    "retentionEvaluations": 1917,
-    "evaluationSources": 3099,
-    "evaluationRuleTraces": 2722,
-    "changeLogs": 739,
+    "sourceReferences": 178,
+    "rawEvaluationData": 1200,
+    "retentionEvaluations": 1941,
+    "evaluationSources": 3187,
+    "evaluationRuleTraces": 2746,
+    "changeLogs": 643,
     "dataIssues": 1122,
-    "categoryEvaluations": 12264,
-    "categoryEvaluationSources": 3195,
+    "categoryEvaluations": 12432,
+    "categoryEvaluationSources": 3283,
     "ivRecommendations": 11,
-    "dashboardRows": 1752,
-    "homeFamilies": 228,
-    "auditSummaryRows": 1752,
-    "runtimeFamilyFiles": 228,
-    "runtimeAuditDetailFiles": 1752,
+    "dashboardRows": 1776,
+    "homeFamilies": 234,
+    "auditSummaryRows": 1776,
+    "runtimeFamilyFiles": 234,
+    "runtimeAuditDetailFiles": 1776,
     "openReviewIssues": 241,
-    "detailRecords": 1752
+    "detailRecords": 1776
   },
-  "snapshotSha256": "757fa94e25807a89fb08c4c0eb6b32c4804bf470fb97b53f0736b141bcdec54c",
+  "snapshotSha256": "cc4fddc8b7436061946587ee15f8b8e388f40846ecc6cff47508f0fb033e598e",
   "files": {
     "home": {
       "path": "home.json",
-      "bytes": 17113760,
-      "sha256": "fd6a1d3a31d8f8beed051da6a5b05e53a74dd1b9cf2eb3011c2015a3af58b40c"
+      "bytes": 17309698,
+      "sha256": "168c6fe59cbd465b16dfd63565ccc98b82c4a1d7bc82aaa8469ac2227eb74b3d"
     },
     "homeSummary": {
       "path": "homeSummary.json",
       "bytes": 183,
-      "sha256": "baf3962ab2dfeeca2e502441bd33ae2f8da3ced556995f978cdc3fc8baf6b0d7"
+      "sha256": "c6933aa534f5bd0643e4274aa2dd1c881aee1863a5936e25bab6f65a62e8ceaa"
     },
     "dashboard": {
       "path": "dashboard.json",
-      "bytes": 32922682,
-      "sha256": "f0ce77ec554064ff02b37b5085fa407931e3fe392d7b52cd1e8eeea80dc02a15"
+      "bytes": 33384893,
+      "sha256": "14649a23d95195d0e798fe6e6bc80d731e41ca7608f9286676d61bcef6baaa36"
     },
     "auditSummary": {
       "path": "auditSummary.json",
-      "bytes": 1059209,
-      "sha256": "4b3be2b995ff6fae91643ee830db092a56301bc0eaec1e1b92c245948635f782"
+      "bytes": 1074792,
+      "sha256": "e81152f86d5051b914ec1e88479b5827b76db7fb022500bfa51001b80a5b6bd4"
     },
     "review": {
       "path": "review.json",
-      "bytes": 556104,
-      "sha256": "98e81c05ee89e317fd1e1620070128cc2faf085d56e24cfe21523ef244ab51b9"
+      "bytes": 561165,
+      "sha256": "6341a3894f743a6586a36cf737b02913f8682ab6192d9cdb188f8b812ed00ea5"
     },
     "sources": {
       "path": "sources.json",
-      "bytes": 164391,
-      "sha256": "51ca5ff61252387e2d23f6f5aeba37b3ab885efaea39dd6ad7ac35c1988f117f"
+      "bytes": 167925,
+      "sha256": "1f52c1ec422206e8c61a469378c377fe0fa360d4cdf0de220d0c4c202df14bd1"
     },
     "changes": {
       "path": "changes.json",
-      "bytes": 410047,
-      "sha256": "4fdd3d4d540017c16c268f9e0ede9b686178d51cbe46ff1c0209bb15f4862458"
+      "bytes": 371552,
+      "sha256": "cfb7eb91f64ae4bdbb9f0668eefcbbd747e45037f6fbd4fac935df3f98d6d727"
     },
     "details": {
       "path": "details.json",
-      "bytes": 1208434,
-      "sha256": "a38c86edb02cc2dd120286863fb9d91668c89d120fc3b34d18fbeb2b1a72582f"
+      "bytes": 1175796,
+      "sha256": "eaed77552443aed49e9a82eb39cd7f6819bf2195c77e1835a605585ec067dd7c"
     }
   },
   "runtimeHome": {
     "path": "public/data/home.json",
-    "bytes": 1060769,
-    "sha256": "a1a5f0ce22717890a876be791518b61ea02c9239a83d723884bfac44ba42d650"
+    "bytes": 1078398,
+    "sha256": "7f5f06bdd63c8034598764af6c16dc811b0ddb30728245649c3aa65fc45869c4"
   },
   "publicHeaders": {
     "path": "public/_headers",
     "bytes": 563,
-    "sha256": "52343105c0475770c29d8c3c354ffc923c7369283cd0f98560646630828a4c7f"
+    "sha256": "c6f06c9049948ec92e4c63bbef6af8150056a138e74318b7e323fa6c945adca8"
   },
   "runtimeFamilyData": {
     "directory": "public/data/families",
-    "count": 228,
-    "bytes": 27477946
+    "count": 234,
+    "bytes": 27796842
   },
   "runtimeAuditData": {
     "directory": "public/data/audit",
-    "count": 1752,
-    "bytes": 42004375
+    "count": 1776,
+    "bytes": 42593401
   },
   "excel": {
     "path": "public/exports/pokemon-go-retention-001-386.xlsx",
-    "bytes": 782180,
-    "sha256": "c77b76b9dddec0ec69b822d936bc2307a73d4e4e541f77c6e78a53ec6131c8da",
+    "bytes": 785784,
+    "sha256": "a8a8580503284a71da2443db433d3b169fe4be59acd2b11d3dd02813facf90fe",
     "sheets": 10
   }
 }

@@ -38,7 +38,9 @@ function formRows(rows: Dashboard, formId: string) {
   return rows.filter((row) => row.formId === formId);
 }
 
-export async function runReview(batch: "252-281" | "282-311" | "312-386") {
+export async function runReview(
+  batch: "252-281" | "282-311" | "312-341" | "342-371" | "372-386",
+) {
   const [allRows, allIssues] = await Promise.all([getDashboardRows(), getReviewIssues()]);
   const batchStart = Number(batch.slice(0, 3));
   const batchEnd = Number(batch.slice(4, 7));
@@ -59,13 +61,16 @@ export async function runReview(batch: "252-281" | "282-311" | "312-386") {
   );
   const checks = [
     {
-      name: "正式豐緣型態",
+      name: "Gen 3 form identity",
       result: [...new Set(rows.map((row) => row.formId))].every((formId) =>
         formRows(rows, formId).every(
           (row) =>
-            row.formKey === "HOENN" &&
             row.regionKey === "HOENN" &&
-            row.formNameZhTw === "豐緣",
+            (row.dexNumber === 351
+              ? ["351-normal", "351-sunny", "351-rainy", "351-snowy"].includes(row.formId)
+              : row.dexNumber === 386
+                ? ["386-normal", "386-attack", "386-defense", "386-speed"].includes(row.formId)
+                : row.formKey === "HOENN" && row.formNameZhTw === "豐緣"),
         ),
       )
         ? "PASS"
@@ -124,7 +129,7 @@ export async function runReview(batch: "252-281" | "282-311" | "312-386") {
         : "FAIL",
     });
   }
-  if (batch === "312-386") {
+  if (batch === "342-371") {
     checks.push(
       checkFamily(families, "Wynaut merge", "360-hoenn", ["360-hoenn", "202-johto"]),
       checkFamily(families, "Clamperl branches", "366-hoenn", ["366-hoenn", "367-hoenn", "368-hoenn"]),
@@ -142,15 +147,42 @@ export async function runReview(batch: "252-281" | "282-311" | "312-386") {
           : "FAIL",
       });
     }
+    const castformIds = ["351-normal", "351-sunny", "351-rainy", "351-snowy"];
+    checks.push({
+      name: "Castform alternate forms",
+      result: castformIds.every((formId) => rows.some((row) => row.formId === formId))
+        ? "PASS"
+        : "FAIL",
+    });
+  }
+  if (batch === "372-386") {
+    const deoxysIds = ["386-normal", "386-attack", "386-defense", "386-speed"];
+    checks.push({
+      name: "Deoxys four Formes",
+      result: deoxysIds.every((formId) => rows.some((row) => row.formId === formId))
+        ? "PASS"
+        : "FAIL",
+    });
+    const defense = rows.find((row) => row.id === "386-defense-normal");
+    checks.push({
+      name: "Deoxys Defense retention override",
+      result:
+        defense &&
+        defense.decision !== "TRANSFER_CANDIDATE" &&
+        defense.assessmentDisposition !== "TRUE_DATA_PENDING"
+          ? "PASS"
+          : "FAIL",
+    });
   }
   const megaIds = batch === "252-281"
     ? ["254-hoenn", "257-hoenn"]
     : batch === "282-311"
       ? ["282-hoenn", "302-hoenn", "303-hoenn", "306-hoenn", "308-hoenn", "310-hoenn"]
-      : [
-        "319-hoenn", "323-hoenn", "334-hoenn", "354-hoenn", "359-hoenn", "362-hoenn",
-        "373-hoenn", "376-hoenn", "380-hoenn", "381-hoenn", "382-hoenn", "383-hoenn", "384-hoenn",
-      ];
+    : batch === "312-341"
+      ? ["319-hoenn", "323-hoenn", "334-hoenn"]
+      : batch === "342-371"
+        ? ["354-hoenn", "359-hoenn", "362-hoenn"]
+        : ["373-hoenn", "376-hoenn", "380-hoenn", "381-hoenn", "382-hoenn", "383-hoenn", "384-hoenn"];
   checks.push({
     name: "Mega release boundaries",
     result: megaIds.every((formId) =>

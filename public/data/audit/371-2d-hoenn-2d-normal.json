@@ -14,7 +14,7 @@
   "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
   "evolutionPaths": [
     {
-      "id": "evolution-gen3-312-386-371-hoenn-372-hoenn",
+      "id": "evolution-gen3-372-386-371-hoenn-372-hoenn",
       "fromFormId": "371-hoenn",
       "toFormId": "372-hoenn",
       "requiresEvent": false,
@@ -416,7 +416,7 @@
     }
   ],
   "reasonZhTw": "用途有限：後續進化（暴飛龍）已有用途；只保留少量符合條件的進化候選。",
-  "evaluationId": "gen3-312-386-eval-371-hoenn-normal",
+  "evaluationId": "gen3-342-371-eval-371-hoenn-normal",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已核對第三世代家族、分支進化、特殊取得、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
   "inheritance": {
@@ -450,6 +450,12 @@
           "id": "EVOLUTION-HOENN-20260809",
           "title": "Pokemon species evolution chains and Pokemon GO evolution requirements",
           "url": "https://pokeapi.co/docs/v2#evolution-chains",
+          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+        },
+        {
+          "id": "OFF-HOENN-FORMS-20260809",
+          "title": "Pokemon GO Tour: Hoenn - Global",
+          "url": "https://gotour.pokemongolive.com/hoenn-global?hl=en#pokemon",
           "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
         },
         {
@@ -583,6 +589,15 @@
       "title": "Pokemon species evolution chains and Pokemon GO evolution requirements",
       "url": "https://pokeapi.co/docs/v2#evolution-chains",
       "type": "SECONDARY",
+      "accessedAt": "2026-08-08T16:00:00.000Z",
+      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+    },
+    {
+      "id": "OFF-HOENN-FORMS-20260809",
+      "name": "Pokemon GO Hoenn form identity record",
+      "title": "Pokemon GO Tour: Hoenn - Global",
+      "url": "https://gotour.pokemongolive.com/hoenn-global?hl=en#pokemon",
+      "type": "OFFICIAL",
       "accessedAt": "2026-08-08T16:00:00.000Z",
       "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
