@@ -34,6 +34,17 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Snapshot check
         run: npm run sites:snapshot:check
+      - name: Snapshot failure diagnostics
+        if: failure()
+        shell: bash
+        run: |
+          set +e
+          output="$(npm run sites:snapshot:check 2>&1)"
+          status=$?
+          printf '%s\n' "$output"
+          compact="$(printf '%s' "$output" | tr '\n' ' ' | tr '\r' ' ')"
+          echo "::error title=Snapshot check detail::$compact"
+          exit 0
       - name: Lint
         run: npm run lint
       - name: Typecheck
