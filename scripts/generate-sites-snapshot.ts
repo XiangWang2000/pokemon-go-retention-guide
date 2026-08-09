@@ -268,14 +268,14 @@ async function main() {
   const homeSummary = buildHomeSummary(home);
   const auditSummary = buildAuditSummary(dashboard, dataAsOf);
   const payloads = {
-    home: jsonBuffer(home),
-    homeSummary: jsonBuffer(homeSummary),
-    dashboard: jsonBuffer(dashboard),
-    auditSummary: jsonBuffer(auditSummary),
-    review: jsonBuffer(review),
-    sources: jsonBuffer(sources),
-    changes: jsonBuffer(changes),
-    details: jsonBuffer(details),
+    home: compactJsonBuffer(home),
+    homeSummary: compactJsonBuffer(homeSummary),
+    dashboard: compactJsonBuffer(dashboard),
+    auditSummary: compactJsonBuffer(auditSummary),
+    review: compactJsonBuffer(review),
+    sources: compactJsonBuffer(sources),
+    changes: compactJsonBuffer(changes),
+    details: compactJsonBuffer(details),
   };
   const files = Object.fromEntries(
     Object.entries(payloads).map(([name, value]) => [
