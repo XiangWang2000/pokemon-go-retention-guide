@@ -1,0 +1,43 @@
+{
+  "paths": [
+    {
+      "id": "evo-001-kanto-002-kanto",
+      "fromFormId": "001-kanto",
+      "fromNameZhTw": "妙蛙種子",
+      "fromFormNameZhTw": "關都",
+      "toFormId": "002-kanto",
+      "toNameZhTw": "妙蛙草",
+      "toFormNameZhTw": "關都",
+      "evolutionMethodZhTw": "一般進化",
+      "availabilityNotesZhTw": "來源逐步明示進化關係。",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-07T16:00:00.000Z"
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "remediation-release-001-kanto-normal",
+      "fieldName": "releaseStatus",
+      "previousValue": "UNKNOWN",
+      "newValue": "RELEASED",
+      "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": {
+        "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+        "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en"
+      }
+    },
+    {
+      "id": "change-evaluation-001-kanto-normal-20260715-iv-20260728",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "依目標進化結果挑選：GL／UL看個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
+      "newValue": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
+      "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.07.28-iv-v2",
+      "source": null
+    }
+  ]
+}

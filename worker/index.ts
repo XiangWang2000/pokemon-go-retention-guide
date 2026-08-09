@@ -5,6 +5,7 @@ import {
   DEFAULT_IMAGE_SIZES,
 } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
+import { CURRENT_DATA_SCOPE } from "../src/config/data-scope";
 import { DATA_VERSION } from "../src/config/release";
 
 interface Env {
@@ -101,6 +102,15 @@ const worker = {
         },
         allowedWidths,
       );
+    }
+
+    if (request.method === "GET" && url.pathname === "/api/export") {
+      const target = new URL(
+        `/exports/pokemon-go-retention-${CURRENT_DATA_SCOPE}.xlsx`,
+        request.url,
+      );
+      target.searchParams.set("v", DATA_VERSION);
+      return Response.redirect(target, 307);
     }
 
     if (

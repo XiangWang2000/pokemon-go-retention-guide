@@ -1,0 +1,43 @@
+{
+  "paths": [
+    {
+      "id": "evo-021-kanto-022-kanto",
+      "fromFormId": "021-kanto",
+      "fromNameZhTw": "烈雀",
+      "fromFormNameZhTw": "關都",
+      "toFormId": "022-kanto",
+      "toNameZhTw": "大嘴雀",
+      "toFormNameZhTw": "關都",
+      "evolutionMethodZhTw": "一般進化",
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+      "requiresEvent": false,
+      "verifiedAt": null
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "remediation-release-021-kanto-normal",
+      "fieldName": "releaseStatus",
+      "previousValue": "UNKNOWN",
+      "newValue": "RELEASED",
+      "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": {
+        "title": "Keep the Kanto celebration going after Pokémon GO Tour: Kanto with a special event!",
+        "url": "https://pokemongo.com/en/post/kanto-celebration-event-2021?game_client=iOS"
+      }
+    },
+    {
+      "id": "change-evaluation-021-kanto-normal-20260715-iv-20260728",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "依目標進化結果挑選：GL／UL看個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
+      "newValue": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
+      "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.07.28-iv-v2",
+      "source": null
+    }
+  ]
+}

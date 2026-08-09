@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "npm run sites:snapshot:check && vinext dev",
     "build": "npm run sites:snapshot:check && vinext build",
+    "build:pages": "npm run sites:snapshot:check && node scripts/build-pages.mjs",
     "start": "node scripts/start-sites.mjs",
     "dev:local": "npm run sites:snapshot:check && next dev",
     "build:local": "npm run sites:snapshot:check && next build",

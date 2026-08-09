@@ -31,9 +31,7 @@ describe("家族詳細資料重試", () => {
   it("HomeDataLoader 會把同一個 loader 傳給重試按鈕，點擊後再次呼叫 detail API", async () => {
     const loaderSource = await readFile("src/components/home-data-loader.tsx", "utf8");
     expect(loaderSource).toContain("onRetryFamilyDetails={loadFamilyDetails}");
-    expect(loaderSource).toContain(
-      "fetch(`/api/home?scope=family&familyId=${encodeURIComponent(familyId)}`",
-    );
+    expect(loaderSource).toContain("fetchStaticJson<FamilyOverview>(");
 
     const family = { ...families[0]!, detailsLoaded: false };
     const onRetryFamilyDetails = vi.fn();

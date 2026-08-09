@@ -2,7 +2,11 @@ import { readdirSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { forms252281, species252281 } from "@/data/batch-252-281";
 import { forms282311, species282311 } from "@/data/batch-282-311";
-import { canonicalGen3Species, GEN3_CANONICAL_MAX, GEN3_CANONICAL_MIN } from "@/data/canonical/gen3";
+import {
+  canonicalGen3Species,
+  GEN3_CANONICAL_MAX,
+  GEN3_CANONICAL_MIN,
+} from "@/data/canonical/gen3";
 import { DATA_VERSION } from "@/config/release";
 import {
   validateEvolutionParentPaths,
@@ -42,9 +46,7 @@ describe("checkpoint validation", () => {
     ).toEqual([expect.stringContaining("311-hoenn types mismatch")]);
     expect(
       validateGen3DexConsistency(
-        species.map((item) =>
-          item.dexNumber === 273 ? { ...item, nameZhTw: "長鼻葉" } : item,
-        ),
+        species.map((item) => (item.dexNumber === 273 ? { ...item, nameZhTw: "長鼻葉" } : item)),
         forms,
         { min: 252, max: 311 },
       ),
@@ -53,10 +55,9 @@ describe("checkpoint validation", () => {
   });
 
   it("keeps Shadow roster provenance separate from evolution closure", () => {
-    const evidence = deriveShadowReleaseEvidence(
-      new Set(["283-hoenn"]),
-      [["283-hoenn", "284-hoenn"]],
-    );
+    const evidence = deriveShadowReleaseEvidence(new Set(["283-hoenn"]), [
+      ["283-hoenn", "284-hoenn"],
+    ]);
     expect(evidence.directRosterFormIds).toEqual(["283-hoenn"]);
     expect(evidence.derivedFormIds).toEqual(["284-hoenn"]);
     expect(evidence.formalEvolutionEdges).toEqual([["283-hoenn", "284-hoenn"]]);
@@ -67,11 +68,11 @@ describe("checkpoint validation", () => {
     expect(findSourceTextIntegrityIssues('const label = `${value ?? "正常"}`;')).toEqual([]);
     expect(findSourceTextIntegrityIssues('const label = "繁中名稱??";')).toHaveLength(1);
     expect(findSourceTextIntegrityIssues('const label = "繁中名稱\uFFFD";')).toHaveLength(1);
-    expect(findSourceTextIntegrityIssues('<span>繁中名稱??</span>', "sample.tsx")).toHaveLength(1);
+    expect(findSourceTextIntegrityIssues("<span>繁中名稱??</span>", "sample.tsx")).toHaveLength(1);
     expect(findSourceTextIntegrityIssues('const label = "Pok?mon";')).toHaveLength(1);
     expect(findSourceTextIntegrityIssues('const label = "正常？";')).toEqual([]);
     expect(findSourceTextIntegrityIssues('const label = "What is Mega Evolution?";')).toEqual([]);
-    expect(findSourceTextIntegrityIssues('const href = "/api/home?scope=family";')).toEqual([]);
+    expect(findSourceTextIntegrityIssues('const href = "/data/home.json?v=r23";')).toEqual([]);
   });
 
   it("scans active review and runtime family JSON for visible text corruption", () => {

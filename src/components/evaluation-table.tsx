@@ -4,6 +4,7 @@ import { ChevronDown, ChevronRight, Download, ExternalLink, Search } from "lucid
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { CURRENT_DATA_SCOPE } from "@/config/data-scope";
+import { versionedAssetPath } from "@/config/site";
 import { freshnessDays } from "@/config/freshness";
 import type { DashboardRow } from "@/lib/data";
 import { matchesPokemonSearch } from "@/lib/search";
@@ -219,7 +220,7 @@ export function EvaluationTable({
               </select>
             </label>
             <a
-              href={`/exports/pokemon-go-retention-${CURRENT_DATA_SCOPE}.xlsx`}
+              href={versionedAssetPath(`/exports/pokemon-go-retention-${CURRENT_DATA_SCOPE}.xlsx`)}
               className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-[var(--primary)] px-4 text-sm font-bold text-[var(--primary-contrast)] transition hover:brightness-95"
             >
               <Download aria-hidden size={17} />

@@ -1,8 +1,28 @@
-import { ExternalLink, FileClock } from "lucide-react";
-import { getChangeLogs } from "@/lib/data";
+"use client";
 
-export default async function ChangesPage() {
-  const logs = await getChangeLogs();
+import { useEffect, useState } from "react";
+import { ExternalLink, FileClock } from "lucide-react";
+import { fetchStaticJson } from "@/config/site";
+import type { StaticChangeLog } from "@/lib/static-data";
+
+export default function ChangesPage() {
+  const [logs, setLogs] = useState<StaticChangeLog[]>([]);
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    fetchStaticJson<StaticChangeLog[]>("/data/changes.json")
+      .then(setLogs)
+      .catch(() => setError(true))
+      .finally(() => setLoaded(true));
+  }, []);
+
+  if (error) {
+    return <p className="surface rounded-2xl p-6">Change data failed to load. Please refresh.</p>;
+  }
+  if (!loaded) {
+    return <p className="surface rounded-2xl p-6">Loading change data...</p>;
+  }
   return (
     <div className="space-y-6">
       <header>

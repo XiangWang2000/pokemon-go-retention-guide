@@ -1,0 +1,33 @@
+{
+  "paths": [
+    {
+      "id": "evolution-067-kanto-068-kanto",
+      "fromFormId": "067-kanto",
+      "fromNameZhTw": "豪力",
+      "fromFormNameZhTw": "關都",
+      "toFormId": "068-kanto",
+      "toNameZhTw": "怪力",
+      "toFormNameZhTw": "關都",
+      "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+      "availabilityNotesZhTw": "此路徑已在 #001～#090 整合資料中核對。",
+      "requiresEvent": false,
+      "verifiedAt": "2026-07-30T15:45:00.000Z"
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "r10-gmax-machamp",
+      "fieldName": "releaseStatus",
+      "previousValue": null,
+      "newValue": "RELEASED",
+      "changeReasonZhTw": "普通、暗影、極巨與超極巨怪力分開評估。",
+      "changedAt": "2026-07-30T15:45:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": {
+        "title": "Gigantamax Machamp Max Battle Day",
+        "url": "https://pokemongo.com/post/gigantamax-machamp-max-battle-day?hl=en"
+      }
+    }
+  ]
+}

@@ -1,24 +1,20 @@
 import type { NextConfig } from "next";
-import { DATA_VERSION } from "./src/config/release";
+import { GITHUB_PAGES_BASE_PATH } from "./src/config/site";
+
+const isStaticExport =
+  process.env.NEXT_STATIC_EXPORT === "true" ||
+  process.env.NEXT_PUBLIC_BASE_PATH === GITHUB_PAGES_BASE_PATH ||
+  process.env.GITHUB_ACTIONS === "true";
+const basePath = isStaticExport
+  ? (process.env.NEXT_PUBLIC_BASE_PATH ??
+    (process.env.GITHUB_ACTIONS === "true" ? GITHUB_PAGES_BASE_PATH : ""))
+  : "";
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ["better-sqlite3"],
-  async headers() {
-    const cacheHeaders = [
-      { key: "Cache-Control", value: "no-store, max-age=0, must-revalidate" },
-      { key: "CDN-Cache-Control", value: "no-store" },
-      { key: "Pragma", value: "no-cache" },
-      { key: "X-Data-Version", value: DATA_VERSION },
-    ];
-    return [
-      { source: "/", headers: [...cacheHeaders, { key: "Clear-Site-Data", value: '"cache"' }] },
-      { source: "/data/home.json", headers: cacheHeaders },
-      { source: "/review", headers: cacheHeaders },
-      { source: "/sources", headers: cacheHeaders },
-      { source: "/changes", headers: cacheHeaders },
-      { source: "/pokemon/:variantId", headers: cacheHeaders },
-    ];
-  },
+  ...(isStaticExport ? { output: "export", trailingSlash: true } : {}),
+  basePath,
+  assetPrefix: basePath ? `${basePath.replace(/\/$/, "")}/` : undefined,
+  images: { unoptimized: true },
 };
 
 export default nextConfig;

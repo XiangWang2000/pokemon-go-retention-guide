@@ -9,30 +9,26 @@ const manifest = JSON.parse(
 );
 const dataVersion = manifest.dataVersion;
 if (typeof dataVersion !== "string" || !dataVersion) {
-  throw new Error("site-data/manifest.json 缺少 dataVersion，停止 purge。");
+  throw new Error("site-data/manifest.json is missing dataVersion");
 }
 const expectedHome = await readFile(new URL("../public/data/home.json", import.meta.url));
 const expectedHomeHash = createHash("sha256").update(expectedHome).digest("hex");
 
-const paths = ["/", "/api/home", "/data/home.json"];
+const paths = ["/", `/data/home.json?v=${encodeURIComponent(dataVersion)}`];
 for (const pathname of paths) {
   const response = await fetch(`${siteUrl}${pathname}`, {
     headers: {
       "Cache-Control": "no-cache, no-store, max-age=0",
       Pragma: "no-cache",
-      "X-Site-Cache-Purge": dataVersion,
-      "User-Agent": "pokemon-go-retention-guide-cache-purge/1.0",
+      "User-Agent": "pokemon-go-retention-guide-cache-check/1.0",
     },
   });
   const body = await response.arrayBuffer();
   const bodyHash = createHash("sha256").update(Buffer.from(body)).digest("hex");
-  const responseVersion = response.headers.get("x-data-version");
-  const versionMatches =
-    responseVersion === dataVersion ||
-    (pathname === "/data/home.json" && bodyHash === expectedHomeHash);
+  const versionMatches = pathname === "/" || bodyHash === expectedHomeHash;
   if (!response.ok || !versionMatches) {
     throw new Error(
-      `${pathname} purge 驗證失敗：HTTP ${response.status}，X-Data-Version=${responseVersion ?? "<missing>"}，contentHash=${bodyHash}，預期版本 ${dataVersion}。`,
+      `${pathname} cache check failed: HTTP ${response.status}, contentHash=${bodyHash}, expected=${expectedHomeHash}`,
     );
   }
   console.log(
@@ -40,12 +36,11 @@ for (const pathname of paths) {
       pathname,
       status: response.status,
       bytes: body.byteLength,
-      dataVersion: responseVersion,
+      dataVersion,
       contentHash: bodyHash,
       cacheControl: response.headers.get("cache-control"),
-      cdnCacheControl: response.headers.get("cdn-cache-control"),
     }),
   );
 }
 
-console.log(`Sites CDN purge 驗證完成：${dataVersion}。`);
+console.log(`Sites cache check passed for ${dataVersion}.`);

@@ -1,0 +1,33 @@
+{
+  "paths": [
+    {
+      "id": "evo-011-kanto-012-kanto",
+      "fromFormId": "011-kanto",
+      "fromNameZhTw": "鐵甲蛹",
+      "fromFormNameZhTw": "關都",
+      "toFormId": "012-kanto",
+      "toNameZhTw": "巴大蝶",
+      "toFormNameZhTw": "關都",
+      "evolutionMethodZhTw": "一般進化",
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+      "requiresEvent": false,
+      "verifiedAt": null
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "remediation-release-012-kanto-normal",
+      "fieldName": "releaseStatus",
+      "previousValue": "UNKNOWN",
+      "newValue": "RELEASED",
+      "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": {
+        "title": "Fly free and battle hard on Gigantamax Butterfree Max Battle Day!",
+        "url": "https://pokemongo.com/news/gigantamax-butterfree-max-battle-day?hl=en"
+      }
+    }
+  ]
+}

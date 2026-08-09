@@ -1,9 +1,29 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Database, ExternalLink } from "lucide-react";
-import { getSources } from "@/lib/data";
+import { fetchStaticJson } from "@/config/site";
+import type { StaticSource } from "@/lib/static-data";
 import { zhTw } from "@/locales/zh-TW";
 
-export default async function SourcesPage() {
-  const sources = await getSources();
+export default function SourcesPage() {
+  const [sources, setSources] = useState<StaticSource[]>([]);
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    fetchStaticJson<StaticSource[]>("/data/sources.json")
+      .then(setSources)
+      .catch(() => setError(true))
+      .finally(() => setLoaded(true));
+  }, []);
+
+  if (error) {
+    return <p className="surface rounded-2xl p-6">Source data failed to load. Please refresh.</p>;
+  }
+  if (!loaded) {
+    return <p className="surface rounded-2xl p-6">Loading source data...</p>;
+  }
   return (
     <div className="space-y-6">
       <header>

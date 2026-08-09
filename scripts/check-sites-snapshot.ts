@@ -21,6 +21,7 @@ interface Manifest {
     auditSummaryRows: number;
     runtimeFamilyFiles: number;
     runtimeAuditDetailFiles: number;
+    runtimeDetailFiles: number;
     openReviewIssues: number;
     sourceReferences: number;
     changeLogs: number;
@@ -32,6 +33,8 @@ interface Manifest {
   publicHeaders: ManifestFile;
   runtimeFamilyData: { directory: string; count: number; bytes: number };
   runtimeAuditData: { directory: string; count: number; bytes: number };
+  runtimeDetailData: { directory: string; count: number; bytes: number };
+  runtimeStaticData: Record<string, ManifestFile>;
   excel: { path: string; bytes: number; sha256: string; sheets: number };
 }
 
@@ -156,6 +159,32 @@ async function main() {
   }
   assert(auditBytes === manifest.runtimeAuditData.bytes, "Audit 詳細檔案總大小不一致。");
 
+  const detailDirectory = path.join(root, manifest.runtimeDetailData.directory);
+  const detailEntries = (await readdir(detailDirectory)).filter((name) => name.endsWith(".json"));
+  assert(detailEntries.length === manifest.runtimeDetailData.count, "詳細資料檔案數量不一致。");
+  assert(
+    detailEntries.length === manifest.counts.runtimeDetailFiles,
+    "manifest 詳細資料檔案數量不一致。",
+  );
+  let detailBytes = 0;
+  for (const row of auditSummary.rows) {
+    const file = path.join(detailDirectory, auditDataFileName(row.id));
+    const content = await readFile(file);
+    detailBytes += content.byteLength;
+    const payload = JSON.parse(content.toString("utf8")) as {
+      paths?: unknown[];
+      conflicts?: unknown[];
+      changeLogs?: unknown[];
+    };
+    assert(
+      Array.isArray(payload.paths) &&
+        Array.isArray(payload.conflicts) &&
+        Array.isArray(payload.changeLogs),
+      "詳細資料檔案內容不一致。",
+    );
+  }
+  assert(detailBytes === manifest.runtimeDetailData.bytes, "詳細資料檔案總大小不一致。");
+
   const runtimeHomePath = path.join(root, manifest.runtimeHome.path);
   const runtimeHome = await readFile(runtimeHomePath);
   assert(runtimeHome.byteLength === manifest.runtimeHome.bytes, "首頁 runtime 資料大小不一致。");
@@ -179,6 +208,11 @@ async function main() {
     ),
     "runtime home must contain summary-only family forms",
   );
+  for (const file of Object.values(manifest.runtimeStaticData)) {
+    const runtimeFile = await readFile(path.join(root, file.path));
+    assert(runtimeFile.byteLength === file.bytes, `${file.path} bytes mismatch`);
+    assert(sha256(runtimeFile) === file.sha256, `${file.path} SHA256 mismatch`);
+  }
   const publicHeadersPath = path.join(root, manifest.publicHeaders.path);
   const publicHeaders = await readFile(publicHeadersPath);
   assert(

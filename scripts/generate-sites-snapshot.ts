@@ -23,6 +23,7 @@ const root = process.cwd();
 const siteDataDirectory = path.join(root, "site-data");
 const exportDirectory = path.join(root, "public", "exports");
 const publicDataDirectory = path.join(root, "public", "data");
+const publicDetailsDirectory = path.join(publicDataDirectory, "details");
 const publicHeadersPath = path.join(root, "public", "_headers");
 const databaseLocation = resolveDatabaseLocation();
 const exportFileName: string = `pokemon-go-retention-${CURRENT_DATA_SCOPE}.xlsx`;
@@ -267,6 +268,11 @@ async function main() {
   const home = buildHomeSnapshot(dashboard, dataAsOf, DATA_VERSION);
   const homeSummary = buildHomeSummary(home);
   const auditSummary = buildAuditSummary(dashboard, dataAsOf);
+  const familyIdByFormId = new Map(
+    home.families.flatMap((family) =>
+      family.members.map((member) => [member.form.formId, family.familyId] as const),
+    ),
+  );
   const payloads = {
     home: compactJsonBuffer(home),
     homeSummary: compactJsonBuffer(homeSummary),
@@ -276,6 +282,13 @@ async function main() {
     sources: compactJsonBuffer(sources),
     changes: compactJsonBuffer(changes),
     details: compactJsonBuffer(details),
+  };
+  const publicStaticPayloads = {
+    "audit-summary.json": payloads.auditSummary,
+    "family-index.json": compactJsonBuffer(Object.fromEntries(familyIdByFormId)),
+    "review.json": payloads.review,
+    "sources.json": payloads.sources,
+    "changes.json": payloads.changes,
   };
   const files = Object.fromEntries(
     Object.entries(payloads).map(([name, value]) => [
@@ -299,6 +312,9 @@ async function main() {
   for (const [name, value] of Object.entries(payloads)) {
     await writeIfChanged(path.join(siteDataDirectory, `${name}.json`), value);
   }
+  for (const [name, value] of Object.entries(publicStaticPayloads)) {
+    await writeIfChanged(path.join(publicDataDirectory, name), value);
+  }
   const publicHome = compactJsonBuffer(buildRuntimeHome(home));
   await writeIfChanged(path.join(publicDataDirectory, "home.json"), publicHome);
   const familyFiles = new Map(
@@ -308,8 +324,15 @@ async function main() {
     ]),
   );
   const auditFiles = new Map(dashboard.map((row) => [auditDataFileName(row.id), jsonBuffer(row)]));
+  const detailFiles = new Map(
+    Object.entries(details).map(([rowId, detail]) => [
+      auditDataFileName(rowId),
+      jsonBuffer(detail),
+    ]),
+  );
   await syncJsonDirectory(path.join(publicDataDirectory, "families"), familyFiles);
   await syncJsonDirectory(path.join(publicDataDirectory, "audit"), auditFiles);
+  await syncJsonDirectory(publicDetailsDirectory, detailFiles);
   const publicHeaders = Buffer.from(
     [
       "/data/home.json",
@@ -374,6 +397,7 @@ async function main() {
       auditSummaryRows: auditSummary.rows.length,
       runtimeFamilyFiles: familyFiles.size,
       runtimeAuditDetailFiles: auditFiles.size,
+      runtimeDetailFiles: detailFiles.size,
       openReviewIssues: review.length,
       detailRecords: Object.keys(details).length,
     },
@@ -399,6 +423,21 @@ async function main() {
       count: auditFiles.size,
       bytes: [...auditFiles.values()].reduce((total, value) => total + value.byteLength, 0),
     },
+    runtimeDetailData: {
+      directory: "public/data/details",
+      count: detailFiles.size,
+      bytes: [...detailFiles.values()].reduce((total, value) => total + value.byteLength, 0),
+    },
+    runtimeStaticData: Object.fromEntries(
+      Object.entries(publicStaticPayloads).map(([name, value]) => [
+        name,
+        {
+          path: `public/data/${name}`,
+          bytes: value.byteLength,
+          sha256: sha256(value),
+        },
+      ]),
+    ),
     excel: {
       path: `public/exports/${exportFileName}`,
       bytes: workbook.byteLength,

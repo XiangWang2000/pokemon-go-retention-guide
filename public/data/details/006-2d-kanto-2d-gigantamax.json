@@ -1,0 +1,43 @@
+{
+  "paths": [
+    {
+      "id": "evo-005-kanto-006-kanto",
+      "fromFormId": "005-kanto",
+      "fromNameZhTw": "火恐龍",
+      "fromFormNameZhTw": "關都",
+      "toFormId": "006-kanto",
+      "toNameZhTw": "噴火龍",
+      "toFormNameZhTw": "關都",
+      "evolutionMethodZhTw": "一般進化",
+      "availabilityNotesZhTw": "來源逐步明示進化關係。",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-07T16:00:00.000Z"
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "remediation-release-006-kanto-gigantamax",
+      "fieldName": "releaseStatus",
+      "previousValue": "UNKNOWN",
+      "newValue": "RELEASED",
+      "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": {
+        "title": "GO Bigger with Gigantamax Pokémon in new Max Battles!",
+        "url": "https://pokemongo.com/en/post/go-bigger-gigantamax"
+      }
+    },
+    {
+      "id": "change-evaluation-006-kanto-gigantamax-20260715-iv-20260728",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "只保留可極巨化／超極巨化版本；攻擊手15攻優先，坦克看防禦／HP，支援依物種門檻。",
+      "newValue": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
+      "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.07.28-iv-v2",
+      "source": null
+    }
+  ]
+}

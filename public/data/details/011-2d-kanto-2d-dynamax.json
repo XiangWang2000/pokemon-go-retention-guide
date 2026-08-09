@@ -1,0 +1,69 @@
+{
+  "paths": [
+    {
+      "id": "evo-010-kanto-011-kanto",
+      "fromFormId": "010-kanto",
+      "fromNameZhTw": "綠毛蟲",
+      "fromFormNameZhTw": "關都",
+      "toFormId": "011-kanto",
+      "toNameZhTw": "鐵甲蛹",
+      "toFormNameZhTw": "關都",
+      "evolutionMethodZhTw": "一般進化",
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+      "requiresEvent": false,
+      "verifiedAt": null
+    },
+    {
+      "id": "evo-011-kanto-012-kanto",
+      "fromFormId": "011-kanto",
+      "fromNameZhTw": "鐵甲蛹",
+      "fromFormNameZhTw": "關都",
+      "toFormId": "012-kanto",
+      "toNameZhTw": "巴大蝶",
+      "toFormNameZhTw": "關都",
+      "evolutionMethodZhTw": "一般進化",
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+      "requiresEvent": false,
+      "verifiedAt": null
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "remediation-release-011-kanto-dynamax",
+      "fieldName": "releaseStatus",
+      "previousValue": "UNKNOWN",
+      "newValue": "RELEASED",
+      "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": {
+        "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+        "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax"
+      }
+    },
+    {
+      "id": "remediation-decision-011-kanto-dynamax-2026-08-06-v7",
+      "fieldName": "decision",
+      "previousValue": "HOLD_FOR_NOW",
+      "newValue": "CONDITIONAL_KEEP",
+      "changeReasonZhTw": "採用不可逆風險原則重新計算；關鍵不確定性改為 HOLD_FOR_NOW，次要缺口只降低信心並保留資料待補事項。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": {
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    },
+    {
+      "id": "change-evaluation-011-kanto-dynamax-20260715-iv-20260728",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "先保留一隻代表個體；資料補齊前不要大量投入資源。",
+      "newValue": "先保留一隻；關鍵用途確認前不以IV篩除。",
+      "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.07.28-iv-v2",
+      "source": null
+    }
+  ]
+}

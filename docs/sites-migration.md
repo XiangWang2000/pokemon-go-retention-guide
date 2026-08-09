@@ -128,3 +128,12 @@ npm run sites:purge
 ```
 
 此流程會以目前 `site-data/manifest.json` 的 `dataVersion`，依序呼叫固定入口的 purge hook 並重新驗證；`/` 與 `/api/home` 必須回傳相同的 `X-Data-Version`，`/data/home.json` 則以公開檔案 SHA-256 比對（Sites 可能不會對靜態 asset 套用自訂 header）。任一路徑仍回傳舊版本時，流程會失敗，不應視為部署完成。
+
+## GitHub Pages static export boundary
+
+The GitHub Pages deployment is documented separately in `docs/github-pages.md`. Its Pages-only
+build enables Next.js `output: "export"`, the project-site base path, and the `out/` artifact. The
+Pages build does not use `/api/home`, `/api/export`, Next.js `headers()`, or the Sites CDN purge
+hook. Browser data loaders fetch versioned files under `public/data/`; the existing worker and
+`_headers` files remain legacy Sites artifacts only, including the worker's compatibility
+redirect for `/api/export`.

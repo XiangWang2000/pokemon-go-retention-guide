@@ -1,9 +1,29 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { ClipboardList } from "lucide-react";
 import { ReviewTable } from "@/components/review-table";
-import { getReviewIssues } from "@/lib/data";
+import { fetchStaticJson } from "@/config/site";
+import type { StaticReviewIssue } from "@/lib/static-data";
 
-export default async function ReviewPage() {
-  const issues = await getReviewIssues();
+export default function ReviewPage() {
+  const [issues, setIssues] = useState<StaticReviewIssue[]>([]);
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    fetchStaticJson<StaticReviewIssue[]>("/data/review.json")
+      .then(setIssues)
+      .catch(() => setError(true))
+      .finally(() => setLoaded(true));
+  }, []);
+
+  if (error) {
+    return <p className="surface rounded-2xl p-6">Review data failed to load. Please refresh.</p>;
+  }
+  if (!loaded) {
+    return <p className="surface rounded-2xl p-6">Loading review data...</p>;
+  }
   return (
     <div className="space-y-6">
       <header>

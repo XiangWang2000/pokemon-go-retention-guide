@@ -1,12 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { GET as homeApi } from "@/app/api/home/route";
 import { filterAuditRows, normalizeAuditQuery, type AuditSummarySnapshot } from "@/lib/audit-data";
 import auditSummarySnapshot from "../site-data/auditSummary.json";
 
 const snapshot = auditSummarySnapshot as unknown as AuditSummarySnapshot;
 
-describe("Audit 分頁資料", () => {
-  it("會將未知網址參數回復到合法預設值", () => {
+describe("Audit static data", () => {
+  it("normalizes invalid URL filter values", () => {
     const query = normalizeAuditQuery(
       new URLSearchParams({
         decision: "OLD_DECISION",
@@ -28,7 +27,7 @@ describe("Audit 分頁資料", () => {
     });
   });
 
-  it("篩選索引不需要載入完整 dashboard，且總數仍保留完整分母", () => {
+  it("filters the static audit summary without a server API", () => {
     const query = normalizeAuditQuery(new URLSearchParams({ decision: "KEEP" }));
     const filtered = filterAuditRows(snapshot.rows, query, snapshot.dataAsOf);
 
@@ -37,22 +36,15 @@ describe("Audit 分頁資料", () => {
     expect(filtered.length).toBeLessThan(snapshot.rows.length);
   });
 
-  it("Audit API 回傳頁面筆數與完整總數", async () => {
-    const response = await homeApi(
-      new Request("https://example.test/api/home?scope=audit&decision=invalid&page=999"),
-    );
-    const payload = (await response.json()) as {
-      rows: unknown[];
-      total: number;
-      overallTotal: number;
-      page: number;
-      pageSize: number;
-    };
+  it("paginates the complete static audit summary in the browser", () => {
+    const query = normalizeAuditQuery(new URLSearchParams({ decision: "invalid", page: "999" }));
+    const filtered = filterAuditRows(snapshot.rows, query, snapshot.dataAsOf);
+    const pageCount = Math.max(1, Math.ceil(filtered.length / query.pageSize));
+    const page = Math.min(query.page, pageCount);
+    const rows = filtered.slice((page - 1) * query.pageSize, page * query.pageSize);
 
-    expect(response.ok).toBe(true);
-    expect(payload.overallTotal).toBe(1776);
-    expect(payload.total).toBe(1776);
-    expect(payload.rows.length).toBeLessThanOrEqual(payload.pageSize);
-    expect(payload.page).toBe(45);
+    expect(filtered).toHaveLength(snapshot.rows.length);
+    expect(rows.length).toBeLessThanOrEqual(query.pageSize);
+    expect(page).toBe(pageCount);
   });
 });

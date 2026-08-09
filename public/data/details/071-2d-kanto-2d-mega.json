@@ -1,0 +1,33 @@
+{
+  "paths": [
+    {
+      "id": "evolution-070-kanto-071-kanto",
+      "fromFormId": "070-kanto",
+      "fromNameZhTw": "口呆花",
+      "fromFormNameZhTw": "關都",
+      "toFormId": "071-kanto",
+      "toNameZhTw": "大食花",
+      "toFormNameZhTw": "關都",
+      "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+      "availabilityNotesZhTw": "此路徑已在 #001～#090 整合資料中核對。",
+      "requiresEvent": false,
+      "verifiedAt": "2026-07-30T15:45:00.000Z"
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "r10-mega-victreebel",
+      "fieldName": "releaseStatus",
+      "previousValue": null,
+      "newValue": "RELEASED",
+      "changeReasonZhTw": "新增已正式開放的超級大食花，不把 Mega 用途回推到全部前階。",
+      "changedAt": "2026-07-30T15:45:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": {
+        "title": "Mega Evolution update 2026",
+        "url": "https://pokemongo.com/news/mega-evolution-2026-update?hl=en"
+      }
+    }
+  ]
+}

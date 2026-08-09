@@ -1,0 +1,32 @@
+{
+  "paths": [
+    {
+      "id": "evolution-r19-175-johto-176-johto",
+      "fromFormId": "175-johto",
+      "fromNameZhTw": "波克比",
+      "fromFormNameZhTw": "城都",
+      "toFormId": "176-johto",
+      "toNameZhTw": "波克基古",
+      "toFormNameZhTw": "城都",
+      "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+      "availabilityNotesZhTw": "此進化路徑已在 #152～#181 整合資料中核對。",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T10:00:00.000Z"
+    },
+    {
+      "id": "evolution-cross-176-johto-468-other",
+      "fromFormId": "176-johto",
+      "fromNameZhTw": "波克基古",
+      "fromFormNameZhTw": "城都",
+      "toFormId": "468-other",
+      "toNameZhTw": "波克基斯",
+      "toFormNameZhTw": "其他",
+      "evolutionMethodZhTw": "Earn buddy hearts with Togetic, then spend Candy to evolve.",
+      "availabilityNotesZhTw": "Formal cross-generation evolution; Togekiss remains an explicit stub until its full battle data is added.",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T16:00:00.000Z"
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": []
+}

@@ -1,0 +1,30 @@
+{
+  "paths": [
+    {
+      "id": "evolution-r20-247-johto-248-johto",
+      "fromFormId": "247-johto",
+      "fromNameZhTw": "沙基拉斯",
+      "fromFormNameZhTw": "城都",
+      "toFormId": "248-johto",
+      "toNameZhTw": "班基拉斯",
+      "toFormNameZhTw": "城都",
+      "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+      "availabilityNotesZhTw": "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T10:00:00.000Z"
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "change-r20-eval-248-johto-purified-iv-20260728",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "依實際用途分開篩選；PvP 看同聯盟 IV Rank，PvE／Mega 先看招式與投入；15攻優先，14攻高整體IV亦可留。",
+      "newValue": "目前沒有會改變保留結論的通用IV門檻。",
+      "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.07.28-iv-v2",
+      "source": null
+    }
+  ]
+}

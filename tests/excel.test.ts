@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import ExcelJS from "exceljs";
 import { describe, expect, it } from "vitest";
 import {
@@ -7,6 +8,8 @@ import {
   type ExportSheet,
 } from "@/export/excel";
 import { prisma } from "@/lib/prisma";
+
+const hasCanonicalDb = existsSync("dev.db");
 
 describe("Excel 匯出", () => {
   it("可開啟、工作表齊全、中文欄位與可重匯入 ID 正常", async () => {
@@ -39,7 +42,7 @@ describe("Excel 匯出", () => {
     expect(sheet.autoFilter).toBeTruthy();
   });
 
-  it("實際匯出包含類別狀態、Review 影響欄與 GMax 拆分維度", async () => {
+  it.skipIf(!hasCanonicalDb)("實際匯出包含類別狀態、Review 影響欄與 GMax 拆分維度", async () => {
     const workbook = await buildExportWorkbook(prisma);
     expect(workbook.worksheets.map((sheet) => sheet.name)).toEqual([...exportSheetNames]);
 

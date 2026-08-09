@@ -3,12 +3,19 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AlertTriangle, CheckCircle2, CircleDot, Send } from "lucide-react";
 import { EvaluationBrowser } from "@/components/evaluation-browser";
-import { DATA_VERSION_DATE_ZH_TW } from "@/config/release";
-import type { AuditPageResponse, AuditQuery } from "@/lib/audit-data";
+import { CURRENT_DATA_MAX_DEX } from "@/config/data-scope";
+import { DATA_VERSION_DATE_ISO, DATA_VERSION_DATE_ZH_TW } from "@/config/release";
+import { auditDataFileName, familyDataFileName } from "@/lib/site-data-paths";
+import { fetchStaticJson } from "@/config/site";
+import {
+  filterAuditRows,
+  type AuditPageResponse,
+  type AuditQuery,
+  type AuditSummarySnapshot,
+} from "@/lib/audit-data";
 import type { DashboardRow } from "@/lib/data";
 import type { FamilyOverview } from "@/presentation/family-overview";
-import type { HomeFamilyDetailResponse, HomeRuntimeSnapshot } from "@/presentation/home-snapshot";
-import type { HomeSummary } from "@/presentation/home-summary";
+import type { HomeRuntimeSnapshot } from "@/presentation/home-snapshot";
 
 const strategyLabels = {
   KEEP_TARGETS: "建議保留",
@@ -17,7 +24,7 @@ const strategyLabels = {
   HOLD_FOR_NOW: "暫時保留",
 } as const;
 
-export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummary | null }) {
+export function HomeDataLoader() {
   const [home, setHome] = useState<HomeRuntimeSnapshot | null>(null);
   const [homeLoading, setHomeLoading] = useState(true);
   const [homeError, setHomeError] = useState(false);
@@ -33,16 +40,13 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
   const homeRequestRef = useRef(0);
   const auditRequestRef = useRef(0);
   const auditQueryRef = useRef<AuditQuery | null>(null);
+  const auditSummaryRef = useRef<AuditSummarySnapshot | null>(null);
 
   const loadHome = useCallback(() => {
     const requestId = ++homeRequestRef.current;
     setHomeLoading(true);
     setHomeError(false);
-    fetch("/api/home", { cache: "no-store" })
-      .then((response) => {
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json() as Promise<HomeRuntimeSnapshot>;
-      })
+    fetchStaticJson<HomeRuntimeSnapshot>("/data/home.json")
       .then((payload) => {
         if (requestId !== homeRequestRef.current) return;
         setHome(payload);
@@ -71,15 +75,11 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
       if (!family || familyDetails[familyId] || familyDetailLoading.has(familyId)) return;
       setFamilyDetailErrors((current) => ({ ...current, [familyId]: false }));
       setFamilyDetailLoading((current) => new Set(current).add(familyId));
-      fetch(`/api/home?scope=family&familyId=${encodeURIComponent(familyId)}`, {
-        cache: "no-store",
-      })
-        .then((response) => {
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          return response.json() as Promise<HomeFamilyDetailResponse>;
-        })
-        .then((payload) => {
-          setFamilyDetails((current) => ({ ...current, [familyId]: payload.family }));
+      fetchStaticJson<FamilyOverview>(
+        `/data/families/${encodeURIComponent(familyDataFileName(familyId))}`,
+      )
+        .then((family) => {
+          setFamilyDetails((current) => ({ ...current, [familyId]: family }));
         })
         .catch(() => {
           setFamilyDetailErrors((current) => ({ ...current, [familyId]: true }));
@@ -101,24 +101,26 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
     setAuditPage(null);
     setAuditLoading(true);
     setAuditError(false);
-    const params = new URLSearchParams({
-      scope: "audit",
-      q: query.query,
-      decision: query.decision,
-      variant: query.variant,
-      use: query.use,
-      generation: query.generation,
-      region: query.region,
-      freshness: query.freshness,
-      reviewed: query.reviewed,
-      sort: query.sort,
-      page: String(query.page),
-    });
-    fetch(`/api/home?${params.toString()}`, { cache: "no-store" })
-      .then((response) => {
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        return response.json() as Promise<AuditPageResponse>;
-      })
+    const load = async () => {
+      const snapshot =
+        auditSummaryRef.current ??
+        (await fetchStaticJson<AuditSummarySnapshot>("/data/audit-summary.json"));
+      auditSummaryRef.current = snapshot;
+      const filtered = filterAuditRows(snapshot.rows, query, snapshot.dataAsOf);
+      const pageCount = Math.max(1, Math.ceil(filtered.length / query.pageSize));
+      const page = Math.min(query.page, pageCount);
+      const start = (page - 1) * query.pageSize;
+      return {
+        schemaVersion: 1 as const,
+        dataAsOf: snapshot.dataAsOf,
+        rows: filtered.slice(start, start + query.pageSize),
+        total: filtered.length,
+        overallTotal: snapshot.rows.length,
+        page,
+        pageSize: query.pageSize,
+      } satisfies AuditPageResponse;
+    };
+    load()
       .then((payload) => {
         if (requestId === auditRequestRef.current) setAuditPage(payload);
       })
@@ -139,13 +141,7 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
       if (auditDetails[rowId] || auditDetailLoading.has(rowId)) return;
       setAuditDetailErrors((current) => ({ ...current, [rowId]: false }));
       setAuditDetailLoading((current) => new Set(current).add(rowId));
-      fetch(`/api/home?scope=audit-row&rowId=${encodeURIComponent(rowId)}`, {
-        cache: "no-store",
-      })
-        .then((response) => {
-          if (!response.ok) throw new Error(`HTTP ${response.status}`);
-          return response.json() as Promise<DashboardRow>;
-        })
+      fetchStaticJson<DashboardRow>(`/data/audit/${encodeURIComponent(auditDataFileName(rowId))}`)
         .then((payload) => {
           setAuditDetails((current) => ({ ...current, [rowId]: payload }));
         })
@@ -164,34 +160,33 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
   );
 
   const isLoading = homeLoading;
-  const initialCounts = initialSummary?.strategyCounts;
   const stats = [
     {
       label: strategyLabels.KEEP_TARGETS,
       value: home
         ? families.filter((family) => family.retentionStrategy === "KEEP_TARGETS").length
-        : (initialCounts?.KEEP_TARGETS ?? null),
+        : null,
       icon: CheckCircle2,
     },
     {
       label: strategyLabels.SELECTIVE_KEEP,
       value: home
         ? families.filter((family) => family.retentionStrategy === "SELECTIVE_KEEP").length
-        : (initialCounts?.SELECTIVE_KEEP ?? null),
+        : null,
       icon: CircleDot,
     },
     {
       label: strategyLabels.MOSTLY_TRANSFER,
       value: home
         ? families.filter((family) => family.retentionStrategy === "MOSTLY_TRANSFER").length
-        : (initialCounts?.MOSTLY_TRANSFER ?? null),
+        : null,
       icon: Send,
     },
     {
       label: strategyLabels.HOLD_FOR_NOW,
       value: home
         ? families.filter((family) => family.retentionStrategy === "HOLD_FOR_NOW").length
-        : (initialCounts?.HOLD_FOR_NOW ?? null),
+        : null,
       icon: AlertTriangle,
     },
   ];
@@ -201,7 +196,7 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
       <section className="subtle-grid surface overflow-hidden rounded-3xl p-4 sm:p-5">
         <div className="max-w-4xl">
           <p className="text-sm font-bold tracking-widest text-[var(--primary)]">
-            六批研究 · #001～#181
+            資料範圍 · #001～#{CURRENT_DATA_MAX_DEX}
           </p>
           <h1 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">
             搜尋後直接看保留結論
@@ -247,7 +242,7 @@ export function HomeDataLoader({ initialSummary }: { initialSummary?: HomeSummar
       ) : null}
       <EvaluationBrowser
         families={families}
-        referenceDate={home?.dataAsOf ?? initialSummary?.dataAsOf ?? "2026-08-06T00:00:00+08:00"}
+        referenceDate={home?.dataAsOf ?? `${DATA_VERSION_DATE_ISO}T00:00:00+08:00`}
         loading={isLoading}
         familyDetailErrors={familyDetailErrors}
         onLoadFamilyDetails={loadFamilyDetails}

@@ -1,8 +1,11 @@
+import { existsSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { prisma } from "@/lib/prisma";
 import { RULES_VERSION } from "@/rules/rules";
 
-describe("#001～#030 修正後資料一致性", () => {
+const hasCanonicalDb = existsSync("dev.db");
+
+describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
   it("8. 暗影推出狀態補證後不再留下會影響結論的開放 issue", async () => {
     const [openMaterialCount, openUnknownRelease] = await Promise.all([
       prisma.dataIssue.count({

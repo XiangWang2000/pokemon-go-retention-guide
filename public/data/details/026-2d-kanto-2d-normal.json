@@ -1,0 +1,43 @@
+{
+  "paths": [
+    {
+      "id": "evo-025-kanto-026-kanto",
+      "fromFormId": "025-kanto",
+      "fromNameZhTw": "皮卡丘",
+      "fromFormNameZhTw": "關都",
+      "toFormId": "026-kanto",
+      "toNameZhTw": "雷丘",
+      "toFormNameZhTw": "關都",
+      "evolutionMethodZhTw": "一般進化；Gigantamax Pikachu 例外為不可進化",
+      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+      "requiresEvent": false,
+      "verifiedAt": null
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "remediation-release-026-kanto-normal",
+      "fieldName": "releaseStatus",
+      "previousValue": "UNKNOWN",
+      "newValue": "RELEASED",
+      "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": {
+        "title": "Sparks fly for Raichu Super Mega Raid Day!",
+        "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026"
+      }
+    },
+    {
+      "id": "change-evaluation-026-kanto-normal-20260715-iv-20260728",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "GL／UL個體PvP IV Rank≤100或PR≥97.5%優先；ML以15攻／98%以上優先。只有物種有用途時門檻才生效。",
+      "newValue": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。；只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+      "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.07.28-iv-v2",
+      "source": null
+    }
+  ]
+}

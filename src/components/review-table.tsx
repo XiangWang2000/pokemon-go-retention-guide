@@ -6,7 +6,7 @@ import { StatusBadge } from "@/components/status-badge";
 import { zhTw } from "@/locales/zh-TW";
 import { variantLabelZhTw } from "@/presentation/variant-label";
 
-interface Issue {
+export interface ReviewIssue {
   id: string;
   formId: string | null;
   dexNumber: number | null;
@@ -24,7 +24,7 @@ interface Issue {
   relatedSources: Array<{ id: string; title: string; url: string }>;
 }
 
-export function ReviewTable({ issues }: { issues: Issue[] }) {
+export function ReviewTable({ issues }: { issues: ReviewIssue[] }) {
   const pageSize = 20;
   const batches = useMemo(
     () => [...new Set(issues.map((issue) => issue.batchKey))].sort(),
