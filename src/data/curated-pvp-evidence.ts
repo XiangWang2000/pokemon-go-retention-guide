@@ -18,11 +18,11 @@ export const CURATED_PVP_EVIDENCE: readonly CuratedPvpEvidence[] = [];
 function isCompleteEvidence(item: CuratedPvpEvidence) {
   return Boolean(
     item.formId.trim() &&
-      item.variantKey.trim() &&
-      item.leagueOrCup.trim() &&
-      item.source.trim() &&
-      item.reason.trim() &&
-      !Number.isNaN(Date.parse(item.checkedAt)),
+    item.variantKey.trim() &&
+    item.leagueOrCup.trim() &&
+    item.source.trim() &&
+    item.reason.trim() &&
+    !Number.isNaN(Date.parse(item.checkedAt)),
   );
 }
 
@@ -42,12 +42,25 @@ export function hasIndependentCuratedPvpUse(
   input: Pick<CurrentPvpEvidenceInput, "formId" | "variantKey">,
   evidence: readonly CuratedPvpEvidence[] = CURATED_PVP_EVIDENCE,
 ) {
-  return evidence.some(
+  return getIndependentCuratedPvpEvidence(input, evidence).length > 0;
+}
+
+export function getIndependentCuratedPvpEvidence(
+  input: Pick<CurrentPvpEvidenceInput, "formId" | "variantKey">,
+  evidence: readonly CuratedPvpEvidence[] = CURATED_PVP_EVIDENCE,
+) {
+  return evidence.filter(
     (item) =>
       item.formId === input.formId &&
       item.variantKey === input.variantKey &&
       isCompleteEvidence(item),
   );
+}
+
+export function curatedPvpIvStrategyZhTw(evidence: CuratedPvpEvidence) {
+  const scope = evidence.leagueOrCup.trim();
+  const reason = evidence.reason.trim().replace(/[。！？!?]+$/u, "");
+  return `依「${scope}」PvP 用途與個體 Rank 篩選；${reason}。`;
 }
 
 export function hasCurrentPvpUse(

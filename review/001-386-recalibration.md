@@ -1,4 +1,4 @@
-# Pokémon GO Retention Guide #001～#211 共用規則重算報告
+# Pokémon GO Retention Guide #001～#386 共用規則重算報告
 
 - 規則版本：2026.08.06-v7
 - 戰鬥版本：1776

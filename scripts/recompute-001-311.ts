@@ -16,14 +16,17 @@ import { laterEvolutionUses } from "../src/data/later-evolution-uses";
 import { ensureCrossGenerationEvolutionTargets } from "../src/data/cross-generation-evolution";
 import { specialAcquisitionForms121151 } from "../src/data/batch-121-151";
 import {
+  curatedPvpIvStrategyZhTw,
+  getIndependentCuratedPvpEvidence,
   hasCurrentPvpUse,
-  hasIndependentCuratedPvpUse,
   validateCuratedPvpEvidence,
+  type CuratedPvpEvidence,
 } from "../src/data/curated-pvp-evidence";
 import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
 import { validateEvolutionParentPaths } from "../src/data/checkpoint-validation";
 import { CURRENT_DATA_MAX_DEX } from "../src/config/data-scope";
+import { readIntegerFlag } from "../src/lib/command-line";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
@@ -31,9 +34,9 @@ const prisma = new PrismaClient({
 
 const checkedAt = new Date(`${DATA_VERSION_DATE_ISO}T00:00:00+08:00`);
 const dexMin = 1;
-const dexMax = Number(process.argv[process.argv.indexOf("--max") + 1] || String(CURRENT_DATA_MAX_DEX));
+const dexMax = readIntegerFlag(process.argv.slice(2), "--max", CURRENT_DATA_MAX_DEX);
 if (!Number.isInteger(dexMax) || dexMax < 251) {
-  throw new Error("無效的 --max 或 --baseline-max 參數。");
+  throw new Error("無效的 --max 參數。");
 }
 
 const criticalIssueTypes = new Set([
@@ -162,22 +165,22 @@ async function loadVariants() {
     loaded.push(
       ...(await prisma.battleVariant.findMany({
         where: { pokemonForm: { species: { dexNumber: { gte: start, lte: end } } } },
-    include: {
-      pokemonForm: {
         include: {
-          species: true,
-          evolutionPathsFrom: true,
+          pokemonForm: {
+            include: {
+              species: true,
+              evolutionPathsFrom: true,
+            },
+          },
+          rawEvaluationData: true,
+          categoryEvaluations: true,
+          retentionEvaluations: {
+            orderBy: { generatedAt: "desc" },
+            take: 1,
+          },
+          dataIssues: { where: { status: "OPEN" } },
         },
-      },
-      rawEvaluationData: true,
-      categoryEvaluations: true,
-      retentionEvaluations: {
-        orderBy: { generatedAt: "desc" },
-        take: 1,
-      },
-      dataIssues: { where: { status: "OPEN" } },
-    },
-    orderBy: [{ pokemonForm: { species: { dexNumber: "asc" } } }, { variantKey: "asc" }],
+        orderBy: [{ pokemonForm: { species: { dexNumber: "asc" } } }, { variantKey: "asc" }],
       })),
     );
   }
@@ -193,7 +196,7 @@ interface DirectAssessment {
   hasDirectPveValue: boolean;
   hasDirectPveCore: boolean;
   hasPvpValue: boolean;
-  hasCuratedPvpUse: boolean;
+  curatedPvpEvidence: CuratedPvpEvidence | null;
   bestPvpRank: number | null;
   hasGymValue: boolean;
   gymRating: string;
@@ -254,11 +257,13 @@ function directPveLevel(variant: VariantRecord, pve: CategoryRecord | undefined)
     : ("NO_SIGNIFICANT_USE" as const);
 }
 
-function hasCuratedPvpEvidence(variant: VariantRecord) {
-  return hasIndependentCuratedPvpUse({
-    formId: variant.pokemonFormId,
-    variantKey: variant.variantKey,
-  });
+function curatedPvpEvidenceFor(variant: VariantRecord) {
+  return (
+    getIndependentCuratedPvpEvidence({
+      formId: variant.pokemonFormId,
+      variantKey: variant.variantKey,
+    })[0] ?? null
+  );
 }
 
 function issueIsCritical(issue: VariantRecord["dataIssues"][number]) {
@@ -279,7 +284,7 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
   const gym = category(variant, "GYM");
   const ranks = pvpRanks(variant);
   const bestPvpRank = ranks.length ? Math.min(...ranks) : null;
-  const hasCuratedPvpUse = hasCuratedPvpEvidence(variant);
+  const curatedPvpEvidence = curatedPvpEvidenceFor(variant);
   const pvpValue = hasCurrentPvpUse({
     formId: variant.pokemonFormId,
     variantKey: variant.variantKey,
@@ -309,7 +314,7 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
   const hasGymValue = Boolean(
     gym?.materialToDecision || rawGymRating === "HIGH" || rawGymRating === "MEDIUM",
   );
-  const gymRating = gym?.materialToDecision ? "SPECIAL_CASE" : rawGymRating ?? "NOT_APPLICABLE";
+  const gymRating = gym?.materialToDecision ? "SPECIAL_CASE" : (rawGymRating ?? "NOT_APPLICABLE");
   const hasMaxCore = Boolean(
     variant.variantKey === "GIGANTAMAX" &&
     ["HIGH", "CORE"].includes(max?.maxOverallRating ?? max?.maxInvestmentRating ?? ""),
@@ -337,7 +342,7 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
     hasDirectPveValue,
     hasDirectPveCore: hasDirectPveCore || hasMaxCore,
     hasPvpValue: pvpValue,
-    hasCuratedPvpUse,
+    curatedPvpEvidence,
     bestPvpRank,
     hasGymValue,
     gymRating,
@@ -378,11 +383,7 @@ function hasResolvedFamilyBoundary(
   hasLaterEvolutionValue: boolean,
   hasAssessedLaterEvolution = false,
 ) {
-  if (
-    hasLaterEvolutionValue ||
-    hasAssessedLaterEvolution ||
-    variant.pokemonForm.id === "090-kanto"
-  )
+  if (hasLaterEvolutionValue || hasAssessedLaterEvolution || variant.pokemonForm.id === "090-kanto")
     return true;
   return !/範圍外|後續重要進化|可繼續進化/.test(variant.pokemonForm.evolutionFamilyNotesZhTw);
 }
@@ -489,9 +490,7 @@ function laterEvolutionAssessment(
       const aIsTerminal = (outgoing.get(a.candidate.pokemonForm.id) ?? []).length === 0;
       const bIsTerminal = (outgoing.get(b.candidate.pokemonForm.id) ?? []).length === 0;
       if (aIsTerminal !== bIsTerminal) return Number(bIsTerminal) - Number(aIsTerminal);
-      return (
-        pveUseLevelWeight[b.assessment.pveLevel] - pveUseLevelWeight[a.assessment.pveLevel]
-      );
+      return pveUseLevelWeight[b.assessment.pveLevel] - pveUseLevelWeight[a.assessment.pveLevel];
     })[0];
   return {
     hasValue: true,
@@ -623,7 +622,11 @@ function makeDecision(input: {
   };
 }
 
-function ivStrategy(variant: VariantRecord, decision: Decision, hasCuratedPvpUse = false) {
+function ivStrategy(
+  variant: VariantRecord,
+  decision: Decision,
+  curatedPvpEvidence: CuratedPvpEvidence | null = null,
+) {
   if (decision === "HOLD_FOR_NOW") return "無法判斷，暫時不要傳；資料補齊前不以 IV 大量篩除。";
   if (variant.pokemonFormId === "151-kanto" && variant.variantKey === "NORMAL") {
     return "特殊取得個體應保留；不以 IV 作傳送門檻。";
@@ -631,8 +634,8 @@ function ivStrategy(variant: VariantRecord, decision: Decision, hasCuratedPvpUse
   if (variant.variantKey === "SHADOW") {
     return "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。";
   }
-  if (hasCuratedPvpUse) {
-    return "先以 Great League PvP 用途與個體 Rank 篩選防禦形態；不要把其他 Forme 的結論套用到此型態。";
+  if (curatedPvpEvidence) {
+    return curatedPvpIvStrategyZhTw(curatedPvpEvidence);
   }
   if (["MEGA", "MEGA_X", "MEGA_Y", "DYNAMAX", "GIGANTAMAX"].includes(variant.variantKey)) {
     return "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。";
@@ -694,10 +697,7 @@ function categoryDisposition(
 }
 
 function shouldKeepRuleNotCovered(variant: VariantRecord, assessment: RecalculatedAssessment) {
-  return (
-    assessment.disposition === "TRUE_DATA_PENDING" &&
-    !assessment.familyBoundaryResolved
-  );
+  return assessment.disposition === "TRUE_DATA_PENDING" && !assessment.familyBoundaryResolved;
 }
 
 function safeId(value: string) {
@@ -790,7 +790,9 @@ async function main() {
   ]);
   const evolutionParentPathIssues = validateEvolutionParentPaths(evolutionForms, evolutionPaths);
   if (evolutionParentPathIssues.length) {
-    throw new Error(`Evolution parent/path validation failed:\n- ${evolutionParentPathIssues.join("\n- ")}`);
+    throw new Error(
+      `Evolution parent/path validation failed:\n- ${evolutionParentPathIssues.join("\n- ")}`,
+    );
   }
   const variantsByForm = new Map<string, VariantRecord[]>();
   for (const variant of variants) {
@@ -1000,7 +1002,7 @@ async function main() {
         evolutionSummaryZhTw: assessment.evolutionSummaryZhTw,
         recommendedIvStrategyZhTw:
           assessment.recommendedIvStrategyZhTw ??
-          ivStrategy(variant, assessment.decision, assessment.hasCuratedPvpUse),
+          ivStrategy(variant, assessment.decision, assessment.curatedPvpEvidence),
         reasonZhTw: assessment.reasonZhTw,
         confidence: assessment.confidence,
         rulesVersion: RULES_VERSION,
@@ -1032,7 +1034,7 @@ async function main() {
               "依實際用途再核對招式；沒有主要用途時不因招式欄位缺失囤積個體。",
             recommendedIvStrategyZhTw:
               assessment.recommendedIvStrategyZhTw ??
-              ivStrategy(variant, assessment.decision, assessment.hasCuratedPvpUse),
+              ivStrategy(variant, assessment.decision, assessment.curatedPvpEvidence),
             reasonZhTw: assessment.reasonZhTw,
             confidence: assessment.confidence,
             rulesVersion: RULES_VERSION,
@@ -1099,8 +1101,7 @@ async function main() {
         const messageZhTw = shouldAffect
           ? materialGapMessage(variant, assessment)
           : nonMaterialIssueMessage(variant, issue.issueType);
-        const generatedIssueResolved =
-          issue.id.startsWith("recalibrate-issue-") && !criticalIssue;
+        const generatedIssueResolved = issue.id.startsWith("recalibrate-issue-") && !criticalIssue;
         await tx.dataIssue.update({
           where: { id: issue.id },
           data: {
@@ -1160,11 +1161,10 @@ async function main() {
     pveLevels.set(assessment.pveUseLevel, (pveLevels.get(assessment.pveUseLevel) ?? 0) + 1);
   }
   const highRiskDex = new Set([
-    63, 66, 81, 92, 111, 113, 114, 123, 125, 126, 131, 143, 144, 145, 146, 147, 150,
-    154, 157, 160, 164, 166, 168, 169, 171, 176, 178, 181,
-    182, 185, 186, 194, 195, 196, 197, 198, 199, 200, 202, 203, 204, 205, 207, 208, 209, 210, 211,
-    212, 213, 214, 215, 216, 217, 220, 221, 227, 229, 230, 233, 234, 236, 237, 238, 239, 240, 251,
-    242, 243, 244, 245, 246, 247, 248, 249, 250, 251,
+    63, 66, 81, 92, 111, 113, 114, 123, 125, 126, 131, 143, 144, 145, 146, 147, 150, 154, 157, 160,
+    164, 166, 168, 169, 171, 176, 178, 181, 182, 185, 186, 194, 195, 196, 197, 198, 199, 200, 202,
+    203, 204, 205, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 220, 221, 227, 229, 230,
+    233, 234, 236, 237, 238, 239, 240, 251, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251,
   ]);
   const report = {
     scope: `${dexMin}-${dexMax}`,
@@ -1209,7 +1209,7 @@ async function main() {
     "utf8",
   );
   const reportLines = [
-    "# Pokémon GO Retention Guide #001～#211 共用規則重算報告",
+    `# Pokémon GO Retention Guide #${String(dexMin).padStart(3, "0")}～#${String(dexMax).padStart(3, "0")} 共用規則重算報告`,
     "",
     `- 規則版本：${RULES_VERSION}`,
     `- 戰鬥版本：${variants.length}`,
@@ -1228,7 +1228,11 @@ async function main() {
     "",
     "PvE 判斷合併暗影、Mega、後續世代進化、道館防守、Dynamax 與 Gigantamax；資料缺口按 BattleVariant 拆分，不把單一型態或次要欄位外推到整個家族。",
   ];
-  await writeFile("review/001-" + dexMax + "-recalibration.md", `${reportLines.join("\r\n")}\r\n`, "utf8");
+  await writeFile(
+    "review/001-" + dexMax + "-recalibration.md",
+    `${reportLines.join("\r\n")}\r\n`,
+    "utf8",
+  );
   console.log(
     JSON.stringify(
       {
