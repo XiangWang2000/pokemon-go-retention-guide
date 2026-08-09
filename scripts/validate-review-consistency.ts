@@ -33,6 +33,7 @@ const batchFiles = [
   ["212-241", "review/212-241.json"],
   ["242-251", "review/242-251.json"],
   ["252-281", "review/252-281.json"],
+  ["282-311", "review/282-311.json"],
 ] as const;
 
 async function loadJson(path: string) {
@@ -184,6 +185,14 @@ async function main() {
     "260-hoenn",
     "280-hoenn",
     "281-hoenn",
+    "282-hoenn",
+    "298-hoenn",
+    "299-hoenn",
+    "302-hoenn",
+    "303-hoenn",
+    "306-hoenn",
+    "308-hoenn",
+    "310-hoenn",
   ];
   for (const formId of highRiskForms) {
     const family = families.find((candidate) =>

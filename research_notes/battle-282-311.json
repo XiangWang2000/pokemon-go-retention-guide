@@ -1,0 +1,255 @@
+{
+  "batch": "282-311",
+  "checkedAt": "2026-08-09",
+  "pvpoke": {
+    "commit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+    "files": [
+      "data/sources/pvpoke/rankings-1500.json",
+      "data/sources/pvpoke/rankings-2500.json",
+      "data/sources/pvpoke/rankings-10000.json"
+    ],
+    "method": "Open League Overall fixed snapshot; rank is reproducible as complete JSON array index plus one."
+  },
+  "pve": {
+    "282-hoenn": "CORE_INVESTMENT",
+    "297-hoenn": "USABLE_OR_BUDGET",
+    "306-hoenn": "USABLE_OR_BUDGET",
+    "308-hoenn": "SPECIAL_USE",
+    "310-hoenn": "USABLE_OR_BUDGET"
+  },
+  "mega": [
+    {
+      "formId": "282-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    },
+    {
+      "formId": "302-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    },
+    {
+      "formId": "303-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    },
+    {
+      "formId": "306-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    },
+    {
+      "formId": "308-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    },
+    {
+      "formId": "310-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    }
+  ],
+  "maxBattle": [],
+  "shadow": [
+    {
+      "formId": "282-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "283-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "285-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "287-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "290-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "293-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "296-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "299-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "300-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "302-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "303-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "304-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "305-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "306-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "307-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "308-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "309-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "310-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "311-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    }
+  ],
+  "evolution": [
+    {
+      "fromFormId": "281-hoenn",
+      "toFormId": "282-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "283-hoenn",
+      "toFormId": "284-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "285-hoenn",
+      "toFormId": "286-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "287-hoenn",
+      "toFormId": "288-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "288-hoenn",
+      "toFormId": "289-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "290-hoenn",
+      "toFormId": "291-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "293-hoenn",
+      "toFormId": "294-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "294-hoenn",
+      "toFormId": "295-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "296-hoenn",
+      "toFormId": "297-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "298-hoenn",
+      "toFormId": "183-johto",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "300-hoenn",
+      "toFormId": "301-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "304-hoenn",
+      "toFormId": "305-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "305-hoenn",
+      "toFormId": "306-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "307-hoenn",
+      "toFormId": "308-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "309-hoenn",
+      "toFormId": "310-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    }
+  ],
+  "specialRelationships": [
+    {
+      "familyKey": "HOENN_FAMILY_290",
+      "members": [
+        "290-hoenn",
+        "291-hoenn",
+        "292-hoenn"
+      ],
+      "directEvolutionEdges": [
+        "290-hoenn->291-hoenn"
+      ],
+      "excludedEdges": [
+        "290-hoenn->292-hoenn"
+      ],
+      "note": "Shedinja is a special-acquisition family member, not a direct evolution edge from Nincada."
+    }
+  ],
+  "review": {
+    "materialGaps": [],
+    "nonMaterialGaps": [
+      "Rocket, Gym, and unreleased Max fields without independent sources do not override an already clear retention conclusion."
+    ]
+  }
+}

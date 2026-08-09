@@ -23245,6 +23245,19 @@
   "183-johto-dynamax": {
     "paths": [
       {
+        "id": "evolution-gen3-282-311-298-hoenn-183-johto",
+        "fromFormId": "298-hoenn",
+        "fromNameZhTw": "瑪力露",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "183-johto",
+        "toNameZhTw": "瑪力露",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "瑪力露麗家族的寶寶進化；依遊戲內糖果與友好度條件為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
         "id": "evolution-r19-183-johto-184-johto",
         "fromFormId": "183-johto",
         "fromNameZhTw": "瑪力露",
@@ -23263,6 +23276,19 @@
   },
   "183-johto-normal": {
     "paths": [
+      {
+        "id": "evolution-gen3-282-311-298-hoenn-183-johto",
+        "fromFormId": "298-hoenn",
+        "fromNameZhTw": "瑪力露",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "183-johto",
+        "toNameZhTw": "瑪力露",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "瑪力露麗家族的寶寶進化；依遊戲內糖果與友好度條件為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
       {
         "id": "evolution-r19-183-johto-184-johto",
         "fromFormId": "183-johto",
@@ -23283,6 +23309,19 @@
   "183-johto-purified": {
     "paths": [
       {
+        "id": "evolution-gen3-282-311-298-hoenn-183-johto",
+        "fromFormId": "298-hoenn",
+        "fromNameZhTw": "瑪力露",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "183-johto",
+        "toNameZhTw": "瑪力露",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "瑪力露麗家族的寶寶進化；依遊戲內糖果與友好度條件為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
         "id": "evolution-r19-183-johto-184-johto",
         "fromFormId": "183-johto",
         "fromNameZhTw": "瑪力露",
@@ -23301,6 +23340,19 @@
   },
   "183-johto-shadow": {
     "paths": [
+      {
+        "id": "evolution-gen3-282-311-298-hoenn-183-johto",
+        "fromFormId": "298-hoenn",
+        "fromNameZhTw": "瑪力露",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "183-johto",
+        "toNameZhTw": "瑪力露",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "瑪力露麗家族的寶寶進化；依遊戲內糖果與友好度條件為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
       {
         "id": "evolution-r19-183-johto-184-johto",
         "fromFormId": "183-johto",
@@ -27953,28 +28005,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-252-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-252-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "252-hoenn-purified": {
     "paths": [
@@ -28012,28 +28043,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-252-hoenn-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-252-hoenn-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "253-hoenn-dynamax": {
     "paths": [
@@ -28097,28 +28107,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-253-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-253-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "253-hoenn-purified": {
     "paths": [
@@ -28182,28 +28171,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-253-hoenn-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-253-hoenn-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "254-hoenn-dynamax": {
     "paths": [
@@ -28241,18 +28209,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-disposition-254-hoenn-mega",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "254-hoenn-normal": {
     "paths": [
@@ -28290,28 +28247,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-254-hoenn-purified",
-        "fieldName": "decision",
-        "previousValue": "KEEP",
-        "newValue": "TRANSFER_CANDIDATE",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-254-hoenn-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "254-hoenn-shadow": {
     "paths": [
@@ -28368,28 +28304,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-255-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-255-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "255-hoenn-purified": {
     "paths": [
@@ -28427,28 +28342,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-255-hoenn-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-255-hoenn-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "256-hoenn-dynamax": {
     "paths": [
@@ -28512,28 +28406,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-256-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-256-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "256-hoenn-purified": {
     "paths": [
@@ -28597,28 +28470,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-256-hoenn-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-256-hoenn-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "257-hoenn-dynamax": {
     "paths": [
@@ -28656,18 +28508,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-disposition-257-hoenn-mega",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "257-hoenn-normal": {
     "paths": [
@@ -28705,28 +28546,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-257-hoenn-purified",
-        "fieldName": "decision",
-        "previousValue": "KEEP",
-        "newValue": "TRANSFER_CANDIDATE",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-257-hoenn-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "257-hoenn-shadow": {
     "paths": [
@@ -28783,28 +28603,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-258-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-258-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "258-hoenn-purified": {
     "paths": [
@@ -28842,28 +28641,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-258-hoenn-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-258-hoenn-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "259-hoenn-dynamax": {
     "paths": [
@@ -28927,28 +28705,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-259-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-259-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "259-hoenn-purified": {
     "paths": [
@@ -29012,28 +28769,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-259-hoenn-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-259-hoenn-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "CLEAR_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "260-hoenn-dynamax": {
     "paths": [
@@ -29090,28 +28826,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-260-hoenn-purified",
-        "fieldName": "decision",
-        "previousValue": "KEEP",
-        "newValue": "TRANSFER_CANDIDATE",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-260-hoenn-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "260-hoenn-shadow": {
     "paths": [
@@ -29168,28 +28883,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-261-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-261-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "261-hoenn-purified": {
     "paths": [
@@ -29227,28 +28921,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-261-hoenn-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-261-hoenn-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "262-hoenn-dynamax": {
     "paths": [
@@ -29362,28 +29035,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-263-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-263-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "263-hoenn-purified": {
     "paths": [
@@ -29721,18 +29373,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-disposition-266-hoenn-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "266-hoenn-shadow": {
     "paths": [
@@ -29821,18 +29462,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-disposition-267-hoenn-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "267-hoenn-shadow": {
     "paths": [
@@ -29947,18 +29577,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-disposition-268-hoenn-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "268-hoenn-shadow": {
     "paths": [
@@ -30047,18 +29666,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-disposition-269-hoenn-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "269-hoenn-shadow": {
     "paths": [
@@ -30115,28 +29723,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-270-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-270-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "270-hoenn-purified": {
     "paths": [
@@ -30174,28 +29761,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-270-hoenn-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-270-hoenn-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "271-hoenn-dynamax": {
     "paths": [
@@ -30259,28 +29825,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-271-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-271-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "271-hoenn-purified": {
     "paths": [
@@ -30344,28 +29889,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-271-hoenn-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-271-hoenn-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "272-hoenn-dynamax": {
     "paths": [
@@ -30403,18 +29927,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-272-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "CONDITIONAL_KEEP",
-        "newValue": "KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "272-hoenn-purified": {
     "paths": [
@@ -30433,28 +29946,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-272-hoenn-purified",
-        "fieldName": "decision",
-        "previousValue": "CONDITIONAL_KEEP",
-        "newValue": "TRANSFER_CANDIDATE",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-272-hoenn-purified",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "LIMITED_USE",
-        "newValue": "NO_SIGNIFICANT_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "272-hoenn-shadow": {
     "paths": [
@@ -30943,28 +30435,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-278-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-278-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "278-hoenn-purified": {
     "paths": [
@@ -31040,18 +30511,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-disposition-279-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "CLEAR_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "279-hoenn-purified": {
     "paths": [
@@ -31127,28 +30587,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-280-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-280-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "280-hoenn-purified": {
     "paths": [
@@ -31186,28 +30625,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-280-hoenn-shadow",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-280-hoenn-shadow",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "281-hoenn-dynamax": {
     "paths": [
@@ -31218,6 +30636,19 @@
         "fromFormNameZhTw": "豐緣",
         "toFormId": "281-hoenn",
         "toNameZhTw": "奇魯莉安",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-281-hoenn-282-hoenn",
+        "fromFormId": "281-hoenn",
+        "fromNameZhTw": "奇魯莉安",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "282-hoenn",
+        "toNameZhTw": "沙奈朵",
         "toFormNameZhTw": "豐緣",
         "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
         "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
@@ -31257,6 +30688,19 @@
         "verifiedAt": "2026-08-08T16:00:00.000Z"
       },
       {
+        "id": "evolution-gen3-282-311-281-hoenn-282-hoenn",
+        "fromFormId": "281-hoenn",
+        "fromNameZhTw": "奇魯莉安",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "282-hoenn",
+        "toNameZhTw": "沙奈朵",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
         "id": "evolution-cross-281-hoenn-475-other",
         "fromFormId": "281-hoenn",
         "fromNameZhTw": "奇魯莉安",
@@ -31271,28 +30715,7 @@
       }
     ],
     "conflicts": [],
-    "changeLogs": [
-      {
-        "id": "recalibrate-20260809-decision-281-hoenn-normal",
-        "fieldName": "decision",
-        "previousValue": "TRANSFER_CANDIDATE",
-        "newValue": "CONDITIONAL_KEEP",
-        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      },
-      {
-        "id": "recalibrate-20260809-disposition-281-hoenn-normal",
-        "fieldName": "assessmentDisposition",
-        "previousValue": "NO_SIGNIFICANT_USE",
-        "newValue": "LIMITED_USE",
-        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-        "changedAt": "2026-08-08T16:00:00.000Z",
-        "rulesVersion": "2026.08.06-v7",
-        "source": null
-      }
-    ]
+    "changeLogs": []
   },
   "281-hoenn-purified": {
     "paths": [
@@ -31303,6 +30726,19 @@
         "fromFormNameZhTw": "豐緣",
         "toFormId": "281-hoenn",
         "toNameZhTw": "奇魯莉安",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-281-hoenn-282-hoenn",
+        "fromFormId": "281-hoenn",
+        "fromNameZhTw": "奇魯莉安",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "282-hoenn",
+        "toNameZhTw": "沙奈朵",
         "toFormNameZhTw": "豐緣",
         "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
         "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
@@ -31342,6 +30778,19 @@
         "verifiedAt": "2026-08-08T16:00:00.000Z"
       },
       {
+        "id": "evolution-gen3-282-311-281-hoenn-282-hoenn",
+        "fromFormId": "281-hoenn",
+        "fromNameZhTw": "奇魯莉安",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "282-hoenn",
+        "toNameZhTw": "沙奈朵",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
         "id": "evolution-cross-281-hoenn-475-other",
         "fromFormId": "281-hoenn",
         "fromNameZhTw": "奇魯莉安",
@@ -31356,9 +30805,1298 @@
       }
     ],
     "conflicts": [],
+    "changeLogs": []
+  },
+  "282-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-281-hoenn-282-hoenn",
+        "fromFormId": "281-hoenn",
+        "fromNameZhTw": "奇魯莉安",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "282-hoenn",
+        "toNameZhTw": "沙奈朵",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "282-hoenn-mega": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-281-hoenn-282-hoenn",
+        "fromFormId": "281-hoenn",
+        "fromNameZhTw": "奇魯莉安",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "282-hoenn",
+        "toNameZhTw": "沙奈朵",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
     "changeLogs": [
       {
-        "id": "recalibrate-20260809-decision-281-hoenn-shadow",
+        "id": "recalibrate-20260809-disposition-282-hoenn-mega",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "282-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-281-hoenn-282-hoenn",
+        "fromFormId": "281-hoenn",
+        "fromNameZhTw": "奇魯莉安",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "282-hoenn",
+        "toNameZhTw": "沙奈朵",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "282-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-281-hoenn-282-hoenn",
+        "fromFormId": "281-hoenn",
+        "fromNameZhTw": "奇魯莉安",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "282-hoenn",
+        "toNameZhTw": "沙奈朵",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-282-hoenn-purified",
+        "fieldName": "decision",
+        "previousValue": "KEEP",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-282-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "282-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-281-hoenn-282-hoenn",
+        "fromFormId": "281-hoenn",
+        "fromNameZhTw": "奇魯莉安",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "282-hoenn",
+        "toNameZhTw": "沙奈朵",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "283-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-283-hoenn-284-hoenn",
+        "fromFormId": "283-hoenn",
+        "fromNameZhTw": "水蛛",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "284-hoenn",
+        "toNameZhTw": "雨翅蛾",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "283-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-283-hoenn-284-hoenn",
+        "fromFormId": "283-hoenn",
+        "fromNameZhTw": "水蛛",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "284-hoenn",
+        "toNameZhTw": "雨翅蛾",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "283-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-283-hoenn-284-hoenn",
+        "fromFormId": "283-hoenn",
+        "fromNameZhTw": "水蛛",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "284-hoenn",
+        "toNameZhTw": "雨翅蛾",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "283-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-283-hoenn-284-hoenn",
+        "fromFormId": "283-hoenn",
+        "fromNameZhTw": "水蛛",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "284-hoenn",
+        "toNameZhTw": "雨翅蛾",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "284-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-283-hoenn-284-hoenn",
+        "fromFormId": "283-hoenn",
+        "fromNameZhTw": "水蛛",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "284-hoenn",
+        "toNameZhTw": "雨翅蛾",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "284-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-283-hoenn-284-hoenn",
+        "fromFormId": "283-hoenn",
+        "fromNameZhTw": "水蛛",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "284-hoenn",
+        "toNameZhTw": "雨翅蛾",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "284-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-283-hoenn-284-hoenn",
+        "fromFormId": "283-hoenn",
+        "fromNameZhTw": "水蛛",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "284-hoenn",
+        "toNameZhTw": "雨翅蛾",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-284-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "284-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-283-hoenn-284-hoenn",
+        "fromFormId": "283-hoenn",
+        "fromNameZhTw": "水蛛",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "284-hoenn",
+        "toNameZhTw": "雨翅蛾",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "285-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-285-hoenn-286-hoenn",
+        "fromFormId": "285-hoenn",
+        "fromNameZhTw": "蘑蘑菇",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "286-hoenn",
+        "toNameZhTw": "斗笠菇",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "285-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-285-hoenn-286-hoenn",
+        "fromFormId": "285-hoenn",
+        "fromNameZhTw": "蘑蘑菇",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "286-hoenn",
+        "toNameZhTw": "斗笠菇",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "285-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-285-hoenn-286-hoenn",
+        "fromFormId": "285-hoenn",
+        "fromNameZhTw": "蘑蘑菇",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "286-hoenn",
+        "toNameZhTw": "斗笠菇",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "285-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-285-hoenn-286-hoenn",
+        "fromFormId": "285-hoenn",
+        "fromNameZhTw": "蘑蘑菇",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "286-hoenn",
+        "toNameZhTw": "斗笠菇",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "286-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-285-hoenn-286-hoenn",
+        "fromFormId": "285-hoenn",
+        "fromNameZhTw": "蘑蘑菇",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "286-hoenn",
+        "toNameZhTw": "斗笠菇",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "286-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-285-hoenn-286-hoenn",
+        "fromFormId": "285-hoenn",
+        "fromNameZhTw": "蘑蘑菇",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "286-hoenn",
+        "toNameZhTw": "斗笠菇",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "286-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-285-hoenn-286-hoenn",
+        "fromFormId": "285-hoenn",
+        "fromNameZhTw": "蘑蘑菇",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "286-hoenn",
+        "toNameZhTw": "斗笠菇",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-286-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "286-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-285-hoenn-286-hoenn",
+        "fromFormId": "285-hoenn",
+        "fromNameZhTw": "蘑蘑菇",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "286-hoenn",
+        "toNameZhTw": "斗笠菇",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "287-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-287-hoenn-288-hoenn",
+        "fromFormId": "287-hoenn",
+        "fromNameZhTw": "懶人獺",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "288-hoenn",
+        "toNameZhTw": "過動猿",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "287-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-287-hoenn-288-hoenn",
+        "fromFormId": "287-hoenn",
+        "fromNameZhTw": "懶人獺",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "288-hoenn",
+        "toNameZhTw": "過動猿",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "287-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-287-hoenn-288-hoenn",
+        "fromFormId": "287-hoenn",
+        "fromNameZhTw": "懶人獺",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "288-hoenn",
+        "toNameZhTw": "過動猿",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "287-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-287-hoenn-288-hoenn",
+        "fromFormId": "287-hoenn",
+        "fromNameZhTw": "懶人獺",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "288-hoenn",
+        "toNameZhTw": "過動猿",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "288-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-287-hoenn-288-hoenn",
+        "fromFormId": "287-hoenn",
+        "fromNameZhTw": "懶人獺",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "288-hoenn",
+        "toNameZhTw": "過動猿",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-288-hoenn-289-hoenn",
+        "fromFormId": "288-hoenn",
+        "fromNameZhTw": "過動猿",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "289-hoenn",
+        "toNameZhTw": "請假王",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "288-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-287-hoenn-288-hoenn",
+        "fromFormId": "287-hoenn",
+        "fromNameZhTw": "懶人獺",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "288-hoenn",
+        "toNameZhTw": "過動猿",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-288-hoenn-289-hoenn",
+        "fromFormId": "288-hoenn",
+        "fromNameZhTw": "過動猿",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "289-hoenn",
+        "toNameZhTw": "請假王",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "288-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-287-hoenn-288-hoenn",
+        "fromFormId": "287-hoenn",
+        "fromNameZhTw": "懶人獺",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "288-hoenn",
+        "toNameZhTw": "過動猿",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-288-hoenn-289-hoenn",
+        "fromFormId": "288-hoenn",
+        "fromNameZhTw": "過動猿",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "289-hoenn",
+        "toNameZhTw": "請假王",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-288-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "288-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-287-hoenn-288-hoenn",
+        "fromFormId": "287-hoenn",
+        "fromNameZhTw": "懶人獺",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "288-hoenn",
+        "toNameZhTw": "過動猿",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-288-hoenn-289-hoenn",
+        "fromFormId": "288-hoenn",
+        "fromNameZhTw": "過動猿",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "289-hoenn",
+        "toNameZhTw": "請假王",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "289-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-288-hoenn-289-hoenn",
+        "fromFormId": "288-hoenn",
+        "fromNameZhTw": "過動猿",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "289-hoenn",
+        "toNameZhTw": "請假王",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "289-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-288-hoenn-289-hoenn",
+        "fromFormId": "288-hoenn",
+        "fromNameZhTw": "過動猿",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "289-hoenn",
+        "toNameZhTw": "請假王",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "289-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-288-hoenn-289-hoenn",
+        "fromFormId": "288-hoenn",
+        "fromNameZhTw": "過動猿",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "289-hoenn",
+        "toNameZhTw": "請假王",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-289-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "289-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-288-hoenn-289-hoenn",
+        "fromFormId": "288-hoenn",
+        "fromNameZhTw": "過動猿",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "289-hoenn",
+        "toNameZhTw": "請假王",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "290-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-290-hoenn-291-hoenn",
+        "fromFormId": "290-hoenn",
+        "fromNameZhTw": "土居忍士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "291-hoenn",
+        "toNameZhTw": "鐵面忍者",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "290-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-290-hoenn-291-hoenn",
+        "fromFormId": "290-hoenn",
+        "fromNameZhTw": "土居忍士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "291-hoenn",
+        "toNameZhTw": "鐵面忍者",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "290-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-290-hoenn-291-hoenn",
+        "fromFormId": "290-hoenn",
+        "fromNameZhTw": "土居忍士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "291-hoenn",
+        "toNameZhTw": "鐵面忍者",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "290-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-290-hoenn-291-hoenn",
+        "fromFormId": "290-hoenn",
+        "fromNameZhTw": "土居忍士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "291-hoenn",
+        "toNameZhTw": "鐵面忍者",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "291-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-290-hoenn-291-hoenn",
+        "fromFormId": "290-hoenn",
+        "fromNameZhTw": "土居忍士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "291-hoenn",
+        "toNameZhTw": "鐵面忍者",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "291-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-290-hoenn-291-hoenn",
+        "fromFormId": "290-hoenn",
+        "fromNameZhTw": "土居忍士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "291-hoenn",
+        "toNameZhTw": "鐵面忍者",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "291-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-290-hoenn-291-hoenn",
+        "fromFormId": "290-hoenn",
+        "fromNameZhTw": "土居忍士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "291-hoenn",
+        "toNameZhTw": "鐵面忍者",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-291-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "291-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-290-hoenn-291-hoenn",
+        "fromFormId": "290-hoenn",
+        "fromNameZhTw": "土居忍士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "291-hoenn",
+        "toNameZhTw": "鐵面忍者",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "292-hoenn-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "292-hoenn-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "292-hoenn-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-292-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "292-hoenn-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "293-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-293-hoenn-294-hoenn",
+        "fromFormId": "293-hoenn",
+        "fromNameZhTw": "咕妞妞",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "294-hoenn",
+        "toNameZhTw": "吼爆彈",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "293-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-293-hoenn-294-hoenn",
+        "fromFormId": "293-hoenn",
+        "fromNameZhTw": "咕妞妞",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "294-hoenn",
+        "toNameZhTw": "吼爆彈",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "293-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-293-hoenn-294-hoenn",
+        "fromFormId": "293-hoenn",
+        "fromNameZhTw": "咕妞妞",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "294-hoenn",
+        "toNameZhTw": "吼爆彈",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "293-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-293-hoenn-294-hoenn",
+        "fromFormId": "293-hoenn",
+        "fromNameZhTw": "咕妞妞",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "294-hoenn",
+        "toNameZhTw": "吼爆彈",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "294-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-293-hoenn-294-hoenn",
+        "fromFormId": "293-hoenn",
+        "fromNameZhTw": "咕妞妞",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "294-hoenn",
+        "toNameZhTw": "吼爆彈",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-294-hoenn-295-hoenn",
+        "fromFormId": "294-hoenn",
+        "fromNameZhTw": "吼爆彈",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "295-hoenn",
+        "toNameZhTw": "爆音怪",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "294-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-293-hoenn-294-hoenn",
+        "fromFormId": "293-hoenn",
+        "fromNameZhTw": "咕妞妞",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "294-hoenn",
+        "toNameZhTw": "吼爆彈",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-294-hoenn-295-hoenn",
+        "fromFormId": "294-hoenn",
+        "fromNameZhTw": "吼爆彈",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "295-hoenn",
+        "toNameZhTw": "爆音怪",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "294-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-293-hoenn-294-hoenn",
+        "fromFormId": "293-hoenn",
+        "fromNameZhTw": "咕妞妞",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "294-hoenn",
+        "toNameZhTw": "吼爆彈",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-294-hoenn-295-hoenn",
+        "fromFormId": "294-hoenn",
+        "fromNameZhTw": "吼爆彈",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "295-hoenn",
+        "toNameZhTw": "爆音怪",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-294-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "294-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-293-hoenn-294-hoenn",
+        "fromFormId": "293-hoenn",
+        "fromNameZhTw": "咕妞妞",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "294-hoenn",
+        "toNameZhTw": "吼爆彈",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-294-hoenn-295-hoenn",
+        "fromFormId": "294-hoenn",
+        "fromNameZhTw": "吼爆彈",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "295-hoenn",
+        "toNameZhTw": "爆音怪",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "295-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-294-hoenn-295-hoenn",
+        "fromFormId": "294-hoenn",
+        "fromNameZhTw": "吼爆彈",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "295-hoenn",
+        "toNameZhTw": "爆音怪",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "295-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-294-hoenn-295-hoenn",
+        "fromFormId": "294-hoenn",
+        "fromNameZhTw": "吼爆彈",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "295-hoenn",
+        "toNameZhTw": "爆音怪",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "295-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-294-hoenn-295-hoenn",
+        "fromFormId": "294-hoenn",
+        "fromNameZhTw": "吼爆彈",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "295-hoenn",
+        "toNameZhTw": "爆音怪",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-295-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "295-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-294-hoenn-295-hoenn",
+        "fromFormId": "294-hoenn",
+        "fromNameZhTw": "吼爆彈",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "295-hoenn",
+        "toNameZhTw": "爆音怪",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "296-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-296-hoenn-297-hoenn",
+        "fromFormId": "296-hoenn",
+        "fromNameZhTw": "幕下力士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "297-hoenn",
+        "toNameZhTw": "鐵掌力士",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "296-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-296-hoenn-297-hoenn",
+        "fromFormId": "296-hoenn",
+        "fromNameZhTw": "幕下力士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "297-hoenn",
+        "toNameZhTw": "鐵掌力士",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-296-hoenn-normal",
         "fieldName": "decision",
         "previousValue": "TRANSFER_CANDIDATE",
         "newValue": "CONDITIONAL_KEEP",
@@ -31368,7 +32106,7 @@
         "source": null
       },
       {
-        "id": "recalibrate-20260809-disposition-281-hoenn-shadow",
+        "id": "recalibrate-20260809-disposition-296-hoenn-normal",
         "fieldName": "assessmentDisposition",
         "previousValue": "NO_SIGNIFICANT_USE",
         "newValue": "LIMITED_USE",
@@ -31378,5 +32116,1570 @@
         "source": null
       }
     ]
+  },
+  "296-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-296-hoenn-297-hoenn",
+        "fromFormId": "296-hoenn",
+        "fromNameZhTw": "幕下力士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "297-hoenn",
+        "toNameZhTw": "鐵掌力士",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "296-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-296-hoenn-297-hoenn",
+        "fromFormId": "296-hoenn",
+        "fromNameZhTw": "幕下力士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "297-hoenn",
+        "toNameZhTw": "鐵掌力士",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-296-hoenn-shadow",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-296-hoenn-shadow",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "297-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-296-hoenn-297-hoenn",
+        "fromFormId": "296-hoenn",
+        "fromNameZhTw": "幕下力士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "297-hoenn",
+        "toNameZhTw": "鐵掌力士",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "297-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-296-hoenn-297-hoenn",
+        "fromFormId": "296-hoenn",
+        "fromNameZhTw": "幕下力士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "297-hoenn",
+        "toNameZhTw": "鐵掌力士",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "297-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-296-hoenn-297-hoenn",
+        "fromFormId": "296-hoenn",
+        "fromNameZhTw": "幕下力士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "297-hoenn",
+        "toNameZhTw": "鐵掌力士",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-297-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "297-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-296-hoenn-297-hoenn",
+        "fromFormId": "296-hoenn",
+        "fromNameZhTw": "幕下力士",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "297-hoenn",
+        "toNameZhTw": "鐵掌力士",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "298-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-298-hoenn-183-johto",
+        "fromFormId": "298-hoenn",
+        "fromNameZhTw": "瑪力露",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "183-johto",
+        "toNameZhTw": "瑪力露",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "瑪力露麗家族的寶寶進化；依遊戲內糖果與友好度條件為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "298-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-298-hoenn-183-johto",
+        "fromFormId": "298-hoenn",
+        "fromNameZhTw": "瑪力露",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "183-johto",
+        "toNameZhTw": "瑪力露",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "瑪力露麗家族的寶寶進化；依遊戲內糖果與友好度條件為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-298-hoenn-normal",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-298-hoenn-normal",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "298-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-298-hoenn-183-johto",
+        "fromFormId": "298-hoenn",
+        "fromNameZhTw": "瑪力露",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "183-johto",
+        "toNameZhTw": "瑪力露",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "瑪力露麗家族的寶寶進化；依遊戲內糖果與友好度條件為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-298-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "298-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-298-hoenn-183-johto",
+        "fromFormId": "298-hoenn",
+        "fromNameZhTw": "瑪力露",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "183-johto",
+        "toNameZhTw": "瑪力露",
+        "toFormNameZhTw": "城都",
+        "evolutionMethodZhTw": "瑪力露麗家族的寶寶進化；依遊戲內糖果與友好度條件為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "299-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-cross-299-hoenn-476-other",
+        "fromFormId": "299-hoenn",
+        "fromNameZhTw": "朝北鼻",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "476-other",
+        "toNameZhTw": "大朝北鼻",
+        "toFormNameZhTw": "其他",
+        "evolutionMethodZhTw": "在磁場特殊地點消耗糖果進化；以 Pokemon GO 當期條件為準",
+        "availabilityNotesZhTw": "正式後續進化；大朝北鼻目前以 OTHER stub 表示，前階朝北鼻保留符合進化與個體品質條件的候選。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "299-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-cross-299-hoenn-476-other",
+        "fromFormId": "299-hoenn",
+        "fromNameZhTw": "朝北鼻",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "476-other",
+        "toNameZhTw": "大朝北鼻",
+        "toFormNameZhTw": "其他",
+        "evolutionMethodZhTw": "在磁場特殊地點消耗糖果進化；以 Pokemon GO 當期條件為準",
+        "availabilityNotesZhTw": "正式後續進化；大朝北鼻目前以 OTHER stub 表示，前階朝北鼻保留符合進化與個體品質條件的候選。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-299-hoenn-normal",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-299-hoenn-normal",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "299-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-cross-299-hoenn-476-other",
+        "fromFormId": "299-hoenn",
+        "fromNameZhTw": "朝北鼻",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "476-other",
+        "toNameZhTw": "大朝北鼻",
+        "toFormNameZhTw": "其他",
+        "evolutionMethodZhTw": "在磁場特殊地點消耗糖果進化；以 Pokemon GO 當期條件為準",
+        "availabilityNotesZhTw": "正式後續進化；大朝北鼻目前以 OTHER stub 表示，前階朝北鼻保留符合進化與個體品質條件的候選。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "299-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-cross-299-hoenn-476-other",
+        "fromFormId": "299-hoenn",
+        "fromNameZhTw": "朝北鼻",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "476-other",
+        "toNameZhTw": "大朝北鼻",
+        "toFormNameZhTw": "其他",
+        "evolutionMethodZhTw": "在磁場特殊地點消耗糖果進化；以 Pokemon GO 當期條件為準",
+        "availabilityNotesZhTw": "正式後續進化；大朝北鼻目前以 OTHER stub 表示，前階朝北鼻保留符合進化與個體品質條件的候選。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-299-hoenn-shadow",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-299-hoenn-shadow",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "300-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-300-hoenn-301-hoenn",
+        "fromFormId": "300-hoenn",
+        "fromNameZhTw": "向尾喵",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "301-hoenn",
+        "toNameZhTw": "優雅貓",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "300-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-300-hoenn-301-hoenn",
+        "fromFormId": "300-hoenn",
+        "fromNameZhTw": "向尾喵",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "301-hoenn",
+        "toNameZhTw": "優雅貓",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "300-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-300-hoenn-301-hoenn",
+        "fromFormId": "300-hoenn",
+        "fromNameZhTw": "向尾喵",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "301-hoenn",
+        "toNameZhTw": "優雅貓",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "300-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-300-hoenn-301-hoenn",
+        "fromFormId": "300-hoenn",
+        "fromNameZhTw": "向尾喵",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "301-hoenn",
+        "toNameZhTw": "優雅貓",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "301-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-300-hoenn-301-hoenn",
+        "fromFormId": "300-hoenn",
+        "fromNameZhTw": "向尾喵",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "301-hoenn",
+        "toNameZhTw": "優雅貓",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "301-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-300-hoenn-301-hoenn",
+        "fromFormId": "300-hoenn",
+        "fromNameZhTw": "向尾喵",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "301-hoenn",
+        "toNameZhTw": "優雅貓",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "301-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-300-hoenn-301-hoenn",
+        "fromFormId": "300-hoenn",
+        "fromNameZhTw": "向尾喵",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "301-hoenn",
+        "toNameZhTw": "優雅貓",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-301-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "301-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-300-hoenn-301-hoenn",
+        "fromFormId": "300-hoenn",
+        "fromNameZhTw": "向尾喵",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "301-hoenn",
+        "toNameZhTw": "優雅貓",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "302-hoenn-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "302-hoenn-mega": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-302-hoenn-mega",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "302-hoenn-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-302-hoenn-normal",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "302-hoenn-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "302-hoenn-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-302-hoenn-shadow",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "303-hoenn-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "303-hoenn-mega": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-303-hoenn-mega",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "303-hoenn-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "303-hoenn-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "303-hoenn-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "304-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-304-hoenn-305-hoenn",
+        "fromFormId": "304-hoenn",
+        "fromNameZhTw": "可可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "305-hoenn",
+        "toNameZhTw": "可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "304-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-304-hoenn-305-hoenn",
+        "fromFormId": "304-hoenn",
+        "fromNameZhTw": "可可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "305-hoenn",
+        "toNameZhTw": "可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-304-hoenn-normal",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-304-hoenn-normal",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "304-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-304-hoenn-305-hoenn",
+        "fromFormId": "304-hoenn",
+        "fromNameZhTw": "可可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "305-hoenn",
+        "toNameZhTw": "可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "304-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-304-hoenn-305-hoenn",
+        "fromFormId": "304-hoenn",
+        "fromNameZhTw": "可可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "305-hoenn",
+        "toNameZhTw": "可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-304-hoenn-shadow",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-304-hoenn-shadow",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "305-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-304-hoenn-305-hoenn",
+        "fromFormId": "304-hoenn",
+        "fromNameZhTw": "可可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "305-hoenn",
+        "toNameZhTw": "可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-305-hoenn-306-hoenn",
+        "fromFormId": "305-hoenn",
+        "fromNameZhTw": "可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "306-hoenn",
+        "toNameZhTw": "波士可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "305-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-304-hoenn-305-hoenn",
+        "fromFormId": "304-hoenn",
+        "fromNameZhTw": "可可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "305-hoenn",
+        "toNameZhTw": "可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-305-hoenn-306-hoenn",
+        "fromFormId": "305-hoenn",
+        "fromNameZhTw": "可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "306-hoenn",
+        "toNameZhTw": "波士可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-305-hoenn-normal",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-305-hoenn-normal",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "305-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-304-hoenn-305-hoenn",
+        "fromFormId": "304-hoenn",
+        "fromNameZhTw": "可可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "305-hoenn",
+        "toNameZhTw": "可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-305-hoenn-306-hoenn",
+        "fromFormId": "305-hoenn",
+        "fromNameZhTw": "可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "306-hoenn",
+        "toNameZhTw": "波士可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "305-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-304-hoenn-305-hoenn",
+        "fromFormId": "304-hoenn",
+        "fromNameZhTw": "可可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "305-hoenn",
+        "toNameZhTw": "可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      },
+      {
+        "id": "evolution-gen3-282-311-305-hoenn-306-hoenn",
+        "fromFormId": "305-hoenn",
+        "fromNameZhTw": "可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "306-hoenn",
+        "toNameZhTw": "波士可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-305-hoenn-shadow",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-305-hoenn-shadow",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "306-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-305-hoenn-306-hoenn",
+        "fromFormId": "305-hoenn",
+        "fromNameZhTw": "可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "306-hoenn",
+        "toNameZhTw": "波士可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "306-hoenn-mega": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-305-hoenn-306-hoenn",
+        "fromFormId": "305-hoenn",
+        "fromNameZhTw": "可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "306-hoenn",
+        "toNameZhTw": "波士可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-306-hoenn-mega",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "306-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-305-hoenn-306-hoenn",
+        "fromFormId": "305-hoenn",
+        "fromNameZhTw": "可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "306-hoenn",
+        "toNameZhTw": "波士可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "306-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-305-hoenn-306-hoenn",
+        "fromFormId": "305-hoenn",
+        "fromNameZhTw": "可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "306-hoenn",
+        "toNameZhTw": "波士可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-306-hoenn-purified",
+        "fieldName": "decision",
+        "previousValue": "CONDITIONAL_KEEP",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-306-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "LIMITED_USE",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "306-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-305-hoenn-306-hoenn",
+        "fromFormId": "305-hoenn",
+        "fromNameZhTw": "可多拉",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "306-hoenn",
+        "toNameZhTw": "波士可多拉",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "307-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-307-hoenn-308-hoenn",
+        "fromFormId": "307-hoenn",
+        "fromNameZhTw": "瑪沙那",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "308-hoenn",
+        "toNameZhTw": "恰雷姆",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "307-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-307-hoenn-308-hoenn",
+        "fromFormId": "307-hoenn",
+        "fromNameZhTw": "瑪沙那",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "308-hoenn",
+        "toNameZhTw": "恰雷姆",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-307-hoenn-normal",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-307-hoenn-normal",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "307-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-307-hoenn-308-hoenn",
+        "fromFormId": "307-hoenn",
+        "fromNameZhTw": "瑪沙那",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "308-hoenn",
+        "toNameZhTw": "恰雷姆",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "307-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-307-hoenn-308-hoenn",
+        "fromFormId": "307-hoenn",
+        "fromNameZhTw": "瑪沙那",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "308-hoenn",
+        "toNameZhTw": "恰雷姆",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-307-hoenn-shadow",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-307-hoenn-shadow",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "308-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-307-hoenn-308-hoenn",
+        "fromFormId": "307-hoenn",
+        "fromNameZhTw": "瑪沙那",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "308-hoenn",
+        "toNameZhTw": "恰雷姆",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "308-hoenn-mega": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-307-hoenn-308-hoenn",
+        "fromFormId": "307-hoenn",
+        "fromNameZhTw": "瑪沙那",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "308-hoenn",
+        "toNameZhTw": "恰雷姆",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-308-hoenn-mega",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "308-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-307-hoenn-308-hoenn",
+        "fromFormId": "307-hoenn",
+        "fromNameZhTw": "瑪沙那",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "308-hoenn",
+        "toNameZhTw": "恰雷姆",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-308-hoenn-normal",
+        "fieldName": "decision",
+        "previousValue": "CONDITIONAL_KEEP",
+        "newValue": "KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "308-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-307-hoenn-308-hoenn",
+        "fromFormId": "307-hoenn",
+        "fromNameZhTw": "瑪沙那",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "308-hoenn",
+        "toNameZhTw": "恰雷姆",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-308-hoenn-purified",
+        "fieldName": "decision",
+        "previousValue": "CONDITIONAL_KEEP",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-308-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "LIMITED_USE",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "308-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-307-hoenn-308-hoenn",
+        "fromFormId": "307-hoenn",
+        "fromNameZhTw": "瑪沙那",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "308-hoenn",
+        "toNameZhTw": "恰雷姆",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "309-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-309-hoenn-310-hoenn",
+        "fromFormId": "309-hoenn",
+        "fromNameZhTw": "落雷獸",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "310-hoenn",
+        "toNameZhTw": "雷電獸",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "309-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-309-hoenn-310-hoenn",
+        "fromFormId": "309-hoenn",
+        "fromNameZhTw": "落雷獸",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "310-hoenn",
+        "toNameZhTw": "雷電獸",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-309-hoenn-normal",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-309-hoenn-normal",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "309-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-309-hoenn-310-hoenn",
+        "fromFormId": "309-hoenn",
+        "fromNameZhTw": "落雷獸",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "310-hoenn",
+        "toNameZhTw": "雷電獸",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "309-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-309-hoenn-310-hoenn",
+        "fromFormId": "309-hoenn",
+        "fromNameZhTw": "落雷獸",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "310-hoenn",
+        "toNameZhTw": "雷電獸",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-309-hoenn-shadow",
+        "fieldName": "decision",
+        "previousValue": "TRANSFER_CANDIDATE",
+        "newValue": "CONDITIONAL_KEEP",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-309-hoenn-shadow",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "NO_SIGNIFICANT_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "310-hoenn-dynamax": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-309-hoenn-310-hoenn",
+        "fromFormId": "309-hoenn",
+        "fromNameZhTw": "落雷獸",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "310-hoenn",
+        "toNameZhTw": "雷電獸",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "310-hoenn-mega": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-309-hoenn-310-hoenn",
+        "fromFormId": "309-hoenn",
+        "fromNameZhTw": "落雷獸",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "310-hoenn",
+        "toNameZhTw": "雷電獸",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-disposition-310-hoenn-mega",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "CLEAR_USE",
+        "newValue": "LIMITED_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "310-hoenn-normal": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-309-hoenn-310-hoenn",
+        "fromFormId": "309-hoenn",
+        "fromNameZhTw": "落雷獸",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "310-hoenn",
+        "toNameZhTw": "雷電獸",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "310-hoenn-purified": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-309-hoenn-310-hoenn",
+        "fromFormId": "309-hoenn",
+        "fromNameZhTw": "落雷獸",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "310-hoenn",
+        "toNameZhTw": "雷電獸",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": [
+      {
+        "id": "recalibrate-20260809-decision-310-hoenn-purified",
+        "fieldName": "decision",
+        "previousValue": "CONDITIONAL_KEEP",
+        "newValue": "TRANSFER_CANDIDATE",
+        "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      },
+      {
+        "id": "recalibrate-20260809-disposition-310-hoenn-purified",
+        "fieldName": "assessmentDisposition",
+        "previousValue": "LIMITED_USE",
+        "newValue": "NO_SIGNIFICANT_USE",
+        "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+        "changedAt": "2026-08-08T16:00:00.000Z",
+        "rulesVersion": "2026.08.06-v7",
+        "source": null
+      }
+    ]
+  },
+  "310-hoenn-shadow": {
+    "paths": [
+      {
+        "id": "evolution-gen3-282-311-309-hoenn-310-hoenn",
+        "fromFormId": "309-hoenn",
+        "fromNameZhTw": "落雷獸",
+        "fromFormNameZhTw": "豐緣",
+        "toFormId": "310-hoenn",
+        "toNameZhTw": "雷電獸",
+        "toFormNameZhTw": "豐緣",
+        "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        "availabilityNotesZhTw": "此路徑已在第三世代研究表核對；跨批後續目標以正式 stub 保留。",
+        "requiresEvent": false,
+        "verifiedAt": "2026-08-08T16:00:00.000Z"
+      }
+    ],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "311-hoenn-dynamax": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "311-hoenn-normal": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "311-hoenn-purified": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
+  },
+  "311-hoenn-shadow": {
+    "paths": [],
+    "conflicts": [],
+    "changeLogs": []
   }
 }

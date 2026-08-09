@@ -282,7 +282,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -525,7 +525,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -768,7 +768,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -1001,8 +1001,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1362,7 +1362,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -1623,7 +1623,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -1841,7 +1841,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "NO_MAJOR_USE",
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2059,8 +2059,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"

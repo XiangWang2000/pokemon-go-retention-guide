@@ -263,6 +263,8 @@ async function main() {
     "research_notes/battle-242-251.json",
     "research_notes/official-252-281.json",
     "research_notes/battle-252-281.json",
+    "research_notes/official-282-311.json",
+    "research_notes/battle-282-311.json",
     "research_notes/cross-generation-evolution-targets.json",
   ]) {
     const parsed = JSON.parse((await readFile(file, "utf8")).replace(/^\uFEFF/, ""));

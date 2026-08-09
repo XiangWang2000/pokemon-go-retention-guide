@@ -41,8 +41,9 @@
 - 首頁由 server build 產生精簡摘要，直接輸出更新日期、PvE 四級分類統計與重要家族連結；完整 `HomeSnapshot` 仍由瀏覽器載入。
 - `worker/index.ts` 與 `scripts/purge-sites-cache.mjs` 形成部署後 CDN purge hook；正式部署成功後必須執行 `npm run sites:purge`，`/` 與 `/api/home` 驗證 `X-Data-Version`，`/data/home.json` 驗證公開檔案雜湊。Sites runtime 若拒絕 Cache API，hook 會退回 no-store 與 canonical revalidation，不得讓請求失敗。
 
-## 2026-08-08 #152-#251 Gen2 integration checkpoint
+## 2026-08-09 #152-#311 Gen2 and Gen3 integration checkpoint
 
-- DATA_VERSION is 2026.08.08-r20; the controlled pipeline imports #152-#251 and recomputes the full #001-#251 scope.
+- DATA_VERSION is 2026.08.09-r21; the controlled pipeline imports #152-#311 and recomputes the full #001-#311 scope.
 - Gen2 members are linked to existing Kanto families where appropriate; formal Johto migrations remove same-species `*-kanto` stubs, while future-generation targets remain explicit evolution stubs.
-- Runtime snapshot, review, Excel, schema validation, review consistency, snapshot provenance checks, and regression tests are generated for this checkpoint; #252+ is intentionally out of scope.
+- Gen3 standard forms use `HOENN` / `豐緣`; Wurmple branches, Nincada's special-family association, the Ralts/Gallade branch, Azurill's Johto-family merge, and the Probopass stub are represented without fake evolution edges.
+- Runtime snapshot, review, Excel, schema validation, review consistency, snapshot provenance checks, and regression tests are generated for this checkpoint; #312+ is intentionally out of scope.

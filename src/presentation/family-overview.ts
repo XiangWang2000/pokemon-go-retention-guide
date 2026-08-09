@@ -1,6 +1,7 @@
 import type { IvRecommendation } from "@/iv/strategy";
 import { isTrueDataPending, pveUseLevelLabelZhTw } from "@/rules/battle-assessment";
 import { CURRENT_DATA_MAX_DEX } from "@/config/data-scope";
+import { specialFamilyAssociations } from "@/data/family-associations";
 import type { CompactOverview, FormOverview, OverviewTone } from "./form-overview";
 
 export type MemberRoleKey =
@@ -850,7 +851,7 @@ export function buildFamilyIvOverview(members: FamilyMemberSummary[]) {
   };
 }
 
-function connectedComponents(forms: FormOverview[]) {
+function connectedComponents(forms: FormOverview[], familyKey: string) {
   const byId = new Map(forms.map((form) => [form.formId, form]));
   const adjacency = new Map(forms.map((form) => [form.formId, new Set<string>()]));
   const outgoing = new Map(forms.map((form) => [form.formId, new Set<string>()]));
@@ -866,6 +867,14 @@ function connectedComponents(forms: FormOverview[]) {
       adjacency.get(path.toFormId)!.add(path.fromFormId);
       outgoing.get(path.fromFormId)!.add(path.toFormId);
       incoming.get(path.toFormId)!.add(path.fromFormId);
+    }
+  }
+  for (const association of specialFamilyAssociations.filter((item) => item.familyKey === familyKey)) {
+    const present = association.formIds.filter((formId) => byId.has(formId));
+    const [anchor, ...related] = present;
+    for (const formId of related) {
+      adjacency.get(anchor!)?.add(formId);
+      adjacency.get(formId)?.add(anchor!);
     }
   }
   const seen = new Set<string>();
@@ -1028,7 +1037,7 @@ export function buildFamilyOverviews(forms: FormOverview[]) {
   }
   return [...byFamily.entries()]
     .flatMap(([familyKey, familyForms]) =>
-      connectedComponents(familyForms).map((component) =>
+      connectedComponents(familyForms, familyKey).map((component) =>
         buildFamilyOverview(component, familyKey),
       ),
     )

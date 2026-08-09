@@ -14,6 +14,17 @@
   "evolutionFamilyNotesZhTw": "奇魯莉安可進化為沙奈朵；男性個體並依遊戲條件可進化為艾路雷朵。",
   "evolutionPaths": [
     {
+      "id": "evolution-gen3-282-311-281-hoenn-282-hoenn",
+      "fromFormId": "281-hoenn",
+      "toFormId": "282-hoenn",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T16:00:00.000Z",
+      "isEvolutionStub": false,
+      "targetUseLevel": null,
+      "targetNameEn": "gardevoir",
+      "targetNameZhTw": "沙奈朵"
+    },
+    {
       "id": "evolution-cross-281-hoenn-475-other",
       "fromFormId": "281-hoenn",
       "toFormId": "475-other",
@@ -34,6 +45,8 @@
     "奇魯莉安"
   ],
   "evolutionNames": [
+    "gardevoir",
+    "沙奈朵",
     "Gallade",
     "艾路雷朵"
   ],
@@ -567,8 +580,8 @@
   "sources": [],
   "traces": [
     {
-      "ruleKey": "UNRELEASED_VARIANT",
-      "priority": 950,
+      "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+      "priority": 100,
       "matched": true,
       "resultDecision": "TRANSFER_CANDIDATE",
       "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"

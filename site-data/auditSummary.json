@@ -48048,13 +48048,13 @@
       "sourceCount": 2,
       "hasPvpUse": false,
       "pveUseLevels": [
-        "USABLE_OR_BUDGET"
+        "CORE_INVESTMENT"
       ],
       "hasRocketUse": false,
       "gymRating": "NOT_APPLICABLE",
       "hasMegaUse": false,
       "hasMaxUse": false,
-      "hasEvolutionUse": false
+      "hasEvolutionUse": true
     },
     {
       "id": "280-hoenn-purified",
@@ -48124,13 +48124,13 @@
       "sourceCount": 1,
       "hasPvpUse": false,
       "pveUseLevels": [
-        "USABLE_OR_BUDGET"
+        "CORE_INVESTMENT"
       ],
       "hasRocketUse": false,
       "gymRating": "NOT_APPLICABLE",
       "hasMegaUse": false,
       "hasMaxUse": false,
-      "hasEvolutionUse": false
+      "hasEvolutionUse": true
     },
     {
       "id": "281-hoenn-dynamax",
@@ -48145,6 +48145,8 @@
         "奇魯莉安"
       ],
       "evolutionNames": [
+        "gardevoir",
+        "沙奈朵",
         "Gallade",
         "艾路雷朵"
       ],
@@ -48183,6 +48185,8 @@
         "奇魯莉安"
       ],
       "evolutionNames": [
+        "gardevoir",
+        "沙奈朵",
         "Gallade",
         "艾路雷朵"
       ],
@@ -48200,13 +48204,13 @@
       "sourceCount": 2,
       "hasPvpUse": false,
       "pveUseLevels": [
-        "USABLE_OR_BUDGET"
+        "CORE_INVESTMENT"
       ],
       "hasRocketUse": false,
       "gymRating": "NOT_APPLICABLE",
       "hasMegaUse": false,
       "hasMaxUse": false,
-      "hasEvolutionUse": false
+      "hasEvolutionUse": true
     },
     {
       "id": "281-hoenn-purified",
@@ -48221,6 +48225,8 @@
         "奇魯莉安"
       ],
       "evolutionNames": [
+        "gardevoir",
+        "沙奈朵",
         "Gallade",
         "艾路雷朵"
       ],
@@ -48259,6 +48265,8 @@
         "奇魯莉安"
       ],
       "evolutionNames": [
+        "gardevoir",
+        "沙奈朵",
         "Gallade",
         "艾路雷朵"
       ],
@@ -48276,7 +48284,4597 @@
       "sourceCount": 1,
       "hasPvpUse": false,
       "pveUseLevels": [
+        "CORE_INVESTMENT"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "282-hoenn-dynamax",
+      "formId": "282-hoenn",
+      "dexNumber": 282,
+      "nameEn": "gardevoir",
+      "nameZhTw": "沙奈朵",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "gardevoir",
+        "沙奈朵"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "282-hoenn-mega",
+      "formId": "282-hoenn",
+      "dexNumber": 282,
+      "nameEn": "gardevoir",
+      "nameZhTw": "沙奈朵",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "gardevoir",
+        "沙奈朵"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": true,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "282-hoenn-normal",
+      "formId": "282-hoenn",
+      "dexNumber": 282,
+      "nameEn": "gardevoir",
+      "nameZhTw": "沙奈朵",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "gardevoir",
+        "沙奈朵"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 909,
+        "ULTRA": 553,
+        "MASTER": 289
+      },
+      "sourceCount": 7,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "CORE_INVESTMENT"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "282-hoenn-purified",
+      "formId": "282-hoenn",
+      "dexNumber": 282,
+      "nameEn": "gardevoir",
+      "nameZhTw": "沙奈朵",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "gardevoir",
+        "沙奈朵"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "282-hoenn-shadow",
+      "formId": "282-hoenn",
+      "dexNumber": 282,
+      "nameEn": "gardevoir",
+      "nameZhTw": "沙奈朵",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "gardevoir",
+        "沙奈朵"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 934,
+        "ULTRA": 586,
+        "MASTER": 242
+      },
+      "sourceCount": 5,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "CORE_INVESTMENT"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "283-hoenn-dynamax",
+      "formId": "283-hoenn",
+      "dexNumber": 283,
+      "nameEn": "surskit",
+      "nameZhTw": "水蛛",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "surskit",
+        "水蛛"
+      ],
+      "evolutionNames": [
+        "masquerain",
+        "雨翅蛾"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "283-hoenn-normal",
+      "formId": "283-hoenn",
+      "dexNumber": 283,
+      "nameEn": "surskit",
+      "nameZhTw": "水蛛",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "surskit",
+        "水蛛"
+      ],
+      "evolutionNames": [
+        "masquerain",
+        "雨翅蛾"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "283-hoenn-purified",
+      "formId": "283-hoenn",
+      "dexNumber": 283,
+      "nameEn": "surskit",
+      "nameZhTw": "水蛛",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "surskit",
+        "水蛛"
+      ],
+      "evolutionNames": [
+        "masquerain",
+        "雨翅蛾"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "283-hoenn-shadow",
+      "formId": "283-hoenn",
+      "dexNumber": 283,
+      "nameEn": "surskit",
+      "nameZhTw": "水蛛",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "surskit",
+        "水蛛"
+      ],
+      "evolutionNames": [
+        "masquerain",
+        "雨翅蛾"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "284-hoenn-dynamax",
+      "formId": "284-hoenn",
+      "dexNumber": 284,
+      "nameEn": "masquerain",
+      "nameZhTw": "雨翅蛾",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "masquerain",
+        "雨翅蛾"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "284-hoenn-normal",
+      "formId": "284-hoenn",
+      "dexNumber": 284,
+      "nameEn": "masquerain",
+      "nameZhTw": "雨翅蛾",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "masquerain",
+        "雨翅蛾"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1033,
+        "ULTRA": 757,
+        "MASTER": null
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "284-hoenn-purified",
+      "formId": "284-hoenn",
+      "dexNumber": 284,
+      "nameEn": "masquerain",
+      "nameZhTw": "雨翅蛾",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "masquerain",
+        "雨翅蛾"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "284-hoenn-shadow",
+      "formId": "284-hoenn",
+      "dexNumber": 284,
+      "nameEn": "masquerain",
+      "nameZhTw": "雨翅蛾",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "masquerain",
+        "雨翅蛾"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "285-hoenn-dynamax",
+      "formId": "285-hoenn",
+      "dexNumber": 285,
+      "nameEn": "shroomish",
+      "nameZhTw": "蘑蘑菇",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "shroomish",
+        "蘑蘑菇"
+      ],
+      "evolutionNames": [
+        "breloom",
+        "斗笠菇"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "285-hoenn-normal",
+      "formId": "285-hoenn",
+      "dexNumber": 285,
+      "nameEn": "shroomish",
+      "nameZhTw": "蘑蘑菇",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "shroomish",
+        "蘑蘑菇"
+      ],
+      "evolutionNames": [
+        "breloom",
+        "斗笠菇"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "285-hoenn-purified",
+      "formId": "285-hoenn",
+      "dexNumber": 285,
+      "nameEn": "shroomish",
+      "nameZhTw": "蘑蘑菇",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "shroomish",
+        "蘑蘑菇"
+      ],
+      "evolutionNames": [
+        "breloom",
+        "斗笠菇"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "285-hoenn-shadow",
+      "formId": "285-hoenn",
+      "dexNumber": 285,
+      "nameEn": "shroomish",
+      "nameZhTw": "蘑蘑菇",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "shroomish",
+        "蘑蘑菇"
+      ],
+      "evolutionNames": [
+        "breloom",
+        "斗笠菇"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "286-hoenn-dynamax",
+      "formId": "286-hoenn",
+      "dexNumber": 286,
+      "nameEn": "breloom",
+      "nameZhTw": "斗笠菇",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "breloom",
+        "斗笠菇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "286-hoenn-normal",
+      "formId": "286-hoenn",
+      "dexNumber": 286,
+      "nameEn": "breloom",
+      "nameZhTw": "斗笠菇",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "breloom",
+        "斗笠菇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 859,
+        "ULTRA": 627,
+        "MASTER": null
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "286-hoenn-purified",
+      "formId": "286-hoenn",
+      "dexNumber": 286,
+      "nameEn": "breloom",
+      "nameZhTw": "斗笠菇",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "breloom",
+        "斗笠菇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "286-hoenn-shadow",
+      "formId": "286-hoenn",
+      "dexNumber": 286,
+      "nameEn": "breloom",
+      "nameZhTw": "斗笠菇",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "breloom",
+        "斗笠菇"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "287-hoenn-dynamax",
+      "formId": "287-hoenn",
+      "dexNumber": 287,
+      "nameEn": "slakoth",
+      "nameZhTw": "懶人獺",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "slakoth",
+        "懶人獺"
+      ],
+      "evolutionNames": [
+        "vigoroth",
+        "過動猿"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "287-hoenn-normal",
+      "formId": "287-hoenn",
+      "dexNumber": 287,
+      "nameEn": "slakoth",
+      "nameZhTw": "懶人獺",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "slakoth",
+        "懶人獺"
+      ],
+      "evolutionNames": [
+        "vigoroth",
+        "過動猿"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "287-hoenn-purified",
+      "formId": "287-hoenn",
+      "dexNumber": 287,
+      "nameEn": "slakoth",
+      "nameZhTw": "懶人獺",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "slakoth",
+        "懶人獺"
+      ],
+      "evolutionNames": [
+        "vigoroth",
+        "過動猿"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "287-hoenn-shadow",
+      "formId": "287-hoenn",
+      "dexNumber": 287,
+      "nameEn": "slakoth",
+      "nameZhTw": "懶人獺",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "slakoth",
+        "懶人獺"
+      ],
+      "evolutionNames": [
+        "vigoroth",
+        "過動猿"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "288-hoenn-dynamax",
+      "formId": "288-hoenn",
+      "dexNumber": 288,
+      "nameEn": "vigoroth",
+      "nameZhTw": "過動猿",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "vigoroth",
+        "過動猿"
+      ],
+      "evolutionNames": [
+        "slaking",
+        "請假王"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "288-hoenn-normal",
+      "formId": "288-hoenn",
+      "dexNumber": 288,
+      "nameEn": "vigoroth",
+      "nameZhTw": "過動猿",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "vigoroth",
+        "過動猿"
+      ],
+      "evolutionNames": [
+        "slaking",
+        "請假王"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 388,
+        "ULTRA": 690,
+        "MASTER": null
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "288-hoenn-purified",
+      "formId": "288-hoenn",
+      "dexNumber": 288,
+      "nameEn": "vigoroth",
+      "nameZhTw": "過動猿",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "vigoroth",
+        "過動猿"
+      ],
+      "evolutionNames": [
+        "slaking",
+        "請假王"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "288-hoenn-shadow",
+      "formId": "288-hoenn",
+      "dexNumber": 288,
+      "nameEn": "vigoroth",
+      "nameZhTw": "過動猿",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "vigoroth",
+        "過動猿"
+      ],
+      "evolutionNames": [
+        "slaking",
+        "請假王"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "289-hoenn-dynamax",
+      "formId": "289-hoenn",
+      "dexNumber": 289,
+      "nameEn": "slaking",
+      "nameZhTw": "請假王",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "slaking",
+        "請假王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "289-hoenn-normal",
+      "formId": "289-hoenn",
+      "dexNumber": 289,
+      "nameEn": "slaking",
+      "nameZhTw": "請假王",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "slaking",
+        "請假王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1140,
+        "ULTRA": 840,
+        "MASTER": 402
+      },
+      "sourceCount": 5,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "289-hoenn-purified",
+      "formId": "289-hoenn",
+      "dexNumber": 289,
+      "nameEn": "slaking",
+      "nameZhTw": "請假王",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "slaking",
+        "請假王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "289-hoenn-shadow",
+      "formId": "289-hoenn",
+      "dexNumber": 289,
+      "nameEn": "slaking",
+      "nameZhTw": "請假王",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "slaking",
+        "請假王"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "290-hoenn-dynamax",
+      "formId": "290-hoenn",
+      "dexNumber": 290,
+      "nameEn": "nincada",
+      "nameZhTw": "土居忍士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "nincada",
+        "土居忍士"
+      ],
+      "evolutionNames": [
+        "ninjask",
+        "鐵面忍者"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "290-hoenn-normal",
+      "formId": "290-hoenn",
+      "dexNumber": 290,
+      "nameEn": "nincada",
+      "nameZhTw": "土居忍士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "nincada",
+        "土居忍士"
+      ],
+      "evolutionNames": [
+        "ninjask",
+        "鐵面忍者"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "290-hoenn-purified",
+      "formId": "290-hoenn",
+      "dexNumber": 290,
+      "nameEn": "nincada",
+      "nameZhTw": "土居忍士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "nincada",
+        "土居忍士"
+      ],
+      "evolutionNames": [
+        "ninjask",
+        "鐵面忍者"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "290-hoenn-shadow",
+      "formId": "290-hoenn",
+      "dexNumber": 290,
+      "nameEn": "nincada",
+      "nameZhTw": "土居忍士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "nincada",
+        "土居忍士"
+      ],
+      "evolutionNames": [
+        "ninjask",
+        "鐵面忍者"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "291-hoenn-dynamax",
+      "formId": "291-hoenn",
+      "dexNumber": 291,
+      "nameEn": "ninjask",
+      "nameZhTw": "鐵面忍者",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "ninjask",
+        "鐵面忍者"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "291-hoenn-normal",
+      "formId": "291-hoenn",
+      "dexNumber": 291,
+      "nameEn": "ninjask",
+      "nameZhTw": "鐵面忍者",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "ninjask",
+        "鐵面忍者"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 789,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "291-hoenn-purified",
+      "formId": "291-hoenn",
+      "dexNumber": 291,
+      "nameEn": "ninjask",
+      "nameZhTw": "鐵面忍者",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "ninjask",
+        "鐵面忍者"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "291-hoenn-shadow",
+      "formId": "291-hoenn",
+      "dexNumber": 291,
+      "nameEn": "ninjask",
+      "nameZhTw": "鐵面忍者",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "ninjask",
+        "鐵面忍者"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "292-hoenn-dynamax",
+      "formId": "292-hoenn",
+      "dexNumber": 292,
+      "nameEn": "shedinja",
+      "nameZhTw": "脫殼忍者",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "shedinja",
+        "脫殼忍者"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "292-hoenn-normal",
+      "formId": "292-hoenn",
+      "dexNumber": 292,
+      "nameEn": "shedinja",
+      "nameZhTw": "脫殼忍者",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "shedinja",
+        "脫殼忍者"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "292-hoenn-purified",
+      "formId": "292-hoenn",
+      "dexNumber": 292,
+      "nameEn": "shedinja",
+      "nameZhTw": "脫殼忍者",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "shedinja",
+        "脫殼忍者"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "292-hoenn-shadow",
+      "formId": "292-hoenn",
+      "dexNumber": 292,
+      "nameEn": "shedinja",
+      "nameZhTw": "脫殼忍者",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "shedinja",
+        "脫殼忍者"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "293-hoenn-dynamax",
+      "formId": "293-hoenn",
+      "dexNumber": 293,
+      "nameEn": "whismur",
+      "nameZhTw": "咕妞妞",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "whismur",
+        "咕妞妞"
+      ],
+      "evolutionNames": [
+        "loudred",
+        "吼爆彈"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "293-hoenn-normal",
+      "formId": "293-hoenn",
+      "dexNumber": 293,
+      "nameEn": "whismur",
+      "nameZhTw": "咕妞妞",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "whismur",
+        "咕妞妞"
+      ],
+      "evolutionNames": [
+        "loudred",
+        "吼爆彈"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "293-hoenn-purified",
+      "formId": "293-hoenn",
+      "dexNumber": 293,
+      "nameEn": "whismur",
+      "nameZhTw": "咕妞妞",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "whismur",
+        "咕妞妞"
+      ],
+      "evolutionNames": [
+        "loudred",
+        "吼爆彈"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "293-hoenn-shadow",
+      "formId": "293-hoenn",
+      "dexNumber": 293,
+      "nameEn": "whismur",
+      "nameZhTw": "咕妞妞",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "whismur",
+        "咕妞妞"
+      ],
+      "evolutionNames": [
+        "loudred",
+        "吼爆彈"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "294-hoenn-dynamax",
+      "formId": "294-hoenn",
+      "dexNumber": 294,
+      "nameEn": "loudred",
+      "nameZhTw": "吼爆彈",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "loudred",
+        "吼爆彈"
+      ],
+      "evolutionNames": [
+        "exploud",
+        "爆音怪"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "294-hoenn-normal",
+      "formId": "294-hoenn",
+      "dexNumber": 294,
+      "nameEn": "loudred",
+      "nameZhTw": "吼爆彈",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "loudred",
+        "吼爆彈"
+      ],
+      "evolutionNames": [
+        "exploud",
+        "爆音怪"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1054,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "294-hoenn-purified",
+      "formId": "294-hoenn",
+      "dexNumber": 294,
+      "nameEn": "loudred",
+      "nameZhTw": "吼爆彈",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "loudred",
+        "吼爆彈"
+      ],
+      "evolutionNames": [
+        "exploud",
+        "爆音怪"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "294-hoenn-shadow",
+      "formId": "294-hoenn",
+      "dexNumber": 294,
+      "nameEn": "loudred",
+      "nameZhTw": "吼爆彈",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "loudred",
+        "吼爆彈"
+      ],
+      "evolutionNames": [
+        "exploud",
+        "爆音怪"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "295-hoenn-dynamax",
+      "formId": "295-hoenn",
+      "dexNumber": 295,
+      "nameEn": "exploud",
+      "nameZhTw": "爆音怪",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "exploud",
+        "爆音怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "295-hoenn-normal",
+      "formId": "295-hoenn",
+      "dexNumber": 295,
+      "nameEn": "exploud",
+      "nameZhTw": "爆音怪",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "exploud",
+        "爆音怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 714,
+        "ULTRA": 523,
+        "MASTER": null
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "295-hoenn-purified",
+      "formId": "295-hoenn",
+      "dexNumber": 295,
+      "nameEn": "exploud",
+      "nameZhTw": "爆音怪",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "exploud",
+        "爆音怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "295-hoenn-shadow",
+      "formId": "295-hoenn",
+      "dexNumber": 295,
+      "nameEn": "exploud",
+      "nameZhTw": "爆音怪",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "exploud",
+        "爆音怪"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "296-hoenn-dynamax",
+      "formId": "296-hoenn",
+      "dexNumber": 296,
+      "nameEn": "makuhita",
+      "nameZhTw": "幕下力士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "makuhita",
+        "幕下力士"
+      ],
+      "evolutionNames": [
+        "hariyama",
+        "鐵掌力士"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "296-hoenn-normal",
+      "formId": "296-hoenn",
+      "dexNumber": 296,
+      "nameEn": "makuhita",
+      "nameZhTw": "幕下力士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "makuhita",
+        "幕下力士"
+      ],
+      "evolutionNames": [
+        "hariyama",
+        "鐵掌力士"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
         "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "296-hoenn-purified",
+      "formId": "296-hoenn",
+      "dexNumber": 296,
+      "nameEn": "makuhita",
+      "nameZhTw": "幕下力士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "makuhita",
+        "幕下力士"
+      ],
+      "evolutionNames": [
+        "hariyama",
+        "鐵掌力士"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "296-hoenn-shadow",
+      "formId": "296-hoenn",
+      "dexNumber": 296,
+      "nameEn": "makuhita",
+      "nameZhTw": "幕下力士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "makuhita",
+        "幕下力士"
+      ],
+      "evolutionNames": [
+        "hariyama",
+        "鐵掌力士"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "297-hoenn-dynamax",
+      "formId": "297-hoenn",
+      "dexNumber": 297,
+      "nameEn": "hariyama",
+      "nameZhTw": "鐵掌力士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "hariyama",
+        "鐵掌力士"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "297-hoenn-normal",
+      "formId": "297-hoenn",
+      "dexNumber": 297,
+      "nameEn": "hariyama",
+      "nameZhTw": "鐵掌力士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "hariyama",
+        "鐵掌力士"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 392,
+        "ULTRA": 286,
+        "MASTER": 233
+      },
+      "sourceCount": 6,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "297-hoenn-purified",
+      "formId": "297-hoenn",
+      "dexNumber": 297,
+      "nameEn": "hariyama",
+      "nameZhTw": "鐵掌力士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "hariyama",
+        "鐵掌力士"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "297-hoenn-shadow",
+      "formId": "297-hoenn",
+      "dexNumber": 297,
+      "nameEn": "hariyama",
+      "nameZhTw": "鐵掌力士",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "hariyama",
+        "鐵掌力士"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "298-hoenn-dynamax",
+      "formId": "298-hoenn",
+      "dexNumber": 298,
+      "nameEn": "azurill",
+      "nameZhTw": "瑪力露",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "azurill",
+        "瑪力露"
+      ],
+      "evolutionNames": [
+        "marill",
+        "瑪力露"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "298-hoenn-normal",
+      "formId": "298-hoenn",
+      "dexNumber": 298,
+      "nameEn": "azurill",
+      "nameZhTw": "瑪力露",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "azurill",
+        "瑪力露"
+      ],
+      "evolutionNames": [
+        "marill",
+        "瑪力露"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "298-hoenn-purified",
+      "formId": "298-hoenn",
+      "dexNumber": 298,
+      "nameEn": "azurill",
+      "nameZhTw": "瑪力露",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "azurill",
+        "瑪力露"
+      ],
+      "evolutionNames": [
+        "marill",
+        "瑪力露"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "298-hoenn-shadow",
+      "formId": "298-hoenn",
+      "dexNumber": 298,
+      "nameEn": "azurill",
+      "nameZhTw": "瑪力露",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "azurill",
+        "瑪力露"
+      ],
+      "evolutionNames": [
+        "marill",
+        "瑪力露"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "299-hoenn-dynamax",
+      "formId": "299-hoenn",
+      "dexNumber": 299,
+      "nameEn": "nosepass",
+      "nameZhTw": "朝北鼻",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "nosepass",
+        "朝北鼻"
+      ],
+      "evolutionNames": [
+        "Probopass",
+        "大朝北鼻"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "299-hoenn-normal",
+      "formId": "299-hoenn",
+      "dexNumber": 299,
+      "nameEn": "nosepass",
+      "nameZhTw": "朝北鼻",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "nosepass",
+        "朝北鼻"
+      ],
+      "evolutionNames": [
+        "Probopass",
+        "大朝北鼻"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1074,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "299-hoenn-purified",
+      "formId": "299-hoenn",
+      "dexNumber": 299,
+      "nameEn": "nosepass",
+      "nameZhTw": "朝北鼻",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "nosepass",
+        "朝北鼻"
+      ],
+      "evolutionNames": [
+        "Probopass",
+        "大朝北鼻"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "299-hoenn-shadow",
+      "formId": "299-hoenn",
+      "dexNumber": 299,
+      "nameEn": "nosepass",
+      "nameZhTw": "朝北鼻",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "nosepass",
+        "朝北鼻"
+      ],
+      "evolutionNames": [
+        "Probopass",
+        "大朝北鼻"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1084,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "300-hoenn-dynamax",
+      "formId": "300-hoenn",
+      "dexNumber": 300,
+      "nameEn": "skitty",
+      "nameZhTw": "向尾喵",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "skitty",
+        "向尾喵"
+      ],
+      "evolutionNames": [
+        "delcatty",
+        "優雅貓"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "300-hoenn-normal",
+      "formId": "300-hoenn",
+      "dexNumber": 300,
+      "nameEn": "skitty",
+      "nameZhTw": "向尾喵",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "skitty",
+        "向尾喵"
+      ],
+      "evolutionNames": [
+        "delcatty",
+        "優雅貓"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "300-hoenn-purified",
+      "formId": "300-hoenn",
+      "dexNumber": 300,
+      "nameEn": "skitty",
+      "nameZhTw": "向尾喵",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "skitty",
+        "向尾喵"
+      ],
+      "evolutionNames": [
+        "delcatty",
+        "優雅貓"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "300-hoenn-shadow",
+      "formId": "300-hoenn",
+      "dexNumber": 300,
+      "nameEn": "skitty",
+      "nameZhTw": "向尾喵",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "skitty",
+        "向尾喵"
+      ],
+      "evolutionNames": [
+        "delcatty",
+        "優雅貓"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "301-hoenn-dynamax",
+      "formId": "301-hoenn",
+      "dexNumber": 301,
+      "nameEn": "delcatty",
+      "nameZhTw": "優雅貓",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "delcatty",
+        "優雅貓"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "301-hoenn-normal",
+      "formId": "301-hoenn",
+      "dexNumber": 301,
+      "nameEn": "delcatty",
+      "nameZhTw": "優雅貓",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "delcatty",
+        "優雅貓"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 761,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "301-hoenn-purified",
+      "formId": "301-hoenn",
+      "dexNumber": 301,
+      "nameEn": "delcatty",
+      "nameZhTw": "優雅貓",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "delcatty",
+        "優雅貓"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "301-hoenn-shadow",
+      "formId": "301-hoenn",
+      "dexNumber": 301,
+      "nameEn": "delcatty",
+      "nameZhTw": "優雅貓",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "delcatty",
+        "優雅貓"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "302-hoenn-dynamax",
+      "formId": "302-hoenn",
+      "dexNumber": 302,
+      "nameEn": "sableye",
+      "nameZhTw": "勾魂眼",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "sableye",
+        "勾魂眼"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "302-hoenn-mega",
+      "formId": "302-hoenn",
+      "dexNumber": 302,
+      "nameEn": "sableye",
+      "nameZhTw": "勾魂眼",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "sableye",
+        "勾魂眼"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": true,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "302-hoenn-normal",
+      "formId": "302-hoenn",
+      "dexNumber": 302,
+      "nameEn": "sableye",
+      "nameZhTw": "勾魂眼",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "sableye",
+        "勾魂眼"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 47,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "302-hoenn-purified",
+      "formId": "302-hoenn",
+      "dexNumber": 302,
+      "nameEn": "sableye",
+      "nameZhTw": "勾魂眼",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "sableye",
+        "勾魂眼"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "302-hoenn-shadow",
+      "formId": "302-hoenn",
+      "dexNumber": 302,
+      "nameEn": "sableye",
+      "nameZhTw": "勾魂眼",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "sableye",
+        "勾魂眼"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 30,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "303-hoenn-dynamax",
+      "formId": "303-hoenn",
+      "dexNumber": 303,
+      "nameEn": "mawile",
+      "nameZhTw": "大嘴娃",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "mawile",
+        "大嘴娃"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "303-hoenn-mega",
+      "formId": "303-hoenn",
+      "dexNumber": 303,
+      "nameEn": "mawile",
+      "nameZhTw": "大嘴娃",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "mawile",
+        "大嘴娃"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": true,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "303-hoenn-normal",
+      "formId": "303-hoenn",
+      "dexNumber": 303,
+      "nameEn": "mawile",
+      "nameZhTw": "大嘴娃",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "mawile",
+        "大嘴娃"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 222,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "303-hoenn-purified",
+      "formId": "303-hoenn",
+      "dexNumber": 303,
+      "nameEn": "mawile",
+      "nameZhTw": "大嘴娃",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "mawile",
+        "大嘴娃"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "303-hoenn-shadow",
+      "formId": "303-hoenn",
+      "dexNumber": 303,
+      "nameEn": "mawile",
+      "nameZhTw": "大嘴娃",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "mawile",
+        "大嘴娃"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 294,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "304-hoenn-dynamax",
+      "formId": "304-hoenn",
+      "dexNumber": 304,
+      "nameEn": "aron",
+      "nameZhTw": "可可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "aron",
+        "可可多拉"
+      ],
+      "evolutionNames": [
+        "lairon",
+        "可多拉"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "304-hoenn-normal",
+      "formId": "304-hoenn",
+      "dexNumber": 304,
+      "nameEn": "aron",
+      "nameZhTw": "可可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "aron",
+        "可可多拉"
+      ],
+      "evolutionNames": [
+        "lairon",
+        "可多拉"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 405,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "304-hoenn-purified",
+      "formId": "304-hoenn",
+      "dexNumber": 304,
+      "nameEn": "aron",
+      "nameZhTw": "可可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "aron",
+        "可可多拉"
+      ],
+      "evolutionNames": [
+        "lairon",
+        "可多拉"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "304-hoenn-shadow",
+      "formId": "304-hoenn",
+      "dexNumber": 304,
+      "nameEn": "aron",
+      "nameZhTw": "可可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "aron",
+        "可可多拉"
+      ],
+      "evolutionNames": [
+        "lairon",
+        "可多拉"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 467,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "305-hoenn-dynamax",
+      "formId": "305-hoenn",
+      "dexNumber": 305,
+      "nameEn": "lairon",
+      "nameZhTw": "可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "lairon",
+        "可多拉"
+      ],
+      "evolutionNames": [
+        "aggron",
+        "波士可多拉"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "305-hoenn-normal",
+      "formId": "305-hoenn",
+      "dexNumber": 305,
+      "nameEn": "lairon",
+      "nameZhTw": "可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "lairon",
+        "可多拉"
+      ],
+      "evolutionNames": [
+        "aggron",
+        "波士可多拉"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 347,
+        "ULTRA": 574,
+        "MASTER": null
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "305-hoenn-purified",
+      "formId": "305-hoenn",
+      "dexNumber": 305,
+      "nameEn": "lairon",
+      "nameZhTw": "可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "lairon",
+        "可多拉"
+      ],
+      "evolutionNames": [
+        "aggron",
+        "波士可多拉"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "305-hoenn-shadow",
+      "formId": "305-hoenn",
+      "dexNumber": 305,
+      "nameEn": "lairon",
+      "nameZhTw": "可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "lairon",
+        "可多拉"
+      ],
+      "evolutionNames": [
+        "aggron",
+        "波士可多拉"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 419,
+        "ULTRA": 629,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "306-hoenn-dynamax",
+      "formId": "306-hoenn",
+      "dexNumber": 306,
+      "nameEn": "aggron",
+      "nameZhTw": "波士可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "aggron",
+        "波士可多拉"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "306-hoenn-mega",
+      "formId": "306-hoenn",
+      "dexNumber": 306,
+      "nameEn": "aggron",
+      "nameZhTw": "波士可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "aggron",
+        "波士可多拉"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": true,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "306-hoenn-normal",
+      "formId": "306-hoenn",
+      "dexNumber": 306,
+      "nameEn": "aggron",
+      "nameZhTw": "波士可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "aggron",
+        "波士可多拉"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 765,
+        "ULTRA": 490,
+        "MASTER": 245
+      },
+      "sourceCount": 7,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "306-hoenn-purified",
+      "formId": "306-hoenn",
+      "dexNumber": 306,
+      "nameEn": "aggron",
+      "nameZhTw": "波士可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "aggron",
+        "波士可多拉"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "306-hoenn-shadow",
+      "formId": "306-hoenn",
+      "dexNumber": 306,
+      "nameEn": "aggron",
+      "nameZhTw": "波士可多拉",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "aggron",
+        "波士可多拉"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 899,
+        "ULTRA": 532,
+        "MASTER": 231
+      },
+      "sourceCount": 5,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "307-hoenn-dynamax",
+      "formId": "307-hoenn",
+      "dexNumber": 307,
+      "nameEn": "meditite",
+      "nameZhTw": "瑪沙那",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "meditite",
+        "瑪沙那"
+      ],
+      "evolutionNames": [
+        "medicham",
+        "恰雷姆"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "307-hoenn-normal",
+      "formId": "307-hoenn",
+      "dexNumber": 307,
+      "nameEn": "meditite",
+      "nameZhTw": "瑪沙那",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "meditite",
+        "瑪沙那"
+      ],
+      "evolutionNames": [
+        "medicham",
+        "恰雷姆"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "307-hoenn-purified",
+      "formId": "307-hoenn",
+      "dexNumber": 307,
+      "nameEn": "meditite",
+      "nameZhTw": "瑪沙那",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "meditite",
+        "瑪沙那"
+      ],
+      "evolutionNames": [
+        "medicham",
+        "恰雷姆"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "307-hoenn-shadow",
+      "formId": "307-hoenn",
+      "dexNumber": 307,
+      "nameEn": "meditite",
+      "nameZhTw": "瑪沙那",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "meditite",
+        "瑪沙那"
+      ],
+      "evolutionNames": [
+        "medicham",
+        "恰雷姆"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "308-hoenn-dynamax",
+      "formId": "308-hoenn",
+      "dexNumber": 308,
+      "nameEn": "medicham",
+      "nameZhTw": "恰雷姆",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "medicham",
+        "恰雷姆"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "308-hoenn-mega",
+      "formId": "308-hoenn",
+      "dexNumber": 308,
+      "nameEn": "medicham",
+      "nameZhTw": "恰雷姆",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "medicham",
+        "恰雷姆"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": true,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "308-hoenn-normal",
+      "formId": "308-hoenn",
+      "dexNumber": 308,
+      "nameEn": "medicham",
+      "nameZhTw": "恰雷姆",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "medicham",
+        "恰雷姆"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 33,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 5,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "308-hoenn-purified",
+      "formId": "308-hoenn",
+      "dexNumber": 308,
+      "nameEn": "medicham",
+      "nameZhTw": "恰雷姆",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "medicham",
+        "恰雷姆"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "308-hoenn-shadow",
+      "formId": "308-hoenn",
+      "dexNumber": 308,
+      "nameEn": "medicham",
+      "nameZhTw": "恰雷姆",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "medicham",
+        "恰雷姆"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "309-hoenn-dynamax",
+      "formId": "309-hoenn",
+      "dexNumber": 309,
+      "nameEn": "electrike",
+      "nameZhTw": "落雷獸",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "electrike",
+        "落雷獸"
+      ],
+      "evolutionNames": [
+        "manectric",
+        "雷電獸"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "309-hoenn-normal",
+      "formId": "309-hoenn",
+      "dexNumber": 309,
+      "nameEn": "electrike",
+      "nameZhTw": "落雷獸",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "electrike",
+        "落雷獸"
+      ],
+      "evolutionNames": [
+        "manectric",
+        "雷電獸"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "309-hoenn-purified",
+      "formId": "309-hoenn",
+      "dexNumber": 309,
+      "nameEn": "electrike",
+      "nameZhTw": "落雷獸",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "electrike",
+        "落雷獸"
+      ],
+      "evolutionNames": [
+        "manectric",
+        "雷電獸"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "309-hoenn-shadow",
+      "formId": "309-hoenn",
+      "dexNumber": 309,
+      "nameEn": "electrike",
+      "nameZhTw": "落雷獸",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "electrike",
+        "落雷獸"
+      ],
+      "evolutionNames": [
+        "manectric",
+        "雷電獸"
+      ],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": true
+    },
+    {
+      "id": "310-hoenn-dynamax",
+      "formId": "310-hoenn",
+      "dexNumber": 310,
+      "nameEn": "manectric",
+      "nameZhTw": "雷電獸",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "manectric",
+        "雷電獸"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "310-hoenn-mega",
+      "formId": "310-hoenn",
+      "dexNumber": 310,
+      "nameEn": "manectric",
+      "nameZhTw": "雷電獸",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "manectric",
+        "雷電獸"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "MEGA",
+      "decision": "KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "SPECIAL_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": true,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "310-hoenn-normal",
+      "formId": "310-hoenn",
+      "dexNumber": 310,
+      "nameEn": "manectric",
+      "nameZhTw": "雷電獸",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "manectric",
+        "雷電獸"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 655,
+        "ULTRA": 614,
+        "MASTER": null
+      },
+      "sourceCount": 6,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "310-hoenn-purified",
+      "formId": "310-hoenn",
+      "dexNumber": 310,
+      "nameEn": "manectric",
+      "nameZhTw": "雷電獸",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "manectric",
+        "雷電獸"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 2,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "310-hoenn-shadow",
+      "formId": "310-hoenn",
+      "dexNumber": 310,
+      "nameEn": "manectric",
+      "nameZhTw": "雷電獸",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "manectric",
+        "雷電獸"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "CONDITIONAL_KEEP",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 979,
+        "ULTRA": 685,
+        "MASTER": null
+      },
+      "sourceCount": 4,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "USABLE_OR_BUDGET"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "311-hoenn-dynamax",
+      "formId": "311-hoenn",
+      "dexNumber": 311,
+      "nameEn": "plusle",
+      "nameZhTw": "正電拍拍",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "plusle",
+        "正電拍拍"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 0,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": true,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "311-hoenn-normal",
+      "formId": "311-hoenn",
+      "dexNumber": 311,
+      "nameEn": "plusle",
+      "nameZhTw": "正電拍拍",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "plusle",
+        "正電拍拍"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": 1015,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 3,
+      "hasPvpUse": true,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "311-hoenn-purified",
+      "formId": "311-hoenn",
+      "dexNumber": 311,
+      "nameEn": "plusle",
+      "nameZhTw": "正電拍拍",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "plusle",
+        "正電拍拍"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
+      ],
+      "hasRocketUse": false,
+      "gymRating": "NOT_APPLICABLE",
+      "hasMegaUse": false,
+      "hasMaxUse": false,
+      "hasEvolutionUse": false
+    },
+    {
+      "id": "311-hoenn-shadow",
+      "formId": "311-hoenn",
+      "dexNumber": 311,
+      "nameEn": "plusle",
+      "nameZhTw": "正電拍拍",
+      "formNameEn": "Hoenn",
+      "formNameZhTw": "豐緣",
+      "aliases": [
+        "plusle",
+        "正電拍拍"
+      ],
+      "evolutionNames": [],
+      "regionKey": "HOENN",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "confidence": "MEDIUM",
+      "updatedAt": "2026-08-08T16:00:00.000Z",
+      "reviewed": true,
+      "pvpRanks": {
+        "GREAT": null,
+        "ULTRA": null,
+        "MASTER": null
+      },
+      "sourceCount": 1,
+      "hasPvpUse": false,
+      "pveUseLevels": [
+        "NO_SIGNIFICANT_USE"
       ],
       "hasRocketUse": false,
       "gymRating": "NOT_APPLICABLE",

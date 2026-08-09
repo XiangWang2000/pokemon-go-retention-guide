@@ -71,13 +71,17 @@ export async function runReview(batch: "252-281" | "282-311") {
         ? "PASS"
         : "FAIL",
     },
-    checkFamily(
-      families,
-      "Wurmple branch",
-      "265-hoenn",
-      ["265-hoenn", "266-hoenn", "267-hoenn", "268-hoenn", "269-hoenn"],
-    ),
   ];
+  if (batch === "252-281") {
+    checks.push(
+      checkFamily(
+        families,
+        "Wurmple branch",
+        "265-hoenn",
+        ["265-hoenn", "266-hoenn", "267-hoenn", "268-hoenn", "269-hoenn"],
+      ),
+    );
+  }
   const raltsRow = allRows.find((row) => row.id === "281-hoenn-normal");
   checks.push({
     name: "Ralts family Gallade stub",

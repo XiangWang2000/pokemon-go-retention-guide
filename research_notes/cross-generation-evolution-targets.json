@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-08-09-cross-generation-evolution-v7-gen3",
+  "dataVersion": "2026-08-09-cross-generation-evolution-v8-gen3",
   "checkedAt": "2026-08-09",
   "sources": [
     {
@@ -914,6 +914,28 @@
       "fromFormId": "281-hoenn",
       "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
       "evolutionTargetNotesZhTw": "艾路雷朵是奇魯莉安的跨世代分支進化；依遊戲性別與神奧之石條件處理，不將所有奇魯莉安自動改判為必留。"
+    },
+    {
+      "dexNumber": 476,
+      "generation": 4,
+      "familyKey": "HOENN_FAMILY_299",
+      "nameEn": "Probopass",
+      "nameZhTw": "大朝北鼻",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
+      "types": [
+        "ROCK",
+        "STEEL"
+      ],
+      "aliases": [
+        "Probopass",
+        "大朝北鼻"
+      ],
+      "fromFormId": "299-hoenn",
+      "evolutionTargetUseLevel": "SPECIAL_USE",
+      "evolutionTargetNotesZhTw": "正式後續進化；大朝北鼻目前以 OTHER stub 表示，前階朝北鼻保留符合進化與個體品質條件的候選。"
     }
   ],
   "paths": [
@@ -1386,6 +1408,18 @@
       "toFormId": "475-other",
       "evolutionMethodZhTw": "男性奇魯莉安使用神奧之石進化；以遊戲內當期條件為準",
       "availabilityNotesZhTw": "艾路雷朵尚未納入目前展示批次，以後續世代 evolution stub 保留進化價值",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "299-hoenn",
+      "toFormId": "476-other",
+      "evolutionMethodZhTw": "在磁場特殊地點消耗糖果進化；以 Pokemon GO 當期條件為準",
+      "availabilityNotesZhTw": "正式後續進化；大朝北鼻目前以 OTHER stub 表示，前階朝北鼻保留符合進化與個體品質條件的候選。",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [
