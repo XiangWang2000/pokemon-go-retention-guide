@@ -68,6 +68,7 @@ describe("Sites 唯讀 snapshot", () => {
       homeFamilies: 155,
       openReviewIssues: 241,
     });
+    expect(siteSnapshotManifest.sourceDatabase.path).toBe("dev.db");
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
     expect(siteSnapshotManifest.snapshotSha256).toMatch(/^[a-f0-9]{64}$/);
   });

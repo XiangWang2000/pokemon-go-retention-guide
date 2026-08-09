@@ -59,7 +59,7 @@
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "本批沒有已確認的 Mega 版本；家族不因假設 Mega 而整體升格。",
-  "maxBattleSummaryZhTw": "此版本不是 Max 版本；Max 用途不會回推普通個體必留。",
+  "maxBattleSummaryZhTw": "一般老個體不會因該物種可 Dynamax 而自動擁有 Max 能力；此版本資料尚待確認。",
   "evolutionSummaryZhTw": "已補查 GO Hub PvP 頁：大聯盟 #408、超級聯盟 #174；超級聯盟有條件用途，應保留少量優質伽勒爾喵喵進化候選，不等同核心投資。",
   "requiredMovesSummaryZhTw": "沒有招式足以把此低用途版本自動升格為必留。",
   "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
@@ -93,8 +93,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "GL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:10:13.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:24:36.000Z"
     },
     {
       "id": "iv-global-gym",
@@ -125,8 +125,8 @@
       "ivRecommendationZhTw": "道館防守不設固定IV門檻；同物種比較時，優先已高等級、高CP及較高防禦／HP的候選。",
       "shortIvLabelZhTw": "道館：無固定門檻",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:10:13.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:24:36.000Z"
     },
     {
       "id": "iv-global-master",
@@ -157,8 +157,8 @@
       "ivRecommendationZhTw": "具有大師聯盟用途時：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認該物種的特定攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:10:13.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:24:36.000Z"
     },
     {
       "id": "iv-global-max-attack",
@@ -189,8 +189,8 @@
       "ivRecommendationZhTw": "已確認為 Max Battle 攻擊角色時，攻擊IV 15優先；不以單一總IV門檻取代角色與招式判斷。",
       "shortIvLabelZhTw": "Max攻擊：15攻優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:10:13.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:24:36.000Z"
     },
     {
       "id": "iv-global-max-flex",
@@ -221,8 +221,8 @@
       "ivRecommendationZhTw": "Max Battle 角色尚未細分時，應分別確認攻擊、坦克或支援用途，不套用單一總IV門檻。",
       "shortIvLabelZhTw": "Max：依角色分開",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:10:13.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:24:36.000Z"
     },
     {
       "id": "iv-global-max-support",
@@ -253,8 +253,8 @@
       "ivRecommendationZhTw": "Max Battle 支援角色需依物種、耐久與Max招式建立專屬門檻，不套用統一15攻／96%條件。",
       "shortIvLabelZhTw": "Max支援：依角色門檻",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:10:13.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:24:36.000Z"
     },
     {
       "id": "iv-global-max-tank",
@@ -285,8 +285,8 @@
       "ivRecommendationZhTw": "已確認為 Max Battle 坦克角色時，優先比較防禦IV、HP IV與整體耐久，不使用攻擊手的總IV門檻。",
       "shortIvLabelZhTw": "Max坦克：防禦／HP優先",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:10:13.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:24:36.000Z"
     },
     {
       "id": "iv-global-mega",
@@ -317,8 +317,8 @@
       "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
       "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:17:08.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:25:12.000Z"
     },
     {
       "id": "iv-global-pve",
@@ -349,8 +349,8 @@
       "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
       "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:17:08.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:25:12.000Z"
     },
     {
       "id": "iv-global-shadow-pve",
@@ -381,8 +381,8 @@
       "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
       "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
       "rulesVersion": "2026.07.28-iv-v2",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:17:08.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:25:12.000Z"
     },
     {
       "id": "iv-global-ultra",
@@ -413,8 +413,8 @@
       "ivRecommendationZhTw": "只有物種與目標進化結果確實具有高級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
       "shortIvLabelZhTw": "UL：Rank≤100",
       "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-08-08T19:10:13.000Z",
-      "updatedAt": "2026-08-08T19:10:13.000Z"
+      "createdAt": "2026-08-09T02:24:36.000Z",
+      "updatedAt": "2026-08-09T02:24:36.000Z"
     }
   ],
   "reasonZhTw": "用途有限：後續進化（喵頭目）已有用途；只保留少量符合條件的進化候選。",
