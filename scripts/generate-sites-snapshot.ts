@@ -32,7 +32,7 @@ const workbookPath = path.join(exportDirectory, exportFileName);
 const manifestPath = path.join(siteDataDirectory, "manifest.json");
 
 function jsonBuffer(value: unknown) {
-  return Buffer.from(`${JSON.stringify(value, null, 2).replace(/\r?\n/g, "\r\n")}\r\n`, "utf8");
+  return Buffer.from(`${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 
 function compactJsonBuffer(value: unknown) {
