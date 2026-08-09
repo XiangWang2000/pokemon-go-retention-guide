@@ -15,6 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
+  DATABASE_URL: file:./dev.db
   NEXT_PUBLIC_BASE_PATH: /pokemon-go-retention-guide
   NEXT_PUBLIC_SITE_URL: https://xiangwang2000.github.io/pokemon-go-retention-guide/
 
