@@ -32,6 +32,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
+      - name: Generate Prisma client
+        run: npm run db:generate
       - name: Snapshot check
         run: npm run sites:snapshot:check
       - name: Snapshot failure diagnostics
