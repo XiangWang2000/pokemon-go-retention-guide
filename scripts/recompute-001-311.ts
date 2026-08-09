@@ -17,6 +17,7 @@ import { ensureCrossGenerationEvolutionTargets } from "../src/data/cross-generat
 import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
 import { findTextIntegrityIssues } from "../src/data/text-integrity";
+import { validateEvolutionParentPaths } from "../src/data/checkpoint-validation";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
@@ -27,7 +28,7 @@ const dexMin = 1;
 const dexMax = Number(process.argv[process.argv.indexOf("--max") + 1] || "311");
 const baselineDexMax = Number(process.argv[process.argv.indexOf("--baseline-max") + 1] || String(Math.min(251, dexMax)));
 if (!Number.isInteger(dexMax) || dexMax < 251 || !Number.isInteger(baselineDexMax) || baselineDexMax > dexMax) {
-  throw new Error("???????????? --max ? --baseline-max?");
+  throw new Error("無效的 --max 或 --baseline-max 參數。");
 }
 
 const criticalIssueTypes = new Set([
@@ -808,6 +809,7 @@ async function main() {
     prisma.pokemonForm.findMany({
       select: {
         id: true,
+        evolvesFromFormId: true,
         formNameZhTw: true,
         evolutionTargetUseLevel: true,
         evolutionTargetNotesZhTw: true,
@@ -815,6 +817,10 @@ async function main() {
       },
     }),
   ]);
+  const evolutionParentPathIssues = validateEvolutionParentPaths(evolutionForms, evolutionPaths);
+  if (evolutionParentPathIssues.length) {
+    throw new Error(`Evolution parent/path validation failed:\n- ${evolutionParentPathIssues.join("\n- ")}`);
+  }
   const variantsByForm = new Map<string, VariantRecord[]>();
   for (const variant of variants) {
     const group = variantsByForm.get(variant.pokemonFormId) ?? [];

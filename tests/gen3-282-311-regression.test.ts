@@ -1,7 +1,13 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { findTextIntegrityIssues } from "@/data/text-integrity";
-import { evolutionPairs282311, forms282311, species282311 } from "@/data/batch-282-311";
+import { deriveEvolutionReleaseClosure } from "@/data/evolution-release";
+import {
+  evolutionPairs282311,
+  forms282311,
+  releasedShadowForms282311,
+  species282311,
+} from "@/data/batch-282-311";
 
 type DashboardRow = {
   id: string;
@@ -44,6 +50,47 @@ describe("Gen 3 #282-#311 integration", () => {
       form.formNameZhTw === "\u8c50\u7de3",
     )).toBe(true);
     expect(new Set(forms282311.map((form) => form.dexNumber)).size).toBe(30);
+  });
+
+  it("keeps canonical names, Azurill typing, the Skitty root, and Surskit release boundaries", () => {
+    expect(species282311.find((species) => species.dexNumber === 283)).toMatchObject({
+      nameZhTw: "溜溜糖球",
+      types: ["WATER", "BUG"],
+    });
+    expect(species282311.find((species) => species.dexNumber === 298)).toMatchObject({
+      nameZhTw: "露力麗",
+      types: ["NORMAL", "FAIRY"],
+    });
+    expect(forms282311.find((form) => form.id === "298-hoenn")?.types).toEqual([
+      "NORMAL",
+      "FAIRY",
+    ]);
+    expect(species282311.find((species) => species.dexNumber === 300)?.familyKey).toBe(
+      "HOENN_FAMILY_300",
+    );
+    expect(forms282311.find((form) => form.id === "300-hoenn")?.evolvesFromFormId).toBeNull();
+    expect(evolutionPairs282311).toContainEqual(["283-hoenn", "284-hoenn"]);
+    expect(releasedShadowForms282311.has("283-hoenn")).toBe(true);
+    expect(releasedShadowForms282311.has("284-hoenn")).toBe(false);
+    expect([...releasedShadowForms282311]).toEqual([
+      "282-hoenn", "283-hoenn", "285-hoenn", "287-hoenn", "290-hoenn", "293-hoenn",
+      "296-hoenn", "299-hoenn", "300-hoenn", "302-hoenn", "303-hoenn", "304-hoenn",
+      "305-hoenn", "306-hoenn", "307-hoenn", "308-hoenn", "309-hoenn", "310-hoenn",
+      "311-hoenn",
+    ]);
+    const releasedClosure = deriveEvolutionReleaseClosure(releasedShadowForms282311, evolutionPairs282311);
+    expect(releasedClosure.has("284-hoenn")).toBe(true);
+    const battle = JSON.parse(
+      readFileSync(new URL("../research_notes/battle-282-311.json", import.meta.url), "utf8"),
+    ) as { shadow: Array<{ formId: string }> };
+    expect(battle.shadow.map((item) => item.formId)).toEqual([...releasedShadowForms282311]);
+    const official = JSON.parse(
+      readFileSync(new URL("../research_notes/official-282-311.json", import.meta.url), "utf8"),
+    ) as { sources: Array<{ id: string; supports: string[] }> };
+    const shadowSource = official.sources.find((source) => source.id === "SECONDARY-SHADOW-HOENN-2026");
+    expect(shadowSource?.supports).toEqual(
+      [...releasedShadowForms282311].flatMap((formId) => [`${formId}-shadow`, `${formId}-purified`]),
+    );
   });
 
   it("keeps the Wurmple-style and Ralts integration boundaries intact", () => {
@@ -118,7 +165,7 @@ describe("Gen 3 #282-#311 integration", () => {
     expect(batchRows.some((candidate) => candidate.assessmentDisposition === "TRUE_DATA_PENDING")).toBe(false);
     expect(batchRows.some((candidate) => candidate.decision === "HOLD_FOR_NOW")).toBe(false);
     expect(review).toMatchObject({
-      dataVersion: "2026.08.09-r21",
+      dataVersion: "2026.08.09-r22",
       counts: { species: 30, forms: 30, battleVariants: 126, trueDataPending: 0 },
       crossBatchIntegration: { result: "PASS" },
     });

@@ -778,7 +778,7 @@ async function assertExistingDecisionsStable(
   if (changed.length || missing.length) {
     throw new Error(
       [
-        "Existing #001-251 retention conclusions changed or are missing from the r21 snapshot.",
+        "Existing #001-251 retention conclusions changed or are missing from the r22 snapshot.",
         ...changed.slice(0, 20),
         ...(changed.length > 20 ? [`...and ${changed.length - 20} more changed rows.`] : []),
         ...(missing.length ? [`Missing baseline rows: ${missing.slice(0, 20).join(", ")}`] : []),

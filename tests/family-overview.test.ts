@@ -45,7 +45,7 @@ describe("EvolutionPath 進化家族分組", () => {
     ).toEqual(expect.arrayContaining(rows.map((row) => row.id)));
     expect(
       families.flatMap((family) => family.members.flatMap((member) => member.form.variants)),
-    ).toHaveLength(1438);
+    ).toHaveLength(1439);
   });
 
   it("3. 相同 familyKey 的不同地區進化路徑形成不同子群組", () => {

@@ -14,7 +14,7 @@
         "familyKey": "HOENN_FAMILY_273",
         "dexNumber": 273,
         "nameEn": "seedot",
-        "nameZhTw": "橢實果",
+        "nameZhTw": "橡實果",
         "formNameEn": "Hoenn",
         "formNameZhTw": "豐緣",
         "regionKey": "HOENN",
@@ -38,7 +38,7 @@
         ],
         "aliases": [
           "seedot",
-          "橢實果"
+          "橡實果"
         ],
         "evolutionNames": [
           "nuzleaf",
@@ -53,7 +53,7 @@
               "familyKey": "HOENN_FAMILY_273",
               "dexNumber": 273,
               "nameEn": "seedot",
-              "nameZhTw": "橢實果",
+              "nameZhTw": "橡實果",
               "formKey": "HOENN",
               "formNameEn": "Hoenn",
               "formNameZhTw": "豐緣",
@@ -78,7 +78,7 @@
               ],
               "aliases": [
                 "seedot",
-                "橢實果"
+                "橡實果"
               ],
               "evolutionNames": [
                 "nuzleaf",
@@ -280,7 +280,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "LOW_GENERAL_VALUE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -304,7 +304,7 @@
               "familyKey": "HOENN_FAMILY_273",
               "dexNumber": 273,
               "nameEn": "seedot",
-              "nameZhTw": "橢實果",
+              "nameZhTw": "橡實果",
               "formKey": "HOENN",
               "formNameEn": "Hoenn",
               "formNameZhTw": "豐緣",
@@ -329,7 +329,7 @@
               ],
               "aliases": [
                 "seedot",
-                "橢實果"
+                "橡實果"
               ],
               "evolutionNames": [
                 "nuzleaf",
@@ -522,7 +522,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "LOW_GENERAL_VALUE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -546,7 +546,7 @@
               "familyKey": "HOENN_FAMILY_273",
               "dexNumber": 273,
               "nameEn": "seedot",
-              "nameZhTw": "橢實果",
+              "nameZhTw": "橡實果",
               "formKey": "HOENN",
               "formNameEn": "Hoenn",
               "formNameZhTw": "豐緣",
@@ -571,7 +571,7 @@
               ],
               "aliases": [
                 "seedot",
-                "橢實果"
+                "橡實果"
               ],
               "evolutionNames": [
                 "nuzleaf",
@@ -764,7 +764,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -788,7 +788,7 @@
               "familyKey": "HOENN_FAMILY_273",
               "dexNumber": 273,
               "nameEn": "seedot",
-              "nameZhTw": "橢實果",
+              "nameZhTw": "橡實果",
               "formKey": "HOENN",
               "formNameEn": "Hoenn",
               "formNameZhTw": "豐緣",
@@ -813,7 +813,7 @@
               ],
               "aliases": [
                 "seedot",
-                "橢實果"
+                "橡實果"
               ],
               "evolutionNames": [
                 "nuzleaf",
@@ -996,8 +996,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1062,7 +1062,7 @@
         "進化素材"
       ],
       "mainUseZhTw": "進化素材",
-      "memberSummaryZhTw": "橢實果雖可進化，但目前沒有已確認的主要保留目標；普通重複個體大多可傳。",
+      "memberSummaryZhTw": "橡實果雖可進化，但目前沒有已確認的主要保留目標；普通重複個體大多可傳。",
       "ivShortLabels": [],
       "ivRecommendations": [],
       "isRoot": true,
@@ -1387,7 +1387,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "LOW_GENERAL_VALUE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -1672,7 +1672,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "LOW_GENERAL_VALUE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -1915,7 +1915,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2148,8 +2148,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -2551,7 +2551,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "LOW_GENERAL_VALUE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2862,7 +2862,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "LOW_GENERAL_VALUE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -3090,7 +3090,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -3308,8 +3308,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"

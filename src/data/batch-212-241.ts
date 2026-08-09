@@ -816,7 +816,7 @@ export const forms212241: Form212241[] = [
       "smoochum",
       "迷唇娃"
     ],
-    "evolvesFromFormId": "124-kanto",
+    "evolvesFromFormId": null,
     "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
     "isStub": false,
     "includeVariants": true
@@ -835,7 +835,7 @@ export const forms212241: Form212241[] = [
       "elekid",
       "電擊怪"
     ],
-    "evolvesFromFormId": "125-kanto",
+    "evolvesFromFormId": null,
     "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
     "isStub": false,
     "includeVariants": true
@@ -854,7 +854,7 @@ export const forms212241: Form212241[] = [
       "magby",
       "鴨嘴寶寶"
     ],
-    "evolvesFromFormId": "126-kanto",
+    "evolvesFromFormId": null,
     "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
     "isStub": false,
     "includeVariants": true

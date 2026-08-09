@@ -4,7 +4,7 @@ type SpeciesSpec = readonly [number, string, string, readonly string[], string];
 
 const speciesSpecs: SpeciesSpec[] = [
   [282, "gardevoir", "沙奈朵", ["PSYCHIC", "FAIRY"], "HOENN_FAMILY_280"],
-  [283, "surskit", "水蛛", ["WATER", "BUG"], "HOENN_FAMILY_283"],
+  [283, "surskit", "溜溜糖球", ["WATER", "BUG"], "HOENN_FAMILY_283"],
   [284, "masquerain", "雨翅蛾", ["BUG", "FLYING"], "HOENN_FAMILY_283"],
   [285, "shroomish", "蘑蘑菇", ["GRASS"], "HOENN_FAMILY_285"],
   [286, "breloom", "斗笠菇", ["GRASS", "FIGHTING"], "HOENN_FAMILY_285"],
@@ -19,7 +19,7 @@ const speciesSpecs: SpeciesSpec[] = [
   [295, "exploud", "爆音怪", ["NORMAL"], "HOENN_FAMILY_293"],
   [296, "makuhita", "幕下力士", ["FIGHTING"], "HOENN_FAMILY_296"],
   [297, "hariyama", "鐵掌力士", ["FIGHTING"], "HOENN_FAMILY_296"],
-  [298, "azurill", "瑪力露", ["WATER", "FAIRY"], "JOHTO_FAMILY_183"],
+  [298, "azurill", "露力麗", ["NORMAL", "FAIRY"], "JOHTO_FAMILY_183"],
   [299, "nosepass", "朝北鼻", ["ROCK"], "HOENN_FAMILY_299"],
   [300, "skitty", "向尾喵", ["NORMAL"], "HOENN_FAMILY_300"],
   [301, "delcatty", "優雅貓", ["NORMAL"], "HOENN_FAMILY_300"],
@@ -45,7 +45,6 @@ const evolvesFromByDex: Record<number, string> = {
   294: "293-hoenn",
   295: "294-hoenn",
   297: "296-hoenn",
-  300: "299-hoenn",
   301: "300-hoenn",
   305: "304-hoenn",
   306: "305-hoenn",
@@ -107,6 +106,7 @@ export const evolutionPairs282311: readonly [string, string][] = [
 ];
 
 export const releasedShadowForms282311 = new Set<string>([
+  // 來源直接列出的 Shadow 物種；import 時會沿正式 evolution edges 推導後續型態。
   "282-hoenn", "283-hoenn", "285-hoenn", "287-hoenn", "290-hoenn",
   "293-hoenn", "296-hoenn", "299-hoenn", "300-hoenn", "302-hoenn",
   "303-hoenn", "304-hoenn", "305-hoenn", "306-hoenn", "307-hoenn",

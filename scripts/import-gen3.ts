@@ -35,6 +35,7 @@ import {
 } from "../src/data/cross-generation-evolution";
 import { RULES_VERSION } from "../src/rules/rules";
 import { getDatabaseUrl } from "../src/lib/database";
+import { deriveEvolutionReleaseClosure } from "../src/data/evolution-release";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
@@ -111,6 +112,7 @@ type BatchDefinition = {
   specialVariants: Gen3SpecialVariant[];
   pveUseLevels: Record<string, PveUseLevel>;
   pvpokeSpeciesId: (form: Gen3Form, shadow: boolean) => string;
+  shadowUnavailableFormIds: ReadonlySet<string>;
 };
 
 const checkedAt = new Date("2026-08-09T00:00:00+08:00");
@@ -146,6 +148,7 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants252281,
       pveUseLevels: pveUseLevels252281,
       pvpokeSpeciesId: pvpokeSpeciesId252281,
+      shadowUnavailableFormIds: new Set(),
     };
   }
   if (batch === "282-311") {
@@ -163,6 +166,7 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants282311,
       pveUseLevels: pveUseLevels282311,
       pvpokeSpeciesId: pvpokeSpeciesId282311,
+      shadowUnavailableFormIds: new Set(),
     };
   }
   throw new Error("未知 Gen3 批次：" + batch);
@@ -244,10 +248,15 @@ async function readRankings() {
   return result;
 }
 
-function variantReleased(batch: BatchDefinition, formId: string, variantKey: VariantKey) {
+function variantReleased(
+  batch: BatchDefinition,
+  formId: string,
+  variantKey: VariantKey,
+  releasedShadowForms: ReadonlySet<string>,
+) {
   if (variantKey === "NORMAL") return true;
   if (variantKey === "SHADOW" || variantKey === "PURIFIED") {
-    return batch.releasedShadowForms.has(formId);
+    return releasedShadowForms.has(formId);
   }
   if (variantKey === "MEGA") return batch.releasedMegaForms.has(formId);
   if (variantKey === "DYNAMAX") return batch.releasedDynamaxForms.has(formId);
@@ -341,17 +350,55 @@ function evidenceCategory(variantId: string, sourceId: string): Category {
   return "EVOLUTION_VALUE";
 }
 
-export async function runImport(batchName: string) {
-  const batch = definitionFor(batchName);
-  const research = readResearch(batch);
-  const rankings = await readRankings();
-  const officialEvidenceLinks = research.sources.flatMap((source) =>
+function officialEvidenceLinksForBatch(
+  batch: BatchDefinition,
+  research: OfficialResearch,
+  releasedShadowForms: ReadonlySet<string>,
+) {
+  const directLinks = research.sources.flatMap((source) =>
     source.supports.map((variantId) => ({
       sourceId: source.id,
       variantId,
       category: evidenceCategory(variantId, source.id),
     })),
   );
+  const links = [...directLinks];
+  const seen = new Set(directLinks.map((link) => `${link.sourceId}|${link.variantId}|${link.category}`));
+  for (const source of research.sources) {
+    if (!/shadow/i.test(`${source.id} ${source.sourceName}`)) continue;
+    for (const support of source.supports) {
+      const match = /^(.*)-(shadow|purified)$/.exec(support);
+      if (!match || !batch.releasedShadowForms.has(match[1])) continue;
+      const variantSuffix = match[2];
+      const descendants = deriveEvolutionReleaseClosure(
+        new Set([match[1]]),
+        batch.evolutionPairs,
+        batch.shadowUnavailableFormIds,
+      );
+      for (const formId of descendants) {
+        if (!releasedShadowForms.has(formId)) continue;
+        const variantId = `${formId}-${variantSuffix}`;
+        const category = evidenceCategory(variantId, source.id);
+        const key = `${source.id}|${variantId}|${category}`;
+        if (seen.has(key)) continue;
+        seen.add(key);
+        links.push({ sourceId: source.id, variantId, category });
+      }
+    }
+  }
+  return links;
+}
+
+export async function runImport(batchName: string) {
+  const batch = definitionFor(batchName);
+  const releasedShadowForms = deriveEvolutionReleaseClosure(
+    batch.releasedShadowForms,
+    batch.evolutionPairs,
+    batch.shadowUnavailableFormIds,
+  );
+  const research = readResearch(batch);
+  const rankings = await readRankings();
+  const officialEvidenceLinks = officialEvidenceLinksForBatch(batch, research, releasedShadowForms);
 
   await upsertSources(research);
   await prisma.changeLog.deleteMany({
@@ -442,7 +489,7 @@ export async function runImport(batchName: string) {
         id: form.id + "-" + variantKey.toLowerCase(),
         form,
         variantKey,
-        released: variantReleased(batch, form.id, variantKey),
+        released: variantReleased(batch, form.id, variantKey, releasedShadowForms),
       });
     }
   }

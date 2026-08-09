@@ -202,7 +202,7 @@ export const species252281: Gen3Species[] = [
   {
     "dexNumber": 273,
     "nameEn": "seedot",
-    "nameZhTw": "橢實果",
+    "nameZhTw": "橡實果",
     "types": [
       "GRASS"
     ],
@@ -710,7 +710,7 @@ export const forms252281: Gen3Form[] = [
     ],
     "aliases": [
       "seedot",
-      "橢實果"
+      "橡實果"
     ],
     "evolvesFromFormId": null,
     "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、巨大化與後續進化用途分門評估。",
@@ -956,8 +956,9 @@ export const evolutionPairs252281: readonly [string, string][] = [
     "281-hoenn"
   ]
 ];
+// 來源直接列出的 Shadow 物種；import 時會沿正式 evolution edges 推導可取得的後續型態。
 export const releasedShadowForms252281 = new Set<string>(["252-hoenn","253-hoenn","254-hoenn","255-hoenn","256-hoenn","257-hoenn","258-hoenn","259-hoenn","260-hoenn","261-hoenn","262-hoenn","263-hoenn","264-hoenn","265-hoenn","270-hoenn","271-hoenn","272-hoenn","273-hoenn","274-hoenn","275-hoenn","276-hoenn","277-hoenn","278-hoenn","279-hoenn","280-hoenn","281-hoenn"]);
-export const releasedMegaForms252281 = new Set<string>(["254-hoenn","257-hoenn"]);
+export const releasedMegaForms252281 = new Set<string>(["254-hoenn","257-hoenn","260-hoenn"]);
 export const releasedDynamaxForms252281 = new Set<string>([]);
 export const releasedGigantamaxForms252281 = new Set<string>();
 export const specialVariants252281: Gen3SpecialVariant[] = [
@@ -974,6 +975,13 @@ export const specialVariants252281: Gen3SpecialVariant[] = [
     "variantKey": "MEGA",
     "released": true,
     "nameZhTw": "Mega 火焰雞"
+  },
+  {
+    "id": "260-hoenn-mega",
+    "formId": "260-hoenn",
+    "variantKey": "MEGA",
+    "released": true,
+    "nameZhTw": "Mega 巨沼怪"
   }
 ];
 export const pveUseLevels252281: Record<string, PveUseLevel> = {

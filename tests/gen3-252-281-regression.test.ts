@@ -1,7 +1,15 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { findTextIntegrityIssues } from "@/data/text-integrity";
-import { forms252281, evolutionPairs252281, species252281 } from "@/data/batch-252-281";
+import { deriveEvolutionReleaseClosure } from "@/data/evolution-release";
+import {
+  evolutionPairs252281,
+  forms252281,
+  releasedMegaForms252281,
+  releasedShadowForms252281,
+  specialVariants252281,
+  species252281,
+} from "@/data/batch-252-281";
 
 type DashboardRow = {
   id: string;
@@ -40,6 +48,51 @@ describe("Gen 3 #252-#281 integration", () => {
       form.formNameZhTw === "\u8c50\u7de3",
     )).toBe(true);
     expect(new Set(forms252281.map((form) => form.dexNumber)).size).toBe(30);
+  });
+
+  it("keeps corrected Seedot identity, starter Megas, and Shadow/Purified evidence aligned", () => {
+    expect(species252281.find((species) => species.dexNumber === 273)).toMatchObject({
+      nameZhTw: "橡實果",
+    });
+    expect(forms252281.find((form) => form.id === "273-hoenn")?.aliases).toContain("橡實果");
+    expect([...releasedMegaForms252281]).toEqual([
+      "254-hoenn",
+      "257-hoenn",
+      "260-hoenn",
+    ]);
+    expect(specialVariants252281).toEqual(expect.arrayContaining([
+      expect.objectContaining({ id: "254-hoenn-mega", formId: "254-hoenn", released: true }),
+      expect.objectContaining({ id: "257-hoenn-mega", formId: "257-hoenn", released: true }),
+      expect.objectContaining({ id: "260-hoenn-mega", formId: "260-hoenn", released: true }),
+    ]));
+    expect([...releasedShadowForms252281]).toEqual([
+      "252-hoenn", "253-hoenn", "254-hoenn", "255-hoenn", "256-hoenn", "257-hoenn",
+      "258-hoenn", "259-hoenn", "260-hoenn", "261-hoenn", "262-hoenn", "263-hoenn",
+      "264-hoenn", "265-hoenn", "270-hoenn", "271-hoenn", "272-hoenn", "273-hoenn",
+      "274-hoenn", "275-hoenn", "276-hoenn", "277-hoenn", "278-hoenn", "279-hoenn",
+      "280-hoenn", "281-hoenn",
+    ]);
+    const releasedClosure = deriveEvolutionReleaseClosure(releasedShadowForms252281, evolutionPairs252281);
+    expect([...releasedClosure]).toEqual(expect.arrayContaining([
+      "266-hoenn", "267-hoenn", "268-hoenn", "269-hoenn",
+    ]));
+    const battle = JSON.parse(
+      readFileSync(new URL("../research_notes/battle-252-281.json", import.meta.url), "utf8"),
+    ) as { mega: Array<{ formId: string }>; shadow: Array<{ formId: string }> };
+    expect(battle.mega.map((item) => item.formId)).toEqual([...releasedMegaForms252281]);
+    expect(battle.shadow.map((item) => item.formId)).toEqual([...releasedShadowForms252281]);
+    const official = JSON.parse(
+      readFileSync(new URL("../research_notes/official-252-281.json", import.meta.url), "utf8"),
+    ) as { sources: Array<{ id: string; supports: string[] }> };
+    const shadowSource = official.sources.find((source) => source.id === "SECONDARY-SHADOW-HOENN-2026");
+    expect(shadowSource?.supports).toEqual(
+      [...releasedShadowForms252281].flatMap((formId) => [`${formId}-shadow`, `${formId}-purified`]),
+    );
+    const megaSource = official.sources.find((source) => source.id === "OFF-MEGA-HOENN-20260809");
+    expect(megaSource?.supports).toEqual([
+      ...[...releasedMegaForms252281].map((formId) => `${formId}-normal`),
+      ...[...releasedMegaForms252281].map((formId) => `${formId}-mega`),
+    ]);
   });
 
   it("keeps both Wurmple branch paths without inventing a cross-branch edge", () => {
@@ -99,12 +152,12 @@ describe("Gen 3 #252-#281 integration", () => {
 
   it("keeps the first batch free of safety holds", () => {
     const batchRows = dashboard.filter((candidate) => candidate.dexNumber >= 252 && candidate.dexNumber <= 281);
-    expect(batchRows).toHaveLength(122);
+    expect(batchRows).toHaveLength(123);
     expect(batchRows.some((candidate) => candidate.assessmentDisposition === "TRUE_DATA_PENDING")).toBe(false);
     expect(batchRows.some((candidate) => candidate.decision === "HOLD_FOR_NOW")).toBe(false);
     expect(review).toMatchObject({
-      dataVersion: "2026.08.09-r21",
-      counts: { species: 30, forms: 30, battleVariants: 122, trueDataPending: 0 },
+      dataVersion: "2026.08.09-r22",
+      counts: { species: 30, forms: 30, battleVariants: 123, trueDataPending: 0 },
       crossBatchIntegration: { result: "PASS" },
     });
   });

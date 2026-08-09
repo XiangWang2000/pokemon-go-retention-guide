@@ -36,7 +36,7 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
       .flatMap((item) => item.variants.map((variant) => variant.row.id))
       .sort();
     expect(overviewIds).toEqual(sourceIds);
-    expect(overviewIds).toHaveLength(1438);
+    expect(overviewIds).toHaveLength(1439);
   });
 
   it("妙蛙種子總覽只顯示已推出徽章，展開仍保留所有版本", () => {

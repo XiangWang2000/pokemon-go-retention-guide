@@ -43,7 +43,7 @@
 
 ## 2026-08-09 #152-#311 Gen2 and Gen3 integration checkpoint
 
-- DATA_VERSION is 2026.08.09-r21; the controlled pipeline imports #152-#311 and recomputes the full #001-#311 scope.
+- DATA_VERSION is 2026.08.09-r22; the controlled pipeline imports #152-#311 and recomputes the full #001-#311 scope.
 - Gen2 members are linked to existing Kanto families where appropriate; formal Johto migrations remove same-species `*-kanto` stubs, while future-generation targets remain explicit evolution stubs.
 - Gen3 standard forms use `HOENN` / `豐緣`; Wurmple branches, Nincada's special-family association, the Ralts/Gallade branch, Azurill's Johto-family merge, and the Probopass stub are represented without fake evolution edges.
 - Runtime snapshot, review, Excel, schema validation, review consistency, snapshot provenance checks, and regression tests are generated for this checkpoint; #312+ is intentionally out of scope.

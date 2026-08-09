@@ -1,18 +1,51 @@
 import "dotenv/config";
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
 import { getDatabaseUrl } from "../src/lib/database";
 import { loadCrossGenerationEvolutionData } from "../src/data/cross-generation-evolution";
-import { findTextIntegrityIssues } from "../src/data/text-integrity";
+import {
+  findSourceTextIntegrityIssues,
+  findTextIntegrityIssues,
+} from "../src/data/text-integrity";
+import {
+  validateEvolutionParentPaths,
+  validateGen3DexConsistency,
+} from "../src/data/checkpoint-validation";
+import { DATA_VERSION } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
 });
 
+async function collectTypeScriptFiles(root: string): Promise<string[]> {
+  const files: string[] = [];
+  for (const entry of await readdir(root, { withFileTypes: true })) {
+    const file = join(root, entry.name);
+    if (entry.isDirectory()) {
+      files.push(...(await collectTypeScriptFiles(file)));
+    } else if (/\.(?:ts|tsx)$/.test(entry.name) && !entry.name.endsWith(".test.ts")) {
+      files.push(file);
+    }
+  }
+  return files;
+}
+
 async function main() {
   const errors: string[] = [];
+  const sourceFiles = [
+    ...(await collectTypeScriptFiles("src")),
+    ...(await collectTypeScriptFiles("scripts")),
+  ];
+  for (const file of sourceFiles) {
+    errors.push(
+      ...(findSourceTextIntegrityIssues(await readFile(file, "utf8"), file).map(
+        (issue) => `Corrupted source text at ${issue.path}: ${issue.value}`,
+      )),
+    );
+  }
   const [
     species,
     forms,
@@ -26,7 +59,7 @@ async function main() {
     evolutionPaths,
   ] = await Promise.all([
     prisma.pokemonSpecies.findMany(),
-    prisma.pokemonForm.findMany(),
+    prisma.pokemonForm.findMany({ include: { species: true } }),
     prisma.battleVariant.findMany(),
     prisma.rawEvaluationData.findMany(),
     prisma.retentionEvaluation.findMany({
@@ -95,6 +128,8 @@ async function main() {
     if (evolutionEdges.has(edge)) errors.push(`Duplicate evolution path: ${edge}.`);
     evolutionEdges.add(edge);
   }
+  errors.push(...validateEvolutionParentPaths(forms, evolutionPaths));
+  errors.push(...validateGen3DexConsistency(species, forms));
   const manifestTargetIds = new Set(
     evolutionData.targets.map(
       (target) => `${String(target.dexNumber).padStart(3, "0")}-${target.formKey.toLowerCase()}`,
@@ -272,6 +307,18 @@ async function main() {
     errors.push(
       ...textIssues.map(
         (issue) => `Corrupted source text at ${issue.path}: ${issue.value}`,
+      ),
+    );
+  }
+  for (const file of (await readdir("review")).filter((name) => name.endsWith(".json"))) {
+    const parsed = JSON.parse((await readFile(join("review", file), "utf8")).replace(/^\uFEFF/, "")) as {
+      dataVersion?: string;
+    };
+    if (parsed.dataVersion !== DATA_VERSION) continue;
+    const textIssues = findTextIntegrityIssues(parsed, `review/${file}`);
+    errors.push(
+      ...textIssues.map(
+        (issue) => `Corrupted active review text at ${issue.path}: ${issue.value}`,
       ),
     );
   }

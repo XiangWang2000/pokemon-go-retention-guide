@@ -32,7 +32,7 @@ describe("Audit 分頁資料", () => {
     const query = normalizeAuditQuery(new URLSearchParams({ decision: "KEEP" }));
     const filtered = filterAuditRows(snapshot.rows, query, snapshot.dataAsOf);
 
-    expect(snapshot.rows).toHaveLength(1438);
+    expect(snapshot.rows).toHaveLength(1439);
     expect(filtered.length).toBeGreaterThan(0);
     expect(filtered.length).toBeLessThan(snapshot.rows.length);
   });
@@ -50,8 +50,8 @@ describe("Audit 分頁資料", () => {
     };
 
     expect(response.ok).toBe(true);
-    expect(payload.overallTotal).toBe(1438);
-    expect(payload.total).toBe(1438);
+    expect(payload.overallTotal).toBe(1439);
+    expect(payload.total).toBe(1439);
     expect(payload.rows.length).toBeLessThanOrEqual(payload.pageSize);
     expect(payload.page).toBe(36);
   });

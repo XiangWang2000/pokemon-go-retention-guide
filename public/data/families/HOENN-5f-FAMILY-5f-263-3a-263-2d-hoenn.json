@@ -493,7 +493,7 @@
                 {
                   "category": "ROCKET",
                   "status": "DATA_UNAVAILABLE",
-                  "provenance": "DATA_UNAVAILABLE",
+                  "provenance": "SOURCE_VERIFIED",
                   "summaryZhTw": "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。",
                   "materialToDecision": false,
                   "rocketRating": "DATA_UNAVAILABLE",
@@ -511,10 +511,20 @@
                 }
               ],
               "raw": [],
-              "sources": [],
+              "sources": [
+                {
+                  "id": "SECONDARY-SHADOW-HOENN-2026",
+                  "name": "Serebii Pokemon GO Shadow Pokemon",
+                  "title": "Shadow Pokemon",
+                  "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
+                  "type": "SECONDARY",
+                  "accessedAt": "2026-08-08T16:00:00.000Z",
+                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                }
+              ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "LOW_GENERAL_VALUE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -725,7 +735,7 @@
                 {
                   "category": "ROCKET",
                   "status": "DATA_UNAVAILABLE",
-                  "provenance": "DATA_UNAVAILABLE",
+                  "provenance": "SOURCE_VERIFIED",
                   "summaryZhTw": "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。",
                   "materialToDecision": false,
                   "rocketRating": "DATA_UNAVAILABLE",
@@ -743,10 +753,20 @@
                 }
               ],
               "raw": [],
-              "sources": [],
+              "sources": [
+                {
+                  "id": "SECONDARY-SHADOW-HOENN-2026",
+                  "name": "Serebii Pokemon GO Shadow Pokemon",
+                  "title": "Shadow Pokemon",
+                  "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
+                  "type": "SECONDARY",
+                  "accessedAt": "2026-08-08T16:00:00.000Z",
+                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                }
+              ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -978,8 +998,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1374,8 +1394,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
@@ -1609,7 +1629,7 @@
                 {
                   "category": "ROCKET",
                   "status": "DATA_UNAVAILABLE",
-                  "provenance": "DATA_UNAVAILABLE",
+                  "provenance": "SOURCE_VERIFIED",
                   "summaryZhTw": "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。",
                   "materialToDecision": false,
                   "rocketRating": "DATA_UNAVAILABLE",
@@ -1627,10 +1647,20 @@
                 }
               ],
               "raw": [],
-              "sources": [],
+              "sources": [
+                {
+                  "id": "SECONDARY-SHADOW-HOENN-2026",
+                  "name": "Serebii Pokemon GO Shadow Pokemon",
+                  "title": "Shadow Pokemon",
+                  "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
+                  "type": "SECONDARY",
+                  "accessedAt": "2026-08-08T16:00:00.000Z",
+                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                }
+              ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "LOW_GENERAL_VALUE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -1826,7 +1856,7 @@
                 {
                   "category": "ROCKET",
                   "status": "DATA_UNAVAILABLE",
-                  "provenance": "DATA_UNAVAILABLE",
+                  "provenance": "SOURCE_VERIFIED",
                   "summaryZhTw": "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。",
                   "materialToDecision": false,
                   "rocketRating": "DATA_UNAVAILABLE",
@@ -1844,10 +1874,20 @@
                 }
               ],
               "raw": [],
-              "sources": [],
+              "sources": [
+                {
+                  "id": "SECONDARY-SHADOW-HOENN-2026",
+                  "name": "Serebii Pokemon GO Shadow Pokemon",
+                  "title": "Shadow Pokemon",
+                  "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
+                  "type": "SECONDARY",
+                  "accessedAt": "2026-08-08T16:00:00.000Z",
+                  "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+                }
+              ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2064,8 +2104,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -2110,8 +2150,8 @@
           "label": "—",
           "tone": "NONE"
         },
-        "decision": "TRANSFER_CANDIDATE",
-        "decisionReason": "一般重複個體通常可傳送。",
+        "decision": "CONDITIONAL_KEEP",
+        "decisionReason": "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。",
         "ivRecommendations": [
           {
             "id": "iv-global-great",

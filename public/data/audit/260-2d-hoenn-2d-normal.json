@@ -42,7 +42,7 @@
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
-  "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
+  "megaSummaryZhTw": "此普通型態可作 Mega 基底候選；不把 Mega 用途回推成全家族必留。",
   "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "依固定快照優先核對：MUD_SHOT／HYDRO_CANNON／EARTHQUAKE",
@@ -486,10 +486,10 @@
     },
     {
       "category": "MEGA",
-      "status": "NOT_APPLICABLE",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "此版本不是 Mega 型態；家族有 Mega 不代表所有成員都必須保留。",
-      "materialToDecision": false,
+      "status": "PARTIALLY_VERIFIED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "此普通型態是已推出 Mega 的基底；不把 Mega 用途回推成全家族必留。",
+      "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
@@ -501,7 +501,14 @@
       "pveUseLevel": null,
       "assessmentDisposition": "CLEAR_USE",
       "checkedAt": "2026-08-08T16:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "OFF-MEGA-HOENN-20260809",
+          "title": "Mega Evolution in Pokemon GO",
+          "url": "https://pokemongolive.com/post/mega-evolution",
+          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+        }
+      ]
     },
     {
       "category": "PVE",
@@ -733,6 +740,15 @@
       "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
     },
     {
+      "id": "OFF-MEGA-HOENN-20260809",
+      "name": "Pokemon GO Mega Evolution data",
+      "title": "Mega Evolution in Pokemon GO",
+      "url": "https://pokemongolive.com/post/mega-evolution",
+      "type": "OFFICIAL",
+      "accessedAt": "2026-08-08T16:00:00.000Z",
+      "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+    },
+    {
       "id": "PVE-HOENN-20260809",
       "name": "GO Hub Hoenn PVE data",
       "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
@@ -771,8 +787,8 @@
   ],
   "traces": [
     {
-      "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-      "priority": 100,
+      "ruleKey": "MAJOR_BATTLE_VALUE",
+      "priority": 900,
       "matched": true,
       "resultDecision": "KEEP",
       "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"

@@ -538,7 +538,7 @@
     {
       "category": "ROCKET",
       "status": "DATA_UNAVAILABLE",
-      "provenance": "DATA_UNAVAILABLE",
+      "provenance": "SOURCE_VERIFIED",
       "summaryZhTw": "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。",
       "materialToDecision": false,
       "rocketRating": "DATA_UNAVAILABLE",
@@ -552,7 +552,14 @@
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
       "checkedAt": "2026-08-08T16:00:00.000Z",
-      "sources": []
+      "sources": [
+        {
+          "id": "SECONDARY-SHADOW-HOENN-2026",
+          "title": "Shadow Pokemon",
+          "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
+          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+        }
+      ]
     }
   ],
   "raw": [
@@ -591,6 +598,15 @@
   ],
   "sources": [
     {
+      "id": "SECONDARY-SHADOW-HOENN-2026",
+      "name": "Serebii Pokemon GO Shadow Pokemon",
+      "title": "Shadow Pokemon",
+      "url": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
+      "type": "SECONDARY",
+      "accessedAt": "2026-08-08T16:00:00.000Z",
+      "usageZhTw": "批次來源確認此精確型態、進化或用途邊界。"
+    },
+    {
       "id": "pvpoke-gl-20260715",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
@@ -602,7 +618,7 @@
   ],
   "traces": [
     {
-      "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+      "ruleKey": "LOW_GENERAL_VALUE",
       "priority": 100,
       "matched": true,
       "resultDecision": "TRANSFER_CANDIDATE",

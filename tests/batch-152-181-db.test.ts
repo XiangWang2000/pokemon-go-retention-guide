@@ -41,7 +41,7 @@ describe("#152-181 generated runtime and review data", () => {
     expect(rows.every((candidate) => candidate.formNameZhTw === "城都")).toBe(true);
     expect(rows).toHaveLength(121);
     expect(rows.reduce((sum, candidate) => sum + candidate.categoryStatuses.length, 0)).toBe(847);
-    expect(review.dataVersion).toBe("2026.08.09-r21");
+    expect(review.dataVersion).toBe("2026.08.09-r22");
     expect(review.counts).toMatchObject({ species: 30, forms: 30, battleVariants: 121, trueDataPending: 0 });
     expect(review.crossBatchIntegration.result).toBe("PASS");
   });

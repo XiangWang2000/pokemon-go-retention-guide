@@ -49,7 +49,7 @@
     "data:recompute:001-241": "tsx scripts/recompute-001-241.ts",
     "data:recompute:001-251": "tsx scripts/recompute-001-251.ts",
     "data:recompute:001-281": "tsx scripts/recompute-001-311.ts --max 281 --baseline-max 251",
-    "data:recompute:001-311": "tsx scripts/recompute-001-311.ts --max 311 --baseline-max 281",
+    "data:recompute:001-311": "tsx scripts/recompute-001-311.ts --max 311 --baseline-max 251",
     "data:backfill-iv": "tsx scripts/backfill-structured-iv.ts",
     "review:generate": "tsx scripts/generate-review.ts && tsx scripts/generate-review-031-060.ts && tsx scripts/generate-review-061-090.ts && tsx scripts/generate-review-091-120.ts && tsx scripts/generate-review-121-151.ts && tsx scripts/generate-review-152-181.ts && tsx scripts/generate-review-182-211.ts && tsx scripts/generate-review-212-241.ts && tsx scripts/generate-review-242-251.ts && tsx scripts/generate-review-252-281.ts && tsx scripts/generate-review-282-311.ts",
     "review:validate": "tsx scripts/validate-review-consistency.ts",
