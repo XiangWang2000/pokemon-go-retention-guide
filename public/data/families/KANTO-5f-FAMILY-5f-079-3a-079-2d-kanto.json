@@ -875,7 +875,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -1121,8 +1121,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1628,8 +1628,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限：其餘普通重複可傳；只留 Mega 候選或符合其他用途的少量個體。"
@@ -2010,8 +2010,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
@@ -2267,7 +2267,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2495,8 +2495,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
@@ -2752,8 +2752,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -2800,8 +2800,8 @@
           "label": "Mega／Primal：限定用途",
           "tone": "SPECIAL"
         },
-        "decision": "TRANSFER_CANDIDATE",
-        "decisionReason": "一般重複個體通常可傳送。",
+        "decision": "CONDITIONAL_KEEP",
+        "decisionReason": "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。",
         "ivRecommendations": [
           {
             "id": "iv-global-ultra",
@@ -3333,7 +3333,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "LOW_GENERAL_VALUE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -3685,7 +3685,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "LOW_GENERAL_VALUE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -3903,7 +3903,7 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -4121,8 +4121,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"

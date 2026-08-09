@@ -856,7 +856,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -1089,8 +1089,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -2267,7 +2267,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -2500,8 +2500,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -3126,8 +3126,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限：其餘普通重複可傳；只留 Mega 候選或符合其他用途的少量個體。"
@@ -3607,8 +3607,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
                   "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
@@ -3936,7 +3936,7 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
+                  "ruleKey": "NO_MAJOR_USE",
                   "priority": 100,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
@@ -4202,8 +4202,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "MAJOR_BATTLE_VALUE",
+                  "priority": 900,
                   "matched": true,
                   "resultDecision": "KEEP",
                   "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
@@ -4494,8 +4494,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -4539,11 +4539,11 @@
           "tone": "NONE"
         },
         "megaMax": {
-          "label": "Mega／Primal：限定用途",
-          "tone": "SPECIAL"
+          "label": "Mega／Primal：高",
+          "tone": "HIGH"
         },
-        "decision": "TRANSFER_CANDIDATE",
-        "decisionReason": "一般重複個體通常可傳送。",
+        "decision": "CONDITIONAL_KEEP",
+        "decisionReason": "普通重複個體通常可傳送；Mega候選先看招式與既有投入，15攻優先，14攻高整體IV亦可留。",
         "ivRecommendations": [
           {
             "id": "iv-global-master",
@@ -4874,9 +4874,9 @@
     "tone": "NONE"
   },
   "megaMax": {
-    "label": "Mega／Primal：限定用途",
+    "label": "Mega／Primal：高",
     "detail": "波士可多拉適用；前階可進化為候選",
-    "tone": "SPECIAL"
+    "tone": "HIGH"
   },
   "familyValue": "HIGH",
   "retentionStrategy": "KEEP_TARGETS",

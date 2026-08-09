@@ -41,7 +41,6 @@ import {
   species312341,
   pveClassifications312341,
   pveUseLevels312341,
-  retentionDecisionOverrides312341,
 } from "../src/data/batch-312-341";
 import {
   forms342371,
@@ -55,7 +54,6 @@ import {
   species342371,
   pveClassifications342371,
   pveUseLevels342371,
-  retentionDecisionOverrides342371,
 } from "../src/data/batch-342-371";
 import {
   forms372386,
@@ -69,7 +67,6 @@ import {
   species372386,
   pveClassifications372386,
   pveUseLevels372386,
-  retentionDecisionOverrides372386,
 } from "../src/data/batch-372-386";
 import {
   ensureCrossGenerationEvolutionTargets,
@@ -168,7 +165,6 @@ type BatchDefinition = {
   specialVariants: Gen3SpecialVariant[];
   pveClassifications: Record<string, PveUseLevel>;
   pveUseLevels: Record<string, PveUseLevel>;
-  retentionDecisionOverrides: Record<string, Decision>;
   pvpokeSpeciesId: (form: Gen3Form, shadow: boolean) => string;
   shadowUnavailableFormIds: ReadonlySet<string>;
 };
@@ -206,7 +202,6 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants252281,
       pveClassifications: pveUseLevels252281,
       pveUseLevels: pveUseLevels252281,
-      retentionDecisionOverrides: {},
       pvpokeSpeciesId: pvpokeSpeciesId252281,
       shadowUnavailableFormIds: new Set(),
     };
@@ -226,7 +221,6 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants282311,
       pveClassifications: pveUseLevels282311,
       pveUseLevels: pveUseLevels282311,
-      retentionDecisionOverrides: {},
       pvpokeSpeciesId: pvpokeSpeciesId282311,
       shadowUnavailableFormIds: new Set(),
     };
@@ -249,7 +243,6 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants312341,
       pveClassifications: pveClassifications312341,
       pveUseLevels: pveUseLevels312341,
-      retentionDecisionOverrides: retentionDecisionOverrides312341,
       pvpokeSpeciesId: pvpokeSpeciesId312341,
       shadowUnavailableFormIds: new Set(),
     };
@@ -269,7 +262,6 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants342371,
       pveClassifications: pveClassifications342371,
       pveUseLevels: pveUseLevels342371,
-      retentionDecisionOverrides: retentionDecisionOverrides342371,
       pvpokeSpeciesId: pvpokeSpeciesId342371,
       shadowUnavailableFormIds: new Set(),
     };
@@ -289,7 +281,6 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants372386,
       pveClassifications: pveClassifications372386,
       pveUseLevels: pveUseLevels372386,
-      retentionDecisionOverrides: retentionDecisionOverrides372386,
       pvpokeSpeciesId: pvpokeSpeciesId372386,
       shadowUnavailableFormIds: new Set(),
     };
@@ -517,8 +508,6 @@ function initialDecision(
   formId: string,
 ) {
   if (!released) return "TRANSFER_CANDIDATE" as const;
-  const override = batch.retentionDecisionOverrides[formId];
-  if (override) return override;
   if (variantKey === "MEGA") return "KEEP" as const;
   if (variantKey === "DYNAMAX" || batch.pveUseLevels[formId] === "CORE_INVESTMENT") {
     return "KEEP" as const;
@@ -910,9 +899,7 @@ export async function runImport(batchName: string) {
           status = "VERIFIED";
           provenance = "SOURCE_VERIFIED";
           summaryZhTw = rankSummary(result.ranks);
-          materialToDecision =
-            result.ranks.some((rank) => rank.rank <= 250) ||
-            Boolean(batch.retentionDecisionOverrides[variant.form.id]);
+          materialToDecision = result.ranks.some((rank) => rank.rank <= 250);
         } else {
           status = "UNRANKED";
           summaryZhTw = "固定 PvPoke Open／Overall 快照未列入可重現名次；不把沒有排名誤當成全家族資料缺口。";

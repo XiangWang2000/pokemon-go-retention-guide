@@ -6,7 +6,6 @@ import {
   forms312386,
   releasedMegaForms312386,
   releasedShadowForms312386,
-  retentionDecisionOverrides312386,
   specialVariants312386,
   species312386,
 } from "@/data/batch-312-386";
@@ -132,7 +131,6 @@ describe("Gen3 #312-#386 canonical and graph regression", () => {
     ]));
     expect(pveClassifications312386["317-hoenn"]).toBe("NO_SIGNIFICANT_USE");
     expect(pveClassifications312386["326-hoenn"]).toBe("NO_SIGNIFICANT_USE");
-    expect(retentionDecisionOverrides312386["386-defense"]).toBe("CONDITIONAL_KEEP");
     expect(canonicalGen3Forms.find((form) => form.id === "386-defense")?.variantKeys).toEqual([
       "NORMAL",
       "SHADOW",

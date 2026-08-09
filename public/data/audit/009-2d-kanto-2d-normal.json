@@ -47,10 +47,10 @@
   "reviewed": true,
   "updatedAt": "2026-08-08T16:00:00.000Z",
   "pvpSummaryZhTw": "620 · #51 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。；449 · #306 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。；641 · #22 · PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-  "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+  "pveSummaryZhTw": "特殊用途。道館防守列為特殊用途",
   "rocketSummaryZhTw": "物種級火箭隊實用性尚待研究。",
-  "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
-  "gymRating": "LOW",
+  "gymSummaryZhTw": "道館防守列為特殊用途；只保留少量適合守館或進化的個體。",
+  "gymRating": "MEDIUM",
   "megaSummaryZhTw": "此型態具有 Mega 候選；只應保留少量符合15攻／96%以上優先門檻的個體，價值仍待交叉確認。",
   "maxBattleSummaryZhTw": "一般老個體不會因該物種可 Dynamax 而自動擁有 Max 能力；此版本資料尚待確認。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
@@ -530,7 +530,7 @@
       "category": "PVE",
       "status": "PARTIALLY_VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+      "summaryZhTw": "特殊用途。道館防守列為特殊用途",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -540,7 +540,7 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "pveUseLevel": "SPECIAL_USE",
       "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-07-28T04:00:00.000Z",
       "sources": [
@@ -832,8 +832,8 @@
   ],
   "traces": [
     {
-      "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-      "priority": 100,
+      "ruleKey": "MAJOR_BATTLE_VALUE",
+      "priority": 900,
       "matched": true,
       "resultDecision": "KEEP",
       "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"

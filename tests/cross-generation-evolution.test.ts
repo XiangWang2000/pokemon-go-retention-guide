@@ -140,15 +140,13 @@ describe("cross-generation evolution targets", () => {
 
   it("keeps Deoxys Defense retention layers aligned", () => {
     const defense = forms.find((form) => form.formId === "386-defense");
-    expect(defense?.decision).toBe("CONDITIONAL_KEEP");
+    expect(defense?.decision).toBe("TRANSFER_CANDIDATE");
     expect(defense?.variants.find((variant) => variant.row.variantKey === "NORMAL")?.row)
-      .toMatchObject({ assessmentDisposition: "LIMITED_USE", decision: "CONDITIONAL_KEEP" });
+      .toMatchObject({ assessmentDisposition: "NO_SIGNIFICANT_USE", decision: "TRANSFER_CANDIDATE" });
 
     const family = familyContaining("386-defense");
-    expect(family.retentionStrategy).toBe("SELECTIVE_KEEP");
-    expect(family.primaryRetentionTargets).toEqual(
-      expect.arrayContaining([expect.objectContaining({ formId: "386-defense" })]),
-    );
-    expect(family.handlingSummaryZhTw).toContain("PvP");
+    expect(family.retentionStrategy).toBe("MOSTLY_TRANSFER");
+    expect(family.primaryRetentionTargets).toEqual([]);
+    expect(family.handlingSummaryZhTw).not.toContain("PvP");
   });
 });

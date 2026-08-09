@@ -165,11 +165,11 @@ export async function runReview(
     });
     const defense = rows.find((row) => row.id === "386-defense-normal");
     checks.push({
-      name: "Deoxys Defense retention override",
+      name: "Deoxys Defense does not infer Great League use from IV rank",
       result:
         defense &&
-        defense.decision === "CONDITIONAL_KEEP" &&
-        defense.assessmentDisposition === "LIMITED_USE"
+        defense.decision === "TRANSFER_CANDIDATE" &&
+        defense.assessmentDisposition === "NO_SIGNIFICANT_USE"
           ? "PASS"
           : "FAIL",
     });

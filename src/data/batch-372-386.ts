@@ -627,10 +627,6 @@ export const pveUseLevels372386: Record<string, PveUseLevel> = {
   "383-hoenn": "CORE_INVESTMENT",
   "384-hoenn": "CORE_INVESTMENT"
 };
-export const retentionDecisionOverrides372386: Record<string, "CONDITIONAL_KEEP"> = {
-  "386-defense": "CONDITIONAL_KEEP"
-};
-
 const pvpokeIds372386: Record<string, { normal: string; shadow: string }> = {
   "372-hoenn": {
     "normal": "shelgon",

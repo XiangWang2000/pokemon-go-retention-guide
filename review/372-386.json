@@ -11,8 +11,8 @@
     "families": 15,
     "strategyCounts": {
       "KEEP_TARGETS": 7,
-      "SELECTIVE_KEEP": 5,
-      "MOSTLY_TRANSFER": 3,
+      "SELECTIVE_KEEP": 4,
+      "MOSTLY_TRANSFER": 4,
       "HOLD_FOR_NOW": 0
     },
     "openIssues": 0,
@@ -58,7 +58,7 @@
         "result": "PASS"
       },
       {
-        "name": "Deoxys Defense retention override",
+        "name": "Deoxys Defense does not infer Great League use from IV rank",
         "result": "PASS"
       },
       {
@@ -147,8 +147,8 @@
     },
     {
       "familyId": "HOENN_FAMILY_386:386-defense",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留代歐奇希斯（PvP（GL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {

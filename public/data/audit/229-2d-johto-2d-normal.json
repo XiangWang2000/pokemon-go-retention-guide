@@ -716,8 +716,8 @@
   ],
   "traces": [
     {
-      "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-      "priority": 100,
+      "ruleKey": "CONDITIONAL_USE",
+      "priority": 700,
       "matched": true,
       "resultDecision": "CONDITIONAL_KEEP",
       "explanationZhTw": "用途有限：其餘普通重複可傳；只留 Mega 候選或符合其他用途的少量個體。"

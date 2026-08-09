@@ -354,8 +354,8 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "VALUABLE_EVOLUTION",
-                  "priority": 850,
+                  "ruleKey": "MAJOR_BATTLE_VALUE",
+                  "priority": 900,
                   "matched": true,
                   "resultDecision": "KEEP",
                   "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
@@ -364,12 +364,10 @@
               "moves": []
             },
             "primaryUses": [
-              "PvP",
-              "後續進化"
+              "PvP"
             ],
             "primaryUseKeys": [
-              "GREAT_LEAGUE",
-              "EVOLUTION"
+              "GREAT_LEAGUE"
             ],
             "ivRecommendations": [
               {
@@ -409,7 +407,7 @@
               "GL：Rank≤100"
             ],
             "ivDirection": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
-            "shortReason": "主要用途：PvP、後續進化。"
+            "shortReason": "主要用途：PvP。"
           },
           {
             "row": {
@@ -627,8 +625,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "VALUABLE_EVOLUTION",
-                  "priority": 850,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -636,15 +634,11 @@
               ],
               "moves": []
             },
-            "primaryUses": [
-              "後續進化"
-            ],
-            "primaryUseKeys": [
-              "EVOLUTION"
-            ],
+            "primaryUses": [],
+            "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
+            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
             "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
           },
           {
@@ -863,8 +857,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1095,8 +1089,8 @@
               "sources": [],
               "traces": [
                 {
-                  "ruleKey": "PRESERVED_EXISTING_CONCLUSION",
-                  "priority": 100,
+                  "ruleKey": "UNRELEASED_VARIANT",
+                  "priority": 950,
                   "matched": true,
                   "resultDecision": "TRANSFER_CANDIDATE",
                   "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
@@ -1139,8 +1133,8 @@
           "label": "—",
           "tone": "NONE"
         },
-        "decision": "CONDITIONAL_KEEP",
-        "decisionReason": "本體用途有限；依目標進化結果的數字門檻保留個體。",
+        "decision": "KEEP",
+        "decisionReason": "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。",
         "ivRecommendations": [
           {
             "id": "iv-global-great",
@@ -1180,15 +1174,13 @@
         ],
         "ivDirection": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
         "primaryUses": [
-          "PvP",
-          "後續進化"
+          "PvP"
         ],
         "primaryUseKeys": [
-          "GREAT_LEAGUE",
-          "EVOLUTION"
+          "GREAT_LEAGUE"
         ],
         "hasRocketUse": false,
-        "hasEvolutionUse": true,
+        "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
         "updatedAt": "2026-08-08T16:00:00.000Z",
@@ -1266,16 +1258,15 @@
     "label": "—",
     "tone": "NONE"
   },
-  "familyValue": "HIGH",
-  "retentionStrategy": "KEEP_TARGETS",
+  "familyValue": "MEDIUM",
+  "retentionStrategy": "SELECTIVE_KEEP",
   "primaryRetentionTargets": [
     {
       "formId": "206-johto",
       "memberNameZhTw": "土龍弟弟",
       "displayNameZhTw": "土龍弟弟",
       "useKeys": [
-        "GREAT_LEAGUE",
-        "EVOLUTION"
+        "GREAT_LEAGUE"
       ],
       "variantKeys": [
         "NORMAL"
@@ -1285,8 +1276,8 @@
   ],
   "primaryTargetSummaryZhTw": "土龍弟弟",
   "preEvolutionActionZhTw": "沒有僅作進化素材的前階成員。",
-  "handlingSummaryZhTw": "保留土龍弟弟（PvP（GL Rank≤100））；保留可進化為土龍節節的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留土龍弟弟；沒有僅作進化素材的前階成員。IV：GL：Rank≤100。",
+  "handlingSummaryZhTw": "保留土龍弟弟（PvP（GL Rank≤100））；保留可進化為土龍節節的合適前階候選；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留土龍弟弟；價值集中於特定版本或條件。沒有僅作進化素材的前階成員。其餘普通重複個體大多可傳。IV：GL：Rank≤100。",
   "ivShortLabels": [
     "GL：Rank≤100"
   ],
@@ -1326,8 +1317,7 @@
   ],
   "ivSummaryZhTw": "GL：Rank≤100",
   "primaryUses": [
-    "PvP",
-    "後續進化"
+    "PvP"
   ],
   "holdReasons": [],
   "notices": [

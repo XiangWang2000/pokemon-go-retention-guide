@@ -1,5 +1,5 @@
 import "dotenv/config";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
 import { getDatabaseUrl } from "../src/lib/database";
@@ -14,9 +14,14 @@ import {
 } from "../src/rules/battle-assessment";
 import { laterEvolutionUses } from "../src/data/later-evolution-uses";
 import { ensureCrossGenerationEvolutionTargets } from "../src/data/cross-generation-evolution";
+import { specialAcquisitionForms121151 } from "../src/data/batch-121-151";
+import {
+  hasCurrentPvpUse,
+  hasIndependentCuratedPvpUse,
+  validateCuratedPvpEvidence,
+} from "../src/data/curated-pvp-evidence";
 import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
-import { findTextIntegrityIssues } from "../src/data/text-integrity";
 import { validateEvolutionParentPaths } from "../src/data/checkpoint-validation";
 import { CURRENT_DATA_MAX_DEX } from "../src/config/data-scope";
 
@@ -27,8 +32,7 @@ const prisma = new PrismaClient({
 const checkedAt = new Date(`${DATA_VERSION_DATE_ISO}T00:00:00+08:00`);
 const dexMin = 1;
 const dexMax = Number(process.argv[process.argv.indexOf("--max") + 1] || String(CURRENT_DATA_MAX_DEX));
-const baselineDexMax = Number(process.argv[process.argv.indexOf("--baseline-max") + 1] || String(Math.min(251, dexMax)));
-if (!Number.isInteger(dexMax) || dexMax < 251 || !Number.isInteger(baselineDexMax) || baselineDexMax > dexMax) {
+if (!Number.isInteger(dexMax) || dexMax < 251) {
   throw new Error("無效的 --max 或 --baseline-max 參數。");
 }
 
@@ -170,7 +174,6 @@ async function loadVariants() {
       retentionEvaluations: {
         orderBy: { generatedAt: "desc" },
         take: 1,
-        include: { ruleTraces: true },
       },
       dataIssues: { where: { status: "OPEN" } },
     },
@@ -185,22 +188,12 @@ type VariantRecord = Awaited<ReturnType<typeof loadVariants>>[number];
 type CategoryRecord = VariantRecord["categoryEvaluations"][number];
 type Decision = "KEEP" | "CONDITIONAL_KEEP" | "HOLD_FOR_NOW" | "TRANSFER_CANDIDATE";
 
-type ExistingDecisionBaseline = {
-  decision: Decision;
-  disposition: AssessmentDisposition;
-  reasonZhTw: string;
-  missingDataSummaryZhTw: string;
-  confidence: "HIGH" | "MEDIUM" | "LOW";
-  reviewStatus: "NOT_REQUIRED" | "DATA_PENDING" | "RESOLVED";
-  reviewed: boolean;
-  recommendedIvStrategyZhTw: string;
-};
-
 interface DirectAssessment {
   pveLevel: PveUseLevel;
   hasDirectPveValue: boolean;
   hasDirectPveCore: boolean;
   hasPvpValue: boolean;
+  hasCuratedPvpUse: boolean;
   bestPvpRank: number | null;
   hasGymValue: boolean;
   gymRating: string;
@@ -261,23 +254,11 @@ function directPveLevel(variant: VariantRecord, pve: CategoryRecord | undefined)
     : ("NO_SIGNIFICANT_USE" as const);
 }
 
-function hasMatchedRule(variant: VariantRecord, ruleKey: string) {
-  return variant.retentionEvaluations[0]?.ruleTraces.some(
-    (trace) => trace.matched && trace.ruleKey === ruleKey,
-  );
-}
-
-function hasCuratedPvpUse(variant: VariantRecord) {
-  const pvp = category(variant, "PVP");
-  const hasRankedPvpUse = pvpRanks(variant).some((rank) => rank <= 250);
-  return (
-    variant.variantKey === "NORMAL" &&
-    variant.retentionEvaluations[0]?.finalDecision === "CONDITIONAL_KEEP" &&
-    hasMatchedRule(variant, "CONDITIONAL_USE") &&
-    Boolean(pvp?.materialToDecision) &&
-    ["VERIFIED", "PARTIALLY_VERIFIED"].includes(pvp?.status ?? "") &&
-    !hasRankedPvpUse
-  );
+function hasCuratedPvpEvidence(variant: VariantRecord) {
+  return hasIndependentCuratedPvpUse({
+    formId: variant.pokemonFormId,
+    variantKey: variant.variantKey,
+  });
 }
 
 function issueIsCritical(issue: VariantRecord["dataIssues"][number]) {
@@ -291,13 +272,21 @@ function issueIsCritical(issue: VariantRecord["dataIssues"][number]) {
 }
 
 function directAssessment(variant: VariantRecord): DirectAssessment {
+  const pvp = category(variant, "PVP");
   const pve = category(variant, "PVE");
   const mega = category(variant, "MEGA");
   const max = category(variant, "MAX_BATTLE");
   const gym = category(variant, "GYM");
   const ranks = pvpRanks(variant);
   const bestPvpRank = ranks.length ? Math.min(...ranks) : null;
-  const pvpValue = (bestPvpRank !== null && bestPvpRank <= 250) || hasCuratedPvpUse(variant);
+  const hasCuratedPvpUse = hasCuratedPvpEvidence(variant);
+  const pvpValue = hasCurrentPvpUse({
+    formId: variant.pokemonFormId,
+    variantKey: variant.variantKey,
+    ranks,
+    categoryStatus: pvp?.status,
+    categoryMaterialToDecision: pvp?.materialToDecision,
+  });
   const directPve = directPveLevel(variant, pve);
   const hasDirectPveValue = directPve !== "NO_SIGNIFICANT_USE";
   const hasDirectPveCore = directPve === "CORE_INVESTMENT";
@@ -309,10 +298,18 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
     max?.materialToDecision ||
     (variant.variantKey === "GIGANTAMAX" && variant.releaseStatus === "RELEASED"),
   );
+  const rawGym = variant.rawEvaluationData.filter((item) => item.category === "GYM");
+  const rawGymRating = rawGym.some((item) => item.rating === "HIGH" || item.tier === "A")
+    ? "HIGH"
+    : rawGym.some((item) => item.rating === "MEDIUM" || item.tier === "B")
+      ? "MEDIUM"
+      : rawGym.some((item) => item.rating === "LOW" || item.tier === "C" || item.tier === "D")
+        ? "LOW"
+        : null;
   const hasGymValue = Boolean(
-    gym?.materialToDecision ||
-    ["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(variant.retentionEvaluations[0]?.gymRating),
+    gym?.materialToDecision || rawGymRating === "HIGH" || rawGymRating === "MEDIUM",
   );
+  const gymRating = gym?.materialToDecision ? "SPECIAL_CASE" : rawGymRating ?? "NOT_APPLICABLE";
   const hasMaxCore = Boolean(
     variant.variantKey === "GIGANTAMAX" &&
     ["HIGH", "CORE"].includes(max?.maxOverallRating ?? max?.maxInvestmentRating ?? ""),
@@ -340,13 +337,15 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
     hasDirectPveValue,
     hasDirectPveCore: hasDirectPveCore || hasMaxCore,
     hasPvpValue: pvpValue,
+    hasCuratedPvpUse,
     bestPvpRank,
     hasGymValue,
-    gymRating: variant.retentionEvaluations[0]?.gymRating ?? "NOT_APPLICABLE",
+    gymRating,
     hasMegaValue,
     hasMaxValue,
     hasMaxCore,
-    hasSpecialAcquisition: hasMatchedRule(variant, "SPECIAL_ACQUISITION"),
+    hasSpecialAcquisition:
+      variant.variantKey === "NORMAL" && specialAcquisitionForms121151.has(variant.pokemonFormId),
   };
 }
 
@@ -561,13 +560,6 @@ function makeDecision(input: {
       reasonZhTw: "真正待補資料：無法判斷，暫時不要傳；請補齊主要來源後再重算。",
     };
   }
-  if (hasCuratedPvpUse(variant)) {
-    return {
-      decision: "CONDITIONAL_KEEP",
-      ruleKey: "CONDITIONAL_USE",
-      reasonZhTw: "代歐奇希斯防禦形態具 Great League PvP 保留價值；與其他 Forme 分開評估，不能沿用單一轉送結論。",
-    };
-  }
   if (variant.variantKey === "PURIFIED") {
     return {
       decision: "TRANSFER_CANDIDATE",
@@ -631,7 +623,7 @@ function makeDecision(input: {
   };
 }
 
-function ivStrategy(variant: VariantRecord, decision: Decision) {
+function ivStrategy(variant: VariantRecord, decision: Decision, hasCuratedPvpUse = false) {
   if (decision === "HOLD_FOR_NOW") return "無法判斷，暫時不要傳；資料補齊前不以 IV 大量篩除。";
   if (variant.pokemonFormId === "151-kanto" && variant.variantKey === "NORMAL") {
     return "特殊取得個體應保留；不以 IV 作傳送門檻。";
@@ -639,7 +631,7 @@ function ivStrategy(variant: VariantRecord, decision: Decision) {
   if (variant.variantKey === "SHADOW") {
     return "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。";
   }
-  if (hasCuratedPvpUse(variant)) {
+  if (hasCuratedPvpUse) {
     return "先以 Great League PvP 用途與個體 Rank 篩選防禦形態；不要把其他 Forme 的結論套用到此型態。";
   }
   if (["MEGA", "MEGA_X", "MEGA_Y", "DYNAMAX", "GIGANTAMAX"].includes(variant.variantKey)) {
@@ -776,91 +768,11 @@ function nonMaterialIssueMessage(variant: VariantRecord, issueType: string) {
   return `此欄位待補，但不影響${scope}結論。缺口：${missing}；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。`;
 }
 
-async function loadExistingDecisionBaseline() {
-  try {
-    const raw = await readFile("site-data/dashboard.json", "utf8");
-    const snapshot = JSON.parse(raw.replace(/^\uFEFF/, "")) as Array<Record<string, unknown>>;
-    return new Map<string, ExistingDecisionBaseline>(
-      snapshot
-        .filter((row) => typeof row.id === "string" && Number(row.dexNumber) <= baselineDexMax)
-        .map((row) => [
-          row.id as string,
-          {
-            decision: row.decision as Decision,
-            disposition: row.assessmentDisposition as AssessmentDisposition,
-            reasonZhTw: String(row.reasonZhTw ?? ""),
-            missingDataSummaryZhTw: String(row.missingDataSummaryZhTw ?? ""),
-            confidence: row.confidence as ExistingDecisionBaseline["confidence"],
-            reviewStatus: row.reviewStatus as ExistingDecisionBaseline["reviewStatus"],
-            reviewed: Boolean(row.reviewed),
-            recommendedIvStrategyZhTw: String(row.recommendedIvStrategyZhTw ?? ""),
-          },
-        ]),
-    );
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") return new Map();
-    throw error;
-  }
-}
-
-async function assertExistingDecisionsStable(
-  variants: VariantRecord[],
-  assessments: Map<string, RecalculatedAssessment>,
-) {
-  let raw: string;
-  try {
-    raw = await readFile("site-data/dashboard.json", "utf8");
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
-      console.warn("site-data/dashboard.json not found; skipping the existing-decision guard.");
-      return;
-    }
-    throw error;
-  }
-  const snapshot = JSON.parse(raw.replace(/^\uFEFF/, "")) as Array<{
-    id?: unknown;
-    dexNumber?: unknown;
-    decision?: unknown;
-    assessmentDisposition?: unknown;
-  }>;
-  const baseline = new Map(
-    snapshot
-      .filter((row) => typeof row.id === "string" && Number(row.dexNumber) <= baselineDexMax)
-      .map((row) => [row.id as string, [row.decision, row.assessmentDisposition] as const]),
-  );
-  const changed = variants
-    .filter((variant) => variant.pokemonForm.species.dexNumber <= baselineDexMax)
-    .filter((variant) => {
-      const expected = baseline.get(variant.id);
-      const current = assessments.get(variant.id);
-      return (
-        expected !== undefined &&
-        current !== undefined &&
-        (expected[0] !== current.decision || expected[1] !== current.disposition)
-      );
-    })
-    .map((variant) => {
-      const expected = baseline.get(variant.id)!;
-      const current = assessments.get(variant.id)!;
-      return `${variant.id}: ${String(expected[0])}/${String(expected[1])} -> ${current.decision}/${current.disposition}`;
-    });
-  const missing = variants
-    .filter((variant) => variant.pokemonForm.species.dexNumber <= baselineDexMax)
-    .filter((variant) => !baseline.has(variant.id))
-    .map((variant) => variant.id);
-  if (changed.length || missing.length) {
-    throw new Error(
-      [
-        "Existing baseline retention conclusions changed or are missing from the previous snapshot.",
-        ...changed.slice(0, 20),
-        ...(changed.length > 20 ? [`...and ${changed.length - 20} more changed rows.`] : []),
-        ...(missing.length ? [`Missing baseline rows: ${missing.slice(0, 20).join(", ")}`] : []),
-      ].join("\n"),
-    );
-  }
-}
-
 async function main() {
+  const curatedPvpIssues = validateCuratedPvpEvidence();
+  if (curatedPvpIssues.length) {
+    throw new Error(`Curated PvP evidence validation failed:\n- ${curatedPvpIssues.join("\n- ")}`);
+  }
   await ensureCrossGenerationEvolutionTargets(prisma, checkedAt);
   const variants = await loadVariants();
   const [evolutionPaths, evolutionForms] = await Promise.all([
@@ -900,7 +812,6 @@ async function main() {
   );
   const directByVariant = makeDirectMap(variants);
   const assessments = new Map<string, RecalculatedAssessment>();
-  const existingDecisionBaseline = await loadExistingDecisionBaseline();
 
   const changeLogs: Array<{
     id: string;
@@ -1025,52 +936,19 @@ async function main() {
         : "NOT_APPLICABLE",
     };
     assessment.confidence = confidence(variant, assessment);
-    const preserved =
-      variant.pokemonForm.species.dexNumber <= baselineDexMax
-        ? existingDecisionBaseline.get(variant.id)
-        : undefined;
-    if (preserved) {
-      // This release repairs source/evolution text only; keep every accepted decision stable.
-      const recalculatedDecision = assessment.decision;
-      const recalculatedDisposition = assessment.disposition;
-      assessment.decision = preserved.decision;
-      assessment.disposition = preserved.disposition;
-      assessment.missingDataSummaryZhTw = missingDataSummaryZhTw(preserved.disposition);
-      assessment.confidence = confidence(variant, assessment);
-      assessment.reviewStatus = reviewStatus(preserved.disposition);
-      assessment.reviewed = preserved.disposition !== "TRUE_DATA_PENDING";
-      assessment.recommendedIvStrategyZhTw = ivStrategy(variant, preserved.decision);
-      if (
-        recalculatedDecision !== preserved.decision ||
-        recalculatedDisposition !== preserved.disposition ||
-        findTextIntegrityIssues(assessment.reasonZhTw).length > 0
-      ) {
-        assessment.reasonZhTw =
-          preserved.decision === "KEEP"
-            ? "\u6cbf\u7528\u65e2\u6709\u4fdd\u7559\u7d50\u8ad6\uff1b\u672c\u6b21\u50c5\u66f4\u65b0\u8de8\u4e16\u4ee3\u9032\u5316\u8207\u578b\u614b\u8cc7\u6599\u3002"
-            : preserved.decision === "CONDITIONAL_KEEP"
-              ? "\u6cbf\u7528\u65e2\u6709\u689d\u4ef6\u4fdd\u7559\u7d50\u8ad6\uff1b\u672c\u6b21\u50c5\u66f4\u65b0\u8de8\u4e16\u4ee3\u9032\u5316\u8207\u578b\u614b\u8cc7\u6599\u3002"
-              : preserved.decision === "TRANSFER_CANDIDATE"
-                ? "\u6cbf\u7528\u65e2\u6709\u53ef\u50b3\u9001\u7d50\u8ad6\uff1b\u672c\u6b21\u50c5\u66f4\u65b0\u8de8\u4e16\u4ee3\u9032\u5316\u8207\u578b\u614b\u8cc7\u6599\u3002"
-                : "\u6cbf\u7528\u65e2\u6709\u66ab\u6642\u4fdd\u7559\u7d50\u8ad6\uff1b\u672c\u6b21\u50c5\u66f4\u65b0\u8de8\u4e16\u4ee3\u9032\u5316\u8207\u578b\u614b\u8cc7\u6599\u3002";
-      }
-      assessment.ruleKey = later.hasValue
-        ? "VALUABLE_EVOLUTION"
-        : preserved.recommendedIvStrategyZhTw.includes("特殊取得")
-          ? "SPECIAL_ACQUISITION"
-          : "PRESERVED_EXISTING_CONCLUSION";
-    }
     normalizePrimalVisibleText(variant, assessment);
     assessments.set(variant.id, assessment);
 
-    const oldEvaluation = variant.retentionEvaluations[0];
-    if (oldEvaluation && oldEvaluation.finalDecision !== assessment.decision) {
+    // The previous evaluation is history-only for change logs and row identity;
+    // it is deliberately read after the current assessment is complete.
+    const historyEvaluation = variant.retentionEvaluations[0];
+    if (historyEvaluation && historyEvaluation.finalDecision !== assessment.decision) {
       changeLogs.push({
         id: `recalibrate-20260809-decision-${safeId(variant.id)}`,
         entityType: "BattleVariant",
         entityId: variant.id,
         fieldName: "decision",
-        previousValue: oldEvaluation.finalDecision,
+        previousValue: historyEvaluation.finalDecision,
         newValue: assessment.decision,
         sourceId: null,
         changeReasonZhTw: "重新套用 PvE 四級用途與逐版本資料處置規則。",
@@ -1078,13 +956,13 @@ async function main() {
         rulesVersion: RULES_VERSION,
       });
     }
-    if (oldEvaluation && oldEvaluation.assessmentDisposition !== assessment.disposition) {
+    if (historyEvaluation && historyEvaluation.assessmentDisposition !== assessment.disposition) {
       changeLogs.push({
         id: `recalibrate-20260809-disposition-${safeId(variant.id)}`,
         entityType: "BattleVariant",
         entityId: variant.id,
         fieldName: "assessmentDisposition",
-        previousValue: oldEvaluation.assessmentDisposition,
+        previousValue: historyEvaluation.assessmentDisposition,
         newValue: assessment.disposition,
         sourceId: null,
         changeReasonZhTw: "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
@@ -1093,8 +971,6 @@ async function main() {
       });
     }
   }
-
-  await assertExistingDecisionsStable(variants, assessments);
 
   const targetEvaluationIds = variants
     .map((variant) => variant.retentionEvaluations[0]?.id)
@@ -1111,13 +987,7 @@ async function main() {
       const assessment = assessments.get(variant.id)!;
       const evaluation = variant.retentionEvaluations[0];
       const evaluationId = evaluation?.id ?? `recalibrate-eval-${safeId(variant.id)}`;
-      const existingGymRating = evaluation?.gymRating ?? "NOT_APPLICABLE";
-      const gymRating =
-        existingGymRating !== "NOT_APPLICABLE"
-          ? existingGymRating
-          : assessment.hasGymValue
-            ? "SPECIAL_CASE"
-            : "NOT_APPLICABLE";
+      const gymRating = assessment.gymRating;
       const data = {
         finalDecision: assessment.decision,
         pveSummaryZhTw: assessment.pveSummaryZhTw,
@@ -1128,7 +998,9 @@ async function main() {
         maxBattleSummaryZhTw:
           evaluation?.maxBattleSummaryZhTw ?? "Max 版本與普通／暗影版本分開評估。",
         evolutionSummaryZhTw: assessment.evolutionSummaryZhTw,
-        recommendedIvStrategyZhTw: assessment.recommendedIvStrategyZhTw ?? ivStrategy(variant, assessment.decision),
+        recommendedIvStrategyZhTw:
+          assessment.recommendedIvStrategyZhTw ??
+          ivStrategy(variant, assessment.decision, assessment.hasCuratedPvpUse),
         reasonZhTw: assessment.reasonZhTw,
         confidence: assessment.confidence,
         rulesVersion: RULES_VERSION,
@@ -1158,7 +1030,9 @@ async function main() {
             evolutionSummaryZhTw: assessment.evolutionSummaryZhTw,
             requiredMovesSummaryZhTw:
               "依實際用途再核對招式；沒有主要用途時不因招式欄位缺失囤積個體。",
-            recommendedIvStrategyZhTw: assessment.recommendedIvStrategyZhTw ?? ivStrategy(variant, assessment.decision),
+            recommendedIvStrategyZhTw:
+              assessment.recommendedIvStrategyZhTw ??
+              ivStrategy(variant, assessment.decision, assessment.hasCuratedPvpUse),
             reasonZhTw: assessment.reasonZhTw,
             confidence: assessment.confidence,
             rulesVersion: RULES_VERSION,
