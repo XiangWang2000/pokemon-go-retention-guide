@@ -32,7 +32,7 @@ const schemas = {
     formKey: id,
     formNameEn: z.string().trim().min(1, "缺少英文型態名稱"),
     formNameZhTw: z.string().trim().min(1, "缺少繁中型態名稱"),
-    regionKey: z.enum(["KANTO", "JOHTO", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"]),
+    regionKey: z.enum(["KANTO", "JOHTO", "HOENN", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"]),
     types: z.union([z.string(), z.array(z.string())]),
     searchAliases: z.union([z.string(), z.array(z.string())]),
     evolvesFromFormId: z.string().nullable().optional(),

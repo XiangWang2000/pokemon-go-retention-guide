@@ -56,16 +56,16 @@ describe("Sites 唯讀 snapshot", () => {
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
     expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.09-r21");
     expect(siteSnapshotManifest.counts).toMatchObject({
-      pokemonSpecies: 277,
-      pokemonForms: 315,
-      battleVariants: 1190,
-      rawEvaluationData: 825,
-      sourceReferences: 167,
-      retentionEvaluations: 1355,
-      categoryEvaluations: 8330,
+      pokemonSpecies: 308,
+      pokemonForms: 346,
+      battleVariants: 1312,
+      rawEvaluationData: 877,
+      sourceReferences: 173,
+      retentionEvaluations: 1477,
+      categoryEvaluations: 9184,
       ivRecommendations: 11,
-      dashboardRows: 1190,
-      homeFamilies: 155,
+      dashboardRows: 1312,
+      homeFamilies: 166,
       openReviewIssues: 241,
     });
     expect(siteSnapshotManifest.sourceDatabase.path).toBe("dev.db");
@@ -76,7 +76,7 @@ describe("Sites 唯讀 snapshot", () => {
   it("預建 Excel 可開啟且包含十張繁中工作表", async () => {
     const workbook = new ExcelJS.Workbook();
     const buffer = await readFile(
-      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-251.xlsx"),
+      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-281.xlsx"),
     );
     await workbook.xlsx.load(buffer as unknown as Parameters<typeof workbook.xlsx.load>[0]);
     expect(workbook.subject).toBe("2026.08.09-r21");
@@ -163,7 +163,7 @@ describe("Sites 唯讀 snapshot", () => {
     const response = exportRedirect(new Request("https://example.test/api/export"));
     expect(response.status).toBe(307);
     expect(response.headers.get("location")).toBe(
-      "https://example.test/exports/pokemon-go-retention-001-251.xlsx",
+      "https://example.test/exports/pokemon-go-retention-001-281.xlsx",
     );
   });
 });
@@ -175,9 +175,9 @@ describe("首頁 snapshot", () => {
     const variants = forms.flatMap((form) => form.variants);
 
     expect(home.schemaVersion).toBe(1);
-    expect(home.families).toHaveLength(155);
-    expect(forms).toHaveLength(288);
-    expect(variants).toHaveLength(1190);
+    expect(home.families).toHaveLength(166);
+    expect(forms).toHaveLength(318);
+    expect(variants).toHaveLength(1312);
     expect(variants.every((variant) => variant.row.ivRecommendations.length === 0)).toBe(true);
     expect(forms.some((form) => form.ivRecommendations.length > 0)).toBe(true);
     expect(variants.some((variant) => variant.ivRecommendations.length > 0)).toBe(true);

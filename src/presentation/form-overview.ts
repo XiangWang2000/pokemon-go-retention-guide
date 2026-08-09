@@ -78,11 +78,12 @@ const variantOrder: Record<string, number> = {
 const regionOrder: Record<string, number> = {
   KANTO: 0,
   JOHTO: 1,
-  ALOLA: 2,
-  GALAR: 3,
-  HISUI: 4,
-  PALDEA: 5,
-  OTHER: 6,
+  HOENN: 2,
+  ALOLA: 3,
+  GALAR: 4,
+  HISUI: 5,
+  PALDEA: 6,
+  OTHER: 7,
 };
 
 function category(row: DashboardRow, key: string) {

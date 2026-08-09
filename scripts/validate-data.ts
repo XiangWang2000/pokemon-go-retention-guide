@@ -110,7 +110,7 @@ async function main() {
     if (form.evolvesFromFormId !== target.fromFormId) {
       errors.push(`${targetId} has an unexpected evolvesFromFormId.`);
     }
-    if (!["KANTO", "JOHTO", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"].includes(target.regionKey)) {
+    if (!["KANTO", "JOHTO", "HOENN", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"].includes(target.regionKey)) {
       errors.push(`${targetId} has an invalid region.`);
     }
     if (target.generation >= 4 && target.formKey === "KANTO") {
@@ -261,6 +261,8 @@ async function main() {
     "research_notes/battle-212-241.json",
     "research_notes/official-242-251.json",
     "research_notes/battle-242-251.json",
+    "research_notes/official-252-281.json",
+    "research_notes/battle-252-281.json",
     "research_notes/cross-generation-evolution-targets.json",
   ]) {
     const parsed = JSON.parse((await readFile(file, "utf8")).replace(/^\uFEFF/, ""));

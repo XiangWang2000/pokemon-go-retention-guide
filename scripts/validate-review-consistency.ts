@@ -4,6 +4,7 @@ import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
 import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
+import { CURRENT_DATA_MAX_DEX } from "../src/config/data-scope";
 
 type ReviewPayload = {
   batch?: string;
@@ -31,6 +32,7 @@ const batchFiles = [
   ["182-211", "review/182-211.json"],
   ["212-241", "review/212-241.json"],
   ["242-251", "review/242-251.json"],
+  ["252-281", "review/252-281.json"],
 ] as const;
 
 async function loadJson(path: string) {
@@ -143,7 +145,7 @@ async function main() {
     }
   }
 
-  const recalibrationPath = "review/001-251-recalibration.json";
+  const recalibrationPath = "review/001-" + CURRENT_DATA_MAX_DEX + "-recalibration.json";
   const recalibration = await loadJson(recalibrationPath);
   checkVersion(recalibration, recalibrationPath, errors);
   const expectedPending = rows.filter((row) => row.assessmentDisposition === "TRUE_DATA_PENDING");
@@ -177,6 +179,11 @@ async function main() {
     "248-johto",
     "249-johto",
     "250-johto",
+    "254-hoenn",
+    "257-hoenn",
+    "260-hoenn",
+    "280-hoenn",
+    "281-hoenn",
   ];
   for (const formId of highRiskForms) {
     const family = families.find((candidate) =>

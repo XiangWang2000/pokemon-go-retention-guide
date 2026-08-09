@@ -1,0 +1,257 @@
+{
+  "batch": "252-281",
+  "checkedAt": "2026-08-09",
+  "pvpoke": {
+    "commit": "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+    "files": [
+      "data/sources/pvpoke/rankings-1500.json",
+      "data/sources/pvpoke/rankings-2500.json",
+      "data/sources/pvpoke/rankings-10000.json"
+    ],
+    "method": "Open League Overall fixed snapshot; rank is reproducible as complete JSON array index plus one."
+  },
+  "pve": {
+    "254-hoenn": "CORE_INVESTMENT",
+    "257-hoenn": "CORE_INVESTMENT",
+    "260-hoenn": "CORE_INVESTMENT",
+    "272-hoenn": "SPECIAL_USE"
+  },
+  "mega": [
+    {
+      "formId": "254-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    },
+    {
+      "formId": "257-hoenn",
+      "sourceId": "OFF-MEGA-HOENN-20260809"
+    }
+  ],
+  "maxBattle": [],
+  "shadow": [
+    {
+      "formId": "252-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "253-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "254-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "255-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "256-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "257-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "258-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "259-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "261-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "265-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "270-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "271-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "272-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "273-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "274-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "275-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "276-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "278-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "279-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "280-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    },
+    {
+      "formId": "281-hoenn",
+      "sourceId": "SECONDARY-SHADOW-HOENN-2026"
+    }
+  ],
+  "evolution": [
+    {
+      "fromFormId": "252-hoenn",
+      "toFormId": "253-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "253-hoenn",
+      "toFormId": "254-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "255-hoenn",
+      "toFormId": "256-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "256-hoenn",
+      "toFormId": "257-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "258-hoenn",
+      "toFormId": "259-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "259-hoenn",
+      "toFormId": "260-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "261-hoenn",
+      "toFormId": "262-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "263-hoenn",
+      "toFormId": "264-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "265-hoenn",
+      "toFormId": "266-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "265-hoenn",
+      "toFormId": "268-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "266-hoenn",
+      "toFormId": "267-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "268-hoenn",
+      "toFormId": "269-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "270-hoenn",
+      "toFormId": "271-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "271-hoenn",
+      "toFormId": "272-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "273-hoenn",
+      "toFormId": "274-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "274-hoenn",
+      "toFormId": "275-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "276-hoenn",
+      "toFormId": "277-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "278-hoenn",
+      "toFormId": "279-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    },
+    {
+      "fromFormId": "280-hoenn",
+      "toFormId": "281-hoenn",
+      "sourceIds": [
+        "EVOLUTION-HOENN-20260809"
+      ]
+    }
+  ],
+  "review": {
+    "materialGaps": [],
+    "nonMaterialGaps": [
+      "Rocket, Gym, and unreleased Max fields without independent sources do not override an already clear retention conclusion."
+    ]
+  }
+}

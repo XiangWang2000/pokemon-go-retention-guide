@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-08-09-cross-generation-evolution-v6",
+  "dataVersion": "2026-08-09-cross-generation-evolution-v7-gen3",
   "checkedAt": "2026-08-09",
   "sources": [
     {
@@ -892,6 +892,28 @@
       "fromFormId": "217-johto",
       "evolutionTargetUseLevel": "SPECIAL_USE",
       "evolutionTargetNotesZhTw": "正式後續進化；月月熊目前以洗翠型態 stub 保留，滿月進化候選先保留。"
+    },
+    {
+      "dexNumber": 475,
+      "generation": 4,
+      "familyKey": "HOENN_FAMILY_280",
+      "nameEn": "Gallade",
+      "nameZhTw": "艾路雷朵",
+      "formKey": "OTHER",
+      "formNameEn": "Other",
+      "formNameZhTw": "其他",
+      "regionKey": "OTHER",
+      "types": [
+        "PSYCHIC",
+        "FIGHTING"
+      ],
+      "aliases": [
+        "Gallade",
+        "艾路雷朵"
+      ],
+      "fromFormId": "281-hoenn",
+      "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
+      "evolutionTargetNotesZhTw": "艾路雷朵是奇魯莉安的跨世代分支進化；依遊戲性別與神奧之石條件處理，不將所有奇魯莉安自動改判為必留。"
     }
   ],
   "paths": [
@@ -1352,6 +1374,18 @@
       "toFormId": "901-hisui",
       "evolutionMethodZhTw": "滿月期間使用泥炭塊並消耗糖果進化",
       "availabilityNotesZhTw": "正式後續進化；月月熊目前以洗翠型態 stub 保留，滿月進化候選先保留。",
+      "requiresEvent": false,
+      "verificationStatus": "VERIFIED",
+      "sourceIds": [
+        "pokeapi-evolution-targets-152-251",
+        "pokemon-go-evolution-requirements"
+      ]
+    },
+    {
+      "fromFormId": "281-hoenn",
+      "toFormId": "475-other",
+      "evolutionMethodZhTw": "男性奇魯莉安使用神奧之石進化；以遊戲內當期條件為準",
+      "availabilityNotesZhTw": "艾路雷朵尚未納入目前展示批次，以後續世代 evolution stub 保留進化價值",
       "requiresEvent": false,
       "verificationStatus": "VERIFIED",
       "sourceIds": [

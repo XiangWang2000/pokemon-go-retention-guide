@@ -33,7 +33,7 @@ export interface EvolutionTargetStubSeed {
   formKey: string;
   formNameEn: string;
   formNameZhTw: string;
-  regionKey: "KANTO" | "JOHTO" | "ALOLA" | "GALAR" | "HISUI" | "PALDEA" | "OTHER";
+  regionKey: "KANTO" | "JOHTO" | "HOENN" | "ALOLA" | "GALAR" | "HISUI" | "PALDEA" | "OTHER";
   types: string[];
   aliases: string[];
   fromFormId: string;
@@ -78,7 +78,7 @@ function assertEvolutionData(data: CrossGenerationEvolutionData) {
     const id = formId(target.dexNumber, target.formKey);
     if (targetIds.has(id)) throw new Error(`重複跨世代進化 target：${id}`);
     targetIds.add(id);
-    if (!["KANTO", "JOHTO", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"].includes(target.regionKey)) {
+    if (!["KANTO", "JOHTO", "HOENN", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"].includes(target.regionKey)) {
       throw new Error(`Evolution target has an invalid region: ${id}.`);
     }
     if (target.generation >= 4 && target.formKey === "KANTO") {
