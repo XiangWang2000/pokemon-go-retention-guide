@@ -354,7 +354,7 @@ async function main() {
       "  Pragma: no-cache",
       `  X-Data-Version: ${DATA_VERSION}`,
       "",
-    ].join("\r\n"),
+    ].join("\n"),
     "utf8",
   );
   await writeIfChanged(publicHeadersPath, publicHeaders);
