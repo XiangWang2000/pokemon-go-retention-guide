@@ -2,34 +2,29 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site-header";
 import { DATA_VERSION, DATA_VERSION_DATE_ZH_TW } from "@/config/release";
 import { sitePath } from "@/config/site";
+import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "./seo-metadata";
 import "./globals.css";
 
-const siteTitle = "Pokémon GO 寶可夢保留價值指南";
-const siteDescription = "以可追溯來源與集中式規則評估 Pokémon GO 各型態的通用保留價值。";
-const siteUrl = new URL(
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://pokemon-go-retention-guide.wang890921.chatgpt.site/",
-);
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl.origin),
+  metadataBase: new URL(SITE_URL.origin),
   title: {
-    default: siteTitle,
-    template: `%s｜${siteTitle}`,
+    default: SITE_TITLE,
+    template: `%s｜${SITE_TITLE}`,
   },
-  description: siteDescription,
+  description: SITE_DESCRIPTION,
   alternates: { canonical: sitePath("/") },
   openGraph: {
     type: "website",
     locale: "zh_TW",
-    url: new URL(sitePath("/"), siteUrl.origin).toString(),
-    siteName: siteTitle,
-    title: `${siteTitle}（資料版本 ${DATA_VERSION}）`,
-    description: `${siteDescription} 資料版本：${DATA_VERSION}（${DATA_VERSION_DATE_ZH_TW} 更新）。`,
+    url: new URL(sitePath("/"), SITE_URL.origin).toString(),
+    siteName: SITE_TITLE,
+    title: `${SITE_TITLE}（資料版本 ${DATA_VERSION}）`,
+    description: `${SITE_DESCRIPTION} 資料版本：${DATA_VERSION}（${DATA_VERSION_DATE_ZH_TW} 更新）。`,
   },
   twitter: {
     card: "summary",
-    title: `${siteTitle}（${DATA_VERSION}）`,
-    description: siteDescription,
+    title: `${SITE_TITLE}（${DATA_VERSION}）`,
+    description: SITE_DESCRIPTION,
   },
   robots: { index: true, follow: true },
   other: {
