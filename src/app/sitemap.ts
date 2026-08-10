@@ -4,6 +4,8 @@ import { DATA_VERSION_DATE_ISO } from "@/config/release";
 import type { StaticDashboardRow } from "@/lib/static-data";
 import { absoluteSiteUrl } from "./seo-metadata";
 
+export const dynamic = "force-static";
+
 const dashboardRows = dashboardSnapshot as unknown as StaticDashboardRow[];
 const lastModified = new Date(`${DATA_VERSION_DATE_ISO}T00:00:00+08:00`);
 
