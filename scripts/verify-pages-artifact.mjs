@@ -4,6 +4,9 @@ import path from "node:path";
 const root = process.cwd();
 const out = path.join(root, "out");
 const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || "/pokemon-go-retention-guide").replace(/\/$/, "");
+const siteOrigin = new URL(
+  process.env.NEXT_PUBLIC_SITE_URL || "https://xiangwang2000.github.io/pokemon-go-retention-guide/",
+).origin;
 const legacySiteHost = "pokemon-go-retention-guide.wang890921.chatgpt.site";
 
 function assert(condition, message) {
@@ -32,11 +35,27 @@ async function requireJson(relativePath) {
   return payload;
 }
 
+function expectedUrl(pathname) {
+  const normalized = pathname.startsWith("/") ? pathname : `/${pathname}`;
+  return `${siteOrigin}${basePath}${normalized}`;
+}
+
+function canonicalFromHtml(html, relativePath) {
+  const match = html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i);
+  assert(match, `${relativePath} has no canonical link.`);
+  return match[1];
+}
+
 async function main() {
   assert(await exists(out), "Pages output directory does not exist. Run npm run build:pages first.");
 
-  const htmlFiles = ["index.html", "review/index.html", "sources/index.html", "changes/index.html"];
-  for (const relativePath of htmlFiles) await requireFile(relativePath);
+  const routeExpectations = new Map([
+    ["index.html", expectedUrl("/")],
+    ["review/index.html", expectedUrl("/review/")],
+    ["sources/index.html", expectedUrl("/sources/")],
+    ["changes/index.html", expectedUrl("/changes/")],
+  ]);
+  for (const relativePath of routeExpectations.keys()) await requireFile(relativePath);
 
   const home = await requireJson("data/home.json");
   assert(home.schemaVersion === 2, "Pages home.json schemaVersion is unexpected.");
@@ -54,19 +73,35 @@ async function main() {
   const pokemonEntries = (await readdir(pokemonDir, { withFileTypes: true })).filter((entry) => entry.isDirectory());
   assert(pokemonEntries.length > 0, "No statically generated Pokémon detail routes were found.");
   const samplePokemon = pokemonEntries[0].name;
-  await requireFile(path.join("pokemon", samplePokemon, "index.html"));
+  const samplePokemonHtml = path.join("pokemon", samplePokemon, "index.html");
+  await requireFile(samplePokemonHtml);
+  routeExpectations.set(samplePokemonHtml, expectedUrl(`/pokemon/${samplePokemon}/`));
 
-  for (const relativePath of [...htmlFiles, path.join("pokemon", samplePokemon, "index.html")]) {
+  for (const [relativePath, expectedCanonical] of routeExpectations) {
     const html = await readFile(path.join(out, relativePath), "utf8");
     assert(!html.includes(legacySiteHost), `${relativePath} still references the legacy ChatGPT Site host.`);
+    assert(html.includes(basePath), `${relativePath} does not contain the GitHub Pages base path ${basePath}.`);
     assert(
-      html.includes(basePath) || relativePath === "index.html",
-      `${relativePath} does not contain the GitHub Pages base path ${basePath}.`,
+      canonicalFromHtml(html, relativePath) === expectedCanonical,
+      `${relativePath} canonical does not match ${expectedCanonical}.`,
     );
   }
 
+  const sitemap = await readFile(await requireFile("sitemap.xml"), "utf8");
+  assert(sitemap.includes(expectedUrl("/")), "sitemap.xml is missing the home URL.");
+  assert(sitemap.includes(expectedUrl("/review/")), "sitemap.xml is missing the review URL.");
+  assert(
+    sitemap.includes(expectedUrl(`/pokemon/${samplePokemon}/`)),
+    "sitemap.xml is missing a generated Pokémon detail URL.",
+  );
+  assert(!sitemap.includes(legacySiteHost), "sitemap.xml references the legacy ChatGPT Site host.");
+
+  const robots = await readFile(await requireFile("robots.txt"), "utf8");
+  assert(robots.includes(expectedUrl("/sitemap.xml")), "robots.txt does not advertise the Pages sitemap.");
+  assert(!robots.includes(legacySiteHost), "robots.txt references the legacy ChatGPT Site host.");
+
   console.log(
-    `Pages artifact verified: ${htmlFiles.length + 1} HTML routes, ${auditSummary.rows.length} audit rows, data version ${home.dataVersion}.`,
+    `Pages artifact verified: ${routeExpectations.size} canonical routes, ${auditSummary.rows.length} audit rows, data version ${home.dataVersion}.`,
   );
 }
 
