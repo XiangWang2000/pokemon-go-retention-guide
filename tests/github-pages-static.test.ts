@@ -28,6 +28,20 @@ describe("GitHub Pages static export", () => {
     expect(existsSync(".openai/hosting.json")).toBe(false);
   });
 
+  it("uses Pages-compatible commands as the default npm workflow", () => {
+    const pkg = JSON.parse(readFileSync("package.json", "utf8")) as {
+      scripts: Record<string, string>;
+    };
+    expect(pkg.scripts.dev).toContain("next dev");
+    expect(pkg.scripts.dev).toContain("--pages");
+    expect(pkg.scripts.build).toBe("npm run build:pages");
+    expect(pkg.scripts.start).toBe("node scripts/serve-pages.mjs");
+    expect(pkg.scripts["sites:dev"]).toContain("vinext dev");
+    expect(pkg.scripts["sites:start"]).toContain("start-sites.mjs");
+    expect(pkg.scripts["sites:build"]).toContain("vinext build");
+    expect(pkg.scripts["sites:build"]).not.toContain("npm run build");
+  });
+
   it("uses Next static export without response headers", () => {
     const config = readFileSync("next.config.ts", "utf8");
     expect(config).toContain('output: "export"');
@@ -43,7 +57,8 @@ describe("GitHub Pages static export", () => {
   it("publishes only the static output directory from the Pages workflow", () => {
     const workflow = readFileSync(".github/workflows/deploy-pages.yml", "utf8");
     expect(workflow).toContain("npm ci");
-    expect(workflow).toContain("npm run build:pages");
+    expect(workflow).toContain("npm run build");
+    expect(workflow).not.toContain("npm run build:pages");
     expect(workflow).toContain("actions/configure-pages@v5");
     expect(workflow).toContain("actions/upload-pages-artifact@v3");
     expect(workflow).toContain("path: ./out");
