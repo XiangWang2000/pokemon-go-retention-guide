@@ -1,0 +1,41 @@
+name: Verify GitHub Pages PR
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+env:
+  DATABASE_URL: file:./dev.db
+  NEXT_PUBLIC_BASE_PATH: /pokemon-go-retention-guide
+  NEXT_PUBLIC_SITE_URL: https://xiangwang2000.github.io/pokemon-go-retention-guide/
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Generate Prisma client
+        run: npm run db:generate
+      - name: Snapshot check
+        run: npm run sites:snapshot:check -- --pages
+      - name: Lint
+        run: npm run lint
+      - name: Typecheck
+        run: npm run typecheck
+      - name: Tests
+        run: npm test
+      - name: Build static export
+        run: npm run build:pages
+      - name: Verify Pages artifact
+        run: npm run pages:verify
