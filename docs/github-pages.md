@@ -6,18 +6,29 @@ The canonical production site for this repository is:
 
 GitHub Pages is the only supported production publishing target. Older Sites/Vinext files remain in the repository only as legacy migration and local research tooling; they are not part of the production artifact or deployment path.
 
-## Build
+## Default development and build workflow
 
-Use the project-site base path when running a production build locally:
+The default npm commands now follow the GitHub Pages/Next.js path:
 
 ```powershell
-$env:NEXT_PUBLIC_BASE_PATH = "/pokemon-go-retention-guide"
-$env:NEXT_PUBLIC_SITE_URL = "https://xiangwang2000.github.io/pokemon-go-retention-guide/"
-npm run build:pages
+npm run dev
+npm run build
 npm run pages:verify
+npm start
 ```
 
-The Pages build enables Next.js `output: "export"` through the project-site base-path environment variable and writes only the static artifact to `out/`. Dynamic Pokémon routes are enumerated with `generateStaticParams`; the browser then loads the corresponding audit, detail, and family JSON files when a detail page opens.
+`npm run dev` validates the Pages snapshot and starts Next.js development mode. `npm run build` creates the production static export in `out/`. `npm run pages:verify` validates the generated artifact, and `npm start` serves `out/` locally under the GitHub Pages project base path.
+
+The committed `.env.example` already contains the production project-site values:
+
+```text
+NEXT_PUBLIC_BASE_PATH=/pokemon-go-retention-guide
+NEXT_PUBLIC_SITE_URL=https://xiangwang2000.github.io/pokemon-go-retention-guide/
+```
+
+If you do not copy those values into a local `.env`, the development server can still run at the root path; CI and production set the Pages values explicitly.
+
+The Pages build enables Next.js `output: "export"` and writes only the static artifact to `out/`. Dynamic Pokémon routes are enumerated with `generateStaticParams`; the browser then loads the corresponding audit, detail, and family JSON files when a detail page opens.
 
 ## Browser data boundary
 
@@ -34,14 +45,24 @@ Each data request includes the current `DATA_VERSION` as a query parameter. This
 
 ## Deployment and verification
 
-`.github/workflows/verify-pages-pr.yml` validates pull requests with snapshot checks, lint, typecheck, tests, the full static export, and `pages:verify` before merge.
+`.github/workflows/verify-pages-pr.yml` validates pull requests with snapshot checks, lint, typecheck, tests, the default `npm run build`, and `pages:verify` before merge.
 
 `.github/workflows/deploy-pages.yml` repeats the production checks on pushes to `main`, uploads only `out/` with the official Pages artifact action, and deploys with the official Pages deploy action. It does not create or update a `gh-pages` branch.
 
-`pages:verify` checks the generated artifact rather than source files alone, including key HTML routes, canonical URLs, sitemap/robots metadata, runtime JSON, the Excel export, a generated Pokémon detail route, the project base path, and the absence of the retired ChatGPT Site host.
+`pages:verify` checks the generated artifact rather than source files alone, including key HTML routes, canonical URLs, sitemap/robots metadata, runtime JSON, the Excel export, a generated Pokémon detail route, the project base path, and the absence of the retired ChatGPT Site host. It also syntax-checks the local static server used by `npm start`.
 
-## Legacy migration artifacts
+## Legacy migration commands
 
-`public/_headers`, the Vinext worker, and Sites-oriented helper scripts are retained only so historical migration/research workflows remain reproducible. GitHub Pages does not consume these files, and Pages snapshot validation is intentionally decoupled from `_headers`.
+Legacy Sites/Vinext workflows are intentionally explicit rather than default:
+
+```text
+npm run sites:dev
+npm run sites:build
+npm run sites:start
+npm run sites:check
+npm run sites:purge
+```
+
+`public/_headers`, the Vinext worker, and Sites-oriented helper scripts remain only so historical migration/research workflows stay reproducible. GitHub Pages does not consume these files, and Pages snapshot validation is intentionally decoupled from `_headers`.
 
 The old `.openai/hosting.json` deployment binding is intentionally removed so the repository does not advertise or accidentally reuse the retired ChatGPT Sites deployment target.
