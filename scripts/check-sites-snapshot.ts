@@ -41,6 +41,7 @@ interface Manifest {
 const root = process.cwd();
 const siteDataDirectory = path.join(root, "site-data");
 const databaseLocation = resolveDatabaseLocation();
+const pagesMode = process.argv.includes("--pages");
 
 function sha256(value: Uint8Array) {
   return createHash("sha256").update(value).digest("hex");
@@ -213,20 +214,23 @@ async function main() {
     assert(runtimeFile.byteLength === file.bytes, `${file.path} bytes mismatch`);
     assert(sha256(runtimeFile) === file.sha256, `${file.path} SHA256 mismatch`);
   }
-  const publicHeadersPath = path.join(root, manifest.publicHeaders.path);
-  const publicHeaders = await readFile(publicHeadersPath);
-  assert(
-    publicHeaders.byteLength === manifest.publicHeaders.bytes,
-    "public/_headers 大小與 manifest 不一致。",
-  );
-  assert(
-    sha256(publicHeaders) === manifest.publicHeaders.sha256,
-    "public/_headers SHA256 與 manifest 不一致。",
-  );
-  assert(
-    publicHeaders.toString("utf8").includes(`X-Data-Version: ${DATA_VERSION}`),
-    "public/_headers dataVersion 不正確。",
-  );
+
+  if (!pagesMode) {
+    const publicHeadersPath = path.join(root, manifest.publicHeaders.path);
+    const publicHeaders = await readFile(publicHeadersPath);
+    assert(
+      publicHeaders.byteLength === manifest.publicHeaders.bytes,
+      "public/_headers 大小與 manifest 不一致。",
+    );
+    assert(
+      sha256(publicHeaders) === manifest.publicHeaders.sha256,
+      "public/_headers SHA256 與 manifest 不一致。",
+    );
+    assert(
+      publicHeaders.toString("utf8").includes(`X-Data-Version: ${DATA_VERSION}`),
+      "public/_headers dataVersion 不正確。",
+    );
+  }
 
   const workbookPath = path.join(root, manifest.excel.path);
   const workbook = await readFile(workbookPath);
@@ -253,7 +257,7 @@ async function main() {
   }
 
   console.log(
-    `Sites snapshot 驗證通過：${dashboard.length} 筆戰鬥版本、${review.length} 筆開放審核、${sources.length} 個來源。`,
+    `${pagesMode ? "Pages" : "Sites"} snapshot 驗證通過：${dashboard.length} 筆戰鬥版本、${review.length} 筆開放審核、${sources.length} 個來源。`,
   );
 }
 
