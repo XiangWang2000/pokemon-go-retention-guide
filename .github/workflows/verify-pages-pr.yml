@@ -7,6 +7,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: pages-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 env:
   DATABASE_URL: file:./dev.db
   NEXT_PUBLIC_BASE_PATH: /pokemon-go-retention-guide
@@ -15,6 +19,7 @@ env:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
