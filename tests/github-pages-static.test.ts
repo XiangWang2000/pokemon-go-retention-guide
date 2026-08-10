@@ -18,6 +18,16 @@ describe("GitHub Pages static export", () => {
     );
   });
 
+  it("uses GitHub Pages as the canonical deployment default", () => {
+    const envExample = readFileSync(".env.example", "utf8");
+    expect(envExample).toContain('NEXT_PUBLIC_BASE_PATH="/pokemon-go-retention-guide"');
+    expect(envExample).toContain(
+      'NEXT_PUBLIC_SITE_URL="https://xiangwang2000.github.io/pokemon-go-retention-guide/"',
+    );
+    expect(envExample).not.toContain("chatgpt.site");
+    expect(existsSync(".openai/hosting.json")).toBe(false);
+  });
+
   it("uses Next static export without response headers", () => {
     const config = readFileSync("next.config.ts", "utf8");
     expect(config).toContain('output: "export"');
