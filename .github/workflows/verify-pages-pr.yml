@@ -28,6 +28,15 @@ jobs:
         with:
           node-version: 24
           cache: npm
+      - name: Restore Next.js and TypeScript build cache
+        uses: actions/cache@v6
+        with:
+          path: |
+            .next/cache
+            *.tsbuildinfo
+          key: ${{ runner.os }}-pages-build-${{ hashFiles('package-lock.json') }}-${{ hashFiles('src/**/*.ts', 'src/**/*.tsx', 'tests/**/*.ts', 'scripts/**/*.ts', 'next.config.ts', 'tsconfig.json', 'site-data/dashboard.json') }}
+          restore-keys: |
+            ${{ runner.os }}-pages-build-${{ hashFiles('package-lock.json') }}-
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
       - name: Generate Prisma client
