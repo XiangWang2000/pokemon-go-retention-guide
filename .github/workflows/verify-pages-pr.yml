@@ -36,6 +36,6 @@ jobs:
       - name: Tests
         run: npm test
       - name: Build static export
-        run: npm run build:pages
+        run: npm run build
       - name: Verify Pages artifact
         run: npm run pages:verify
