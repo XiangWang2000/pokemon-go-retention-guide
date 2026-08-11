@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { BackToTop } from "@/components/back-to-top";
 import { SiteHeader } from "@/components/site-header";
 import { DATA_VERSION, DATA_VERSION_DATE_ZH_TW } from "@/config/release";
 import { sitePath } from "@/config/site";
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <main id="main-content" className="mx-auto max-w-[1600px] px-4 py-6 lg:px-6 lg:py-8">
           {children}
         </main>
+        <BackToTop />
       </body>
     </html>
   );
