@@ -1,6 +1,6 @@
 "use client";
 
-import { Download, RotateCcw, Search } from "lucide-react";
+import { ChevronDown, Download, RotateCcw, Search, SlidersHorizontal } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CURRENT_DATA_SCOPE } from "@/config/data-scope";
 import { versionedAssetPath } from "@/config/site";
@@ -8,6 +8,7 @@ import type { AuditPageResponse, AuditQuery } from "@/lib/audit-data";
 import type { DashboardRow } from "@/lib/data";
 import {
   clearedEvaluationFilterState,
+  countActiveAdvancedEvaluationControls,
   countActiveEvaluationFilters,
 } from "@/lib/evaluation-filter-state";
 import {
@@ -331,6 +332,7 @@ export function EvaluationBrowser({
   const [reviewed, setReviewed] = useState("ALL");
   const [sort, setSort] = useState("DEX_ASC");
   const [page, setPage] = useState(1);
+  const [filtersExpanded, setFiltersExpanded] = useState(false);
   const [expandedFamilies, setExpandedFamilies] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const urlReadyRef = useRef(false);
@@ -387,6 +389,20 @@ export function EvaluationBrowser({
       setReviewed(next.reviewed);
       setSort(next.sort);
       setPage(next.page);
+      setFiltersExpanded(
+        countActiveAdvancedEvaluationControls(
+          {
+            variant: next.variant,
+            valueFilter: next.valueFilter,
+            generation: next.generation,
+            region: next.region,
+            freshness: next.freshness,
+            reviewed: next.reviewed,
+            sort: next.sort,
+          },
+          next.mode,
+        ) > 0,
+      );
       setExpandedFamilies(new Set());
       setExpandedItems(new Set());
       if (urlReadyRef.current) writeBrowserUrl(next, true);
@@ -524,6 +540,10 @@ export function EvaluationBrowser({
     { query, decision, variant, valueFilter, generation, region, freshness, reviewed },
     mode,
   );
+  const activeAdvancedControlCount = countActiveAdvancedEvaluationControls(
+    { variant, valueFilter, generation, region, freshness, reviewed, sort },
+    mode,
+  );
 
   const auditQuery = useMemo<AuditQuery>(
     () => ({
@@ -630,6 +650,14 @@ export function EvaluationBrowser({
     setMode(nextMode);
     setDecision("ALL");
     setPage(1);
+    if (
+      countActiveAdvancedEvaluationControls(
+        { variant, valueFilter, generation, region, freshness, reviewed, sort },
+        nextMode,
+      ) > 0
+    ) {
+      setFiltersExpanded(true);
+    }
     resetExpandedState();
     updateUrl({ mode: nextMode, decision: "ALL", page: 1 }, false);
   }
@@ -656,6 +684,7 @@ export function EvaluationBrowser({
     setFreshness(cleared.freshness);
     setReviewed(cleared.reviewed);
     setPage(1);
+    setFiltersExpanded(sort !== "DEX_ASC");
     resetExpandedState();
     updateUrl({ ...cleared, page: 1 }, false);
   }
@@ -739,83 +768,119 @@ export function EvaluationBrowser({
               )}
             </select>
           </label>
-          <label>
-            <span className="sr-only">世代</span>
-            <select
-              value={generation}
-              onChange={(event) => changeFilter(setGeneration, "generation", event.target.value)}
-              className={selectClass}
-            >
-              <option value="ALL">所有世代</option>
-              {pokemonGenerationRanges.map((item) => (
-                <option key={item.key} value={item.key}>
-                  {item.label}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            <span className="sr-only">地區</span>
-            <select
-              value={region}
-              onChange={(event) => changeFilter(setRegion, "region", event.target.value)}
-              className={selectClass}
-            >
-              <option value="ALL">所有地區</option>
-              {regionOptions.map((key) => (
-                <option key={key} value={key}>
-                  {regionLabels[key] ?? key}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            <span className="sr-only">用途</span>
-            <select
-              value={valueFilter}
-              onChange={(event) => changeFilter(setValueFilter, "valueFilter", event.target.value)}
-              className={selectClass}
-            >
-              <option value="ALL">所有用途</option>
-              {Object.entries(useLabels).map(([value, label]) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            <span className="sr-only">型態／版本</span>
-            <select
-              value={variant}
-              onChange={(event) => changeFilter(setVariant, "variant", event.target.value)}
-              className={selectClass}
-            >
-              <option value="ALL">所有型態／版本</option>
-              {Object.entries(zhTw.variantShort).map(([value, label]) => (
-                <option key={value} value={value}>
-                  {label}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label>
-            <span className="sr-only">排序</span>
-            <select
-              value={sort}
-              onChange={(event) => changeFilter(setSort, "sort", event.target.value)}
-              className={selectClass}
-            >
-              <option value="DEX_ASC">圖鑑編號升冪</option>
-              <option value="DEX_DESC">圖鑑編號降冪</option>
-              <option value="UPDATED">最近更新</option>
-              <option value="DECISION">保留狀態</option>
-            </select>
-          </label>
+          <button
+            type="button"
+            aria-expanded={filtersExpanded}
+            aria-controls={
+              mode === "AUDIT"
+                ? "evaluation-advanced-filters evaluation-audit-filters"
+                : "evaluation-advanced-filters"
+            }
+            onClick={() => setFiltersExpanded((current) => !current)}
+            className="flex min-h-11 items-center justify-between rounded-lg border bg-[var(--surface)] px-3 text-sm font-bold text-[var(--foreground)] transition hover:bg-[var(--surface-muted)] md:hidden"
+          >
+            <span className="flex items-center gap-2">
+              <SlidersHorizontal aria-hidden size={17} />
+              篩選與排序
+            </span>
+            <span className="flex items-center gap-2">
+              {activeAdvancedControlCount > 0 ? (
+                <span className="rounded-full bg-[var(--surface-muted)] px-1.5 py-0.5 font-mono text-xs text-[var(--muted)]">
+                  {activeAdvancedControlCount}
+                </span>
+              ) : null}
+              <ChevronDown
+                aria-hidden
+                size={17}
+                className={`transition-transform ${filtersExpanded ? "rotate-180" : ""}`}
+              />
+            </span>
+          </button>
+          <div
+            id="evaluation-advanced-filters"
+            className={`${filtersExpanded ? "contents" : "hidden"} md:contents`}
+          >
+            <label>
+              <span className="sr-only">世代</span>
+              <select
+                value={generation}
+                onChange={(event) => changeFilter(setGeneration, "generation", event.target.value)}
+                className={selectClass}
+              >
+                <option value="ALL">所有世代</option>
+                {pokemonGenerationRanges.map((item) => (
+                  <option key={item.key} value={item.key}>
+                    {item.label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span className="sr-only">地區</span>
+              <select
+                value={region}
+                onChange={(event) => changeFilter(setRegion, "region", event.target.value)}
+                className={selectClass}
+              >
+                <option value="ALL">所有地區</option>
+                {regionOptions.map((key) => (
+                  <option key={key} value={key}>
+                    {regionLabels[key] ?? key}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span className="sr-only">用途</span>
+              <select
+                value={valueFilter}
+                onChange={(event) => changeFilter(setValueFilter, "valueFilter", event.target.value)}
+                className={selectClass}
+              >
+                <option value="ALL">所有用途</option>
+                {Object.entries(useLabels).map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span className="sr-only">型態／版本</span>
+              <select
+                value={variant}
+                onChange={(event) => changeFilter(setVariant, "variant", event.target.value)}
+                className={selectClass}
+              >
+                <option value="ALL">所有型態／版本</option>
+                {Object.entries(zhTw.variantShort).map(([value, label]) => (
+                  <option key={value} value={value}>
+                    {label}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span className="sr-only">排序</span>
+              <select
+                value={sort}
+                onChange={(event) => changeFilter(setSort, "sort", event.target.value)}
+                className={selectClass}
+              >
+                <option value="DEX_ASC">圖鑑編號升冪</option>
+                <option value="DEX_DESC">圖鑑編號降冪</option>
+                <option value="UPDATED">最近更新</option>
+                <option value="DECISION">保留狀態</option>
+              </select>
+            </label>
+          </div>
         </div>
 
         {mode === "AUDIT" ? (
-          <div className="mt-3 grid gap-3 border-t pt-3 sm:grid-cols-2 xl:max-w-xl">
+          <div
+            id="evaluation-audit-filters"
+            className={`${filtersExpanded ? "mt-3 grid" : "hidden"} gap-3 border-t pt-3 sm:grid-cols-2 md:mt-3 md:grid xl:max-w-xl`}
+          >
             <label>
               <span className="sr-only">資料新鮮度</span>
               <select
