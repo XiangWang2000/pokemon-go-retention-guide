@@ -1,14 +1,8 @@
-import { BookOpenCheck, ClipboardList, Database, FileClock, TableProperties } from "lucide-react";
+import { BookOpenCheck } from "lucide-react";
 import Link from "next/link";
 import { DATA_VERSION } from "@/config/release";
+import { SiteNavigation } from "./site-navigation";
 import { ThemeToggle } from "./theme-toggle";
-
-const links = [
-  { href: "/", label: "圖鑑評估", icon: TableProperties },
-  { href: "/review", label: "資料待補清單", icon: ClipboardList },
-  { href: "/sources", label: "資料來源", icon: Database },
-  { href: "/changes", label: "變更紀錄", icon: FileClock },
-];
 
 export function SiteHeader() {
   return (
@@ -25,18 +19,7 @@ export function SiteHeader() {
             </span>
           </span>
         </Link>
-        <nav aria-label="主要導覽" className="flex flex-1 gap-1 overflow-x-auto">
-          {links.map(({ href, label, icon: Icon }) => (
-            <Link
-              key={href}
-              href={href}
-              className="flex min-h-11 shrink-0 items-center gap-2 rounded-lg px-3 text-sm font-medium text-[var(--muted)] transition hover:bg-[var(--surface-muted)] hover:text-[var(--foreground)]"
-            >
-              <Icon aria-hidden size={17} />
-              {label}
-            </Link>
-          ))}
-        </nav>
+        <SiteNavigation />
         <ThemeToggle />
       </div>
     </header>
