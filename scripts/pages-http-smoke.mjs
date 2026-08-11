@@ -1,10 +1,11 @@
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
-export async function readExpectedPagesDataVersion() {
+export async function readExpectedPagesSmokeContract() {
   const manifest = JSON.parse(
     await readFile(new URL("../site-data/manifest.json", import.meta.url), "utf8"),
   );
@@ -12,7 +13,26 @@ export async function readExpectedPagesDataVersion() {
     typeof manifest.dataVersion === "string" && manifest.dataVersion.length > 0,
     "Snapshot manifest has no dataVersion.",
   );
-  return manifest.dataVersion;
+  assert(
+    typeof manifest.excel?.path === "string" && manifest.excel.path.startsWith("public/"),
+    "Snapshot manifest Excel path must be inside public/.",
+  );
+  assert(
+    Number.isInteger(manifest.excel.bytes) && manifest.excel.bytes > 0,
+    "Snapshot manifest Excel byte size is invalid.",
+  );
+  assert(
+    typeof manifest.excel.sha256 === "string" && /^[a-f0-9]{64}$/.test(manifest.excel.sha256),
+    "Snapshot manifest Excel SHA256 is invalid.",
+  );
+  return {
+    dataVersion: manifest.dataVersion,
+    workbook: {
+      pathname: manifest.excel.path.slice("public/".length),
+      bytes: manifest.excel.bytes,
+      sha256: manifest.excel.sha256,
+    },
+  };
 }
 
 function normalizeSiteUrl(value) {
@@ -61,7 +81,21 @@ async function check(siteUrl, pathname, expectedType) {
   return { body, url };
 }
 
-export async function smokePagesHttp(siteUrlValue, { expectedDataVersion } = {}) {
+async function checkWorkbook(siteUrl, expectedWorkbook) {
+  const url = resolveUrl(siteUrl, expectedWorkbook.pathname);
+  const response = await fetchWithRetry(url);
+  assert(response.status === 200, `${url} returned ${response.status}.`);
+  const workbook = Buffer.from(await response.arrayBuffer());
+  assert(workbook.length === expectedWorkbook.bytes, `${url} returned ${workbook.length} bytes instead of ${expectedWorkbook.bytes}.`);
+  assert(workbook[0] === 0x50 && workbook[1] === 0x4b, `${url} is not a ZIP/XLSX payload.`);
+  const sha256 = createHash("sha256").update(workbook).digest("hex");
+  assert(sha256 === expectedWorkbook.sha256, `${url} SHA256 ${sha256} does not match expected ${expectedWorkbook.sha256}.`);
+}
+
+export async function smokePagesHttp(
+  siteUrlValue,
+  { expectedDataVersion, expectedWorkbook } = {},
+) {
   const siteUrl = normalizeSiteUrl(siteUrlValue);
   const basePath = siteUrl.pathname.replace(/\/$/, "");
 
@@ -90,6 +124,10 @@ export async function smokePagesHttp(siteUrlValue, { expectedDataVersion } = {})
     sitemap.includes(knownPokemonPath),
     `Served sitemap is missing the known Pokémon detail path ${knownPokemonPath}.`,
   );
+
+  if (expectedWorkbook) {
+    await checkWorkbook(siteUrl, expectedWorkbook);
+  }
 
   const missingUrl = resolveUrl(siteUrl, "does-not-exist/");
   const missing = await fetchWithRetry(missingUrl);
