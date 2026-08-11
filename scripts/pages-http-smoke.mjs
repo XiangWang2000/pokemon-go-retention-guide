@@ -1,5 +1,18 @@
+import { readFile } from "node:fs/promises";
+
 function assert(condition, message) {
   if (!condition) throw new Error(message);
+}
+
+export async function readExpectedPagesDataVersion() {
+  const manifest = JSON.parse(
+    await readFile(new URL("../site-data/manifest.json", import.meta.url), "utf8"),
+  );
+  assert(
+    typeof manifest.dataVersion === "string" && manifest.dataVersion.length > 0,
+    "Snapshot manifest has no dataVersion.",
+  );
+  return manifest.dataVersion;
 }
 
 function normalizeSiteUrl(value) {
@@ -48,7 +61,7 @@ async function check(siteUrl, pathname, expectedType) {
   return { body, url };
 }
 
-export async function smokePagesHttp(siteUrlValue) {
+export async function smokePagesHttp(siteUrlValue, { expectedDataVersion } = {}) {
   const siteUrl = normalizeSiteUrl(siteUrlValue);
   const basePath = siteUrl.pathname.replace(/\/$/, "");
 
@@ -64,6 +77,12 @@ export async function smokePagesHttp(siteUrlValue) {
   const payload = JSON.parse(homeJson);
   assert(payload.schemaVersion === 2, "Served home.json schemaVersion is unexpected.");
   assert(typeof payload.dataVersion === "string" && payload.dataVersion.length > 0, "Served home.json has no dataVersion.");
+  if (expectedDataVersion) {
+    assert(
+      payload.dataVersion === expectedDataVersion,
+      `Served home.json dataVersion ${payload.dataVersion} does not match expected ${expectedDataVersion}.`,
+    );
+  }
 
   const { body: sitemap } = await check(siteUrl, "sitemap.xml", "xml");
   const knownPokemonPath = `${siteUrl.pathname}pokemon/001-kanto-normal/`;
