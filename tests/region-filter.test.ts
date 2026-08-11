@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { filterAuditRows, type AuditQuery, type AuditRowSummary } from "@/lib/audit-data";
 import { normalizeFilterValue, regionFilterValues } from "@/lib/evaluation-filters";
@@ -49,6 +50,19 @@ describe("region filtering", () => {
     for (const region of Object.keys(zhTw.region)) {
       expect(regionFilterValues).toContain(region);
       expect(normalizeFilterValue(region, regionFilterValues, "ALL")).toBe(region);
+    }
+  });
+
+  it("keeps every committed runtime region filterable and localized", () => {
+    const auditSummary = JSON.parse(readFileSync("site-data/auditSummary.json", "utf8")) as {
+      rows: Array<{ regionKey: string }>;
+    };
+    const runtimeRegions = new Set(auditSummary.rows.map((row) => row.regionKey));
+
+    for (const region of runtimeRegions) {
+      expect(regionFilterValues).toContain(region);
+      expect(normalizeFilterValue(region, regionFilterValues, "ALL")).toBe(region);
+      expect(zhTw.region).toHaveProperty(region);
     }
   });
 
