@@ -18,6 +18,17 @@ describe("review batch coverage", () => {
     expect(ranges.at(-1)?.maxDex).toBe(CURRENT_DATA_MAX_DEX);
   });
 
+  it("supports review ranges that cross into four-digit Pokédex numbers", () => {
+    expect(parseReviewBatchKey("990-1019")).toEqual({ minDex: 990, maxDex: 1019 });
+    expect(parseReviewBatchKey("1000-1025")).toEqual({ minDex: 1000, maxDex: 1025 });
+  });
+
+  it("rejects malformed or reversed review ranges", () => {
+    expect(() => parseReviewBatchKey("99-120")).toThrow();
+    expect(() => parseReviewBatchKey("1000-999")).toThrow();
+    expect(() => parseReviewBatchKey("000-030")).toThrow();
+  });
+
   it("keeps reports and generators aligned with every configured batch", () => {
     for (const [batch, jsonPath] of REVIEW_BATCH_FILES) {
       expect(existsSync(jsonPath)).toBe(true);
