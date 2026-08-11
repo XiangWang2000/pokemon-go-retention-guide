@@ -9,6 +9,13 @@ export type EvaluationFilterState = {
   reviewed: string;
 };
 
+export type EvaluationAdvancedControlState = Pick<
+  EvaluationFilterState,
+  "variant" | "valueFilter" | "generation" | "region" | "freshness" | "reviewed"
+> & {
+  sort: string;
+};
+
 export const clearedEvaluationFilterState: EvaluationFilterState = {
   query: "",
   decision: "ALL",
@@ -31,6 +38,26 @@ export function countActiveEvaluationFilters(
     state.valueFilter === "ALL" ? "" : state.valueFilter,
     state.generation === "ALL" ? "" : state.generation,
     state.region === "ALL" ? "" : state.region,
+  ];
+
+  if (mode === "AUDIT") {
+    values.push(state.freshness === "ALL" ? "" : state.freshness);
+    values.push(state.reviewed === "ALL" ? "" : state.reviewed);
+  }
+
+  return values.filter((value) => value.length > 0).length;
+}
+
+export function countActiveAdvancedEvaluationControls(
+  state: EvaluationAdvancedControlState,
+  mode: "FAMILY" | "POKEDEX" | "AUDIT",
+) {
+  const values = [
+    state.variant === "ALL" ? "" : state.variant,
+    state.valueFilter === "ALL" ? "" : state.valueFilter,
+    state.generation === "ALL" ? "" : state.generation,
+    state.region === "ALL" ? "" : state.region,
+    state.sort === "DEX_ASC" ? "" : state.sort,
   ];
 
   if (mode === "AUDIT") {
