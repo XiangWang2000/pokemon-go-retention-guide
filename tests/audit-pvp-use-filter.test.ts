@@ -11,6 +11,12 @@ import type { DashboardRow } from "@/lib/data";
 const bulbasaur = JSON.parse(
   readFileSync("public/data/audit/001-2d-kanto-2d-normal.json", "utf8"),
 ) as DashboardRow;
+const committedAuditSummary = JSON.parse(
+  readFileSync("public/data/audit-summary.json", "utf8"),
+) as { rows: AuditRowSummary[] };
+const committedBulbasaur = committedAuditSummary.rows.find(
+  (row) => row.id === "001-kanto-normal",
+);
 
 const pvpQuery: AuditQuery = {
   query: "",
@@ -41,16 +47,11 @@ describe("audit PvP use filtering", () => {
     expect(filtered([summary])).toEqual([]);
   });
 
-  it("filters the same false positive from legacy committed summaries", () => {
-    const legacySummary = {
-      ...toAuditRowSummary(bulbasaur),
-      hasPvpUse: true,
-      hasSpecialCupUse: undefined,
-      hasCuratedPvpUse: undefined,
-    };
-
-    expect(legacySummary.pvpRanks.GREAT).toBe(1040);
-    expect(filtered([legacySummary])).toEqual([]);
+  it("filters the current committed false positive without regenerating the snapshot", () => {
+    expect(committedBulbasaur).toBeDefined();
+    expect(committedBulbasaur?.hasPvpUse).toBe(true);
+    expect(committedBulbasaur?.pvpRanks.GREAT).toBe(1040);
+    expect(filtered([committedBulbasaur!])).toEqual([]);
   });
 
   it("keeps actionable standard-league ranks", () => {
