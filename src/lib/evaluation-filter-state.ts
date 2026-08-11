@@ -1,5 +1,3 @@
-import type { ViewMode } from "@/components/evaluation-browser";
-
 export type EvaluationFilterState = {
   query: string;
   decision: string;
@@ -22,7 +20,10 @@ export const clearedEvaluationFilterState: EvaluationFilterState = {
   reviewed: "ALL",
 };
 
-export function countActiveEvaluationFilters(state: EvaluationFilterState, mode: ViewMode) {
+export function countActiveEvaluationFilters(
+  state: EvaluationFilterState,
+  mode: "FAMILY" | "POKEDEX" | "AUDIT",
+) {
   const values = [
     state.query,
     state.decision === "ALL" ? "" : state.decision,
