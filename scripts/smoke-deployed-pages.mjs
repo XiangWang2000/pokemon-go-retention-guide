@@ -1,5 +1,5 @@
 import {
-  readExpectedPagesDataVersion,
+  readExpectedPagesSmokeContract,
   smokePagesHttp,
 } from "./pages-http-smoke.mjs";
 
@@ -9,6 +9,9 @@ if (!siteUrl) {
   throw new Error("PAGES_DEPLOYMENT_URL or NEXT_PUBLIC_SITE_URL is required.");
 }
 
-const expectedDataVersion = await readExpectedPagesDataVersion();
-const result = await smokePagesHttp(siteUrl, { expectedDataVersion });
+const contract = await readExpectedPagesSmokeContract();
+const result = await smokePagesHttp(siteUrl, {
+  expectedDataVersion: contract.dataVersion,
+  expectedWorkbook: contract.workbook,
+});
 console.log(`Deployed Pages smoke check passed for ${result.siteUrl} (data version ${result.dataVersion}).`);
