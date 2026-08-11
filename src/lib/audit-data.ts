@@ -36,6 +36,8 @@ export interface AuditRowSummary {
   pvpRanks: Record<"GREAT" | "ULTRA" | "MASTER", number | null>;
   sourceCount: number;
   hasPvpUse: boolean;
+  hasSpecialCupUse?: boolean;
+  hasCuratedPvpUse?: boolean;
   pveUseLevels: string[];
   hasRocketUse: boolean;
   gymRating: string;
@@ -78,7 +80,39 @@ function rank(row: DashboardRow, league: "GREAT" | "ULTRA" | "MASTER") {
   return row.raw.find((item) => item.category === "PVP" && item.league === league)?.rank ?? null;
 }
 
+function matchedRule(row: DashboardRow, ruleKey: string) {
+  return row.traces.some((trace) => trace.ruleKey === ruleKey && trace.matched);
+}
+
+function hasActionableRankedPvpUse(row: DashboardRow) {
+  return row.raw.some(
+    (item) =>
+      item.category === "PVP" &&
+      item.rank !== null &&
+      (item.rank <= 250 || item.league === "SPECIAL_CUP"),
+  );
+}
+
+function hasSpecialCupPvpUse(row: DashboardRow) {
+  return row.raw.some(
+    (item) => item.category === "PVP" && item.league === "SPECIAL_CUP" && item.rank !== null,
+  );
+}
+
+function hasCuratedPvpUse(row: DashboardRow) {
+  const pvp = row.categoryStatuses.find((status) => status.category === "PVP");
+  return (
+    row.variantKey === "NORMAL" &&
+    row.decision === "CONDITIONAL_KEEP" &&
+    matchedRule(row, "CONDITIONAL_USE") &&
+    Boolean(pvp?.materialToDecision) &&
+    ["VERIFIED", "PARTIALLY_VERIFIED"].includes(pvp?.status ?? "")
+  );
+}
+
 export function toAuditRowSummary(row: DashboardRow): AuditRowSummary {
+  const specialCupUse = hasSpecialCupPvpUse(row);
+  const curatedPvpUse = hasCuratedPvpUse(row);
   return {
     id: row.id,
     formId: row.formId,
@@ -101,7 +135,9 @@ export function toAuditRowSummary(row: DashboardRow): AuditRowSummary {
       MASTER: rank(row, "MASTER"),
     },
     sourceCount: row.sources.length,
-    hasPvpUse: row.raw.some((raw) => raw.category === "PVP"),
+    hasPvpUse: hasActionableRankedPvpUse(row) || curatedPvpUse,
+    hasSpecialCupUse: specialCupUse,
+    hasCuratedPvpUse: curatedPvpUse,
     pveUseLevels: row.categoryStatuses
       .filter((status) => status.category === "PVE" && status.pveUseLevel)
       .map((status) => status.pveUseLevel as string),
@@ -139,9 +175,18 @@ export function normalizeAuditQuery(params: URLSearchParams): AuditQuery {
   };
 }
 
+function hasActionablePvpUse(row: AuditRowSummary) {
+  if (row.hasSpecialCupUse || row.hasCuratedPvpUse) return true;
+  const standardLeagueRanks = Object.values(row.pvpRanks).filter(
+    (rank): rank is number => rank !== null,
+  );
+  if (standardLeagueRanks.length) return standardLeagueRanks.some((rank) => rank <= 250);
+  return row.hasPvpUse;
+}
+
 function matchesUse(row: AuditRowSummary, use: string) {
   if (use === "ALL") return true;
-  if (use === "PVP") return row.hasPvpUse;
+  if (use === "PVP") return hasActionablePvpUse(row);
   if (use === "PVE") return row.pveUseLevels.some((level) => actionablePveLevels.has(level));
   if (use === "ROCKET") return row.hasRocketUse;
   if (use === "GYM") return ["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(row.gymRating);
