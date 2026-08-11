@@ -1,6 +1,6 @@
 import { spawn } from "node:child_process";
 import {
-  readExpectedPagesDataVersion,
+  readExpectedPagesSmokeContract,
   smokePagesHttp,
 } from "./pages-http-smoke.mjs";
 
@@ -40,8 +40,11 @@ async function waitForServer() {
 async function main() {
   try {
     await waitForServer();
-    const expectedDataVersion = await readExpectedPagesDataVersion();
-    const result = await smokePagesHttp(`${origin}${basePath}/`, { expectedDataVersion });
+    const contract = await readExpectedPagesSmokeContract();
+    const result = await smokePagesHttp(`${origin}${basePath}/`, {
+      expectedDataVersion: contract.dataVersion,
+      expectedWorkbook: contract.workbook,
+    });
 
     const outsideBasePath = await fetch(`${origin}/review/`);
     if (outsideBasePath.status !== 404) {
