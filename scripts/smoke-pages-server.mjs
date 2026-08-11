@@ -44,6 +44,7 @@ async function main() {
     const result = await smokePagesHttp(`${origin}${basePath}/`, {
       expectedDataVersion: contract.dataVersion,
       expectedWorkbook: contract.workbook,
+      expectedDetailPathnames: contract.detailPathnames,
     });
 
     const outsideBasePath = await fetch(`${origin}/review/`);
