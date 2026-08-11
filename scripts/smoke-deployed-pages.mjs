@@ -13,5 +13,6 @@ const contract = await readExpectedPagesSmokeContract();
 const result = await smokePagesHttp(siteUrl, {
   expectedDataVersion: contract.dataVersion,
   expectedWorkbook: contract.workbook,
+  expectedDetailPathnames: contract.detailPathnames,
 });
 console.log(`Deployed Pages smoke check passed for ${result.siteUrl} (data version ${result.dataVersion}).`);
