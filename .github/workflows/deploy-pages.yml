@@ -55,6 +55,8 @@ jobs:
           compact="$(printf '%s' "$output" | tr '\n' ' ' | tr '\r' ' ')"
           echo "::error title=Snapshot check detail::$compact"
           exit 0
+      - name: Review consistency
+        run: npm run review:validate
       - name: Lint
         run: npm run lint
       - name: Typecheck
