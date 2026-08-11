@@ -66,6 +66,16 @@ summary {
   box-shadow: 0 8px 30px color-mix(in srgb, var(--foreground) 7%, transparent);
 }
 
+.back-to-top {
+  bottom: calc(env(safe-area-inset-bottom) + 1rem);
+}
+
+@media (max-width: 374px) {
+  .back-to-top {
+    bottom: calc(env(safe-area-inset-bottom) + 4.5rem);
+  }
+}
+
 .subtle-grid {
   background-image:
     linear-gradient(
