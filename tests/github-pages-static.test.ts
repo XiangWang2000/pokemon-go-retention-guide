@@ -42,10 +42,14 @@ describe("GitHub Pages static export", () => {
     expect(pkg.scripts["sites:build"]).not.toContain("npm run build");
   });
 
-  it("uses Next static export without response headers", () => {
+  it("uses an explicit Pages signal for Next static export", () => {
     const config = readFileSync("next.config.ts", "utf8");
+    const buildScript = readFileSync("scripts/build-pages.mjs", "utf8");
     expect(config).toContain('output: "export"');
     expect(config).toContain("NEXT_STATIC_EXPORT");
+    expect(config).toContain("NEXT_PUBLIC_BASE_PATH");
+    expect(config).not.toContain("GITHUB_ACTIONS");
+    expect(buildScript).toContain('NEXT_STATIC_EXPORT: "true"');
     expect(config).toContain("trailingSlash: true");
     expect(config).toContain("basePath");
     expect(config).toContain("assetPrefix");

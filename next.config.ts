@@ -3,12 +3,8 @@ import { GITHUB_PAGES_BASE_PATH } from "./src/config/site";
 
 const isStaticExport =
   process.env.NEXT_STATIC_EXPORT === "true" ||
-  process.env.NEXT_PUBLIC_BASE_PATH === GITHUB_PAGES_BASE_PATH ||
-  process.env.GITHUB_ACTIONS === "true";
-const basePath = isStaticExport
-  ? (process.env.NEXT_PUBLIC_BASE_PATH ??
-    (process.env.GITHUB_ACTIONS === "true" ? GITHUB_PAGES_BASE_PATH : ""))
-  : "";
+  process.env.NEXT_PUBLIC_BASE_PATH === GITHUB_PAGES_BASE_PATH;
+const basePath = isStaticExport ? (process.env.NEXT_PUBLIC_BASE_PATH ?? "") : "";
 
 const nextConfig: NextConfig = {
   ...(isStaticExport ? { output: "export", trailingSlash: true } : {}),
