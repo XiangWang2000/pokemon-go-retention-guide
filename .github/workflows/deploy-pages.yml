@@ -35,7 +35,7 @@ jobs:
           path: |
             .next/cache
             *.tsbuildinfo
-          key: ${{ runner.os }}-pages-build-${{ hashFiles('package-lock.json') }}-${{ hashFiles('src/**/*.ts', 'src/**/*.tsx', 'tests/**/*.ts', 'scripts/**/*.ts', 'next.config.ts', 'tsconfig.json', 'site-data/dashboard.json') }}
+          key: ${{ runner.os }}-pages-build-${{ hashFiles('package-lock.json') }}-${{ hashFiles('src/**/*.ts', 'src/**/*.tsx', 'tests/**/*.ts', 'scripts/**/*.ts', 'next.config.ts', 'tsconfig.json', 'site-data/auditSummary.json') }}
           restore-keys: |
             ${{ runner.os }}-pages-build-${{ hashFiles('package-lock.json') }}-
       - name: Install dependencies
