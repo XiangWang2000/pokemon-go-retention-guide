@@ -1,11 +1,11 @@
 import { readFile } from "node:fs/promises";
-import { getDashboardRows, getReviewIssues } from "../src/lib/data-prisma";
 import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
 import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
 import { CURRENT_DATA_MAX_DEX } from "../src/config/data-scope";
 import { REVIEW_BATCH_FILES, parseReviewBatchKey } from "../src/config/review-batches";
+import type { StaticDashboardRow, StaticReviewIssue } from "../src/lib/static-data";
 
 type ReviewPayload = {
   batch?: string;
@@ -23,8 +23,8 @@ type ReviewPayload = {
   trueDataPending?: Array<{ id?: string }>;
 };
 
-async function loadJson(path: string) {
-  return JSON.parse((await readFile(path, "utf8")).replace(/^\uFEFF/, "")) as ReviewPayload;
+async function loadJson<T>(path: string) {
+  return JSON.parse((await readFile(path, "utf8")).replace(/^\uFEFF/, "")) as T;
 }
 
 function count(payload: ReviewPayload, key: string) {
@@ -46,12 +46,15 @@ function checkVersion(payload: ReviewPayload, path: string, errors: string[]) {
 
 async function main() {
   const errors: string[] = [];
-  const [rows, issues] = await Promise.all([getDashboardRows(), getReviewIssues()]);
+  const [rows, issues] = await Promise.all([
+    loadJson<StaticDashboardRow[]>("site-data/dashboard.json"),
+    loadJson<StaticReviewIssue[]>("site-data/review.json"),
+  ]);
   const families = buildFamilyOverviews(buildFormOverviews(rows));
   const familyById = new Map(families.map((family) => [family.familyId, family]));
 
   for (const [batch, path] of REVIEW_BATCH_FILES) {
-    const payload = await loadJson(path);
+    const payload = await loadJson<ReviewPayload>(path);
     checkVersion(payload, path, errors);
     if (payload.batch !== batch) errors.push(`${path}: wrong batch label.`);
 
@@ -133,7 +136,7 @@ async function main() {
   }
 
   const recalibrationPath = "review/001-" + CURRENT_DATA_MAX_DEX + "-recalibration.json";
-  const recalibration = await loadJson(recalibrationPath);
+  const recalibration = await loadJson<ReviewPayload>(recalibrationPath);
   checkVersion(recalibration, recalibrationPath, errors);
   const expectedPending = rows.filter((row) => row.assessmentDisposition === "TRUE_DATA_PENDING");
   if ((recalibration.trueDataPending?.length ?? 0) !== expectedPending.length) {
