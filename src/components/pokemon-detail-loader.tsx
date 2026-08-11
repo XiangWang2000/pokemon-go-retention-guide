@@ -50,7 +50,7 @@ export function PokemonDetailLoader({ variantId }: { variantId: string }) {
         }
       } catch {
         if (!cancelled) {
-          setError("Static Pokémon detail data failed to load.");
+          setError("寶可夢詳細資料載入失敗，請重新載入後再試一次。");
           setLoadedVariantId(variantId);
         }
       }
@@ -64,15 +64,15 @@ export function PokemonDetailLoader({ variantId }: { variantId: string }) {
 
   if (loadedVariantId === variantId && error) {
     return (
-      <section className="surface rounded-2xl p-8 text-center">
-        <h1 className="text-xl font-black">Detail data failed to load</h1>
+      <section className="surface rounded-2xl p-8 text-center" aria-live="polite">
+        <h1 className="text-xl font-black">詳細資料載入失敗</h1>
         <p className="mt-2 text-[var(--muted)]">{error}</p>
         <button
           type="button"
           className="mt-4 min-h-11 rounded-lg bg-[var(--primary)] px-4 text-sm font-bold text-[var(--primary-contrast)]"
           onClick={() => window.location.reload()}
         >
-          Reload
+          重新載入
         </button>
       </section>
     );
@@ -80,8 +80,12 @@ export function PokemonDetailLoader({ variantId }: { variantId: string }) {
 
   if (loadedVariantId !== variantId || !payload || !family || !detail) {
     return (
-      <section className="surface rounded-2xl p-8 text-center" aria-live="polite">
-        Loading Pokémon detail data...
+      <section
+        className="surface rounded-2xl p-8 text-center text-[var(--muted)]"
+        aria-live="polite"
+        aria-busy="true"
+      >
+        正在載入寶可夢詳細資料…
       </section>
     );
   }
@@ -95,8 +99,8 @@ export function PokemonDetailLoader({ variantId }: { variantId: string }) {
   const variantOverview = formOverview.variants.find((item) => item.row.id === row.id);
   if (!variantOverview) {
     return (
-      <section className="surface rounded-2xl p-8 text-center">
-        This form detail is unavailable.
+      <section className="surface rounded-2xl p-8 text-center" aria-live="polite">
+        此型態的詳細資料目前無法使用。
       </section>
     );
   }
