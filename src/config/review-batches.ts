@@ -16,9 +16,12 @@ export const REVIEW_BATCH_FILES = [
 ] as const;
 
 export function parseReviewBatchKey(batch: string) {
-  const match = /^(\d{3})-(\d{3})$/.exec(batch);
+  const match = /^(\d{3,4})-(\d{3,4})$/.exec(batch);
   if (!match) throw new Error(`Invalid review batch key: ${batch}`);
-  return { minDex: Number(match[1]), maxDex: Number(match[2]) };
+  const minDex = Number(match[1]);
+  const maxDex = Number(match[2]);
+  if (minDex < 1 || maxDex < minDex) throw new Error(`Invalid review batch range: ${batch}`);
+  return { minDex, maxDex };
 }
 
 export function reviewBatchGeneratorPath(batch: string) {
