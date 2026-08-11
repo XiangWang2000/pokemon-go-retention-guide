@@ -60,7 +60,7 @@ describe("GitHub Pages static export", () => {
     expect(workflow).toContain("npm run build");
     expect(workflow).not.toContain("npm run build:pages");
     expect(workflow).toContain("actions/configure-pages@v5");
-    expect(workflow).toContain("actions/upload-pages-artifact@v3");
+    expect(workflow).toContain("actions/upload-pages-artifact@v4");
     expect(workflow).toContain("path: ./out");
     expect(workflow).toContain("actions/deploy-pages@v4");
     expect(workflow).not.toContain("gh-pages");
