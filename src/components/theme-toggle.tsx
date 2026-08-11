@@ -21,11 +21,11 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      className="flex min-h-11 cursor-pointer items-center gap-2 rounded-lg border bg-[var(--surface)] px-3 text-sm font-medium transition hover:bg-[var(--surface-muted)]"
+      className="flex min-h-11 min-w-11 shrink-0 cursor-pointer items-center gap-2 rounded-lg border bg-[var(--surface)] px-3 text-sm font-medium transition hover:bg-[var(--surface-muted)]"
       aria-label="切換淺色或深色模式"
     >
       <SunMoon aria-hidden size={18} />
-      <span className="hidden sm:inline">切換主題</span>
+      <span className="hidden lg:inline">切換主題</span>
     </button>
   );
 }
