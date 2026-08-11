@@ -5,9 +5,22 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+function representativeDetailPathnames(rows) {
+  assert(Array.isArray(rows) && rows.length > 0, "Audit summary has no rows for smoke sampling.");
+  assert(
+    rows.every((row) => typeof row?.id === "string" && row.id.length > 0),
+    "Audit summary contains a row without an id.",
+  );
+  const indexes = [...new Set([0, Math.floor((rows.length - 1) / 2), rows.length - 1])];
+  return indexes.map((index) => `pokemon/${encodeURIComponent(rows[index].id)}/`);
+}
+
 export async function readExpectedPagesSmokeContract() {
   const manifest = JSON.parse(
     await readFile(new URL("../site-data/manifest.json", import.meta.url), "utf8"),
+  );
+  const auditSummary = JSON.parse(
+    await readFile(new URL("../site-data/auditSummary.json", import.meta.url), "utf8"),
   );
   assert(
     typeof manifest.dataVersion === "string" && manifest.dataVersion.length > 0,
@@ -25,8 +38,13 @@ export async function readExpectedPagesSmokeContract() {
     typeof manifest.excel.sha256 === "string" && /^[a-f0-9]{64}$/.test(manifest.excel.sha256),
     "Snapshot manifest Excel SHA256 is invalid.",
   );
+  assert(
+    Array.isArray(auditSummary.rows) && auditSummary.rows.length === manifest.counts?.auditSummaryRows,
+    "Audit summary row count does not match the snapshot manifest.",
+  );
   return {
     dataVersion: manifest.dataVersion,
+    detailPathnames: representativeDetailPathnames(auditSummary.rows),
     workbook: {
       pathname: manifest.excel.path.slice("public/".length),
       bytes: manifest.excel.bytes,
@@ -94,7 +112,7 @@ async function checkWorkbook(siteUrl, expectedWorkbook) {
 
 export async function smokePagesHttp(
   siteUrlValue,
-  { expectedDataVersion, expectedWorkbook } = {},
+  { expectedDataVersion, expectedWorkbook, expectedDetailPathnames = [] } = {},
 ) {
   const siteUrl = normalizeSiteUrl(siteUrlValue);
   const basePath = siteUrl.pathname.replace(/\/$/, "");
@@ -105,7 +123,11 @@ export async function smokePagesHttp(
   }
 
   await check(siteUrl, "review/", "text/html");
-  await check(siteUrl, "pokemon/001-kanto-normal/", "text/html");
+  await check(siteUrl, "sources/", "text/html");
+  await check(siteUrl, "changes/", "text/html");
+  for (const pathname of expectedDetailPathnames) {
+    await check(siteUrl, pathname, "text/html");
+  }
 
   const { body: homeJson } = await check(siteUrl, "data/home.json", "application/json");
   const payload = JSON.parse(homeJson);
@@ -119,10 +141,19 @@ export async function smokePagesHttp(
   }
 
   const { body: sitemap } = await check(siteUrl, "sitemap.xml", "xml");
-  const knownPokemonPath = `${siteUrl.pathname}pokemon/001-kanto-normal/`;
+  for (const pathname of expectedDetailPathnames) {
+    const detailPath = `${siteUrl.pathname}${pathname}`;
+    assert(
+      sitemap.includes(detailPath),
+      `Served sitemap is missing the representative Pokémon detail path ${detailPath}.`,
+    );
+  }
+
+  const { body: robots } = await check(siteUrl, "robots.txt", "text/plain");
+  const sitemapPath = `${siteUrl.pathname}sitemap.xml`;
   assert(
-    sitemap.includes(knownPokemonPath),
-    `Served sitemap is missing the known Pokémon detail path ${knownPokemonPath}.`,
+    robots.includes(sitemapPath),
+    `Served robots.txt is missing the sitemap path ${sitemapPath}.`,
   );
 
   if (expectedWorkbook) {
