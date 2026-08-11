@@ -19,7 +19,7 @@ export function SiteNavigation() {
   return (
     <nav
       aria-label="主要導覽"
-      className="flex flex-1 justify-between gap-0.5 overflow-x-auto sm:justify-start sm:gap-1"
+      className="flex flex-1 justify-between gap-0 overflow-x-auto sm:justify-start sm:gap-1"
     >
       {links.map(({ href, label, mobileLabel, icon: Icon }) => {
         const active = isPrimaryNavigationActive(pathname, href, SITE_BASE_PATH);
@@ -29,7 +29,7 @@ export function SiteNavigation() {
             href={href}
             aria-label={label}
             aria-current={active ? "page" : undefined}
-            className={`flex min-h-11 shrink-0 items-center gap-1 rounded-lg px-1 text-xs transition sm:gap-2 sm:px-3 sm:text-sm ${
+            className={`flex min-h-11 shrink-0 items-center gap-1 rounded-lg px-1 text-xs transition sm:gap-2 sm:px-1.5 sm:text-sm ${
               active
                 ? "bg-[var(--surface-muted)] font-bold text-[var(--primary)]"
                 : "font-medium text-[var(--muted)] hover:bg-[var(--surface-muted)] hover:text-[var(--foreground)]"
