@@ -66,9 +66,10 @@ export async function smokePagesHttp(siteUrlValue) {
   assert(typeof payload.dataVersion === "string" && payload.dataVersion.length > 0, "Served home.json has no dataVersion.");
 
   const { body: sitemap } = await check(siteUrl, "sitemap.xml", "xml");
+  const knownPokemonPath = `${siteUrl.pathname}pokemon/001-kanto-normal/`;
   assert(
-    sitemap.includes(resolveUrl(siteUrl, "pokemon/001-kanto-normal/").toString()),
-    "Served sitemap is missing the known Pokémon detail route.",
+    sitemap.includes(knownPokemonPath),
+    `Served sitemap is missing the known Pokémon detail path ${knownPokemonPath}.`,
   );
 
   const missingUrl = resolveUrl(siteUrl, "does-not-exist/");
