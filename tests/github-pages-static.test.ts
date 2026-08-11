@@ -94,6 +94,12 @@ describe("GitHub Pages static export", () => {
     expect(html.includes(`${GITHUB_PAGES_BASE_PATH}/`) || html.includes('href="/"')).toBe(true);
     expect(html).not.toContain("/api/home");
     expect(existsSync("out/data/home.json")).toBe(true);
-    expect(existsSync("out/exports/pokemon-go-retention-001-386.xlsx")).toBe(true);
+
+    const manifest = JSON.parse(readFileSync("site-data/manifest.json", "utf8")) as {
+      excel: { path: string };
+    };
+    expect(manifest.excel.path.startsWith("public/")).toBe(true);
+    const workbookArtifact = `out/${manifest.excel.path.slice("public/".length)}`;
+    expect(existsSync(workbookArtifact)).toBe(true);
   });
 });
