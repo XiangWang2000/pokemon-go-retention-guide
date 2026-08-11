@@ -139,9 +139,17 @@ export function normalizeAuditQuery(params: URLSearchParams): AuditQuery {
   };
 }
 
+function hasActionablePvpUse(row: AuditRowSummary) {
+  const standardLeagueRanks = Object.values(row.pvpRanks).filter(
+    (rank): rank is number => rank !== null,
+  );
+  if (standardLeagueRanks.length) return standardLeagueRanks.some((rank) => rank <= 250);
+  return row.hasPvpUse;
+}
+
 function matchesUse(row: AuditRowSummary, use: string) {
   if (use === "ALL") return true;
-  if (use === "PVP") return row.hasPvpUse;
+  if (use === "PVP") return hasActionablePvpUse(row);
   if (use === "PVE") return row.pveUseLevels.some((level) => actionablePveLevels.has(level));
   if (use === "ROCKET") return row.hasRocketUse;
   if (use === "GYM") return ["HIGH", "MEDIUM", "SPECIAL_CASE"].includes(row.gymRating);
