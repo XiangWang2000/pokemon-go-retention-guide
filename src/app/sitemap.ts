@@ -1,12 +1,12 @@
 import type { MetadataRoute } from "next";
-import dashboardSnapshot from "../../site-data/dashboard.json";
+import auditSummarySnapshot from "../../site-data/auditSummary.json";
 import { DATA_VERSION_DATE_ISO } from "@/config/release";
-import type { StaticDashboardRow } from "@/lib/static-data";
+import type { AuditSummarySnapshot } from "@/lib/audit-data";
 import { absoluteSiteUrl } from "./seo-metadata";
 
 export const dynamic = "force-static";
 
-const dashboardRows = dashboardSnapshot as unknown as StaticDashboardRow[];
+const auditRows = (auditSummarySnapshot as unknown as AuditSummarySnapshot).rows;
 const lastModified = new Date(`${DATA_VERSION_DATE_ISO}T00:00:00+08:00`);
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: absoluteSiteUrl("/changes/"), lastModified, changeFrequency: "weekly", priority: 0.5 },
   ];
 
-  const pokemonRoutes: MetadataRoute.Sitemap = dashboardRows.map((row) => ({
+  const pokemonRoutes: MetadataRoute.Sitemap = auditRows.map((row) => ({
     url: absoluteSiteUrl(`/pokemon/${encodeURIComponent(row.id)}/`),
     lastModified,
     changeFrequency: "weekly",
