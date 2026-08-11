@@ -5,6 +5,7 @@ import { buildFormOverviews } from "../src/presentation/form-overview";
 import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
 import { CURRENT_DATA_MAX_DEX } from "../src/config/data-scope";
+import { REVIEW_BATCH_FILES, parseReviewBatchKey } from "../src/config/review-batches";
 
 type ReviewPayload = {
   batch?: string;
@@ -21,20 +22,6 @@ type ReviewPayload = {
   scopedHolds?: Array<{ familyId?: string }>;
   trueDataPending?: Array<{ id?: string }>;
 };
-
-const batchFiles = [
-  ["001-030", "review/001-030.json"],
-  ["031-060", "review/031-060.json"],
-  ["061-090", "review/061-090.json"],
-  ["091-120", "review/091-120.json"],
-  ["121-151", "review/121-151.json"],
-  ["152-181", "review/152-181.json"],
-  ["182-211", "review/182-211.json"],
-  ["212-241", "review/212-241.json"],
-  ["242-251", "review/242-251.json"],
-  ["252-281", "review/252-281.json"],
-  ["282-311", "review/282-311.json"],
-] as const;
 
 async function loadJson(path: string) {
   return JSON.parse((await readFile(path, "utf8")).replace(/^\uFEFF/, "")) as ReviewPayload;
@@ -63,7 +50,7 @@ async function main() {
   const families = buildFamilyOverviews(buildFormOverviews(rows));
   const familyById = new Map(families.map((family) => [family.familyId, family]));
 
-  for (const [batch, path] of batchFiles) {
+  for (const [batch, path] of REVIEW_BATCH_FILES) {
     const payload = await loadJson(path);
     checkVersion(payload, path, errors);
     if (payload.batch !== batch) errors.push(`${path}: wrong batch label.`);
@@ -97,11 +84,10 @@ async function main() {
       continue;
     }
 
+    const { minDex, maxDex } = parseReviewBatchKey(batch);
     const expectedFamilies = families.filter((family) =>
       family.members.some(
-        (member) =>
-          member.form.dexNumber >= Number(batch.slice(0, 3)) &&
-          member.form.dexNumber <= Number(batch.slice(4, 7)),
+        (member) => member.form.dexNumber >= minDex && member.form.dexNumber <= maxDex,
       ),
     );
     const handling = payload.immediateHandling ?? [];
@@ -224,7 +210,7 @@ async function main() {
     JSON.stringify(
       {
         dataVersion: DATA_VERSION,
-        batches: batchFiles.length,
+        batches: REVIEW_BATCH_FILES.length,
         families: families.length,
         openIssues: issues.length,
         safetyAffectingIssues: issues.filter((issue) => issue.affectsFinalDecision).length,
