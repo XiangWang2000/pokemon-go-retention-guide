@@ -1,11 +1,15 @@
 "use client";
 
-import { Download, Search } from "lucide-react";
+import { Download, RotateCcw, Search } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { CURRENT_DATA_SCOPE } from "@/config/data-scope";
 import { versionedAssetPath } from "@/config/site";
 import type { AuditPageResponse, AuditQuery } from "@/lib/audit-data";
 import type { DashboardRow } from "@/lib/data";
+import {
+  clearedEvaluationFilterState,
+  countActiveEvaluationFilters,
+} from "@/lib/evaluation-filter-state";
 import {
   decisionFilterValues,
   familyDecisionFilterValues,
@@ -516,6 +520,10 @@ export function EvaluationBrowser({
   const visibleFamilyRows = familyRows.slice(start, start + pageSize);
   const visibleQuickForms = quickForms.slice(start, start + pageSize);
   const visibleAuditRows = auditPage?.rows ?? [];
+  const activeFilterCount = countActiveEvaluationFilters(
+    { query, decision, variant, valueFilter, generation, region, freshness, reviewed },
+    mode,
+  );
 
   const auditQuery = useMemo<AuditQuery>(
     () => ({
@@ -635,6 +643,21 @@ export function EvaluationBrowser({
     setPage(1);
     resetExpandedState();
     updateUrl({ [key]: value, page: 1 }, key === "query");
+  }
+
+  function clearFilters() {
+    const cleared = clearedEvaluationFilterState;
+    setQuery(cleared.query);
+    setDecision(cleared.decision);
+    setVariant(cleared.variant);
+    setValueFilter(cleared.valueFilter);
+    setGeneration(cleared.generation);
+    setRegion(cleared.region);
+    setFreshness(cleared.freshness);
+    setReviewed(cleared.reviewed);
+    setPage(1);
+    resetExpandedState();
+    updateUrl({ ...cleared, page: 1 }, false);
   }
 
   const selectClass =
@@ -846,6 +869,20 @@ export function EvaluationBrowser({
             )}
           </p>
           <div className="flex flex-wrap items-center gap-3">
+            {activeFilterCount > 0 ? (
+              <button
+                type="button"
+                onClick={clearFilters}
+                aria-label={`清除 ${activeFilterCount} 個篩選條件`}
+                className="inline-flex min-h-11 items-center gap-2 rounded-lg border bg-[var(--surface)] px-3 text-sm font-bold text-[var(--foreground)] transition hover:bg-[var(--surface-muted)]"
+              >
+                <RotateCcw aria-hidden size={16} />
+                清除篩選
+                <span className="rounded-full bg-[var(--surface-muted)] px-1.5 py-0.5 font-mono text-xs text-[var(--muted)]">
+                  {activeFilterCount}
+                </span>
+              </button>
+            ) : null}
             <PaginationControls page={activePage} pageCount={pageCount} onPageChange={changePage} />
             <a
               href={versionedAssetPath(`/exports/pokemon-go-retention-${CURRENT_DATA_SCOPE}.xlsx`)}
