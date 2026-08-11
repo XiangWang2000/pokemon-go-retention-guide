@@ -31,12 +31,26 @@ function filtered(rows: AuditRowSummary[]) {
 }
 
 describe("audit PvP use filtering", () => {
-  it("does not treat a verified but non-actionable standard-league rank as PvP use", () => {
+  it("does not generate PvP use for a verified but non-actionable standard-league rank", () => {
     const summary = toAuditRowSummary(bulbasaur);
 
-    expect(summary.hasPvpUse).toBe(true);
     expect(summary.pvpRanks.GREAT).toBe(1040);
+    expect(summary.hasPvpUse).toBe(false);
+    expect(summary.hasSpecialCupUse).toBe(false);
+    expect(summary.hasCuratedPvpUse).toBe(false);
     expect(filtered([summary])).toEqual([]);
+  });
+
+  it("filters the same false positive from legacy committed summaries", () => {
+    const legacySummary = {
+      ...toAuditRowSummary(bulbasaur),
+      hasPvpUse: true,
+      hasSpecialCupUse: undefined,
+      hasCuratedPvpUse: undefined,
+    };
+
+    expect(legacySummary.pvpRanks.GREAT).toBe(1040);
+    expect(filtered([legacySummary])).toEqual([]);
   });
 
   it("keeps actionable standard-league ranks", () => {
@@ -46,11 +60,23 @@ describe("audit PvP use filtering", () => {
     expect(filtered([summary]).map((row) => row.id)).toEqual([summary.id]);
   });
 
-  it("preserves legacy or special-cup fallback when no standard-league rank exists", () => {
+  it("preserves legacy fallback when no standard-league rank exists", () => {
     const summary = toAuditRowSummary(bulbasaur);
     summary.pvpRanks = { GREAT: null, ULTRA: null, MASTER: null };
     summary.hasPvpUse = true;
+    summary.hasSpecialCupUse = undefined;
+    summary.hasCuratedPvpUse = undefined;
 
     expect(filtered([summary]).map((row) => row.id)).toEqual([summary.id]);
+  });
+
+  it("preserves explicit special-cup or curated use in future summaries", () => {
+    const specialCup = toAuditRowSummary(bulbasaur);
+    specialCup.hasSpecialCupUse = true;
+    const curated = toAuditRowSummary(bulbasaur);
+    curated.hasCuratedPvpUse = true;
+
+    expect(filtered([specialCup]).map((row) => row.id)).toEqual([specialCup.id]);
+    expect(filtered([curated]).map((row) => row.id)).toEqual([curated.id]);
   });
 });
