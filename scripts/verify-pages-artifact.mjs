@@ -64,6 +64,19 @@ async function verifyCanonical(relativePath, expectedCanonical) {
 async function main() {
   assert(await exists(out), "Pages output directory does not exist. Run npm run build:pages first.");
 
+  const manifest = JSON.parse(
+    await readFile(path.join(root, "site-data", "manifest.json"), "utf8"),
+  );
+  assert(
+    typeof manifest.dataVersion === "string" && manifest.dataVersion.length > 0,
+    "Pages snapshot manifest has no dataVersion.",
+  );
+  assert(
+    typeof manifest.excel?.path === "string" && manifest.excel.path.startsWith("public/"),
+    "Pages snapshot manifest Excel path must be inside public/.",
+  );
+  const excelArtifactPath = manifest.excel.path.slice("public/".length);
+
   const staticRouteExpectations = new Map([
     ["index.html", expectedUrl("/")],
     ["review/index.html", expectedUrl("/review/")],
@@ -77,6 +90,10 @@ async function main() {
   const home = await requireJson("data/home.json");
   assert(home.schemaVersion === 2, "Pages home.json schemaVersion is unexpected.");
   assert(typeof home.dataVersion === "string" && home.dataVersion.length > 0, "Pages home.json has no dataVersion.");
+  assert(
+    home.dataVersion === manifest.dataVersion,
+    `Pages home.json dataVersion ${home.dataVersion} does not match manifest ${manifest.dataVersion}.`,
+  );
   assert(Array.isArray(home.families) && home.families.length > 0, "Pages home.json has no families.");
 
   const auditSummary = await requireJson("data/audit-summary.json");
@@ -89,7 +106,7 @@ async function main() {
   await requireFile("data/review.json");
   await requireFile("data/sources.json");
   await requireFile("data/changes.json");
-  await requireFile("exports/pokemon-go-retention-001-386.xlsx");
+  await requireFile(excelArtifactPath);
 
   assert(
     (await jsonFileCount("data/families")) === home.families.length,
