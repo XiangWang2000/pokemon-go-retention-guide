@@ -1,7 +1,11 @@
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { CURRENT_DATA_MAX_DEX } from "@/config/data-scope";
-import { REVIEW_BATCH_FILES, parseReviewBatchKey } from "@/config/review-batches";
+import {
+  REVIEW_BATCH_FILES,
+  parseReviewBatchKey,
+  reviewBatchGeneratorPath,
+} from "@/config/review-batches";
 
 describe("review batch coverage", () => {
   it("covers the current Pokédex scope contiguously", () => {
@@ -15,17 +19,22 @@ describe("review batch coverage", () => {
   });
 
   it("keeps reports and generators aligned with every configured batch", () => {
-    const pkg = JSON.parse(readFileSync("package.json", "utf8")) as {
-      scripts: Record<string, string>;
-    };
-    const generateCommand = pkg.scripts["review:generate"] ?? "";
-
     for (const [batch, jsonPath] of REVIEW_BATCH_FILES) {
       expect(existsSync(jsonPath)).toBe(true);
       expect(existsSync(jsonPath.replace(/\.json$/, ".md"))).toBe(true);
-      const generator = batch === "001-030" ? "scripts/generate-review.ts" : `scripts/generate-review-${batch}.ts`;
-      expect(existsSync(generator)).toBe(true);
-      expect(generateCommand).toContain(generator);
+      expect(existsSync(reviewBatchGeneratorPath(batch))).toBe(true);
     }
+  });
+
+  it("runs review generation through the shared batch-driven runner", () => {
+    const pkg = JSON.parse(readFileSync("package.json", "utf8")) as {
+      scripts: Record<string, string>;
+    };
+    const runner = readFileSync("scripts/generate-all-reviews.ts", "utf8");
+
+    expect(pkg.scripts["review:generate"]).toBe("tsx scripts/generate-all-reviews.ts");
+    expect(runner).toContain("REVIEW_BATCH_FILES");
+    expect(runner).toContain("reviewBatchGeneratorPath");
+    expect(runner).not.toContain("generate-review-372-386.ts");
   });
 });

@@ -20,3 +20,8 @@ export function parseReviewBatchKey(batch: string) {
   if (!match) throw new Error(`Invalid review batch key: ${batch}`);
   return { minDex: Number(match[1]), maxDex: Number(match[2]) };
 }
+
+export function reviewBatchGeneratorPath(batch: string) {
+  parseReviewBatchKey(batch);
+  return batch === "001-030" ? "scripts/generate-review.ts" : `scripts/generate-review-${batch}.ts`;
+}
