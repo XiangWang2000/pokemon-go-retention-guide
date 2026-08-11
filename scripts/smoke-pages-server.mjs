@@ -1,5 +1,8 @@
 import { spawn } from "node:child_process";
-import { smokePagesHttp } from "./pages-http-smoke.mjs";
+import {
+  readExpectedPagesDataVersion,
+  smokePagesHttp,
+} from "./pages-http-smoke.mjs";
 
 const port = 4173;
 const basePath = (process.env.NEXT_PUBLIC_BASE_PATH || "/pokemon-go-retention-guide").replace(/\/$/, "");
@@ -37,7 +40,8 @@ async function waitForServer() {
 async function main() {
   try {
     await waitForServer();
-    const result = await smokePagesHttp(`${origin}${basePath}/`);
+    const expectedDataVersion = await readExpectedPagesDataVersion();
+    const result = await smokePagesHttp(`${origin}${basePath}/`, { expectedDataVersion });
 
     const outsideBasePath = await fetch(`${origin}/review/`);
     if (outsideBasePath.status !== 404) {
