@@ -43,6 +43,8 @@ jobs:
         run: npm run db:generate
       - name: Snapshot check
         run: npm run sites:snapshot:check -- --pages
+      - name: Review consistency
+        run: npm run review:validate
       - name: Lint
         run: npm run lint
       - name: Typecheck
