@@ -25,7 +25,7 @@ export function ThemeToggle() {
       aria-label="切換淺色或深色模式"
     >
       <SunMoon aria-hidden size={18} />
-      <span className="hidden sm:inline">切換主題</span>
+      <span className="hidden lg:inline">切換主題</span>
     </button>
   );
 }

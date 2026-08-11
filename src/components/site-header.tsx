@@ -16,7 +16,7 @@ export function SiteHeader() {
           <span className="grid size-10 place-items-center rounded-xl bg-[var(--primary)] text-[var(--primary-contrast)]">
             <BookOpenCheck aria-hidden size={22} />
           </span>
-          <span className="hidden lg:block">
+          <span className="hidden sm:block">
             <span className="block text-base">Pokémon GO 保留指南</span>
             <span className="block text-[10px] font-semibold tracking-wide text-[var(--muted)]">
               資料版本 {DATA_VERSION}

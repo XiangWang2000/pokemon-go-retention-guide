@@ -29,13 +29,13 @@ export function SiteNavigation() {
             href={href}
             aria-label={label}
             aria-current={active ? "page" : undefined}
-            className={`flex min-h-11 shrink-0 items-center gap-1 rounded-lg px-1 text-xs transition sm:gap-2 sm:px-1.5 sm:text-sm ${
+            className={`flex min-h-11 shrink-0 items-center gap-1 rounded-lg px-1 text-xs transition sm:gap-0 sm:px-0.5 sm:text-sm lg:gap-2 lg:px-3 ${
               active
                 ? "bg-[var(--surface-muted)] font-bold text-[var(--primary)]"
                 : "font-medium text-[var(--muted)] hover:bg-[var(--surface-muted)] hover:text-[var(--foreground)]"
             }`}
           >
-            <Icon aria-hidden size={17} />
+            <Icon aria-hidden className="sm:hidden lg:block" size={17} />
             <span className="sm:hidden">{mobileLabel}</span>
             <span className="hidden sm:inline">{label}</span>
           </Link>
