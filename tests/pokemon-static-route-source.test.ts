@@ -2,10 +2,15 @@ import { readFileSync, statSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 describe("Pokémon static route source", () => {
-  it("enumerates routes from the compact audit summary instead of the full dashboard", () => {
-    const pageSource = readFileSync("src/app/pokemon/[variantId]/page.tsx", "utf8");
-    expect(pageSource).toContain("site-data/auditSummary.json");
-    expect(pageSource).not.toContain("site-data/dashboard.json");
+  it("enumerates detail routes and sitemap entries from the compact audit summary", () => {
+    for (const sourcePath of [
+      "src/app/pokemon/[variantId]/page.tsx",
+      "src/app/sitemap.ts",
+    ]) {
+      const source = readFileSync(sourcePath, "utf8");
+      expect(source).toContain("site-data/auditSummary.json");
+      expect(source).not.toContain("site-data/dashboard.json");
+    }
 
     const manifest = JSON.parse(readFileSync("site-data/manifest.json", "utf8")) as {
       counts: { auditSummaryRows: number };
