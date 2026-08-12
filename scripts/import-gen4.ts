@@ -4,7 +4,6 @@ import { readFile, readFileSync } from "node:fs";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
 import { forms387416, evolutionPairs387416, species387416 } from "../src/data/batch-387-416";
-import { pvpokeSpeciesId387416 } from "../src/data/batch-387-416-pvpoke";
 import {
   buildGen4ImportPlan387416,
   type Gen4ImportPlanRow,
