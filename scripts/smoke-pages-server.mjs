@@ -42,6 +42,7 @@ async function main() {
     await waitForServer();
     const contract = await readExpectedPagesSmokeContract();
     const result = await smokePagesHttp(`${origin}${basePath}/`, {
+      expectedCanonicalSiteUrl: contract.canonicalSiteUrl,
       expectedDataVersion: contract.dataVersion,
       expectedWorkbook: contract.workbook,
       expectedDetailPathnames: contract.detailPathnames,
