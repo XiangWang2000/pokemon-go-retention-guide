@@ -45,4 +45,12 @@ jobs:
       - name: Generate Prisma client
         run: npm run db:generate
       - name: Rebuild and validate research database through #416
-        run: npx tsx scripts/verify-research-rebuild-416.ts
+        shell: bash
+        run: |
+          if ! npx tsx scripts/verify-research-rebuild-416.ts > rebuild.log 2>&1; then
+            echo "Research rebuild failed; showing the final 120 log lines."
+            tail -n 120 rebuild.log
+            exit 1
+          fi
+          echo "Research rebuild completed successfully."
+          tail -n 40 rebuild.log
