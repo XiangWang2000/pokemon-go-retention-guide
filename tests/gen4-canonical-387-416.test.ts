@@ -37,12 +37,11 @@ describe("Gen 4 canonical identity #387-#416", () => {
   });
 
   it("detects a missing Pokédex number", () => {
-    expect(
-      validateGen4CanonicalIdentity(
-        canonicalGen4Species387416.filter((species) => species.dexNumber !== 400),
-        canonicalGen4Forms387416,
-        { min: 387, max: 416 },
-      ),
-    ).toContain(expect.stringContaining("cover every Pokédex number"));
+    const errors = validateGen4CanonicalIdentity(
+      canonicalGen4Species387416.filter((species) => species.dexNumber !== 400),
+      canonicalGen4Forms387416,
+      { min: 387, max: 416 },
+    );
+    expect(errors.some((error) => error.includes("cover every Pokédex number"))).toBe(true);
   });
 });
