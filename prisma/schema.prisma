@@ -416,28 +416,28 @@ model RawEvaluationData {
 }
 
 model CategoryEvaluation {
-  id                    String                @id
-  battleVariantId       String
-  category              EvaluationCategory
-  status                EvaluationDataStatus
-  provenance            EvaluationProvenance @default(MANUAL_CURATED)
-  summaryZhTw           String
-  materialToDecision    Boolean               @default(false)
-  rocketRating          RocketRating?
-  rocketRoles           String                @default("[]")
-  maxTypeRank           Int?
-  maxTypeTier           String?
-  maxTypeKey            String?
-  maxOverallRating      String?
-  maxInvestmentRating   String?
-  maxUseCaseBreadth     String?
-  pveUseLevel           PveUseLevel?
+  id                  String                     @id
+  battleVariantId     String
+  category            EvaluationCategory
+  status              EvaluationDataStatus
+  provenance          EvaluationProvenance       @default(MANUAL_CURATED)
+  summaryZhTw         String
+  materialToDecision  Boolean                    @default(false)
+  rocketRating        RocketRating?
+  rocketRoles         String                     @default("[]")
+  maxTypeRank         Int?
+  maxTypeTier         String?
+  maxTypeKey          String?
+  maxOverallRating    String?
+  maxInvestmentRating String?
+  maxUseCaseBreadth   String?
+  pveUseLevel         PveUseLevel?
   assessmentDisposition AssessmentDisposition?
-  checkedAt             DateTime
-  createdAt             DateTime              @default(now())
-  updatedAt             DateTime              @updatedAt
-  battleVariant         BattleVariant         @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
-  sourceReferences      CategoryEvaluationSource[]
+  checkedAt           DateTime
+  createdAt           DateTime                   @default(now())
+  updatedAt           DateTime                   @updatedAt
+  battleVariant       BattleVariant              @relation(fields: [battleVariantId], references: [id], onDelete: Cascade)
+  sourceReferences    CategoryEvaluationSource[]
 
   @@unique([battleVariantId, category])
   @@index([status, category])
@@ -456,7 +456,7 @@ model CategoryEvaluationSource {
 model RetentionEvaluation {
   id                        String                 @id
   battleVariantId           String
-  finalDecision             RetentionDecision     @map("decision")
+  finalDecision             RetentionDecision      @map("decision")
   provenance                EvaluationProvenance   @default(MANUAL_CURATED)
   pvpSummaryZhTw            String
   pveSummaryZhTw            String
@@ -472,7 +472,7 @@ model RetentionEvaluation {
   confidence                Confidence
   rulesVersion              String
   generatedAt               DateTime
-  reviewed                  Boolean               @default(false)
+  reviewed                  Boolean                @default(false)
   reviewedAt                DateTime?
   reviewStatus              EvaluationReviewStatus @default(DATA_PENDING)
   missingDataSummaryZhTw    String                 @default("")
