@@ -12,11 +12,17 @@ function client(url: string) {
   return new PrismaClient({ adapter: new PrismaBetterSqlite3({ url }) });
 }
 
-async function seedRoselia(url: string) {
+async function seedHistoricalPrerequisites(url: string) {
   const db = client(url);
   try {
     await db.pokemonSpecies.create({ data: { id: "species-315", dexNumber: 315, nameEn: "roselia", nameZhTw: "毒薔薇", generation: 3, familyKey: "HOENN_FAMILY_315" } });
     await db.pokemonForm.create({ data: { id: "315-hoenn", speciesId: "species-315", formKey: "HOENN", formNameEn: "Hoenn", formNameZhTw: "豐緣", regionKey: "HOENN", types: '["GRASS","POISON"]', searchAliases: '["Roselia","毒薔薇"]', evolutionFamilyNotesZhTw: "CI fixture", isReleasedInPokemonGo: true, releaseStatus: "RELEASED", isEvolutionStub: false } });
+    const accessedAt = new Date("2026-08-13T00:00:00+08:00");
+    await db.sourceReference.createMany({ data: [
+      { id: "pvpoke-gl-20260715", sourceName: "PvPoke fixed ranking snapshot", sourceUrl: "https://pvpoke.com/rankings/all/1500/overall/", sourceType: "PVP", sourceTitleOriginal: "PvPoke Great League Open Overall Rankings", sourceLanguage: "en", sourceSummaryZhTw: "CI historical source fixture", accessedAt, dataVersion: "fixture", notes: "Existing source from prior batches." },
+      { id: "pvpoke-ul-20260715", sourceName: "PvPoke fixed ranking snapshot", sourceUrl: "https://pvpoke.com/rankings/all/2500/overall/", sourceType: "PVP", sourceTitleOriginal: "PvPoke Ultra League Open Overall Rankings", sourceLanguage: "en", sourceSummaryZhTw: "CI historical source fixture", accessedAt, dataVersion: "fixture", notes: "Existing source from prior batches." },
+      { id: "pvpoke-ml-20260715", sourceName: "PvPoke fixed ranking snapshot", sourceUrl: "https://pvpoke.com/rankings/all/10000/overall/", sourceType: "PVP", sourceTitleOriginal: "PvPoke Master League Open Overall Rankings", sourceLanguage: "en", sourceSummaryZhTw: "CI historical source fixture", accessedAt, dataVersion: "fixture", notes: "Existing source from prior batches." }
+    ] });
   } finally {
     await db.$disconnect();
   }
@@ -54,7 +60,7 @@ async function verify(url: string) {
 }
 
 const url = getDatabaseUrl();
-await seedRoselia(url);
+await seedHistoricalPrerequisites(url);
 for (let attempt = 0; attempt < 2; attempt += 1) {
   const result = await runImport387416(url);
   await closeGen4Import(result);
