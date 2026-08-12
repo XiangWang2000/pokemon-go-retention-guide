@@ -52,6 +52,56 @@ async function runBaseSeedWithDeferredBoundaryEdge() {
   }
 }
 
+type BoundaryStub = {
+  dexNumber: 342 | 372;
+  nameEn: string;
+  nameZhTw: string;
+  familyKey: string;
+  types: readonly string[];
+  parentFormId: string;
+};
+
+async function ensureAdjacentBatchTarget(stub: BoundaryStub) {
+  const prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: databaseUrl }) });
+  const id = `${stub.dexNumber}-hoenn`;
+  const speciesId = `species-${stub.dexNumber}`;
+  try {
+    await prisma.pokemonSpecies.upsert({
+      where: { id: speciesId },
+      create: {
+        id: speciesId,
+        dexNumber: stub.dexNumber,
+        nameEn: stub.nameEn,
+        nameZhTw: stub.nameZhTw,
+        generation: 3,
+        familyKey: stub.familyKey,
+      },
+      update: {},
+    });
+    await prisma.pokemonForm.upsert({
+      where: { id },
+      create: {
+        id,
+        speciesId,
+        formKey: "HOENN",
+        formNameEn: "Hoenn",
+        formNameZhTw: "豐緣",
+        regionKey: "HOENN",
+        types: JSON.stringify(stub.types),
+        searchAliases: JSON.stringify([stub.nameEn, stub.nameZhTw]),
+        evolvesFromFormId: stub.parentFormId,
+        evolutionFamilyNotesZhTw: "CI full-rebuild adjacent-batch boundary stub; the owning importer replaces this form.",
+        isReleasedInPokemonGo: true,
+        releaseStatus: "UNKNOWN",
+        isEvolutionStub: true,
+      },
+      update: {},
+    });
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
 const imports = [
   "data:import:031-060",
   "data:import:061-090",
@@ -75,19 +125,57 @@ await runBaseSeedWithDeferredBoundaryEdge();
 // existing remediation is the historical bridge that upgrades those 153
 // variants before later importers enforce global category completeness.
 await run(npm, ["run", "data:remediate"]);
-for (const script of imports) await run(npm, ["run", script]);
+
+for (const script of imports) {
+  // The Gen3 source files intentionally record evolution edges that cross the
+  // adjacent batch boundary. A fresh database needs the target form to satisfy
+  // FK integrity; the owning next-batch importer deletes this stub (and its
+  // cascaded edge) before recreating the canonical target and edge.
+  if (script === "data:import:312-341") {
+    await ensureAdjacentBatchTarget({
+      dexNumber: 342,
+      nameEn: "crawdaunt",
+      nameZhTw: "鐵螯龍蝦",
+      familyKey: "HOENN_FAMILY_341",
+      types: ["WATER", "DARK"],
+      parentFormId: "341-hoenn",
+    });
+  }
+  if (script === "data:import:342-371") {
+    await ensureAdjacentBatchTarget({
+      dexNumber: 372,
+      nameEn: "shelgon",
+      nameZhTw: "甲殼龍",
+      familyKey: "HOENN_FAMILY_371",
+      types: ["DRAGON"],
+      parentFormId: "371-hoenn",
+    });
+  }
+  await run(npm, ["run", script]);
+}
 await run(npm, ["run", "data:backfill-iv"]);
 await run(npm, ["run", "data:validate"]);
 
 const prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: databaseUrl }) });
 try {
-  const [gen4Species, gen4Forms, gen4Variants, gen4Released, allVariants, boundaryEdge] = await Promise.all([
+  const [
+    gen4Species,
+    gen4Forms,
+    gen4Variants,
+    gen4Released,
+    allVariants,
+    edge030031,
+    edge341342,
+    edge371372,
+  ] = await Promise.all([
     prisma.pokemonSpecies.count({ where: { dexNumber: { gte: 387, lte: 416 } } }),
     prisma.pokemonForm.count({ where: { species: { dexNumber: { gte: 387, lte: 416 } } } }),
     prisma.battleVariant.count({ where: { pokemonForm: { species: { dexNumber: { gte: 387, lte: 416 } } } } }),
     prisma.battleVariant.count({ where: { pokemonForm: { species: { dexNumber: { gte: 387, lte: 416 } } }, releaseStatus: "RELEASED" } }),
     prisma.battleVariant.count(),
     prisma.evolutionPath.findFirst({ where: { fromFormId: "030-kanto", toFormId: "031-kanto" } }),
+    prisma.evolutionPath.findFirst({ where: { fromFormId: "341-hoenn", toFormId: "342-hoenn" } }),
+    prisma.evolutionPath.findFirst({ where: { fromFormId: "371-hoenn", toFormId: "372-hoenn" } }),
   ]);
   if (gen4Species !== 30 || gen4Forms !== 34 || gen4Variants !== 136 || gen4Released !== 78) {
     throw new Error(`Unexpected Gen4 rebuild boundary: species=${gen4Species}, forms=${gen4Forms}, variants=${gen4Variants}, released=${gen4Released}.`);
@@ -95,7 +183,9 @@ try {
   if (allVariants < 1912) {
     throw new Error(`Full rebuild produced only ${allVariants} BattleVariants; expected at least the published 1776 + Gen4 136.`);
   }
-  if (!boundaryEdge) throw new Error("#031 importer did not restore the deferred 030-kanto->031-kanto evolution edge.");
+  if (!edge030031 || !edge341342 || !edge371372) {
+    throw new Error("One or more deferred adjacent-batch evolution edges were not restored by their owning importer.");
+  }
   console.log(`Full research rebuild verified through #416: ${allVariants} total BattleVariants.`);
 } finally {
   await prisma.$disconnect();
