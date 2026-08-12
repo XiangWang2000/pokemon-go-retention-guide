@@ -11,6 +11,7 @@ if (!siteUrl) {
 
 const contract = await readExpectedPagesSmokeContract();
 const result = await smokePagesHttp(siteUrl, {
+  expectedCanonicalSiteUrl: contract.canonicalSiteUrl,
   expectedDataVersion: contract.dataVersion,
   expectedWorkbook: contract.workbook,
   expectedDetailPathnames: contract.detailPathnames,

@@ -1,6 +1,8 @@
 import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 
+const defaultCanonicalSiteUrl = "https://xiangwang2000.github.io/pokemon-go-retention-guide/";
+
 function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
@@ -43,6 +45,7 @@ export async function readExpectedPagesSmokeContract() {
     "Audit summary row count does not match the snapshot manifest.",
   );
   return {
+    canonicalSiteUrl: process.env.NEXT_PUBLIC_SITE_URL || defaultCanonicalSiteUrl,
     dataVersion: manifest.dataVersion,
     detailPathnames: representativeDetailPathnames(auditSummary.rows),
     workbook: {
@@ -63,6 +66,12 @@ function normalizeSiteUrl(value) {
 
 function resolveUrl(siteUrl, pathname) {
   return new URL(pathname.replace(/^\//, ""), siteUrl);
+}
+
+function canonicalFromHtml(html, url) {
+  const match = html.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/i);
+  assert(match, `${url} has no canonical link.`);
+  return match[1];
 }
 
 async function fetchWithRetry(url, { attempts = 6, timeoutMs = 10_000 } = {}) {
@@ -99,6 +108,17 @@ async function check(siteUrl, pathname, expectedType) {
   return { body, url };
 }
 
+async function checkHtml(siteUrl, canonicalSiteUrl, pathname) {
+  const result = await check(siteUrl, pathname, "text/html");
+  const expectedCanonical = resolveUrl(canonicalSiteUrl, pathname).toString();
+  const actualCanonical = canonicalFromHtml(result.body, result.url);
+  assert(
+    actualCanonical === expectedCanonical,
+    `${result.url} canonical ${actualCanonical} does not match ${expectedCanonical}.`,
+  );
+  return result;
+}
+
 async function checkWorkbook(siteUrl, expectedWorkbook) {
   const url = resolveUrl(siteUrl, expectedWorkbook.pathname);
   const response = await fetchWithRetry(url);
@@ -112,21 +132,27 @@ async function checkWorkbook(siteUrl, expectedWorkbook) {
 
 export async function smokePagesHttp(
   siteUrlValue,
-  { expectedDataVersion, expectedWorkbook, expectedDetailPathnames = [] } = {},
+  {
+    expectedCanonicalSiteUrl = siteUrlValue,
+    expectedDataVersion,
+    expectedWorkbook,
+    expectedDetailPathnames = [],
+  } = {},
 ) {
   const siteUrl = normalizeSiteUrl(siteUrlValue);
+  const canonicalSiteUrl = normalizeSiteUrl(expectedCanonicalSiteUrl);
   const basePath = siteUrl.pathname.replace(/\/$/, "");
 
-  const { body: homeHtml } = await check(siteUrl, "", "text/html");
+  const { body: homeHtml } = await checkHtml(siteUrl, canonicalSiteUrl, "");
   if (basePath) {
     assert(homeHtml.includes(basePath), `Home HTML does not contain the Pages base path ${basePath}.`);
   }
 
-  await check(siteUrl, "review/", "text/html");
-  await check(siteUrl, "sources/", "text/html");
-  await check(siteUrl, "changes/", "text/html");
+  await checkHtml(siteUrl, canonicalSiteUrl, "review/");
+  await checkHtml(siteUrl, canonicalSiteUrl, "sources/");
+  await checkHtml(siteUrl, canonicalSiteUrl, "changes/");
   for (const pathname of expectedDetailPathnames) {
-    await check(siteUrl, pathname, "text/html");
+    await checkHtml(siteUrl, canonicalSiteUrl, pathname);
   }
 
   const { body: homeJson } = await check(siteUrl, "data/home.json", "application/json");
