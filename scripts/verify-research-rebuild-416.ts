@@ -71,6 +71,10 @@ const imports = [
 
 await run(npx, ["prisma", "db", "push", "--force-reset"]);
 await runBaseSeedWithDeferredBoundaryEdge();
+// The original #001-#030 seed predates the seven-category data model. This
+// existing remediation is the historical bridge that upgrades those 153
+// variants before later importers enforce global category completeness.
+await run(npm, ["run", "data:remediate"]);
 for (const script of imports) await run(npm, ["run", script]);
 await run(npm, ["run", "data:backfill-iv"]);
 await run(npm, ["run", "data:validate"]);
