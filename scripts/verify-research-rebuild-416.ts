@@ -58,7 +58,6 @@ type BoundaryStub = {
   nameZhTw: string;
   familyKey: string;
   types: readonly string[];
-  parentFormId: string;
 };
 
 async function ensureAdjacentBatchTarget(stub: BoundaryStub) {
@@ -89,7 +88,7 @@ async function ensureAdjacentBatchTarget(stub: BoundaryStub) {
         regionKey: "HOENN",
         types: JSON.stringify(stub.types),
         searchAliases: JSON.stringify([stub.nameEn, stub.nameZhTw]),
-        evolvesFromFormId: stub.parentFormId,
+        evolvesFromFormId: null,
         evolutionFamilyNotesZhTw: "CI full-rebuild adjacent-batch boundary stub; the owning importer replaces this form.",
         isReleasedInPokemonGo: true,
         releaseStatus: "UNKNOWN",
@@ -129,8 +128,9 @@ await run(npm, ["run", "data:remediate"]);
 for (const script of imports) {
   // The Gen3 source files intentionally record evolution edges that cross the
   // adjacent batch boundary. A fresh database needs the target form to satisfy
-  // FK integrity; the owning next-batch importer deletes this stub (and its
-  // cascaded edge) before recreating the canonical target and edge.
+  // FK integrity. The stub stays parentless because the parent is created by
+  // the current importer; the owning next-batch importer later replaces the
+  // stub and writes the canonical parent pointer itself.
   if (script === "data:import:312-341") {
     await ensureAdjacentBatchTarget({
       dexNumber: 342,
@@ -138,7 +138,6 @@ for (const script of imports) {
       nameZhTw: "鐵螯龍蝦",
       familyKey: "HOENN_FAMILY_341",
       types: ["WATER", "DARK"],
-      parentFormId: "341-hoenn",
     });
   }
   if (script === "data:import:342-371") {
@@ -148,7 +147,6 @@ for (const script of imports) {
       nameZhTw: "甲殼龍",
       familyKey: "HOENN_FAMILY_371",
       types: ["DRAGON"],
-      parentFormId: "371-hoenn",
     });
   }
   await run(npm, ["run", script]);
