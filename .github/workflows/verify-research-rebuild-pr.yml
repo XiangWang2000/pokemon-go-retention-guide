@@ -18,6 +18,7 @@ on:
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/verify-research-rebuild-pr.yml"
+      - ".github/workflows/prepare-gen4-release-snapshot.yml"
 
 permissions:
   contents: read
