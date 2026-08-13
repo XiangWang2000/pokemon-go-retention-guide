@@ -22,6 +22,8 @@ jobs:
     env:
       DATABASE_URL: file:./rebuild-ci.db
       ALLOW_DESTRUCTIVE_REBUILD: "1"
+      NEXT_PUBLIC_BASE_PATH: /pokemon-go-retention-guide
+      NEXT_PUBLIC_SITE_URL: https://xiangwang2000.github.io/pokemon-go-retention-guide/
     steps:
       - name: Checkout release branch
         uses: actions/checkout@v7
