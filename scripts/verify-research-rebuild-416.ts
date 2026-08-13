@@ -151,7 +151,7 @@ async function canonicalizeExistingRoseradeStub() {
   }
 }
 
-async function runLegacyRecomputeWithCanonicalRoseradeStub() {
+async function withCanonicalRoseradeManifest(action: () => Promise<void>) {
   const path = "research_notes/cross-generation-evolution-targets.json";
   const original = await readFile(path, "utf8");
   const manifest = JSON.parse(original.replace(/^\uFEFF/, "")) as CrossGenerationManifest;
@@ -170,15 +170,14 @@ async function runLegacyRecomputeWithCanonicalRoseradeStub() {
   roserade[0].formKey = "SINNOH";
   roserade[0].formNameEn = "Sinnoh";
   roserade[0].formNameZhTw = "神奧";
-  // Keep OTHER during the historical recompute because the legacy
-  // cross-generation validator predates SINNOH. The Gen4 importer upgrades
-  // the same 407-sinnoh row to regionKey=SINNOH immediately afterwards.
+  // Keep OTHER while replaying legacy logic because the cross-generation
+  // validator predates SINNOH. Gen4 upgrades the same row to regionKey=SINNOH.
   roserade[0].regionKey = "OTHER";
   roseradePaths[0].toFormId = "407-sinnoh";
 
   await writeFile(path, `${JSON.stringify(manifest, null, 2)}\n`);
   try {
-    await run(npm, ["run", "data:recompute:001-386"]);
+    await action();
   } finally {
     await writeFile(path, original);
   }
@@ -261,10 +260,10 @@ for (const script of imports) {
     await canonicalizeExistingRoseradeStub();
     // #001-#386 historically require the current global reconciliation after
     // all legacy importers finish. It fills the modern assessment disposition
-    // and four-level PvE-use fields without weakening data:validate. During
-    // this replay, map the old Roserade OTHER manifest entry onto its now-
-    // canonical Sinnoh form so the Gen4 importer upgrades the same row in place.
-    await runLegacyRecomputeWithCanonicalRoseradeStub();
+    // and four-level PvE-use fields without weakening data:validate.
+    await withCanonicalRoseradeManifest(async () => {
+      await run(npm, ["run", "data:recompute:001-386"]);
+    });
     // Reuse the historical endpoint row under the deterministic Gen4 edge ID.
     // The Gen4 importer then upserts the same edge instead of creating a
     // duplicate 315-hoenn -> 407-sinnoh path.
@@ -273,7 +272,9 @@ for (const script of imports) {
   await run(npm, ["run", script]);
 }
 await run(npm, ["run", "data:backfill-iv"]);
-await run(npm, ["run", "data:validate"]);
+await withCanonicalRoseradeManifest(async () => {
+  await run(npm, ["run", "data:validate"]);
+});
 
 const prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: databaseUrl }) });
 try {
