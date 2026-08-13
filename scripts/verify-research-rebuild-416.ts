@@ -112,6 +112,45 @@ type CrossGenerationManifest = {
   paths: Array<{ fromFormId: string; toFormId: string }>;
 };
 
+async function canonicalizeExistingRoseradeStub() {
+  const prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: databaseUrl }) });
+  try {
+    const [legacy, canonical] = await Promise.all([
+      prisma.pokemonForm.findUnique({
+        where: { id: "407-other" },
+        select: {
+          id: true,
+          isEvolutionStub: true,
+          _count: { select: { battleVariants: true } },
+        },
+      }),
+      prisma.pokemonForm.findUnique({
+        where: { id: "407-sinnoh" },
+        select: { id: true },
+      }),
+    ]);
+    if (legacy && canonical) {
+      throw new Error("Both 407-other and 407-sinnoh exist before Gen4; refusing ambiguous stub migration.");
+    }
+    if (!legacy) return;
+    if (!legacy.isEvolutionStub || legacy._count.battleVariants !== 0) {
+      throw new Error("407-other is not a zero-variant evolution stub; refusing automatic migration.");
+    }
+    await prisma.pokemonForm.update({
+      where: { id: legacy.id },
+      data: {
+        id: "407-sinnoh",
+        formKey: "SINNOH",
+        formNameEn: "Sinnoh",
+        formNameZhTw: "神奧",
+        regionKey: "OTHER",
+      },
+    });
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
 async function runLegacyRecomputeWithCanonicalRoseradeStub() {
   const path = "research_notes/cross-generation-evolution-targets.json";
   const original = await readFile(path, "utf8");
@@ -216,11 +255,15 @@ for (const script of imports) {
     });
   }
   if (script === "data:import:387-416") {
+    // Gen3 importers may already have materialized the historical 407-other
+    // future-evolution stub. Convert only that zero-variant stub to the
+    // canonical form ID before replaying the current #001-#386 reconciliation.
+    await canonicalizeExistingRoseradeStub();
     // #001-#386 historically require the current global reconciliation after
     // all legacy importers finish. It fills the modern assessment disposition
     // and four-level PvE-use fields without weakening data:validate. During
-    // this replay, map the old Roserade OTHER stub onto its now-canonical
-    // Sinnoh form so the Gen4 importer can upgrade the same row in place.
+    // this replay, map the old Roserade OTHER manifest entry onto its now-
+    // canonical Sinnoh form so the Gen4 importer upgrades the same row in place.
     await runLegacyRecomputeWithCanonicalRoseradeStub();
     // Reuse the historical endpoint row under the deterministic Gen4 edge ID.
     // The Gen4 importer then upserts the same edge instead of creating a
