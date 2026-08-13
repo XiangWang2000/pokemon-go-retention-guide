@@ -1,0 +1,119 @@
+name: Prepare Gen4 Release Snapshot
+
+on:
+  push:
+    branches:
+      - "agent/publish-387-416"
+    paths:
+      - "src/config/data-scope.ts"
+      - "src/config/release.ts"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gen4-release-snapshot
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      DATABASE_URL: file:./rebuild-ci.db
+      ALLOW_DESTRUCTIVE_REBUILD: "1"
+    steps:
+      - name: Checkout release branch
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Guard release branch and config
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REF_NAME" = "agent/publish-387-416"
+          grep -Fq 'CURRENT_DATA_MAX_DEX = 416;' src/config/data-scope.ts
+          grep -Fq 'DATA_VERSION = "2026.08.13-r24";' src/config/release.ts
+          grep -Fq 'DATA_VERSION_DATE_ISO = "2026-08-13";' src/config/release.ts
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Generate Prisma client
+        run: npm run db:generate
+
+      - name: Rebuild research database through #416
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! npx tsx scripts/verify-research-rebuild-416.ts > rebuild.log 2>&1; then
+            echo "Research rebuild failed; showing the final 120 log lines."
+            tail -n 120 rebuild.log
+            exit 1
+          fi
+          tail -n 40 rebuild.log
+
+      - name: Verify Gen4 publication candidate
+        run: npx tsx scripts/verify-gen4-publication-candidate.ts
+
+      - name: Generate #001-#416 snapshot
+        run: npm run sites:snapshot
+
+      - name: Verify generated snapshot
+        run: npm run sites:snapshot:check
+
+      - name: Build and verify GitHub Pages artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run build
+          npm run pages:verify
+
+      - name: Remove disposable rebuild database
+        shell: bash
+        run: |
+          rm -f rebuild-ci.db rebuild-ci.db-journal rebuild-ci.db-shm rebuild-ci.db-wal rebuild.log
+
+      - name: Guard generated change scope
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t changed < <(
+            { git diff --name-only; git ls-files --others --exclude-standard; } | sort -u
+          )
+          if [ "${#changed[@]}" -eq 0 ]; then
+            echo "Snapshot generation produced no changes."
+            exit 0
+          fi
+          printf 'Generated changes:\n%s\n' "${changed[@]}"
+          for path in "${changed[@]}"; do
+            case "$path" in
+              site-data/*|public/data/*|public/exports/*|public/_headers) ;;
+              *)
+                echo "Unexpected generated path: $path"
+                exit 1
+                ;;
+            esac
+          done
+
+      - name: Commit generated snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add site-data public/data public/exports public/_headers
+          if git diff --cached --quiet; then
+            echo "No generated snapshot changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: publish #001-#416 snapshot"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
