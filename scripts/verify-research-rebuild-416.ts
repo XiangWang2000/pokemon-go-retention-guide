@@ -145,6 +145,28 @@ async function runLegacyRecomputeWithCanonicalRoseradeStub() {
   }
 }
 
+async function handRoseradeEvolutionEdgeToGen4() {
+  const prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: databaseUrl }) });
+  const expectedId = "evolution-gen4-387-416-315-hoenn-407-sinnoh";
+  try {
+    const edges = await prisma.evolutionPath.findMany({
+      where: { fromFormId: "315-hoenn", toFormId: "407-sinnoh" },
+      select: { id: true },
+    });
+    if (edges.length !== 1) {
+      throw new Error(`Expected exactly one pre-Gen4 Roserade evolution edge, found ${edges.length}.`);
+    }
+    if (edges[0].id !== expectedId) {
+      await prisma.evolutionPath.update({
+        where: { id: edges[0].id },
+        data: { id: expectedId },
+      });
+    }
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
 const imports = [
   "data:import:031-060",
   "data:import:061-090",
@@ -200,6 +222,10 @@ for (const script of imports) {
     // this replay, map the old Roserade OTHER stub onto its now-canonical
     // Sinnoh form so the Gen4 importer can upgrade the same row in place.
     await runLegacyRecomputeWithCanonicalRoseradeStub();
+    // Reuse the historical endpoint row under the deterministic Gen4 edge ID.
+    // The Gen4 importer then upserts the same edge instead of creating a
+    // duplicate 315-hoenn -> 407-sinnoh path.
+    await handRoseradeEvolutionEdgeToGen4();
   }
   await run(npm, ["run", script]);
 }
