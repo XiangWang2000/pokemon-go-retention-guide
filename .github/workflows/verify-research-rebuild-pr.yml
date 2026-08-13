@@ -1,0 +1,56 @@
+name: Verify Research Rebuild PR
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "prisma/**"
+      - "scripts/import-*.ts"
+      - "scripts/recompute-*.ts"
+      - "scripts/backfill-*.ts"
+      - "scripts/validate-data.ts"
+      - "scripts/verify-research-rebuild-416.ts"
+      - "src/data/**"
+      - "src/rules/**"
+      - "research_notes/**"
+      - "data/sources/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/verify-research-rebuild-pr.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: research-rebuild-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DATABASE_URL: file:./rebuild-ci.db
+      ALLOW_DESTRUCTIVE_REBUILD: "1"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Generate Prisma client
+        run: npm run db:generate
+      - name: Rebuild and validate research database through #416
+        shell: bash
+        run: |
+          if ! npx tsx scripts/verify-research-rebuild-416.ts > rebuild.log 2>&1; then
+            echo "Research rebuild failed; showing the final 120 log lines."
+            tail -n 120 rebuild.log
+            exit 1
+          fi
+          echo "Research rebuild completed successfully."
+          tail -n 40 rebuild.log
