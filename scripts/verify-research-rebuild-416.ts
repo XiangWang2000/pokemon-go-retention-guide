@@ -101,6 +101,50 @@ async function ensureAdjacentBatchTarget(stub: BoundaryStub) {
   }
 }
 
+type CrossGenerationManifest = {
+  targets: Array<{
+    dexNumber: number;
+    formKey: string;
+    formNameEn: string;
+    formNameZhTw: string;
+    regionKey: string;
+  }>;
+  paths: Array<{ fromFormId: string; toFormId: string }>;
+};
+
+async function runLegacyRecomputeWithCanonicalRoseradeStub() {
+  const path = "research_notes/cross-generation-evolution-targets.json";
+  const original = await readFile(path, "utf8");
+  const manifest = JSON.parse(original.replace(/^\uFEFF/, "")) as CrossGenerationManifest;
+  const roserade = manifest.targets.filter(
+    (target) => target.dexNumber === 407 && target.formKey === "OTHER",
+  );
+  const roseradePaths = manifest.paths.filter(
+    (edge) => edge.toFormId === "407-other" && edge.fromFormId === "315-hoenn",
+  );
+  if (roserade.length !== 1 || roseradePaths.length !== 1) {
+    throw new Error(
+      `Expected one legacy Roserade target/path, found targets=${roserade.length}, paths=${roseradePaths.length}.`,
+    );
+  }
+
+  roserade[0].formKey = "SINNOH";
+  roserade[0].formNameEn = "Sinnoh";
+  roserade[0].formNameZhTw = "神奧";
+  // Keep OTHER during the historical recompute because the legacy
+  // cross-generation validator predates SINNOH. The Gen4 importer upgrades
+  // the same 407-sinnoh row to regionKey=SINNOH immediately afterwards.
+  roserade[0].regionKey = "OTHER";
+  roseradePaths[0].toFormId = "407-sinnoh";
+
+  await writeFile(path, `${JSON.stringify(manifest, null, 2)}\n`);
+  try {
+    await run(npm, ["run", "data:recompute:001-386"]);
+  } finally {
+    await writeFile(path, original);
+  }
+}
+
 const imports = [
   "data:import:031-060",
   "data:import:061-090",
@@ -149,6 +193,14 @@ for (const script of imports) {
       types: ["DRAGON"],
     });
   }
+  if (script === "data:import:387-416") {
+    // #001-#386 historically require the current global reconciliation after
+    // all legacy importers finish. It fills the modern assessment disposition
+    // and four-level PvE-use fields without weakening data:validate. During
+    // this replay, map the old Roserade OTHER stub onto its now-canonical
+    // Sinnoh form so the Gen4 importer can upgrade the same row in place.
+    await runLegacyRecomputeWithCanonicalRoseradeStub();
+  }
   await run(npm, ["run", script]);
 }
 await run(npm, ["run", "data:backfill-iv"]);
@@ -165,6 +217,7 @@ try {
     edge030031,
     edge341342,
     edge371372,
+    legacyRoseradeStub,
   ] = await Promise.all([
     prisma.pokemonSpecies.count({ where: { dexNumber: { gte: 387, lte: 416 } } }),
     prisma.pokemonForm.count({ where: { species: { dexNumber: { gte: 387, lte: 416 } } } }),
@@ -174,6 +227,7 @@ try {
     prisma.evolutionPath.findFirst({ where: { fromFormId: "030-kanto", toFormId: "031-kanto" } }),
     prisma.evolutionPath.findFirst({ where: { fromFormId: "341-hoenn", toFormId: "342-hoenn" } }),
     prisma.evolutionPath.findFirst({ where: { fromFormId: "371-hoenn", toFormId: "372-hoenn" } }),
+    prisma.pokemonForm.findUnique({ where: { id: "407-other" } }),
   ]);
   if (gen4Species !== 30 || gen4Forms !== 34 || gen4Variants !== 136 || gen4Released !== 78) {
     throw new Error(`Unexpected Gen4 rebuild boundary: species=${gen4Species}, forms=${gen4Forms}, variants=${gen4Variants}, released=${gen4Released}.`);
@@ -183,6 +237,9 @@ try {
   }
   if (!edge030031 || !edge341342 || !edge371372) {
     throw new Error("One or more deferred adjacent-batch evolution edges were not restored by their owning importer.");
+  }
+  if (legacyRoseradeStub) {
+    throw new Error("Legacy 407-other Roserade stub survived the Gen4 rebuild migration.");
   }
   console.log(`Full research rebuild verified through #416: ${allVariants} total BattleVariants.`);
 } finally {
