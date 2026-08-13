@@ -10,6 +10,7 @@ on:
       - "scripts/backfill-*.ts"
       - "scripts/validate-data.ts"
       - "scripts/verify-research-rebuild-416.ts"
+      - "scripts/verify-gen4-publication-candidate.ts"
       - "src/data/**"
       - "src/rules/**"
       - "research_notes/**"
@@ -54,3 +55,5 @@ jobs:
           fi
           echo "Research rebuild completed successfully."
           tail -n 40 rebuild.log
+      - name: Dry-run Gen4 publication pipeline
+        run: npx tsx scripts/verify-gen4-publication-candidate.ts
