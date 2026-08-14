@@ -97,15 +97,20 @@ jobs:
             exit 0
           fi
           printf 'Generated changes:\n%s\n' "${changed[@]}"
+          unexpected=()
           for path in "${changed[@]}"; do
             case "$path" in
               site-data/*|public/data/*|public/exports/*|public/_headers) ;;
               *)
-                echo "Unexpected generated path: $path"
-                exit 1
+                unexpected+=("$path")
+                echo "::error file=$path,title=Unexpected generated path::$path"
                 ;;
             esac
           done
+          if [ "${#unexpected[@]}" -ne 0 ]; then
+            printf 'Unexpected generated paths:\n%s\n' "${unexpected[@]}"
+            exit 1
+          fi
 
       - name: Commit generated snapshot
         shell: bash
