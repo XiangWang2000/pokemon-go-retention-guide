@@ -168,9 +168,9 @@ function isReviewRow(row: DashboardRow) {
 function tierTone(value: string | null | undefined): OverviewTone | null {
   const tier = (value ?? "").trim().toUpperCase();
   if (!tier) return null;
-  if (tier === "LIMITED") return "SPECIAL";
-  if (["SS", "S+", "S", "A+", "A", "TOP"].includes(tier)) return "HIGH";
-  if (["B+", "B", "BUDGET_ONLY"].includes(tier)) return "MEDIUM";
+  if (["LIMITED", "SPECIAL"].includes(tier)) return "SPECIAL";
+  if (["HIGH", "SS", "S+", "S", "A+", "A", "TOP"].includes(tier)) return "HIGH";
+  if (["MEDIUM", "B+", "B", "BUDGET_ONLY"].includes(tier)) return "MEDIUM";
   if (["C", "D", "F", "LOW", "NOT_RANKED"].includes(tier)) return "LOW";
   return null;
 }
@@ -559,9 +559,13 @@ function buildVariantIvRecommendations(row: DashboardRow, uses: PrimaryUseKey[])
 }
 
 function buildIvDirection(row: DashboardRow, recommendations: IvRecommendation[]) {
-  if (recommendations.length) {
-    return recommendations.map((item) => item.ivRecommendationZhTw).join("；");
+  const recommendationText = recommendations.map((item) => item.ivRecommendationZhTw).join("；");
+  if (matchedRule(row, "SPECIAL_ACQUISITION")) {
+    return recommendationText
+      ? `特殊取得個體應保留；不以 IV 作傳送門檻。實戰 IV 參考：${recommendationText}`
+      : "特殊取得個體應保留；不以 IV 作傳送門檻。";
   }
+  if (recommendationText) return recommendationText;
   if (hasEvolutionValue([row])) {
     if (row.variantKey === "SHADOW") {
       return "暗影標準較寬；15攻優先，不設硬性最低IV。依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，14攻高整體IV亦可留；Max依角色分開。";
