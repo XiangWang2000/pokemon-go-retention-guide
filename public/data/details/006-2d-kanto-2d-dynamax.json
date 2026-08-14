@@ -11,11 +11,31 @@
       "evolutionMethodZhTw": "一般進化",
       "availabilityNotesZhTw": "來源逐步明示進化關係。",
       "requiresEvent": false,
-      "verifiedAt": "2026-08-07T16:00:00.000Z"
+      "verifiedAt": "2026-07-14T16:00:00.000Z"
     }
   ],
   "conflicts": [],
   "changeLogs": [
+    {
+      "id": "recalibrate-20260809-decision-006-kanto-dynamax",
+      "fieldName": "decision",
+      "previousValue": "KEEP",
+      "newValue": "CONDITIONAL_KEEP",
+      "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+      "changedAt": "2026-08-12T16:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": null
+    },
+    {
+      "id": "recalibrate-20260809-disposition-006-kanto-dynamax",
+      "fieldName": "assessmentDisposition",
+      "previousValue": "TRUE_DATA_PENDING",
+      "newValue": "LIMITED_USE",
+      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+      "changedAt": "2026-08-12T16:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": null
+    },
     {
       "id": "remediation-release-006-kanto-dynamax",
       "fieldName": "releaseStatus",
@@ -30,9 +50,9 @@
       }
     },
     {
-      "id": "change-evaluation-006-kanto-dynamax-20260715-iv-20260728",
+      "id": "change-evaluation-006-kanto-dynamax-2026.08.06-v7-iv-20260728",
       "fieldName": "recommendedIvStrategyZhTw",
-      "previousValue": "只保留可極巨化／超極巨化版本；攻擊手15攻優先，坦克看防禦／HP，支援依物種門檻。",
+      "previousValue": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
       "newValue": "目前沒有會改變保留結論的通用IV門檻。",
       "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
       "changedAt": "2026-07-28T04:00:00.000Z",
