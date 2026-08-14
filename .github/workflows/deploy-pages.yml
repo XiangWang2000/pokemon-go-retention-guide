@@ -43,10 +43,14 @@ jobs:
       - name: Generate Prisma client
         run: npm run db:generate
       - name: Snapshot check
+        env:
+          DATABASE_URL: file:./rebuild-ci.db
         run: npm run sites:snapshot:check -- --pages
       - name: Snapshot failure diagnostics
         if: failure()
         shell: bash
+        env:
+          DATABASE_URL: file:./rebuild-ci.db
         run: |
           set +e
           output="$(npm run sites:snapshot:check -- --pages 2>&1)"
@@ -64,6 +68,8 @@ jobs:
       - name: Tests
         run: npm test
       - name: Build static export
+        env:
+          DATABASE_URL: file:./rebuild-ci.db
         run: npm run build
       - name: Verify Pages artifact
         run: npm run pages:verify
