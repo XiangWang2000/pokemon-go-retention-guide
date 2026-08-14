@@ -1,6 +1,6 @@
-import { runReview } from "./generate-review-gen3";
+import { runReview342371Current } from "./generate-review-342-371-current";
 
-runReview("342-371").catch((error) => {
+runReview342371Current().catch((error) => {
   console.error(error instanceof Error ? error.message : error);
   process.exitCode = 1;
 });
