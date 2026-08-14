@@ -79,10 +79,11 @@ jobs:
           npm run build
           npm run pages:verify
 
-      - name: Remove disposable rebuild database
+      - name: Remove disposable rebuild outputs
         shell: bash
         run: |
           rm -f rebuild-ci.db rebuild-ci.db-journal rebuild-ci.db-shm rebuild-ci.db-wal rebuild.log
+          git restore --worktree -- data/remediation/001-030-metrics.json
 
       - name: Guard generated change scope
         shell: bash
