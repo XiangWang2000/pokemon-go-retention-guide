@@ -47,9 +47,9 @@ describe("audit PvP use filtering", () => {
     expect(filtered([summary])).toEqual([]);
   });
 
-  it("filters the current committed false positive without regenerating the snapshot", () => {
+  it("keeps the regenerated committed summary free of the previous false positive", () => {
     expect(committedBulbasaur).toBeDefined();
-    expect(committedBulbasaur?.hasPvpUse).toBe(true);
+    expect(committedBulbasaur?.hasPvpUse).toBe(false);
     expect(committedBulbasaur?.pvpRanks.GREAT).toBe(1040);
     expect(filtered([committedBulbasaur!])).toEqual([]);
   });
