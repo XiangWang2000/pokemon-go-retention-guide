@@ -65,7 +65,7 @@ describe("Sites 唯讀 snapshot", () => {
       sourceReferences: 193,
       retentionEvaluations: 2077,
       categoryEvaluations: 13384,
-      ivRecommendations: 11,
+      ivRecommendations: 13,
       dashboardRows: 1912,
       homeFamilies: 245,
       openReviewIssues: 160,
