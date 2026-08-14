@@ -119,12 +119,21 @@ describe("#061～#090 批次與跨批次家族", () => {
     ]);
   });
 
-  it("前階僅作進化候選時不標成本體獨立用途", () => {
+  it("普通前階只作進化候選；已開放 Max 版本可有獨立用途", () => {
     const family = familyByMember("063-kanto");
     for (const formId of ["063-kanto", "064-kanto"]) {
       const member = family.members.find((item) => item.form.formId === formId)!;
-      expect(member.hasIndependentUse).toBe(false);
+      const normal = member.form.variants.find((variant) => variant.row.variantKey === "NORMAL")!;
+      const dynamax = member.form.variants.find((variant) => variant.row.variantKey === "DYNAMAX")!;
       expect(member.roles).toContain("EVOLUTION_MATERIAL");
+      expect(member.roles).toContain("MAX_CANDIDATE");
+      expect(member.hasIndependentUse).toBe(true);
+      expect(normal.primaryUseKeys).not.toEqual(
+        expect.arrayContaining(["MAX_ATTACK", "MAX_TANK", "MAX_SUPPORT", "MAX_FLEX"]),
+      );
+      expect(normal.row.maxBattleSummaryZhTw).toContain("此版本不是 Max 版本");
+      expect(dynamax.primaryUseKeys).toContain("MAX_FLEX");
+      expect(dynamax.row.releaseStatus).toBe("RELEASED");
     }
   });
 
