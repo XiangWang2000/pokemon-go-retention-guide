@@ -10,8 +10,8 @@
     "battleVariants": 144,
     "families": 19,
     "strategyCounts": {
-      "KEEP_TARGETS": 7,
-      "SELECTIVE_KEEP": 8,
+      "KEEP_TARGETS": 8,
+      "SELECTIVE_KEEP": 7,
       "MOSTLY_TRANSFER": 4,
       "HOLD_FOR_NOW": 0
     },
@@ -73,7 +73,7 @@
     {
       "familyId": "KANTO_FAMILY_092:092-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留耿鬼（PvE 實戰候選、Mega 候選、超極巨版本本身、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留鬼斯（極巨候選），以及鬼斯通（極巨候選），以及耿鬼（PvE 實戰候選、Mega 候選、極巨候選、超極巨版本本身、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -90,8 +90,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_098:098-kanto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留巨鉗蟹（超極巨版本本身）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留大鉗蟹（極巨候選），以及巨鉗蟹（極巨候選、超極巨版本本身）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {

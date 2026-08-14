@@ -10,8 +10,8 @@
     "battleVariants": 165,
     "families": 31,
     "strategyCounts": {
-      "KEEP_TARGETS": 12,
-      "SELECTIVE_KEEP": 10,
+      "KEEP_TARGETS": 15,
+      "SELECTIVE_KEEP": 7,
       "MOSTLY_TRANSFER": 9,
       "HOLD_FOR_NOW": 0
     },
@@ -132,7 +132,7 @@
     {
       "familyId": "KANTO_FAMILY_133:133-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留水伊布（ML 高 IV 投資候選），以及月亮伊布（PvP（GL Rank≤100、UL Rank≤100））；保留可進化為葉伊布、冰伊布、仙子伊布的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留伊布（極巨候選），以及水伊布（ML 高 IV 投資候選、極巨候選），以及雷伊布（極巨候選），以及火伊布（極巨候選），以及月亮伊布（PvP（GL Rank≤100、UL Rank≤100））；保留可進化為葉伊布、冰伊布、仙子伊布的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -167,8 +167,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_144:144-kanto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留急凍鳥（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留急凍鳥（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、極巨候選）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -179,8 +179,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_145:145-kanto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留閃電鳥（PvP（UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留閃電鳥（PvP（UL Rank≤100）、ML 高 IV 投資候選、極巨候選）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -191,8 +191,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_146:146-kanto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留火焰鳥（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留火焰鳥（ML 高 IV 投資候選、極巨候選）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
