@@ -56,21 +56,21 @@ describe("Sites 唯讀 snapshot", () => {
   );
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
-    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.09-r23");
+    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.13-r24");
     expect(siteSnapshotManifest.counts).toMatchObject({
-      pokemonSpecies: 417,
-      pokemonForms: 461,
-      battleVariants: 1776,
-      rawEvaluationData: 1200,
-      sourceReferences: 178,
-      retentionEvaluations: 1941,
-      categoryEvaluations: 12432,
+      pokemonSpecies: 446,
+      pokemonForms: 494,
+      battleVariants: 1912,
+      rawEvaluationData: 1280,
+      sourceReferences: 193,
+      retentionEvaluations: 2077,
+      categoryEvaluations: 13384,
       ivRecommendations: 11,
-      dashboardRows: 1776,
-      homeFamilies: 234,
-      openReviewIssues: 241,
+      dashboardRows: 1912,
+      homeFamilies: 245,
+      openReviewIssues: 160,
     });
-    expect(siteSnapshotManifest.sourceDatabase.path).toBe("dev.db");
+    expect(siteSnapshotManifest.sourceDatabase.path).toBe("rebuild-ci.db");
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
     expect(siteSnapshotManifest.snapshotSha256).toMatch(/^[a-f0-9]{64}$/);
   });
@@ -78,10 +78,10 @@ describe("Sites 唯讀 snapshot", () => {
   it("預建 Excel 可開啟且包含十張繁中工作表", async () => {
     const workbook = new ExcelJS.Workbook();
     const buffer = await readFile(
-      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-386.xlsx"),
+      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-416.xlsx"),
     );
     await workbook.xlsx.load(buffer as unknown as Parameters<typeof workbook.xlsx.load>[0]);
-    expect(workbook.subject).toBe("2026.08.09-r23");
+    expect(workbook.subject).toBe("2026.08.13-r24");
     expect(workbook.worksheets).toHaveLength(10);
     expect(workbook.worksheets.map((sheet) => sheet.name)).toEqual([
       "寶可夢型態",
@@ -120,7 +120,7 @@ describe("Sites 唯讀 snapshot", () => {
       }>;
     };
     expect(runtimeHome.schemaVersion).toBe(2);
-    expect(runtimeHome.dataVersion).toBe("2026.08.09-r23");
+    expect(runtimeHome.dataVersion).toBe("2026.08.13-r24");
     expect(
       runtimeHome.families.every(
         (family) =>
@@ -157,9 +157,9 @@ describe("首頁 snapshot", () => {
     const variants = forms.flatMap((form) => form.variants);
 
     expect(home.schemaVersion).toBe(1);
-    expect(home.families).toHaveLength(234);
-    expect(forms).toHaveLength(429);
-    expect(variants).toHaveLength(1776);
+    expect(home.families).toHaveLength(245);
+    expect(forms).toHaveLength(463);
+    expect(variants).toHaveLength(1912);
     expect(variants.every((variant) => variant.row.ivRecommendations.length === 0)).toBe(true);
     expect(forms.some((form) => form.ivRecommendations.length > 0)).toBe(true);
     expect(variants.some((variant) => variant.ivRecommendations.length > 0)).toBe(true);
