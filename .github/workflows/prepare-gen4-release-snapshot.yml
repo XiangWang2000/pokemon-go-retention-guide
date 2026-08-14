@@ -66,11 +66,11 @@ jobs:
       - name: Verify Gen4 publication candidate
         run: npx tsx scripts/verify-gen4-publication-candidate.ts
 
-      - name: Generate formal Gen4 review checkpoints
+      - name: Generate formal review checkpoints
         shell: bash
         run: |
           set -euo pipefail
-          npx tsx scripts/generate-review-387-416.ts
+          npm run review:generate
           npx tsx scripts/generate-current-recalibration-report.ts --max 416
 
       - name: Generate #001-#416 snapshot
@@ -110,7 +110,11 @@ jobs:
           unexpected=()
           for path in "${changed[@]}"; do
             case "$path" in
-              site-data/*|public/data/*|public/exports/*|public/_headers|review/387-416.json|review/387-416.md|review/001-416-recalibration.json|review/001-416-recalibration.md) ;;
+              site-data/*|public/data/*|public/exports/*|public/_headers) ;;
+              review/001-030.json|review/001-030.md|review/031-060.json|review/031-060.md|review/061-090.json|review/061-090.md|review/091-120.json|review/091-120.md) ;;
+              review/121-151.json|review/121-151.md|review/152-181.json|review/152-181.md|review/182-211.json|review/182-211.md|review/212-241.json|review/212-241.md) ;;
+              review/242-251.json|review/242-251.md|review/252-281.json|review/252-281.md|review/282-311.json|review/282-311.md|review/312-341.json|review/312-341.md) ;;
+              review/342-371.json|review/342-371.md|review/372-386.json|review/372-386.md|review/387-416.json|review/387-416.md|review/001-416-recalibration.json|review/001-416-recalibration.md) ;;
               *)
                 unexpected+=("$path")
                 echo "::error file=$path,title=Unexpected generated path::$path"
@@ -126,15 +130,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add \
-            site-data \
-            public/data \
-            public/exports \
-            public/_headers \
-            review/387-416.json \
-            review/387-416.md \
-            review/001-416-recalibration.json \
-            review/001-416-recalibration.md
+          git add site-data public/data public/exports public/_headers review/*.json review/*.md
           if git diff --cached --quiet; then
             echo "No generated snapshot changes to commit."
             exit 0
