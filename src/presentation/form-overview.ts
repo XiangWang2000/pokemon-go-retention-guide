@@ -83,11 +83,12 @@ const regionOrder: Record<string, number> = {
   KANTO: 0,
   JOHTO: 1,
   HOENN: 2,
-  ALOLA: 3,
-  GALAR: 4,
-  HISUI: 5,
-  PALDEA: 6,
-  OTHER: 7,
+  SINNOH: 3,
+  ALOLA: 4,
+  GALAR: 5,
+  HISUI: 6,
+  PALDEA: 7,
+  OTHER: 8,
 };
 
 function category(row: DashboardRow, key: string) {
@@ -562,6 +563,9 @@ function buildIvDirection(row: DashboardRow, recommendations: IvRecommendation[]
     return recommendations.map((item) => item.ivRecommendationZhTw).join("；");
   }
   if (hasEvolutionValue([row])) {
+    if (row.variantKey === "SHADOW") {
+      return "暗影標準較寬；15攻優先，不設硬性最低IV。依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，14攻高整體IV亦可留；Max依角色分開。";
+    }
     return isPrimalFormId(row.formId)
       ? "依目標進化結果套用 GL／UL 個體Rank；PvE／原始回歸先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。"
       : "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。";
