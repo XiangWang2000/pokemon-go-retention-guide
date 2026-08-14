@@ -49,7 +49,7 @@ describe("#121～#151 部署快照安全回歸", () => {
     ).toBe(false);
   });
 
-  it("保留高排名、重要暗影與特殊取得個體，不把 IV 寫成硬淘汰線", () => {
+  it("保留高排名、重要暗影與特殊取得個體，並依用途套用不同 IV 規則", () => {
     const rows = dashboardRows;
     const ids = [
       "130-kanto-normal",
@@ -63,7 +63,8 @@ describe("#121～#151 部署快照安全回歸", () => {
     );
 
     for (const id of ids) expect(byId[id]?.decision, id).toBe("KEEP");
-    expect(byId["150-kanto-normal"]?.recommendedIvStrategyZhTw).toContain("14攻高整體IV亦可留");
+    expect(byId["150-kanto-normal"]?.recommendedIvStrategyZhTw).toContain("15攻／96%以上為一般候選");
+    expect(byId["150-kanto-normal"]?.recommendedIvStrategyZhTw).toContain("CMP與攻防門檻");
     expect(byId["150-kanto-shadow"]?.recommendedIvStrategyZhTw).toContain("不設硬性最低IV");
     expect(byId["151-kanto-normal"]?.recommendedIvStrategyZhTw).toContain("不以 IV 作傳送門檻");
   });

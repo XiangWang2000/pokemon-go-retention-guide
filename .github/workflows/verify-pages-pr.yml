@@ -48,6 +48,8 @@ jobs:
           npx prisma db push --force-reset
           npm run data:verify:387-416
       - name: Snapshot check
+        env:
+          DATABASE_URL: file:./rebuild-ci.db
         run: npm run sites:snapshot:check -- --pages
       - name: Review consistency
         run: npm run review:validate
@@ -58,6 +60,8 @@ jobs:
       - name: Tests
         run: npm test
       - name: Build static export
+        env:
+          DATABASE_URL: file:./rebuild-ci.db
         run: npm run build
       - name: Verify Pages artifact
         run: npm run pages:verify

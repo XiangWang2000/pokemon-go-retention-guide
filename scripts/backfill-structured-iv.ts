@@ -1,11 +1,49 @@
 import { prisma } from "../src/lib/prisma";
 import { getDashboardRows } from "../src/lib/data-prisma";
 import { buildFormOverviews } from "../src/presentation/form-overview";
+import { GLOBAL_IV_RECOMMENDATIONS } from "../src/iv/strategy";
 
 const changedAt = new Date("2026-07-28T12:00:00+08:00");
 const rulesVersion = "2026.07.28-iv-v2";
 
+async function ensureGlobalIvRecommendations() {
+  for (const recommendation of GLOBAL_IV_RECOMMENDATIONS) {
+    const data = {
+      scopeType: recommendation.scopeType,
+      scopeKey: recommendation.scopeKey,
+      primaryUseKey: recommendation.primaryUseKey,
+      ivStrategyKey: recommendation.ivStrategyKey,
+      maxBattleRole: recommendation.maxBattleRole,
+      attackIvMin: recommendation.attackIvMin,
+      attackIvPriority: recommendation.attackIvPriority,
+      defenseIvMin: recommendation.defenseIvMin,
+      staminaIvMin: recommendation.staminaIvMin,
+      totalIvPercentMin: recommendation.totalIvPercentMin,
+      totalIvPercentPriority: recommendation.totalIvPercentPriority,
+      pvpRankMax: recommendation.pvpRankMax,
+      pvpPrMin: recommendation.pvpPrMin,
+      recommendedQuantity: recommendation.recommendedQuantity,
+      speciesSpecificOverride: recommendation.speciesSpecificOverride,
+      overrideReasonZhTw: recommendation.overrideReasonZhTw,
+      ivRecommendationZhTw: recommendation.ivRecommendationZhTw,
+      shortIvLabelZhTw: recommendation.shortIvLabelZhTw,
+      rulesVersion: recommendation.rulesVersion,
+    };
+    await prisma.ivRecommendation.upsert({
+      where: { id: recommendation.id },
+      create: { id: recommendation.id, ...data },
+      update: data,
+    });
+  }
+}
+
 async function main() {
+  // A clean research rebuild starts from schema + importers, so the canonical
+  // global IV policy must be materialized before presentation derives the
+  // structured per-variant guidance. Otherwise the rebuild silently falls
+  // back to generic text and the published snapshot loses the IV rules.
+  await ensureGlobalIvRecommendations();
+
   const forms = buildFormOverviews(await getDashboardRows());
   let updated = 0;
   for (const variant of forms.flatMap((form) => form.variants)) {

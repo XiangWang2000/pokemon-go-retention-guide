@@ -1,0 +1,30 @@
+{
+  "paths": [
+    {
+      "id": "evolution-gen4-387-416-388-sinnoh-389-sinnoh",
+      "fromFormId": "388-sinnoh",
+      "fromNameZhTw": "樹林龜",
+      "fromFormNameZhTw": "神奧",
+      "toFormId": "389-sinnoh",
+      "toNameZhTw": "土台龜",
+      "toFormNameZhTw": "神奧",
+      "evolutionMethodZhTw": "依 Pokémon GO 當期糖果、性別與特殊條件進化。",
+      "availabilityNotesZhTw": "第四世代 #387～#416 進化圖已獨立核對；特殊分支依遊戲內介面為準。",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-12T16:00:00.000Z"
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "change-gen4-387-416-eval-389-sinnoh-dynamax-iv-20260728",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "目前沒有主要用途時，不因 100% 自動產生保留理由。",
+      "newValue": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+      "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.07.28-iv-v2",
+      "source": null
+    }
+  ]
+}

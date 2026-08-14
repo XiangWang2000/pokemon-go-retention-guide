@@ -1,5 +1,39 @@
 {
   "paths": [],
   "conflicts": [],
-  "changeLogs": []
+  "changeLogs": [
+    {
+      "id": "recalibrate-20260809-disposition-143-kanto-gigantamax",
+      "fieldName": "assessmentDisposition",
+      "previousValue": "TRUE_DATA_PENDING",
+      "newValue": "CLEAR_USE",
+      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+      "changedAt": "2026-08-12T16:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": null
+    },
+    {
+      "id": "r13-gmax-snorlax",
+      "fieldName": "releaseStatus",
+      "previousValue": null,
+      "newValue": "RELEASED",
+      "changeReasonZhTw": "超極巨卡比獸與普通、暗影及極巨版本分開。",
+      "changedAt": "2026-08-03T10:30:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": {
+        "title": "Don’t sleep on this giant opportunity! Gigantamax Snorlax emerges in a new Max Battle Day.",
+        "url": "https://pokemongo.com/post/gigantamax-snorlax-max-battle-day/"
+      }
+    },
+    {
+      "id": "change-r13-eval-143-kanto-gigantamax-iv-20260728",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
+      "newValue": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+      "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.07.28-iv-v2",
+      "source": null
+    }
+  ]
 }

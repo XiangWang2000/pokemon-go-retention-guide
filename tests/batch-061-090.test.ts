@@ -119,12 +119,21 @@ describe("#061～#090 批次與跨批次家族", () => {
     ]);
   });
 
-  it("前階僅作進化候選時不標成本體獨立用途", () => {
+  it("普通前階只作進化候選；已開放 Max 版本可有獨立用途", () => {
     const family = familyByMember("063-kanto");
     for (const formId of ["063-kanto", "064-kanto"]) {
       const member = family.members.find((item) => item.form.formId === formId)!;
-      expect(member.hasIndependentUse).toBe(false);
+      const normal = member.form.variants.find((variant) => variant.row.variantKey === "NORMAL")!;
+      const dynamax = member.form.variants.find((variant) => variant.row.variantKey === "DYNAMAX")!;
       expect(member.roles).toContain("EVOLUTION_MATERIAL");
+      expect(member.roles).toContain("MAX_CANDIDATE");
+      expect(member.hasIndependentUse).toBe(true);
+      expect(normal.primaryUseKeys).not.toEqual(
+        expect.arrayContaining(["MAX_ATTACK", "MAX_TANK", "MAX_SUPPORT", "MAX_FLEX"]),
+      );
+      expect(normal.row.maxBattleSummaryZhTw).toContain("此版本不是 Max 版本");
+      expect(dynamax.primaryUseKeys).toContain("MAX_FLEX");
+      expect(dynamax.row.releaseStatus).toBe("RELEASED");
     }
   });
 
@@ -160,23 +169,26 @@ describe("#061～#090 批次與跨批次家族", () => {
     const shadow = rows.find((row) => row.id === "068-kanto-shadow")!;
     const purified = rows.find((row) => row.id === "068-kanto-purified")!;
     expect(shadow.decision).toBe("KEEP");
-    expect(shadow.recommendedIvStrategyZhTw).toContain("先留用途候選");
+    expect(shadow.recommendedIvStrategyZhTw).toContain("不設硬性最低IV");
+    expect(shadow.recommendedIvStrategyZhTw).toContain("不得只因攻擊或總IV偏低而傳送或淨化");
+    expect(shadow.recommendedIvStrategyZhTw).toContain("淨化不可逆");
     expect(shadow.pveSummaryZhTw).toContain("不設攻擊或總 IV 硬性最低門檻");
     expect(purified.decision).toBe("TRANSFER_CANDIDATE");
     expect(purified.inheritance?.purificationRiskZhTw).toContain("低總 IV 不構成淨化理由");
   });
 
-  it("PvE 的 15攻只作同種排序，14攻高整體IV仍可留", () => {
-    for (const id of [
-      "068-kanto-dynamax",
-      "068-kanto-gigantamax",
-      "065-kanto-mega",
-      "071-kanto-mega",
-    ]) {
+  it("Mega 使用 PvE 候選排序；Max 版本維持角色式 IV 判斷", () => {
+    for (const id of ["065-kanto-mega", "071-kanto-mega"]) {
       const row = rows.find((item) => item.id === id)!;
       expect(row.recommendedIvStrategyZhTw, id).toContain("15攻優先");
       expect(row.recommendedIvStrategyZhTw, id).toContain("14攻高整體IV亦可留");
     }
+    const dynamax = rows.find((item) => item.id === "068-kanto-dynamax")!;
+    const gigantamax = rows.find((item) => item.id === "068-kanto-gigantamax")!;
+    expect(dynamax.decision).toBe("CONDITIONAL_KEEP");
+    expect(dynamax.maxBattleSummaryZhTw).toContain("此極巨版本已開放");
+    expect(dynamax.recommendedIvStrategyZhTw).toContain("Max彈性角色");
+    expect(gigantamax.recommendedIvStrategyZhTw).toContain("Max彈性角色");
   });
 
   it("卡片第一層仍同時顯示保留條件與其他普通重複可傳", () => {

@@ -31,7 +31,7 @@ describe("Audit static data", () => {
     const query = normalizeAuditQuery(new URLSearchParams({ decision: "KEEP" }));
     const filtered = filterAuditRows(snapshot.rows, query, snapshot.dataAsOf);
 
-    expect(snapshot.rows).toHaveLength(1776);
+    expect(snapshot.rows).toHaveLength(1912);
     expect(filtered.length).toBeGreaterThan(0);
     expect(filtered.length).toBeLessThan(snapshot.rows.length);
   });

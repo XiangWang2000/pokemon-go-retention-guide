@@ -21,14 +21,24 @@
       "toFormId": "031-kanto",
       "toNameZhTw": "尼多后",
       "toFormNameZhTw": "關都",
-      "evolutionMethodZhTw": "一般進化；終點超出本批資料範圍",
-      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+      "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+      "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
       "requiresEvent": false,
-      "verifiedAt": null
+      "verifiedAt": "2026-07-30T08:00:00.000Z"
     }
   ],
   "conflicts": [],
   "changeLogs": [
+    {
+      "id": "recalibrate-20260809-disposition-030-kanto-shadow",
+      "fieldName": "assessmentDisposition",
+      "previousValue": "TRUE_DATA_PENDING",
+      "newValue": "LIMITED_USE",
+      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+      "changedAt": "2026-08-12T16:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": null
+    },
     {
       "id": "remediation-release-030-kanto-shadow",
       "fieldName": "releaseStatus",
@@ -54,6 +64,16 @@
         "title": "Team GO Rocket has taken over the GO Fest Weekly Challenge!",
         "url": "https://pokemongo.com/post/gofestweeklychallenge-teamgorocket/?hl=en"
       }
+    },
+    {
+      "id": "change-r8-cross-030-kanto-shadow-iv-20260728",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
+      "newValue": "暗影標準較寬；15攻優先，不設硬性最低IV。依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，14攻高整體IV亦可留；Max依角色分開。",
+      "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.07.28-iv-v2",
+      "source": null
     }
   ]
 }

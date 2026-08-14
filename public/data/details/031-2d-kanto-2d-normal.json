@@ -8,12 +8,33 @@
       "toFormId": "031-kanto",
       "toNameZhTw": "尼多后",
       "toFormNameZhTw": "關都",
-      "evolutionMethodZhTw": "一般進化；終點超出本批資料範圍",
-      "availabilityNotesZhTw": "路徑已結構化，但本輪未取得同時明示起點、終點與進化動作的官方原始頁面，需覆核。",
+      "evolutionMethodZhTw": "糖果進化；特殊條件以遊戲內當期介面為準。",
+      "availabilityNotesZhTw": "此路徑已在 #001～#060 整合資料中核對。",
       "requiresEvent": false,
-      "verifiedAt": null
+      "verifiedAt": "2026-07-30T08:00:00.000Z"
     }
   ],
   "conflicts": [],
-  "changeLogs": []
+  "changeLogs": [
+    {
+      "id": "recalibrate-20260809-disposition-031-kanto-normal",
+      "fieldName": "assessmentDisposition",
+      "previousValue": "TRUE_DATA_PENDING",
+      "newValue": "LIMITED_USE",
+      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+      "changedAt": "2026-08-12T16:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": null
+    },
+    {
+      "id": "change-r8-eval-031-kanto-normal-iv-20260728",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
+      "newValue": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
+      "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
+      "changedAt": "2026-07-28T04:00:00.000Z",
+      "rulesVersion": "2026.07.28-iv-v2",
+      "source": null
+    }
+  ]
 }

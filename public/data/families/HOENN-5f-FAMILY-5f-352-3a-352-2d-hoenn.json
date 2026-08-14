@@ -68,7 +68,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "updatedAt": "2026-08-12T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #198；招式 SUCKER_PUNCH／THUNDER_PUNCH／DYNAMIC_PUNCH；UL（高級聯盟） Overall #468；招式 SUCKER_PUNCH／DYNAMIC_PUNCH／FOUL_PLAY",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -78,7 +78,7 @@
               "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "依固定快照優先核對：SUCKER_PUNCH／THUNDER_PUNCH／DYNAMIC_PUNCH",
-              "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
+              "recommendedIvStrategyZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
               "evaluationId": "gen3-342-371-eval-352-hoenn-normal",
@@ -359,7 +359,7 @@
             ],
             "ivRecommendations": [
               {
-                "id": "iv-global-great",
+                "id": "iv-global-great-league",
                 "scopeType": "GLOBAL",
                 "scopeKey": "GLOBAL",
                 "primaryUseKey": "GREAT_LEAGUE",
@@ -377,24 +377,24 @@
                 "totalIvPercentPriority": null,
                 "secondaryTotalIvPercentMin": null,
                 "pvpRankMax": 100,
-                "pvpRankConditionalMax": 200,
+                "pvpRankConditionalMax": null,
                 "pvpPrMin": 97.5,
                 "recommendedQuantity": null,
                 "hundoPriority": false,
                 "appliesOnlyWhenUseConfirmed": true,
                 "speciesSpecificOverride": false,
                 "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+                "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
                 "shortIvLabelZhTw": "GL：Rank≤100",
-                "rulesVersion": "2026.07.18-iv-v1",
-                "createdAt": "2026-08-09T02:24:36.000Z",
-                "updatedAt": "2026-08-09T02:24:36.000Z"
+                "rulesVersion": "2026.07.28-v2",
+                "createdAt": "2026-08-14T14:42:29.895Z",
+                "updatedAt": "2026-08-14T14:42:29.895Z"
               }
             ],
             "ivShortLabels": [
               "GL：Rank≤100"
             ],
-            "ivDirection": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+            "ivDirection": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
             "shortReason": "主要用途：PvP。"
           },
           {
@@ -435,7 +435,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "updatedAt": "2026-08-12T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -445,7 +445,7 @@
               "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
               "evaluationId": "gen3-342-371-eval-352-hoenn-shadow",
@@ -652,7 +652,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "updatedAt": "2026-08-12T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -662,7 +662,7 @@
               "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "沒有主要用途時，不因 100% 自動產生保留理由。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
               "evaluationId": "gen3-342-371-eval-352-hoenn-purified",
@@ -869,7 +869,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-08T16:00:00.000Z",
+              "updatedAt": "2026-08-12T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -879,7 +879,7 @@
               "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
               "evaluationId": "gen3-342-371-eval-352-hoenn-dynamax",
@@ -1080,7 +1080,7 @@
         "decisionReason": "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。",
         "ivRecommendations": [
           {
-            "id": "iv-global-great",
+            "id": "iv-global-great-league",
             "scopeType": "GLOBAL",
             "scopeKey": "GLOBAL",
             "primaryUseKey": "GREAT_LEAGUE",
@@ -1098,24 +1098,24 @@
             "totalIvPercentPriority": null,
             "secondaryTotalIvPercentMin": null,
             "pvpRankMax": 100,
-            "pvpRankConditionalMax": 200,
+            "pvpRankConditionalMax": null,
             "pvpPrMin": 97.5,
             "recommendedQuantity": null,
             "hundoPriority": false,
             "appliesOnlyWhenUseConfirmed": true,
             "speciesSpecificOverride": false,
             "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+            "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
             "shortIvLabelZhTw": "GL：Rank≤100",
-            "rulesVersion": "2026.07.18-iv-v1",
-            "createdAt": "2026-08-09T02:24:36.000Z",
-            "updatedAt": "2026-08-09T02:24:36.000Z"
+            "rulesVersion": "2026.07.28-v2",
+            "createdAt": "2026-08-14T14:42:29.895Z",
+            "updatedAt": "2026-08-14T14:42:29.895Z"
           }
         ],
         "ivShortLabels": [
           "GL：Rank≤100"
         ],
-        "ivDirection": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+        "ivDirection": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
         "primaryUses": [
           "PvP"
         ],
@@ -1126,7 +1126,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-08T16:00:00.000Z",
+        "updatedAt": "2026-08-12T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1142,7 +1142,7 @@
       ],
       "ivRecommendations": [
         {
-          "id": "iv-global-great",
+          "id": "iv-global-great-league",
           "scopeType": "GLOBAL",
           "scopeKey": "GLOBAL",
           "primaryUseKey": "GREAT_LEAGUE",
@@ -1160,18 +1160,18 @@
           "totalIvPercentPriority": null,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": 100,
-          "pvpRankConditionalMax": 200,
+          "pvpRankConditionalMax": null,
           "pvpPrMin": 97.5,
           "recommendedQuantity": null,
           "hundoPriority": false,
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+          "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
           "shortIvLabelZhTw": "GL：Rank≤100",
-          "rulesVersion": "2026.07.18-iv-v1",
-          "createdAt": "2026-08-09T02:24:36.000Z",
-          "updatedAt": "2026-08-09T02:24:36.000Z"
+          "rulesVersion": "2026.07.28-v2",
+          "createdAt": "2026-08-14T14:42:29.895Z",
+          "updatedAt": "2026-08-14T14:42:29.895Z"
         }
       ],
       "isRoot": true,
@@ -1226,7 +1226,7 @@
   ],
   "ivRecommendations": [
     {
-      "id": "iv-global-great",
+      "id": "iv-global-great-league",
       "scopeType": "GLOBAL",
       "scopeKey": "GLOBAL",
       "primaryUseKey": "GREAT_LEAGUE",
@@ -1244,18 +1244,18 @@
       "totalIvPercentPriority": null,
       "secondaryTotalIvPercentMin": null,
       "pvpRankMax": 100,
-      "pvpRankConditionalMax": 200,
+      "pvpRankConditionalMax": null,
       "pvpPrMin": 97.5,
       "recommendedQuantity": null,
       "hundoPriority": false,
       "appliesOnlyWhenUseConfirmed": true,
       "speciesSpecificOverride": false,
       "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "只有物種與目標進化結果確實具有超級聯盟用途時，個體 PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式。",
+      "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
       "shortIvLabelZhTw": "GL：Rank≤100",
-      "rulesVersion": "2026.07.18-iv-v1",
-      "createdAt": "2026-08-09T02:24:36.000Z",
-      "updatedAt": "2026-08-09T02:24:36.000Z"
+      "rulesVersion": "2026.07.28-v2",
+      "createdAt": "2026-08-14T14:42:29.895Z",
+      "updatedAt": "2026-08-14T14:42:29.895Z"
     }
   ],
   "ivSummaryZhTw": "GL：Rank≤100",
@@ -1268,7 +1268,7 @@
   ],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-08T16:00:00.000Z",
+  "updatedAt": "2026-08-12T16:00:00.000Z",
   "minDexNumber": 352,
   "maxDexNumber": 352,
   "detailsLoaded": true

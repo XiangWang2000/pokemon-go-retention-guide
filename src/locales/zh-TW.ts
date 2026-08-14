@@ -96,6 +96,7 @@ export const zhTw = {
     KANTO: "關都",
     JOHTO: "城都",
     HOENN: "豐緣",
+    SINNOH: "神奧",
     ALOLA: "阿羅拉",
     GALAR: "伽勒爾",
     HISUI: "洗翠",
