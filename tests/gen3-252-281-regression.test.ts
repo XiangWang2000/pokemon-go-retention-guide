@@ -166,7 +166,7 @@ describe("Gen 3 #252-#281 integration", () => {
     expect(batchRows.some((candidate) => candidate.assessmentDisposition === "TRUE_DATA_PENDING")).toBe(false);
     expect(batchRows.some((candidate) => candidate.decision === "HOLD_FOR_NOW")).toBe(false);
     expect(review).toMatchObject({
-      dataVersion: "2026.08.09-r23",
+      dataVersion: "2026.08.13-r24",
       counts: { species: 30, forms: 30, battleVariants: 123, trueDataPending: 0 },
       crossBatchIntegration: { result: "PASS" },
     });
