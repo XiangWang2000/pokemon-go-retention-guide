@@ -178,7 +178,7 @@ describe("#061～#090 批次與跨批次家族", () => {
     const gigantamax = rows.find((item) => item.id === "068-kanto-gigantamax")!;
     expect(dynamax.decision).toBe("CONDITIONAL_KEEP");
     expect(dynamax.maxBattleSummaryZhTw).toContain("此極巨版本已開放");
-    expect(dynamax.recommendedIvStrategyZhTw).toContain("通用IV門檻");
+    expect(dynamax.recommendedIvStrategyZhTw).toContain("Max彈性角色");
     expect(gigantamax.recommendedIvStrategyZhTw).toContain("Max彈性角色");
   });
 
