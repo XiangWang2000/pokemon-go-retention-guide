@@ -83,7 +83,10 @@ jobs:
         shell: bash
         run: |
           rm -f rebuild-ci.db rebuild-ci.db-journal rebuild-ci.db-shm rebuild-ci.db-wal rebuild.log
-          git restore --worktree -- data/remediation/001-030-metrics.json
+          git restore --worktree -- \
+            data/remediation/001-030-metrics.json \
+            review/001-386-recalibration.md \
+            review/001-386-recalibration.json
 
       - name: Guard generated change scope
         shell: bash
