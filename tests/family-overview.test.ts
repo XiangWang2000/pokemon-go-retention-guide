@@ -45,7 +45,7 @@ describe("EvolutionPath 進化家族分組", () => {
     ).toEqual(expect.arrayContaining(rows.map((row) => row.id)));
     expect(
       families.flatMap((family) => family.members.flatMap((member) => member.form.variants)),
-    ).toHaveLength(1776);
+    ).toHaveLength(1912);
   });
 
   it("3. 相同 familyKey 的不同地區進化路徑形成不同子群組", () => {
@@ -134,8 +134,9 @@ describe("EvolutionPath 進化家族分組", () => {
   });
 
   it("8. 單隻圖鑑模式的 FormOverview 數量保持不變", () => {
-    expect(forms).toHaveLength(429);
+    expect(forms).toHaveLength(463);
     expect(forms.map((form) => form.formId)).toContain("026-alola");
+    expect(forms.map((form) => form.formId)).toContain("416-sinnoh");
   });
 });
 
@@ -162,7 +163,7 @@ describe("家族總覽 UI", () => {
     expect(html).toContain("先留再篩");
     expect(html).toContain('data-testid="family-keep-condition"');
     expect(html).toContain(">要保留的條件<");
-    expect(html).toContain("PvP（GL Rank≤100、UL Rank≤100）");
+    expect(html).toContain("PvP（GL 排名佳、UL 排名佳）");
     expect(html).toContain('data-testid="family-transfer-condition"');
     expect(html).toContain("其他普通重複可傳");
     expect(html).toContain("其餘不符合上述用途的普通重複個體可傳");
