@@ -25,7 +25,8 @@ async function main() {
   for (const row of rows) {
     increment(decisions, row.decision);
     increment(dispositions, row.assessmentDisposition);
-    increment(pveUseLevels, row.pveUseLevel);
+    const pve = row.categoryStatuses.find((category) => category.category === "PVE");
+    increment(pveUseLevels, pve?.pveUseLevel);
   }
 
   const trueDataPending = rows
