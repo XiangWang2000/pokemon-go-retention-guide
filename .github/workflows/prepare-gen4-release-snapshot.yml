@@ -66,6 +66,13 @@ jobs:
       - name: Verify Gen4 publication candidate
         run: npx tsx scripts/verify-gen4-publication-candidate.ts
 
+      - name: Generate formal Gen4 review checkpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx tsx scripts/generate-review-387-416.ts
+          npx tsx scripts/generate-current-recalibration-report.ts --max 416
+
       - name: Generate #001-#416 snapshot
         run: npm run sites:snapshot
 
@@ -103,7 +110,7 @@ jobs:
           unexpected=()
           for path in "${changed[@]}"; do
             case "$path" in
-              site-data/*|public/data/*|public/exports/*|public/_headers) ;;
+              site-data/*|public/data/*|public/exports/*|public/_headers|review/387-416.json|review/387-416.md|review/001-416-recalibration.json|review/001-416-recalibration.md) ;;
               *)
                 unexpected+=("$path")
                 echo "::error file=$path,title=Unexpected generated path::$path"
@@ -119,7 +126,15 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add site-data public/data public/exports public/_headers
+          git add \
+            site-data \
+            public/data \
+            public/exports \
+            public/_headers \
+            review/387-416.json \
+            review/387-416.md \
+            review/001-416-recalibration.json \
+            review/001-416-recalibration.md
           if git diff --cached --quiet; then
             echo "No generated snapshot changes to commit."
             exit 0
