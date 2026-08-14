@@ -100,21 +100,24 @@ describe("#031～#060 批次與跨批次家族", () => {
     expect(familyByMember("047-kanto").retentionStrategy).not.toBe("HOLD_FOR_NOW");
   });
 
-  it("高用途暗影不設硬性最低 IV，低用途 100% 不自動升格", () => {
+  it("高用途暗影 PvP 使用結構化 Rank 規則，低用途 100% 不自動升格", () => {
     const ninetalesShadow = rows.find((row) => row.id === "038-kanto-shadow")!;
     const parasectNormal = rows.find((row) => row.id === "047-kanto-normal")!;
     expect(ninetalesShadow.decision).toBe("KEEP");
-    expect(ninetalesShadow.recommendedIvStrategyZhTw).toContain("先留用途候選");
+    expect(ninetalesShadow.recommendedIvStrategyZhTw).toContain("GL：");
+    expect(ninetalesShadow.recommendedIvStrategyZhTw).toContain("UL：");
+    expect(ninetalesShadow.recommendedIvStrategyZhTw).toContain("Rank≤100");
     expect(parasectNormal.decision).toBe("TRANSFER_CANDIDATE");
     expect(parasectNormal.recommendedIvStrategyZhTw).toContain("100%");
   });
 
-  it("ML 的 15攻只作排序，沒有斷點資料時不虛構 15/10/10 勝負", () => {
+  it("ML 使用 15攻／高整體IV排序，沒有斷點資料時不虛構個體勝負", () => {
     const arcanine = rows.find((row) => row.id === "059-kanto-normal")!;
     expect(arcanine.decision).toBe("CONDITIONAL_KEEP");
-    expect(arcanine.recommendedIvStrategyZhTw).toContain("14攻高整體IV亦可留");
-    expect(arcanine.recommendedIvStrategyZhTw).toContain("15/10/10");
-    expect(arcanine.recommendedIvStrategyZhTw).toContain("14/15/15");
+    expect(arcanine.recommendedIvStrategyZhTw).toContain("15攻／96%以上為一般候選");
+    expect(arcanine.recommendedIvStrategyZhTw).toContain("CMP與攻防門檻");
+    expect(arcanine.recommendedIvStrategyZhTw).not.toContain("15/10/10");
+    expect(arcanine.recommendedIvStrategyZhTw).not.toContain("14/15/15");
   });
 
   it("卡片第一層同時顯示保留條件與其他普通重複可傳", () => {
