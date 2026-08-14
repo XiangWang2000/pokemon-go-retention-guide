@@ -183,7 +183,7 @@ describe("家族價值與清包策略聚合", () => {
 describe("家族直接處理結論", () => {
   it("高價值家族直接列出聯盟、特殊版本與普通重複處理方式", () => {
     const family = familyContaining("003-kanto");
-    expect(family.handlingSummaryZhTw).toContain("PvP（GL 排名佳、UL 排名佳）");
+    expect(family.handlingSummaryZhTw).toContain("PvP（GL Rank≤100、UL Rank≤100）");
     expect(family.handlingSummaryZhTw).toContain("PvE 實戰候選");
     expect(family.handlingSummaryZhTw).toContain("Mega 候選");
     expect(family.handlingSummaryZhTw).toContain("超極巨版本本身");
