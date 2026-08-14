@@ -163,7 +163,7 @@ describe("家族總覽 UI", () => {
     expect(html).toContain("先留再篩");
     expect(html).toContain('data-testid="family-keep-condition"');
     expect(html).toContain(">要保留的條件<");
-    expect(html).toContain("PvP（GL 排名佳、UL 排名佳）");
+    expect(html).toContain("PvP（GL Rank≤100、UL Rank≤100）");
     expect(html).toContain('data-testid="family-transfer-condition"');
     expect(html).toContain("其他普通重複可傳");
     expect(html).toContain("其餘不符合上述用途的普通重複個體可傳");
