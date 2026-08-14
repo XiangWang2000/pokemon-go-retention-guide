@@ -1,7 +1,7 @@
 {
   "batch": "342-371",
-  "updatedAt": "2026-08-09",
-  "dataVersion": "2026.08.09-r23",
+  "updatedAt": "2026-08-13",
+  "dataVersion": "2026.08.13-r24",
   "rulesVersion": "2026.08.06-v7",
   "status": "ACCEPTED",
   "counts": {
@@ -69,26 +69,15 @@
         "result": "PASS"
       },
       {
-        "familyId": "JOHTO_FAMILY_202:202-johto",
         "name": "Wynaut merge",
-        "members": [
-          "360-hoenn",
-          "202-johto"
-        ],
         "result": "PASS"
       },
       {
-        "familyId": "HOENN_FAMILY_366:366-hoenn",
         "name": "Clamperl branches",
-        "members": [
-          "366-hoenn",
-          "367-hoenn",
-          "368-hoenn"
-        ],
         "result": "PASS"
       },
       {
-        "name": "Roserade evolution stub",
+        "name": "Roserade canonical Gen4 evolution",
         "result": "PASS"
       },
       {
@@ -130,13 +119,13 @@
     {
       "familyId": "HOENN_FAMILY_343:343-hoenn",
       "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留念力土偶（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留念力土偶（PvP（GL 排名佳））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "HOENN_FAMILY_345:345-hoenn",
       "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留搖籃百合（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留搖籃百合（PvP（GL 排名佳、UL 排名佳））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -148,19 +137,19 @@
     {
       "familyId": "HOENN_FAMILY_349:349-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留美納斯（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留美納斯（PvP（GL 排名佳、UL 排名佳）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "HOENN_FAMILY_351:351-normal",
       "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留飄浮泡泡（PvP（GL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留飄浮泡泡（PvP（GL 排名佳））；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "HOENN_FAMILY_351:351-rainy",
       "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留飄浮泡泡（PvP（GL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留飄浮泡泡（PvP（GL 排名佳））；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -172,13 +161,13 @@
     {
       "familyId": "HOENN_FAMILY_351:351-sunny",
       "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留飄浮泡泡（PvP（GL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留飄浮泡泡（PvP（GL 排名佳））；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "HOENN_FAMILY_352:352-hoenn",
       "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留變隱龍（PvP（GL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留變隱龍（PvP（GL 排名佳））；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -190,7 +179,7 @@
     {
       "familyId": "HOENN_FAMILY_355:355-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留夜巡靈（符合條件個體），以及彷徨夜靈（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留夜巡靈（符合條件個體），以及彷徨夜靈（PvP（GL 排名佳））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -220,7 +209,7 @@
     {
       "familyId": "HOENN_FAMILY_363:363-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留海魔獅（PvP（GL Rank≤100）），以及帝牙海獅（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留海魔獅（PvP（GL 排名佳）），以及帝牙海獅（PvP（GL 排名佳、UL 排名佳）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -244,7 +233,7 @@
     {
       "familyId": "HOENN_FAMILY_371:371-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留甲殼龍（PvP（GL Rank≤100）），以及暴飛龍（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留甲殼龍（PvP（GL 排名佳）），以及暴飛龍（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     }
   ]

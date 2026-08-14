@@ -1,0 +1,173 @@
+{
+  "batch": "387-416",
+  "updatedAt": "2026-08-13",
+  "dataVersion": "2026.08.13-r24",
+  "rulesVersion": "2026.08.06-v7",
+  "status": "ACCEPTED",
+  "counts": {
+    "species": 30,
+    "forms": 34,
+    "battleVariants": 136,
+    "families": 12,
+    "strategyCounts": {
+      "KEEP_TARGETS": 6,
+      "SELECTIVE_KEEP": 3,
+      "MOSTLY_TRANSFER": 3,
+      "HOLD_FOR_NOW": 0
+    },
+    "openIssues": 0,
+    "safetyAffectingIssues": 0,
+    "trueDataPending": 0
+  },
+  "formalSinnohForms": {
+    "result": "PASS",
+    "forms": [
+      "387-sinnoh",
+      "388-sinnoh",
+      "389-sinnoh",
+      "390-sinnoh",
+      "391-sinnoh",
+      "392-sinnoh",
+      "393-sinnoh",
+      "394-sinnoh",
+      "395-sinnoh",
+      "396-sinnoh",
+      "397-sinnoh",
+      "398-sinnoh",
+      "399-sinnoh",
+      "400-sinnoh",
+      "401-sinnoh",
+      "402-sinnoh",
+      "403-sinnoh",
+      "404-sinnoh",
+      "405-sinnoh",
+      "406-sinnoh",
+      "407-sinnoh",
+      "408-sinnoh",
+      "409-sinnoh",
+      "410-sinnoh",
+      "411-sinnoh",
+      "412-plant-cloak",
+      "412-sandy-cloak",
+      "412-trash-cloak",
+      "413-plant-cloak",
+      "413-sandy-cloak",
+      "413-trash-cloak",
+      "414-sinnoh",
+      "415-sinnoh",
+      "416-sinnoh"
+    ]
+  },
+  "crossBatchIntegration": {
+    "result": "PASS",
+    "checks": [
+      {
+        "name": "Gen 4 Sinnoh form identity",
+        "result": "PASS"
+      },
+      {
+        "name": "Gen 4 batch boundary counts",
+        "result": "PASS"
+      },
+      {
+        "name": "Gen 4 released variant boundary",
+        "result": "PASS"
+      },
+      {
+        "name": "Budew Roselia Roserade cross-generation family",
+        "result": "PASS"
+      },
+      {
+        "name": "Burmy cloak and Mothim family branches",
+        "result": "PASS"
+      },
+      {
+        "name": "Combee Vespiquen family",
+        "result": "PASS"
+      },
+      {
+        "name": "No legacy Roserade stub",
+        "result": "PASS"
+      },
+      {
+        "name": "No true data pending",
+        "result": "PASS"
+      }
+    ]
+  },
+  "scopedHolds": [],
+  "immediateHandling": [
+    {
+      "familyId": "HOENN_FAMILY_315:315-hoenn",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留羅絲雷朵（ML 高 IV 投資候選、PvE 實戰候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_387:387-sinnoh",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留土台龜（PvP（UL 排名佳）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_390:390-sinnoh",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_393:393-sinnoh",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留帝王拿波（PvP（GL 排名佳、UL 排名佳）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_396:396-sinnoh",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留姆克鷹（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_399:399-sinnoh",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_401:401-sinnoh",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_403:403-sinnoh",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留倫琴貓（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_408:408-sinnoh",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留戰槌龍（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_410:410-sinnoh",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留護城龍（PvP（GL 排名佳））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_412:412-plant-cloak+412-sandy-cloak+412-trash-cloak",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留結草貴婦（PvP（GL 排名佳））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    },
+    {
+      "familyId": "SINNOH_FAMILY_415:415-sinnoh",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留蜂女王（PvP（GL 排名佳））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "Review individual IV and use conditions before transferring."
+    }
+  ]
+}
