@@ -74,6 +74,7 @@ import {
 } from "../src/data/cross-generation-evolution";
 import { RULES_VERSION } from "../src/rules/rules";
 import { getDatabaseUrl } from "../src/lib/database";
+import { getBatchByKey } from "../src/config/batch-registry";
 import {
   deriveEvolutionReleaseClosure,
   deriveShadowReleaseEvidence,
@@ -188,11 +189,15 @@ const leagues = [
 ] as const;
 
 function definitionFor(batch: string): BatchDefinition {
+  const registryEntry = getBatchByKey(batch);
+  if (registryEntry.import.adapter !== "gen3") {
+    throw new Error(`Batch ${batch} is not owned by the Gen3 adapter.`);
+  }
   if (batch === "252-281") {
     return {
       batch,
-      start: 252,
-      end: 281,
+      start: registryEntry.minDex,
+      end: registryEntry.maxDex,
       species: species252281,
       forms: forms252281,
       evolutionPairs: evolutionPairs252281,
@@ -210,8 +215,8 @@ function definitionFor(batch: string): BatchDefinition {
   if (batch === "282-311") {
     return {
       batch,
-      start: 282,
-      end: 311,
+      start: registryEntry.minDex,
+      end: registryEntry.maxDex,
       species: species282311,
       forms: forms282311,
       evolutionPairs: evolutionPairs282311,
@@ -226,14 +231,11 @@ function definitionFor(batch: string): BatchDefinition {
       shadowUnavailableFormIds: new Set(),
     };
   }
-  if (batch === "312-386") {
-    throw new Error("312-386 is no longer an import unit; use 312-341, 342-371, or 372-386.");
-  }
   if (batch === "312-341") {
     return {
       batch,
-      start: 312,
-      end: 341,
+      start: registryEntry.minDex,
+      end: registryEntry.maxDex,
       species: species312341,
       forms: forms312341,
       evolutionPairs: evolutionPairs312341,
@@ -251,8 +253,8 @@ function definitionFor(batch: string): BatchDefinition {
   if (batch === "342-371") {
     return {
       batch,
-      start: 342,
-      end: 371,
+      start: registryEntry.minDex,
+      end: registryEntry.maxDex,
       species: species342371,
       forms: forms342371,
       evolutionPairs: evolutionPairs342371,
@@ -270,8 +272,8 @@ function definitionFor(batch: string): BatchDefinition {
   if (batch === "372-386") {
     return {
       batch,
-      start: 372,
-      end: 386,
+      start: registryEntry.minDex,
+      end: registryEntry.maxDex,
       species: species372386,
       forms: forms372386,
       evolutionPairs: evolutionPairs372386,
@@ -1204,4 +1206,26 @@ export async function runImport(batchName: string) {
     throw new Error("第三世代批次計數錯誤：" + JSON.stringify(counts));
   }
   console.log(JSON.stringify({ batch: batch.batch, counts, rawRows: rawRows.length, sources: research.sources.length }, null, 2));
+}
+
+export async function closeGen3Import() {
+  await prisma.$disconnect();
+}
+
+async function main() {
+  const batch = process.argv[2];
+  if (!batch || process.argv.length > 3) {
+    throw new Error("Usage: tsx scripts/import-gen3.ts <batch>");
+  }
+  await runImport(batch);
+}
+
+const scriptPath = process.argv[1]?.replaceAll("\\", "/");
+if (scriptPath?.endsWith("/scripts/import-gen3.ts")) {
+  main()
+    .catch((error) => {
+      console.error(error instanceof Error ? error.message : error);
+      process.exitCode = 1;
+    })
+    .finally(() => closeGen3Import());
 }

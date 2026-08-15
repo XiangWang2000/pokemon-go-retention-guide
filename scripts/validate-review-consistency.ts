@@ -4,7 +4,7 @@ import { buildFormOverviews } from "../src/presentation/form-overview";
 import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
 import { CURRENT_DATA_MAX_DEX } from "../src/config/data-scope";
-import { REVIEW_BATCH_FILES, parseReviewBatchKey } from "../src/config/review-batches";
+import { BATCH_REGISTRY } from "../src/config/batch-registry";
 import type { StaticDashboardRow, StaticReviewIssue } from "../src/lib/static-data";
 
 type ReviewPayload = {
@@ -53,7 +53,9 @@ async function main() {
   const families = buildFamilyOverviews(buildFormOverviews(rows));
   const familyById = new Map(families.map((family) => [family.familyId, family]));
 
-  for (const [batch, path] of REVIEW_BATCH_FILES) {
+  for (const entry of BATCH_REGISTRY) {
+    const { key: batch, minDex, maxDex, review } = entry;
+    const path = review.jsonPath;
     const payload = await loadJson<ReviewPayload>(path);
     checkVersion(payload, path, errors);
     if (payload.batch !== batch) errors.push(`${path}: wrong batch label.`);
@@ -87,7 +89,6 @@ async function main() {
       continue;
     }
 
-    const { minDex, maxDex } = parseReviewBatchKey(batch);
     const expectedFamilies = families.filter((family) =>
       family.members.some(
         (member) => member.form.dexNumber >= minDex && member.form.dexNumber <= maxDex,
@@ -213,7 +214,7 @@ async function main() {
     JSON.stringify(
       {
         dataVersion: DATA_VERSION,
-        batches: REVIEW_BATCH_FILES.length,
+        batches: BATCH_REGISTRY.length,
         families: families.length,
         openIssues: issues.length,
         safetyAffectingIssues: issues.filter((issue) => issue.affectsFinalDecision).length,
