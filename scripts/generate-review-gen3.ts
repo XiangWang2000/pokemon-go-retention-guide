@@ -281,3 +281,19 @@ export async function runReview(batchName: string) {
   await writeFile("review/" + batch + ".md", lines.join("\r\n") + "\r\n", "utf8");
   console.log(JSON.stringify({ batch, dataVersion: payload.dataVersion, counts: payload.counts }, null, 2));
 }
+
+async function main() {
+  const batch = process.argv[2];
+  if (!batch || process.argv.length > 3) {
+    throw new Error("Usage: tsx scripts/generate-review-gen3.ts <batch>");
+  }
+  await runReview(batch);
+}
+
+const scriptPath = process.argv[1]?.replaceAll("\\", "/");
+if (scriptPath?.endsWith("/scripts/generate-review-gen3.ts")) {
+  main().catch((error) => {
+    console.error(error instanceof Error ? error.message : error);
+    process.exitCode = 1;
+  });
+}

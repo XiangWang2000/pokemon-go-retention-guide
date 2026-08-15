@@ -1,7 +1,7 @@
 import { existsSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
-import { BATCH_REGISTRY } from "../src/config/batch-registry";
+import { BATCH_REGISTRY, batchReviewArgs } from "../src/config/batch-registry";
 
 const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
 
@@ -40,7 +40,7 @@ async function main() {
     }
 
     console.log(`Generating review batch ${batch} with ${generator}`);
-    await run(npmCommand, ["exec", "--", "tsx", generator]);
+    await run(npmCommand, ["exec", "--", "tsx", ...batchReviewArgs(entry)]);
     await assertReviewOutput(entry);
   }
 }

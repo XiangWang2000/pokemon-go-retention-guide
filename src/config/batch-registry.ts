@@ -20,6 +20,7 @@ type BatchImportSpec =
 
 type BatchReviewSpec = {
   generator: string;
+  passBatchKey: boolean;
   jsonPath: string;
   markdownPath: string;
 };
@@ -42,6 +43,7 @@ export const BATCH_REGISTRY = [
     import: { adapter: "seed", phase: "seed", entrypoint: null, passBatchKey: false },
     review: {
       generator: "scripts/generate-review.ts",
+      passBatchKey: false,
       jsonPath: "review/001-030.json",
       markdownPath: "review/001-030.md",
     },
@@ -59,6 +61,7 @@ export const BATCH_REGISTRY = [
     },
     review: {
       generator: "scripts/generate-review-031-060.ts",
+      passBatchKey: false,
       jsonPath: "review/031-060.json",
       markdownPath: "review/031-060.md",
     },
@@ -76,6 +79,7 @@ export const BATCH_REGISTRY = [
     },
     review: {
       generator: "scripts/generate-review-061-090.ts",
+      passBatchKey: false,
       jsonPath: "review/061-090.json",
       markdownPath: "review/061-090.md",
     },
@@ -93,6 +97,7 @@ export const BATCH_REGISTRY = [
     },
     review: {
       generator: "scripts/generate-review-091-120.ts",
+      passBatchKey: false,
       jsonPath: "review/091-120.json",
       markdownPath: "review/091-120.md",
     },
@@ -110,6 +115,7 @@ export const BATCH_REGISTRY = [
     },
     review: {
       generator: "scripts/generate-review-121-151.ts",
+      passBatchKey: false,
       jsonPath: "review/121-151.json",
       markdownPath: "review/121-151.md",
     },
@@ -127,6 +133,7 @@ export const BATCH_REGISTRY = [
     },
     review: {
       generator: "scripts/generate-review-152-181.ts",
+      passBatchKey: false,
       jsonPath: "review/152-181.json",
       markdownPath: "review/152-181.md",
     },
@@ -144,6 +151,7 @@ export const BATCH_REGISTRY = [
     },
     review: {
       generator: "scripts/generate-review-182-211.ts",
+      passBatchKey: false,
       jsonPath: "review/182-211.json",
       markdownPath: "review/182-211.md",
     },
@@ -161,6 +169,7 @@ export const BATCH_REGISTRY = [
     },
     review: {
       generator: "scripts/generate-review-212-241.ts",
+      passBatchKey: false,
       jsonPath: "review/212-241.json",
       markdownPath: "review/212-241.md",
     },
@@ -178,6 +187,7 @@ export const BATCH_REGISTRY = [
     },
     review: {
       generator: "scripts/generate-review-242-251.ts",
+      passBatchKey: false,
       jsonPath: "review/242-251.json",
       markdownPath: "review/242-251.md",
     },
@@ -194,7 +204,8 @@ export const BATCH_REGISTRY = [
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-252-281.ts",
+      generator: "scripts/generate-review-gen3.ts",
+      passBatchKey: true,
       jsonPath: "review/252-281.json",
       markdownPath: "review/252-281.md",
     },
@@ -211,7 +222,8 @@ export const BATCH_REGISTRY = [
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-282-311.ts",
+      generator: "scripts/generate-review-gen3.ts",
+      passBatchKey: true,
       jsonPath: "review/282-311.json",
       markdownPath: "review/282-311.md",
     },
@@ -228,7 +240,8 @@ export const BATCH_REGISTRY = [
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-312-341.ts",
+      generator: "scripts/generate-review-gen3.ts",
+      passBatchKey: true,
       jsonPath: "review/312-341.json",
       markdownPath: "review/312-341.md",
     },
@@ -246,6 +259,7 @@ export const BATCH_REGISTRY = [
     },
     review: {
       generator: "scripts/generate-review-342-371.ts",
+      passBatchKey: false,
       jsonPath: "review/342-371.json",
       markdownPath: "review/342-371.md",
     },
@@ -262,7 +276,8 @@ export const BATCH_REGISTRY = [
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-372-386.ts",
+      generator: "scripts/generate-review-gen3.ts",
+      passBatchKey: true,
       jsonPath: "review/372-386.json",
       markdownPath: "review/372-386.md",
     },
@@ -280,6 +295,7 @@ export const BATCH_REGISTRY = [
     },
     review: {
       generator: "scripts/generate-review-387-416.ts",
+      passBatchKey: false,
       jsonPath: "review/387-416.json",
       markdownPath: "review/387-416.md",
     },
@@ -346,6 +362,11 @@ export function batchImportArgs(batch: string | BatchRegistryEntry) {
   const entry = typeof batch === "string" ? getBatchByKey(batch) : batch;
   if (entry.import.entrypoint === null) return ["prisma", "db", "seed"];
   return ["tsx", entry.import.entrypoint, ...(entry.import.passBatchKey ? [entry.key] : [])];
+}
+
+export function batchReviewArgs(batch: string | BatchRegistryEntry) {
+  const entry = typeof batch === "string" ? getBatchByKey(batch) : batch;
+  return [entry.review.generator, ...(entry.review.passBatchKey ? [entry.key] : [])];
 }
 
 assertBatchRegistry();

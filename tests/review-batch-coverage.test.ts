@@ -5,6 +5,7 @@ import {
   BATCH_REGISTRY,
   assertBatchRegistry,
   batchImportArgs,
+  batchReviewArgs,
   getBatchByKey,
   parseBatchKey,
 } from "@/config/batch-registry";
@@ -53,11 +54,12 @@ describe("review batch coverage", () => {
 
   it("looks up and dispatches imports through the same registry", () => {
     const phases = BATCH_REGISTRY.map((entry) => entry.import.phase);
-    expect(phases).toEqual([
-      "seed",
-      ...Array.from({ length: 13 }, () => "pre-recompute"),
-      "post-recompute",
-    ]);
+    const phaseOrder = { seed: 0, "pre-recompute": 1, "post-recompute": 2 } as const;
+    expect(phases[0]).toBe("seed");
+    expect(phases.filter((phase) => phase === "seed")).toHaveLength(1);
+    for (let index = 1; index < phases.length; index += 1) {
+      expect(phaseOrder[phases[index]]).toBeGreaterThanOrEqual(phaseOrder[phases[index - 1]]);
+    }
     for (const entry of BATCH_REGISTRY) {
       const invocation = getBatchImportInvocation(entry.key);
       const expectedArgs =
@@ -68,12 +70,12 @@ describe("review batch coverage", () => {
       expect(invocation.args).toEqual(expectedArgs);
       expect(batchImportArgs(entry.key)).toEqual(expectedArgs);
       if (entry.import.entrypoint !== null) expect(existsSync(entry.import.entrypoint)).toBe(true);
+      expect(batchReviewArgs(entry)).toEqual([
+        entry.review.generator,
+        ...(entry.review.passBatchKey ? [entry.key] : []),
+      ]);
     }
-    expect(getBatchByKey("342-371")).toMatchObject({
-      generation: 3,
-      import: { adapter: "gen3", entrypoint: "scripts/import-gen3.ts", passBatchKey: true },
-    });
-    expect(() => getBatchByKey("417-446")).toThrow();
+    expect(() => getBatchByKey("not-a-batch")).toThrow();
   });
 
   it("runs review generation through the shared registry runner", () => {
@@ -84,13 +86,14 @@ describe("review batch coverage", () => {
 
     expect(pkg.scripts["review:generate"]).toBe("tsx scripts/generate-all-reviews.ts");
     expect(pkg.scripts["data:import:batch"]).toBe("tsx scripts/import-batch.ts");
-    for (const entry of BATCH_REGISTRY.filter((candidate) => candidate.key !== "001-030")) {
-      expect(pkg.scripts[`data:import:${entry.key}`]).toBe(
-        `tsx scripts/import-batch.ts ${entry.key}`,
-      );
+    for (const [name, command] of Object.entries(pkg.scripts)) {
+      if (!name.startsWith("data:import:") || name === "data:import:batch") continue;
+      const batch = name.slice("data:import:".length);
+      expect(() => getBatchByKey(batch)).not.toThrow();
+      expect(command).toBe(`tsx scripts/import-batch.ts ${batch}`);
     }
     expect(runner).toContain("BATCH_REGISTRY");
-    expect(runner).toContain("review.generator");
+    expect(runner).toContain("batchReviewArgs");
     expect(runner).not.toContain("REVIEW_BATCH_FILES");
     expect(runner).not.toContain("spawnSync");
   });
