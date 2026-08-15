@@ -45,9 +45,15 @@ Each data request includes the current `DATA_VERSION` as a query parameter. This
 
 ## Deployment and verification
 
-`.github/workflows/verify-pages-pr.yml` validates pull requests with snapshot checks, committed-snapshot review consistency, lint, typecheck, tests, the default `npm run build`, and `pages:verify` before merge. `review:validate` is database-independent in CI: it compares the committed dashboard/review snapshots with every configured per-batch review report, including family handling summaries, issue counts, scoped holds, and recalibration state.
+`.github/workflows/verify-pages-pr.yml` validates pull requests with the shared `release:verify` contract,
+lint, typecheck, tests, the default `npm run build`, and `pages:verify` before merge. The contract is
+database-independent when the committed source database is unavailable: it compares the committed dashboard and
+review snapshots with every Registry-configured batch report, including family handling summaries, issue counts,
+scoped holds, and recalibration state.
 
-`.github/workflows/deploy-pages.yml` repeats the same production checks on pushes to `main`, uploads only `out/` with the official Pages artifact action, and deploys with the official Pages deploy action. It does not create or update a `gh-pages` branch. After deployment, the workflow runs HTTP smoke checks against the deployed Pages URL.
+`.github/workflows/deploy-pages.yml` repeats the same release contract on pushes to `main`, uploads only `out/` with
+the official Pages artifact action, and deploys with the official Pages deploy action. It does not create or update a
+`gh-pages` branch. After deployment, the workflow runs HTTP smoke checks against the deployed Pages URL.
 
 `pages:verify` validates the generated artifact rather than source files alone. It checks all generated Pokémon detail routes and canonical URLs, sitemap/robots metadata, runtime JSON counts, the Excel export, the project base path, and the absence of the retired ChatGPT Site host. It then serves `out/` locally and runs HTTP smoke checks for the home/review/sources/changes routes, representative first/middle/last Pokémon detail routes derived from the current audit summary, `home.json`, sitemap, robots, the exact Excel payload, and 404 behavior. The deployed-site smoke uses the same representative route contract, so expanding the Pokédex does not require hard-coded smoke-route updates.
 

@@ -1,9 +1,9 @@
 import { readFile } from "node:fs/promises";
+import path from "node:path";
 import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
-import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
+import { CURRENT_RELEASE_CONTRACT } from "../src/config/release-contract";
 import { RULES_VERSION } from "../src/rules/rules";
-import { CURRENT_DATA_MAX_DEX } from "../src/config/data-scope";
 import { BATCH_REGISTRY } from "../src/config/batch-registry";
 import type { StaticDashboardRow, StaticReviewIssue } from "../src/lib/static-data";
 
@@ -23,8 +23,8 @@ type ReviewPayload = {
   trueDataPending?: Array<{ id?: string }>;
 };
 
-async function loadJson<T>(path: string) {
-  return JSON.parse((await readFile(path, "utf8")).replace(/^\uFEFF/, "")) as T;
+async function loadJson<T>(filePath: string) {
+  return JSON.parse((await readFile(filePath, "utf8")).replace(/^\uFEFF/, "")) as T;
 }
 
 function count(payload: ReviewPayload, key: string) {
@@ -33,10 +33,10 @@ function count(payload: ReviewPayload, key: string) {
 }
 
 function checkVersion(payload: ReviewPayload, path: string, errors: string[]) {
-  if (payload.dataVersion !== DATA_VERSION) {
+  if (payload.dataVersion !== CURRENT_RELEASE_CONTRACT.dataVersion) {
     errors.push(`${path}: stale dataVersion ${String(payload.dataVersion)}.`);
   }
-  if (payload.updatedAt !== DATA_VERSION_DATE_ISO) {
+  if (payload.updatedAt !== CURRENT_RELEASE_CONTRACT.dataAsOf) {
     errors.push(`${path}: stale updatedAt ${String(payload.updatedAt)}.`);
   }
   if (payload.rulesVersion !== RULES_VERSION) {
@@ -44,47 +44,56 @@ function checkVersion(payload: ReviewPayload, path: string, errors: string[]) {
   }
 }
 
-async function main() {
+export async function validateReviewConsistency({
+  dataRoot: requestedDataRoot = process.cwd(),
+  reviewRoot: requestedReviewRoot = requestedDataRoot,
+}: {
+  dataRoot?: string;
+  reviewRoot?: string;
+} = {}) {
+  const dataRoot = path.resolve(requestedDataRoot);
+  const reviewRoot = path.resolve(requestedReviewRoot);
   const errors: string[] = [];
   const [rows, issues] = await Promise.all([
-    loadJson<StaticDashboardRow[]>("site-data/dashboard.json"),
-    loadJson<StaticReviewIssue[]>("site-data/review.json"),
+    loadJson<StaticDashboardRow[]>(path.join(dataRoot, "site-data/dashboard.json")),
+    loadJson<StaticReviewIssue[]>(path.join(dataRoot, "site-data/review.json")),
   ]);
   const families = buildFamilyOverviews(buildFormOverviews(rows));
   const familyById = new Map(families.map((family) => [family.familyId, family]));
 
   for (const entry of BATCH_REGISTRY) {
     const { key: batch, minDex, maxDex, review } = entry;
-    const path = review.jsonPath;
-    const payload = await loadJson<ReviewPayload>(path);
-    checkVersion(payload, path, errors);
-    if (payload.batch !== batch) errors.push(`${path}: wrong batch label.`);
+    const reviewPath = review.jsonPath;
+    const isSeedBatch = entry.import.adapter === "seed";
+    const payload = await loadJson<ReviewPayload>(path.join(reviewRoot, reviewPath));
+    checkVersion(payload, reviewPath, errors);
+    if (payload.batch !== batch) errors.push(`${reviewPath}: wrong batch label.`);
 
     const batchIssues = issues.filter((issue) => issue.batchKey === batch);
     const expectedSafetyIssues = batchIssues.filter((issue) => issue.affectsFinalDecision).length;
-    const issueCountKey = batch === "001-030" ? "openReviewIssues" : "openIssues";
+    const issueCountKey = isSeedBatch ? "openReviewIssues" : "openIssues";
     if (count(payload, issueCountKey) !== batchIssues.length) {
-      errors.push(`${path}: open issue count does not match runtime data.`);
+      errors.push(`${reviewPath}: open issue count does not match runtime data.`);
     }
-    if (batch !== "001-030" && count(payload, "safetyAffectingIssues") !== expectedSafetyIssues) {
-      errors.push(`${path}: safety-affecting issue count does not match runtime data.`);
+    if (!isSeedBatch && count(payload, "safetyAffectingIssues") !== expectedSafetyIssues) {
+      errors.push(`${reviewPath}: safety-affecting issue count does not match runtime data.`);
     }
 
-    if (batch === "001-030") {
-      const expectedRows = rows.filter((row) => row.dexNumber >= 1 && row.dexNumber <= 30);
+    if (isSeedBatch) {
+      const expectedRows = rows.filter((row) => row.dexNumber >= minDex && row.dexNumber <= maxDex);
       const decisionRows = Object.values(payload.decisions ?? {}).flat();
       const seen = new Set<string>();
       for (const item of decisionRows) {
         if (!item.id || seen.has(item.id))
-          errors.push(`${path}: duplicate or missing decision row.`);
+          errors.push(`${reviewPath}: duplicate or missing decision row.`);
         seen.add(item.id ?? "");
         if (!rows.some((row) => row.id === item.id))
-          errors.push(`${path}: unknown decision row ${item.id}.`);
+          errors.push(`${reviewPath}: unknown decision row ${item.id}.`);
       }
       if (seen.size !== expectedRows.length)
-        errors.push(`${path}: decision row count does not match runtime data.`);
+        errors.push(`${reviewPath}: decision row count does not match runtime data.`);
       for (const row of expectedRows) {
-        if (!seen.has(row.id)) errors.push(`${path}: missing decision row ${row.id}.`);
+        if (!seen.has(row.id)) errors.push(`${reviewPath}: missing decision row ${row.id}.`);
       }
       continue;
     }
@@ -99,28 +108,28 @@ async function main() {
     for (const item of handling) {
       const familyId = item.familyId ?? "";
       if (!familyId || seenFamilyIds.has(familyId)) {
-        errors.push(`${path}: duplicate or missing immediateHandling family.`);
+        errors.push(`${reviewPath}: duplicate or missing immediateHandling family.`);
         continue;
       }
       seenFamilyIds.add(familyId);
       const family = familyById.get(familyId);
       if (!family) {
-        errors.push(`${path}: unknown family ${familyId}.`);
+        errors.push(`${reviewPath}: unknown family ${familyId}.`);
         continue;
       }
       if (item.strategy !== family.retentionStrategy) {
-        errors.push(`${path}: stale strategy for ${familyId}.`);
+        errors.push(`${reviewPath}: stale strategy for ${familyId}.`);
       }
       if (item.conclusion !== family.handlingSummaryZhTw) {
-        errors.push(`${path}: stale conclusion for ${familyId}.`);
+        errors.push(`${reviewPath}: stale conclusion for ${familyId}.`);
       }
     }
     if (seenFamilyIds.size !== expectedFamilies.length) {
-      errors.push(`${path}: immediateHandling family count does not match runtime data.`);
+      errors.push(`${reviewPath}: immediateHandling family count does not match runtime data.`);
     }
     for (const family of expectedFamilies) {
       if (!seenFamilyIds.has(family.familyId))
-        errors.push(`${path}: missing family ${family.familyId}.`);
+        errors.push(`${reviewPath}: missing family ${family.familyId}.`);
     }
     const expectedHolds = new Set(
       expectedFamilies
@@ -132,12 +141,12 @@ async function main() {
       expectedHolds.size !== actualHolds.size ||
       [...expectedHolds].some((id) => !actualHolds.has(id))
     ) {
-      errors.push(`${path}: scoped holds do not match runtime family strategies.`);
+      errors.push(`${reviewPath}: scoped holds do not match runtime family strategies.`);
     }
   }
 
-  const recalibrationPath = "review/001-" + CURRENT_DATA_MAX_DEX + "-recalibration.json";
-  const recalibration = await loadJson<ReviewPayload>(recalibrationPath);
+  const recalibrationPath = CURRENT_RELEASE_CONTRACT.review.recalibrationJsonPath;
+  const recalibration = await loadJson<ReviewPayload>(path.join(reviewRoot, recalibrationPath));
   checkVersion(recalibration, recalibrationPath, errors);
   const expectedPending = rows.filter((row) => row.assessmentDisposition === "TRUE_DATA_PENDING");
   if ((recalibration.trueDataPending?.length ?? 0) !== expectedPending.length) {
@@ -210,23 +219,22 @@ async function main() {
   }
 
   if (errors.length) throw new Error(`Review consistency failed:\n- ${errors.join("\n- ")}`);
-  console.log(
-    JSON.stringify(
-      {
-        dataVersion: DATA_VERSION,
-        batches: BATCH_REGISTRY.length,
-        families: families.length,
-        openIssues: issues.length,
-        safetyAffectingIssues: issues.filter((issue) => issue.affectsFinalDecision).length,
-        trueDataPending: expectedPending.length,
-      },
-      null,
-      2,
-    ),
-  );
+  const summary = {
+    dataVersion: CURRENT_RELEASE_CONTRACT.dataVersion,
+    batches: BATCH_REGISTRY.length,
+    families: families.length,
+    openIssues: issues.length,
+    safetyAffectingIssues: issues.filter((issue) => issue.affectsFinalDecision).length,
+    trueDataPending: expectedPending.length,
+  };
+  console.log(JSON.stringify(summary, null, 2));
+  return summary;
 }
 
-main().catch((error) => {
-  console.error(error instanceof Error ? error.message : error);
-  process.exitCode = 1;
-});
+const scriptPath = process.argv[1]?.replaceAll("\\", "/");
+if (scriptPath?.endsWith("/scripts/validate-review-consistency.ts")) {
+  validateReviewConsistency().catch((error) => {
+    console.error(error instanceof Error ? error.message : error);
+    process.exitCode = 1;
+  });
+}

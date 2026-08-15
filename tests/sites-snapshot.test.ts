@@ -18,6 +18,7 @@ import {
   getSources as getPrismaSources,
 } from "@/lib/data-prisma";
 import { resolveDatabaseLocation } from "@/lib/database";
+import { CURRENT_RELEASE_CONTRACT } from "@/config/release-contract";
 import { prisma } from "@/lib/prisma";
 import type { HomeSnapshot } from "@/presentation/home-snapshot";
 import homeSnapshot from "../site-data/home.json";
@@ -26,10 +27,7 @@ const hasCanonicalDb = (() => {
   const location = resolveDatabaseLocation();
   const sourceDatabase = siteSnapshotManifest.sourceDatabase;
 
-  if (
-    location.manifestPath !== sourceDatabase.path ||
-    !existsSync(location.absolutePath)
-  ) {
+  if (location.manifestPath !== sourceDatabase.path || !existsSync(location.absolutePath)) {
     return false;
   }
 
@@ -73,7 +71,9 @@ describe("Sites 唯讀 snapshot", () => {
   );
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
-    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe("2026.08.13-r24");
+    expect((siteSnapshotManifest as { dataVersion?: string }).dataVersion).toBe(
+      CURRENT_RELEASE_CONTRACT.dataVersion,
+    );
     expect(siteSnapshotManifest.counts).toMatchObject({
       pokemonSpecies: 446,
       pokemonForms: 494,
@@ -95,10 +95,10 @@ describe("Sites 唯讀 snapshot", () => {
   it("預建 Excel 可開啟且包含十張繁中工作表", async () => {
     const workbook = new ExcelJS.Workbook();
     const buffer = await readFile(
-      path.join(process.cwd(), "public", "exports", "pokemon-go-retention-001-416.xlsx"),
+      path.join(process.cwd(), CURRENT_RELEASE_CONTRACT.snapshot.exportPath),
     );
     await workbook.xlsx.load(buffer as unknown as Parameters<typeof workbook.xlsx.load>[0]);
-    expect(workbook.subject).toBe("2026.08.13-r24");
+    expect(workbook.subject).toBe(CURRENT_RELEASE_CONTRACT.dataVersion);
     expect(workbook.worksheets).toHaveLength(10);
     expect(workbook.worksheets.map((sheet) => sheet.name)).toEqual([
       "寶可夢型態",
@@ -137,7 +137,7 @@ describe("Sites 唯讀 snapshot", () => {
       }>;
     };
     expect(runtimeHome.schemaVersion).toBe(2);
-    expect(runtimeHome.dataVersion).toBe("2026.08.13-r24");
+    expect(runtimeHome.dataVersion).toBe(CURRENT_RELEASE_CONTRACT.dataVersion);
     expect(
       runtimeHome.families.every(
         (family) =>

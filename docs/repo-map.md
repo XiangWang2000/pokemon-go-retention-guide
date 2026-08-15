@@ -21,7 +21,8 @@
 1. 研究證據進入 `research_notes/` 與 `data/sources/`，並保留來源版本與查閱資訊。
 2. Prisma schema、migration 與 seed 定義結構化資料與資料庫操作。
 3. `scripts/validate-data.ts`、`scripts/generate-review.ts` 與 remediation scripts 驗證資料並產出審核資訊。
-4. `scripts/generate-sites-snapshot.ts` 產生 `site-data/`、`public/data/`、`public/_headers` 與 Excel 交付資料。
+4. `scripts/prepare-release-snapshot.ts` 將 `scripts/generate-sites-snapshot.ts` 的輸出寫入 staging，
+   由 `scripts/verify-release.ts` 驗證後才 promote 到 `site-data/`、`public/data/`、`public/_headers` 與 Excel 交付資料。
 5. Sites／Vinext 讀取受控 snapshot；不要讓部署 runtime 直接依賴本機 SQLite。
 
 ## 主要區域
@@ -44,4 +45,6 @@
 
 ## 驗證
 
-`scripts/verify.ps1` 是非變異驗證 wrapper：預設快速驗證，`-Full` 檢查既有 review、snapshot、資料、Sites 與雙 runtime 建置。資料產生順序依 `docs/data-update.md`，個別 `npm run` 指令仍以 `README.md` 為準。
+`scripts/verify.ps1` 是非變異驗證 wrapper：預設快速驗證，`-Full` 透過共用 `release:verify` contract
+檢查既有 review、snapshot、資料、Sites 與雙 runtime 建置。資料產生順序依 `docs/data-update.md`，個別
+`npm run` 指令仍以 `README.md` 為準。

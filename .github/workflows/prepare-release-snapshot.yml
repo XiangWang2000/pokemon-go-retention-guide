@@ -1,0 +1,107 @@
+name: Prepare Release Snapshot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-snapshot
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      DATABASE_URL: file:./rebuild-ci.db
+      ALLOW_DESTRUCTIVE_REBUILD: "1"
+      NEXT_PUBLIC_BASE_PATH: /pokemon-go-retention-guide
+      NEXT_PUBLIC_SITE_URL: https://xiangwang2000.github.io/pokemon-go-retention-guide/
+    steps:
+      - name: Checkout current ref
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Generate Prisma client
+        run: npm run db:generate
+
+      - name: Guard release publication ref
+        env:
+          RELEASE_REF: ${{ github.ref }}
+          RELEASE_REF_TYPE: ${{ github.ref_type }}
+          RELEASE_REF_NAME: ${{ github.ref_name }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: npx tsx scripts/verify-release-ref.ts
+
+      - name: Rebuild research database for the current release
+        shell: bash
+        run: |
+          set -euo pipefail
+          if ! npx tsx scripts/verify-research-rebuild.ts > rebuild.log 2>&1; then
+            echo "Research rebuild failed; showing the final 120 log lines."
+            tail -n 120 rebuild.log
+            exit 1
+          fi
+          tail -n 40 rebuild.log
+
+      - name: Verify historical published-data integrity
+        run: npm run data:verify:published-integrity
+
+      - name: Generate formal review checkpoints
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run review:generate
+          npx tsx scripts/generate-current-recalibration-report.ts
+
+      - name: Generate, validate, and promote release snapshot
+        run: npm run sites:snapshot
+
+      - name: Restore transient rebuild outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx tsx scripts/restore-transient-review-outputs.ts
+          git restore --worktree -- data/remediation/001-030-metrics.json
+
+      - name: Verify release contract and generated paths
+        run: npm run release:verify -- --generated-paths
+
+      - name: Build and verify GitHub Pages artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run build
+          npm run pages:verify
+
+      - name: Remove disposable rebuild outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f rebuild-ci.db rebuild-ci.db-journal rebuild-ci.db-shm rebuild-ci.db-wal rebuild.log
+
+      - name: Commit generated release artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No generated release changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: publish current release snapshot"
+          git push origin "HEAD:refs/heads/${GITHUB_REF_NAME}"

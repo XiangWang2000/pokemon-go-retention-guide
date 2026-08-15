@@ -9,16 +9,24 @@ on:
       - "scripts/recompute-*.ts"
       - "scripts/backfill-*.ts"
       - "scripts/validate-data.ts"
-      - "scripts/verify-research-rebuild-416.ts"
-      - "scripts/verify-gen4-publication-candidate.ts"
+      - "scripts/verify-research-rebuild.ts"
+      - "scripts/verify-published-integrity.ts"
+      - "scripts/verify-release.ts"
+      - "scripts/check-sites-snapshot.ts"
+      - "scripts/validate-review-consistency.ts"
+      - "scripts/restore-transient-review-outputs.ts"
       - "src/data/**"
+      - "src/config/batch-registry.ts"
+      - "src/config/data-scope.ts"
+      - "src/config/release.ts"
+      - "src/config/release-contract.ts"
       - "src/rules/**"
       - "research_notes/**"
       - "data/sources/**"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/verify-research-rebuild-pr.yml"
-      - ".github/workflows/prepare-gen4-release-snapshot.yml"
+      - ".github/workflows/prepare-release-snapshot.yml"
 
 permissions:
   contents: read
@@ -46,15 +54,15 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Generate Prisma client
         run: npm run db:generate
-      - name: Rebuild and validate research database through #416
+      - name: Rebuild and validate research database for the current release
         shell: bash
         run: |
-          if ! npx tsx scripts/verify-research-rebuild-416.ts > rebuild.log 2>&1; then
+          if ! npx tsx scripts/verify-research-rebuild.ts > rebuild.log 2>&1; then
             echo "Research rebuild failed; showing the final 120 log lines."
             tail -n 120 rebuild.log
             exit 1
           fi
           echo "Research rebuild completed successfully."
           tail -n 40 rebuild.log
-      - name: Dry-run Gen4 publication pipeline
-        run: npx tsx scripts/verify-gen4-publication-candidate.ts
+      - name: Verify historical published-data integrity
+        run: npm run data:verify:published-integrity

@@ -37,11 +37,12 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full
 
 `data:import:*` 依每批最多 30 個圖鑑編號切開；#312～#386 使用 `312-341`、`342-371`、`372-386` 三個可獨立驗證的來源、batch、form 與 review 單位，再連續執行 `data:recompute:001-386`、資料驗證與 Sites snapshot。第三世代的 `canonicalGen3Species` 與獨立 `canonicalGen3Forms` 分別驗證物種、正式型態、型態名稱、屬性與 BattleVariant 邊界；Castform 天氣型態、Deoxys 四種 Forme、Shadow evolution closure、Primal 與 Mega 顯示名稱都不可由 batch 自己同時產生 expected 值繞過檢查。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
 
-## r24 #001～#416 clean rebuild
+## Current release clean rebuild
 
-第四世代 #387～#416 使用 `npm run data:import:387-416` 接續既有 #001～#386。完整重建由
-`scripts/verify-research-rebuild-416.ts` 建立新的 `rebuild-ci` SQLite 檔案，依序執行 seed、既有
-remediation、Gen2／Gen3／Gen4 匯入、重算、IV backfill、資料驗證、review 驗證與 Sites snapshot。
+完整重建由 `scripts/verify-research-rebuild.ts` 建立新的 `rebuild-ci` SQLite 檔案，依 Batch Registry
+的 seed、pre-recompute 與 post-recompute phase 執行匯入、重算、IV backfill 與資料驗證，再由共用
+release contract 驗證目前 scope、review 與 snapshot。Gen3／Gen4 的證據差異仍由各自 importer adapter
+處理，不在 release verifier 內重複路由。
 `research_notes/cross-generation-evolution-targets.json` 必須在重建前後保持不變；不能以暫時改寫來源檔
 來通過舊版相容邏輯。跨批次進化邊界由尚未存在 endpoint 時延後，並由擁有該 endpoint 的批次匯入，
 不得新增批次或 Pokémon 專用的 rebuild stub。
@@ -49,12 +50,18 @@ remediation、Gen2／Gen3／Gen4 匯入、重算、IV backfill、資料驗證、
 ```powershell
 $env:ALLOW_DESTRUCTIVE_REBUILD = "1"
 $env:DATABASE_URL = "file:./rebuild-ci.db"
-npx tsx scripts/verify-research-rebuild-416.ts
+npx tsx scripts/verify-research-rebuild.ts
 $env:DATABASE_URL = "file:./rebuild-ci.db"
-npm run review:validate
+npm run data:verify:published-integrity
+npm run review:generate
+npx tsx scripts/generate-current-recalibration-report.ts
 npm run sites:snapshot
-npm run sites:snapshot:check
+npm run release:verify
 ```
+
+`sites:snapshot` 先把完整輸出寫入 repository 內的暫存目錄，再以 `release:verify` 驗證 manifest、來源
+資料庫、review 與目前 scope，最後才 promote 到 `site-data/`、`public/data/`、`public/exports/` 與
+`public/_headers`。驗證失敗時不會留下半成品正式 artifact。
 
 驗收除了批次範圍與資料版本，還要確認 1912 個 BattleVariants、245 個展示家族、13 個 IV
 recommendations、`407-sinnoh`、唯一的 `315-hoenn -> 407-sinnoh`，以及不存在 `407-other`。

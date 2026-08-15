@@ -10,8 +10,7 @@ import {
   getVariantDetailMeta,
 } from "../src/lib/data-prisma";
 import { prisma } from "../src/lib/prisma";
-import { DATA_VERSION } from "../src/config/release";
-import { CURRENT_DATA_SCOPE } from "../src/config/data-scope";
+import { CURRENT_RELEASE_CONTRACT } from "../src/config/release-contract";
 import { buildAuditSummary } from "../src/lib/audit-data";
 import { auditDataFileName, familyDataFileName } from "../src/lib/site-data-paths";
 import { buildHomeSnapshot } from "../src/presentation/home-snapshot";
@@ -20,13 +19,27 @@ import type { HomeRuntimeSnapshot } from "../src/presentation/home-snapshot";
 import { resolveDatabaseLocation } from "../src/lib/database";
 
 const root = process.cwd();
-const siteDataDirectory = path.join(root, "site-data");
-const exportDirectory = path.join(root, "public", "exports");
-const publicDataDirectory = path.join(root, "public", "data");
+const outputRootValue = process.env.SNAPSHOT_OUTPUT_ROOT?.trim();
+if (!outputRootValue) {
+  throw new Error("Snapshot generation requires SNAPSHOT_OUTPUT_ROOT; use npm run sites:snapshot.");
+}
+const outputRoot = path.resolve(root, outputRootValue);
+const relativeOutputRoot = path.relative(root, outputRoot);
+if (
+  !relativeOutputRoot ||
+  relativeOutputRoot === ".." ||
+  relativeOutputRoot.startsWith(`..${path.sep}`) ||
+  path.isAbsolute(relativeOutputRoot)
+) {
+  throw new Error("Snapshot output must be a separate directory inside the repository.");
+}
+const siteDataDirectory = path.join(outputRoot, "site-data");
+const exportDirectory = path.join(outputRoot, "public", "exports");
+const publicDataDirectory = path.join(outputRoot, "public", "data");
 const publicDetailsDirectory = path.join(publicDataDirectory, "details");
-const publicHeadersPath = path.join(root, "public", "_headers");
-const databaseLocation = resolveDatabaseLocation();
-const exportFileName: string = `pokemon-go-retention-${CURRENT_DATA_SCOPE}.xlsx`;
+const publicHeadersPath = path.join(outputRoot, "public", "_headers");
+const databaseLocation = resolveDatabaseLocation(undefined, root);
+const exportFileName: string = `pokemon-go-retention-${CURRENT_RELEASE_CONTRACT.scope}.xlsx`;
 const legacyExportFileName: string = "pokemon-go-retention-001-151.xlsx";
 const workbookPath = path.join(exportDirectory, exportFileName);
 const manifestPath = path.join(siteDataDirectory, "manifest.json");
@@ -265,7 +278,7 @@ async function main() {
     ...sources.map((source) => source.accessedAt),
     ...changes.map((change) => change.changedAt),
   ]);
-  const home = buildHomeSnapshot(dashboard, dataAsOf, DATA_VERSION);
+  const home = buildHomeSnapshot(dashboard, dataAsOf, CURRENT_RELEASE_CONTRACT.dataVersion);
   const homeSummary = buildHomeSummary(home);
   const auditSummary = buildAuditSummary(dashboard, dataAsOf);
   const familyIdByFormId = new Map(
@@ -340,19 +353,19 @@ async function main() {
       "  CDN-Cache-Control: no-store",
       "  Surrogate-Control: no-store",
       "  Pragma: no-cache",
-      `  X-Data-Version: ${DATA_VERSION}`,
+      `  X-Data-Version: ${CURRENT_RELEASE_CONTRACT.dataVersion}`,
       "/data/families/*",
       "  Cache-Control: no-store, max-age=0, must-revalidate",
       "  CDN-Cache-Control: no-store",
       "  Surrogate-Control: no-store",
       "  Pragma: no-cache",
-      `  X-Data-Version: ${DATA_VERSION}`,
+      `  X-Data-Version: ${CURRENT_RELEASE_CONTRACT.dataVersion}`,
       "/data/audit/*",
       "  Cache-Control: no-store, max-age=0, must-revalidate",
       "  CDN-Cache-Control: no-store",
       "  Surrogate-Control: no-store",
       "  Pragma: no-cache",
-      `  X-Data-Version: ${DATA_VERSION}`,
+      `  X-Data-Version: ${CURRENT_RELEASE_CONTRACT.dataVersion}`,
       "",
     ].join("\n"),
     "utf8",
@@ -381,8 +394,8 @@ async function main() {
 
   const manifest = {
     schemaVersion: 1,
-    batch: CURRENT_DATA_SCOPE,
-    dataVersion: DATA_VERSION,
+    batch: CURRENT_RELEASE_CONTRACT.scope,
+    dataVersion: CURRENT_RELEASE_CONTRACT.dataVersion,
     dataAsOf,
     sourceDatabase: {
       path: databaseLocation.manifestPath,
