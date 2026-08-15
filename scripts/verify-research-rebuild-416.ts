@@ -9,6 +9,7 @@ import { getDashboardRows } from "../src/lib/data-prisma";
 import { assertOfficialEvolutionPathsMaterialized } from "../src/data/research-import";
 import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
+import { BATCH_REGISTRY } from "../src/config/batch-registry";
 
 const databaseUrl = getDatabaseUrl();
 if (process.env.ALLOW_DESTRUCTIVE_REBUILD !== "1" || !databaseUrl.includes("rebuild-ci")) {
@@ -47,41 +48,43 @@ async function run(command: string, args: string[]) {
   });
 }
 
-const imports = [
-  "data:import:031-060",
-  "data:import:061-090",
-  "data:import:091-120",
-  "data:import:121-151",
-  "data:import:152-181",
-  "data:import:182-211",
-  "data:import:212-241",
-  "data:import:242-251",
-  "data:import:252-281",
-  "data:import:282-311",
-  "data:import:312-341",
-  "data:import:342-371",
-  "data:import:372-386",
-  "data:import:387-416",
-] as const;
-
 const crossGenerationManifestPath = "research_notes/cross-generation-evolution-targets.json";
 const crossGenerationManifestBefore = await readFile(crossGenerationManifestPath, "utf8");
+const seedBatches = BATCH_REGISTRY.filter((entry) => entry.import.phase === "seed");
+const preRecomputeBatches = BATCH_REGISTRY.filter(
+  (entry) => entry.import.phase === "pre-recompute",
+);
+const postRecomputeBatches = BATCH_REGISTRY.filter(
+  (entry) => entry.import.phase === "post-recompute",
+);
+const recomputeMaxDex = preRecomputeBatches.at(-1)?.maxDex;
+if (seedBatches.length !== 1 || !recomputeMaxDex || postRecomputeBatches.length === 0) {
+  throw new Error("Batch registry does not define the required clean rebuild phases.");
+}
+
+async function runBatchImport(batch: (typeof BATCH_REGISTRY)[number]) {
+  await run(npx, ["tsx", "scripts/import-batch.ts", batch.key]);
+}
 
 await run(npx, ["prisma", "db", "push"]);
-await run(npm, ["run", "db:seed"]);
+for (const batch of seedBatches) {
+  await runBatchImport(batch);
+}
 // The original #001-#030 seed predates the seven-category data model. This
 // existing remediation is the historical bridge that upgrades those 153
 // variants before later importers enforce global category completeness.
 await run(npm, ["run", "data:remediate"]);
 
-for (const script of imports.slice(0, -1)) {
-  await run(npm, ["run", script]);
+for (const batch of preRecomputeBatches) {
+  await runBatchImport(batch);
 }
 // #001-#386 historically require the current global reconciliation after all
 // legacy importers finish. It fills the modern assessment disposition and
 // four-level PvE-use fields without weakening data:validate.
-await run(npm, ["run", "data:recompute:001-386"]);
-await run(npm, ["run", imports[imports.length - 1]]);
+await run(npm, ["run", `data:recompute:001-${String(recomputeMaxDex).padStart(3, "0")}`]);
+for (const batch of postRecomputeBatches) {
+  await runBatchImport(batch);
+}
 await run(npm, ["run", "data:backfill-iv"]);
 await run(npm, ["run", "data:validate"]);
 

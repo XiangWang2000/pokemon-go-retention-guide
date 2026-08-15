@@ -612,3 +612,30 @@ export async function runImport387416(databaseUrl = getDatabaseUrl()) {
 export async function closeGen4Import(result: { prisma: PrismaClient }) {
   await result.prisma.$disconnect();
 }
+
+async function main() {
+  const result = await runImport387416();
+  try {
+    console.log(
+      JSON.stringify(
+        {
+          batch: "387-416",
+          planRows: result.plan.length,
+          releasedRows: result.plan.filter((row) => row.released).length,
+        },
+        null,
+        2,
+      ),
+    );
+  } finally {
+    await closeGen4Import(result);
+  }
+}
+
+const scriptPath = process.argv[1]?.replaceAll("\\", "/");
+if (scriptPath?.endsWith("/scripts/import-gen4.ts")) {
+  main().catch((error) => {
+    console.error(error instanceof Error ? error.message : error);
+    process.exitCode = 1;
+  });
+}

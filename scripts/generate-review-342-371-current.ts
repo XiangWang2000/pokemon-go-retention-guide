@@ -4,10 +4,11 @@ import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
 import { RULES_VERSION } from "../src/rules/rules";
+import { getBatchByKey } from "../src/config/batch-registry";
 
-const batch = "342-371";
-const minDex = 342;
-const maxDex = 371;
+const batchEntry = getBatchByKey("342-371");
+const batch = batchEntry.key;
+const { minDex, maxDex } = batchEntry;
 type Family = ReturnType<typeof buildFamilyOverviews>[number];
 type Dashboard = Awaited<ReturnType<typeof getDashboardRows>>;
 

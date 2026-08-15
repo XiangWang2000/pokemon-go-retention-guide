@@ -4,6 +4,7 @@ import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
 import { RULES_VERSION } from "../src/rules/rules";
+import { getBatchByKey } from "../src/config/batch-registry";
 
 type Family = ReturnType<typeof buildFamilyOverviews>[number];
 type Dashboard = Awaited<ReturnType<typeof getDashboardRows>>;
@@ -38,12 +39,15 @@ function formRows(rows: Dashboard, formId: string) {
   return rows.filter((row) => row.formId === formId);
 }
 
-export async function runReview(
-  batch: "252-281" | "282-311" | "312-341" | "342-371" | "372-386",
-) {
+export async function runReview(batchName: string) {
+  const entry = getBatchByKey(batchName);
+  if (entry.import.adapter !== "gen3") {
+    throw new Error(`Review batch ${batchName} is not owned by the Gen3 adapter.`);
+  }
+  const batch = entry.key;
   const [allRows, allIssues] = await Promise.all([getDashboardRows(), getReviewIssues()]);
-  const batchStart = Number(batch.slice(0, 3));
-  const batchEnd = Number(batch.slice(4, 7));
+  const batchStart = entry.minDex;
+  const batchEnd = entry.maxDex;
   const rows = allRows.filter((row) => row.dexNumber >= batchStart && row.dexNumber <= batchEnd);
   const allForms = buildFormOverviews(allRows);
   const families = buildFamilyOverviews(allForms).filter((family) =>
