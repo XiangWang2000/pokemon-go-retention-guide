@@ -6,6 +6,7 @@ import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
 import { getDatabaseUrl, resolveDatabaseLocation } from "../src/lib/database";
 import { getDashboardRows } from "../src/lib/data-prisma";
+import { assertOfficialEvolutionPathsMaterialized } from "../src/data/research-import";
 import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
 
@@ -91,6 +92,7 @@ if (crossGenerationManifestAfter !== crossGenerationManifestBefore) {
 
 const prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: databaseUrl }) });
 try {
+  await assertOfficialEvolutionPathsMaterialized(prisma);
   const [
     gen4Species,
     gen4Forms,
