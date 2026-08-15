@@ -141,6 +141,29 @@ describe("Gen3 #312-#386 canonical and graph regression", () => {
     ]);
   });
 
+  it("keeps the real Roserade target distinct from future Gen 4 stubs", () => {
+    const dashboard = JSON.parse(readFileSync("site-data/dashboard.json", "utf8")) as Array<{
+      formId: string;
+      variantKey: string;
+      evolutionPaths?: Array<{ toFormId: string; isEvolutionStub: boolean }>;
+    }>;
+    const expectations = [
+      ["315-hoenn", "407-sinnoh", false],
+      ["356-hoenn", "477-other", true],
+      ["361-hoenn", "478-other", true],
+    ] as const;
+
+    for (const [fromFormId, toFormId, expectedStub] of expectations) {
+      const row = dashboard.find(
+        (item) => item.formId === fromFormId && item.variantKey === "NORMAL",
+      );
+      const paths = row?.evolutionPaths?.filter((path) => path.toFormId === toFormId) ?? [];
+      expect(paths).toHaveLength(1);
+      expect(paths[0]?.isEvolutionStub).toBe(expectedStub);
+    }
+    expect(dashboard.some((item) => item.formId === "407-other")).toBe(false);
+  });
+
   it("keeps Shadow direct roster entries distinct from derived descendants", () => {
     const evidence = deriveShadowReleaseEvidence(
       releasedShadowForms312386,
