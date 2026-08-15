@@ -1,3 +1,5 @@
+import type { RegionKey } from "./region-key";
+
 export interface Species121151 {
   dexNumber: number;
   nameEn: string;
@@ -12,7 +14,7 @@ export interface Form121151 {
   formKey: string;
   formNameEn: string;
   formNameZhTw: string;
-  regionKey: "KANTO" | "GALAR" | "PALDEA" | "OTHER";
+  regionKey: RegionKey;
   types: string[];
   aliases: string[];
   evolvesFromFormId?: string;

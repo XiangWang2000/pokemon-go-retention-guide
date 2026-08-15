@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import { getDashboardRows } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
 import { buildFormOverviews } from "@/presentation/form-overview";
+import { loadCrossGenerationEvolutionData } from "@/data/cross-generation-evolution";
 import recalibrationReport from "../review/001-311-recalibration.json";
 
 const forms = buildFormOverviews(await getDashboardRows());
@@ -13,6 +14,7 @@ const crossGenerationManifest = JSON.parse(
   targets: Array<Record<string, unknown>>;
   paths: Array<Record<string, unknown>>;
 };
+const loadedCrossGenerationData = await loadCrossGenerationEvolutionData();
 
 function familyContaining(formId: string) {
   const family = families.find((candidate) =>
@@ -23,6 +25,21 @@ function familyContaining(formId: string) {
 }
 
 describe("cross-generation evolution targets", () => {
+  it("natively loads the canonical Roserade Sinnoh identity", () => {
+    const roserade = loadedCrossGenerationData.targets.filter((target) => target.dexNumber === 407);
+    expect(roserade).toHaveLength(1);
+    expect(roserade[0]).toMatchObject({
+      formKey: "SINNOH",
+      formNameEn: "Sinnoh",
+      formNameZhTw: "神奧",
+      regionKey: "SINNOH",
+      fromFormId: "315-hoenn",
+    });
+    expect(loadedCrossGenerationData.targets.some((target) => target.formKey === "OTHER" && target.dexNumber === 407)).toBe(false);
+    expect(loadedCrossGenerationData.paths.filter((path) => path.fromFormId === "315-hoenn" && path.toFormId === "407-sinnoh")).toHaveLength(1);
+    expect(loadedCrossGenerationData.paths.some((path) => path.toFormId === "407-other")).toBe(false);
+  });
+
   it("keeps formal later-generation paths for high-risk families", () => {
     const expectedPaths = [
       ["042-kanto", "169-johto"],

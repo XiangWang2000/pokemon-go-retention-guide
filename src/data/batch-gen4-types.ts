@@ -1,3 +1,5 @@
+import type { RegionKey } from "./region-key";
+
 export type Gen4BatchSpecies = {
   dexNumber: number;
   nameEn: string;
@@ -12,7 +14,7 @@ export type Gen4BatchForm = {
   formKey: string;
   formNameEn: string;
   formNameZhTw: string;
-  regionKey: "SINNOH";
+  regionKey: RegionKey;
   types: string[];
   aliases: string[];
   evolvesFromFormId: string | null;

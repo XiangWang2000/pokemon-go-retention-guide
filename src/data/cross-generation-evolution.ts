@@ -1,6 +1,8 @@
 import { readFile } from "node:fs/promises";
 import type { PrismaClient } from "../../generated/prisma/client";
 import { assertNoTextIntegrityIssues } from "./text-integrity";
+import { isRegionKey, type RegionKey } from "./region-key";
+import { upsertEvolutionPath } from "./evolution-path";
 
 const sourceFile = "research_notes/cross-generation-evolution-targets.json";
 
@@ -33,7 +35,7 @@ export interface EvolutionTargetStubSeed {
   formKey: string;
   formNameEn: string;
   formNameZhTw: string;
-  regionKey: "KANTO" | "JOHTO" | "HOENN" | "ALOLA" | "GALAR" | "HISUI" | "PALDEA" | "OTHER";
+  regionKey: RegionKey;
   types: string[];
   aliases: string[];
   fromFormId: string;
@@ -78,7 +80,7 @@ function assertEvolutionData(data: CrossGenerationEvolutionData) {
     const id = formId(target.dexNumber, target.formKey);
     if (targetIds.has(id)) throw new Error(`重複跨世代進化 target：${id}`);
     targetIds.add(id);
-    if (!["KANTO", "JOHTO", "HOENN", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"].includes(target.regionKey)) {
+    if (!isRegionKey(target.regionKey)) {
       throw new Error(`Evolution target has an invalid region: ${id}.`);
     }
     if (target.generation >= 4 && target.formKey === "KANTO") {
@@ -284,28 +286,15 @@ export async function ensureCrossGenerationEvolutionTargets(prisma: PrismaClient
     });
     if (!from || !to)
       throw new Error(`跨世代進化路徑有 dangling target：${path.fromFormId}->${path.toFormId}`);
-    const existing = await prisma.evolutionPath.findFirst({
-      where: { fromFormId: path.fromFormId, toFormId: path.toFormId },
-      select: { id: true },
-    });
-    const values = {
+    await upsertEvolutionPath(prisma, {
+      id: `evolution-cross-${path.fromFormId}-${path.toFormId}`,
+      fromFormId: path.fromFormId,
+      toFormId: path.toFormId,
       evolutionMethodZhTw: path.evolutionMethodZhTw,
       availabilityNotesZhTw: path.availabilityNotesZhTw,
       requiresEvent: path.requiresEvent,
       verifiedAt: path.verificationStatus === "VERIFIED" ? checkedDate : null,
-    };
-    if (existing) {
-      await prisma.evolutionPath.update({ where: { id: existing.id }, data: values });
-    } else {
-      await prisma.evolutionPath.create({
-        data: {
-          id: `evolution-cross-${path.fromFormId}-${path.toFormId}`,
-          fromFormId: path.fromFormId,
-          toFormId: path.toFormId,
-          ...values,
-        },
-      });
-    }
+    });
   }
 
   return { ...data, targetIds: activeTargetIds };

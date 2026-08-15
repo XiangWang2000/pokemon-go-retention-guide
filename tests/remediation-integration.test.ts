@@ -106,6 +106,7 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
   it("9. affectsFinalDecision=false 不會覆蓋正式結論", async () => {
     const evaluation = await prisma.retentionEvaluation.findFirst({
       where: { battleVariantId: "020-kanto-shadow", rulesVersion: RULES_VERSION },
+      orderBy: { generatedAt: "desc" },
     });
     const issues = await prisma.dataIssue.findMany({
       where: { battleVariantId: "020-kanto-shadow", status: "OPEN" },

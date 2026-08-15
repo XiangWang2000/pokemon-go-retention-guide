@@ -50,3 +50,11 @@
 - Shadow evidence distinguishes direct roster release, derived/inherited evolution closure, and the actual formal evolution edge. Derived descendants are not presented as if the roster source listed them directly.
 - Kyogre/Groudon retain the internal `MEGA` variant key for compatibility but use 原始蓋歐卡／原始固拉多 and 原始回歸候選 in user-facing summaries; Rayquaza remains Mega.
 - Runtime snapshot, review, Excel, schema validation, review consistency, snapshot provenance checks, and regression tests are generated for this checkpoint; the next expansion point is after #386.
+
+## 2026-08-15 #001～#416 r24 cross-generation canonicalization
+
+- DATA_VERSION is `2026.08.13-r24`; the controlled clean rebuild now covers #001～#416 and verifies 1912 BattleVariants, 245 presentation families, 13 IV recommendations, and zero current `TRUE_DATA_PENDING` rows.
+- `src/data/region-key.ts` is the single TypeScript RegionKey contract and is checked against the Prisma enum. It includes `SINNOH`, `UNOVA`, and `KALOS`; batch, canonical, import-schema, validation, and cross-generation code reuse it instead of maintaining stale unions.
+- Cross-generation source data natively identifies Roserade as `407-sinnoh` / `SINNOH`, with the canonical `315-hoenn -> 407-sinnoh` path. `src/data/evolution-path.ts` treats an endpoint pair as the path identity, so an owning-generation importer updates an existing future stub/path instead of creating a duplicate.
+- Gen3 import defers only evolution edges whose endpoints are not yet materialized; the owning batch creates the real form and edge. This removes the rebuild-only boundary stubs for #342/#372 and the Roserade-specific source mutation, form migration, and edge handoff helpers. The clean rebuild asserts the source manifest is byte-for-byte unchanged.
+- The published snapshot and Pages artifact are generated from the clean #001～#416 rebuild; timestamp/provenance/hash churn is expected from the fresh database, while semantic changes are limited to the canonical Roserade identity/path presentation and the r24 review/remediation outputs.

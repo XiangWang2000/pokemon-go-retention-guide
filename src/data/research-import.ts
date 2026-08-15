@@ -54,6 +54,12 @@ interface OfficialResearch {
   officialResearchGapsZhTw: string[];
 }
 
+const officialResearchPath = "research_notes/official-001-030.json";
+
+export interface ResearchImportOptions {
+  deferMissingEvolutionPaths?: boolean;
+}
+
 interface BattleSource {
   id: string;
   sourceName: string;
@@ -84,6 +90,47 @@ interface NormalizedFinding {
 async function readJson<T>(path: string): Promise<T> {
   const raw = await readFile(path, "utf8");
   return JSON.parse(raw.replace(/^\uFEFF/, "")) as T;
+}
+
+/**
+ * Seed may defer an official path while its owning batch is not materialized
+ * yet. Re-read the source after every owning batch has run so that deferral
+ * cannot hide a missing or duplicated endpoint pair.
+ */
+export async function assertOfficialEvolutionPathsMaterialized(prisma: PrismaClient) {
+  const official = await readJson<OfficialResearch>(officialResearchPath);
+  const endpointKey = (fromFormId: string, toFormId: string) => `${fromFormId}->${toFormId}`;
+  const expectedPairs = [
+    ...new Map(
+      official.evolutionPaths.map((path) => [
+        endpointKey(path.fromFormId, path.toFormId),
+        { fromFormId: path.fromFormId, toFormId: path.toFormId },
+      ]),
+    ).values(),
+  ];
+  const expectedKeys = new Set(
+    expectedPairs.map((pair) => endpointKey(pair.fromFormId, pair.toFormId)),
+  );
+  const rows = await prisma.evolutionPath.findMany({
+    select: { fromFormId: true, toFormId: true },
+  });
+  const counts = new Map<string, number>();
+  for (const row of rows) {
+    const key = endpointKey(row.fromFormId, row.toFormId);
+    if (expectedKeys.has(key)) {
+      counts.set(key, (counts.get(key) ?? 0) + 1);
+    }
+  }
+  const invalidPairs = expectedPairs.filter(
+    (pair) => counts.get(endpointKey(pair.fromFormId, pair.toFormId)) !== 1,
+  );
+  if (invalidPairs.length) {
+    throw new Error(
+      `Official evolution path integrity failed: ${invalidPairs
+        .map((pair) => `${pair.fromFormId}->${pair.toFormId}`)
+        .join(", ")} must each have exactly one EvolutionPath row.`,
+    );
+  }
 }
 
 function databaseVariantId(value: string) {
@@ -189,6 +236,7 @@ async function importOfficialResearch(
   prisma: PrismaClient,
   official: OfficialResearch,
   checkedAt: Date,
+  options: ResearchImportOptions,
 ) {
   const sourceMap = new Map<string, string>();
   for (const source of official.sources) {
@@ -308,6 +356,7 @@ async function importOfficialResearch(
         prisma.pokemonForm.findUnique({ where: { id: path.toFormId }, select: { id: true } }),
       ]);
       if (!fromForm || !toForm) {
+        if (options.deferMissingEvolutionPaths) continue;
         throw new Error(
           `正式資料包含 dangling evolution path：${path.fromFormId}->${path.toFormId}`,
         );
@@ -777,13 +826,17 @@ async function recomputeEvaluations(
   }
 }
 
-export async function integrateResearchData(prisma: PrismaClient, checkedAt: Date) {
+export async function integrateResearchData(
+  prisma: PrismaClient,
+  checkedAt: Date,
+  options: ResearchImportOptions = {},
+) {
   const [official, battle1, battle2] = await Promise.all([
-    readJson<OfficialResearch>("research_notes/official-001-030.json"),
+    readJson<OfficialResearch>(officialResearchPath),
     readJson<JsonRecord>("research_notes/battle-001-015.json"),
     readJson<JsonRecord>("research_notes/battle-016-030.json"),
   ]);
-  await importOfficialResearch(prisma, official, checkedAt);
+  await importOfficialResearch(prisma, official, checkedAt, options);
   const battle1Map = await importBattleSources(
     prisma,
     "battle1",

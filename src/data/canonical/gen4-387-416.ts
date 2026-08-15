@@ -1,3 +1,5 @@
+import type { RegionKey } from "../region-key";
+
 /**
  * Independent Gen 4 canonical identity fixture for the first published batch candidate.
  *
@@ -17,7 +19,7 @@ export type CanonicalGen4Form = {
   formKey: string;
   formNameEn: string;
   formNameZhTw: string;
-  regionKey: "SINNOH";
+  regionKey: RegionKey;
   types: readonly string[];
 };
 

@@ -1,3 +1,5 @@
+import type { RegionKey } from "./region-key";
+
 export interface BatchSpeciesSeed {
   dexNumber: number;
   nameEn: string;
@@ -85,7 +87,7 @@ export interface ExtraFormSeed {
   formKey: string;
   formNameEn: string;
   formNameZhTw: string;
-  regionKey: "ALOLA" | "GALAR" | "HISUI" | "PALDEA";
+  regionKey: RegionKey;
   types: string[];
   aliases: string[];
 }

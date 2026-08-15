@@ -1,3 +1,5 @@
+import type { RegionKey } from "../region-key";
+
 /**
  * Independent Gen 3 form/variant-boundary fixture.
  *
@@ -11,7 +13,7 @@ export type CanonicalGen3Form = {
   formKey: string;
   formNameEn: string;
   formNameZhTw: string;
-  regionKey: string;
+  regionKey: RegionKey;
   types: readonly string[];
   variantKeys: readonly string[];
 };
