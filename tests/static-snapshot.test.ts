@@ -42,7 +42,7 @@ function canonicalHash(value: unknown) {
   return createHash("sha256").update(JSON.stringify(value)).digest("hex");
 }
 
-describe("Sites 唯讀 snapshot", () => {
+describe("static 唯讀 snapshot", () => {
   afterAll(async () => {
     await prisma.$disconnect();
   });

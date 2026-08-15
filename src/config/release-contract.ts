@@ -37,7 +37,6 @@ export const CURRENT_RELEASE_CONTRACT = {
     manifestPath: "site-data/manifest.json",
     exportPath: `public/exports/pokemon-go-retention-${registryScope}.xlsx`,
     generatedRoots: ["site-data", "public/data", "public/exports"] as const,
-    generatedFiles: ["public/_headers"] as const,
   },
   review: {
     batchJsonPaths: BATCH_REGISTRY.map((entry) => entry.review.jsonPath),
@@ -71,9 +70,6 @@ export function isExpectedReleaseGeneratedPath(filePath: string) {
       normalized.startsWith(`${root}/`),
     )
   ) {
-    return true;
-  }
-  if (CURRENT_RELEASE_CONTRACT.snapshot.generatedFiles.includes(normalized as "public/_headers")) {
     return true;
   }
   if (normalized === CURRENT_RELEASE_CONTRACT.snapshot.exportPath) return true;

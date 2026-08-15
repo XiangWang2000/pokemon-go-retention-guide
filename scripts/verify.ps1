@@ -32,14 +32,13 @@ Invoke-NpmScript "lint"
 Invoke-NpmScript "typecheck"
 Invoke-NpmScript "test"
 if (-not $Full) {
-    Invoke-NpmScript "sites:snapshot:check"
+    Invoke-NpmScript "snapshot:check"
 }
 
 if ($Full) {
     Invoke-NpmScript "test:integration"
     Invoke-NpmScript "data:validate"
-    Invoke-NpmCommand @("run", "release:verify", "--", "--pages")
-    Invoke-NpmScript "sites:check"
+    Invoke-NpmScript "release:verify"
     Invoke-NpmScript "build"
     Invoke-NpmScript "build:local"
 }

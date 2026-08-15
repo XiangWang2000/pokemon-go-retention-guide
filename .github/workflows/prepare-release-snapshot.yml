@@ -67,7 +67,7 @@ jobs:
           npx tsx scripts/generate-current-recalibration-report.ts
 
       - name: Generate, validate, and promote release snapshot
-        run: npm run sites:snapshot
+        run: npm run release:snapshot
 
       - name: Restore transient rebuild outputs
         shell: bash

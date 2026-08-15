@@ -12,7 +12,7 @@ Pokémon GO 通用寶可夢保留價值指南。系統以 `PokemonForm × Battle
 
 GitHub Pages 採 Next.js static export，production 不依賴 runtime Prisma／SQLite、Next.js API route 或舊 Sites／Vinext worker。完整部署與驗證流程請見 [`docs/github-pages.md`](docs/github-pages.md)。
 
-舊 Sites／Vinext／Cloudflare Worker 相關檔案只保留作為遷移歷史與研究工具，不是目前正式部署路徑。歷史說明請見 [`docs/sites-migration.md`](docs/sites-migration.md)。
+退休 Sites／Vinext／Cloudflare Worker 僅保留在歷史 review 與遷移紀錄中；目前正式路徑只使用 GitHub Pages。歷史說明請見 [`docs/legacy-sites-migration.md`](docs/legacy-sites-migration.md)。
 
 ## 公開資料的 source of truth
 
@@ -76,13 +76,13 @@ IV 規則的程式 source of truth 是 [`src/iv/strategy.ts`](src/iv/strategy.ts
 ```text
 本機 Prisma + SQLite
   → 匯入／規則／審核／資料驗證
-  → npm run sites:snapshot
+  → npm run release:snapshot
   → versioned site-data JSON + public/data JSON + 預建 XLSX
   → Next.js static export（out/）
   → GitHub Pages
 ```
 
-`sites:snapshot` 名稱沿用早期遷移階段，但目前產出的 snapshot 同時是 GitHub Pages 正式資料來源。正式站只讀靜態檔案，不需要將研究資料庫部署到 production。
+`release:snapshot` 會產生 GitHub Pages 正式使用的 static snapshot。正式站只讀靜態檔案，不需要將研究資料庫部署到 production。
 
 ## 開發與 Pages 驗證
 
@@ -112,27 +112,21 @@ npm start
 npm run data:validate
 npm run review:generate
 npx tsx scripts/generate-current-recalibration-report.ts
-npm run sites:snapshot
-npm run release:verify -- --pages
+npm run release:snapshot
+npm run release:verify
 npm run build
 npm run pages:verify
 ```
 
 若資料庫 schema、來源匯入或規則有變更，先執行對應 migration／import／recompute，再重新產生 snapshot。
-`sites:snapshot` 使用 staging → validate → promote 流程；`release:verify` 是 PR、Pages deploy 與手動
+`release:snapshot` 使用 staging → validate → promote 流程；`release:verify` 是 PR、Pages deploy 與手動
 release preparation 共用的驗證入口。`site-data/manifest.json` 會記錄正式輸出的資料版本、筆數與檔案雜湊供 CI 驗證。
 
-## Legacy Sites 工具
+## 歷史遷移紀錄
 
-下列命令只供舊 Sites／Vinext 遷移流程重現或研究使用，不是 production 預設：
-
-```text
-npm run sites:dev
-npm run sites:build
-npm run sites:start
-npm run sites:check
-npm run sites:purge
-```
+舊 Sites／Vinext／Cloudflare Worker 的實作已從現行 runtime 與 npm workflow 移除；
+可重現性與決策背景保留在 [`docs/legacy-sites-migration.md`](docs/legacy-sites-migration.md)
+及 `review/001-030-sites-migration.*`，不應作為目前部署或驗證入口。
 
 ## 重要目錄
 

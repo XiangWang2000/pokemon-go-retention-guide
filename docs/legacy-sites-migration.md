@@ -1,5 +1,7 @@
 # Sites 遷移說明
 
+> 歷史紀錄，非現行操作手冊。Sites／Vinext／Cloudflare Worker runtime、purge helper、`public/_headers` 與 `sites:*` npm commands 已移除；目前請依 [`docs/github-pages.md`](github-pages.md) 使用 GitHub Pages。
+
 ## 目標
 
 保留原本可在本機執行的 Next.js／Prisma／SQLite 研究系統，同時讓使用者介面能以 Sites 的 Vinext／Cloudflare Worker 格式建置與發布。第一版沒有任何線上寫入，因此不把本機研究資料庫改成第二套雲端資料庫。

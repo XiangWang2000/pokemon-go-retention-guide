@@ -6,7 +6,6 @@ import { verifyRelease } from "./verify-release";
 
 export const SNAPSHOT_PROMOTION_TARGETS = [
   ...CURRENT_RELEASE_CONTRACT.snapshot.generatedRoots,
-  ...CURRENT_RELEASE_CONTRACT.snapshot.generatedFiles,
 ] as const;
 
 const root = process.cwd();
@@ -23,7 +22,7 @@ async function exists(filePath: string) {
 
 async function runSnapshotGenerator(stagingRoot: string) {
   await new Promise<void>((resolve, reject) => {
-    const child = spawn(npx, ["tsx", "scripts/generate-sites-snapshot.ts"], {
+    const child = spawn(npx, ["tsx", "scripts/generate-static-snapshot.ts"], {
       cwd: root,
       env: { ...process.env, SNAPSHOT_OUTPUT_ROOT: stagingRoot },
       stdio: "inherit",
