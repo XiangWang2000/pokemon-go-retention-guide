@@ -1,7 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import { getDashboardRows } from "../src/lib/data-prisma";
-import { CURRENT_DATA_MAX_DEX } from "../src/config/data-scope";
-import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
+import { CURRENT_RELEASE_CONTRACT } from "../src/config/release-contract";
 import { RULES_VERSION } from "../src/rules/rules";
 import { readIntegerFlag } from "../src/lib/command-line";
 
@@ -11,14 +10,23 @@ function increment(target: Record<string, number>, key: string | null | undefine
 }
 
 async function main() {
-  const dexMax = readIntegerFlag(process.argv.slice(2), "--max", CURRENT_DATA_MAX_DEX);
-  if (!Number.isInteger(dexMax) || dexMax < 1 || dexMax > CURRENT_DATA_MAX_DEX) {
-    throw new Error(`Invalid --max value ${dexMax}; published maximum is ${CURRENT_DATA_MAX_DEX}.`);
+  const dexMax = readIntegerFlag(process.argv.slice(2), "--max", CURRENT_RELEASE_CONTRACT.maxDex);
+  if (!Number.isInteger(dexMax) || dexMax < 1 || dexMax > CURRENT_RELEASE_CONTRACT.maxDex) {
+    throw new Error(
+      `Invalid --max value ${dexMax}; published maximum is ${CURRENT_RELEASE_CONTRACT.maxDex}.`,
+    );
   }
 
   const rows = (await getDashboardRows()).filter(
-    (row) => row.dexNumber >= 1 && row.dexNumber <= dexMax,
+    (row) => row.dexNumber >= CURRENT_RELEASE_CONTRACT.minDex && row.dexNumber <= dexMax,
   );
+  const reportScope = `${String(CURRENT_RELEASE_CONTRACT.minDex).padStart(3, "0")}-${String(
+    dexMax,
+  ).padStart(3, "0")}`;
+  const reportScopeValue = `${CURRENT_RELEASE_CONTRACT.minDex}-${dexMax}`;
+  const reportScopeLabel = `${String(CURRENT_RELEASE_CONTRACT.minDex).padStart(3, "0")}～#${String(
+    dexMax,
+  ).padStart(3, "0")}`;
   const decisions: Record<string, number> = {};
   const dispositions: Record<string, number> = {};
   const pveUseLevels: Record<string, number> = {};
@@ -36,11 +44,11 @@ async function main() {
       formId: row.formId,
       variantKey: row.variantKey,
     }));
-  const generatedAt = new Date(`${DATA_VERSION_DATE_ISO}T00:00:00+08:00`).toISOString();
+  const generatedAt = new Date(`${CURRENT_RELEASE_CONTRACT.dataAsOf}T00:00:00+08:00`).toISOString();
   const report = {
-    scope: `1-${dexMax}`,
-    dataVersion: DATA_VERSION,
-    updatedAt: DATA_VERSION_DATE_ISO,
+    scope: reportScopeValue,
+    dataVersion: CURRENT_RELEASE_CONTRACT.dataVersion,
+    updatedAt: CURRENT_RELEASE_CONTRACT.dataAsOf,
     generatedAt,
     rulesVersion: RULES_VERSION,
     counts: {
@@ -54,9 +62,9 @@ async function main() {
   };
 
   const lines = [
-    `# Pokémon GO Retention Guide #001～#${String(dexMax).padStart(3, "0")} 已發布資料狀態報告`,
+    `# Pokémon GO Retention Guide #${reportScopeLabel} 已發布資料狀態報告`,
     "",
-    `- 資料版本：${DATA_VERSION}`,
+    `- 資料版本：${CURRENT_RELEASE_CONTRACT.dataVersion}`,
     `- 規則版本：${RULES_VERSION}`,
     `- 戰鬥版本：${rows.length}`,
     `- KEEP／CONDITIONAL／HOLD／TRANSFER：${decisions.KEEP ?? 0}／${decisions.CONDITIONAL_KEEP ?? 0}／${decisions.HOLD_FOR_NOW ?? 0}／${decisions.TRANSFER_CANDIDATE ?? 0}`,
@@ -68,20 +76,16 @@ async function main() {
 
   await mkdir("review", { recursive: true });
   await writeFile(
-    `review/001-${dexMax}-recalibration.json`,
+    `review/${reportScope}-recalibration.json`,
     `${JSON.stringify(report, null, 2).replace(/\r?\n/g, "\r\n")}\r\n`,
     "utf8",
   );
-  await writeFile(
-    `review/001-${dexMax}-recalibration.md`,
-    `${lines.join("\r\n")}\r\n`,
-    "utf8",
-  );
+  await writeFile(`review/${reportScope}-recalibration.md`, `${lines.join("\r\n")}\r\n`, "utf8");
   console.log(
     JSON.stringify(
       {
         scope: report.scope,
-        dataVersion: DATA_VERSION,
+        dataVersion: CURRENT_RELEASE_CONTRACT.dataVersion,
         variants: rows.length,
         trueDataPending: trueDataPending.length,
       },

@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
-import { DATA_VERSION } from "../src/config/release";
+import { CURRENT_RELEASE_CONTRACT } from "../src/config/release-contract";
 import { resolveDatabaseLocation } from "../src/lib/database";
 import { auditDataFileName, familyDataFileName } from "../src/lib/site-data-paths";
 
@@ -13,6 +13,7 @@ interface ManifestFile {
 
 interface Manifest {
   schemaVersion: number;
+  batch: string;
   dataVersion: string;
   sourceDatabase: { path: string; bytes: number; sha256: string };
   counts: {
@@ -38,10 +39,11 @@ interface Manifest {
   excel: { path: string; bytes: number; sha256: string; sheets: number };
 }
 
-const root = process.cwd();
-const siteDataDirectory = path.join(root, "site-data");
-const databaseLocation = resolveDatabaseLocation();
-const pagesMode = process.argv.includes("--pages");
+export interface SnapshotCheckOptions {
+  snapshotRoot?: string;
+  databaseRoot?: string;
+  pagesMode?: boolean;
+}
 
 function sha256(value: Uint8Array) {
   return createHash("sha256").update(value).digest("hex");
@@ -60,17 +62,41 @@ function assert(condition: unknown, message: string): asserts condition {
   if (!condition) throw new Error(message);
 }
 
-async function main() {
-  const manifest = JSON.parse(
-    await readFile(path.join(siteDataDirectory, "manifest.json"), "utf8"),
-  ) as Manifest;
+function snapshotPath(snapshotRoot: string, relativePath: string) {
+  const resolved = path.resolve(snapshotRoot, relativePath);
+  const relative = path.relative(snapshotRoot, resolved);
+  assert(
+    relative &&
+      relative !== ".." &&
+      !relative.startsWith(`..${path.sep}`) &&
+      !path.isAbsolute(relative),
+    `Snapshot path escapes its root: ${relativePath}.`,
+  );
+  return resolved;
+}
+
+export async function verifySitesSnapshot({
+  snapshotRoot: requestedSnapshotRoot = process.cwd(),
+  databaseRoot: requestedDatabaseRoot = process.cwd(),
+  pagesMode = false,
+}: SnapshotCheckOptions = {}) {
+  const snapshotRoot = path.resolve(requestedSnapshotRoot);
+  const databaseRoot = path.resolve(requestedDatabaseRoot);
+  const manifestPath = snapshotPath(snapshotRoot, CURRENT_RELEASE_CONTRACT.snapshot.manifestPath);
+  const siteDataDirectory = path.dirname(manifestPath);
+  const databaseLocation = resolveDatabaseLocation(undefined, databaseRoot);
+  const manifest = JSON.parse(await readFile(manifestPath, "utf8")) as Manifest;
   assert(manifest.schemaVersion === 1, "Sites snapshot manifest schemaVersion 不支援。");
-  assert(manifest.dataVersion === DATA_VERSION, "Sites snapshot dataVersion 不正確。");
+  assert(manifest.batch === CURRENT_RELEASE_CONTRACT.scope, "Sites snapshot scope 不正確。");
+  assert(
+    manifest.dataVersion === CURRENT_RELEASE_CONTRACT.dataVersion,
+    "Sites snapshot dataVersion 不正確。",
+  );
 
   const payloads: Uint8Array[] = [];
   const parsed: Record<string, unknown> = {};
   for (const [name, file] of Object.entries(manifest.files)) {
-    const filePath = path.join(siteDataDirectory, file.path);
+    const filePath = snapshotPath(siteDataDirectory, file.path);
     const content = await readFile(filePath);
     assert(content.byteLength === file.bytes, `${file.path} 大小與 manifest 不一致。`);
     assert(sha256(content) === file.sha256, `${file.path} SHA256 與 manifest 不一致。`);
@@ -102,10 +128,16 @@ async function main() {
   const details = parsed.details as Record<string, unknown>;
   assert(dashboard.length === manifest.counts.dashboardRows, "dashboard 筆數不一致。");
   assert(home.schemaVersion === 1, "home snapshot schemaVersion 不支援。");
-  assert(home.dataVersion === DATA_VERSION, "home snapshot dataVersion 不正確。");
+  assert(
+    home.dataVersion === CURRENT_RELEASE_CONTRACT.dataVersion,
+    "home snapshot dataVersion 不正確。",
+  );
   assert(home.families.length === manifest.counts.homeFamilies, "home 家族筆數不一致。");
   assert(homeSummary.schemaVersion === 1, "home summary schemaVersion 不正確。");
-  assert(homeSummary.dataVersion === DATA_VERSION, "home summary dataVersion 不正確。");
+  assert(
+    homeSummary.dataVersion === CURRENT_RELEASE_CONTRACT.dataVersion,
+    "home summary dataVersion 不正確。",
+  );
   assert(auditSummary.schemaVersion === 1, "audit summary schemaVersion 不正確。");
   assert(
     auditSummary.rows.length === manifest.counts.auditSummaryRows,
@@ -120,7 +152,7 @@ async function main() {
   assert(changes.length === manifest.counts.changeLogs, "變更紀錄筆數不一致。");
   assert(Object.keys(details).length === manifest.counts.detailRecords, "詳細資料筆數不一致。");
 
-  const familyDirectory = path.join(root, manifest.runtimeFamilyData.directory);
+  const familyDirectory = snapshotPath(snapshotRoot, manifest.runtimeFamilyData.directory);
   const familyEntries = (await readdir(familyDirectory)).filter((name) => name.endsWith(".json"));
   assert(familyEntries.length === manifest.runtimeFamilyData.count, "家族詳細檔案數量不一致。");
   assert(
@@ -129,7 +161,7 @@ async function main() {
   );
   let familyBytes = 0;
   for (const family of home.families as Array<{ familyId: string }>) {
-    const file = path.join(familyDirectory, familyDataFileName(family.familyId));
+    const file = snapshotPath(familyDirectory, familyDataFileName(family.familyId));
     const content = await readFile(file);
     familyBytes += content.byteLength;
     const payload = JSON.parse(content.toString("utf8")) as {
@@ -143,7 +175,7 @@ async function main() {
   }
   assert(familyBytes === manifest.runtimeFamilyData.bytes, "家族詳細檔案總大小不一致。");
 
-  const auditDirectory = path.join(root, manifest.runtimeAuditData.directory);
+  const auditDirectory = snapshotPath(snapshotRoot, manifest.runtimeAuditData.directory);
   const auditEntries = (await readdir(auditDirectory)).filter((name) => name.endsWith(".json"));
   assert(auditEntries.length === manifest.runtimeAuditData.count, "Audit 詳細檔案數量不一致。");
   assert(
@@ -152,7 +184,7 @@ async function main() {
   );
   let auditBytes = 0;
   for (const row of auditSummary.rows) {
-    const file = path.join(auditDirectory, auditDataFileName(row.id));
+    const file = snapshotPath(auditDirectory, auditDataFileName(row.id));
     const content = await readFile(file);
     auditBytes += content.byteLength;
     const payload = JSON.parse(content.toString("utf8")) as { id: string };
@@ -160,7 +192,7 @@ async function main() {
   }
   assert(auditBytes === manifest.runtimeAuditData.bytes, "Audit 詳細檔案總大小不一致。");
 
-  const detailDirectory = path.join(root, manifest.runtimeDetailData.directory);
+  const detailDirectory = snapshotPath(snapshotRoot, manifest.runtimeDetailData.directory);
   const detailEntries = (await readdir(detailDirectory)).filter((name) => name.endsWith(".json"));
   assert(detailEntries.length === manifest.runtimeDetailData.count, "詳細資料檔案數量不一致。");
   assert(
@@ -169,7 +201,7 @@ async function main() {
   );
   let detailBytes = 0;
   for (const row of auditSummary.rows) {
-    const file = path.join(detailDirectory, auditDataFileName(row.id));
+    const file = snapshotPath(detailDirectory, auditDataFileName(row.id));
     const content = await readFile(file);
     detailBytes += content.byteLength;
     const payload = JSON.parse(content.toString("utf8")) as {
@@ -186,7 +218,7 @@ async function main() {
   }
   assert(detailBytes === manifest.runtimeDetailData.bytes, "詳細資料檔案總大小不一致。");
 
-  const runtimeHomePath = path.join(root, manifest.runtimeHome.path);
+  const runtimeHomePath = snapshotPath(snapshotRoot, manifest.runtimeHome.path);
   const runtimeHome = await readFile(runtimeHomePath);
   assert(runtimeHome.byteLength === manifest.runtimeHome.bytes, "首頁 runtime 資料大小不一致。");
   assert(sha256(runtimeHome) === manifest.runtimeHome.sha256, "首頁 runtime 資料 SHA256 不一致。");
@@ -200,7 +232,10 @@ async function main() {
     dataVersion: string;
     families: Array<{ detailsLoaded?: boolean; members: Array<{ form: { variants: unknown[] } }> }>;
   };
-  assert(runtimeHomePayload.dataVersion === DATA_VERSION, "首頁 runtime dataVersion 不正確。");
+  assert(
+    runtimeHomePayload.dataVersion === CURRENT_RELEASE_CONTRACT.dataVersion,
+    "首頁 runtime dataVersion 不正確。",
+  );
   assert(
     runtimeHomePayload.families.every(
       (family) =>
@@ -210,13 +245,13 @@ async function main() {
     "runtime home must contain summary-only family forms",
   );
   for (const file of Object.values(manifest.runtimeStaticData)) {
-    const runtimeFile = await readFile(path.join(root, file.path));
+    const runtimeFile = await readFile(snapshotPath(snapshotRoot, file.path));
     assert(runtimeFile.byteLength === file.bytes, `${file.path} bytes mismatch`);
     assert(sha256(runtimeFile) === file.sha256, `${file.path} SHA256 mismatch`);
   }
 
   if (!pagesMode) {
-    const publicHeadersPath = path.join(root, manifest.publicHeaders.path);
+    const publicHeadersPath = snapshotPath(snapshotRoot, manifest.publicHeaders.path);
     const publicHeaders = await readFile(publicHeadersPath);
     assert(
       publicHeaders.byteLength === manifest.publicHeaders.bytes,
@@ -227,12 +262,14 @@ async function main() {
       "public/_headers SHA256 與 manifest 不一致。",
     );
     assert(
-      publicHeaders.toString("utf8").includes(`X-Data-Version: ${DATA_VERSION}`),
+      publicHeaders
+        .toString("utf8")
+        .includes(`X-Data-Version: ${CURRENT_RELEASE_CONTRACT.dataVersion}`),
       "public/_headers dataVersion 不正確。",
     );
   }
 
-  const workbookPath = path.join(root, manifest.excel.path);
+  const workbookPath = snapshotPath(snapshotRoot, manifest.excel.path);
   const workbook = await readFile(workbookPath);
   assert(workbook.byteLength === manifest.excel.bytes, "Excel 大小與 manifest 不一致。");
   assert(sha256(workbook) === manifest.excel.sha256, "Excel SHA256 與 manifest 不一致。");
@@ -259,9 +296,29 @@ async function main() {
   console.log(
     `${pagesMode ? "Pages" : "Sites"} snapshot 驗證通過：${dashboard.length} 筆戰鬥版本、${review.length} 筆開放審核、${sources.length} 個來源。`,
   );
+  return manifest;
 }
 
-main().catch((error) => {
-  console.error(error instanceof Error ? error.message : error);
-  process.exitCode = 1;
-});
+function readOption(name: string) {
+  const index = process.argv.indexOf(name);
+  return index >= 0 ? process.argv[index + 1] : undefined;
+}
+
+const snapshotRoot = readOption("--root");
+const databaseRoot = readOption("--database-root");
+const scriptPath = process.argv[1]?.replaceAll("\\", "/");
+if (scriptPath?.endsWith("/scripts/check-sites-snapshot.ts")) {
+  if (snapshotRoot === "" || databaseRoot === "") {
+    console.error("--root and --database-root require a path.");
+    process.exitCode = 1;
+  } else {
+    verifySitesSnapshot({
+      snapshotRoot,
+      databaseRoot,
+      pagesMode: process.argv.includes("--pages"),
+    }).catch((error) => {
+      console.error(error instanceof Error ? error.message : error);
+      process.exitCode = 1;
+    });
+  }
+}

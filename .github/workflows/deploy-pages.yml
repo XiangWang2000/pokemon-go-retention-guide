@@ -42,25 +42,10 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Generate Prisma client
         run: npm run db:generate
-      - name: Snapshot check
+      - name: Release verification contract
         env:
           DATABASE_URL: file:./rebuild-ci.db
-        run: npm run sites:snapshot:check -- --pages
-      - name: Snapshot failure diagnostics
-        if: failure()
-        shell: bash
-        env:
-          DATABASE_URL: file:./rebuild-ci.db
-        run: |
-          set +e
-          output="$(npm run sites:snapshot:check -- --pages 2>&1)"
-          status=$?
-          printf '%s\n' "$output"
-          compact="$(printf '%s' "$output" | tr '\n' ' ' | tr '\r' ' ')"
-          echo "::error title=Snapshot check detail::$compact"
-          exit 0
-      - name: Review consistency
-        run: npm run review:validate
+        run: npm run release:verify -- --pages
       - name: Lint
         run: npm run lint
       - name: Typecheck

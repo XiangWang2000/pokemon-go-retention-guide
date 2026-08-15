@@ -28,4 +28,14 @@ describe("GitHub Pages production workflow security", () => {
     expect(contents).toMatch(/deploy:\n[\s\S]*?timeout-minutes: 5/);
     expect(contents).toMatch(/smoke:\n[\s\S]*?timeout-minutes: 5/);
   });
+
+  it("uses the shared release verifier instead of duplicated snapshot checks", async () => {
+    const contents = await workflow();
+
+    expect(contents).toContain("- name: Release verification contract");
+    expect(contents).toContain("run: npm run release:verify -- --pages");
+    expect(contents).not.toContain("Snapshot failure diagnostics");
+    expect(contents).not.toContain("sites:snapshot:check");
+    expect(contents).not.toContain("review:validate");
+  });
 });

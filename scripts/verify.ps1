@@ -18,15 +18,27 @@ function Invoke-NpmScript {
     }
 }
 
+function Invoke-NpmCommand {
+    param([Parameter(Mandatory = $true)][string[]]$Arguments)
+
+    Write-Host "==> npm $($Arguments -join ' ')"
+    & npm @Arguments
+    if ($LASTEXITCODE -ne 0) {
+        throw "npm $($Arguments -join ' ') failed with exit code $LASTEXITCODE."
+    }
+}
+
 Invoke-NpmScript "lint"
 Invoke-NpmScript "typecheck"
 Invoke-NpmScript "test"
-Invoke-NpmScript "sites:snapshot:check"
+if (-not $Full) {
+    Invoke-NpmScript "sites:snapshot:check"
+}
 
 if ($Full) {
     Invoke-NpmScript "test:integration"
     Invoke-NpmScript "data:validate"
-    Invoke-NpmScript "review:validate"
+    Invoke-NpmCommand @("run", "release:verify", "--", "--pages")
     Invoke-NpmScript "sites:check"
     Invoke-NpmScript "build"
     Invoke-NpmScript "build:local"

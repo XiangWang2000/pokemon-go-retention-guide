@@ -41,18 +41,10 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Generate Prisma client
         run: npm run db:generate
-      - name: Verify Gen 4 importer
-        env:
-          DATABASE_URL: file:./gen4-ci.db
-        run: |
-          npx prisma db push --force-reset
-          npm run data:verify:387-416
-      - name: Snapshot check
+      - name: Release verification contract
         env:
           DATABASE_URL: file:./rebuild-ci.db
-        run: npm run sites:snapshot:check -- --pages
-      - name: Review consistency
-        run: npm run review:validate
+        run: npm run release:verify -- --pages
       - name: Lint
         run: npm run lint
       - name: Typecheck
