@@ -4,6 +4,7 @@ import { readFile, readFileSync } from "node:fs";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
 import { forms387416, evolutionPairs387416, species387416 } from "../src/data/batch-387-416";
+import { upsertEvolutionPath } from "../src/data/evolution-path";
 import {
   buildGen4ImportPlan387416,
   type Gen4ImportPlanRow,
@@ -255,23 +256,14 @@ export async function runImport387416(databaseUrl = getDatabaseUrl()) {
 
     for (const [fromFormId, toFormId] of evolutionPairs387416) {
       const id = `evolution-gen4-387-416-${fromFormId}-${toFormId}`;
-      await prisma.evolutionPath.upsert({
-        where: { id },
-        create: {
-          id,
-          fromFormId,
-          toFormId,
-          evolutionMethodZhTw: "依 Pokémon GO 當期糖果、性別與特殊條件進化。",
-          availabilityNotesZhTw: "第四世代 #387～#416 進化圖已獨立核對；特殊分支依遊戲內介面為準。",
-          requiresEvent: false,
-          verifiedAt: checkedAt,
-        },
-        update: {
-          evolutionMethodZhTw: "依 Pokémon GO 當期糖果、性別與特殊條件進化。",
-          availabilityNotesZhTw: "第四世代 #387～#416 進化圖已獨立核對；特殊分支依遊戲內介面為準。",
-          requiresEvent: false,
-          verifiedAt: checkedAt,
-        },
+      await upsertEvolutionPath(prisma, {
+        id,
+        fromFormId,
+        toFormId,
+        evolutionMethodZhTw: "依 Pokémon GO 當期糖果、性別與特殊條件進化。",
+        availabilityNotesZhTw: "第四世代 #387～#416 進化圖已獨立核對；特殊分支依遊戲內介面為準。",
+        requiresEvent: false,
+        verifiedAt: checkedAt,
       });
     }
 

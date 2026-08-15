@@ -471,7 +471,7 @@ async function main() {
   await seedSources();
   await seedSpeciesAndForms();
   await seedVariantsAndEvaluations(rankings);
-  await integrateResearchData(prisma, checkedAt);
+  await integrateResearchData(prisma, checkedAt, { deferMissingEvolutionPaths: true });
   const counts = await Promise.all([
     prisma.pokemonSpecies.count(),
     prisma.pokemonForm.count(),

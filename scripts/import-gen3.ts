@@ -83,6 +83,7 @@ import {
   validateGen3FormCompleteness,
   type VariantForValidation,
 } from "../src/data/checkpoint-validation";
+import { upsertEvolutionPath } from "../src/data/evolution-path";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
@@ -726,8 +727,15 @@ export async function runImport(batchName: string) {
       path.fromFormId + "->" + path.toFormId
     ),
   );
+  const existingFormIds = new Set(
+    (await prisma.pokemonForm.findMany({ select: { id: true } })).map((form) => form.id),
+  );
   const edgeRows = batch.evolutionPairs
-    .filter(([fromFormId, toFormId]) => !manifestEdges.has(fromFormId + "->" + toFormId))
+    .filter(([fromFormId, toFormId]) =>
+      !manifestEdges.has(fromFormId + "->" + toFormId) &&
+      existingFormIds.has(fromFormId) &&
+      existingFormIds.has(toFormId),
+    )
     .map(([fromFormId, toFormId]) => {
       const branch = fromFormId === "265-hoenn";
       const babyMerge = toFormId === "183-johto";
@@ -747,7 +755,9 @@ export async function runImport(batchName: string) {
         verifiedAt: checkedAt,
       };
     });
-  if (edgeRows.length) await prisma.evolutionPath.createMany({ data: edgeRows });
+  for (const edge of edgeRows) {
+    await upsertEvolutionPath(prisma, edge);
+  }
 
   const variants: VariantRecord[] = [];
   for (const form of batch.forms) {

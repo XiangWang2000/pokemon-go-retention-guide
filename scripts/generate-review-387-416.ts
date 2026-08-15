@@ -60,6 +60,7 @@ async function main() {
       result:
         rows.every((row) => row.regionKey === "SINNOH") &&
         expectedCloakForms.every((formId) => formIds.has(formId)) &&
+        formIds.has("407-sinnoh") &&
         !formIds.has("407-other")
           ? "PASS"
           : "FAIL",
@@ -91,7 +92,10 @@ async function main() {
     },
     {
       name: "No legacy Roserade stub",
-      result: allRows.every((row) => row.formId !== "407-other") ? "PASS" : "FAIL",
+      result: allRows.some((row) => row.formId === "407-sinnoh") &&
+        allRows.every((row) => row.formId !== "407-other")
+        ? "PASS"
+        : "FAIL",
     },
     {
       name: "No true data pending",

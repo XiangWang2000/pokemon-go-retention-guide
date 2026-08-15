@@ -16,6 +16,7 @@ import {
 } from "../src/data/checkpoint-validation";
 import { DATA_VERSION } from "../src/config/release";
 import { RULES_VERSION } from "../src/rules/rules";
+import { isRegionKey } from "../src/data/region-key";
 
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: getDatabaseUrl() }),
@@ -165,7 +166,7 @@ async function main() {
     if (form.evolvesFromFormId !== target.fromFormId) {
       errors.push(`${targetId} has an unexpected evolvesFromFormId.`);
     }
-    if (!["KANTO", "JOHTO", "HOENN", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"].includes(target.regionKey)) {
+    if (!isRegionKey(target.regionKey)) {
       errors.push(`${targetId} has an invalid region.`);
     }
     if (target.generation >= 4 && target.formKey === "KANTO") {

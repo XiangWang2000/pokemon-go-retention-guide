@@ -106,7 +106,7 @@ describe("Gen3 #312-#386 canonical and graph regression", () => {
 
   it("models branching, baby-family merge, future stubs, and Mega candidates", () => {
     const formIds = new Set(forms312386.map((form) => form.id));
-    const allowedStubIds = new Set(["202-johto", "407-other", "477-other", "478-other"]);
+    const allowedStubIds = new Set(["202-johto", "407-sinnoh", "477-other", "478-other"]);
     expect(
       evolutionPairs312386.every(([fromFormId]) =>
         formIds.has(fromFormId) || allowedStubIds.has(fromFormId),
@@ -121,10 +121,12 @@ describe("Gen3 #312-#386 canonical and graph regression", () => {
       ["366-hoenn", "367-hoenn"],
       ["366-hoenn", "368-hoenn"],
       ["360-hoenn", "202-johto"],
-      ["315-hoenn", "407-other"],
+      ["315-hoenn", "407-sinnoh"],
       ["356-hoenn", "477-other"],
       ["361-hoenn", "478-other"],
     ]));
+    expect(forms312386.some((form) => form.id === "407-other")).toBe(false);
+    expect(evolutionPairs312386.filter(([fromFormId, toFormId]) => fromFormId === "315-hoenn" && toFormId === "407-sinnoh")).toHaveLength(1);
     expect([...releasedMegaForms312386]).toEqual(expect.arrayContaining([
       "319-hoenn", "323-hoenn", "334-hoenn", "354-hoenn", "359-hoenn", "362-hoenn",
       "373-hoenn", "376-hoenn", "380-hoenn", "381-hoenn", "382-hoenn", "383-hoenn", "384-hoenn",

@@ -5,8 +5,8 @@
   "dataAsOf": "2026-08-12T16:00:00.000Z",
   "sourceDatabase": {
     "path": "rebuild-ci.db",
-    "bytes": 16384000,
-    "sha256": "9dc8f86d19c0b499a05e5a4478309d5b9d8e4ec17bbbd7b0654627956e6f63c3"
+    "bytes": 16379904,
+    "sha256": "5ba6f81a48fe95402ac4b3ff79317b5674e1c059e0d76d6bcdb98cc615cccf3d"
   },
   "rulesVersions": [
     "2026.08.06-v7"
@@ -37,12 +37,12 @@
     "openReviewIssues": 160,
     "detailRecords": 1912
   },
-  "snapshotSha256": "e38c5e211cd1ef382096ed5f48cf2518cdbdfa23e0de281db569d0c7be514aba",
+  "snapshotSha256": "cea0e6910031913823dee8157b6686117a679ecc2587f2acca0779b3809da9fe",
   "files": {
     "home": {
       "path": "home.json",
-      "bytes": 18599094,
-      "sha256": "c20c74064d40130d121d15dae1d5d90587db993e4755589aa607cfc6c0680109"
+      "bytes": 18599059,
+      "sha256": "67a964c114954144e2d67cc7f55a5c967db205cd9be416919370bcd2b548680a"
     },
     "homeSummary": {
       "path": "homeSummary.json",
@@ -51,8 +51,8 @@
     },
     "dashboard": {
       "path": "dashboard.json",
-      "bytes": 38897682,
-      "sha256": "fddc2c2402c9739f5c716a17de8cf80714e0cf5357e798d55b508f68d4040a84"
+      "bytes": 38897654,
+      "sha256": "96ced489051391cd9a1c7044070ed7dc219812f536c26a265d476b00e2d8b274"
     },
     "auditSummary": {
       "path": "auditSummary.json",
@@ -76,14 +76,14 @@
     },
     "details": {
       "path": "details.json",
-      "bytes": 2774146,
-      "sha256": "f40adaf89f32b89f7231d5bce6566d1d2cdeeba08dbb2be9dea23bd364a8f86a"
+      "bytes": 2774090,
+      "sha256": "676689ab93ff6d5c835db19faa9d91b187083cb82a305f24b7ebe3e85be8e8ae"
     }
   },
   "runtimeHome": {
     "path": "public/data/home.json",
     "bytes": 1156144,
-    "sha256": "3c657af5219fe72a736a6e863be8944377682c109053c27808481a40bb5f2ba8"
+    "sha256": "111f4efecc9cfeeea029b2b4d77ec4f5bdb43dc48b04c701ccfda3b319822310"
   },
   "publicHeaders": {
     "path": "public/_headers",
@@ -93,17 +93,17 @@
   "runtimeFamilyData": {
     "directory": "public/data/families",
     "count": 245,
-    "bytes": 29275698
+    "bytes": 29275663
   },
   "runtimeAuditData": {
     "directory": "public/data/audit",
     "count": 1912,
-    "bytes": 48575949
+    "bytes": 48575921
   },
   "runtimeDetailData": {
     "directory": "public/data/details",
     "count": 1912,
-    "bytes": 3227616
+    "bytes": 3227560
   },
   "runtimeStaticData": {
     "audit-summary.json": {
@@ -135,7 +135,7 @@
   "excel": {
     "path": "public/exports/pokemon-go-retention-001-416.xlsx",
     "bytes": 974040,
-    "sha256": "05677d41a0548ab53c7489f00473d031d8b28159a02311b7cf9b90bd8874d6ab",
+    "sha256": "90d499236e6b73967e1a88e6380f377809dd573c8ba35e849ecf79f2ea675c85",
     "sheets": 10
   }
 }

@@ -54,6 +54,10 @@ interface OfficialResearch {
   officialResearchGapsZhTw: string[];
 }
 
+export interface ResearchImportOptions {
+  deferMissingEvolutionPaths?: boolean;
+}
+
 interface BattleSource {
   id: string;
   sourceName: string;
@@ -189,6 +193,7 @@ async function importOfficialResearch(
   prisma: PrismaClient,
   official: OfficialResearch,
   checkedAt: Date,
+  options: ResearchImportOptions,
 ) {
   const sourceMap = new Map<string, string>();
   for (const source of official.sources) {
@@ -308,6 +313,7 @@ async function importOfficialResearch(
         prisma.pokemonForm.findUnique({ where: { id: path.toFormId }, select: { id: true } }),
       ]);
       if (!fromForm || !toForm) {
+        if (options.deferMissingEvolutionPaths) continue;
         throw new Error(
           `正式資料包含 dangling evolution path：${path.fromFormId}->${path.toFormId}`,
         );
@@ -777,13 +783,17 @@ async function recomputeEvaluations(
   }
 }
 
-export async function integrateResearchData(prisma: PrismaClient, checkedAt: Date) {
+export async function integrateResearchData(
+  prisma: PrismaClient,
+  checkedAt: Date,
+  options: ResearchImportOptions = {},
+) {
   const [official, battle1, battle2] = await Promise.all([
     readJson<OfficialResearch>("research_notes/official-001-030.json"),
     readJson<JsonRecord>("research_notes/battle-001-015.json"),
     readJson<JsonRecord>("research_notes/battle-016-030.json"),
   ]);
-  await importOfficialResearch(prisma, official, checkedAt);
+  await importOfficialResearch(prisma, official, checkedAt, options);
   const battle1Map = await importBattleSources(
     prisma,
     "battle1",

@@ -921,7 +921,7 @@ export const evolutionPairs312341: readonly [string, string][] = [
   ],
   [
     "315-hoenn",
-    "407-other"
+    "407-sinnoh"
   ]
 ];
 

@@ -135,14 +135,14 @@ export async function runReview(
       checkFamily(families, "Clamperl branches", "366-hoenn", ["366-hoenn", "367-hoenn", "368-hoenn"]),
     );
     for (const [name, formId, targetId] of [
-      ["Roserade evolution stub", "315-hoenn", "407-other"],
+      ["Roserade canonical Gen4 evolution", "315-hoenn", "407-sinnoh"],
       ["Dusknoir evolution stub", "356-hoenn", "477-other"],
       ["Froslass evolution stub", "361-hoenn", "478-other"],
     ] as const) {
       const row = formRows(allRows, formId).find((item) => item.variantKey === "NORMAL");
       checks.push({
         name,
-        result: row?.evolutionPaths.some((path) => path.toFormId === targetId && path.isEvolutionStub)
+        result: row?.evolutionPaths.some((path) => path.toFormId === targetId && !path.isEvolutionStub)
           ? "PASS"
           : "FAIL",
       });

@@ -953,10 +953,10 @@
       "familyKey": "HOENN_FAMILY_315",
       "nameEn": "Roserade",
       "nameZhTw": "羅絲雷朵",
-      "formKey": "OTHER",
-      "formNameEn": "Other",
-      "formNameZhTw": "其他",
-      "regionKey": "OTHER",
+      "formKey": "SINNOH",
+      "formNameEn": "Sinnoh",
+      "formNameZhTw": "神奧",
+      "regionKey": "SINNOH",
       "types": [
         "GRASS",
         "POISON"
@@ -967,7 +967,7 @@
       ],
       "fromFormId": "315-hoenn",
       "evolutionTargetUseLevel": "USABLE_OR_BUDGET",
-      "evolutionTargetNotesZhTw": "毒薔薇的後續進化目標；以 OTHER stub 保留進化價值，不將普通毒薔薇自動改判為必留。"
+      "evolutionTargetNotesZhTw": "毒薔薇的後續進化目標；以神奧型態保留進化價值，不將普通毒薔薇自動改判為必留。"
     },
     {
       "dexNumber": 477,
@@ -1504,7 +1504,7 @@
     },
     {
       "fromFormId": "315-hoenn",
-      "toFormId": "407-other",
+      "toFormId": "407-sinnoh",
       "evolutionMethodZhTw": "使用太陽之石進化",
       "availabilityNotesZhTw": "毒薔薇→羅絲雷朵的後續進化 path；實際條件以 Pokémon GO 當期進化介面為準。",
       "requiresEvent": false,
