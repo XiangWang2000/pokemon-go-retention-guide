@@ -4,7 +4,8 @@ import { describe, expect, it } from "vitest";
 const workflowPath = new URL("../.github/workflows/deploy-pages.yml", import.meta.url);
 
 async function workflow() {
-  return readFile(workflowPath, "utf8");
+  const contents = await readFile(workflowPath, "utf8");
+  return contents.replace(/\r\n?/g, "\n");
 }
 
 describe("GitHub Pages production workflow security", () => {

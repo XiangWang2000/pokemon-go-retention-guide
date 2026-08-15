@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import ExcelJS from "exceljs";
@@ -17,11 +17,28 @@ import {
   getReviewIssues as getPrismaReviewIssues,
   getSources as getPrismaSources,
 } from "@/lib/data-prisma";
+import { resolveDatabaseLocation } from "@/lib/database";
 import { prisma } from "@/lib/prisma";
 import type { HomeSnapshot } from "@/presentation/home-snapshot";
 import homeSnapshot from "../site-data/home.json";
 
-const hasCanonicalDb = existsSync("dev.db");
+const hasCanonicalDb = (() => {
+  const location = resolveDatabaseLocation();
+  const sourceDatabase = siteSnapshotManifest.sourceDatabase;
+
+  if (
+    location.manifestPath !== sourceDatabase.path ||
+    !existsSync(location.absolutePath)
+  ) {
+    return false;
+  }
+
+  const database = readFileSync(location.absolutePath);
+  return (
+    database.byteLength === sourceDatabase.bytes &&
+    createHash("sha256").update(database).digest("hex") === sourceDatabase.sha256
+  );
+})();
 
 function canonicalHash(value: unknown) {
   return createHash("sha256").update(JSON.stringify(value)).digest("hex");
