@@ -10,6 +10,7 @@ on:
       - "scripts/backfill-*.ts"
       - "scripts/validate-data.ts"
       - "scripts/verify-research-rebuild.ts"
+      - "scripts/verify-published-integrity.ts"
       - "scripts/verify-release.ts"
       - "scripts/check-sites-snapshot.ts"
       - "scripts/validate-review-consistency.ts"
@@ -63,3 +64,5 @@ jobs:
           fi
           echo "Research rebuild completed successfully."
           tail -n 40 rebuild.log
+      - name: Verify historical published-data integrity
+        run: npm run data:verify:published-integrity

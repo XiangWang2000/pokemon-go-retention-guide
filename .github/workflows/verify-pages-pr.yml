@@ -41,6 +41,12 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Generate Prisma client
         run: npm run db:generate
+      - name: Historical importer adapter integrity
+        env:
+          DATABASE_URL: file:./gen4-ci.db
+        run: |
+          npx prisma db push --force-reset
+          npm run data:verify:387-416
       - name: Release verification contract
         env:
           DATABASE_URL: file:./rebuild-ci.db

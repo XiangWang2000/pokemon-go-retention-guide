@@ -22,6 +22,7 @@ GitHub Pages 採 Next.js static export，production 不依賴 runtime Prisma／S
 - `src/config/release.ts`：目前資料版本與更新日期。
 - `src/config/batch-registry.ts`：已發布批次的順序、匯入 phase／adapter 與 review 輸出。
 - `src/config/release-contract.ts`：目前 release 的共用驗證契約與 generated-path allowlist。
+- `scripts/verify-published-integrity.ts`：保留歷史批次、Gen4 canonical form 與跨世代 family 的完整性檢查。
 - `site-data/manifest.json`：snapshot 來源、筆數、SHA-256、runtime JSON 與 Excel artifact 資訊。
 
 首頁顯示的資料範圍與更新日期由上述設定產生，新增下一批寶可夢時不需要再手動修改 README 的批次數字。

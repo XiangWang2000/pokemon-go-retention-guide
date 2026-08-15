@@ -52,6 +52,7 @@ $env:ALLOW_DESTRUCTIVE_REBUILD = "1"
 $env:DATABASE_URL = "file:./rebuild-ci.db"
 npx tsx scripts/verify-research-rebuild.ts
 $env:DATABASE_URL = "file:./rebuild-ci.db"
+npm run data:verify:published-integrity
 npm run review:generate
 npx tsx scripts/generate-current-recalibration-report.ts
 npm run sites:snapshot
