@@ -7,24 +7,19 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "npm run sites:snapshot:check -- --pages && next dev",
+    "dev": "npm run snapshot:check && next dev",
     "build": "npm run build:pages",
-    "build:pages": "npm run sites:snapshot:check -- --pages && node scripts/build-pages.mjs",
+    "build:pages": "npm run snapshot:check && node scripts/build-pages.mjs",
     "pages:smoke": "node scripts/smoke-pages-server.mjs",
     "pages:smoke:deployed": "node scripts/smoke-deployed-pages.mjs",
     "pages:verify": "node --check scripts/serve-pages.mjs && node --check scripts/pages-http-smoke.mjs && node --check scripts/smoke-pages-server.mjs && node --check scripts/smoke-deployed-pages.mjs && node scripts/verify-pages-artifact.mjs && npm run pages:smoke",
     "start": "node scripts/serve-pages.mjs",
-    "dev:local": "npm run sites:snapshot:check && next dev",
-    "build:local": "npm run sites:snapshot:check && next build",
+    "dev:local": "npm run snapshot:check && next dev",
+    "build:local": "npm run snapshot:check && next build",
     "start:local": "next start",
-    "sites:dev": "npm run sites:snapshot:check && vinext dev",
-    "sites:start": "node scripts/start-sites.mjs",
-    "sites:snapshot": "tsx scripts/prepare-release-snapshot.ts",
-    "sites:snapshot:check": "tsx scripts/check-sites-snapshot.ts",
+    "release:snapshot": "tsx scripts/prepare-release-snapshot.ts",
+    "snapshot:check": "tsx scripts/check-static-snapshot.ts",
     "release:verify": "tsx scripts/verify-release.ts",
-    "sites:purge": "node scripts/purge-sites-cache.mjs",
-    "sites:check": "vinext check",
-    "sites:build": "npm run sites:snapshot && npm run sites:snapshot:check && vinext build",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
@@ -84,35 +79,25 @@
     "zod": "4.4.3"
   },
   "devDependencies": {
-    "@cloudflare/vite-plugin": "^1.46.0",
     "@tailwindcss/postcss": "4.3.2",
     "@types/better-sqlite3": "7.6.13",
     "@types/node": "24.10.1",
     "@types/react": "19.2.7",
     "@types/react-dom": "19.2.3",
-    "@vitejs/plugin-react": "6.0.3",
-    "@vitejs/plugin-rsc": "0.5.28",
     "eslint": "9.39.5",
     "eslint-config-next": "16.2.10",
     "eslint-config-prettier": "10.1.8",
     "postcss": "8.5.19",
     "prettier": "3.9.5",
     "prisma": "7.9.0",
-    "react-server-dom-webpack": "19.2.7",
     "tailwindcss": "4.3.2",
     "tsx": "4.23.1",
     "typescript": "6.0.3",
-    "vinext": "0.0.50",
-    "vite": "8.1.5",
-    "vitest": "4.1.10",
-    "wrangler": "^4.113.0"
+    "vitest": "4.1.10"
   },
   "overrides": {
     "exceljs": {
       "uuid": "11.1.1"
-    },
-    "miniflare": {
-      "sharp": "0.35.3"
     }
   }
 }

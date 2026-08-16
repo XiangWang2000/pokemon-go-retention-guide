@@ -4,7 +4,7 @@ The canonical production site for this repository is:
 
 `https://xiangwang2000.github.io/pokemon-go-retention-guide/`
 
-GitHub Pages is the only supported production publishing target. Older Sites/Vinext files remain in the repository only as legacy migration and local research tooling; they are not part of the production artifact or deployment path.
+GitHub Pages is the only supported production publishing target. The retired Sites/Vinext/Cloudflare runtime has been removed from the active repository path; historical migration notes remain in `docs/legacy-sites-migration.md` and the #001-#030 review records.
 
 ## Default development and build workflow
 
@@ -57,18 +57,7 @@ the official Pages artifact action, and deploys with the official Pages deploy a
 
 `pages:verify` validates the generated artifact rather than source files alone. It checks all generated Pokémon detail routes and canonical URLs, sitemap/robots metadata, runtime JSON counts, the Excel export, the project base path, and the absence of the retired ChatGPT Site host. It then serves `out/` locally and runs HTTP smoke checks for the home/review/sources/changes routes, representative first/middle/last Pokémon detail routes derived from the current audit summary, `home.json`, sitemap, robots, the exact Excel payload, and 404 behavior. The deployed-site smoke uses the same representative route contract, so expanding the Pokédex does not require hard-coded smoke-route updates.
 
-## Legacy migration commands
+## Historical migration records
 
-Legacy Sites/Vinext workflows are intentionally explicit rather than default:
-
-```text
-npm run sites:dev
-npm run sites:build
-npm run sites:start
-npm run sites:check
-npm run sites:purge
-```
-
-`public/_headers`, the Vinext worker, and Sites-oriented helper scripts remain only so historical migration/research workflows stay reproducible. GitHub Pages does not consume these files, and Pages snapshot validation is intentionally decoupled from `_headers`.
-
-The old `.openai/hosting.json` deployment binding is intentionally removed so the repository does not advertise or accidentally reuse the retired ChatGPT Sites deployment target.
+The old Sites/Vinext/Cloudflare runtime, worker, purge helper, and `public/_headers` artifact are not part of the current npm, release, or Pages workflows.
+The historical migration document and review records are retained as context only; they are not supported deployment commands.

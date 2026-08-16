@@ -33,7 +33,7 @@ describe("GitHub Pages production workflow security", () => {
     const contents = await workflow();
 
     expect(contents).toContain("- name: Release verification contract");
-    expect(contents).toContain("run: npm run release:verify -- --pages");
+    expect(contents).toContain("run: npm run release:verify");
     expect(contents).not.toContain("Snapshot failure diagnostics");
     expect(contents).not.toContain("sites:snapshot:check");
     expect(contents).not.toContain("review:validate");

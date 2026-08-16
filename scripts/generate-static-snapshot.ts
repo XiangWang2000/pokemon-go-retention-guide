@@ -21,7 +21,9 @@ import { resolveDatabaseLocation } from "../src/lib/database";
 const root = process.cwd();
 const outputRootValue = process.env.SNAPSHOT_OUTPUT_ROOT?.trim();
 if (!outputRootValue) {
-  throw new Error("Snapshot generation requires SNAPSHOT_OUTPUT_ROOT; use npm run sites:snapshot.");
+  throw new Error(
+    "Snapshot generation requires SNAPSHOT_OUTPUT_ROOT; use npm run release:snapshot.",
+  );
 }
 const outputRoot = path.resolve(root, outputRootValue);
 const relativeOutputRoot = path.relative(root, outputRoot);
@@ -37,7 +39,6 @@ const siteDataDirectory = path.join(outputRoot, "site-data");
 const exportDirectory = path.join(outputRoot, "public", "exports");
 const publicDataDirectory = path.join(outputRoot, "public", "data");
 const publicDetailsDirectory = path.join(publicDataDirectory, "details");
-const publicHeadersPath = path.join(outputRoot, "public", "_headers");
 const databaseLocation = resolveDatabaseLocation(undefined, root);
 const exportFileName: string = `pokemon-go-retention-${CURRENT_RELEASE_CONTRACT.scope}.xlsx`;
 const legacyExportFileName: string = "pokemon-go-retention-001-151.xlsx";
@@ -346,32 +347,6 @@ async function main() {
   await syncJsonDirectory(path.join(publicDataDirectory, "families"), familyFiles);
   await syncJsonDirectory(path.join(publicDataDirectory, "audit"), auditFiles);
   await syncJsonDirectory(publicDetailsDirectory, detailFiles);
-  const publicHeaders = Buffer.from(
-    [
-      "/data/home.json",
-      `  Cache-Control: no-store, max-age=0, must-revalidate`,
-      "  CDN-Cache-Control: no-store",
-      "  Surrogate-Control: no-store",
-      "  Pragma: no-cache",
-      `  X-Data-Version: ${CURRENT_RELEASE_CONTRACT.dataVersion}`,
-      "/data/families/*",
-      "  Cache-Control: no-store, max-age=0, must-revalidate",
-      "  CDN-Cache-Control: no-store",
-      "  Surrogate-Control: no-store",
-      "  Pragma: no-cache",
-      `  X-Data-Version: ${CURRENT_RELEASE_CONTRACT.dataVersion}`,
-      "/data/audit/*",
-      "  Cache-Control: no-store, max-age=0, must-revalidate",
-      "  CDN-Cache-Control: no-store",
-      "  Surrogate-Control: no-store",
-      "  Pragma: no-cache",
-      `  X-Data-Version: ${CURRENT_RELEASE_CONTRACT.dataVersion}`,
-      "",
-    ].join("\n"),
-    "utf8",
-  );
-  await writeIfChanged(publicHeadersPath, publicHeaders);
-
   let previousSnapshotSha: string | null = null;
   if (await exists(manifestPath)) {
     try {
@@ -421,11 +396,6 @@ async function main() {
       bytes: publicHome.byteLength,
       sha256: sha256(publicHome),
     },
-    publicHeaders: {
-      path: "public/_headers",
-      bytes: publicHeaders.byteLength,
-      sha256: sha256(publicHeaders),
-    },
     runtimeFamilyData: {
       directory: "public/data/families",
       count: familyFiles.size,
@@ -460,7 +430,7 @@ async function main() {
   };
   await writeIfChanged(manifestPath, jsonBuffer(manifest));
   console.log(
-    `Sites snapshot 已產生：${dashboard.length} 筆戰鬥版本、${review.length} 筆開放審核、${sources.length} 個來源；snapshot ${snapshotSha256}.`,
+    `Static snapshot 已產生：${dashboard.length} 筆戰鬥版本、${review.length} 筆開放審核、${sources.length} 個來源；snapshot ${snapshotSha256}.`,
   );
 }
 

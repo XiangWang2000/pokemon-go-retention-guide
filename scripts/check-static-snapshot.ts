@@ -31,7 +31,6 @@ interface Manifest {
   snapshotSha256: string;
   files: Record<string, ManifestFile>;
   runtimeHome: ManifestFile;
-  publicHeaders: ManifestFile;
   runtimeFamilyData: { directory: string; count: number; bytes: number };
   runtimeAuditData: { directory: string; count: number; bytes: number };
   runtimeDetailData: { directory: string; count: number; bytes: number };
@@ -42,7 +41,6 @@ interface Manifest {
 export interface SnapshotCheckOptions {
   snapshotRoot?: string;
   databaseRoot?: string;
-  pagesMode?: boolean;
 }
 
 function sha256(value: Uint8Array) {
@@ -75,10 +73,9 @@ function snapshotPath(snapshotRoot: string, relativePath: string) {
   return resolved;
 }
 
-export async function verifySitesSnapshot({
+export async function verifyStaticSnapshot({
   snapshotRoot: requestedSnapshotRoot = process.cwd(),
   databaseRoot: requestedDatabaseRoot = process.cwd(),
-  pagesMode = false,
 }: SnapshotCheckOptions = {}) {
   const snapshotRoot = path.resolve(requestedSnapshotRoot);
   const databaseRoot = path.resolve(requestedDatabaseRoot);
@@ -86,11 +83,11 @@ export async function verifySitesSnapshot({
   const siteDataDirectory = path.dirname(manifestPath);
   const databaseLocation = resolveDatabaseLocation(undefined, databaseRoot);
   const manifest = JSON.parse(await readFile(manifestPath, "utf8")) as Manifest;
-  assert(manifest.schemaVersion === 1, "Sites snapshot manifest schemaVersion 不支援。");
-  assert(manifest.batch === CURRENT_RELEASE_CONTRACT.scope, "Sites snapshot scope 不正確。");
+  assert(manifest.schemaVersion === 1, "Static snapshot manifest schemaVersion 不支援。");
+  assert(manifest.batch === CURRENT_RELEASE_CONTRACT.scope, "Static snapshot scope 不正確。");
   assert(
     manifest.dataVersion === CURRENT_RELEASE_CONTRACT.dataVersion,
-    "Sites snapshot dataVersion 不正確。",
+    "Static snapshot dataVersion 不正確。",
   );
 
   const payloads: Uint8Array[] = [];
@@ -106,7 +103,7 @@ export async function verifySitesSnapshot({
   assert(
     sha256(Buffer.concat(payloads.map((payload) => Buffer.from(payload)))) ===
       manifest.snapshotSha256,
-    "Sites snapshot 組合雜湊不一致。",
+    "Static snapshot 組合雜湊不一致。",
   );
 
   const dashboard = parsed.dashboard as unknown[];
@@ -250,25 +247,6 @@ export async function verifySitesSnapshot({
     assert(sha256(runtimeFile) === file.sha256, `${file.path} SHA256 mismatch`);
   }
 
-  if (!pagesMode) {
-    const publicHeadersPath = snapshotPath(snapshotRoot, manifest.publicHeaders.path);
-    const publicHeaders = await readFile(publicHeadersPath);
-    assert(
-      publicHeaders.byteLength === manifest.publicHeaders.bytes,
-      "public/_headers 大小與 manifest 不一致。",
-    );
-    assert(
-      sha256(publicHeaders) === manifest.publicHeaders.sha256,
-      "public/_headers SHA256 與 manifest 不一致。",
-    );
-    assert(
-      publicHeaders
-        .toString("utf8")
-        .includes(`X-Data-Version: ${CURRENT_RELEASE_CONTRACT.dataVersion}`),
-      "public/_headers dataVersion 不正確。",
-    );
-  }
-
   const workbookPath = snapshotPath(snapshotRoot, manifest.excel.path);
   const workbook = await readFile(workbookPath);
   assert(workbook.byteLength === manifest.excel.bytes, "Excel 大小與 manifest 不一致。");
@@ -289,12 +267,12 @@ export async function verifySitesSnapshot({
     );
     assert(
       sha256(database) === manifest.sourceDatabase.sha256,
-      "本機 dev.db 已變更，請先執行 npm run sites:snapshot。",
+      "本機 dev.db 已變更，請先執行 npm run release:snapshot。",
     );
   }
 
   console.log(
-    `${pagesMode ? "Pages" : "Sites"} snapshot 驗證通過：${dashboard.length} 筆戰鬥版本、${review.length} 筆開放審核、${sources.length} 個來源。`,
+    `Static snapshot 驗證通過：${dashboard.length} 筆戰鬥版本、${review.length} 筆開放審核、${sources.length} 個來源。`,
   );
   return manifest;
 }
@@ -307,15 +285,14 @@ function readOption(name: string) {
 const snapshotRoot = readOption("--root");
 const databaseRoot = readOption("--database-root");
 const scriptPath = process.argv[1]?.replaceAll("\\", "/");
-if (scriptPath?.endsWith("/scripts/check-sites-snapshot.ts")) {
+if (scriptPath?.endsWith("/scripts/check-static-snapshot.ts")) {
   if (snapshotRoot === "" || databaseRoot === "") {
     console.error("--root and --database-root require a path.");
     process.exitCode = 1;
   } else {
-    verifySitesSnapshot({
+    verifyStaticSnapshot({
       snapshotRoot,
       databaseRoot,
-      pagesMode: process.argv.includes("--pages"),
     }).catch((error) => {
       console.error(error instanceof Error ? error.message : error);
       process.exitCode = 1;

@@ -9,7 +9,7 @@ import {
 } from "../src/config/release-contract";
 import { assertBatchRegistry } from "../src/config/batch-registry";
 import { validateReviewConsistency } from "./validate-review-consistency";
-import { verifySitesSnapshot } from "./check-sites-snapshot";
+import { verifyStaticSnapshot } from "./check-static-snapshot";
 
 const execFileAsync = promisify(execFile);
 
@@ -18,7 +18,6 @@ export interface ReleaseVerificationOptions {
   reviewRoot?: string;
   databaseRoot?: string;
   repositoryRoot?: string;
-  pagesMode?: boolean;
   checkGeneratedPaths?: boolean;
 }
 
@@ -69,7 +68,6 @@ export async function verifyRelease({
   reviewRoot: requestedReviewRoot = requestedSnapshotRoot,
   databaseRoot: requestedDatabaseRoot = process.cwd(),
   repositoryRoot: requestedRepositoryRoot = process.cwd(),
-  pagesMode = false,
   checkGeneratedPaths = false,
 }: ReleaseVerificationOptions = {}) {
   const snapshotRoot = path.resolve(requestedSnapshotRoot);
@@ -85,7 +83,7 @@ export async function verifyRelease({
       throw new Error(`Release review output is missing: ${reviewPath}.`);
     }
   }
-  await verifySitesSnapshot({ snapshotRoot, databaseRoot, pagesMode });
+  await verifyStaticSnapshot({ snapshotRoot, databaseRoot });
 
   const manifest = JSON.parse(
     await readFile(path.join(snapshotRoot, CURRENT_RELEASE_CONTRACT.snapshot.manifestPath), "utf8"),
@@ -161,7 +159,6 @@ if (scriptPath?.endsWith("/scripts/verify-release.ts")) {
       reviewRoot,
       databaseRoot,
       repositoryRoot,
-      pagesMode: process.argv.includes("--pages"),
       checkGeneratedPaths: process.argv.includes("--generated-paths"),
     })
       .then(({ generatedPaths }) => {

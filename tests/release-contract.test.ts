@@ -34,6 +34,7 @@ describe("current release contract", () => {
       expect(isExpectedReleaseGeneratedPath(entry.review.markdownPath)).toBe(true);
     }
     expect(isExpectedReleaseGeneratedPath(CURRENT_RELEASE_CONTRACT.snapshot.exportPath)).toBe(true);
+    expect(isExpectedReleaseGeneratedPath("public/_headers")).toBe(false);
   });
 
   it("rejects stale, unrelated, and escaping generated paths", () => {
@@ -131,40 +132,19 @@ describe("release snapshot promotion", () => {
     const target = path.join(root, "target");
     try {
       for (const relativePath of SNAPSHOT_PROMOTION_TARGETS) {
-        await writeFixture(
-          staging,
-          relativePath === "public/_headers"
-            ? relativePath
-            : path.join(relativePath, "payload.txt"),
-          "new",
-        );
+        await writeFixture(staging, path.join(relativePath, "payload.txt"), "new");
       }
-      await writeFixture(staging, "public/_headers", "new headers");
       for (const relativePath of SNAPSHOT_PROMOTION_TARGETS) {
-        await writeFixture(
-          target,
-          relativePath === "public/_headers"
-            ? relativePath
-            : path.join(relativePath, "payload.txt"),
-          "old",
-        );
+        await writeFixture(target, path.join(relativePath, "payload.txt"), "old");
       }
-      await writeFixture(target, "public/_headers", "old headers");
 
       await promoteSnapshot(staging, target);
 
       for (const relativePath of SNAPSHOT_PROMOTION_TARGETS) {
-        const filePath =
-          relativePath === "public/_headers"
-            ? path.join(target, relativePath)
-            : path.join(target, relativePath, "payload.txt");
-        await expect(readFile(filePath, "utf8")).resolves.toBe(
-          relativePath === "public/_headers" ? "new headers" : "new",
-        );
+        await expect(
+          readFile(path.join(target, relativePath, "payload.txt"), "utf8"),
+        ).resolves.toBe("new");
       }
-      await expect(readFile(path.join(target, "public/_headers"), "utf8")).resolves.toBe(
-        "new headers",
-      );
     } finally {
       await rm(root, { recursive: true, force: true });
     }

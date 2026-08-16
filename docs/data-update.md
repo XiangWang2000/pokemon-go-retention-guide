@@ -7,7 +7,7 @@
 5. 沒有精確 rank 時只保存 tier、rating 或原始摘要，不自行換算。
 6. 一般、暗影、淨化、Mega、Dynamax、Gigantamax 不可合併。
 7. 來源衝突須同時保存、說明方法差異、降低 confidence 並建立 Review Queue。
-8. 更新後先明確產生 review 與 Sites snapshot，再執行完整驗證；驗證不得代替產生步驟或隱性改寫受控產物。
+8. 更新後先明確產生 review 與 static snapshot，再執行完整驗證；驗證不得代替產生步驟或隱性改寫受控產物。
 9. 人工確認本批 Markdown／JSON 報告後才可開始下一批。
 
 ## 目前批次執行順序
@@ -31,11 +31,11 @@ npm run data:import:372-386
 npm run data:recompute:001-386
 npm run data:validate
 npm run review:generate
-npm run sites:snapshot
+npm run release:snapshot
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full
 ```
 
-`data:import:*` 依每批最多 30 個圖鑑編號切開；#312～#386 使用 `312-341`、`342-371`、`372-386` 三個可獨立驗證的來源、batch、form 與 review 單位，再連續執行 `data:recompute:001-386`、資料驗證與 Sites snapshot。第三世代的 `canonicalGen3Species` 與獨立 `canonicalGen3Forms` 分別驗證物種、正式型態、型態名稱、屬性與 BattleVariant 邊界；Castform 天氣型態、Deoxys 四種 Forme、Shadow evolution closure、Primal 與 Mega 顯示名稱都不可由 batch 自己同時產生 expected 值繞過檢查。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
+`data:import:*` 依每批最多 30 個圖鑑編號切開；#312～#386 使用 `312-341`、`342-371`、`372-386` 三個可獨立驗證的來源、batch、form 與 review 單位，再連續執行 `data:recompute:001-386`、資料驗證與 static snapshot。第三世代的 `canonicalGen3Species` 與獨立 `canonicalGen3Forms` 分別驗證物種、正式型態、型態名稱、屬性與 BattleVariant 邊界；Castform 天氣型態、Deoxys 四種 Forme、Shadow evolution closure、Primal 與 Mega 顯示名稱都不可由 batch 自己同時產生 expected 值繞過檢查。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
 
 ## Current release clean rebuild
 
@@ -55,13 +55,13 @@ $env:DATABASE_URL = "file:./rebuild-ci.db"
 npm run data:verify:published-integrity
 npm run review:generate
 npx tsx scripts/generate-current-recalibration-report.ts
-npm run sites:snapshot
+npm run release:snapshot
 npm run release:verify
 ```
 
-`sites:snapshot` 先把完整輸出寫入 repository 內的暫存目錄，再以 `release:verify` 驗證 manifest、來源
+`release:snapshot` 先把完整輸出寫入 repository 內的暫存目錄，再以 `release:verify` 驗證 manifest、來源
 資料庫、review 與目前 scope，最後才 promote 到 `site-data/`、`public/data/`、`public/exports/` 與
-`public/_headers`。驗證失敗時不會留下半成品正式 artifact。
+正式 static artifact。驗證失敗時不會留下半成品正式 artifact。
 
 驗收除了批次範圍與資料版本，還要確認 1912 個 BattleVariants、245 個展示家族、13 個 IV
 recommendations、`407-sinnoh`、唯一的 `315-hoenn -> 407-sinnoh`，以及不存在 `407-other`。

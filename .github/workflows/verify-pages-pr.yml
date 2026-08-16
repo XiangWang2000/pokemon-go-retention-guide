@@ -50,7 +50,7 @@ jobs:
       - name: Release verification contract
         env:
           DATABASE_URL: file:./rebuild-ci.db
-        run: npm run release:verify -- --pages
+        run: npm run release:verify
       - name: Lint
         run: npm run lint
       - name: Typecheck

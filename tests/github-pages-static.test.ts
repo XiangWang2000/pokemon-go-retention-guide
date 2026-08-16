@@ -31,15 +31,22 @@ describe("GitHub Pages static export", () => {
   it("uses Pages-compatible commands as the default npm workflow", () => {
     const pkg = JSON.parse(readFileSync("package.json", "utf8")) as {
       scripts: Record<string, string>;
+      devDependencies: Record<string, string>;
     };
     expect(pkg.scripts.dev).toContain("next dev");
-    expect(pkg.scripts.dev).toContain("--pages");
+    expect(pkg.scripts.dev).toContain("snapshot:check");
     expect(pkg.scripts.build).toBe("npm run build:pages");
     expect(pkg.scripts.start).toBe("node scripts/serve-pages.mjs");
-    expect(pkg.scripts["sites:dev"]).toContain("vinext dev");
-    expect(pkg.scripts["sites:start"]).toContain("start-sites.mjs");
-    expect(pkg.scripts["sites:build"]).toContain("vinext build");
-    expect(pkg.scripts["sites:build"]).not.toContain("npm run build");
+    expect(pkg.scripts["release:snapshot"]).toContain("prepare-release-snapshot.ts");
+    expect(pkg.scripts["snapshot:check"]).toContain("check-static-snapshot.ts");
+    expect(Object.keys(pkg.scripts).some((name) => name.startsWith("sites:"))).toBe(false);
+    expect(pkg.devDependencies).not.toHaveProperty("vinext");
+    expect(pkg.devDependencies).not.toHaveProperty("wrangler");
+    expect(pkg.devDependencies).not.toHaveProperty("@cloudflare/vite-plugin");
+    expect(pkg.devDependencies).not.toHaveProperty("@vitejs/plugin-react");
+    expect(pkg.devDependencies).not.toHaveProperty("@vitejs/plugin-rsc");
+    expect(pkg.devDependencies).not.toHaveProperty("react-server-dom-webpack");
+    expect(pkg.devDependencies).not.toHaveProperty("vite");
   });
 
   it("uses an explicit Pages signal for Next static export", () => {
@@ -70,11 +77,26 @@ describe("GitHub Pages static export", () => {
     expect(workflow).not.toContain("gh-pages");
   });
 
-  it("keeps the legacy Sites Excel redirect outside the Pages artifact", () => {
-    const worker = readFileSync("worker/index.ts", "utf8");
-    expect(worker).toContain('url.pathname === "/api/export"');
-    expect(worker).toContain("Response.redirect(target, 307)");
-    expect(worker).toContain("CURRENT_DATA_SCOPE");
+  it("does not retain the retired runtime or header artifact", () => {
+    expect(existsSync("vite.config.ts")).toBe(false);
+    expect(existsSync("worker/index.ts")).toBe(false);
+    expect(existsSync("build/sites-vite-plugin.ts")).toBe(false);
+    expect(existsSync("scripts/start-sites.mjs")).toBe(false);
+    expect(existsSync("scripts/purge-sites-cache.mjs")).toBe(false);
+    expect(existsSync("public/_headers")).toBe(false);
+    if (existsSync("out")) expect(existsSync("out/_headers")).toBe(false);
+    const manifest = JSON.parse(readFileSync("site-data/manifest.json", "utf8")) as {
+      publicHeaders?: unknown;
+    };
+    expect(manifest).not.toHaveProperty("publicHeaders");
+  });
+
+  it("keeps the full verification path Pages-only", () => {
+    const verifier = readFileSync("scripts/verify.ps1", "utf8");
+    expect(verifier).toContain('Invoke-NpmScript "snapshot:check"');
+    expect(verifier).toContain('Invoke-NpmScript "release:verify"');
+    expect(verifier).not.toContain("sites:check");
+    expect(verifier).not.toContain("sites:snapshot");
   });
 
   it("records hashes for browser-loaded supplemental data", () => {

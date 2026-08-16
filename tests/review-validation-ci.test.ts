@@ -18,7 +18,7 @@ describe("review validation CI contract", () => {
     ]) {
       const workflow = readFileSync(path, "utf8");
       expect(workflow).toContain("- name: Release verification contract");
-      expect(workflow).toContain("run: npm run release:verify -- --pages");
+      expect(workflow).toContain("run: npm run release:verify");
       expect(workflow).not.toContain("npm run review:validate");
     }
   });
