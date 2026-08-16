@@ -962,7 +962,7 @@ export const evolutionPairs342371: readonly [string, string][] = [
   ],
   [
     "356-hoenn",
-    "477-other"
+    "477-sinnoh"
   ],
   [
     "360-hoenn",
@@ -974,7 +974,7 @@ export const evolutionPairs342371: readonly [string, string][] = [
   ],
   [
     "361-hoenn",
-    "478-other"
+    "478-sinnoh"
   ],
   [
     "363-hoenn",

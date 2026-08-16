@@ -291,13 +291,67 @@ export const BATCH_REGISTRY = [
       adapter: "gen4",
       phase: "post-recompute",
       entrypoint: "scripts/import-gen4.ts",
-      passBatchKey: false,
+      passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-387-416.ts",
-      passBatchKey: false,
+      generator: "scripts/generate-review-gen4.ts",
+      passBatchKey: true,
       jsonPath: "review/387-416.json",
       markdownPath: "review/387-416.md",
+    },
+  },
+  {
+    key: "417-446",
+    minDex: 417,
+    maxDex: 446,
+    generation: 4,
+    import: {
+      adapter: "gen4",
+      phase: "post-recompute",
+      entrypoint: "scripts/import-gen4.ts",
+      passBatchKey: true,
+    },
+    review: {
+      generator: "scripts/generate-review-gen4.ts",
+      passBatchKey: true,
+      jsonPath: "review/417-446.json",
+      markdownPath: "review/417-446.md",
+    },
+  },
+  {
+    key: "447-476",
+    minDex: 447,
+    maxDex: 476,
+    generation: 4,
+    import: {
+      adapter: "gen4",
+      phase: "post-recompute",
+      entrypoint: "scripts/import-gen4.ts",
+      passBatchKey: true,
+    },
+    review: {
+      generator: "scripts/generate-review-gen4.ts",
+      passBatchKey: true,
+      jsonPath: "review/447-476.json",
+      markdownPath: "review/447-476.md",
+    },
+  },
+  {
+    key: "477-493",
+    minDex: 477,
+    maxDex: 493,
+    generation: 4,
+    import: {
+      adapter: "gen4",
+      phase: "post-recompute",
+      entrypoint: "scripts/import-gen4.ts",
+      passBatchKey: true,
+    },
+    review: {
+      generator: "scripts/generate-review-gen4.ts",
+      passBatchKey: true,
+      jsonPath: "review/477-493.json",
+      markdownPath: "review/477-493.md",
     },
   },
 ] as const satisfies readonly BatchRegistryEntry[];
@@ -317,6 +371,24 @@ export function getBatchByKey(batch: string): BatchRegistryEntry {
   const entry = BATCH_REGISTRY.find((candidate) => candidate.key === batch);
   if (!entry) throw new Error(`Unknown published batch: ${batch}`);
   return entry;
+}
+
+/**
+ * Form identities for the default regional form owned by each published
+ * Pokédex number.  This is intentionally derived from the ordered registry,
+ * so cross-generation source validation can accept an already-published form
+ * without trusting the evolution pairs under test.
+ */
+export function getPublishedDefaultFormIds(entries: readonly BatchRegistryEntry[] = BATCH_REGISTRY) {
+  const regionByGeneration = { 1: "kanto", 2: "johto", 3: "hoenn", 4: "sinnoh" } as const;
+  const formIds = new Set<string>();
+  for (const entry of entries) {
+    const region = regionByGeneration[entry.generation];
+    for (let dexNumber = entry.minDex; dexNumber <= entry.maxDex; dexNumber += 1) {
+      formIds.add(`${String(dexNumber).padStart(3, "0")}-${region}`);
+    }
+  }
+  return formIds;
 }
 
 export function assertBatchRegistry(entries: readonly BatchRegistryEntry[] = BATCH_REGISTRY) {

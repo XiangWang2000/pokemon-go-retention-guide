@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { DATA_VERSION } from "@/config/release";
 import { findTextIntegrityIssues } from "@/data/text-integrity";
 import { deriveEvolutionReleaseClosure } from "@/data/evolution-release";
 import {
@@ -103,7 +104,7 @@ describe("Gen 3 #282-#311 integration", () => {
     expect(row("281-hoenn-normal")?.evolutionPaths).toEqual(
       expect.arrayContaining([
         expect.objectContaining({ toFormId: "282-hoenn" }),
-        expect.objectContaining({ toFormId: "475-other", isEvolutionStub: true }),
+        expect.objectContaining({ toFormId: "475-sinnoh", isEvolutionStub: false }),
       ]),
     );
   });
@@ -120,14 +121,14 @@ describe("Gen 3 #282-#311 integration", () => {
     );
   });
 
-  it("merges Azurill into the existing Marill family and keeps Probopass as a stub", () => {
+  it("merges Azurill into the existing Marill family and materializes Probopass", () => {
     expect(row("298-hoenn-normal")?.familyKey).toBe("JOHTO_FAMILY_183");
     expect(row("298-hoenn-normal")?.evolutionPaths).toEqual(
       expect.arrayContaining([expect.objectContaining({ toFormId: "183-johto" })]),
     );
     expect(row("299-hoenn-normal")?.evolutionPaths).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ toFormId: "476-other", isEvolutionStub: true }),
+        expect.objectContaining({ toFormId: "476-sinnoh", isEvolutionStub: false }),
       ]),
     );
   });
@@ -139,8 +140,8 @@ describe("Gen 3 #282-#311 integration", () => {
     expect(new Set(standard.map((candidate) => candidate.formId)).size).toBe(30);
     expect(standard.every((candidate) =>
       candidate.evolutionPaths.every((path) =>
-        path.toFormId === "475-other" ||
-        path.toFormId === "476-other" ||
+        path.toFormId === "475-sinnoh" ||
+        path.toFormId === "476-sinnoh" ||
         dashboard.some((item) => item.formId === path.toFormId),
       ),
     )).toBe(true);
@@ -165,7 +166,7 @@ describe("Gen 3 #282-#311 integration", () => {
     expect(batchRows.some((candidate) => candidate.assessmentDisposition === "TRUE_DATA_PENDING")).toBe(false);
     expect(batchRows.some((candidate) => candidate.decision === "HOLD_FOR_NOW")).toBe(false);
     expect(review).toMatchObject({
-      dataVersion: "2026.08.13-r24",
+      dataVersion: DATA_VERSION,
       counts: { species: 30, forms: 30, battleVariants: 126, trueDataPending: 0 },
       crossBatchIntegration: { result: "PASS" },
     });

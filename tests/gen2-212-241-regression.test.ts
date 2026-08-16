@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { getDashboardRows, getSources } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
 import { buildFormOverviews } from "@/presentation/form-overview";
+import { evolutionPairs212241, forms212241, species212241 } from "@/data/batch-212-241";
 
 const rows = await getDashboardRows();
 const forms = buildFormOverviews(rows);
@@ -55,9 +56,9 @@ describe("Gen2 #212-#241 JOHTO integration", () => {
 
   it("keeps future evolution stubs and released Mega or Max variants distinct", () => {
     for (const [formId, targetId] of [
-      ["215-johto", "461-other"],
+      ["215-johto", "461-sinnoh"],
       ["217-johto", "901-hisui"],
-      ["221-johto", "473-other"],
+      ["221-johto", "473-sinnoh"],
       ["234-johto", "899-hisui"],
     ]) {
       expect(
@@ -69,6 +70,28 @@ describe("Gen2 #212-#241 JOHTO integration", () => {
     }
     for (const id of ["213-johto-dynamax", "237-johto-dynamax"]) {
       expect(rows.find((row) => row.id === id)).toMatchObject({ releaseStatus: "RELEASED" });
+    }
+  });
+
+  it("keeps same-batch Johto evolution edges and family identity explicit", () => {
+    expect(evolutionPairs212241).toEqual(
+      expect.arrayContaining([
+        ["216-johto", "217-johto"],
+        ["218-johto", "219-johto"],
+        ["220-johto", "221-johto"],
+      ]),
+    );
+    for (const [dexNumber, familyKey, parentId] of [
+      [217, "JOHTO_FAMILY_216", "216-johto"],
+      [219, "JOHTO_FAMILY_218", "218-johto"],
+      [221, "JOHTO_FAMILY_220", "220-johto"],
+    ] as const) {
+      expect(species212241.find((species) => species.dexNumber === dexNumber)?.familyKey).toBe(
+        familyKey,
+      );
+      expect(forms212241.find((form) => form.dexNumber === dexNumber)?.evolvesFromFormId).toBe(
+        parentId,
+      );
     }
   });
 

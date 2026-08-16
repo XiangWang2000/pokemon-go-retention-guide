@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { DATA_VERSION } from "@/config/release";
 import type { PrismaDashboardRow, PrismaSourceRow } from "@/lib/data-prisma";
 import review from "../review/152-181.json";
 import officialResearch from "../research_notes/official-152-181.json";
@@ -41,7 +42,7 @@ describe("#152-181 generated runtime and review data", () => {
     expect(rows.every((candidate) => candidate.formNameZhTw === "城都")).toBe(true);
     expect(rows).toHaveLength(121);
     expect(rows.reduce((sum, candidate) => sum + candidate.categoryStatuses.length, 0)).toBe(847);
-    expect(review.dataVersion).toBe("2026.08.13-r24");
+    expect(review.dataVersion).toBe(DATA_VERSION);
     expect(review.counts).toMatchObject({ species: 30, forms: 30, battleVariants: 121, trueDataPending: 0 });
     expect(review.crossBatchIntegration.result).toBe("PASS");
   });
@@ -73,7 +74,7 @@ describe("#152-181 generated runtime and review data", () => {
     );
   });
 
-  it("keeps actual Johto extensions distinct from future evolution stubs", () => {
+  it("keeps actual Johto extensions distinct from completed evolution targets", () => {
     expect(row("169-johto-normal")?.familyKey).toBe("KANTO_FAMILY_041");
     expect(new Set(familyContaining("169-johto")?.members.map((member) => member.form.formId))).toEqual(
       new Set(["041-kanto", "042-kanto", "169-johto"]),
@@ -81,10 +82,10 @@ describe("#152-181 generated runtime and review data", () => {
     expect(familyContaining("169-johto")?.isBatchTruncated).toBe(false);
     expect(row("176-johto-normal")?.evolutionPaths).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ toFormId: "468-other", isEvolutionStub: true }),
+        expect.objectContaining({ toFormId: "468-sinnoh", isEvolutionStub: false }),
       ]),
     );
-    expect(familyContaining("175-johto")?.isBatchTruncated).toBe(true);
+    expect(familyContaining("175-johto")?.isBatchTruncated).toBe(false);
   });
 
   it("preserves representative existing Kanto conclusions while adding Johto rows", () => {

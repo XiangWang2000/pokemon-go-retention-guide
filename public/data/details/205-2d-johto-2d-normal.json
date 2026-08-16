@@ -1,5 +1,19 @@
 {
-  "paths": [],
+  "paths": [
+    {
+      "id": "evolution-r19-204-johto-205-johto",
+      "fromFormId": "204-johto",
+      "fromNameZhTw": "榛果球",
+      "fromFormNameZhTw": "城都",
+      "toFormId": "205-johto",
+      "toNameZhTw": "佛烈托斯",
+      "toFormNameZhTw": "城都",
+      "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+      "availabilityNotesZhTw": "此進化路徑已在 #182～#211 整合資料中核對；批次外目標以正式 stub 保留。",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T10:00:00.000Z"
+    }
+  ],
   "conflicts": [],
   "changeLogs": [
     {
@@ -8,7 +22,7 @@
       "previousValue": "CLEAR_USE",
       "newValue": "LIMITED_USE",
       "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-08-12T16:00:00.000Z",
+      "changedAt": "2026-08-15T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": null
     },

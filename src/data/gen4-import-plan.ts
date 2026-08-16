@@ -1,13 +1,12 @@
-import { forms387416 } from "./batch-387-416";
-import {
-  releasedDynamaxForms387416,
-  releasedNormalForms387416,
-  releasedShadowForms387416,
-} from "./batch-387-416-gameplay";
-import { pveEvidenceForVariant387416, type Gen4PveEvidence } from "./batch-387-416-pve";
-import { pvpokeSpeciesId387416 } from "./batch-387-416-pvpoke";
+import { getGen4BatchDefinition } from "./batch-gen4";
+import type {
+  Gen4BatchDefinition,
+  Gen4BatchForm,
+  Gen4PveEvidence,
+  Gen4VariantKey,
+} from "./batch-gen4-types";
 
-export type Gen4PlanVariantKey = "NORMAL" | "SHADOW" | "PURIFIED" | "DYNAMAX";
+export type { Gen4VariantKey as Gen4PlanVariantKey } from "./batch-gen4-types";
 export type Gen4PlanDecision = "KEEP" | "CONDITIONAL_KEEP" | "TRANSFER_CANDIDATE";
 export type Gen4PlanDisposition =
   | "CLEAR_USE"
@@ -30,13 +29,15 @@ export type Gen4PlanRank = {
   moves: string[];
 };
 
-export type Gen4RankingSnapshots = Readonly<Record<Gen4PlanLeague, readonly Gen4PvpRankingRow[]>>;
+export type Gen4RankingSnapshots = Readonly<
+  Record<Gen4PlanLeague, readonly Gen4PvpRankingRow[]>
+>;
 
 export type Gen4ImportPlanRow = {
   id: string;
   formId: string;
   dexNumber: number;
-  variantKey: Gen4PlanVariantKey;
+  variantKey: Gen4VariantKey;
   released: boolean;
   releaseStatus: "RELEASED" | "UNRELEASED";
   ranks: Gen4PlanRank[];
@@ -47,22 +48,29 @@ export type Gen4ImportPlanRow = {
 };
 
 const leagues = ["GREAT", "ULTRA", "MASTER"] as const;
-const variantKeys = ["NORMAL", "SHADOW", "PURIFIED", "DYNAMAX"] as const;
+const baseVariantKeys = ["NORMAL", "SHADOW", "PURIFIED", "DYNAMAX"] as const;
 
-function variantReleased(formId: string, variantKey: Gen4PlanVariantKey) {
-  if (variantKey === "NORMAL") return releasedNormalForms387416.has(formId);
+function variantReleased(
+  definition: Gen4BatchDefinition,
+  formId: string,
+  variantKey: Gen4VariantKey,
+) {
+  if (variantKey === "NORMAL") return definition.releasedNormalForms.has(formId);
   if (variantKey === "SHADOW" || variantKey === "PURIFIED") {
-    return releasedShadowForms387416.has(formId);
+    return definition.releasedShadowForms.has(formId);
   }
-  return releasedDynamaxForms387416.has(formId);
+  if (variantKey === "DYNAMAX") return definition.releasedDynamaxForms.has(formId);
+  if (variantKey === "MEGA") return definition.releasedMegaForms.has(formId);
+  return definition.releasedGigantamaxForms.has(formId);
 }
 
 function findRanks(
-  form: (typeof forms387416)[number],
+  definition: Gen4BatchDefinition,
+  form: Gen4BatchForm,
   variantKey: "NORMAL" | "SHADOW",
   rankings: Gen4RankingSnapshots,
 ): Gen4PlanRank[] {
-  const speciesId = pvpokeSpeciesId387416(form, variantKey === "SHADOW");
+  const speciesId = definition.pvpokeSpeciesId(form, variantKey === "SHADOW");
   return leagues.flatMap((league) => {
     const rows = rankings[league];
     const index = rows.findIndex((row) => row.speciesId === speciesId);
@@ -82,29 +90,23 @@ function findRanks(
 
 function initialDecision(
   released: boolean,
-  variantKey: Gen4PlanVariantKey,
+  variantKey: Gen4VariantKey,
   bestPvpRank: number | null,
   pveEvidence: Gen4PveEvidence | null,
 ): Gen4PlanDecision {
   if (!released) return "TRANSFER_CANDIDATE";
-
-  // Import-stage seeding uses the strongest confirmed use instead of allowing a
-  // weaker PvE classification to hide a top-100 PvP result.
   if (
+    variantKey === "MEGA" ||
     variantKey === "DYNAMAX" ||
+    variantKey === "GIGANTAMAX" ||
     pveEvidence?.level === "CORE_INVESTMENT" ||
     (bestPvpRank !== null && bestPvpRank <= 100)
   ) {
     return "KEEP";
   }
-
-  if (
-    pveEvidence !== null ||
-    (bestPvpRank !== null && bestPvpRank <= 250)
-  ) {
+  if (pveEvidence !== null || (bestPvpRank !== null && bestPvpRank <= 250)) {
     return "CONDITIONAL_KEEP";
   }
-
   return "TRANSFER_CANDIDATE";
 }
 
@@ -118,37 +120,62 @@ function initialDisposition(
   return "NO_SIGNIFICANT_USE";
 }
 
-export function buildGen4ImportPlan387416(rankings: Gen4RankingSnapshots): Gen4ImportPlanRow[] {
-  return forms387416.flatMap((form) =>
-    variantKeys.map((variantKey) => {
+export function buildGen4ImportPlan(
+  definition: Gen4BatchDefinition,
+  rankings: Gen4RankingSnapshots,
+): Gen4ImportPlanRow[] {
+  const rows: Gen4ImportPlanRow[] = definition.forms.flatMap((form) => {
+    if (form.includeVariants === false || form.isStub) return [];
+    return baseVariantKeys.map((variantKey) => {
       const id = `${form.id}-${variantKey.toLowerCase()}`;
-      const released = variantReleased(form.id, variantKey);
+      const released = variantReleased(definition, form.id, variantKey);
       const ranks =
         released && (variantKey === "NORMAL" || variantKey === "SHADOW")
-          ? findRanks(form, variantKey, rankings)
+          ? findRanks(definition, form, variantKey, rankings)
           : [];
       const bestPvpRank = ranks.length ? Math.min(...ranks.map((rank) => rank.rank)) : null;
-      const pveEvidence = pveEvidenceForVariant387416(id);
-      const initialDecisionValue = initialDecision(
-        released,
-        variantKey,
-        bestPvpRank,
-        pveEvidence,
-      );
-
+      const pveEvidence = definition.pveEvidenceForVariant(id);
+      const decision = initialDecision(released, variantKey, bestPvpRank, pveEvidence);
       return {
         id,
         formId: form.id,
         dexNumber: form.dexNumber,
         variantKey,
         released,
-        releaseStatus: released ? "RELEASED" : "UNRELEASED",
+        releaseStatus: released ? ("RELEASED" as const) : ("UNRELEASED" as const),
         ranks,
         bestPvpRank,
         pveEvidence,
-        initialDecision: initialDecisionValue,
-        initialDisposition: initialDisposition(initialDecisionValue, released),
+        initialDecision: decision,
+        initialDisposition: initialDisposition(decision, released),
       };
-    }),
-  );
+    });
+  });
+
+  for (const special of definition.specialVariants) {
+    const form = definition.forms.find((candidate) => candidate.id === special.formId);
+    if (!form) throw new Error(`Special Gen4 variant ${special.id} references ${special.formId}.`);
+    const released = special.released;
+    const pveEvidence = definition.pveEvidenceForVariant(special.id);
+    const decision = initialDecision(released, special.variantKey, null, pveEvidence);
+    rows.push({
+      id: special.id,
+      formId: form.id,
+      dexNumber: form.dexNumber,
+      variantKey: special.variantKey,
+      released,
+      releaseStatus: released ? "RELEASED" : "UNRELEASED",
+      ranks: [],
+      bestPvpRank: null,
+      pveEvidence,
+      initialDecision: decision,
+      initialDisposition: initialDisposition(decision, released),
+    });
+  }
+
+  return rows;
+}
+
+export function buildGen4ImportPlan387416(rankings: Gen4RankingSnapshots) {
+  return buildGen4ImportPlan(getGen4BatchDefinition("387-416"), rankings);
 }

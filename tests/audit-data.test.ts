@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { filterAuditRows, normalizeAuditQuery, type AuditSummarySnapshot } from "@/lib/audit-data";
+import { CURRENT_RELEASE_CONTRACT } from "@/config/release-contract";
 import auditSummarySnapshot from "../site-data/auditSummary.json";
 
 const snapshot = auditSummarySnapshot as unknown as AuditSummarySnapshot;
@@ -31,7 +32,7 @@ describe("Audit static data", () => {
     const query = normalizeAuditQuery(new URLSearchParams({ decision: "KEEP" }));
     const filtered = filterAuditRows(snapshot.rows, query, snapshot.dataAsOf);
 
-    expect(snapshot.rows).toHaveLength(1912);
+    expect(snapshot.rows).toHaveLength(CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants);
     expect(filtered.length).toBeGreaterThan(0);
     expect(filtered.length).toBeLessThan(snapshot.rows.length);
   });

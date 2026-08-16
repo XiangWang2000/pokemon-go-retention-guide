@@ -1,17 +1,17 @@
 {
   "paths": [
     {
-      "id": "evolution-cross-193-johto-469-other",
+      "id": "evolution-cross-193-johto-469-sinnoh",
       "fromFormId": "193-johto",
       "fromNameZhTw": "蜻蜻蜓",
       "fromFormNameZhTw": "城都",
-      "toFormId": "469-other",
+      "toFormId": "469-sinnoh",
       "toNameZhTw": "遠古巨蜓",
-      "toFormNameZhTw": "其他",
-      "evolutionMethodZhTw": "依 Pokémon GO 當期道具、夥伴或特殊條件消耗糖果進化",
-      "availabilityNotesZhTw": "正式後續世代進化；以 stub 保留進化價值，完整戰鬥資料待該世代批次納入。",
+      "toFormNameZhTw": "神奧",
+      "evolutionMethodZhTw": "Pokémon GO 正式進化路徑；擁有批次提供型態身份。",
+      "availabilityNotesZhTw": "由第四世代 447-476 研究 manifest 建立；型態身份由擁有批次提供。",
       "requiresEvent": false,
-      "verifiedAt": "2026-08-08T16:00:00.000Z"
+      "verifiedAt": "2026-08-15T16:00:00.000Z"
     }
   ],
   "conflicts": [],
@@ -22,7 +22,7 @@
       "previousValue": "TRANSFER_CANDIDATE",
       "newValue": "CONDITIONAL_KEEP",
       "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-      "changedAt": "2026-08-12T16:00:00.000Z",
+      "changedAt": "2026-08-15T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": null
     },
@@ -32,7 +32,7 @@
       "previousValue": "NO_SIGNIFICANT_USE",
       "newValue": "LIMITED_USE",
       "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-08-12T16:00:00.000Z",
+      "changedAt": "2026-08-15T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": null
     },

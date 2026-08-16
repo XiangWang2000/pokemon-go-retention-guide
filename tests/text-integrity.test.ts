@@ -71,8 +71,8 @@ describe("visible text integrity and cross-generation target provenance", () => 
     );
     const names = {
       "982-paldea": "\u571f\u9f8d\u7bc0\u7bc0",
-      "461-other": "\u746a\u72c3\u62c9",
-      "473-other": "\u8c61\u7259\u8c6c",
+      "461-sinnoh": "\u746a\u72c3\u62c9",
+      "473-sinnoh": "\u8c61\u7259\u8c6c",
       "899-hisui": "\u8a6d\u89d2\u9e7f",
       "901-hisui": "\u6708\u6708\u718a",
     } as const;
@@ -80,8 +80,8 @@ describe("visible text integrity and cross-generation target provenance", () => 
       expect(targetById.get(id)?.nameZhTw, id).toBe(name);
     const expectedEdges = [
       ["206-johto", "982-paldea"],
-      ["215-johto", "461-other"],
-      ["221-johto", "473-other"],
+      ["215-johto", "461-sinnoh"],
+      ["221-johto", "473-sinnoh"],
       ["234-johto", "899-hisui"],
       ["217-johto", "901-hisui"],
     ];

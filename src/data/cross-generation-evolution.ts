@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { readFile } from "node:fs/promises";
 import type { PrismaClient } from "../../generated/prisma/client";
 import { assertNoTextIntegrityIssues } from "./text-integrity";
@@ -121,11 +122,29 @@ function assertEvolutionData(data: CrossGenerationEvolutionData) {
   }
 }
 
-export async function loadCrossGenerationEvolutionData() {
-  const raw = await readFile(sourceFile, "utf8");
+function parseEvolutionData(raw: string) {
   const data = JSON.parse(raw.replace(/^\uFEFF/, "")) as CrossGenerationEvolutionData;
   assertEvolutionData(data);
   return data;
+}
+
+export async function loadCrossGenerationEvolutionData() {
+  const raw = await readFile(sourceFile, "utf8");
+  return parseEvolutionData(raw);
+}
+
+/**
+ * Return every form identity that the independently reviewed evolution
+ * manifest allows at a path endpoint.  Import-time source validation uses the
+ * same manifest rather than allowing a caller to bless an arbitrary external
+ * id by deriving it from the data under test.
+ */
+export function getCrossGenerationEvolutionFormIds() {
+  const data = parseEvolutionData(readFileSync(sourceFile, "utf8"));
+  return new Set([
+    ...data.targets.map((target) => formId(target.dexNumber, target.formKey)),
+    ...data.paths.flatMap((path) => [path.fromFormId, path.toFormId]),
+  ]);
 }
 
 function optionalDate(value: string) {

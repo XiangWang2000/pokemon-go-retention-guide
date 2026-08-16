@@ -21,12 +21,24 @@ describe("Gen 2 #182-211 data integration", () => {
       ["133-kanto", "197-johto"],
       ["079-kanto", "199-johto"],
       ["095-kanto", "208-johto"],
-      ["190-johto", "424-other"],
-      ["207-johto", "472-other"],
+      ["190-johto", "424-sinnoh"],
+      ["207-johto", "472-sinnoh"],
     ]));
     const cross = JSON.parse(readFileSync("research_notes/cross-generation-evolution-targets.json", "utf8"));
     const targets = new Set(cross.targets.map((target: { dexNumber: number; formKey: string }) => `${target.dexNumber}-${target.formKey.toLowerCase()}`));
-    expect(targets.has("424-other")).toBe(true);
-    expect(targets.has("472-other")).toBe(true);
+    expect(targets.has("424-sinnoh")).toBe(true);
+    expect(targets.has("472-sinnoh")).toBe(true);
+  });
+  it("keeps Pineco and Forretress connected in the source graph", () => {
+    expect(species182211.find((species) => species.dexNumber === 204)?.familyKey).toBe(
+      "JOHTO_FAMILY_204",
+    );
+    expect(species182211.find((species) => species.dexNumber === 205)?.familyKey).toBe(
+      "JOHTO_FAMILY_204",
+    );
+    expect(forms182211.find((form) => form.id === "205-johto")?.evolvesFromFormId).toBe(
+      "204-johto",
+    );
+    expect(evolutionPairs182211).toContainEqual(["204-johto", "205-johto"]);
   });
 });

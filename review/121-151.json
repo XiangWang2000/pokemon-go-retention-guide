@@ -1,7 +1,7 @@
 {
   "batch": "121-151",
-  "updatedAt": "2026-08-13",
-  "dataVersion": "2026.08.13-r24",
+  "updatedAt": "2026-08-16",
+  "dataVersion": "2026.08.16-r25",
   "rulesVersion": "2026.08.06-v7",
   "status": "ACCEPTED",
   "counts": {
@@ -60,7 +60,7 @@
     {
       "familyId": "KANTO_FAMILY_123:123-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留飛天螳螂（符合條件個體），以及巨鉗螳螂（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留巨鉗螳螂（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、Mega 候選）；保留可進化為巨鉗螳螂的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -72,13 +72,13 @@
     {
       "familyId": "KANTO_FAMILY_125:125-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留可進化為電擊魔獸的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留電擊魔獸（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選）；保留可進化為電擊魔獸的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_126:126-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留可進化為鴨嘴炎獸的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留鴨嘴炎獸（PvE 實戰候選）；保留可進化為鴨嘴炎獸的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -132,13 +132,13 @@
     {
       "familyId": "KANTO_FAMILY_133:133-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留伊布（極巨候選），以及水伊布（ML 高 IV 投資候選、極巨候選），以及雷伊布（極巨候選），以及火伊布（極巨候選），以及月亮伊布（PvP（GL Rank≤100、UL Rank≤100））；保留可進化為葉伊布、冰伊布、仙子伊布的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留伊布（極巨候選），以及水伊布（ML 高 IV 投資候選、極巨候選），以及雷伊布（極巨候選），以及火伊布（極巨候選），以及月亮伊布（PvP（GL Rank≤100、UL Rank≤100））；保留可進化為太陽伊布、月亮伊布、葉伊布、冰伊布、仙子伊布的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
       "familyId": "KANTO_FAMILY_137:137-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留可進化為多邊獸Ｚ的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留可進化為多邊獸Ⅱ、多邊獸Ｚ的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -162,7 +162,7 @@
     {
       "familyId": "KANTO_FAMILY_143:143-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留卡比獸（ML 高 IV 投資候選、道館防守候選、超極巨版本本身）；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留卡比獸（ML 高 IV 投資候選、道館防守候選、超極巨版本本身）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {

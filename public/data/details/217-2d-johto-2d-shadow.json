@@ -1,6 +1,19 @@
 {
   "paths": [
     {
+      "id": "evolution-r19-216-johto-217-johto",
+      "fromFormId": "216-johto",
+      "fromNameZhTw": "熊寶寶",
+      "fromFormNameZhTw": "城都",
+      "toFormId": "217-johto",
+      "toNameZhTw": "圈圈熊",
+      "toFormNameZhTw": "城都",
+      "evolutionMethodZhTw": "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+      "availabilityNotesZhTw": "此進化路徑已在 #212～#241 整合資料中核對；批次外目標以正式 stub 保留。",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T10:00:00.000Z"
+    },
+    {
       "id": "evolution-cross-217-johto-901-hisui",
       "fromFormId": "217-johto",
       "fromNameZhTw": "圈圈熊",
@@ -11,7 +24,7 @@
       "evolutionMethodZhTw": "滿月期間使用泥炭塊並消耗糖果進化",
       "availabilityNotesZhTw": "正式後續進化；月月熊目前以洗翠型態 stub 保留，滿月進化候選先保留。",
       "requiresEvent": false,
-      "verifiedAt": "2026-08-08T16:00:00.000Z"
+      "verifiedAt": "2026-08-15T16:00:00.000Z"
     }
   ],
   "conflicts": [],

@@ -10,6 +10,27 @@ export type EvolutionPathWrite = {
   verifiedAt: Date | null;
 };
 
+export type EvolutionPathPair = readonly [fromFormId: string, toFormId: string];
+
+/**
+ * Importers must fail closed when a declared path endpoint is not present.
+ * Silently skipping an endpoint produces a plausible but incomplete graph.
+ */
+export function assertEvolutionPathEndpoints(
+  formIds: ReadonlySet<string>,
+  pairs: readonly EvolutionPathPair[],
+  context: string,
+) {
+  const missing = new Set<string>();
+  for (const [fromFormId, toFormId] of pairs) {
+    if (!formIds.has(fromFormId)) missing.add(fromFormId);
+    if (!formIds.has(toFormId)) missing.add(toFormId);
+  }
+  if (missing.size) {
+    throw new Error(`${context} has missing evolution path endpoints: ${[...missing].join(", ")}.`);
+  }
+}
+
 type EvolutionPathValues = Omit<EvolutionPathWrite, "id">;
 
 /**

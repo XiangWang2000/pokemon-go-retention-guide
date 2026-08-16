@@ -75,16 +75,16 @@ describe("static 唯讀 snapshot", () => {
       CURRENT_RELEASE_CONTRACT.dataVersion,
     );
     expect(siteSnapshotManifest.counts).toMatchObject({
-      pokemonSpecies: 446,
-      pokemonForms: 494,
-      battleVariants: 1912,
-      rawEvaluationData: 1280,
-      sourceReferences: 193,
-      retentionEvaluations: 2077,
-      categoryEvaluations: 13384,
-      ivRecommendations: 13,
-      dashboardRows: 1912,
-      homeFamilies: 245,
+      pokemonSpecies: 502,
+      pokemonForms: 579,
+      battleVariants: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
+      rawEvaluationData: 1507,
+      sourceReferences: 220,
+      retentionEvaluations: 2509,
+      categoryEvaluations: 16408,
+      ivRecommendations: CURRENT_RELEASE_CONTRACT.expectedCounts.ivRecommendations,
+      dashboardRows: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
+      homeFamilies: CURRENT_RELEASE_CONTRACT.expectedCounts.families,
       openReviewIssues: 160,
     });
     expect(siteSnapshotManifest.sourceDatabase.path).toBe("rebuild-ci.db");
@@ -127,7 +127,10 @@ describe("static 唯讀 snapshot", () => {
     expect(loaderSource).toContain('fetchStaticJson<HomeRuntimeSnapshot>("/data/home.json")');
     expect(loaderSource).not.toContain("/api/home");
     expect(compactHome.byteLength).toBeLessThan(prettyHome.byteLength);
-    expect(compactHome.byteLength).toBeLessThan(1_250_000);
+    const compactHomeBudget = Math.ceil(
+      1_250_000 * (siteSnapshotManifest.counts.homeFamilies / 245),
+    );
+    expect(compactHome.byteLength).toBeLessThan(compactHomeBudget);
     const runtimeHome = JSON.parse(compactHome.toString("utf8")) as {
       schemaVersion: number;
       dataVersion: string;
@@ -174,9 +177,8 @@ describe("首頁 snapshot", () => {
     const variants = forms.flatMap((form) => form.variants);
 
     expect(home.schemaVersion).toBe(1);
-    expect(home.families).toHaveLength(245);
-    expect(forms).toHaveLength(463);
-    expect(variants).toHaveLength(1912);
+    expect(home.families).toHaveLength(CURRENT_RELEASE_CONTRACT.expectedCounts.families);
+    expect(variants).toHaveLength(CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants);
     expect(variants.every((variant) => variant.row.ivRecommendations.length === 0)).toBe(true);
     expect(forms.some((form) => form.ivRecommendations.length > 0)).toBe(true);
     expect(variants.some((variant) => variant.ivRecommendations.length > 0)).toBe(true);

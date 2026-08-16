@@ -104,9 +104,9 @@ describe("Gen3 #312-#386 canonical and graph regression", () => {
     );
   });
 
-  it("models branching, baby-family merge, future stubs, and Mega candidates", () => {
+  it("models branching, baby-family merge, cross-generation targets, and Mega candidates", () => {
     const formIds = new Set(forms312386.map((form) => form.id));
-    const allowedStubIds = new Set(["202-johto", "407-sinnoh", "477-other", "478-other"]);
+    const allowedStubIds = new Set(["202-johto", "407-sinnoh", "477-sinnoh", "478-sinnoh"]);
     expect(
       evolutionPairs312386.every(([fromFormId]) =>
         formIds.has(fromFormId) || allowedStubIds.has(fromFormId),
@@ -122,8 +122,8 @@ describe("Gen3 #312-#386 canonical and graph regression", () => {
       ["366-hoenn", "368-hoenn"],
       ["360-hoenn", "202-johto"],
       ["315-hoenn", "407-sinnoh"],
-      ["356-hoenn", "477-other"],
-      ["361-hoenn", "478-other"],
+      ["356-hoenn", "477-sinnoh"],
+      ["361-hoenn", "478-sinnoh"],
     ]));
     expect(forms312386.some((form) => form.id === "407-other")).toBe(false);
     expect(evolutionPairs312386.filter(([fromFormId, toFormId]) => fromFormId === "315-hoenn" && toFormId === "407-sinnoh")).toHaveLength(1);
@@ -141,7 +141,7 @@ describe("Gen3 #312-#386 canonical and graph regression", () => {
     ]);
   });
 
-  it("keeps the real Roserade target distinct from future Gen 4 stubs", () => {
+  it("keeps completed Gen4 targets distinct from legacy stubs", () => {
     const dashboard = JSON.parse(readFileSync("site-data/dashboard.json", "utf8")) as Array<{
       formId: string;
       variantKey: string;
@@ -149,8 +149,8 @@ describe("Gen3 #312-#386 canonical and graph regression", () => {
     }>;
     const expectations = [
       ["315-hoenn", "407-sinnoh", false],
-      ["356-hoenn", "477-other", true],
-      ["361-hoenn", "478-other", true],
+      ["356-hoenn", "477-sinnoh", false],
+      ["361-hoenn", "478-sinnoh", false],
     ] as const;
 
     for (const [fromFormId, toFormId, expectedStub] of expectations) {
@@ -170,9 +170,9 @@ describe("Gen3 #312-#386 canonical and graph regression", () => {
       evolutionPairs312386,
     );
     expect(evidence.directRosterFormIds).toContain("356-hoenn");
-    expect(evidence.directRosterFormIds).not.toContain("477-other");
-    expect(evidence.derivedFormIds).toContain("477-other");
-    expect(evidence.formalEvolutionEdges).toContainEqual(["356-hoenn", "477-other"]);
+    expect(evidence.directRosterFormIds).not.toContain("477-sinnoh");
+    expect(evidence.derivedFormIds).toContain("477-sinnoh");
+    expect(evidence.formalEvolutionEdges).toContainEqual(["356-hoenn", "477-sinnoh"]);
   });
 
   it("keeps Primal Kyogre/Groudon labels separate from Mega Rayquaza", () => {

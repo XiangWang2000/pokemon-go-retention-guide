@@ -8,7 +8,7 @@ import {
 } from "../src/lib/data-prisma";
 import { prisma } from "../src/lib/prisma";
 import { assertOfficialEvolutionPathsMaterialized } from "../src/data/research-import";
-import { forms387416 } from "../src/data/batch-387-416";
+import { getGen4BatchDefinitions } from "../src/data/batch-gen4";
 import { CURRENT_RELEASE_CONTRACT } from "../src/config/release-contract";
 import { buildAuditSummary } from "../src/lib/audit-data";
 import { buildHomeSnapshot } from "../src/presentation/home-snapshot";
@@ -25,19 +25,56 @@ async function main() {
     getSources(),
   ]);
   const expectedCounts = CURRENT_RELEASE_CONTRACT.expectedCounts;
+  const gen4Definitions = getGen4BatchDefinitions();
+  const gen4MinDex = gen4Definitions[0]!.start;
+  const gen4MaxDex = gen4Definitions.at(-1)!.end;
+  const expectedGen4FormIds = new Set(
+    gen4Definitions.flatMap((definition) => definition.forms.map((form) => form.id)),
+  );
+  const expectedGen4VariantIds = new Set(
+    gen4Definitions.flatMap((definition) => [
+      ...definition.forms.flatMap((form) =>
+        ["normal", "shadow", "purified", "dynamax"].map((variant) => `${form.id}-${variant}`),
+      ),
+      ...definition.specialVariants.map((variant) => variant.id),
+    ]),
+  );
+  const expectedGen4Released = gen4Definitions.reduce(
+    (count, definition) =>
+      count +
+      definition.releasedNormalForms.size +
+      definition.releasedShadowForms.size * 2 +
+      definition.releasedDynamaxForms.size +
+      [...definition.specialVariants].filter((variant) => variant.released).length,
+    0,
+  );
+  const expectedGen4Species = gen4Definitions.reduce(
+    (count, definition) => count + definition.species.length,
+    0,
+  );
   assert(
     dashboard.length === expectedCounts.battleVariants,
     `Published integrity expected ${expectedCounts.battleVariants} dashboard rows, found ${dashboard.length}.`,
   );
 
-  const gen4Rows = dashboard.filter((row) => row.dexNumber >= 387 && row.dexNumber <= 416);
-  const expectedGen4FormIds = new Set(forms387416.map((form) => form.id));
+  const gen4Rows = dashboard.filter(
+    (row) => row.dexNumber >= gen4MinDex && row.dexNumber <= gen4MaxDex,
+  );
   const actualGen4FormIds = new Set(gen4Rows.map((row) => row.formId));
-  assert(gen4Rows.length === 136, `Expected 136 Gen4 rows, found ${gen4Rows.length}.`);
+  const actualGen4VariantIds = new Set(gen4Rows.map((row) => row.id));
+  assert(
+    gen4Rows.length === expectedGen4VariantIds.size,
+    `Expected ${expectedGen4VariantIds.size} Gen4 rows, found ${gen4Rows.length}.`,
+  );
   assert(
     actualGen4FormIds.size === expectedGen4FormIds.size &&
       [...expectedGen4FormIds].every((formId) => actualGen4FormIds.has(formId)),
     `Published Gen4 forms differ from the canonical source: expected ${expectedGen4FormIds.size}, found ${actualGen4FormIds.size}.`,
+  );
+  assert(
+    actualGen4VariantIds.size === expectedGen4VariantIds.size &&
+      [...expectedGen4VariantIds].every((variantId) => actualGen4VariantIds.has(variantId)),
+    "Published Gen4 variants differ from the registered batch definitions.",
   );
   assert(
     gen4Rows.every((row) => row.regionKey === "SINNOH"),
@@ -85,7 +122,7 @@ async function main() {
   }
 
   const scope = {
-    pokemonForm: { species: { dexNumber: { gte: 387, lte: 416 } } },
+    pokemonForm: { species: { dexNumber: { gte: gen4MinDex, lte: gen4MaxDex } } },
   };
   const [
     gen4Species,
@@ -100,8 +137,8 @@ async function main() {
     roseradeEdges,
     legacyRoseradeStub,
   ] = await Promise.all([
-    prisma.pokemonSpecies.count({ where: { dexNumber: { gte: 387, lte: 416 } } }),
-    prisma.pokemonForm.count({ where: { species: { dexNumber: { gte: 387, lte: 416 } } } }),
+    prisma.pokemonSpecies.count({ where: { dexNumber: { gte: gen4MinDex, lte: gen4MaxDex } } }),
+    prisma.pokemonForm.count({ where: { species: { dexNumber: { gte: gen4MinDex, lte: gen4MaxDex } } } }),
     prisma.battleVariant.count({ where: scope }),
     prisma.battleVariant.count({ where: { ...scope, releaseStatus: "RELEASED" } }),
     prisma.evolutionPath.findFirst({ where: { fromFormId: "030-kanto", toFormId: "031-kanto" } }),
@@ -138,7 +175,10 @@ async function main() {
 
   await assertOfficialEvolutionPathsMaterialized(prisma);
   assert(
-    gen4Species === 30 && gen4Forms === 34 && gen4Variants === 136 && gen4Released === 78,
+    gen4Species === expectedGen4Species &&
+      gen4Forms === expectedGen4FormIds.size &&
+      gen4Variants === expectedGen4VariantIds.size &&
+      gen4Released === expectedGen4Released,
     `Unexpected Gen4 rebuild boundary: species=${gen4Species}, forms=${gen4Forms}, variants=${gen4Variants}, released=${gen4Released}.`,
   );
   assert(

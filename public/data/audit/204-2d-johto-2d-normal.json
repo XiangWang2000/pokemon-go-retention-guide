@@ -12,7 +12,19 @@
   "regionKey": "JOHTO",
   "evolvesFromFormId": null,
   "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-r19-204-johto-205-johto",
+      "fromFormId": "204-johto",
+      "toFormId": "205-johto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T10:00:00.000Z",
+      "isEvolutionStub": false,
+      "targetUseLevel": null,
+      "targetNameEn": "forretress",
+      "targetNameZhTw": "佛烈托斯"
+    }
+  ],
   "types": [
     "BUG"
   ],
@@ -20,32 +32,35 @@
     "pineco",
     "榛果球"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "forretress",
+    "佛烈托斯"
+  ],
   "variantKey": "NORMAL",
   "isReleased": true,
   "releaseStatus": "RELEASED",
   "releaseVerifiedAt": "2026-08-08T10:00:00.000Z",
   "notesZhTw": "普通版本；與暗影、淨化、Mega 及 Max 分開評估。",
-  "decision": "TRANSFER_CANDIDATE",
-  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+  "decision": "CONDITIONAL_KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "DATA_UNAVAILABLE",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
+  "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
-  "updatedAt": "2026-08-12T16:00:00.000Z",
+  "updatedAt": "2026-08-15T16:00:00.000Z",
   "pvpSummaryZhTw": "GL（超級聯盟） Overall #887；招式 BUG_BITE／ROCK_TOMB／SAND_TOMB",
-  "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+  "pveSummaryZhTw": "無顯著用途。佛烈托斯：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
   "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
-  "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
+  "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+  "recommendedIvStrategyZhTw": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -76,8 +91,8 @@
       "ivRecommendationZhTw": "依目標進化結果的實際用途套用對應聯盟、PvE、Mega或Max門檻。",
       "shortIvLabelZhTw": "依目標進化用途",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.541Z",
-      "updatedAt": "2026-08-15T03:55:34.541Z"
+      "createdAt": "2026-08-16T09:42:39.086Z",
+      "updatedAt": "2026-08-16T09:42:39.086Z"
     },
     {
       "id": "iv-global-general",
@@ -108,8 +123,8 @@
       "ivRecommendationZhTw": "只有物種特定規則明確採一般高IV時才套用：96%以上優先，91%以上條件式。",
       "shortIvLabelZhTw": "一般：96%+優先",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.537Z",
-      "updatedAt": "2026-08-15T03:55:34.537Z"
+      "createdAt": "2026-08-16T09:42:39.083Z",
+      "updatedAt": "2026-08-16T09:42:39.083Z"
     },
     {
       "id": "iv-global-great-league",
@@ -140,8 +155,8 @@
       "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
       "shortIvLabelZhTw": "GL：Rank≤100",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.499Z",
-      "updatedAt": "2026-08-15T03:55:34.499Z"
+      "createdAt": "2026-08-16T09:42:39.046Z",
+      "updatedAt": "2026-08-16T09:42:39.046Z"
     },
     {
       "id": "iv-global-gym-defense",
@@ -172,8 +187,8 @@
       "ivRecommendationZhTw": "道館：不設固定IV門檻；同物種比較時再參考既有等級、CP、防禦、HP與總IV。",
       "shortIvLabelZhTw": "道館：無固定門檻",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.514Z",
-      "updatedAt": "2026-08-15T03:55:34.514Z"
+      "createdAt": "2026-08-16T09:42:39.060Z",
+      "updatedAt": "2026-08-16T09:42:39.060Z"
     },
     {
       "id": "iv-global-master-league",
@@ -204,8 +219,8 @@
       "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.494Z",
-      "updatedAt": "2026-08-15T03:55:34.494Z"
+      "createdAt": "2026-08-16T09:42:39.042Z",
+      "updatedAt": "2026-08-16T09:42:39.042Z"
     },
     {
       "id": "iv-global-max-attack",
@@ -236,8 +251,8 @@
       "ivRecommendationZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
       "shortIvLabelZhTw": "Max攻擊：15攻優先",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.518Z",
-      "updatedAt": "2026-08-15T03:55:34.518Z"
+      "createdAt": "2026-08-16T09:42:39.064Z",
+      "updatedAt": "2026-08-16T09:42:39.064Z"
     },
     {
       "id": "iv-global-max-flex",
@@ -268,8 +283,8 @@
       "ivRecommendationZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
       "shortIvLabelZhTw": "Max：依角色分開保留",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.531Z",
-      "updatedAt": "2026-08-15T03:55:34.531Z"
+      "createdAt": "2026-08-16T09:42:39.078Z",
+      "updatedAt": "2026-08-16T09:42:39.078Z"
     },
     {
       "id": "iv-global-max-support",
@@ -300,8 +315,8 @@
       "ivRecommendationZhTw": "Max支援：依物種角色與Max招式設定專屬門檻，不套單一總IV門檻。",
       "shortIvLabelZhTw": "Max支援：依角色門檻",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.527Z",
-      "updatedAt": "2026-08-15T03:55:34.527Z"
+      "createdAt": "2026-08-16T09:42:39.073Z",
+      "updatedAt": "2026-08-16T09:42:39.073Z"
     },
     {
       "id": "iv-global-max-tank",
@@ -332,8 +347,8 @@
       "ivRecommendationZhTw": "Max坦克：防禦／HP優先；依實際耐久與物種角色比較，不套攻擊手門檻。",
       "shortIvLabelZhTw": "Max坦克：防禦／HP優先",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.522Z",
-      "updatedAt": "2026-08-15T03:55:34.522Z"
+      "createdAt": "2026-08-16T09:42:39.068Z",
+      "updatedAt": "2026-08-16T09:42:39.068Z"
     },
     {
       "id": "iv-global-mega",
@@ -364,8 +379,8 @@
       "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
       "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.489Z",
-      "updatedAt": "2026-08-15T03:55:34.489Z"
+      "createdAt": "2026-08-16T09:42:39.037Z",
+      "updatedAt": "2026-08-16T09:42:39.037Z"
     },
     {
       "id": "iv-global-pve",
@@ -396,8 +411,8 @@
       "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
       "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.479Z",
-      "updatedAt": "2026-08-15T03:55:34.479Z"
+      "createdAt": "2026-08-16T09:42:39.027Z",
+      "updatedAt": "2026-08-16T09:42:39.027Z"
     },
     {
       "id": "iv-global-shadow-pve",
@@ -428,8 +443,8 @@
       "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
       "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.509Z",
-      "updatedAt": "2026-08-15T03:55:34.509Z"
+      "createdAt": "2026-08-16T09:42:39.055Z",
+      "updatedAt": "2026-08-16T09:42:39.055Z"
     },
     {
       "id": "iv-global-ultra-league",
@@ -460,11 +475,11 @@
       "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
       "shortIvLabelZhTw": "UL：Rank≤100",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-15T03:55:34.504Z",
-      "updatedAt": "2026-08-15T03:55:34.504Z"
+      "createdAt": "2026-08-16T09:42:39.051Z",
+      "updatedAt": "2026-08-16T09:42:39.051Z"
     }
   ],
-  "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
+  "reasonZhTw": "用途有限：後續進化（佛烈托斯）已有用途；只保留少量符合條件的進化候選。",
   "evaluationId": "r19-eval-204-johto-normal",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已核對第二世代家族、寶寶併入既有家族、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
@@ -479,9 +494,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "NOT_APPLICABLE",
+      "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "沒有額外需要回推的本批進化用途。",
+      "summaryZhTw": "本批或既有家族的正式進化關係已結構化；是否保留仍取決於後續用途與版本。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -492,7 +507,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
@@ -518,7 +533,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     },
@@ -537,7 +552,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     },
@@ -556,7 +571,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     },
@@ -564,7 +579,7 @@
       "category": "PVE",
       "status": "DATA_UNAVAILABLE",
       "provenance": "DATA_UNAVAILABLE",
-      "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+      "summaryZhTw": "無顯著用途。佛烈托斯：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -575,7 +590,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     },
@@ -594,7 +609,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
@@ -620,7 +635,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     }
@@ -675,17 +690,17 @@
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
       "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-07-14T16:00:00.000Z",
+      "accessedAt": "2026-08-15T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],
   "traces": [
     {
-      "ruleKey": "LOW_GENERAL_VALUE",
-      "priority": 100,
+      "ruleKey": "VALUABLE_EVOLUTION",
+      "priority": 850,
       "matched": true,
-      "resultDecision": "TRANSFER_CANDIDATE",
-      "explanationZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。"
+      "resultDecision": "CONDITIONAL_KEEP",
+      "explanationZhTw": "用途有限：後續進化（佛烈托斯）已有用途；只保留少量符合條件的進化候選。"
     }
   ],
   "moves": []

@@ -1,0 +1,356 @@
+{
+  "batch": "477-493",
+  "updatedAt": "2026-08-16",
+  "dataVersion": "2026.08.16-r25",
+  "rulesVersion": "2026.08.06-v7",
+  "status": "ACCEPTED",
+  "counts": {
+    "species": 17,
+    "forms": 43,
+    "battleVariants": 175,
+    "families": 43,
+    "strategyCounts": {
+      "KEEP_TARGETS": 3,
+      "SELECTIVE_KEEP": 11,
+      "MOSTLY_TRANSFER": 29,
+      "HOLD_FOR_NOW": 0
+    },
+    "openIssues": 0,
+    "safetyAffectingIssues": 0,
+    "trueDataPending": 0
+  },
+  "canonicalForms": {
+    "result": "PASS",
+    "forms": [
+      "477-sinnoh",
+      "478-sinnoh",
+      "479-fan",
+      "479-frost",
+      "479-heat",
+      "479-mow",
+      "479-sinnoh",
+      "479-wash",
+      "480-sinnoh",
+      "481-sinnoh",
+      "482-sinnoh",
+      "483-origin",
+      "483-sinnoh",
+      "484-origin",
+      "484-sinnoh",
+      "485-sinnoh",
+      "486-sinnoh",
+      "487-altered",
+      "487-origin",
+      "488-sinnoh",
+      "489-sinnoh",
+      "490-sinnoh",
+      "491-sinnoh",
+      "492-land",
+      "492-sky",
+      "493-bug",
+      "493-dark",
+      "493-dragon",
+      "493-electric",
+      "493-fairy",
+      "493-fighting",
+      "493-fire",
+      "493-flying",
+      "493-ghost",
+      "493-grass",
+      "493-ground",
+      "493-ice",
+      "493-normal",
+      "493-poison",
+      "493-psychic",
+      "493-rock",
+      "493-steel",
+      "493-water"
+    ]
+  },
+  "crossBatchIntegration": {
+    "result": "PASS",
+    "checks": [
+      {
+        "name": "Gen 4 canonical form identity",
+        "result": "PASS"
+      },
+      {
+        "name": "Gen 4 batch boundary counts",
+        "result": "PASS"
+      },
+      {
+        "name": "Gen 4 released variant boundary",
+        "result": "PASS"
+      },
+      {
+        "name": "Owning batch family coverage",
+        "result": "PASS"
+      },
+      {
+        "name": "No current true data pending",
+        "result": "PASS"
+      }
+    ]
+  },
+  "scopedHolds": [],
+  "immediateHandling": [
+    {
+      "familyId": "HOENN_FAMILY_355:355-hoenn",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留彷徨夜靈（PvP（GL Rank≤100）），以及黑夜魔靈（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "HOENN_FAMILY_361:361-hoenn",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留冰鬼護（PvE 實戰候選、Mega 候選、有用途的暗影版）；保留可進化為雪妖女的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_479:479-fan",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_479:479-frost",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_479:479-heat",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_479:479-mow",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_479:479-sinnoh",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_479:479-wash",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_480:480-sinnoh",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留由克希（PvP（UL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_481:481-sinnoh",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_482:482-sinnoh",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_483:483-origin",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留帝牙盧卡（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_483:483-sinnoh",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留帝牙盧卡（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_484:484-origin",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留帕路奇亞（PvP（UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_484:484-sinnoh",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留帕路奇亞（PvP（UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_485:485-sinnoh",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留席多藍恩（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_486:486-sinnoh",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留雷吉奇卡斯（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_487:487-altered",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留騎拉帝納（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_487:487-origin",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留騎拉帝納（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_488:488-sinnoh",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留克雷色利亞（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_489:489-sinnoh",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_490:490-sinnoh",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_491:491-sinnoh",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留達克萊伊（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_492:492-land",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_492:492-sky",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留謝米（PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-bug",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-dark",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-dragon",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-electric",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-fairy",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-fighting",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-fire",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-flying",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-ghost",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-grass",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-ground",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-ice",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-normal",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-poison",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-psychic",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-rock",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-steel",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "SINNOH_FAMILY_493:493-water",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    }
+  ]
+}
