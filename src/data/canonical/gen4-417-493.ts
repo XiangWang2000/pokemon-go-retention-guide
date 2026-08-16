@@ -391,6 +391,21 @@ export const canonicalGen4Species417493 = [
   },
 ] as const satisfies readonly CanonicalGen4Species417493[];
 
+/**
+ * Cross-generation family identity is a source-level integration invariant,
+ * not a release-state fact. Keep the expected adult family anchors separate
+ * from the Gen4 species list so a new Sinnoh family cannot silently split a
+ * formal baby-to-adult evolution family.
+ */
+export const canonicalGen4CrossGenerationFamilies417493 = [
+  { fromFormId: "433-sinnoh", toFormId: "358-hoenn", familyKey: "HOENN_FAMILY_358" },
+  { fromFormId: "438-sinnoh", toFormId: "185-johto", familyKey: "JOHTO_FAMILY_185" },
+  { fromFormId: "439-sinnoh", toFormId: "122-kanto", familyKey: "KANTO_FAMILY_122" },
+  { fromFormId: "440-sinnoh", toFormId: "113-kanto", familyKey: "KANTO_FAMILY_113" },
+  { fromFormId: "446-sinnoh", toFormId: "143-kanto", familyKey: "KANTO_FAMILY_143" },
+  { fromFormId: "458-sinnoh", toFormId: "226-johto", familyKey: "JOHTO_FAMILY_226" },
+] as const;
+
 export const canonicalGen4Forms417493 = [
   {
     id: "417-sinnoh",

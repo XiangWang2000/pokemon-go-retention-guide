@@ -4,6 +4,7 @@ import {
   canonicalGen4Forms417446,
   canonicalGen4Forms447476,
   canonicalGen4Forms477493,
+  canonicalGen4CrossGenerationFamilies417493,
   canonicalGen4Species417446,
   canonicalGen4Species447476,
   canonicalGen4Species477493,
@@ -223,6 +224,84 @@ describe("Gen 4 canonical source #417-#493", () => {
     };
     const source = manifest.sources.find((item) => item.id === "EVOLUTION-SINNOH-433-20260816");
     expect(source?.supports).toEqual(expect.arrayContaining(["433-sinnoh", "358-hoenn", "EVOLUTION_VALUE"]));
+  });
+
+  it("reuses adult family identity for every owned cross-generation baby", () => {
+    const forms = [...forms417446, ...forms447476, ...forms477493];
+    const ownedFormIds = new Set(forms.map((form) => form.id));
+    const evolutionPairs = [
+      ...evolutionPairs417446,
+      ...evolutionPairs447476,
+      ...evolutionPairs477493,
+    ];
+    const ownedCrossGenerationPairs = evolutionPairs
+      .filter(([fromFormId, toFormId]) => ownedFormIds.has(fromFormId) && !ownedFormIds.has(toFormId))
+      .sort(([left], [right]) => left.localeCompare(right));
+    const expectedPairs = canonicalGen4CrossGenerationFamilies417493
+      .map(({ fromFormId, toFormId }) => [fromFormId, toFormId] as const)
+      .sort(([left], [right]) => left.localeCompare(right));
+    expect(ownedCrossGenerationPairs).toEqual(expectedPairs);
+
+    const speciesByDex = new Map(
+      [...species417446, ...species447476, ...species477493].map((species) => [species.dexNumber, species]),
+    );
+    for (const { fromFormId, familyKey } of canonicalGen4CrossGenerationFamilies417493) {
+      const dexNumber = Number(fromFormId.slice(0, 3));
+      expect(speciesByDex.get(dexNumber)?.familyKey).toBe(familyKey);
+    }
+
+    const reviewForBatch = (batch: string) =>
+      JSON.parse(readFileSync(`review/${batch}.json`, "utf8")) as {
+        immediateHandling: Array<{ familyId: string; strategy: string }>;
+      };
+    const currentReviews = new Map([
+      ["417-446", reviewForBatch("417-446")],
+      ["447-476", reviewForBatch("447-476")],
+    ]);
+    const adultReviewBatchByFormId = new Map([
+      ["358-hoenn", "342-371"],
+      ["185-johto", "182-211"],
+      ["122-kanto", "121-151"],
+      ["113-kanto", "091-120"],
+      ["143-kanto", "121-151"],
+      ["226-johto", "212-241"],
+    ]);
+    const adultReviews = new Map(
+      [...adultReviewBatchByFormId.entries()].map(([formId, batch]) => [formId, reviewForBatch(batch)]),
+    );
+    for (const { fromFormId, toFormId, familyKey } of canonicalGen4CrossGenerationFamilies417493) {
+      const currentBatch = Number(fromFormId.slice(0, 3)) <= 446 ? "417-446" : "447-476";
+      const currentEntry = currentReviews
+        .get(currentBatch)
+        ?.immediateHandling.find((item) => item.familyId === `${familyKey}:${toFormId}`);
+      const adultEntry = adultReviews
+        .get(toFormId)
+        ?.immediateHandling.find((item) => item.familyId === `${familyKey}:${toFormId}`);
+      expect(currentEntry).toEqual(expect.objectContaining({ familyId: `${familyKey}:${toFormId}` }));
+      expect(currentEntry?.strategy).toBe(adultEntry?.strategy);
+    }
+    expect(currentReviews.get("417-446")?.immediateHandling.some((item) => item.familyId.startsWith("SINNOH_FAMILY_440:"))).toBe(false);
+    expect(currentReviews.get("417-446")?.immediateHandling.some((item) => item.familyId.startsWith("SINNOH_FAMILY_446:"))).toBe(false);
+    expect(currentReviews.get("447-476")?.immediateHandling.some((item) => item.familyId.startsWith("SINNOH_FAMILY_458:"))).toBe(false);
+    expect(currentReviews.get("417-446")?.immediateHandling.find((item) => item.familyId === "KANTO_FAMILY_113:113-kanto")?.strategy).not.toBe("MOSTLY_TRANSFER");
+    expect(currentReviews.get("417-446")?.immediateHandling.find((item) => item.familyId === "KANTO_FAMILY_143:143-kanto")?.strategy).not.toBe("MOSTLY_TRANSFER");
+    expect(currentReviews.get("447-476")?.immediateHandling.find((item) => item.familyId === "JOHTO_FAMILY_226:226-johto")?.strategy).not.toBe("MOSTLY_TRANSFER");
+
+    const home = JSON.parse(readFileSync("site-data/home.json", "utf8")) as {
+      families: Array<{
+        familyKey: string;
+        members: Array<{ form: { formId: string } }>;
+      }>;
+    };
+    expect(home.families).toHaveLength(312);
+    for (const { fromFormId, toFormId, familyKey } of canonicalGen4CrossGenerationFamilies417493) {
+      const family = home.families.find((item) => item.familyKey === familyKey);
+      expect(family?.members.map((member) => member.form.formId)).toEqual(
+        expect.arrayContaining([fromFormId, toFormId]),
+      );
+      const dexNumber = fromFormId.slice(0, 3);
+      expect(home.families.some((item) => item.familyKey === `SINNOH_FAMILY_${dexNumber}`)).toBe(false);
+    }
   });
 
   it("keeps release provenance fact-scoped and review-facing summaries in Traditional Chinese", () => {

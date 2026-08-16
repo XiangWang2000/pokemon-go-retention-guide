@@ -121,7 +121,7 @@ export const species417493: Gen4BatchSpecies[] = [
     nameEn: "Chingling",
     nameZhTw: "鈴鐺響",
     types: ["PSYCHIC"],
-    familyKey: "SINNOH_FAMILY_433"
+    familyKey: "HOENN_FAMILY_358"
   },
   {
     dexNumber: 434,
@@ -156,21 +156,21 @@ export const species417493: Gen4BatchSpecies[] = [
     nameEn: "Bonsly",
     nameZhTw: "盆才怪",
     types: ["ROCK"],
-    familyKey: "SINNOH_FAMILY_438"
+    familyKey: "JOHTO_FAMILY_185"
   },
   {
     dexNumber: 439,
     nameEn: "Mime Jr.",
     nameZhTw: "魔尼尼",
     types: ["PSYCHIC", "FAIRY"],
-    familyKey: "SINNOH_FAMILY_439"
+    familyKey: "KANTO_FAMILY_122"
   },
   {
     dexNumber: 440,
     nameEn: "Happiny",
     nameZhTw: "小福蛋",
     types: ["NORMAL"],
-    familyKey: "SINNOH_FAMILY_440"
+    familyKey: "KANTO_FAMILY_113"
   },
   {
     dexNumber: 441,
@@ -212,7 +212,7 @@ export const species417493: Gen4BatchSpecies[] = [
     nameEn: "Munchlax",
     nameZhTw: "小卡比獸",
     types: ["NORMAL"],
-    familyKey: "SINNOH_FAMILY_446"
+    familyKey: "KANTO_FAMILY_143"
   },
   {
     dexNumber: 447,
@@ -296,7 +296,7 @@ export const species417493: Gen4BatchSpecies[] = [
     nameEn: "Mantyke",
     nameZhTw: "小球飛魚",
     types: ["WATER", "FLYING"],
-    familyKey: "SINNOH_FAMILY_458"
+    familyKey: "JOHTO_FAMILY_226"
   },
   {
     dexNumber: 459,

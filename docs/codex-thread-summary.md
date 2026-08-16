@@ -53,7 +53,7 @@
 
 ## 2026-08-16 #001～#493 r25 Gen4 expansion and generic ownership
 
-- DATA_VERSION is `2026.08.16-r25`; the controlled clean rebuild now covers #001～#493 and verifies 2344 BattleVariants, 318 presentation families, 13 IV recommendations, and zero current `TRUE_DATA_PENDING` rows.
+- DATA_VERSION is `2026.08.16-r25`; the controlled clean rebuild now covers #001～#493 and verifies 2344 BattleVariants, 312 presentation families, 13 IV recommendations, and zero current `TRUE_DATA_PENDING` rows.
 - The ordered Batch Registry now includes the three Gen4 slices `417-446`, `447-476`, and `477-493`. Generic Gen4 import, review generation, clean rebuild dispatch, published-integrity checks, and persistence verification resolve their scope and paths from the registered definitions rather than adding another routing chain.
 - `src/data/batch-gen4.ts` owns the slice definitions and keeps the existing `387-416` evidence semantics behind a small `legacy-387-416` adapter. New slices use the generic adapter; this preserves the reviewed #387～#416 presentation without coupling the persistence importer to a specific dex range.
 - The canonical Gen4 source fixtures contain #417～#493 with Sinnoh identity, explicit forms, evolution edges, Max/Mega/special variants, release manifests, PvPoke snapshots, and variant-level PvE evidence. Cross-generation targets through #493 use their owning form identity and are materialized deterministically without parallel `*-other` forms.
