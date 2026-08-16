@@ -1,7 +1,24 @@
 import "dotenv/config";
-import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
-import { readFile } from "node:fs/promises";
+import {
+  LEGACY_CATEGORIES as categories,
+  buildLegacyEvidenceLinks,
+  buildLegacyPvpSourceRows,
+  findLegacyRanks,
+  isLegacyVariantReleased,
+  legacyInitialDecision,
+  legacyInitialDisposition,
+  legacyRankSummary,
+  readLegacyRankings,
+  upsertLegacySources,
+  type LegacyCategory as Category,
+  type LegacyDecision as Decision,
+  type LegacyLeagueKey as LeagueKey,
+  type LegacyOfficialResearch as OfficialResearch,
+  type LegacyRankResult as RankResult,
+  type LegacyRankingRow as RankingRow,
+  type LegacyVariantKey as VariantKey,
+} from "./legacy-import-shared";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
 import { getDatabaseUrl } from "../src/lib/database";
@@ -33,242 +50,20 @@ const batchStart = 242;
 const batchEnd = 251;
 const checkedAt = new Date("2026-08-08T18:00:00+08:00");
 const pvpokeCommit = "86847e535b7e0a0f4e91f9628b3fc713ae6adca7";
-const categories = [
-  "PVP",
-  "PVE",
-  "ROCKET",
-  "GYM",
-  "MEGA",
-  "MAX_BATTLE",
-  "EVOLUTION_VALUE",
-] as const;
-type Category = (typeof categories)[number];
-type VariantKey =
-  | "NORMAL"
-  | "SHADOW"
-  | "PURIFIED"
-  | "MEGA"
-  | "MEGA_X"
-  | "MEGA_Y"
-  | "DYNAMAX"
-  | "GIGANTAMAX";
-type Decision = "KEEP" | "CONDITIONAL_KEEP" | "TRANSFER_CANDIDATE";
-type Disposition =
-  | "CLEAR_USE"
-  | "LIMITED_USE"
-  | "NO_SIGNIFICANT_USE"
-  | "NOT_APPLICABLE_OR_UNRELEASED";
-type LeagueKey = "GREAT" | "ULTRA" | "MASTER";
-
-type RankingRow = {
-  speciesId: string;
-  rating?: number;
-  moveset?: string[];
-};
-
-type RankResult = {
-  league: LeagueKey;
-  leagueLabel: string;
-  sourceId: string;
-  rank: number;
-  rating: number | null;
-  moves: string[];
-};
-
-type OfficialSource = {
-  id: string;
-  sourceName: string;
-  sourceType: string;
-  sourceTitleOriginal: string;
-  sourceLanguage: string;
-  sourceUrl: string;
-  accessedAt: string;
-  publishedAt: string | null;
-  sourceSummaryZhTw: string;
-  supports: string[];
-};
-
-type OfficialResearch = {
-  sources: OfficialSource[];
-};
-
-const leagues = [
-  { key: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260715", label: "GL（超級聯盟）" },
-  { key: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260715", label: "UL（高級聯盟）" },
-  { key: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260715", label: "ML（大師聯盟）" },
-] as const;
-
 const officialResearch = JSON.parse(
   readFileSync(new URL("../research_notes/official-242-251.json", import.meta.url), "utf8"),
 ) as OfficialResearch;
 
-function optionalDate(value: string | null | undefined) {
-  if (!value) return null;
-  const date = new Date(`${value}T00:00:00+08:00`);
-  return Number.isNaN(date.getTime()) ? null : date;
-}
+const officialEvidenceLinks = buildLegacyEvidenceLinks(officialResearch, {
+  includeMaxSource: true,
+});
 
-function evidenceCategory(variantId: string, sourceId: string): Category {
-  if (sourceId.startsWith("OFF-MEGA-")) return "MEGA";
-  if (sourceId.startsWith("MAX-")) return "MAX_BATTLE";
-  if (variantId.endsWith("-mega")) return "MEGA";
-  if (sourceId.startsWith("PVE-")) return "PVE";
-  if (variantId.endsWith("-shadow") || variantId.endsWith("-purified")) return "ROCKET";
-  if (variantId.endsWith("-dynamax") || variantId.endsWith("-gigantamax")) return "MAX_BATTLE";
-  return "EVOLUTION_VALUE";
-}
-
-const officialEvidenceLinks = officialResearch.sources.flatMap((source) =>
-  source.supports.map((variantId) => ({
-    sourceId: source.id,
-    variantId,
-    category: evidenceCategory(variantId, source.id),
-  })),
-);
-
-async function upsertSources() {
-  for (const source of officialResearch.sources) {
-    await prisma.sourceReference.upsert({
-      where: { id: source.id },
-      create: {
-        id: source.id,
-        sourceName: source.sourceName,
-        sourceUrl: source.sourceUrl,
-        sourceType: source.sourceType as never,
-        sourceTitleOriginal: source.sourceTitleOriginal,
-        sourceLanguage: source.sourceLanguage,
-        sourceSummaryZhTw: source.sourceSummaryZhTw,
-        accessedAt: optionalDate(source.accessedAt) ?? checkedAt,
-        publishedAt: optionalDate(source.publishedAt),
-        dataVersion: `accessed-${source.accessedAt}`,
-        notes: "第 #242～#251 批次來源研究表。",
-      },
-      update: {
-        sourceName: source.sourceName,
-        sourceUrl: source.sourceUrl,
-        sourceType: source.sourceType as never,
-        sourceTitleOriginal: source.sourceTitleOriginal,
-        sourceLanguage: source.sourceLanguage,
-        sourceSummaryZhTw: source.sourceSummaryZhTw,
-        accessedAt: optionalDate(source.accessedAt) ?? checkedAt,
-        publishedAt: optionalDate(source.publishedAt),
-        dataVersion: `accessed-${source.accessedAt}`,
-        notes: "第 #242～#251 批次來源研究表。",
-      },
-    });
-  }
-}
-
-async function readRankings() {
-  const result = new Map<LeagueKey, RankingRow[]>();
-  for (const league of leagues) {
-    const bytes = await readFile(`data/sources/pvpoke/rankings-${league.cp}.json`);
-    const rows = JSON.parse(bytes.toString("utf8").replace(/^\uFEFF/, "")) as RankingRow[];
-    result.set(league.key, rows);
-    const hash = createHash("sha256").update(bytes).digest("hex");
-    await prisma.sourceReference.update({
-      where: { id: league.sourceId },
-      data: {
-        dataVersion: `${pvpokeCommit}; sha256=${hash}`,
-        notes: "Open League／Overall 固定 commit 完整 JSON；名次以陣列索引加一重現，不使用搜尋摘要。",
-      },
-    });
-  }
-  return result;
-}
-
-function variantReleased(formId: string, variantKey: VariantKey) {
-  if (variantKey === "NORMAL") return true;
-  if (variantKey === "SHADOW" || variantKey === "PURIFIED") {
-    return releasedShadowForms242251.has(formId);
-  }
-  if (variantKey === "MEGA") return releasedMegaForms242251.has(formId);
-  if (variantKey === "DYNAMAX") return releasedDynamaxForms242251.has(formId);
-  if (variantKey === "GIGANTAMAX") return releasedGigantamaxForms242251.has(formId);
-  return false;
-}
-
-function findRanks(
-  form: Form242251,
-  variantKey: "NORMAL" | "SHADOW",
-  rankings: Map<LeagueKey, RankingRow[]>,
-) {
-  const speciesId = pvpokeSpeciesId242251(form, variantKey === "SHADOW");
-  return leagues.flatMap((league) => {
-    const rows = rankings.get(league.key) ?? [];
-    const index = rows.findIndex((row) => row.speciesId === speciesId);
-    if (index < 0) return [];
-    const row = rows[index]!;
-    return [
-      {
-        league: league.key,
-        leagueLabel: league.label,
-        sourceId: league.sourceId,
-        rank: index + 1,
-        rating: row.rating ?? null,
-        moves: row.moveset ?? [],
-      },
-    ];
-  });
-}
-
-function rankSummary(ranks: RankResult[]) {
-  if (!ranks.length) return "PvPoke Open League／Overall 快照未列入可重現名次。";
-  return ranks
-    .map(
-      (item) =>
-        `${item.leagueLabel} Overall #${item.rank}${item.moves.length ? `；招式 ${item.moves.join("／")}` : ""}`,
-    )
-    .join("；");
-}
-
-function initialDecision(variantKey: VariantKey, released: boolean, ranks: RankResult[], formId: string) {
-  if (!released) return "TRANSFER_CANDIDATE" as const;
-  if (variantKey === "MEGA") return "KEEP" as const;
-  if (variantKey === "DYNAMAX" || pveUseLevels242251[formId] === "CORE_INVESTMENT") {
-    return "KEEP" as const;
-  }
-  if (pveUseLevels242251[formId]) return "CONDITIONAL_KEEP" as const;
-  const best = Math.min(...ranks.map((rank) => rank.rank), Number.POSITIVE_INFINITY);
-  if (best <= 100) return "KEEP" as const;
-  if (best <= 250 || (variantKey === "NORMAL" && formId === "181-johto")) {
-    return "CONDITIONAL_KEEP" as const;
-  }
-  return "TRANSFER_CANDIDATE" as const;
-}
-
-function initialDisposition(decision: Decision, released: boolean): Disposition {
-  if (!released) return "NOT_APPLICABLE_OR_UNRELEASED";
-  if (decision === "KEEP") return "CLEAR_USE";
-  if (decision === "CONDITIONAL_KEEP") return "LIMITED_USE";
-  return "NO_SIGNIFICANT_USE";
-}
-
-function pvpSourceRows(variants: VariantRecord[], rankMap: Map<string, RankResult[]>) {
-  return variants.flatMap((variant) =>
-    (rankMap.get(variant.id) ?? []).map((rank) => ({
-      id: `raw-r20-${variant.id}-${rank.league.toLowerCase()}`,
-      battleVariantId: variant.id,
-      category: "PVP" as const,
-      status: "VERIFIED" as const,
-      league: rank.league,
-      cup: "OPEN",
-      pvpCategory: "OVERALL" as const,
-      speciesKey: pvpokeSpeciesId242251(variant.form, variant.variantKey === "SHADOW"),
-      formKey: variant.form.id,
-      variantKey: variant.variantKey,
-      rank: rank.rank,
-      rating: rank.rating === null ? null : String(rank.rating),
-      recommendedMoves: JSON.stringify(rank.moves),
-      rawNotes: `${rank.leagueLabel} Open／Overall；固定 JSON 陣列索引加一，可穩定重現。`,
-      seasonOrVersion: `PvPoke commit ${pvpokeCommit}`,
-      extractionMethod: "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-      reproducible: true,
-      sourceId: rank.sourceId,
-      checkedAt,
-    })),
-  );
-}
+const variantReleaseSets = {
+  shadow: releasedShadowForms242251,
+  mega: releasedMegaForms242251,
+  dynamax: releasedDynamaxForms242251,
+  gigantamax: releasedGigantamaxForms242251,
+};
 
 type VariantRecord = {
   id: string;
@@ -317,7 +112,9 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         formNameZhTw: form.formNameZhTw,
         regionKey: form.regionKey,
         types: JSON.stringify(form.types),
-        searchAliases: JSON.stringify([...new Set([...form.aliases, species.nameEn, species.nameZhTw])]),
+        searchAliases: JSON.stringify([
+          ...new Set([...form.aliases, species.nameEn, species.nameZhTw]),
+        ]),
         // Insert the batch before wiring self-referencing evolution rows; SQLite
         // enforces this foreign key immediately during createMany.
         evolvesFromFormId: null,
@@ -358,26 +155,28 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
   }
 
   const manifestEdges = new Set(
-    (await loadCrossGenerationEvolutionData()).paths.map((path) => `${path.fromFormId}->${path.toFormId}`),
+    (await loadCrossGenerationEvolutionData()).paths.map(
+      (path) => `${path.fromFormId}->${path.toFormId}`,
+    ),
   );
   await prisma.evolutionPath.createMany({
     data: evolutionPairs242251
       .filter(([fromFormId, toFormId]) => !manifestEdges.has(`${fromFormId}->${toFormId}`))
       .map(([fromFormId, toFormId]) => ({
-      id: `evolution-r20-${fromFormId}-${toFormId}`,
-      fromFormId,
-      toFormId,
-      evolutionMethodZhTw:
-        fromFormId.startsWith("17") && ["025-kanto", "035-kanto", "039-kanto"].includes(toFormId)
-          ? "提升友好度後消耗糖果進化"
-          : "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
-      availabilityNotesZhTw:
-        toFormId === "199-galar"
-          ? "正式伽勒爾分支；與標準城都呆呆王分開評估。"
-          : "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
-      requiresEvent: false,
-      verifiedAt: checkedAt,
-    })),
+        id: `evolution-r20-${fromFormId}-${toFormId}`,
+        fromFormId,
+        toFormId,
+        evolutionMethodZhTw:
+          fromFormId.startsWith("17") && ["025-kanto", "035-kanto", "039-kanto"].includes(toFormId)
+            ? "提升友好度後消耗糖果進化"
+            : "消耗糖果進化；特殊條件以遊戲內當期介面為準。",
+        availabilityNotesZhTw:
+          toFormId === "199-galar"
+            ? "正式伽勒爾分支；與標準城都呆呆王分開評估。"
+            : "此進化路徑已在 #242～#251 整合資料中核對；批次外目標以正式 stub 保留。",
+        requiresEvent: false,
+        verifiedAt: checkedAt,
+      })),
   });
 
   const variants: VariantRecord[] = [];
@@ -388,13 +187,18 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         id: `${form.id}-${variantKey.toLowerCase()}`,
         form,
         variantKey,
-        released: variantReleased(form.id, variantKey),
+        released: isLegacyVariantReleased(form.id, variantKey, variantReleaseSets),
       });
     }
   }
   for (const special of specialVariants242251) {
     const form = forms242251.find((item) => item.id === special.formId)!;
-    variants.push({ id: special.id, form, variantKey: special.variantKey, released: special.released });
+    variants.push({
+      id: special.id,
+      form,
+      variantKey: special.variantKey,
+      released: special.released,
+    });
   }
   if (species242251.length !== 10 || forms242251.length !== 10 || variants.length !== 41) {
     throw new Error(`#242～#251 靜態計數不符 10 species／10 forms／41 variants。`);
@@ -421,7 +225,8 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
                 ? "淨化不可逆；沒有獨立榜單，不因淨化本身升格為必留。"
                 : "普通版本；與暗影、淨化、Mega 及 Max 分開評估。",
       inheritsFromVariantId: variantKey === "PURIFIED" && released ? `${form.id}-normal` : null,
-      inheritanceMode: variantKey === "PURIFIED" && released ? ("NORMAL_BASE" as const) : ("NONE" as const),
+      inheritanceMode:
+        variantKey === "PURIFIED" && released ? ("NORMAL_BASE" as const) : ("NONE" as const),
       purificationCostModifier: variantKey === "PURIFIED" && released ? 0.9 : null,
       hasReturnAccess: variantKey === "PURIFIED" && released,
       purificationRiskZhTw:
@@ -429,7 +234,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           ? "淨化不可逆；先確認暗影用途與招式，不以淨化取代暗影候選。"
           : "",
       purifiedOverrideRequired: false,
-      })),
+    })),
   });
   // Upsert cross-generation stubs only after this batch's source forms and
   // variants exist; otherwise a new source form would be a dangling manifest
@@ -441,7 +246,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
     rankMap.set(
       variant.id,
       variant.released && (variant.variantKey === "NORMAL" || variant.variantKey === "SHADOW")
-        ? findRanks(variant.form, variant.variantKey, rankings)
+        ? findLegacyRanks(variant.form, variant.variantKey, rankings, pvpokeSpeciesId242251)
         : [],
     );
   }
@@ -454,7 +259,14 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           ? "SPECIAL"
           : null;
   const rawRows = [
-    ...pvpSourceRows(variants, rankMap),
+    ...buildLegacyPvpSourceRows(
+      variants,
+      rankMap,
+      pvpokeSpeciesId242251,
+      pvpokeCommit,
+      checkedAt,
+      "r20",
+    ),
     ...variants.flatMap((variant) => {
       const tier =
         variant.variantKey === "MEGA"
@@ -491,11 +303,20 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
   ];
   await prisma.rawEvaluationData.createMany({ data: rawRows });
 
-  const decisions = new Map<string, { decision: Decision; ranks: RankResult[]; released: boolean }>();
+  const decisions = new Map<
+    string,
+    { decision: Decision; ranks: RankResult[]; released: boolean }
+  >();
   for (const variant of variants) {
     const ranks = rankMap.get(variant.id) ?? [];
     decisions.set(variant.id, {
-      decision: initialDecision(variant.variantKey, variant.released, ranks, variant.form.id),
+      decision: legacyInitialDecision(
+        variant.variantKey,
+        variant.released,
+        ranks,
+        variant.form.id,
+        pveUseLevels242251,
+      ),
       ranks,
       released: variant.released,
     });
@@ -515,7 +336,8 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       let provenance: "SOURCE_VERIFIED" | "MANUAL_CURATED" | "DATA_UNAVAILABLE" = "MANUAL_CURATED";
       let summaryZhTw = "此欄位不適用，不影響可執行的保留或傳送建議。";
       let materialToDecision = false;
-      let pveUseLevel: "CORE_INVESTMENT" | "USABLE_OR_BUDGET" | "SPECIAL_USE" | "NO_SIGNIFICANT_USE" | null = null;
+      let pveUseLevel:
+        "CORE_INVESTMENT" | "USABLE_OR_BUDGET" | "SPECIAL_USE" | "NO_SIGNIFICANT_USE" | null = null;
 
       if (category === "PVP") {
         if (!variant.released || !["NORMAL", "SHADOW"].includes(variant.variantKey)) {
@@ -523,7 +345,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         } else if (result.ranks.length) {
           status = "VERIFIED";
           provenance = "SOURCE_VERIFIED";
-          summaryZhTw = rankSummary(result.ranks);
+          summaryZhTw = legacyRankSummary(result.ranks);
           materialToDecision = result.ranks.some((rank) => rank.rank <= 250);
         } else {
           status = "UNRANKED";
@@ -536,13 +358,16 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           status = "PARTIALLY_VERIFIED";
           provenance = "SOURCE_VERIFIED";
           materialToDecision = true;
-          pveUseLevel = variant.variantKey === "MEGA" ? "SPECIAL_USE" : pveUseLevels242251[variant.form.id]!;
-          summaryZhTw = "本批 PvE 用途依研究表與來源頁面分成核心投資、可用／預算型、特殊用途或無顯著用途；不把缺少精確斷點誤當成整個家族待判斷。";
+          pveUseLevel =
+            variant.variantKey === "MEGA" ? "SPECIAL_USE" : pveUseLevels242251[variant.form.id]!;
+          summaryZhTw =
+            "本批 PvE 用途依研究表與來源頁面分成核心投資、可用／預算型、特殊用途或無顯著用途；不把缺少精確斷點誤當成整個家族待判斷。";
         } else {
           status = "DATA_UNAVAILABLE";
           provenance = "DATA_UNAVAILABLE";
           pveUseLevel = "NO_SIGNIFICANT_USE";
-          summaryZhTw = "本批未列為普通版本的核心 PvE 投資目標；不以缺少精確 PvE 斷點虛構 IV 淘汰線。";
+          summaryZhTw =
+            "本批未列為普通版本的核心 PvE 投資目標；不以缺少精確 PvE 斷點虛構 IV 淘汰線。";
         }
       } else if (category === "ROCKET") {
         status = variant.released ? "DATA_UNAVAILABLE" : "UNRELEASED";
@@ -560,7 +385,10 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           summaryZhTw = variant.released
             ? `${variant.form.formNameZhTw} ${variant.form.dexNumber} 的 Mega 已推出；只保留實際 Mega 候選，與普通、暗影及 Max 分開。`
             : "此 Mega 版本尚未推出。";
-        } else if (variant.variantKey === "NORMAL" && releasedMegaForms242251.has(variant.form.id)) {
+        } else if (
+          variant.variantKey === "NORMAL" &&
+          releasedMegaForms242251.has(variant.form.id)
+        ) {
           status = "PARTIALLY_VERIFIED";
           provenance = "SOURCE_VERIFIED";
           materialToDecision = true;
@@ -570,8 +398,11 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           summaryZhTw = "此版本不是 Mega 型態；家族有 Mega 不代表所有成員都必須保留。";
         }
       } else if (category === "MAX_BATTLE") {
-        const isMaxVariant = variant.variantKey === "DYNAMAX" || variant.variantKey === "GIGANTAMAX";
-        const hasReleasedMax = releasedDynamaxForms242251.has(variant.form.id) || releasedGigantamaxForms242251.has(variant.form.id);
+        const isMaxVariant =
+          variant.variantKey === "DYNAMAX" || variant.variantKey === "GIGANTAMAX";
+        const hasReleasedMax =
+          releasedDynamaxForms242251.has(variant.form.id) ||
+          releasedGigantamaxForms242251.has(variant.form.id);
         if (isMaxVariant) {
           status = variant.released ? "VERIFIED" : "UNRELEASED";
           provenance = variant.released ? "SOURCE_VERIFIED" : "MANUAL_CURATED";
@@ -625,7 +456,10 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
   });
   await prisma.categoryEvaluation.createMany({ data: categoryRows });
 
-  const categorySources = new Map<string, { categoryEvaluationId: string; sourceId: string; usageZhTw: string }>();
+  const categorySources = new Map<
+    string,
+    { categoryEvaluationId: string; sourceId: string; usageZhTw: string }
+  >();
   for (const variant of variants) {
     for (const rank of rankMap.get(variant.id) ?? []) {
       categorySources.set(`category-${variant.id}-pvp|${rank.sourceId}`, {
@@ -649,14 +483,18 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       categoriesForLink.add("MEGA");
     }
     for (const categoryName of categoriesForLink) {
-      categorySources.set(`category-${link.variantId}-${categoryName.toLowerCase()}|${link.sourceId}`, {
-        categoryEvaluationId: `category-${link.variantId}-${categoryName.toLowerCase()}`,
-        sourceId: link.sourceId,
-        usageZhTw: "Official batch evidence.",
-      });
+      categorySources.set(
+        `category-${link.variantId}-${categoryName.toLowerCase()}|${link.sourceId}`,
+        {
+          categoryEvaluationId: `category-${link.variantId}-${categoryName.toLowerCase()}`,
+          sourceId: link.sourceId,
+          usageZhTw: "Official batch evidence.",
+        },
+      );
     }
   }
-  if (categorySources.size) await prisma.categoryEvaluationSource.createMany({ data: [...categorySources.values()] });
+  if (categorySources.size)
+    await prisma.categoryEvaluationSource.createMany({ data: [...categorySources.values()] });
 
   const evaluationRows = variants.map((variant) => {
     const result = decisions.get(variant.id)!;
@@ -666,7 +504,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       battleVariantId: variant.id,
       finalDecision: result.decision,
       provenance: "MANUAL_CURATED" as const,
-      pvpSummaryZhTw: rankSummary(result.ranks),
+      pvpSummaryZhTw: legacyRankSummary(result.ranks),
       pveSummaryZhTw:
         variant.variantKey === "MEGA"
           ? "此 Mega 版本有獨立 PvE 與 Mega boost 用途；先核對招式、等級與實際投入。"
@@ -721,8 +559,9 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         : result.decision === "TRANSFER_CANDIDATE"
           ? "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。"
           : "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
-      assessmentDisposition: initialDisposition(result.decision, variant.released),
-      reviewNotesZhTw: "已核對第二世代家族、寶寶併入既有家族、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
+      assessmentDisposition: legacyInitialDisposition(result.decision, variant.released),
+      reviewNotesZhTw:
+        "已核對第二世代家族、寶寶併入既有家族、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
     };
   });
   await prisma.retentionEvaluation.createMany({ data: evaluationRows });
@@ -732,9 +571,15 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       return {
         id: `r20-trace-${variant.id}`,
         evaluationId: `r20-eval-${variant.id}`,
-        ruleKey: result.decision === "KEEP" ? "MAJOR_BATTLE_VALUE" : result.decision === "CONDITIONAL_KEEP" ? "CONDITIONAL_USE" : "LOW_GENERAL_VALUE",
+        ruleKey:
+          result.decision === "KEEP"
+            ? "MAJOR_BATTLE_VALUE"
+            : result.decision === "CONDITIONAL_KEEP"
+              ? "CONDITIONAL_USE"
+              : "LOW_GENERAL_VALUE",
         ruleVersion: RULES_VERSION,
-        priority: result.decision === "KEEP" ? 900 : result.decision === "CONDITIONAL_KEEP" ? 700 : 100,
+        priority:
+          result.decision === "KEEP" ? 900 : result.decision === "CONDITIONAL_KEEP" ? 700 : 100,
         matched: true,
         resultDecision: result.decision,
         explanationZhTw: "#242～#251 批次初步評估，待共用重算流程依跨世代 family graph 再確認。",
@@ -742,7 +587,10 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
     }),
   });
 
-  const evaluationSources = new Map<string, { evaluationId: string; sourceId: string; usageZhTw: string }>();
+  const evaluationSources = new Map<
+    string,
+    { evaluationId: string; sourceId: string; usageZhTw: string }
+  >();
   for (const variant of variants) {
     for (const rank of rankMap.get(variant.id) ?? []) {
       evaluationSources.set(`r20-eval-${variant.id}|${rank.sourceId}`, {
@@ -751,7 +599,9 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         usageZhTw: "Open League／Overall 名次與推薦招式。",
       });
     }
-    for (const link of officialEvidenceLinks.filter((candidate) => candidate.variantId === variant.id)) {
+    for (const link of officialEvidenceLinks.filter(
+      (candidate) => candidate.variantId === variant.id,
+    )) {
       evaluationSources.set(`r20-eval-${variant.id}|${link.sourceId}`, {
         evaluationId: `r20-eval-${variant.id}`,
         sourceId: link.sourceId,
@@ -759,7 +609,8 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       });
     }
   }
-  if (evaluationSources.size) await prisma.evaluationSource.createMany({ data: [...evaluationSources.values()] });
+  if (evaluationSources.size)
+    await prisma.evaluationSource.createMany({ data: [...evaluationSources.values()] });
 
   await prisma.changeLog.createMany({
     data: [
@@ -783,7 +634,8 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         previousValue: "#113",
         newValue: "#113→#242",
         sourceId: "OFF-JOHTO-TOUR-2022",
-        changeReasonZhTw: "幸福蛋正式併入吉利蛋既有家族；由舊 Kanto cross-generation stub 遷移為正式 Johto form。",
+        changeReasonZhTw:
+          "幸福蛋正式併入吉利蛋既有家族；由舊 Kanto cross-generation stub 遷移為正式 Johto form。",
         changedAt: checkedAt,
         rulesVersion: RULES_VERSION,
       },
@@ -795,7 +647,8 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         previousValue: "#246→#247",
         newValue: "#246→#247→#248",
         sourceId: "OFF-JOHTO-TOUR-2022",
-        changeReasonZhTw: "幼基拉斯、沙基拉斯與班基拉斯維持同一跨世代進化家族，並分開評估 Mega、Shadow 與 Max。",
+        changeReasonZhTw:
+          "幼基拉斯、沙基拉斯與班基拉斯維持同一跨世代進化家族，並分開評估 Mega、Shadow 與 Max。",
         changedAt: checkedAt,
         rulesVersion: RULES_VERSION,
       },
@@ -804,9 +657,19 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
 
   const counts = await Promise.all([
     prisma.pokemonSpecies.count({ where: { dexNumber: { gte: batchStart, lte: batchEnd } } }),
-    prisma.pokemonForm.count({ where: { species: { dexNumber: { gte: batchStart, lte: batchEnd } } } }),
-    prisma.battleVariant.count({ where: { pokemonForm: { species: { dexNumber: { gte: batchStart, lte: batchEnd } } } } }),
-    prisma.categoryEvaluation.count({ where: { battleVariant: { pokemonForm: { species: { dexNumber: { gte: batchStart, lte: batchEnd } } } } } }),
+    prisma.pokemonForm.count({
+      where: { species: { dexNumber: { gte: batchStart, lte: batchEnd } } },
+    }),
+    prisma.battleVariant.count({
+      where: { pokemonForm: { species: { dexNumber: { gte: batchStart, lte: batchEnd } } } },
+    }),
+    prisma.categoryEvaluation.count({
+      where: {
+        battleVariant: {
+          pokemonForm: { species: { dexNumber: { gte: batchStart, lte: batchEnd } } },
+        },
+      },
+    }),
   ]);
   if (counts[0] !== 10 || counts[1] !== 10 || counts[2] !== 41 || counts[3] !== 287) {
     throw new Error(`本批計數錯誤：${counts.join("/")}，預期 10/10/41/287。`);
@@ -815,8 +678,8 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
 }
 
 async function main() {
-  await upsertSources();
-  const rankings = await readRankings();
+  await upsertLegacySources(prisma, officialResearch, checkedAt, "第 #242～#251 批次來源研究表。");
+  const rankings = await readLegacyRankings(prisma, pvpokeCommit);
   await rebuildBatch(rankings);
 }
 

@@ -86,12 +86,18 @@ describe("review batch coverage", () => {
 
     expect(pkg.scripts["review:generate"]).toBe("tsx scripts/generate-all-reviews.ts");
     expect(pkg.scripts["data:import:batch"]).toBe("tsx scripts/import-batch.ts");
-    for (const [name, command] of Object.entries(pkg.scripts)) {
-      if (!name.startsWith("data:import:") || name === "data:import:batch") continue;
-      const batch = name.slice("data:import:".length);
-      expect(() => getBatchByKey(batch)).not.toThrow();
-      expect(command).toBe(`tsx scripts/import-batch.ts ${batch}`);
-    }
+    expect(Object.keys(pkg.scripts).filter((name) => name.startsWith("data:import:"))).toEqual([
+      "data:import:batch",
+    ]);
+    expect(
+      BATCH_REGISTRY.filter((entry) => ["182-211", "212-241", "242-251"].includes(entry.key)).map(
+        (entry) => [entry.review.generator, entry.review.passBatchKey],
+      ),
+    ).toEqual([
+      ["scripts/generate-review-johto.ts", true],
+      ["scripts/generate-review-johto.ts", true],
+      ["scripts/generate-review-johto.ts", true],
+    ]);
     expect(runner).toContain("BATCH_REGISTRY");
     expect(runner).toContain("batchReviewArgs");
     expect(runner).not.toContain("REVIEW_BATCH_FILES");

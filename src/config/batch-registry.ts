@@ -150,8 +150,8 @@ export const BATCH_REGISTRY = [
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-182-211.ts",
-      passBatchKey: false,
+      generator: "scripts/generate-review-johto.ts",
+      passBatchKey: true,
       jsonPath: "review/182-211.json",
       markdownPath: "review/182-211.md",
     },
@@ -168,8 +168,8 @@ export const BATCH_REGISTRY = [
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-212-241.ts",
-      passBatchKey: false,
+      generator: "scripts/generate-review-johto.ts",
+      passBatchKey: true,
       jsonPath: "review/212-241.json",
       markdownPath: "review/212-241.md",
     },
@@ -186,8 +186,8 @@ export const BATCH_REGISTRY = [
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-242-251.ts",
-      passBatchKey: false,
+      generator: "scripts/generate-review-johto.ts",
+      passBatchKey: true,
       jsonPath: "review/242-251.json",
       markdownPath: "review/242-251.md",
     },

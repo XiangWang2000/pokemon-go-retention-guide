@@ -30,14 +30,15 @@ import { deriveShadowReleaseEvidence } from "@/data/evolution-release";
 import { findTextIntegrityIssues } from "@/data/text-integrity";
 
 describe("Gen3 #312-#386 canonical and graph regression", () => {
-  it("keeps formal Gen3 importer boundaries explicit", () => {
+  it("keeps formal Gen3 importer boundaries in the Batch Registry", () => {
     const packageJson = JSON.parse(
       readFileSync(new URL("../package.json", import.meta.url), "utf8"),
     ) as { scripts: Record<string, string> };
+    expect(packageJson.scripts["data:import:batch"]).toBe("tsx scripts/import-batch.ts");
     expect(packageJson.scripts["data:import:312-386"]).toBeUndefined();
-    expect(packageJson.scripts["data:import:312-341"]).toBeDefined();
-    expect(packageJson.scripts["data:import:342-371"]).toBeDefined();
-    expect(packageJson.scripts["data:import:372-386"]).toBeDefined();
+    expect(packageJson.scripts["data:import:312-341"]).toBeUndefined();
+    expect(packageJson.scripts["data:import:342-371"]).toBeUndefined();
+    expect(packageJson.scripts["data:import:372-386"]).toBeUndefined();
   });
 
   it("keeps the three independent batch units bounded at 30 dex numbers", () => {
