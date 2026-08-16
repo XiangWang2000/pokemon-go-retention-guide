@@ -64,7 +64,15 @@ function optionalDate(value: string | null | undefined) {
 }
 
 function readManifest(path: string): ResearchManifest {
-  return JSON.parse(readFileSync(path, "utf8").replace(/^\uFEFF/, "")) as ResearchManifest;
+  const manifest = JSON.parse(readFileSync(path, "utf8").replace(/^\uFEFF/, "")) as ResearchManifest;
+  for (const source of manifest.sources) {
+    const summary = source.sourceSummaryZhTw ?? source.summaryZhTw;
+    if (!summary) throw new Error(`Missing Traditional Chinese source summary: ${source.id} in ${path}`);
+    if (!/[\u3400-\u9fff]/u.test(summary)) {
+      throw new Error(`Source summary is not Traditional Chinese: ${source.id} in ${path}`);
+    }
+  }
+  return manifest;
 }
 
 async function readRankings(): Promise<Gen4RankingSnapshots> {
@@ -83,7 +91,8 @@ async function readRankings(): Promise<Gen4RankingSnapshots> {
 
 async function upsertSource(prisma: PrismaClient, source: ResearchSource, fallbackCheckedAt: string) {
   const accessedAt = optionalDate(source.accessedAt ?? fallbackCheckedAt) ?? checkedAt;
-  const summary = source.sourceSummaryZhTw ?? source.summaryZhTw ?? "Gen4 research source.";
+  const summary = source.sourceSummaryZhTw ?? source.summaryZhTw;
+  if (!summary) throw new Error(`Missing Traditional Chinese source summary: ${source.id}`);
   const data = {
     sourceName: source.sourceName,
     sourceUrl: source.sourceUrl,
@@ -114,7 +123,7 @@ async function upsertPvPokeSources(prisma: PrismaClient) {
       sourceType: "PVP" as const,
       sourceTitleOriginal: `PvPoke ${label} Open League Overall Rankings`,
       sourceLanguage: "en",
-      sourceSummaryZhTw: "Pinned ranking snapshot used by the deterministic Gen4 importer.",
+       sourceSummaryZhTw: "固定 PvPoke 排名快照，供決定性第四世代匯入使用。",
       accessedAt: checkedAt,
       publishedAt: null,
       dataVersion: `${pvpokeCommit}; sha256=${sha256}`,
@@ -142,26 +151,26 @@ function pvpSummary(row: Gen4ImportPlanRow, definition: Gen4Definition) {
   if (!row.ranks.length) {
     return usesLegacyEvidenceAdapter(definition)
       ? "固定 PvPoke Open／Overall 快照未列入可重現名次。"
-      : "No matching PvPoke Open League overall rank in the pinned snapshot.";
+      : "固定 PvPoke Open／Overall 快照未列入可重現名次。";
   }
   return row.ranks
     .map((rank) => {
       const label = usesLegacyEvidenceAdapter(definition)
         ? legacyLeagueLabels[rank.league]
-        : leagueMeta[rank.league].label;
+        : legacyLeagueLabels[rank.league];
       return usesLegacyEvidenceAdapter(definition)
         ? `${label} Overall #${rank.rank}${rank.moves.length ? `；招式 ${rank.moves.join("／")}` : ""}`
-        : `${label} Overall #${rank.rank}${rank.moves.length ? `; moves: ${rank.moves.join(", ")}` : ""}`;
+        : `${label} Overall #${rank.rank}${rank.moves.length ? `；招式 ${rank.moves.join("／")}` : ""}`;
     })
-    .join(usesLegacyEvidenceAdapter(definition) ? "；" : "; ");
+    .join("；");
 }
 
 function decisionReason(row: Gen4ImportPlanRow, definition: Gen4Definition) {
   if (!usesLegacyEvidenceAdapter(definition)) {
-    if (!row.released) return "The form or variant is not currently released in Pokémon GO.";
-    if (row.initialDecision === "KEEP") return "Confirmed PvP, PvE, Mega, or Max value supports retaining it.";
-    if (row.initialDecision === "CONDITIONAL_KEEP") return "Limited PvP or PvE evidence supports conditional retention.";
-    return "No confirmed current battle use was found in the pinned evidence.";
+    if (!row.released) return "此戰鬥版本目前尚未在 Pokémon GO 推出。";
+    if (row.initialDecision === "KEEP") return "固定證據確認 PvP、PvE、Mega 或 Max 用途，支持保留此版本。";
+    if (row.initialDecision === "CONDITIONAL_KEEP") return "有限的 PvP 或 PvE 證據支持有條件保留。";
+    return "固定證據目前沒有確認的主要戰鬥用途。";
   }
   if (!row.released) return "此戰鬥版本尚未推出，不把現有個體誤當成此版本候選。";
   if (row.initialDecision === "KEEP") {
@@ -191,13 +200,15 @@ function variantNotes(row: Gen4ImportPlanRow, definition: Gen4Definition) {
     }
     return "普通版本；與暗影、淨化及 Max 分開評估。";
   }
-  if (row.variantKey === "SHADOW") return "Shadow variant; retain the normal form as its independent base identity.";
-  if (row.variantKey === "PURIFIED") return "Purified variant inherits the normal form unless an explicit override is added.";
-  if (row.variantKey === "MEGA") return "Mega variant is evaluated independently from the base form.";
+  if (row.variantKey === "SHADOW") return "暗影個體獨立評估；普通版本仍保留為獨立基礎身份。";
+  if (row.variantKey === "PURIFIED") return "淨化版本沿用普通基底資訊；除非另有明確覆寫。";
+  if (row.variantKey === "MEGA") return "Mega 版本與普通、暗影及淨化分開評估。";
   if (row.variantKey === "DYNAMAX" || row.variantKey === "GIGANTAMAX") {
-    return row.released ? "Released Max variant with current Max Battle value." : "Announced or modeled Max variant not currently released.";
+    return row.released
+      ? "此 Max 版本已推出；與普通、暗影及其他戰鬥版本分開評估。"
+      : "此 Max 版本尚未推出；發布狀態仍按資料標示。";
   }
-  return "Canonical Gen4 normal variant.";
+  return "第四世代普通版本；與暗影、淨化及特殊版本分開評估。";
 }
 
 function evaluationPresentation(row: Gen4ImportPlanRow, definition: Gen4Definition) {
@@ -235,17 +246,17 @@ function evaluationPresentation(row: Gen4ImportPlanRow, definition: Gen4Definiti
   }
   return {
     pvpSummaryZhTw: pvpSummary(row, definition),
-    pveSummaryZhTw: row.pveEvidence?.summaryZhTw ?? "No positive variant-level PvE evidence was recorded in this batch manifest.",
-    rocketSummaryZhTw: "Rocket-specific evidence is not included in this Gen4 batch manifest.",
-    gymSummaryZhTw: "Gym-specific evidence is not included in this Gen4 batch manifest.",
-    megaSummaryZhTw: row.variantKey === "MEGA" ? "Mega release-state and value are recorded independently." : "No Mega variant is associated with this row.",
-    maxBattleSummaryZhTw: row.variantKey === "DYNAMAX" || row.variantKey === "GIGANTAMAX" ? "Max release-state is recorded independently." : "No Max variant is associated with this row.",
-    evolutionSummaryZhTw: "The owning Gen4 batch supplies the canonical evolution identity and path.",
-    requiredMovesSummaryZhTw: row.ranks.some((rank) => rank.rank <= 250) ? "Review the pinned PvPoke moveset evidence before investing." : "No required move conclusion was recorded.",
-    recommendedIvStrategyZhTw: row.variantKey === "SHADOW" ? "Use the Shadow IV policy and compare the current role before powering up." : "Use the current release IV policy for this variant.",
+    pveSummaryZhTw: row.pveEvidence?.summaryZhTw ?? "目前沒有記錄正向版本級 PvE 證據；不因 100% IV 自動升格為實戰必留。",
+    rocketSummaryZhTw: "本批沒有逐物種火箭隊證據；資料缺口不單獨覆蓋其他結論。",
+    gymSummaryZhTw: "本批沒有逐物種道館證據；資料缺口不單獨覆蓋其他結論。",
+    megaSummaryZhTw: row.variantKey === "MEGA" ? "Mega 版本發布狀態與用途獨立核對。" : "此版本沒有獨立 Mega 型態。",
+    maxBattleSummaryZhTw: row.variantKey === "DYNAMAX" || row.variantKey === "GIGANTAMAX" ? "Max 版本發布狀態與用途獨立核對。" : "此版本沒有獨立 Max 型態。",
+    evolutionSummaryZhTw: "擁有該型態的第四世代批次提供正式進化身份與路徑。",
+    requiredMovesSummaryZhTw: row.ranks.some((rank) => rank.rank <= 250) ? "請先核對固定 PvPoke 招式證據，再決定是否投入。" : "目前沒有記錄需要特別保留的招式結論。",
+    recommendedIvStrategyZhTw: row.variantKey === "SHADOW" ? "依暗影 IV 規則並結合目前用途評估，再決定是否強化。" : "依目前版本的 IV 規則評估。",
     reasonZhTw: decisionReason(row, definition),
-    missingDataSummaryZhTw: row.released ? "No unresolved data dependency was recorded for this import row." : "Release state is intentionally unresolved because the variant is not currently available.",
-    reviewNotesZhTw: `Generated by the generic Gen4 ${definition.batch} adapter from the pinned research manifests.`,
+    missingDataSummaryZhTw: row.released ? "目前沒有未解決的資料依賴。" : "此版本目前尚未推出，發布狀態仍按資料標示。",
+    reviewNotesZhTw: `由固定研究 manifest 的第四世代 ${definition.batch} 通用匯入器 產生。`,
   };
 }
 
@@ -382,6 +393,7 @@ async function upsertSpeciesAndForms(
 async function materializeEvolutionPaths(
   prisma: PrismaClient,
   definition: Gen4Definition,
+  releaseResearch: ResearchManifest,
 ) {
   const formIds = new Set((await prisma.pokemonForm.findMany({ select: { id: true } })).map((form) => form.id));
   assertEvolutionPathEndpoints(formIds, definition.evolutionPairs, `Gen4 ${definition.batch}`);
@@ -392,10 +404,17 @@ async function materializeEvolutionPaths(
       toFormId,
       evolutionMethodZhTw: usesLegacyEvidenceAdapter(definition)
         ? "依 Pokémon GO 當期糖果、性別與特殊條件進化。"
-        : "Canonical Pokémon GO evolution path; the owning Gen4 batch supplies the form identity.",
+        : "Pokémon GO 正式進化路徑；擁有批次提供型態身份。",
       availabilityNotesZhTw: usesLegacyEvidenceAdapter(definition)
         ? "第四世代進化圖已獨立核對；特殊分支依遊戲內介面為準。"
-        : `Verified by the ${definition.batch} Gen4 research manifest.`,
+        : releaseResearch.sources.some(
+              (source) =>
+                source.id.startsWith("EVOLUTION-") &&
+                source.supports?.includes(fromFormId) &&
+                source.supports?.includes(toFormId),
+            )
+          ? `已由第四世代 ${definition.batch} 研究 manifest 的進化來源核對。`
+          : `由第四世代 ${definition.batch} 研究 manifest 建立；型態身份由擁有批次提供。`,
       requiresEvent: false,
       verifiedAt: checkedAt,
     });
@@ -443,7 +462,7 @@ async function writeBattleVariants(
         row.variantKey === "PURIFIED" && row.released
           ? usesLegacyEvidenceAdapter(definition)
             ? "淨化不可逆；先確認暗影用途與招式，不以淨化取代暗影候選。"
-            : "Purified inheritance follows the normal base variant."
+            : "淨化版本沿用普通基底版本；淨化不可逆，需先確認暗影用途。"
           : "",
       purifiedOverrideRequired: false,
     };
@@ -463,9 +482,8 @@ async function writeEvidence(
   plan: readonly Gen4ImportPlanRow[],
 ) {
   const pveSourceByUrl = new Map(pveResearch.sources.map((source) => [source.sourceUrl, source.id]));
-  const evolutionSourceId = releaseResearch.sources.find((source) => source.id.startsWith("OFF-"))?.id;
-  const megaSourceId = releaseResearch.sources.find((source) => source.id.startsWith("MEGA-"))?.id ?? evolutionSourceId;
-  const maxSourceId = releaseResearch.sources.find((source) => source.id.startsWith("MAX-"))?.id ?? evolutionSourceId;
+  const megaSourceId = releaseResearch.sources.find((source) => source.id.startsWith("MEGA-"))?.id;
+  const maxSourceId = releaseResearch.sources.find((source) => source.id.startsWith("MAX-"))?.id;
   const legacy = usesLegacyEvidenceAdapter(definition);
   const rawRows = plan.flatMap((row) => {
     const pvpRows = row.ranks.map((rank) => ({
@@ -482,13 +500,13 @@ async function writeEvidence(
       rank: rank.rank,
       rating: rank.rating === null ? null : String(rank.rating),
       recommendedMoves: JSON.stringify(rank.moves),
-       rawNotes: usesLegacyEvidenceAdapter(definition)
-         ? `${legacyLeagueLabels[rank.league]} Open／Overall；固定 JSON 陣列 index + 1 可重現。`
-         : `${leagueMeta[rank.league].label} Open League overall ranking from a pinned JSON snapshot.`,
+        rawNotes: usesLegacyEvidenceAdapter(definition)
+          ? `${legacyLeagueLabels[rank.league]} Open／Overall；固定 JSON 陣列 index + 1 可重現。`
+          : `${legacyLeagueLabels[rank.league]} Open／Overall；固定 JSON 陣列 index + 1 可重現。`,
        seasonOrVersion: `PvPoke commit ${pvpokeCommit}`,
-       extractionMethod: usesLegacyEvidenceAdapter(definition)
-         ? "固定 commit 的完整 rankings JSON 陣列索引（index + 1）"
-         : "Pinned rankings JSON; array index plus one.",
+        extractionMethod: usesLegacyEvidenceAdapter(definition)
+          ? "固定 commit 的完整 rankings JSON 陣列索引（index + 1）"
+          : "固定 rankings JSON 陣列索引加一。",
       reproducible: true,
       sourceId: leagueMeta[rank.league].sourceId,
       checkedAt,
@@ -519,7 +537,7 @@ async function writeEvidence(
           : `GO Hub accessed ${row.pveEvidence.checkedAt}`,
         extractionMethod: usesLegacyEvidenceAdapter(definition)
           ? "dated variant-level PvE research evidence"
-          : "Dated variant-level PvE research evidence.",
+          : "日期化的版本級 PvE 研究證據。",
         reproducible: false,
         sourceId,
         checkedAt,
@@ -532,9 +550,7 @@ async function writeEvidence(
     categories.map((category) => {
       let status: "VERIFIED" | "PARTIALLY_VERIFIED" | "UNRANKED" | "NOT_APPLICABLE" | "DATA_UNAVAILABLE" | "UNRELEASED" = "NOT_APPLICABLE";
       let provenance: "SOURCE_VERIFIED" | "MANUAL_CURATED" | "DATA_UNAVAILABLE" = "MANUAL_CURATED";
-       let summaryZhTw = legacy
-         ? "此欄位不適用，不影響可執行的保留或傳送建議。"
-         : "No category-specific evidence was required for this variant.";
+       let summaryZhTw = "此欄位不適用，不影響可執行的保留或傳送建議。";
       let materialToDecision = false;
       let pveUseLevel: "CORE_INVESTMENT" | "USABLE_OR_BUDGET" | "SPECIAL_USE" | "NO_SIGNIFICANT_USE" | null = null;
       if (category === "PVP") {
@@ -547,9 +563,7 @@ async function writeEvidence(
           materialToDecision = row.ranks.some((rank) => rank.rank <= 250);
         } else {
           status = "UNRANKED";
-           summaryZhTw = legacy
-             ? "固定 PvPoke Open／Overall 快照未列入可重現名次。"
-             : "No matching PvPoke Open League overall rank in the pinned snapshot.";
+            summaryZhTw = "固定 PvPoke Open／Overall 快照未列入可重現名次。";
         }
       } else if (category === "PVE") {
         pveUseLevel = row.pveEvidence?.level ?? "NO_SIGNIFICANT_USE";
@@ -563,22 +577,16 @@ async function writeEvidence(
         } else {
           status = "DATA_UNAVAILABLE";
           provenance = "DATA_UNAVAILABLE";
-           summaryZhTw = legacy
-             ? "目前沒有記錄正向 PvE 證據；不以資料空白虛構 IV 淘汰線。"
-             : "No positive variant-level PvE evidence was recorded in this batch manifest.";
+           summaryZhTw = "目前沒有記錄正向 PvE 證據；不以資料空白虛構 IV 淘汰線。";
         }
        } else if (category === "ROCKET") {
          status = row.released ? "DATA_UNAVAILABLE" : "UNRELEASED";
          provenance = row.released ? "DATA_UNAVAILABLE" : "MANUAL_CURATED";
-         summaryZhTw = legacy
-           ? "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。"
-           : "Rocket-specific evidence is not included in this Gen4 batch manifest.";
+          summaryZhTw = "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。";
        } else if (category === "GYM") {
          status = row.released ? "DATA_UNAVAILABLE" : "UNRELEASED";
          provenance = row.released ? "DATA_UNAVAILABLE" : "MANUAL_CURATED";
-         summaryZhTw = legacy
-           ? "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。"
-           : "Gym-specific evidence is not included in this Gen4 batch manifest.";
+          summaryZhTw = "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。";
        } else if (category === "MEGA") {
          if (legacy) {
            summaryZhTw = "本批 #387～#416 目前沒有已推出的 Mega／Primal 戰鬥版本。";
@@ -586,7 +594,7 @@ async function writeEvidence(
            status = row.released ? "VERIFIED" : "UNRELEASED";
            provenance = row.released ? "SOURCE_VERIFIED" : "MANUAL_CURATED";
            materialToDecision = row.released;
-           summaryZhTw = row.released ? "Released Mega variant." : "Modeled Mega variant not currently released.";
+            summaryZhTw = row.released ? "已推出的 Mega 版本。" : "已建模但目前尚未推出的 Mega 版本。";
          }
        } else if (category === "MAX_BATTLE") {
          const isMaxVariant = legacy ? row.variantKey === "DYNAMAX" : ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey);
@@ -598,9 +606,9 @@ async function writeEvidence(
              ? row.released
                ? "此 Dynamax 版本已推出；與普通／暗影版本分開保留。"
                : "此 Dynamax 版本尚未推出。"
-             : row.released
-               ? "Released Max variant."
-               : "Modeled Max variant not currently released.";
+              : row.released
+                ? "已推出的 Max 版本。"
+                : "已建模但目前尚未推出的 Max 版本。";
          } else {
            status = row.released ? "NOT_APPLICABLE" : "UNRELEASED";
            if (legacy) summaryZhTw = "普通、暗影或淨化個體不能替代 Dynamax 個體。";
@@ -616,9 +624,9 @@ async function writeEvidence(
            ? hasEvolution
              ? "本批或既有家族的正式進化關係已結構化；是否保留仍取決於後續用途與版本。"
              : "沒有額外需要回推的本批進化用途。"
-           : hasEvolution
-             ? "The canonical evolution graph contains this form."
-             : "No evolution edge is associated with this form.";
+            : hasEvolution
+              ? "正式進化圖包含此型態。"
+              : "目前沒有與此型態相連的進化路徑。";
        } else {
         status = row.released ? "DATA_UNAVAILABLE" : "UNRELEASED";
         provenance = row.released ? "DATA_UNAVAILABLE" : "MANUAL_CURATED";
@@ -649,29 +657,87 @@ async function writeEvidence(
 
   const categorySources: Array<{ categoryEvaluationId: string; sourceId: string; usageZhTw: string }> = [];
   const evaluationSources: Array<{ evaluationId: string; sourceId: string; usageZhTw: string }> = [];
+  const categorySourceKeys = new Set<string>();
+  const evaluationSourceKeys = new Set<string>();
+  const addCategorySource = (value: (typeof categorySources)[number]) => {
+    const key = `${value.categoryEvaluationId}|${value.sourceId}`;
+    if (categorySourceKeys.has(key)) return;
+    categorySourceKeys.add(key);
+    categorySources.push(value);
+  };
+  const addEvaluationSource = (value: (typeof evaluationSources)[number]) => {
+    const key = `${value.evaluationId}|${value.sourceId}`;
+    if (evaluationSourceKeys.has(key)) return;
+    evaluationSourceKeys.add(key);
+    evaluationSources.push(value);
+  };
   for (const row of plan) {
     for (const rank of row.ranks) {
       const usage = legacy
         ? "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
-        : "Pinned PvPoke Open League overall ranking source.";
-      categorySources.push({ categoryEvaluationId: `category-${row.id}-pvp`, sourceId: leagueMeta[rank.league].sourceId, usageZhTw: usage });
-      evaluationSources.push({ evaluationId: `gen4-${definition.batch}-eval-${row.id}`, sourceId: leagueMeta[rank.league].sourceId, usageZhTw: usage });
+        : "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。";
+      addCategorySource({ categoryEvaluationId: `category-${row.id}-pvp`, sourceId: leagueMeta[rank.league].sourceId, usageZhTw: usage });
+      addEvaluationSource({ evaluationId: `gen4-${definition.batch}-eval-${row.id}`, sourceId: leagueMeta[rank.league].sourceId, usageZhTw: usage });
     }
     if (row.pveEvidence) {
       const sourceId = pveSourceByUrl.get(row.pveEvidence.sourceUrl)!;
-      const usage = legacy ? "2026-08-13 variant-level PvE 用途與屬性榜證據。" : "Dated variant-level PvE evidence.";
-      categorySources.push({ categoryEvaluationId: `category-${row.id}-pve`, sourceId, usageZhTw: usage });
-      evaluationSources.push({ evaluationId: `gen4-${definition.batch}-eval-${row.id}`, sourceId, usageZhTw: legacy ? "2026-08-13 variant-level PvE evidence。" : usage });
+      const usage = legacy ? "2026-08-13 版本級 PvE 用途與屬性榜證據。" : "日期化的版本級 PvE 證據。";
+      addCategorySource({ categoryEvaluationId: `category-${row.id}-pve`, sourceId, usageZhTw: usage });
+      addEvaluationSource({ evaluationId: `gen4-${definition.batch}-eval-${row.id}`, sourceId, usageZhTw: usage });
     }
     if (row.variantKey === "MEGA" && megaSourceId) {
-      categorySources.push({ categoryEvaluationId: `category-${row.id}-mega`, sourceId: megaSourceId, usageZhTw: "Release-state source for the Mega variant." });
-      evaluationSources.push({ evaluationId: `gen4-${definition.batch}-eval-${row.id}`, sourceId: megaSourceId, usageZhTw: "Release-state source for the Mega variant." });
+      addCategorySource({ categoryEvaluationId: `category-${row.id}-mega`, sourceId: megaSourceId, usageZhTw: "已推出 Mega 版本的發布狀態來源。" });
+      addEvaluationSource({ evaluationId: `gen4-${definition.batch}-eval-${row.id}`, sourceId: megaSourceId, usageZhTw: "已推出 Mega 版本的發布狀態來源。" });
     }
     const isReleasedMaxVariant = legacy ? row.variantKey === "DYNAMAX" : ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey);
     if (isReleasedMaxVariant && row.released && maxSourceId) {
-      const usage = legacy ? "目前 Dynamax roster 的版本推出證據。" : "Release-state source for the Max variant.";
-      categorySources.push({ categoryEvaluationId: `category-${row.id}-max_battle`, sourceId: maxSourceId, usageZhTw: usage });
-      evaluationSources.push({ evaluationId: `gen4-${definition.batch}-eval-${row.id}`, sourceId: maxSourceId, usageZhTw: legacy ? "Dynamax 版本推出證據。" : usage });
+      const usage = legacy ? "目前 Dynamax roster 的版本推出證據。" : "已推出 Max 版本的發布狀態來源。";
+      addCategorySource({ categoryEvaluationId: `category-${row.id}-max_battle`, sourceId: maxSourceId, usageZhTw: usage });
+      addEvaluationSource({ evaluationId: `gen4-${definition.batch}-eval-${row.id}`, sourceId: maxSourceId, usageZhTw: usage });
+    }
+  }
+  for (const source of releaseResearch.sources) {
+    for (const support of source.supports ?? []) {
+      const row = plan.find((candidate) =>
+        candidate.id === support || candidate.id === `${support}-normal`,
+      );
+      if (!row) continue;
+      let category: (typeof categories)[number] | null = null;
+      let usageZhTw = "";
+      if (source.id.startsWith("SHADOW-")) {
+        category = "ROCKET";
+        usageZhTw = "暗影名單的直接遭遇發布證據；進化後型態由正式進化路徑推導。";
+      } else if (source.id.startsWith("MEGA-") && row.variantKey === "MEGA") {
+        category = "MEGA";
+        usageZhTw = "已推出 Mega 版本的發布狀態來源。";
+      } else if (source.id.startsWith("MAX-") && ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey)) {
+        category = "MAX_BATTLE";
+        usageZhTw = "已推出 Max 版本的發布狀態來源。";
+      } else if (source.id.startsWith("EVOLUTION-")) {
+        category = "EVOLUTION_VALUE";
+        usageZhTw = "正式進化關係來源；不以此來源推論戰鬥強度。";
+      } else if (
+        row.variantKey === "NORMAL" &&
+        (source.id.startsWith("PVP-SINNOH-") ||
+          source.id.startsWith("SECONDARY-SINNOH-POKEDEX-") ||
+          source.id.startsWith("GOFEST-"))
+      ) {
+        category = "EVOLUTION_VALUE";
+        usageZhTw = source.id.startsWith("GOFEST-")
+          ? "GO Snapshot 活動中的普通型態發布證據。"
+          : "普通型態的 Pokémon GO 發布狀態參考。";
+      }
+      if (!category) continue;
+      addCategorySource({
+        categoryEvaluationId: `category-${row.id}-${category.toLowerCase()}`,
+        sourceId: source.id,
+        usageZhTw,
+      });
+      addEvaluationSource({
+        evaluationId: `gen4-${definition.batch}-eval-${row.id}`,
+        sourceId: source.id,
+        usageZhTw,
+      });
     }
   }
   if (categorySources.length) await prisma.categoryEvaluationSource.createMany({ data: categorySources });
@@ -705,7 +771,7 @@ async function writeEvidence(
         resultDecision: row.initialDecision,
          explanationZhTw: legacy
            ? "第四世代匯入初步評估；後續仍由共用重算與 review 流程確認。"
-           : "The deterministic Gen4 import plan supplied this initial decision.",
+           : "決定性的第四世代匯入計畫提供此初步評估結論。",
       };
     }),
   });
@@ -725,7 +791,7 @@ export async function runImportGen4(batch: string, databaseUrl = getDatabaseUrl(
     }
     await upsertPvPokeSources(prisma);
     await upsertSpeciesAndForms(prisma, definition);
-    await materializeEvolutionPaths(prisma, definition);
+    await materializeEvolutionPaths(prisma, definition, releaseResearch);
     const rankings = await readRankings();
     const plan = buildGen4ImportPlan(definition, rankings);
     await writeBattleVariants(prisma, definition, plan);
@@ -742,14 +808,14 @@ export async function runImportGen4(batch: string, databaseUrl = getDatabaseUrl(
         previousValue: null,
         newValue: "RESEARCHED",
         sourceId,
-        changeReasonZhTw: `Imported Gen4 ${batch} through the generic batch-owned adapter.`,
+         changeReasonZhTw: `透過批次擁有的通用匯入器 匯入第四世代 ${batch}。`,
         changedAt: checkedAt,
         rulesVersion: RULES_VERSION,
       },
       update: {
         newValue: "RESEARCHED",
         sourceId,
-        changeReasonZhTw: `Rebuilt Gen4 ${batch} through the generic batch-owned adapter.`,
+         changeReasonZhTw: `透過批次擁有的通用匯入器 重建第四世代 ${batch}。`,
         changedAt: checkedAt,
         rulesVersion: RULES_VERSION,
       },

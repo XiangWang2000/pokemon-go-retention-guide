@@ -71,6 +71,7 @@ export type Gen4BatchDefinition = {
   forms: readonly Gen4BatchForm[];
   evolutionPairs: readonly Gen4EvolutionPair[];
   releasedNormalForms: ReadonlySet<string>;
+  directShadowEncounterForms: ReadonlySet<string>;
   releasedShadowForms: ReadonlySet<string>;
   releasedMegaForms: ReadonlySet<string>;
   releasedDynamaxForms: ReadonlySet<string>;

@@ -984,7 +984,7 @@ export const canonicalGen4Forms417493 = [
     formNameEn: "Fan",
     formNameZhTw: "風扇",
     regionKey: "SINNOH",
-    types: ["ELECTRIC", "GHOST"]
+    types: ["ELECTRIC", "FLYING"]
   },
   {
     id: "479-frost",
@@ -993,7 +993,7 @@ export const canonicalGen4Forms417493 = [
     formNameEn: "Frost",
     formNameZhTw: "冰箱",
     regionKey: "SINNOH",
-    types: ["ELECTRIC", "GHOST"]
+    types: ["ELECTRIC", "ICE"]
   },
   {
     id: "479-heat",
@@ -1002,7 +1002,7 @@ export const canonicalGen4Forms417493 = [
     formNameEn: "Heat",
     formNameZhTw: "微波爐",
     regionKey: "SINNOH",
-    types: ["ELECTRIC", "GHOST"]
+    types: ["ELECTRIC", "FIRE"]
   },
   {
     id: "479-mow",
@@ -1011,7 +1011,7 @@ export const canonicalGen4Forms417493 = [
     formNameEn: "Mow",
     formNameZhTw: "割草機",
     regionKey: "SINNOH",
-    types: ["ELECTRIC", "GHOST"]
+    types: ["ELECTRIC", "GRASS"]
   },
   {
     id: "479-sinnoh",
@@ -1029,7 +1029,7 @@ export const canonicalGen4Forms417493 = [
     formNameEn: "Wash",
     formNameZhTw: "洗衣機",
     regionKey: "SINNOH",
-    types: ["ELECTRIC", "GHOST"]
+    types: ["ELECTRIC", "WATER"]
   },
   {
     id: "480-sinnoh",
@@ -1182,7 +1182,7 @@ export const canonicalGen4Forms417493 = [
     formNameEn: "Sky Forme",
     formNameZhTw: "天空形態",
     regionKey: "SINNOH",
-    types: ["GRASS"]
+    types: ["GRASS", "FLYING"]
   },
   {
     id: "493-bug",

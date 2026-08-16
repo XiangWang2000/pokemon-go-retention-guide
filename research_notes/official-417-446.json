@@ -6,49 +6,13 @@
       "id": "OFF-SINNOH-GEN4-20260816",
       "sourceName": "Pokémon GO official Sinnoh release archive",
       "sourceType": "OFFICIAL",
-      "sourceTitleOriginal": "Pokémon originally discovered in the Sinnoh region",
+      "sourceTitleOriginal": "The Adventure Continues–Pokémon Originally Discovered in the Sinnoh Region are here!",
       "sourceLanguage": "en",
-      "sourceUrl": "https://pokemongolive.com/post/sinnoh-region-pokemon",
+      "sourceUrl": "https://pokemongo.com/post/sinnoh-pokemon?hl=en",
       "accessedAt": "2026-08-16",
-      "publishedAt": "2018-12-17",
-      "sourceSummaryZhTw": "Official release history for Pokémon originally discovered in the Sinnoh region.",
-      "supports": [
-        "417-sinnoh",
-        "418-sinnoh",
-        "419-sinnoh",
-        "420-sinnoh",
-        "421-overcast",
-        "421-sunny",
-        "422-east-sea",
-        "422-west-sea",
-        "423-east-sea",
-        "423-west-sea",
-        "424-sinnoh",
-        "425-sinnoh",
-        "426-sinnoh",
-        "427-sinnoh",
-        "428-sinnoh",
-        "429-sinnoh",
-        "430-sinnoh",
-        "431-sinnoh",
-        "432-sinnoh",
-        "433-sinnoh",
-        "434-sinnoh",
-        "435-sinnoh",
-        "436-sinnoh",
-        "437-sinnoh",
-        "438-sinnoh",
-        "439-sinnoh",
-        "440-sinnoh",
-        "441-sinnoh",
-        "442-sinnoh",
-        "443-sinnoh",
-        "444-sinnoh",
-        "445-sinnoh",
-        "446-sinnoh",
-        "428-sinnoh-mega",
-        "445-sinnoh-mega"
-      ]
+      "publishedAt": "2018-10-16",
+      "sourceSummaryZhTw": "官方 2018 年神奧地區寶可夢分波段推出的歷史背景；不支援後續特殊型態發布判定。",
+      "supports": []
     },
     {
       "id": "SECONDARY-SINNOH-POKEDEX-20260816",
@@ -59,7 +23,7 @@
       "sourceUrl": "https://pokemongohub.net/pokemon/sinnoh-pokedex",
       "accessedAt": "2026-08-16",
       "publishedAt": null,
-      "sourceSummaryZhTw": "Current form and availability reference for the Sinnoh Pokédex.",
+      "sourceSummaryZhTw": "目前神奧圖鑑的普通型態與取得狀態參考；不涵蓋未推出的特殊版本。",
       "supports": [
         "417-sinnoh",
         "418-sinnoh",
@@ -93,9 +57,7 @@
         "443-sinnoh",
         "444-sinnoh",
         "445-sinnoh",
-        "446-sinnoh",
-        "428-sinnoh-mega",
-        "445-sinnoh-mega"
+        "446-sinnoh"
       ]
     },
     {
@@ -107,7 +69,7 @@
       "sourceUrl": "https://pokeapi.co/api/v2/pokemon/",
       "accessedAt": "2026-08-16",
       "publishedAt": null,
-      "sourceSummaryZhTw": "Canonical names and elemental types used for stable identity.",
+      "sourceSummaryZhTw": "用於核對正式名稱與屬性；不作為 Pokémon GO 發布狀態證據。",
       "supports": [
         "417-sinnoh",
         "418-sinnoh",
@@ -141,9 +103,7 @@
         "443-sinnoh",
         "444-sinnoh",
         "445-sinnoh",
-        "446-sinnoh",
-        "428-sinnoh-mega",
-        "445-sinnoh-mega"
+        "446-sinnoh"
       ]
     },
     {
@@ -155,7 +115,7 @@
       "sourceUrl": "https://pokemongohub.net/post/guide/pokemon-go-sinnoh-pokedex/",
       "accessedAt": "2026-08-16",
       "publishedAt": null,
-      "sourceSummaryZhTw": "Release-state evidence for forms and special variants.",
+      "sourceSummaryZhTw": "目前普通型態的 Pokémon GO 發布狀態參考；特殊版本另以專屬來源核對。",
       "supports": [
         "417-sinnoh",
         "418-sinnoh",
@@ -189,9 +149,56 @@
         "443-sinnoh",
         "444-sinnoh",
         "445-sinnoh",
-        "446-sinnoh",
+        "446-sinnoh"
+      ]
+    },
+    {
+      "id": "EVOLUTION-SINNOH-433-20260816",
+      "sourceName": "Pokémon GO evolution reference",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Chingling evolution",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/pokemon-go-sinnoh-pokedex/#chingling",
+      "accessedAt": "2026-08-16",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "用於核對 Chingling 進化為 Chimecho 的正式進化關係；不以此來源推論戰鬥強度。",
+      "supports": [
+        "433-sinnoh",
+        "358-hoenn",
+        "EVOLUTION_VALUE"
+      ]
+    },
+    {
+      "id": "MEGA-SINNOH-RELEASE-20260816",
+      "sourceName": "Pokémon GO Mega form reference",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Mega form availability for Sinnoh forms",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokedex/sinnoh#mega",
+      "accessedAt": "2026-08-16",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "目前資料中已推出 Mega 型態的發布狀態證據；僅支援列出的 Mega 版本。",
+      "supports": [
         "428-sinnoh-mega",
         "445-sinnoh-mega"
+      ]
+    },
+    {
+      "id": "SHADOW-SINNOH-ROSTER-20260816",
+      "sourceName": "Serebii Pokémon GO Shadow roster",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Shadow Pokémon",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
+      "accessedAt": "2026-08-16",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "暗影名單中的直接遭遇項目；進化後型態由正式進化路徑推導，不把衍生項目冒充直接名單。",
+      "supports": [
+        "425-sinnoh-shadow",
+        "431-sinnoh-shadow",
+        "434-sinnoh-shadow",
+        "435-sinnoh-shadow",
+        "443-sinnoh-shadow"
       ]
     }
   ]

@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
   canonicalGen4Forms417446,
@@ -17,9 +18,12 @@ import {
   evolutionPairs417446,
   evolutionPairs447476,
   evolutionPairs477493,
+  directShadowEncounterForms417493,
   forms417446,
   forms447476,
   forms477493,
+  releasedNormalForms417493,
+  releasedShadowForms417493,
   species417446,
   species447476,
   species477493,
@@ -138,6 +142,127 @@ describe("Gen 4 canonical source #417-#493", () => {
     expect(forms.some((form) => form.id.endsWith("-other"))).toBe(false);
     expect(forms.find((form) => form.id === "479-fan")?.formNameZhTw).toBe("風扇");
     expect(forms.find((form) => form.id === "493-normal")?.formNameZhTw).toBe("一般");
+  });
+
+  it("keeps the independent canonical alternate-form type facts", () => {
+    const expected = new Map([
+      ["479-fan", ["ELECTRIC", "FLYING"]],
+      ["479-frost", ["ELECTRIC", "ICE"]],
+      ["479-heat", ["ELECTRIC", "FIRE"]],
+      ["479-mow", ["ELECTRIC", "GRASS"]],
+      ["479-sinnoh", ["ELECTRIC", "GHOST"]],
+      ["479-wash", ["ELECTRIC", "WATER"]],
+      ["492-land", ["GRASS"]],
+      ["492-sky", ["GRASS", "FLYING"]],
+    ]);
+    const ownedForms = [...forms417446, ...forms447476, ...forms477493];
+    const canonicalForms = [
+      ...canonicalGen4Forms417446,
+      ...canonicalGen4Forms447476,
+      ...canonicalGen4Forms477493,
+    ];
+    for (const [id, types] of expected) {
+      expect(ownedForms.find((form) => form.id === id)?.types).toEqual(types);
+      expect(canonicalForms.find((form) => form.id === id)?.types).toEqual(types);
+    }
+  });
+
+  it("derives released Shadow forms from a dated direct roster and formal edges", () => {
+    expect([...directShadowEncounterForms417493].sort()).toEqual([
+      "425-sinnoh",
+      "431-sinnoh",
+      "434-sinnoh",
+      "435-sinnoh",
+      "443-sinnoh",
+      "449-sinnoh",
+      "451-sinnoh",
+      "453-sinnoh",
+      "459-sinnoh",
+      "483-sinnoh",
+      "484-sinnoh",
+      "485-sinnoh",
+      "486-sinnoh",
+      "487-altered",
+      "488-sinnoh",
+      "491-sinnoh",
+    ]);
+    expect([...releasedShadowForms417493].sort()).toEqual([
+      "425-sinnoh",
+      "426-sinnoh",
+      "431-sinnoh",
+      "432-sinnoh",
+      "434-sinnoh",
+      "435-sinnoh",
+      "443-sinnoh",
+      "444-sinnoh",
+      "445-sinnoh",
+      "449-sinnoh",
+      "450-sinnoh",
+      "451-sinnoh",
+      "452-sinnoh",
+      "453-sinnoh",
+      "454-sinnoh",
+      "459-sinnoh",
+      "460-sinnoh",
+      "483-sinnoh",
+      "484-sinnoh",
+      "485-sinnoh",
+      "486-sinnoh",
+      "487-altered",
+      "488-sinnoh",
+      "491-sinnoh",
+    ]);
+    expect(releasedShadowForms417493.has("487-origin")).toBe(false);
+    expect([...releasedNormalForms417493].includes("479-fan")).toBe(true);
+  });
+
+  it("keeps the Chingling cross-generation edge and its fact-scoped source", () => {
+    expect(evolutionPairs417446.filter(([from, to]) => from === "433-sinnoh" && to === "358-hoenn")).toHaveLength(1);
+    const manifest = JSON.parse(readFileSync("research_notes/official-417-446.json", "utf8")) as {
+      sources: Array<{ id: string; supports?: string[] }>;
+    };
+    const source = manifest.sources.find((item) => item.id === "EVOLUTION-SINNOH-433-20260816");
+    expect(source?.supports).toEqual(expect.arrayContaining(["433-sinnoh", "358-hoenn", "EVOLUTION_VALUE"]));
+  });
+
+  it("keeps release provenance fact-scoped and review-facing summaries in Traditional Chinese", () => {
+    const manifests = ["417-446", "447-476", "477-493"].map((batch) =>
+      JSON.parse(readFileSync(`research_notes/official-${batch}.json`, "utf8")) as {
+        sources: Array<{
+          id: string;
+          sourceUrl?: string;
+          publishedAt?: string | null;
+          sourceSummaryZhTw?: string;
+          supports?: string[];
+        }>;
+      },
+    );
+    for (const manifest of manifests) {
+      expect(manifest.sources.every((source) => /[\u3400-\u9fff]/u.test(source.sourceSummaryZhTw ?? ""))).toBe(true);
+    }
+    const official = manifests[0].sources.find((source) => source.id === "OFF-SINNOH-GEN4-20260816");
+    expect(official?.sourceUrl).toBe("https://pokemongo.com/post/sinnoh-pokemon?hl=en");
+    expect(official?.publishedAt).toBe("2018-10-16");
+    expect(official?.supports).toEqual([]);
+
+    const formsSource = manifests[2].sources.find((source) => source.id === "SECONDARY-SINNOH-FORMS-20260816");
+    expect(formsSource?.sourceSummaryZhTw).toContain("屬性");
+    expect(formsSource?.supports?.some((id) => /-(mega|dynamax|gigantamax)$/.test(id))).toBe(false);
+    expect(formsSource?.sourceSummaryZhTw).not.toMatch(/release|availability|released/i);
+
+    const releaseSource = manifests[2].sources.find((source) => source.id === "PVP-SINNOH-RELEASE-20260816");
+    expect(releaseSource?.supports?.some((id) => /-(mega|dynamax|gigantamax)$/.test(id))).toBe(false);
+    const shadowSource = manifests[2].sources.find((source) => source.id === "SHADOW-SINNOH-ROSTER-20260816");
+    expect(shadowSource?.supports).toEqual(
+      expect.arrayContaining([
+        "483-sinnoh-shadow",
+        "484-sinnoh-shadow",
+        "487-altered-shadow",
+        "491-sinnoh-shadow",
+      ]),
+    );
+    const fanSource = manifests[2].sources.find((source) => source.id === "GOFEST-ROTOM-FAN-2025");
+    expect(fanSource?.supports).toEqual(["479-fan"]);
   });
 
   it("keeps special variants separate from the four generic variants", () => {

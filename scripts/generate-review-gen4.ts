@@ -91,7 +91,7 @@ export async function generateGen4Review(batch: string) {
     familyId: family.familyId,
     strategy: family.retentionStrategy,
     conclusion: family.handlingSummaryZhTw,
-    transferLine: family.retentionStrategy === "HOLD_FOR_NOW" ? null : "Review individual IV and use conditions before transferring.",
+    transferLine: family.retentionStrategy === "HOLD_FOR_NOW" ? null : "傳送前請個別核對 IV 與用途條件。",
   }));
   const payload = {
     batch,

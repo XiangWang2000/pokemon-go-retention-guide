@@ -320,14 +320,27 @@ async function verifyProtectedSupersededStub(url: string) {
 async function verifyEvidenceAdapters(url: string) {
   const db = client(url);
   try {
-    const [legacyEvaluation, genericEvaluation, legacyVariant, legacyRocket] = await Promise.all([
+    const [
+      legacyEvaluation,
+      genericEvaluation,
+      legacyVariant,
+      legacyRocket,
+      genericVariant,
+      genericRocket,
+      genericCategorySource,
+      genericEvaluationSource,
+      genericEvolution,
+      genericTrace,
+      genericSource,
+      genericChange,
+    ] = await Promise.all([
       db.retentionEvaluation.findUnique({
         where: { id: "gen4-387-416-eval-387-sinnoh-normal" },
         select: { pvpSummaryZhTw: true, reasonZhTw: true, reviewNotesZhTw: true },
       }),
       db.retentionEvaluation.findUnique({
         where: { id: "gen4-417-446-eval-417-sinnoh-normal" },
-        select: { pvpSummaryZhTw: true, reasonZhTw: true },
+        select: { pvpSummaryZhTw: true, reasonZhTw: true, reviewNotesZhTw: true },
       }),
       db.battleVariant.findUnique({
         where: { id: "387-sinnoh-normal" },
@@ -336,6 +349,38 @@ async function verifyEvidenceAdapters(url: string) {
       db.categoryEvaluation.findUnique({
         where: { id: "category-387-sinnoh-normal-rocket" },
         select: { summaryZhTw: true },
+      }),
+      db.battleVariant.findUnique({
+        where: { id: "417-sinnoh-normal" },
+        select: { notesZhTw: true },
+      }),
+      db.categoryEvaluation.findUnique({
+        where: { id: "category-417-sinnoh-normal-rocket" },
+        select: { summaryZhTw: true },
+      }),
+      db.categoryEvaluationSource.findFirst({
+        where: { categoryEvaluationId: "category-417-sinnoh-normal-evolution_value" },
+        select: { usageZhTw: true },
+      }),
+      db.evaluationSource.findFirst({
+        where: { evaluationId: "gen4-417-446-eval-417-sinnoh-normal" },
+        select: { usageZhTw: true },
+      }),
+      db.evolutionPath.findUnique({
+        where: { id: "evolution-gen4-417-446-418-sinnoh-419-sinnoh" },
+        select: { evolutionMethodZhTw: true, availabilityNotesZhTw: true },
+      }),
+      db.evaluationRuleTrace.findUnique({
+        where: { id: "gen4-417-446-trace-417-sinnoh-normal" },
+        select: { explanationZhTw: true },
+      }),
+      db.sourceReference.findUnique({
+        where: { id: "SECONDARY-SINNOH-POKEDEX-20260816" },
+        select: { sourceSummaryZhTw: true },
+      }),
+      db.changeLog.findUnique({
+        where: { id: "gen4-417-446-batch" },
+        select: { changeReasonZhTw: true },
       }),
     ]);
     assert(
@@ -346,11 +391,23 @@ async function verifyEvidenceAdapters(url: string) {
         legacyRocket?.summaryZhTw === "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。",
       "The historical Gen4 evidence adapter did not preserve its reviewed presentation.",
     );
+    const hasTraditionalChinese = (value: string | null | undefined) =>
+      Boolean(value && /[\u3400-\u9fff]/u.test(value));
     assert(
       genericEvaluation &&
-        !genericEvaluation.pvpSummaryZhTw.includes("GL（超級聯盟）") &&
-        !genericEvaluation.reasonZhTw.includes("目前"),
-      "The generic Gen4 evidence adapter did not produce generic presentation.",
+        hasTraditionalChinese(genericEvaluation.pvpSummaryZhTw) &&
+        hasTraditionalChinese(genericEvaluation.reasonZhTw) &&
+        hasTraditionalChinese(genericEvaluation.reviewNotesZhTw) &&
+        hasTraditionalChinese(genericVariant?.notesZhTw) &&
+        hasTraditionalChinese(genericRocket?.summaryZhTw) &&
+        hasTraditionalChinese(genericCategorySource?.usageZhTw) &&
+        hasTraditionalChinese(genericEvaluationSource?.usageZhTw) &&
+        hasTraditionalChinese(genericEvolution?.evolutionMethodZhTw) &&
+        hasTraditionalChinese(genericEvolution?.availabilityNotesZhTw) &&
+        hasTraditionalChinese(genericTrace?.explanationZhTw) &&
+        hasTraditionalChinese(genericSource?.sourceSummaryZhTw) &&
+        hasTraditionalChinese(genericChange?.changeReasonZhTw),
+      "The generic Gen4 evidence adapter did not produce Traditional Chinese presentation.",
     );
   } finally {
     await db.$disconnect();

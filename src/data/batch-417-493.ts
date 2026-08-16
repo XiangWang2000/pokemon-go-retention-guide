@@ -1,6 +1,7 @@
 import type { Gen4BatchForm, Gen4BatchSpecies, Gen4EvolutionPair, Gen4PveEvidence, Gen4SpecialVariant } from "./batch-gen4-types";
+import { deriveShadowReleaseEvidence } from "./evolution-release";
 
-const note = "Canonical Sinnoh identity and release-owned Gen4 form.";
+const note = "神奧 正式 身份與第四世代批次擁有的型態。";
 
 export const species417493: Gen4BatchSpecies[] = [
   {
@@ -1275,7 +1276,7 @@ export const forms417493: Gen4BatchForm[] = [
     formNameEn: "Fan",
     formNameZhTw: "風扇",
     regionKey: "SINNOH",
-    types: ["ELECTRIC", "GHOST"],
+    types: ["ELECTRIC", "FLYING"],
     aliases: ["rotom", "洛托姆", "Fan", "風扇"],
     evolvesFromFormId: null
   }),
@@ -1286,7 +1287,7 @@ export const forms417493: Gen4BatchForm[] = [
     formNameEn: "Frost",
     formNameZhTw: "冰箱",
     regionKey: "SINNOH",
-    types: ["ELECTRIC", "GHOST"],
+    types: ["ELECTRIC", "ICE"],
     aliases: ["rotom", "洛托姆", "Frost", "冰箱"],
     evolvesFromFormId: null
   }),
@@ -1297,7 +1298,7 @@ export const forms417493: Gen4BatchForm[] = [
     formNameEn: "Heat",
     formNameZhTw: "微波爐",
     regionKey: "SINNOH",
-    types: ["ELECTRIC", "GHOST"],
+    types: ["ELECTRIC", "FIRE"],
     aliases: ["rotom", "洛托姆", "Heat", "微波爐"],
     evolvesFromFormId: null
   }),
@@ -1308,7 +1309,7 @@ export const forms417493: Gen4BatchForm[] = [
     formNameEn: "Mow",
     formNameZhTw: "割草機",
     regionKey: "SINNOH",
-    types: ["ELECTRIC", "GHOST"],
+    types: ["ELECTRIC", "GRASS"],
     aliases: ["rotom", "洛托姆", "Mow", "割草機"],
     evolvesFromFormId: null
   }),
@@ -1330,7 +1331,7 @@ export const forms417493: Gen4BatchForm[] = [
     formNameEn: "Wash",
     formNameZhTw: "洗衣機",
     regionKey: "SINNOH",
-    types: ["ELECTRIC", "GHOST"],
+    types: ["ELECTRIC", "WATER"],
     aliases: ["rotom", "洛托姆", "Wash", "洗衣機"],
     evolvesFromFormId: null
   }),
@@ -1517,7 +1518,7 @@ export const forms417493: Gen4BatchForm[] = [
     formNameEn: "Sky Forme",
     formNameZhTw: "天空形態",
     regionKey: "SINNOH",
-    types: ["GRASS"],
+    types: ["GRASS", "FLYING"],
     aliases: ["shaymin", "謝米", "Sky Forme", "天空形態"],
     evolvesFromFormId: null
   }),
@@ -1764,15 +1765,39 @@ export const evolutionPairs417493: readonly Gen4EvolutionPair[] = [
   ["125-kanto", "466-sinnoh"],
   ["126-kanto", "467-sinnoh"],
   ["176-johto", "468-sinnoh"],
+  ["433-sinnoh", "358-hoenn"],
   ["133-kanto", "470-sinnoh"],
   ["133-kanto", "471-sinnoh"],
 ];
 
-export const releasedNormalForms417493 = new Set<string>(["417-sinnoh", "418-sinnoh", "419-sinnoh", "420-sinnoh", "421-overcast", "421-sunny", "422-east-sea", "422-west-sea", "423-east-sea", "423-west-sea", "424-sinnoh", "425-sinnoh", "426-sinnoh", "427-sinnoh", "428-sinnoh", "429-sinnoh", "430-sinnoh", "431-sinnoh", "432-sinnoh", "433-sinnoh", "434-sinnoh", "435-sinnoh", "436-sinnoh", "437-sinnoh", "438-sinnoh", "439-sinnoh", "440-sinnoh", "441-sinnoh", "442-sinnoh", "443-sinnoh", "444-sinnoh", "445-sinnoh", "446-sinnoh", "447-sinnoh", "448-sinnoh", "449-sinnoh", "450-sinnoh", "451-sinnoh", "452-sinnoh", "453-sinnoh", "454-sinnoh", "455-sinnoh", "456-sinnoh", "457-sinnoh", "458-sinnoh", "459-sinnoh", "460-sinnoh", "461-sinnoh", "462-sinnoh", "463-sinnoh", "464-sinnoh", "465-sinnoh", "466-sinnoh", "467-sinnoh", "468-sinnoh", "469-sinnoh", "470-sinnoh", "471-sinnoh", "472-sinnoh", "473-sinnoh", "474-sinnoh", "475-sinnoh", "476-sinnoh", "477-sinnoh", "478-sinnoh", "479-frost", "479-heat", "479-mow", "479-sinnoh", "479-wash", "480-sinnoh", "481-sinnoh", "482-sinnoh", "483-origin", "483-sinnoh", "484-origin", "484-sinnoh", "485-sinnoh", "486-sinnoh", "487-altered", "487-origin", "488-sinnoh", "491-sinnoh", "492-land", "492-sky"]);
-export const directShadowEncounterForms417493 = new Set<string>([]);
+export const releasedNormalForms417493 = new Set<string>(["417-sinnoh", "418-sinnoh", "419-sinnoh", "420-sinnoh", "421-overcast", "421-sunny", "422-east-sea", "422-west-sea", "423-east-sea", "423-west-sea", "424-sinnoh", "425-sinnoh", "426-sinnoh", "427-sinnoh", "428-sinnoh", "429-sinnoh", "430-sinnoh", "431-sinnoh", "432-sinnoh", "433-sinnoh", "434-sinnoh", "435-sinnoh", "436-sinnoh", "437-sinnoh", "438-sinnoh", "439-sinnoh", "440-sinnoh", "441-sinnoh", "442-sinnoh", "443-sinnoh", "444-sinnoh", "445-sinnoh", "446-sinnoh", "447-sinnoh", "448-sinnoh", "449-sinnoh", "450-sinnoh", "451-sinnoh", "452-sinnoh", "453-sinnoh", "454-sinnoh", "455-sinnoh", "456-sinnoh", "457-sinnoh", "458-sinnoh", "459-sinnoh", "460-sinnoh", "461-sinnoh", "462-sinnoh", "463-sinnoh", "464-sinnoh", "465-sinnoh", "466-sinnoh", "467-sinnoh", "468-sinnoh", "469-sinnoh", "470-sinnoh", "471-sinnoh", "472-sinnoh", "473-sinnoh", "474-sinnoh", "475-sinnoh", "476-sinnoh", "477-sinnoh", "478-sinnoh", "479-fan", "479-frost", "479-heat", "479-mow", "479-sinnoh", "479-wash", "480-sinnoh", "481-sinnoh", "482-sinnoh", "483-origin", "483-sinnoh", "484-origin", "484-sinnoh", "485-sinnoh", "486-sinnoh", "487-altered", "487-origin", "488-sinnoh", "491-sinnoh", "492-land", "492-sky"]);
+export const directShadowEncounterForms417493 = new Set<string>([
+  "425-sinnoh",
+  "431-sinnoh",
+  "434-sinnoh",
+  "435-sinnoh",
+  "443-sinnoh",
+  "449-sinnoh",
+  "451-sinnoh",
+  "453-sinnoh",
+  "459-sinnoh",
+  "483-sinnoh",
+  "484-sinnoh",
+  "485-sinnoh",
+  "486-sinnoh",
+  "487-altered",
+  "488-sinnoh",
+  "491-sinnoh",
+]);
 export const releasedDynamaxForms417493 = new Set<string>(["466-sinnoh", "470-sinnoh", "471-sinnoh", "475-sinnoh"]);
 export const releasedMegaForms417493 = new Set<string>(["428-sinnoh", "445-sinnoh", "448-sinnoh", "460-sinnoh", "475-sinnoh"]);
-export const releasedShadowForms417493 = new Set<string>(directShadowEncounterForms417493);
+const shadowReleaseEvidence417493 = deriveShadowReleaseEvidence(
+  directShadowEncounterForms417493,
+  evolutionPairs417493,
+);
+export const releasedShadowForms417493 = new Set<string>(
+  [...shadowReleaseEvidence417493.releasedFormIds].filter((id) => forms417493.some((form) => form.id === id)),
+);
 export const releasedGigantamaxForms417493 = new Set<string>();
 
 export const specialVariants417493: Gen4SpecialVariant[] = [
@@ -1957,126 +1982,126 @@ export const pveEvidence417493: Readonly<Record<string, Gen4PveEvidence>> = {
     roles: ["Ground attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/445",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 445-sinnoh-normal."
+    summaryZhTw: "本批版本級 PvE 證據：445-sinnoh-normal。"
   },
   "445-sinnoh-shadow": {
     level: "CORE_INVESTMENT",
     roles: ["Ground attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/445-Shadow",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 445-sinnoh-shadow."
+    summaryZhTw: "本批版本級 PvE 證據：445-sinnoh-shadow。"
   },
   "464-sinnoh-normal": {
     level: "CORE_INVESTMENT",
     roles: ["Rock attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/464",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 464-sinnoh-normal."
+    summaryZhTw: "本批版本級 PvE 證據：464-sinnoh-normal。"
   },
   "464-sinnoh-shadow": {
     level: "CORE_INVESTMENT",
     roles: ["Rock attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/464-Shadow",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 464-sinnoh-shadow."
+    summaryZhTw: "本批版本級 PvE 證據：464-sinnoh-shadow。"
   },
   "473-sinnoh-normal": {
     level: "CORE_INVESTMENT",
     roles: ["Ice attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/473",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 473-sinnoh-normal."
+    summaryZhTw: "本批版本級 PvE 證據：473-sinnoh-normal。"
   },
   "473-sinnoh-shadow": {
     level: "CORE_INVESTMENT",
     roles: ["Ice attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/473-Shadow",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 473-sinnoh-shadow."
+    summaryZhTw: "本批版本級 PvE 證據：473-sinnoh-shadow。"
   },
   "460-sinnoh-normal": {
     level: "USABLE_OR_BUDGET",
     roles: ["Grass attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/460",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 460-sinnoh-normal."
+    summaryZhTw: "本批版本級 PvE 證據：460-sinnoh-normal。"
   },
   "460-sinnoh-shadow": {
     level: "USABLE_OR_BUDGET",
     roles: ["Grass attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/460-Shadow",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 460-sinnoh-shadow."
+    summaryZhTw: "本批版本級 PvE 證據：460-sinnoh-shadow。"
   },
   "448-sinnoh-normal": {
     level: "USABLE_OR_BUDGET",
     roles: ["Fighting attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/448",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 448-sinnoh-normal."
+    summaryZhTw: "本批版本級 PvE 證據：448-sinnoh-normal。"
   },
   "448-sinnoh-shadow": {
     level: "USABLE_OR_BUDGET",
     roles: ["Fighting attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/448-Shadow",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 448-sinnoh-shadow."
+    summaryZhTw: "本批版本級 PvE 證據：448-sinnoh-shadow。"
   },
   "443-sinnoh-shadow": {
     level: "USABLE_OR_BUDGET",
     roles: ["Dragon attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/443-Shadow",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 443-sinnoh-shadow."
+    summaryZhTw: "本批版本級 PvE 證據：443-sinnoh-shadow。"
   },
   "452-sinnoh-shadow": {
     level: "USABLE_OR_BUDGET",
     roles: ["Poison attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/452-Shadow",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 452-sinnoh-shadow."
+    summaryZhTw: "本批版本級 PvE 證據：452-sinnoh-shadow。"
   },
   "466-sinnoh-normal": {
     level: "USABLE_OR_BUDGET",
     roles: ["Electric attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/466",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 466-sinnoh-normal."
+    summaryZhTw: "本批版本級 PvE 證據：466-sinnoh-normal。"
   },
   "467-sinnoh-normal": {
     level: "USABLE_OR_BUDGET",
     roles: ["Fire attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/467",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 467-sinnoh-normal."
+    summaryZhTw: "本批版本級 PvE 證據：467-sinnoh-normal。"
   },
   "469-sinnoh-normal": {
     level: "USABLE_OR_BUDGET",
     roles: ["Bug attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/469",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 469-sinnoh-normal."
+    summaryZhTw: "本批版本級 PvE 證據：469-sinnoh-normal。"
   },
   "472-sinnoh-shadow": {
     level: "USABLE_OR_BUDGET",
     roles: ["Ground attacker"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/472-Shadow",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 472-sinnoh-shadow."
+    summaryZhTw: "本批版本級 PvE 證據：472-sinnoh-shadow。"
   },
   "487-origin-normal": {
     level: "SPECIAL_USE",
     roles: ["Origin Forme raid utility"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/487",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 487-origin-normal."
+    summaryZhTw: "本批版本級 PvE 證據：487-origin-normal。"
   },
   "492-sky-normal": {
     level: "SPECIAL_USE",
     roles: ["Sky Forme utility"],
     sourceUrl: "https://db.pokemongohub.net/pokemon/492",
     checkedAt: "2026-08-16",
-    summaryZhTw: "Variant-level PvE evidence for 492-sky-normal."
+    summaryZhTw: "本批版本級 PvE 證據：492-sky-normal。"
   },
 };
 
@@ -2086,6 +2111,7 @@ export const species417446 = species417493.filter((item) => item.dexNumber >= 41
 export const forms417446 = forms417493.filter((item) => item.dexNumber >= 417 && item.dexNumber <= 446);
 export const evolutionPairs417446 = evolutionPairs417493.filter(([from, to]) => { const ids = new Set(forms417446.map((item) => item.id)); return ids.has(from) || ids.has(to); });
 export const releasedNormalForms417446 = new Set([...releasedNormalForms417493].filter((id) => forms417446.some((form) => form.id === id)));
+export const directShadowEncounterForms417446 = new Set([...directShadowEncounterForms417493].filter((id) => forms417446.some((form) => form.id === id)));
 export const releasedShadowForms417446 = new Set([...releasedShadowForms417493].filter((id) => forms417446.some((form) => form.id === id)));
 export const releasedMegaForms417446 = new Set([...releasedMegaForms417493].filter((id) => forms417446.some((form) => form.id === id)));
 export const releasedDynamaxForms417446 = new Set([...releasedDynamaxForms417493].filter((id) => forms417446.some((form) => form.id === id)));
@@ -2096,6 +2122,7 @@ export const species447476 = species417493.filter((item) => item.dexNumber >= 44
 export const forms447476 = forms417493.filter((item) => item.dexNumber >= 447 && item.dexNumber <= 476);
 export const evolutionPairs447476 = evolutionPairs417493.filter(([from, to]) => { const ids = new Set(forms447476.map((item) => item.id)); return ids.has(from) || ids.has(to); });
 export const releasedNormalForms447476 = new Set([...releasedNormalForms417493].filter((id) => forms447476.some((form) => form.id === id)));
+export const directShadowEncounterForms447476 = new Set([...directShadowEncounterForms417493].filter((id) => forms447476.some((form) => form.id === id)));
 export const releasedShadowForms447476 = new Set([...releasedShadowForms417493].filter((id) => forms447476.some((form) => form.id === id)));
 export const releasedMegaForms447476 = new Set([...releasedMegaForms417493].filter((id) => forms447476.some((form) => form.id === id)));
 export const releasedDynamaxForms447476 = new Set([...releasedDynamaxForms417493].filter((id) => forms447476.some((form) => form.id === id)));
@@ -2106,6 +2133,7 @@ export const species477493 = species417493.filter((item) => item.dexNumber >= 47
 export const forms477493 = forms417493.filter((item) => item.dexNumber >= 477 && item.dexNumber <= 493);
 export const evolutionPairs477493 = evolutionPairs417493.filter(([from, to]) => { const ids = new Set(forms477493.map((item) => item.id)); return ids.has(from) || ids.has(to); });
 export const releasedNormalForms477493 = new Set([...releasedNormalForms417493].filter((id) => forms477493.some((form) => form.id === id)));
+export const directShadowEncounterForms477493 = new Set([...directShadowEncounterForms417493].filter((id) => forms477493.some((form) => form.id === id)));
 export const releasedShadowForms477493 = new Set([...releasedShadowForms417493].filter((id) => forms477493.some((form) => form.id === id)));
 export const releasedMegaForms477493 = new Set([...releasedMegaForms417493].filter((id) => forms477493.some((form) => form.id === id)));
 export const releasedDynamaxForms477493 = new Set([...releasedDynamaxForms417493].filter((id) => forms477493.some((form) => form.id === id)));

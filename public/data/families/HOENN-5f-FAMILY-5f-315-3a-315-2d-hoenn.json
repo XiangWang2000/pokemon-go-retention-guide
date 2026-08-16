@@ -110,7 +110,7 @@
               "maxBattleSummaryZhTw": "普通、暗影或淨化個體不能替代 Dynamax 個體。",
               "evolutionSummaryZhTw": "第四世代 #387～#416 進化圖已結構化；前階是否保留由後續目標用途決定。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "目前沒有主要用途時，不因 100% 自動產生保留理由。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體大多可傳。",
               "evaluationId": "gen4-387-416-eval-406-sinnoh-normal",
@@ -343,7 +343,7 @@
               "maxBattleSummaryZhTw": "普通、暗影或淨化個體不能替代 Dynamax 個體。",
               "evolutionSummaryZhTw": "第四世代 #387～#416 進化圖已結構化；前階是否保留由後續目標用途決定。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低 IV。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "此戰鬥版本尚未推出，不把現有個體誤當成此版本候選。",
               "evaluationId": "gen4-387-416-eval-406-sinnoh-shadow",
@@ -576,7 +576,7 @@
               "maxBattleSummaryZhTw": "普通、暗影或淨化個體不能替代 Dynamax 個體。",
               "evolutionSummaryZhTw": "第四世代 #387～#416 進化圖已結構化；前階是否保留由後續目標用途決定。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "目前沒有主要用途時，不因 100% 自動產生保留理由。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "此戰鬥版本尚未推出，不把現有個體誤當成此版本候選。",
               "evaluationId": "gen4-387-416-eval-406-sinnoh-purified",
@@ -809,7 +809,7 @@
               "maxBattleSummaryZhTw": "此 Dynamax 版本尚未推出。",
               "evolutionSummaryZhTw": "第四世代 #387～#416 進化圖已結構化；前階是否保留由後續目標用途決定。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "目前沒有主要用途時，不因 100% 自動產生保留理由。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "此戰鬥版本尚未推出，不把現有個體誤當成此版本候選。",
               "evaluationId": "gen4-387-416-eval-406-sinnoh-dynamax",
@@ -1060,8 +1060,8 @@
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
           "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T05:28:57.657Z",
-          "updatedAt": "2026-08-16T05:28:57.657Z"
+          "createdAt": "2026-08-16T08:28:15.799Z",
+          "updatedAt": "2026-08-16T08:28:15.799Z"
         },
         {
           "id": "iv-global-pve",
@@ -1092,8 +1092,8 @@
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T05:28:57.643Z",
-          "updatedAt": "2026-08-16T05:28:57.643Z"
+          "createdAt": "2026-08-16T08:28:15.783Z",
+          "updatedAt": "2026-08-16T08:28:15.783Z"
         }
       ],
       "isRoot": true,
@@ -1122,7 +1122,7 @@
             "requiresEvent": false,
             "verifiedAt": "2026-08-15T16:00:00.000Z",
             "isEvolutionStub": false,
-            "targetUseLevel": "SPECIAL_USE",
+            "targetUseLevel": "USABLE_OR_BUDGET",
             "targetNameEn": "roserade",
             "targetNameZhTw": "羅絲雷朵"
           }
@@ -1163,7 +1163,7 @@
                   "requiresEvent": false,
                   "verifiedAt": "2026-08-15T16:00:00.000Z",
                   "isEvolutionStub": false,
-                  "targetUseLevel": "SPECIAL_USE",
+                  "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "roserade",
                   "targetNameZhTw": "羅絲雷朵"
                 }
@@ -1470,7 +1470,7 @@
                   "requiresEvent": false,
                   "verifiedAt": "2026-08-15T16:00:00.000Z",
                   "isEvolutionStub": false,
-                  "targetUseLevel": "SPECIAL_USE",
+                  "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "roserade",
                   "targetNameZhTw": "羅絲雷朵"
                 }
@@ -1703,7 +1703,7 @@
                   "requiresEvent": false,
                   "verifiedAt": "2026-08-15T16:00:00.000Z",
                   "isEvolutionStub": false,
-                  "targetUseLevel": "SPECIAL_USE",
+                  "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "roserade",
                   "targetNameZhTw": "羅絲雷朵"
                 }
@@ -1936,7 +1936,7 @@
                   "requiresEvent": false,
                   "verifiedAt": "2026-08-15T16:00:00.000Z",
                   "isEvolutionStub": false,
-                  "targetUseLevel": "SPECIAL_USE",
+                  "targetUseLevel": "USABLE_OR_BUDGET",
                   "targetNameEn": "roserade",
                   "targetNameZhTw": "羅絲雷朵"
                 }
@@ -2234,8 +2234,8 @@
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
           "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T05:28:57.657Z",
-          "updatedAt": "2026-08-16T05:28:57.657Z"
+          "createdAt": "2026-08-16T08:28:15.799Z",
+          "updatedAt": "2026-08-16T08:28:15.799Z"
         },
         {
           "id": "iv-global-pve",
@@ -2266,8 +2266,8 @@
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T05:28:57.643Z",
-          "updatedAt": "2026-08-16T05:28:57.643Z"
+          "createdAt": "2026-08-16T08:28:15.783Z",
+          "updatedAt": "2026-08-16T08:28:15.783Z"
         }
       ],
       "isRoot": false,
@@ -2348,7 +2348,7 @@
               "maxBattleSummaryZhTw": "普通、暗影或淨化個體不能替代 Dynamax 個體。",
               "evolutionSummaryZhTw": "第四世代 #387～#416 進化圖已結構化；前階是否保留由後續目標用途決定。",
               "requiredMovesSummaryZhTw": "依固定快照優先核對：POISON_STING／WEATHER_BALL_FIRE／LEAF_STORM",
-              "recommendedIvStrategyZhTw": "依實際用途分開篩選；PvP 看同聯盟 IV Rank，PvE 先看招式、等級／CP與既有投入；15攻優先，14攻高整體 IV 亦可留。",
+              "recommendedIvStrategyZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或需特定招式／版本；只留少量符合條件的個體。",
               "evaluationId": "gen4-387-416-eval-407-sinnoh-normal",
@@ -2631,7 +2631,7 @@
                   "url": "https://db.pokemongohub.net/pokemon/407",
                   "type": "PVE",
                   "accessedAt": "2026-08-12T16:00:00.000Z",
-                  "usageZhTw": "2026-08-13 variant-level PvE evidence。"
+                  "usageZhTw": "2026-08-13 版本級 PvE 用途與屬性榜證據。"
                 },
                 {
                   "id": "pvpoke-gl-20260715",
@@ -2710,8 +2710,8 @@
                 "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
                 "shortIvLabelZhTw": "ML：15攻／98%優先",
                 "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T05:28:57.657Z",
-                "updatedAt": "2026-08-16T05:28:57.657Z"
+                "createdAt": "2026-08-16T08:28:15.799Z",
+                "updatedAt": "2026-08-16T08:28:15.799Z"
               },
               {
                 "id": "iv-global-pve",
@@ -2742,8 +2742,8 @@
                 "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
                 "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
                 "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T05:28:57.643Z",
-                "updatedAt": "2026-08-16T05:28:57.643Z"
+                "createdAt": "2026-08-16T08:28:15.783Z",
+                "updatedAt": "2026-08-16T08:28:15.783Z"
               }
             ],
             "ivShortLabels": [
@@ -2802,7 +2802,7 @@
               "maxBattleSummaryZhTw": "普通、暗影或淨化個體不能替代 Dynamax 個體。",
               "evolutionSummaryZhTw": "第四世代 #387～#416 進化圖已結構化；前階是否保留由後續目標用途決定。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低 IV。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "此戰鬥版本尚未推出，不把現有個體誤當成此版本候選。",
               "evaluationId": "gen4-387-416-eval-407-sinnoh-shadow",
@@ -3020,7 +3020,7 @@
               "maxBattleSummaryZhTw": "普通、暗影或淨化個體不能替代 Dynamax 個體。",
               "evolutionSummaryZhTw": "第四世代 #387～#416 進化圖已結構化；前階是否保留由後續目標用途決定。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "目前沒有主要用途時，不因 100% 自動產生保留理由。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "此戰鬥版本尚未推出，不把現有個體誤當成此版本候選。",
               "evaluationId": "gen4-387-416-eval-407-sinnoh-purified",
@@ -3238,7 +3238,7 @@
               "maxBattleSummaryZhTw": "此 Dynamax 版本尚未推出。",
               "evolutionSummaryZhTw": "第四世代 #387～#416 進化圖已結構化；前階是否保留由後續目標用途決定。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "目前沒有主要用途時，不因 100% 自動產生保留理由。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "此戰鬥版本尚未推出，不把現有個體誤當成此版本候選。",
               "evaluationId": "gen4-387-416-eval-407-sinnoh-dynamax",
@@ -3467,8 +3467,8 @@
             "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
             "shortIvLabelZhTw": "ML：15攻／98%優先",
             "rulesVersion": "2026.07.28-v2",
-            "createdAt": "2026-08-16T05:28:57.657Z",
-            "updatedAt": "2026-08-16T05:28:57.657Z"
+            "createdAt": "2026-08-16T08:28:15.799Z",
+            "updatedAt": "2026-08-16T08:28:15.799Z"
           },
           {
             "id": "iv-global-pve",
@@ -3499,8 +3499,8 @@
             "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
             "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
             "rulesVersion": "2026.07.28-v2",
-            "createdAt": "2026-08-16T05:28:57.643Z",
-            "updatedAt": "2026-08-16T05:28:57.643Z"
+            "createdAt": "2026-08-16T08:28:15.783Z",
+            "updatedAt": "2026-08-16T08:28:15.783Z"
           }
         ],
         "ivShortLabels": [
@@ -3567,8 +3567,8 @@
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
           "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T05:28:57.657Z",
-          "updatedAt": "2026-08-16T05:28:57.657Z"
+          "createdAt": "2026-08-16T08:28:15.799Z",
+          "updatedAt": "2026-08-16T08:28:15.799Z"
         },
         {
           "id": "iv-global-pve",
@@ -3599,8 +3599,8 @@
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T05:28:57.643Z",
-          "updatedAt": "2026-08-16T05:28:57.643Z"
+          "createdAt": "2026-08-16T08:28:15.783Z",
+          "updatedAt": "2026-08-16T08:28:15.783Z"
         }
       ],
       "isRoot": false,
@@ -3697,8 +3697,8 @@
       "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-16T05:28:57.657Z",
-      "updatedAt": "2026-08-16T05:28:57.657Z"
+      "createdAt": "2026-08-16T08:28:15.799Z",
+      "updatedAt": "2026-08-16T08:28:15.799Z"
     },
     {
       "id": "iv-global-pve",
@@ -3729,8 +3729,8 @@
       "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
       "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-16T05:28:57.643Z",
-      "updatedAt": "2026-08-16T05:28:57.643Z"
+      "createdAt": "2026-08-16T08:28:15.783Z",
+      "updatedAt": "2026-08-16T08:28:15.783Z"
     }
   ],
   "ivSummaryZhTw": "依成員用途分開保留：ML：15攻／98%優先；PvE：15攻優先；14攻高整體IV亦可留",
