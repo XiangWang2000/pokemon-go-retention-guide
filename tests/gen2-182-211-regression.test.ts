@@ -29,4 +29,16 @@ describe("Gen 2 #182-211 data integration", () => {
     expect(targets.has("424-sinnoh")).toBe(true);
     expect(targets.has("472-sinnoh")).toBe(true);
   });
+  it("keeps Pineco and Forretress connected in the source graph", () => {
+    expect(species182211.find((species) => species.dexNumber === 204)?.familyKey).toBe(
+      "JOHTO_FAMILY_204",
+    );
+    expect(species182211.find((species) => species.dexNumber === 205)?.familyKey).toBe(
+      "JOHTO_FAMILY_204",
+    );
+    expect(forms182211.find((form) => form.id === "205-johto")?.evolvesFromFormId).toBe(
+      "204-johto",
+    );
+    expect(evolutionPairs182211).toContainEqual(["204-johto", "205-johto"]);
+  });
 });

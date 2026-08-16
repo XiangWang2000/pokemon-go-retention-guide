@@ -152,13 +152,25 @@ describe("Gen 3 #252-#281 integration", () => {
     }
   });
 
-  it("does not change the accepted Gen 1-2 conclusion set", () => {
+  it("preserves the accepted Gen 1-2 conclusion set while propagating canonical family value", () => {
     const existing = dashboard.filter((candidate) => candidate.dexNumber <= 251);
     expect(existing).toHaveLength(1190);
     expect(existing.filter((candidate) => candidate.decision === "KEEP")).toHaveLength(91);
-    expect(existing.filter((candidate) => candidate.decision === "CONDITIONAL_KEEP")).toHaveLength(296);
-    expect(existing.filter((candidate) => candidate.decision === "TRANSFER_CANDIDATE")).toHaveLength(803);
+    expect(existing.filter((candidate) => candidate.decision === "CONDITIONAL_KEEP")).toHaveLength(
+      302,
+    );
+    expect(
+      existing.filter((candidate) => candidate.decision === "TRANSFER_CANDIDATE"),
+    ).toHaveLength(797);
     expect(existing.some((candidate) => candidate.decision === "HOLD_FOR_NOW")).toBe(false);
+    expect(
+      existing.filter(
+        (candidate) =>
+          ["204-johto", "216-johto", "220-johto"].includes(candidate.formId) &&
+          ["NORMAL", "SHADOW"].includes(candidate.variantKey) &&
+          candidate.decision === "CONDITIONAL_KEEP",
+      ),
+    ).toHaveLength(6);
   });
 
   it("keeps the first batch free of safety holds", () => {

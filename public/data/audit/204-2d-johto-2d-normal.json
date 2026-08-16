@@ -12,7 +12,19 @@
   "regionKey": "JOHTO",
   "evolvesFromFormId": null,
   "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-r19-204-johto-205-johto",
+      "fromFormId": "204-johto",
+      "toFormId": "205-johto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T10:00:00.000Z",
+      "isEvolutionStub": false,
+      "targetUseLevel": null,
+      "targetNameEn": "forretress",
+      "targetNameZhTw": "佛烈托斯"
+    }
+  ],
   "types": [
     "BUG"
   ],
@@ -20,32 +32,35 @@
     "pineco",
     "榛果球"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "forretress",
+    "佛烈托斯"
+  ],
   "variantKey": "NORMAL",
   "isReleased": true,
   "releaseStatus": "RELEASED",
   "releaseVerifiedAt": "2026-08-08T10:00:00.000Z",
   "notesZhTw": "普通版本；與暗影、淨化、Mega 及 Max 分開評估。",
-  "decision": "TRANSFER_CANDIDATE",
-  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+  "decision": "CONDITIONAL_KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "DATA_UNAVAILABLE",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
+  "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-08-15T16:00:00.000Z",
   "pvpSummaryZhTw": "GL（超級聯盟） Overall #887；招式 BUG_BITE／ROCK_TOMB／SAND_TOMB",
-  "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+  "pveSummaryZhTw": "無顯著用途。佛烈托斯：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
   "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
-  "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
+  "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+  "recommendedIvStrategyZhTw": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -464,7 +479,7 @@
       "updatedAt": "2026-08-16T09:42:39.051Z"
     }
   ],
-  "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
+  "reasonZhTw": "用途有限：後續進化（佛烈托斯）已有用途；只保留少量符合條件的進化候選。",
   "evaluationId": "r19-eval-204-johto-normal",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已核對第二世代家族、寶寶併入既有家族、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
@@ -479,9 +494,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "NOT_APPLICABLE",
+      "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "沒有額外需要回推的本批進化用途。",
+      "summaryZhTw": "本批或既有家族的正式進化關係已結構化；是否保留仍取決於後續用途與版本。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -492,7 +507,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
@@ -518,7 +533,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     },
@@ -537,7 +552,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     },
@@ -556,7 +571,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     },
@@ -564,7 +579,7 @@
       "category": "PVE",
       "status": "DATA_UNAVAILABLE",
       "provenance": "DATA_UNAVAILABLE",
-      "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+      "summaryZhTw": "無顯著用途。佛烈托斯：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -575,7 +590,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     },
@@ -594,7 +609,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
@@ -620,7 +635,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     }
@@ -681,11 +696,11 @@
   ],
   "traces": [
     {
-      "ruleKey": "LOW_GENERAL_VALUE",
-      "priority": 100,
+      "ruleKey": "VALUABLE_EVOLUTION",
+      "priority": 850,
       "matched": true,
-      "resultDecision": "TRANSFER_CANDIDATE",
-      "explanationZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。"
+      "resultDecision": "CONDITIONAL_KEEP",
+      "explanationZhTw": "用途有限：後續進化（佛烈托斯）已有用途；只保留少量符合條件的進化候選。"
     }
   ],
   "moves": []

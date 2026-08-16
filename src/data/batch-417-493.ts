@@ -58,7 +58,7 @@ export const species417493: Gen4BatchSpecies[] = [
     nameEn: "Ambipom",
     nameZhTw: "雙尾怪手",
     types: ["NORMAL"],
-    familyKey: "SINNOH_FAMILY_424"
+    familyKey: "JOHTO_FAMILY_190"
   },
   {
     dexNumber: 425,
@@ -93,14 +93,14 @@ export const species417493: Gen4BatchSpecies[] = [
     nameEn: "Mismagius",
     nameZhTw: "夢妖魔",
     types: ["GHOST"],
-    familyKey: "SINNOH_FAMILY_429"
+    familyKey: "JOHTO_FAMILY_200"
   },
   {
     dexNumber: 430,
     nameEn: "Honchkrow",
     nameZhTw: "烏鴉頭頭",
     types: ["DARK", "FLYING"],
-    familyKey: "SINNOH_FAMILY_430"
+    familyKey: "JOHTO_FAMILY_198"
   },
   {
     dexNumber: 431,
@@ -317,7 +317,7 @@ export const species417493: Gen4BatchSpecies[] = [
     nameEn: "Weavile",
     nameZhTw: "瑪狃拉",
     types: ["DARK", "ICE"],
-    familyKey: "SINNOH_FAMILY_461"
+    familyKey: "JOHTO_FAMILY_215"
   },
   {
     dexNumber: 462,
@@ -366,7 +366,7 @@ export const species417493: Gen4BatchSpecies[] = [
     nameEn: "Togekiss",
     nameZhTw: "波克基斯",
     types: ["FAIRY", "FLYING"],
-    familyKey: "JOHTO_FAMILY_176"
+    familyKey: "JOHTO_FAMILY_175"
   },
   {
     dexNumber: 469,
@@ -1080,7 +1080,7 @@ export const forms417493: Gen4BatchForm[] = [
     regionKey: "SINNOH",
     types: ["DARK", "ICE"],
     aliases: ["weavile", "瑪狃拉", "Sinnoh", "神奧"],
-    evolvesFromFormId: null
+    evolvesFromFormId: "215-johto"
   }),
   makeForm({
     id: "462-sinnoh",

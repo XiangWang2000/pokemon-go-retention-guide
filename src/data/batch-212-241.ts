@@ -64,7 +64,7 @@ export const species212241: Gen2Species212241[] = [
     "types": [
       "NORMAL"
     ],
-    "familyKey": "JOHTO_FAMILY_217"
+    "familyKey": "JOHTO_FAMILY_216"
   },
   {
     "dexNumber": 218,
@@ -83,7 +83,7 @@ export const species212241: Gen2Species212241[] = [
       "FIRE",
       "ROCK"
     ],
-    "familyKey": "JOHTO_FAMILY_219"
+    "familyKey": "JOHTO_FAMILY_218"
   },
   {
     "dexNumber": 220,
@@ -103,7 +103,7 @@ export const species212241: Gen2Species212241[] = [
       "ICE",
       "GROUND"
     ],
-    "familyKey": "JOHTO_FAMILY_221"
+    "familyKey": "JOHTO_FAMILY_220"
   },
   {
     "dexNumber": 222,
@@ -408,7 +408,7 @@ export const forms212241: Form212241[] = [
       "ursaring",
       "圈圈熊"
     ],
-    "evolvesFromFormId": null,
+    "evolvesFromFormId": "216-johto",
     "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
     "isStub": false,
     "includeVariants": true
@@ -447,7 +447,7 @@ export const forms212241: Form212241[] = [
       "magcargo",
       "熔岩蝸牛"
     ],
-    "evolvesFromFormId": null,
+    "evolvesFromFormId": "218-johto",
     "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
     "isStub": false,
     "includeVariants": true
@@ -487,7 +487,7 @@ export const forms212241: Form212241[] = [
       "piloswine",
       "長毛豬"
     ],
-    "evolvesFromFormId": null,
+    "evolvesFromFormId": "220-johto",
     "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
     "isStub": false,
     "includeVariants": true
@@ -935,8 +935,20 @@ export const evolutionPairs212241: readonly [string,string][] = [
     "461-sinnoh"
   ],
   [
+    "216-johto",
+    "217-johto"
+  ],
+  [
     "217-johto",
     "901-hisui"
+  ],
+  [
+    "218-johto",
+    "219-johto"
+  ],
+  [
+    "220-johto",
+    "221-johto"
   ],
   [
     "221-johto",

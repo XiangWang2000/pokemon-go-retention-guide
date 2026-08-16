@@ -12,7 +12,19 @@
   "regionKey": "JOHTO",
   "evolvesFromFormId": null,
   "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-r19-218-johto-219-johto",
+      "fromFormId": "218-johto",
+      "toFormId": "219-johto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T10:00:00.000Z",
+      "isEvolutionStub": false,
+      "targetUseLevel": null,
+      "targetNameEn": "magcargo",
+      "targetNameZhTw": "熔岩蝸牛"
+    }
+  ],
   "types": [
     "FIRE"
   ],
@@ -20,7 +32,10 @@
     "slugma",
     "熔岩蟲"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "magcargo",
+    "熔岩蝸牛"
+  ],
   "variantKey": "DYNAMAX",
   "isReleased": false,
   "releaseStatus": "UNRELEASED",
@@ -479,9 +494,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "NOT_APPLICABLE",
+      "status": "VERIFIED",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "沒有額外需要回推的本批進化用途。",
+      "summaryZhTw": "本批或既有家族的正式進化關係已結構化；是否保留仍取決於後續用途與版本。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],

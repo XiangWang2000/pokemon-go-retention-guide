@@ -12,7 +12,19 @@
   "regionKey": "JOHTO",
   "evolvesFromFormId": null,
   "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-r19-204-johto-205-johto",
+      "fromFormId": "204-johto",
+      "toFormId": "205-johto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T10:00:00.000Z",
+      "isEvolutionStub": false,
+      "targetUseLevel": null,
+      "targetNameEn": "forretress",
+      "targetNameZhTw": "佛烈托斯"
+    }
+  ],
   "types": [
     "BUG"
   ],
@@ -20,7 +32,10 @@
     "pineco",
     "榛果球"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "forretress",
+    "佛烈托斯"
+  ],
   "variantKey": "DYNAMAX",
   "isReleased": false,
   "releaseStatus": "UNRELEASED",
@@ -479,9 +494,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "NOT_APPLICABLE",
+      "status": "VERIFIED",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "沒有額外需要回推的本批進化用途。",
+      "summaryZhTw": "本批或既有家族的正式進化關係已結構化；是否保留仍取決於後續用途與版本。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],

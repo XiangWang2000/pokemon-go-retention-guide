@@ -10,9 +10,9 @@
     "battleVariants": 134,
     "families": 21,
     "strategyCounts": {
-      "KEEP_TARGETS": 3,
-      "SELECTIVE_KEEP": 8,
-      "MOSTLY_TRANSFER": 10,
+      "KEEP_TARGETS": 4,
+      "SELECTIVE_KEEP": 10,
+      "MOSTLY_TRANSFER": 7,
       "HOLD_FOR_NOW": 0
     },
     "openIssues": 0,
@@ -109,6 +109,24 @@
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
+      "familyId": "JOHTO_FAMILY_190:190-johto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留可進化為雙尾怪手的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "JOHTO_FAMILY_198:198-johto",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留黑暗鴉（PvP（GL Rank≤100））；保留可進化為烏鴉頭頭的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
+      "familyId": "JOHTO_FAMILY_200:200-johto",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留可進化為夢妖魔的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "transferLine": "傳送前請個別核對 IV 與用途條件。"
+    },
+    {
       "familyId": "HOENN_FAMILY_358:358-hoenn",
       "strategy": "MOSTLY_TRANSFER",
       "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
@@ -145,12 +163,6 @@
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
-      "familyId": "SINNOH_FAMILY_424:424-sinnoh",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
-      "transferLine": "傳送前請個別核對 IV 與用途條件。"
-    },
-    {
       "familyId": "SINNOH_FAMILY_425:425-sinnoh",
       "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留隨風球（PvP（UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
@@ -160,18 +172,6 @@
       "familyId": "SINNOH_FAMILY_427:427-sinnoh",
       "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留長耳兔（Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
-      "transferLine": "傳送前請個別核對 IV 與用途條件。"
-    },
-    {
-      "familyId": "SINNOH_FAMILY_429:429-sinnoh",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
-      "transferLine": "傳送前請個別核對 IV 與用途條件。"
-    },
-    {
-      "familyId": "SINNOH_FAMILY_430:430-sinnoh",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {

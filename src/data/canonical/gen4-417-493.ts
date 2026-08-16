@@ -392,18 +392,56 @@ export const canonicalGen4Species417493 = [
 ] as const satisfies readonly CanonicalGen4Species417493[];
 
 /**
- * Cross-generation family identity is a source-level integration invariant,
- * not a release-state fact. Keep the expected adult family anchors separate
- * from the Gen4 species list so a new Sinnoh family cannot silently split a
- * formal baby-to-adult evolution family.
+ * Independent canonical evolution-family expectations for every edge owned
+ * by the published Gen4 source. Keeping these edges outside the batch module
+ * means a missing or split source relationship cannot make its own test pass.
  */
-export const canonicalGen4CrossGenerationFamilies417493 = [
-  { fromFormId: "433-sinnoh", toFormId: "358-hoenn", familyKey: "HOENN_FAMILY_358" },
+export const canonicalGen4EvolutionFamilies417493 = [
+  { fromFormId: "418-sinnoh", toFormId: "419-sinnoh", familyKey: "SINNOH_FAMILY_418" },
+  { fromFormId: "425-sinnoh", toFormId: "426-sinnoh", familyKey: "SINNOH_FAMILY_425" },
+  { fromFormId: "427-sinnoh", toFormId: "428-sinnoh", familyKey: "SINNOH_FAMILY_427" },
+  { fromFormId: "431-sinnoh", toFormId: "432-sinnoh", familyKey: "SINNOH_FAMILY_431" },
+  { fromFormId: "434-sinnoh", toFormId: "435-sinnoh", familyKey: "SINNOH_FAMILY_434" },
+  { fromFormId: "436-sinnoh", toFormId: "437-sinnoh", familyKey: "SINNOH_FAMILY_436" },
+  { fromFormId: "443-sinnoh", toFormId: "444-sinnoh", familyKey: "SINNOH_FAMILY_443" },
+  { fromFormId: "444-sinnoh", toFormId: "445-sinnoh", familyKey: "SINNOH_FAMILY_443" },
+  { fromFormId: "447-sinnoh", toFormId: "448-sinnoh", familyKey: "SINNOH_FAMILY_447" },
+  { fromFormId: "449-sinnoh", toFormId: "450-sinnoh", familyKey: "SINNOH_FAMILY_449" },
+  { fromFormId: "451-sinnoh", toFormId: "452-sinnoh", familyKey: "SINNOH_FAMILY_451" },
+  { fromFormId: "453-sinnoh", toFormId: "454-sinnoh", familyKey: "SINNOH_FAMILY_453" },
+  { fromFormId: "456-sinnoh", toFormId: "457-sinnoh", familyKey: "SINNOH_FAMILY_456" },
+  { fromFormId: "459-sinnoh", toFormId: "460-sinnoh", familyKey: "SINNOH_FAMILY_459" },
+  { fromFormId: "420-sinnoh", toFormId: "421-overcast", familyKey: "SINNOH_FAMILY_420" },
+  { fromFormId: "420-sinnoh", toFormId: "421-sunny", familyKey: "SINNOH_FAMILY_420" },
+  { fromFormId: "422-east-sea", toFormId: "423-east-sea", familyKey: "SINNOH_FAMILY_422" },
+  { fromFormId: "422-west-sea", toFormId: "423-west-sea", familyKey: "SINNOH_FAMILY_422" },
   { fromFormId: "438-sinnoh", toFormId: "185-johto", familyKey: "JOHTO_FAMILY_185" },
   { fromFormId: "439-sinnoh", toFormId: "122-kanto", familyKey: "KANTO_FAMILY_122" },
   { fromFormId: "440-sinnoh", toFormId: "113-kanto", familyKey: "KANTO_FAMILY_113" },
   { fromFormId: "446-sinnoh", toFormId: "143-kanto", familyKey: "KANTO_FAMILY_143" },
   { fromFormId: "458-sinnoh", toFormId: "226-johto", familyKey: "JOHTO_FAMILY_226" },
+  { fromFormId: "190-johto", toFormId: "424-sinnoh", familyKey: "JOHTO_FAMILY_190" },
+  { fromFormId: "200-johto", toFormId: "429-sinnoh", familyKey: "JOHTO_FAMILY_200" },
+  { fromFormId: "198-johto", toFormId: "430-sinnoh", familyKey: "JOHTO_FAMILY_198" },
+  { fromFormId: "193-johto", toFormId: "469-sinnoh", familyKey: "JOHTO_FAMILY_193" },
+  { fromFormId: "207-johto", toFormId: "472-sinnoh", familyKey: "JOHTO_FAMILY_207" },
+  { fromFormId: "215-johto", toFormId: "461-sinnoh", familyKey: "JOHTO_FAMILY_215" },
+  { fromFormId: "221-johto", toFormId: "473-sinnoh", familyKey: "JOHTO_FAMILY_220" },
+  { fromFormId: "233-johto", toFormId: "474-sinnoh", familyKey: "KANTO_FAMILY_137" },
+  { fromFormId: "281-hoenn", toFormId: "475-sinnoh", familyKey: "HOENN_FAMILY_280" },
+  { fromFormId: "299-hoenn", toFormId: "476-sinnoh", familyKey: "HOENN_FAMILY_299" },
+  { fromFormId: "356-hoenn", toFormId: "477-sinnoh", familyKey: "HOENN_FAMILY_355" },
+  { fromFormId: "361-hoenn", toFormId: "478-sinnoh", familyKey: "HOENN_FAMILY_361" },
+  { fromFormId: "082-kanto", toFormId: "462-sinnoh", familyKey: "KANTO_FAMILY_081" },
+  { fromFormId: "108-kanto", toFormId: "463-sinnoh", familyKey: "KANTO_FAMILY_108" },
+  { fromFormId: "112-kanto", toFormId: "464-sinnoh", familyKey: "KANTO_FAMILY_111" },
+  { fromFormId: "114-kanto", toFormId: "465-sinnoh", familyKey: "KANTO_FAMILY_114" },
+  { fromFormId: "125-kanto", toFormId: "466-sinnoh", familyKey: "KANTO_FAMILY_125" },
+  { fromFormId: "126-kanto", toFormId: "467-sinnoh", familyKey: "KANTO_FAMILY_126" },
+  { fromFormId: "176-johto", toFormId: "468-sinnoh", familyKey: "JOHTO_FAMILY_175" },
+  { fromFormId: "433-sinnoh", toFormId: "358-hoenn", familyKey: "HOENN_FAMILY_358" },
+  { fromFormId: "133-kanto", toFormId: "470-sinnoh", familyKey: "KANTO_FAMILY_133" },
+  { fromFormId: "133-kanto", toFormId: "471-sinnoh", familyKey: "KANTO_FAMILY_133" },
 ] as const;
 
 export const canonicalGen4Forms417493 = [

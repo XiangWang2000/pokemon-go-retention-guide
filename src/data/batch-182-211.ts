@@ -758,7 +758,7 @@ export const forms182211: Form182211[] = [
       "forretress",
       "佛烈托斯"
     ],
-    "evolvesFromFormId": null,
+    "evolvesFromFormId": "204-johto",
     "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
     "isStub": false,
     "includeVariants": true
@@ -941,6 +941,10 @@ export const evolutionPairs182211: readonly [string,string][] = [
   [
     "191-johto",
     "192-johto"
+  ],
+  [
+    "204-johto",
+    "205-johto"
   ],
   [
     "194-johto",

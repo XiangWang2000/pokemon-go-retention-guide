@@ -12,7 +12,19 @@
   "regionKey": "JOHTO",
   "evolvesFromFormId": null,
   "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
-  "evolutionPaths": [],
+  "evolutionPaths": [
+    {
+      "id": "evolution-r19-220-johto-221-johto",
+      "fromFormId": "220-johto",
+      "toFormId": "221-johto",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-08T10:00:00.000Z",
+      "isEvolutionStub": false,
+      "targetUseLevel": null,
+      "targetNameEn": "piloswine",
+      "targetNameZhTw": "長毛豬"
+    }
+  ],
   "types": [
     "ICE",
     "GROUND"
@@ -21,7 +33,10 @@
     "swinub",
     "小山豬"
   ],
-  "evolutionNames": [],
+  "evolutionNames": [
+    "piloswine",
+    "長毛豬"
+  ],
   "variantKey": "PURIFIED",
   "isReleased": true,
   "releaseStatus": "RELEASED",
@@ -480,9 +495,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "NOT_APPLICABLE",
+      "status": "VERIFIED",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "沒有額外需要回推的本批進化用途。",
+      "summaryZhTw": "本批或既有家族的正式進化關係已結構化；是否保留仍取決於後續用途與版本。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],

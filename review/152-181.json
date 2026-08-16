@@ -10,8 +10,8 @@
     "battleVariants": 121,
     "families": 15,
     "strategyCounts": {
-      "KEEP_TARGETS": 2,
-      "SELECTIVE_KEEP": 10,
+      "KEEP_TARGETS": 3,
+      "SELECTIVE_KEEP": 9,
       "MOSTLY_TRANSFER": 3,
       "HOLD_FOR_NOW": 0
     },
@@ -67,7 +67,8 @@
       "familyId": "JOHTO_FAMILY_175:175-johto",
       "members": [
         "175-johto",
-        "176-johto"
+        "176-johto",
+        "468-sinnoh"
       ],
       "isBatchTruncated": false,
       "hasTargetPath": true,
@@ -164,8 +165,8 @@
     },
     {
       "familyId": "JOHTO_FAMILY_175:175-johto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留可進化為波克基斯的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留波克基斯（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；保留可進化為波克基斯的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
