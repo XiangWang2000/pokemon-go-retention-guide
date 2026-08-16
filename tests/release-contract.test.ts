@@ -8,6 +8,8 @@ import {
   expectedReleaseReviewPaths,
   isExpectedReleaseGeneratedPath,
 } from "@/config/release-contract";
+import { CURRENT_DATA_SCOPE } from "@/config/data-scope";
+import { DATA_VERSION } from "@/config/release";
 import { assertSafeReleasePublishRef } from "../scripts/verify-release-ref";
 import { promoteSnapshot, SNAPSHOT_PROMOTION_TARGETS } from "../scripts/prepare-release-snapshot";
 
@@ -22,8 +24,8 @@ describe("current release contract", () => {
     assertBatchRegistry();
     expect(CURRENT_RELEASE_CONTRACT.minDex).toBe(BATCH_REGISTRY[0]?.minDex);
     expect(CURRENT_RELEASE_CONTRACT.maxDex).toBe(BATCH_REGISTRY.at(-1)?.maxDex);
-    expect(CURRENT_RELEASE_CONTRACT.scope).toBe("001-416");
-    expect(CURRENT_RELEASE_CONTRACT.dataVersion).toBe("2026.08.13-r24");
+    expect(CURRENT_RELEASE_CONTRACT.scope).toBe(CURRENT_DATA_SCOPE);
+    expect(CURRENT_RELEASE_CONTRACT.dataVersion).toBe(DATA_VERSION);
 
     const expectedReviewPaths = expectedReleaseReviewPaths();
     expect(expectedReviewPaths.size).toBe(BATCH_REGISTRY.length * 2 + 2);
@@ -73,7 +75,7 @@ describe("current release contract", () => {
     );
 
     expect(pagesWorkflow).toContain("Historical importer adapter integrity");
-    expect(pagesWorkflow).toContain("npm run data:verify:387-416");
+    expect(pagesWorkflow).toContain("npm run data:verify:gen4");
     expect(prepareWorkflow).toContain("npm run data:verify:published-integrity");
     expect(rebuildWorkflow).toContain("npm run data:verify:published-integrity");
     expect(rebuildWorkflow).not.toContain("verify-gen4-publication-candidate");

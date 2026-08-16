@@ -45,12 +45,12 @@ describe("cross-generation evolution targets", () => {
       ["042-kanto", "169-johto"],
       ["044-kanto", "182-johto"],
       ["052-galar", "863-galar"],
-      ["082-kanto", "462-other"],
-      ["112-kanto", "464-other"],
-      ["114-kanto", "465-other"],
+      ["082-kanto", "462-sinnoh"],
+      ["112-kanto", "464-sinnoh"],
+      ["114-kanto", "465-sinnoh"],
       ["123-kanto", "212-johto"],
-      ["125-kanto", "466-other"],
-      ["126-kanto", "467-other"],
+      ["125-kanto", "466-sinnoh"],
+      ["126-kanto", "467-sinnoh"],
     ];
     for (const [fromFormId, toFormId] of expectedPaths) {
       const form = forms.find((candidate) => candidate.formId === fromFormId);
@@ -137,20 +137,20 @@ describe("cross-generation evolution targets", () => {
         target,
       ]),
     );
-    expect(targetById.get("471-other")).toMatchObject({
+    expect(targetById.get("471-sinnoh")).toMatchObject({
       nameEn: "Glaceon",
       nameZhTw: "冰伊布",
       aliases: expect.arrayContaining(["Glaceon", "冰伊布"]),
     });
-    expect(targetById.get("478-other")).toMatchObject({
+    expect(targetById.get("478-sinnoh")).toMatchObject({
       nameEn: "Froslass",
       nameZhTw: "雪妖女",
       aliases: expect.arrayContaining(["Froslass", "雪妖女"]),
     });
     expect(crossGenerationManifest.paths).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ fromFormId: "133-kanto", toFormId: "471-other" }),
-        expect.objectContaining({ fromFormId: "361-hoenn", toFormId: "478-other" }),
+        expect.objectContaining({ fromFormId: "133-kanto", toFormId: "471-sinnoh" }),
+        expect.objectContaining({ fromFormId: "361-hoenn", toFormId: "478-sinnoh" }),
       ]),
     );
   });

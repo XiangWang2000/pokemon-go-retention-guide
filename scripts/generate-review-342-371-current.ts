@@ -5,6 +5,7 @@ import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
 import { RULES_VERSION } from "../src/rules/rules";
 import { getBatchByKey } from "../src/config/batch-registry";
+import { hasEvolutionPathWithPublishedOwnership } from "../src/data/evolution-boundary";
 
 const batchEntry = getBatchByKey("342-371");
 const batch = batchEntry.key;
@@ -33,6 +34,7 @@ function formRows(rows: Dashboard, formId: string) {
 
 export async function runReview342371Current() {
   const [allRows, allIssues] = await Promise.all([getDashboardRows(), getReviewIssues()]);
+  const publishedFormIds = new Set(allRows.map((row) => row.formId));
   const rows = allRows.filter((row) => row.dexNumber >= minDex && row.dexNumber <= maxDex);
   const allFamilies = buildFamilyOverviews(buildFormOverviews(allRows));
   const families = allFamilies.filter((family) =>
@@ -59,11 +61,12 @@ export async function runReview342371Current() {
     },
   ];
 
-  const ralts = allRows.find((row) => row.id === "281-hoenn-normal");
   checks.push({
     name: "Ralts family Gallade stub",
-    result: ralts?.evolutionPaths.some(
-      (path) => path.toFormId === "475-other" && path.isEvolutionStub,
+    result: hasEvolutionPathWithPublishedOwnership(
+      allRows.filter((row) => row.formId === "281-hoenn"),
+      "475-sinnoh",
+      publishedFormIds,
     )
       ? "PASS"
       : "FAIL",
@@ -73,24 +76,26 @@ export async function runReview342371Current() {
     checkFamily(families, "Clamperl branches", "366-hoenn", ["366-hoenn", "367-hoenn", "368-hoenn"]),
   );
 
-  const roselia = formRows(allRows, "315-hoenn").find((row) => row.variantKey === "NORMAL");
   checks.push({
     name: "Roserade canonical Gen4 evolution",
-    result: roselia?.evolutionPaths.some(
-      (path) => path.toFormId === "407-sinnoh" && !path.isEvolutionStub,
+    result: hasEvolutionPathWithPublishedOwnership(
+      allRows.filter((row) => row.formId === "315-hoenn"),
+      "407-sinnoh",
+      publishedFormIds,
     )
       ? "PASS"
       : "FAIL",
   });
   for (const [name, formId, targetId] of [
-    ["Dusknoir evolution stub", "356-hoenn", "477-other"],
-    ["Froslass evolution stub", "361-hoenn", "478-other"],
+    ["Dusknoir evolution stub", "356-hoenn", "477-sinnoh"],
+    ["Froslass evolution stub", "361-hoenn", "478-sinnoh"],
   ] as const) {
-    const row = formRows(allRows, formId).find((item) => item.variantKey === "NORMAL");
     checks.push({
       name,
-      result: row?.evolutionPaths.some(
-        (path) => path.toFormId === targetId && path.isEvolutionStub,
+      result: hasEvolutionPathWithPublishedOwnership(
+        allRows.filter((item) => item.formId === formId),
+        targetId,
+        publishedFormIds,
       )
         ? "PASS"
         : "FAIL",
@@ -203,7 +208,7 @@ export async function runReview342371Current() {
   await mkdir("review", { recursive: true });
   await writeFile(
     `review/${batch}.json`,
-    `${JSON.stringify(payload, null, 2).replace(/\r?\n/g, "\r\n")}\r\n`,
+    `${JSON.stringify(payload, null, 2).replace(/\r?\r\n/g, "\r\n")}\r\n`,
     "utf8",
   );
   await writeFile(`review/${batch}.md`, `${lines.join("\r\n")}\r\n`, "utf8");

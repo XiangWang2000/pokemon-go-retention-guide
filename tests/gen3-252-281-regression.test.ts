@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { DATA_VERSION } from "@/config/release";
 import { findTextIntegrityIssues } from "@/data/text-integrity";
 import { deriveEvolutionReleaseClosure } from "@/data/evolution-release";
 import {
@@ -119,10 +120,10 @@ describe("Gen 3 #252-#281 integration", () => {
     expect(row("265-hoenn-normal")?.evolutionPaths.map((path) => path.toFormId)).not.toContain("269-hoenn");
   });
 
-  it("preserves the Gallade cross-generation stub from Kirlia", () => {
+  it("materializes the owning Gen4 Gallade form from Kirlia", () => {
     expect(row("281-hoenn-normal")?.evolutionPaths).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ toFormId: "475-other", isEvolutionStub: true }),
+        expect.objectContaining({ toFormId: "475-sinnoh", isEvolutionStub: false }),
       ]),
     );
   });
@@ -135,7 +136,7 @@ describe("Gen 3 #252-#281 integration", () => {
     expect(new Set(standard.map((candidate) => candidate.formId)).size).toBe(30);
     expect(standard.every((candidate) =>
       candidate.evolutionPaths.every((path) =>
-        path.toFormId === "475-other" || dashboard.some((item) => item.formId === path.toFormId),
+        path.toFormId === "475-sinnoh" || dashboard.some((item) => item.formId === path.toFormId),
       ),
     )).toBe(true);
     for (const file of [
@@ -166,7 +167,7 @@ describe("Gen 3 #252-#281 integration", () => {
     expect(batchRows.some((candidate) => candidate.assessmentDisposition === "TRUE_DATA_PENDING")).toBe(false);
     expect(batchRows.some((candidate) => candidate.decision === "HOLD_FOR_NOW")).toBe(false);
     expect(review).toMatchObject({
-      dataVersion: "2026.08.13-r24",
+      dataVersion: DATA_VERSION,
       counts: { species: 30, forms: 30, battleVariants: 123, trueDataPending: 0 },
       crossBatchIntegration: { result: "PASS" },
     });

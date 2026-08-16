@@ -1,11 +1,11 @@
 {
   "familyId": "JOHTO_FAMILY_175:175-johto",
   "familyKey": "JOHTO_FAMILY_175",
-  "familyNameZhTw": "波克比家族（本批至波克基古）（城都）",
+  "familyNameZhTw": "波克基古家族（城都）",
   "dexRangeZhTw": "#175～#176",
   "regionHintZhTw": "城都",
   "branchCount": 1,
-  "isBatchTruncated": true,
+  "isBatchTruncated": false,
   "members": [
     {
       "form": {
@@ -98,7 +98,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。波克基斯：External evolution target with provisional special use; full battle data is outside this validation batch.",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -292,9 +292,7 @@
             "primaryUses": [
               "後續進化"
             ],
-            "primaryUseKeys": [
-              "EVOLUTION"
-            ],
+            "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
             "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
@@ -353,7 +351,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。波克基斯：External evolution target with provisional special use; full battle data is outside this validation batch.",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -585,7 +583,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -817,7 +815,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1031,14 +1029,12 @@
         "primaryUses": [
           "後續進化"
         ],
-        "primaryUseKeys": [
-          "EVOLUTION"
-        ],
+        "primaryUseKeys": [],
         "hasRocketUse": false,
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-12T16:00:00.000Z",
+        "updatedAt": "2026-08-15T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1048,7 +1044,7 @@
         "進化素材"
       ],
       "mainUseZhTw": "進化素材",
-      "memberSummaryZhTw": "主要保留波克比；依該用途的具體條件篩選。",
+      "memberSummaryZhTw": "波克比本體沒有獨立用途；前階主要作符合條件的進化候選。",
       "ivShortLabels": [],
       "ivRecommendations": [],
       "isRoot": true,
@@ -1071,12 +1067,12 @@
         "evolutionFamilyNotesZhTw": "波克比可進化為波克基古；波克基古的後續 #468 波克基斯以正式 evolution stub 保留，尚不納入本批戰鬥版本。",
         "evolutionPaths": [
           {
-            "id": "evolution-cross-176-johto-468-other",
+            "id": "evolution-cross-176-johto-468-sinnoh",
             "fromFormId": "176-johto",
-            "toFormId": "468-other",
+            "toFormId": "468-sinnoh",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-08T16:00:00.000Z",
-            "isEvolutionStub": true,
+            "verifiedAt": "2026-08-15T16:00:00.000Z",
+            "isEvolutionStub": false,
             "targetUseLevel": "SPECIAL_USE",
             "targetNameEn": "Togekiss",
             "targetNameZhTw": "波克基斯"
@@ -1112,12 +1108,12 @@
               "evolutionFamilyNotesZhTw": "波克比可進化為波克基古；波克基古的後續 #468 波克基斯以正式 evolution stub 保留，尚不納入本批戰鬥版本。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-176-johto-468-other",
+                  "id": "evolution-cross-176-johto-468-sinnoh",
                   "fromFormId": "176-johto",
-                  "toFormId": "468-other",
+                  "toFormId": "468-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Togekiss",
                   "targetNameZhTw": "波克基斯"
@@ -1149,7 +1145,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #271；招式 FAIRY_WIND／HEAT_WAVE／DAZZLING_GLEAM；UL（高級聯盟） Overall #680；招式 FAIRY_WIND／PSYSHOCK／HEAT_WAVE",
               "pveSummaryZhTw": "特殊用途。波克基斯：External evolution target with provisional special use; full battle data is outside this validation batch.",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1399,7 +1395,7 @@
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
@@ -1408,7 +1404,7 @@
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -1451,12 +1447,12 @@
               "evolutionFamilyNotesZhTw": "波克比可進化為波克基古；波克基古的後續 #468 波克基斯以正式 evolution stub 保留，尚不納入本批戰鬥版本。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-176-johto-468-other",
+                  "id": "evolution-cross-176-johto-468-sinnoh",
                   "fromFormId": "176-johto",
-                  "toFormId": "468-other",
+                  "toFormId": "468-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Togekiss",
                   "targetNameZhTw": "波克基斯"
@@ -1488,7 +1484,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。波克基斯：External evolution target with provisional special use; full battle data is outside this validation batch.",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1684,12 +1680,12 @@
               "evolutionFamilyNotesZhTw": "波克比可進化為波克基古；波克基古的後續 #468 波克基斯以正式 evolution stub 保留，尚不納入本批戰鬥版本。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-176-johto-468-other",
+                  "id": "evolution-cross-176-johto-468-sinnoh",
                   "fromFormId": "176-johto",
-                  "toFormId": "468-other",
+                  "toFormId": "468-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Togekiss",
                   "targetNameZhTw": "波克基斯"
@@ -1721,7 +1717,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1917,12 +1913,12 @@
               "evolutionFamilyNotesZhTw": "波克比可進化為波克基古；波克基古的後續 #468 波克基斯以正式 evolution stub 保留，尚不納入本批戰鬥版本。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-176-johto-468-other",
+                  "id": "evolution-cross-176-johto-468-sinnoh",
                   "fromFormId": "176-johto",
-                  "toFormId": "468-other",
+                  "toFormId": "468-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Togekiss",
                   "targetNameZhTw": "波克基斯"
@@ -1954,7 +1950,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -2176,7 +2172,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-12T16:00:00.000Z",
+        "updatedAt": "2026-08-15T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2215,21 +2211,9 @@
     "label": "—",
     "tone": "NONE"
   },
-  "familyValue": "HIGH",
-  "retentionStrategy": "KEEP_TARGETS",
+  "familyValue": "MEDIUM",
+  "retentionStrategy": "SELECTIVE_KEEP",
   "primaryRetentionTargets": [
-    {
-      "formId": "175-johto",
-      "memberNameZhTw": "波克比",
-      "displayNameZhTw": "波克比",
-      "useKeys": [
-        "EVOLUTION"
-      ],
-      "variantKeys": [
-        "NORMAL"
-      ],
-      "variantSpecificOnly": false
-    },
     {
       "formId": "176-johto",
       "memberNameZhTw": "波克基古",
@@ -2243,10 +2227,10 @@
       "variantSpecificOnly": false
     }
   ],
-  "primaryTargetSummaryZhTw": "波克比、波克基古",
+  "primaryTargetSummaryZhTw": "波克基古",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
   "handlingSummaryZhTw": "保留可進化為波克基斯的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留波克比、波克基古；前階主要作符合條件的進化候選。",
+  "actionSummaryZhTw": "主要保留波克基古；價值集中於特定版本或條件。前階主要作符合條件的進化候選。其餘普通重複個體大多可傳。",
   "ivShortLabels": [],
   "ivRecommendations": [],
   "ivSummaryZhTw": "IV不構成額外保留理由",
@@ -2257,7 +2241,7 @@
   "notices": [],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-12T16:00:00.000Z",
+  "updatedAt": "2026-08-15T16:00:00.000Z",
   "minDexNumber": 175,
   "maxDexNumber": 176,
   "detailsLoaded": true

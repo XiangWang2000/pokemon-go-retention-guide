@@ -46,7 +46,7 @@ jobs:
           DATABASE_URL: file:./gen4-ci.db
         run: |
           npx prisma db push --force-reset
-          npm run data:verify:387-416
+          npm run data:verify:gen4
       - name: Release verification contract
         env:
           DATABASE_URL: file:./rebuild-ci.db

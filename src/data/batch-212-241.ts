@@ -932,7 +932,7 @@ export const evolutionPairs212241: readonly [string,string][] = [
   ],
   [
     "215-johto",
-    "461-other"
+    "461-sinnoh"
   ],
   [
     "217-johto",
@@ -940,11 +940,11 @@ export const evolutionPairs212241: readonly [string,string][] = [
   ],
   [
     "221-johto",
-    "473-other"
+    "473-sinnoh"
   ],
   [
     "233-johto",
-    "474-other"
+    "474-sinnoh"
   ],
   [
     "234-johto",

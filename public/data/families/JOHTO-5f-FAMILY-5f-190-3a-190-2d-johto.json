@@ -1,11 +1,11 @@
 {
   "familyId": "JOHTO_FAMILY_190:190-johto",
   "familyKey": "JOHTO_FAMILY_190",
-  "familyNameZhTw": "長尾怪手家族（本批至長尾怪手）（城都）",
+  "familyNameZhTw": "長尾怪手家族（城都）",
   "dexRangeZhTw": "#190",
   "regionHintZhTw": "城都",
   "branchCount": 1,
-  "isBatchTruncated": true,
+  "isBatchTruncated": false,
   "members": [
     {
       "form": {
@@ -22,12 +22,12 @@
         "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
         "evolutionPaths": [
           {
-            "id": "evolution-cross-190-johto-424-other",
+            "id": "evolution-cross-190-johto-424-sinnoh",
             "fromFormId": "190-johto",
-            "toFormId": "424-other",
+            "toFormId": "424-sinnoh",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-08T16:00:00.000Z",
-            "isEvolutionStub": true,
+            "verifiedAt": "2026-08-15T16:00:00.000Z",
+            "isEvolutionStub": false,
             "targetUseLevel": "SPECIAL_USE",
             "targetNameEn": "Ambipom",
             "targetNameZhTw": "雙尾怪手"
@@ -62,12 +62,12 @@
               "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-190-johto-424-other",
+                  "id": "evolution-cross-190-johto-424-sinnoh",
                   "fromFormId": "190-johto",
-                  "toFormId": "424-other",
+                  "toFormId": "424-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Ambipom",
                   "targetNameZhTw": "雙尾怪手"
@@ -98,7 +98,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #538；招式 ASTONISH／SWIFT／AERIAL_ACE",
               "pveSummaryZhTw": "特殊用途。雙尾怪手：後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -307,7 +307,7 @@
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -350,12 +350,12 @@
               "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-190-johto-424-other",
+                  "id": "evolution-cross-190-johto-424-sinnoh",
                   "fromFormId": "190-johto",
-                  "toFormId": "424-other",
+                  "toFormId": "424-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Ambipom",
                   "targetNameZhTw": "雙尾怪手"
@@ -386,7 +386,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #507；招式 ASTONISH／SWIFT／AERIAL_ACE",
               "pveSummaryZhTw": "特殊用途。雙尾怪手：後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -595,7 +595,7 @@
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -638,12 +638,12 @@
               "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-190-johto-424-other",
+                  "id": "evolution-cross-190-johto-424-sinnoh",
                   "fromFormId": "190-johto",
-                  "toFormId": "424-other",
+                  "toFormId": "424-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Ambipom",
                   "targetNameZhTw": "雙尾怪手"
@@ -674,7 +674,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -870,12 +870,12 @@
               "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-190-johto-424-other",
+                  "id": "evolution-cross-190-johto-424-sinnoh",
                   "fromFormId": "190-johto",
-                  "toFormId": "424-other",
+                  "toFormId": "424-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Ambipom",
                   "targetNameZhTw": "雙尾怪手"
@@ -906,7 +906,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1130,7 +1130,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-12T16:00:00.000Z",
+        "updatedAt": "2026-08-15T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1202,7 +1202,7 @@
   "notices": [],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-12T16:00:00.000Z",
+  "updatedAt": "2026-08-15T16:00:00.000Z",
   "minDexNumber": 190,
   "maxDexNumber": 190,
   "detailsLoaded": true

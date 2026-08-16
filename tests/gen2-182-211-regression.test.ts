@@ -21,12 +21,12 @@ describe("Gen 2 #182-211 data integration", () => {
       ["133-kanto", "197-johto"],
       ["079-kanto", "199-johto"],
       ["095-kanto", "208-johto"],
-      ["190-johto", "424-other"],
-      ["207-johto", "472-other"],
+      ["190-johto", "424-sinnoh"],
+      ["207-johto", "472-sinnoh"],
     ]));
     const cross = JSON.parse(readFileSync("research_notes/cross-generation-evolution-targets.json", "utf8"));
     const targets = new Set(cross.targets.map((target: { dexNumber: number; formKey: string }) => `${target.dexNumber}-${target.formKey.toLowerCase()}`));
-    expect(targets.has("424-other")).toBe(true);
-    expect(targets.has("472-other")).toBe(true);
+    expect(targets.has("424-sinnoh")).toBe(true);
+    expect(targets.has("472-sinnoh")).toBe(true);
   });
 });

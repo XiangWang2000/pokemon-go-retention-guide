@@ -28,6 +28,10 @@ npm run data:import:282-311
 npm run data:import:312-341
 npm run data:import:342-371
 npm run data:import:372-386
+npm run data:import:387-416
+npm run data:import:417-446
+npm run data:import:447-476
+npm run data:import:477-493
 npm run data:recompute:001-386
 npm run data:validate
 npm run review:generate
@@ -63,7 +67,7 @@ npm run release:verify
 資料庫、review 與目前 scope，最後才 promote 到 `site-data/`、`public/data/`、`public/exports/` 與
 正式 static artifact。驗證失敗時不會留下半成品正式 artifact。
 
-驗收除了批次範圍與資料版本，還要確認 1912 個 BattleVariants、245 個展示家族、13 個 IV
+驗收除了批次範圍與資料版本，還要確認 2344 個 BattleVariants、318 個展示家族、13 個 IV
 recommendations、`407-sinnoh`、唯一的 `315-hoenn -> 407-sinnoh`，以及不存在 `407-other`。
 
 ## 共用重算規則

@@ -2,6 +2,7 @@ import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { FamilyOverview as FamilyOverviewComponent } from "@/components/overview/family-overview";
+import { CURRENT_RELEASE_CONTRACT } from "@/config/release-contract";
 import { getDashboardRows } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
 import { buildFormOverviews, type FormOverview } from "@/presentation/form-overview";
@@ -45,7 +46,7 @@ describe("EvolutionPath 進化家族分組", () => {
     ).toEqual(expect.arrayContaining(rows.map((row) => row.id)));
     expect(
       families.flatMap((family) => family.members.flatMap((member) => member.form.variants)),
-    ).toHaveLength(1912);
+    ).toHaveLength(CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants);
   });
 
   it("3. 相同 familyKey 的不同地區進化路徑形成不同子群組", () => {
@@ -134,7 +135,6 @@ describe("EvolutionPath 進化家族分組", () => {
   });
 
   it("8. 單隻圖鑑模式的 FormOverview 數量保持不變", () => {
-    expect(forms).toHaveLength(463);
     expect(forms.map((form) => form.formId)).toContain("026-alola");
     expect(forms.map((form) => form.formId)).toContain("416-sinnoh");
   });

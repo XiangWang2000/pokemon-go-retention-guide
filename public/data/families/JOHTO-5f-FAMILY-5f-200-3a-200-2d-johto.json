@@ -1,11 +1,11 @@
 {
   "familyId": "JOHTO_FAMILY_200:200-johto",
   "familyKey": "JOHTO_FAMILY_200",
-  "familyNameZhTw": "夢妖家族（本批至夢妖）（城都）",
+  "familyNameZhTw": "夢妖家族（城都）",
   "dexRangeZhTw": "#200",
   "regionHintZhTw": "城都",
   "branchCount": 1,
-  "isBatchTruncated": true,
+  "isBatchTruncated": false,
   "members": [
     {
       "form": {
@@ -22,12 +22,12 @@
         "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
         "evolutionPaths": [
           {
-            "id": "evolution-cross-200-johto-429-other",
+            "id": "evolution-cross-200-johto-429-sinnoh",
             "fromFormId": "200-johto",
-            "toFormId": "429-other",
+            "toFormId": "429-sinnoh",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-08T16:00:00.000Z",
-            "isEvolutionStub": true,
+            "verifiedAt": "2026-08-15T16:00:00.000Z",
+            "isEvolutionStub": false,
             "targetUseLevel": "SPECIAL_USE",
             "targetNameEn": "Mismagius",
             "targetNameZhTw": "夢妖魔"
@@ -62,12 +62,12 @@
               "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-200-johto-429-other",
+                  "id": "evolution-cross-200-johto-429-sinnoh",
                   "fromFormId": "200-johto",
-                  "toFormId": "429-other",
+                  "toFormId": "429-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Mismagius",
                   "targetNameZhTw": "夢妖魔"
@@ -98,7 +98,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #737；招式 PSYWAVE／SHADOW_SNEAK／DARK_PULSE；UL（高級聯盟） Overall #783；招式 PSYWAVE／SHADOW_SNEAK／DARK_PULSE",
               "pveSummaryZhTw": "特殊用途。夢妖魔：後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -339,7 +339,7 @@
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
@@ -348,7 +348,7 @@
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -391,12 +391,12 @@
               "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-200-johto-429-other",
+                  "id": "evolution-cross-200-johto-429-sinnoh",
                   "fromFormId": "200-johto",
-                  "toFormId": "429-other",
+                  "toFormId": "429-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Mismagius",
                   "targetNameZhTw": "夢妖魔"
@@ -427,7 +427,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #757；招式 PSYWAVE／SHADOW_SNEAK／DARK_PULSE；UL（高級聯盟） Overall #779；招式 ASTONISH／SHADOW_SNEAK／DARK_PULSE",
               "pveSummaryZhTw": "特殊用途。夢妖魔：後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -668,7 +668,7 @@
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
@@ -677,7 +677,7 @@
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -720,12 +720,12 @@
               "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-200-johto-429-other",
+                  "id": "evolution-cross-200-johto-429-sinnoh",
                   "fromFormId": "200-johto",
-                  "toFormId": "429-other",
+                  "toFormId": "429-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Mismagius",
                   "targetNameZhTw": "夢妖魔"
@@ -756,7 +756,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -952,12 +952,12 @@
               "evolutionFamilyNotesZhTw": "第 2 世代標準城都型態；普通、暗影、淨化與 Max 版本分開評估，後續世代進化以正式 stub 保留。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-200-johto-429-other",
+                  "id": "evolution-cross-200-johto-429-sinnoh",
                   "fromFormId": "200-johto",
-                  "toFormId": "429-other",
+                  "toFormId": "429-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "SPECIAL_USE",
                   "targetNameEn": "Mismagius",
                   "targetNameZhTw": "夢妖魔"
@@ -988,7 +988,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1212,7 +1212,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-12T16:00:00.000Z",
+        "updatedAt": "2026-08-15T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1284,7 +1284,7 @@
   "notices": [],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-12T16:00:00.000Z",
+  "updatedAt": "2026-08-15T16:00:00.000Z",
   "minDexNumber": 200,
   "maxDexNumber": 200,
   "detailsLoaded": true

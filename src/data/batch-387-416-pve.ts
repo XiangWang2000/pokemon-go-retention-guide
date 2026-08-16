@@ -1,16 +1,6 @@
-export type Gen4PveUseLevel =
-  | "CORE_INVESTMENT"
-  | "USABLE_OR_BUDGET"
-  | "SPECIAL_USE"
-  | "NO_SIGNIFICANT_USE";
+import type { Gen4PveEvidence } from "./batch-gen4-types";
 
-export type Gen4PveEvidence = {
-  level: Exclude<Gen4PveUseLevel, "NO_SIGNIFICANT_USE">;
-  roles: readonly string[];
-  sourceUrl: string;
-  checkedAt: "2026-08-13";
-  summaryZhTw: string;
-};
+export type { Gen4PveEvidence, Gen4PveUseLevel } from "./batch-gen4-types";
 
 /**
  * Positive PvE evidence is keyed by BattleVariant ID rather than form ID.

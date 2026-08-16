@@ -1,11 +1,11 @@
 {
   "familyId": "JOHTO_FAMILY_221:221-johto",
   "familyKey": "JOHTO_FAMILY_221",
-  "familyNameZhTw": "長毛豬家族（本批至長毛豬）（城都）",
+  "familyNameZhTw": "長毛豬家族（城都）",
   "dexRangeZhTw": "#221",
   "regionHintZhTw": "城都",
   "branchCount": 1,
-  "isBatchTruncated": true,
+  "isBatchTruncated": false,
   "members": [
     {
       "form": {
@@ -22,12 +22,12 @@
         "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
         "evolutionPaths": [
           {
-            "id": "evolution-cross-221-johto-473-other",
+            "id": "evolution-cross-221-johto-473-sinnoh",
             "fromFormId": "221-johto",
-            "toFormId": "473-other",
+            "toFormId": "473-sinnoh",
             "requiresEvent": false,
-            "verifiedAt": "2026-08-08T16:00:00.000Z",
-            "isEvolutionStub": true,
+            "verifiedAt": "2026-08-15T16:00:00.000Z",
+            "isEvolutionStub": false,
             "targetUseLevel": "CORE_INVESTMENT",
             "targetNameEn": "Mamoswine",
             "targetNameZhTw": "象牙豬"
@@ -63,12 +63,12 @@
               "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-221-johto-473-other",
+                  "id": "evolution-cross-221-johto-473-sinnoh",
                   "fromFormId": "221-johto",
-                  "toFormId": "473-other",
+                  "toFormId": "473-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "CORE_INVESTMENT",
                   "targetNameEn": "Mamoswine",
                   "targetNameZhTw": "象牙豬"
@@ -100,7 +100,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #264；招式 POWDER_SNOW／ICICLE_SPEAR／STONE_EDGE；UL（高級聯盟） Overall #291；招式 POWDER_SNOW／AVALANCHE／ICICLE_SPEAR",
               "pveSummaryZhTw": "核心投資。象牙豬：正式後續進化；象牙豬具核心 PvE／Max 用途，普通長毛豬保留優質進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -341,7 +341,7 @@
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
@@ -350,7 +350,7 @@
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -393,12 +393,12 @@
               "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-221-johto-473-other",
+                  "id": "evolution-cross-221-johto-473-sinnoh",
                   "fromFormId": "221-johto",
-                  "toFormId": "473-other",
+                  "toFormId": "473-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "CORE_INVESTMENT",
                   "targetNameEn": "Mamoswine",
                   "targetNameZhTw": "象牙豬"
@@ -430,7 +430,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #310；招式 POWDER_SNOW／ICICLE_SPEAR／STONE_EDGE；UL（高級聯盟） Overall #298；招式 POWDER_SNOW／AVALANCHE／ICICLE_SPEAR",
               "pveSummaryZhTw": "核心投資。象牙豬：正式後續進化；象牙豬具核心 PvE／Max 用途，普通長毛豬保留優質進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -671,7 +671,7 @@
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
@@ -680,7 +680,7 @@
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
                   "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -723,12 +723,12 @@
               "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-221-johto-473-other",
+                  "id": "evolution-cross-221-johto-473-sinnoh",
                   "fromFormId": "221-johto",
-                  "toFormId": "473-other",
+                  "toFormId": "473-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "CORE_INVESTMENT",
                   "targetNameEn": "Mamoswine",
                   "targetNameZhTw": "象牙豬"
@@ -760,7 +760,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -956,12 +956,12 @@
               "evolutionFamilyNotesZhTw": "本批已將進化關係結構化；跨世代後續進化以正式 stub 保留，Mega／Max／暗影版本分開評估。",
               "evolutionPaths": [
                 {
-                  "id": "evolution-cross-221-johto-473-other",
+                  "id": "evolution-cross-221-johto-473-sinnoh",
                   "fromFormId": "221-johto",
-                  "toFormId": "473-other",
+                  "toFormId": "473-sinnoh",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-08-08T16:00:00.000Z",
-                  "isEvolutionStub": true,
+                  "verifiedAt": "2026-08-15T16:00:00.000Z",
+                  "isEvolutionStub": false,
                   "targetUseLevel": "CORE_INVESTMENT",
                   "targetNameEn": "Mamoswine",
                   "targetNameZhTw": "象牙豬"
@@ -993,7 +993,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-12T16:00:00.000Z",
+              "updatedAt": "2026-08-15T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1217,7 +1217,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-12T16:00:00.000Z",
+        "updatedAt": "2026-08-15T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1289,7 +1289,7 @@
   "notices": [],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-12T16:00:00.000Z",
+  "updatedAt": "2026-08-15T16:00:00.000Z",
   "minDexNumber": 221,
   "maxDexNumber": 221,
   "detailsLoaded": true

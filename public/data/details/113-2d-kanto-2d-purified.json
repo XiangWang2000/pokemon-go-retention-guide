@@ -1,6 +1,19 @@
 {
   "paths": [
     {
+      "id": "evolution-gen4-417-446-440-sinnoh-113-kanto",
+      "fromFormId": "440-sinnoh",
+      "fromNameZhTw": "小福蛋",
+      "fromFormNameZhTw": "神奧",
+      "toFormId": "113-kanto",
+      "toNameZhTw": "吉利蛋",
+      "toFormNameZhTw": "關都",
+      "evolutionMethodZhTw": "Canonical Pokémon GO evolution path; the owning Gen4 batch supplies the form identity.",
+      "availabilityNotesZhTw": "Verified by the 417-446 Gen4 research manifest.",
+      "requiresEvent": false,
+      "verifiedAt": "2026-08-15T16:00:00.000Z"
+    },
+    {
       "id": "evolution-cross-113-kanto-242-johto",
       "fromFormId": "113-kanto",
       "fromNameZhTw": "吉利蛋",
@@ -11,7 +24,7 @@
       "evolutionMethodZhTw": "消耗糖果進化",
       "availabilityNotesZhTw": "正式後續進化；目標完整戰鬥資料尚未納入本批展示範圍。",
       "requiresEvent": false,
-      "verifiedAt": "2026-08-08T16:00:00.000Z"
+      "verifiedAt": "2026-08-15T16:00:00.000Z"
     }
   ],
   "conflicts": [],
@@ -22,7 +35,7 @@
       "previousValue": "TRUE_DATA_PENDING",
       "newValue": "NO_SIGNIFICANT_USE",
       "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-08-12T16:00:00.000Z",
+      "changedAt": "2026-08-15T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": null
     },

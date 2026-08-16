@@ -1,7 +1,7 @@
 {
   "batch": "061-090",
-  "updatedAt": "2026-08-13",
-  "dataVersion": "2026.08.13-r24",
+  "updatedAt": "2026-08-16",
+  "dataVersion": "2026.08.16-r25",
   "rulesVersion": "2026.08.06-v7",
   "status": "ACCEPTED",
   "counts": {
@@ -123,7 +123,7 @@
     {
       "familyId": "KANTO_FAMILY_079:079-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留呆呆獸（符合條件個體），以及呆殼獸（PvP（UL Rank≤100）、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留呆殼獸（PvP（UL Rank≤100）、Mega 候選）；保留可進化為呆呆王的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -135,7 +135,7 @@
     {
       "familyId": "KANTO_FAMILY_081:081-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留可進化為自爆磁怪的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留自爆磁怪（PvP（UL Rank≤100）、ML 高 IV 投資候選）；保留可進化為自爆磁怪的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {

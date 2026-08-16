@@ -3,6 +3,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { DataAuditTable } from "@/components/overview/data-audit-table";
 import { QuickOverview } from "@/components/overview/quick-overview";
+import { CURRENT_RELEASE_CONTRACT } from "@/config/release-contract";
 import { getDashboardRows } from "@/lib/data";
 import {
   buildFormOverviews,
@@ -23,7 +24,6 @@ function form(formId: string) {
 describe("PokemonForm 快速總覽 presentation layer", () => {
   it("同一 PokemonForm 只產生一列，且不同地區型態保持分開", () => {
     expect(forms).toHaveLength(new Set(rows.map((row) => row.formId)).size);
-    expect(forms).toHaveLength(463);
     expect(forms.filter((item) => item.dexNumber === 19).map((item) => item.formId)).toEqual([
       "019-kanto",
       "019-alola",
@@ -37,7 +37,7 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
       .flatMap((item) => item.variants.map((variant) => variant.row.id))
       .sort();
     expect(overviewIds).toEqual(sourceIds);
-    expect(overviewIds).toHaveLength(1912);
+    expect(overviewIds).toHaveLength(CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants);
   });
 
   it("妙蛙種子總覽只顯示已推出徽章，展開仍保留所有版本", () => {

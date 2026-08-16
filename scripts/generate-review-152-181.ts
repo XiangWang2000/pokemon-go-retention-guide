@@ -5,6 +5,7 @@ import { DATA_VERSION, DATA_VERSION_DATE_ISO } from "../src/config/release";
 import { buildFamilyOverviews } from "../src/presentation/family-overview";
 import { buildFormOverviews } from "../src/presentation/form-overview";
 import { RULES_VERSION } from "../src/rules/rules";
+import { hasEvolutionPathWithPublishedOwnership } from "../src/data/evolution-boundary";
 
 const batchStart = 152;
 const batchEnd = 181;
@@ -28,6 +29,7 @@ function hasMembers(family: Family | undefined, expected: string[]) {
 
 async function main() {
   const [allRows, allIssues] = await Promise.all([getDashboardRows(), getReviewIssues()]);
+  const publishedFormIds = new Set(allRows.map((row) => row.formId));
   const rows = allRows.filter(
     (row) => row.dexNumber >= batchStart && row.dexNumber <= batchEnd,
   );
@@ -82,20 +84,18 @@ async function main() {
     },
   };
 
-  const hasTogekissStub = Boolean(
-    togepi?.members.some((member) =>
-      member.form.evolutionPaths.some(
-        (path) => path.toFormId === "468-other" && path.isEvolutionStub,
-      ),
-    ),
+  const hasTogekissPath = hasEvolutionPathWithPublishedOwnership(
+    allRows.filter((row) => row.formId === "176-johto"),
+    "468-sinnoh",
+    publishedFormIds,
   );
   const stubBoundaries = {
     togekiss: {
       familyId: togepi?.familyId,
       members: memberIds(togepi),
       isBatchTruncated: togepi?.isBatchTruncated,
-      hasExternalTarget: hasTogekissStub,
-      result: togepi?.isBatchTruncated && hasTogekissStub ? "PASS" : "FAIL",
+      hasTargetPath: hasTogekissPath,
+      result: hasTogekissPath ? "PASS" : "FAIL",
     },
   };
 
@@ -196,7 +196,7 @@ async function main() {
   await mkdir("review", { recursive: true });
   await writeFile(
     "review/152-181.json",
-    `${JSON.stringify(payload, null, 2).replace(/\r?\n/g, "\r\n")}\r\n`,
+    `${JSON.stringify(payload, null, 2).replace(/\r?\r\n/g, "\r\n")}\r\n`,
     "utf8",
   );
   await writeFile("review/152-181.md", `${lines.join("\r\n")}\r\n`, "utf8");

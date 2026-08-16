@@ -55,9 +55,9 @@ describe("Gen2 #212-#241 JOHTO integration", () => {
 
   it("keeps future evolution stubs and released Mega or Max variants distinct", () => {
     for (const [formId, targetId] of [
-      ["215-johto", "461-other"],
+      ["215-johto", "461-sinnoh"],
       ["217-johto", "901-hisui"],
-      ["221-johto", "473-other"],
+      ["221-johto", "473-sinnoh"],
       ["234-johto", "899-hisui"],
     ]) {
       expect(

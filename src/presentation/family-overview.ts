@@ -754,7 +754,9 @@ function buildExternalEvolutionHandlingSummary(members: FamilyMemberSummary[]) {
   for (const member of members) {
     const externalPaths = member.form.evolutionPaths.filter(
       (path) =>
-        (path.isEvolutionStub || Number(path.toFormId.slice(0, 3)) > CURRENT_DATA_MAX_DEX) &&
+        (path.isEvolutionStub ||
+          Number(path.toFormId.slice(0, 3)) > CURRENT_DATA_MAX_DEX ||
+          path.targetUseLevel !== null) &&
         path.targetUseLevel !== "NO_SIGNIFICANT_USE",
     );
     for (const [index, path] of externalPaths.entries()) {
