@@ -119,9 +119,7 @@ describe("independent curated PvP evidence", () => {
       "utf8",
     );
 
-    expect(packageJson.scripts["data:recompute:001-281"]).not.toContain("--baseline-max");
-    expect(packageJson.scripts["data:recompute:001-311"]).not.toContain("--baseline-max");
-    expect(packageJson.scripts["data:recompute:001-386"]).not.toContain("--baseline-max");
+    expect(packageJson.scripts["data:recompute"]).toBe("tsx scripts/recompute-001-311.ts");
     expect(source).not.toContain('process.argv.indexOf("--max")');
     expect(source).not.toContain("#001～#211 共用規則重算報告");
     expect(report.split(/\r?\n/, 1)[0]).toBe(

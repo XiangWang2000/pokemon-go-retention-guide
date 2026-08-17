@@ -15,31 +15,15 @@
 ```powershell
 npm run db:seed
 npm run data:remediate
-npm run data:import:031-060
-npm run data:import:061-090
-npm run data:import:091-120
-npm run data:import:121-151
-npm run data:import:152-181
-npm run data:import:182-211
-npm run data:import:212-241
-npm run data:import:242-251
-npm run data:import:252-281
-npm run data:import:282-311
-npm run data:import:312-341
-npm run data:import:342-371
-npm run data:import:372-386
-npm run data:import:387-416
-npm run data:import:417-446
-npm run data:import:447-476
-npm run data:import:477-493
-npm run data:recompute:001-386
+npm run data:import:batch -- <batch-key>
+npm run data:recompute -- --max <max-dex>
 npm run data:validate
 npm run review:generate
 npm run release:snapshot
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full
 ```
 
-`data:import:*` 依每批最多 30 個圖鑑編號切開；#312～#386 使用 `312-341`、`342-371`、`372-386` 三個可獨立驗證的來源、batch、form 與 review 單位，再連續執行 `data:recompute:001-386`、資料驗證與 static snapshot。第三世代的 `canonicalGen3Species` 與獨立 `canonicalGen3Forms` 分別驗證物種、正式型態、型態名稱、屬性與 BattleVariant 邊界；Castform 天氣型態、Deoxys 四種 Forme、Shadow evolution closure、Primal 與 Mega 顯示名稱都不可由 batch 自己同時產生 expected 值繞過檢查。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
+`data:import:batch` 接受 Batch Registry 中的一個 `batch-key`；批次順序、範圍與 adapter 以 Registry 為準，不再由 package scripts 維護一串別名。完成所有已登錄批次後，使用 `data:recompute -- --max <max-dex>` 執行目前 scope 的共用重算。#312～#386 仍使用 `312-341`、`342-371`、`372-386` 三個可獨立驗證的來源、batch、form 與 review 單位；第三世代的 `canonicalGen3Species` 與獨立 `canonicalGen3Forms` 分別驗證物種、正式型態、型態名稱、屬性與 BattleVariant 邊界。Castform 天氣型態、Deoxys 四種 Forme、Shadow evolution closure、Primal 與 Mega 顯示名稱都不可由 batch 自己同時產生 expected 值繞過檢查。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
 
 ## Current release clean rebuild
 
