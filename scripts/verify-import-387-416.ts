@@ -1,6 +1,7 @@
 import "dotenv/config";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
+import { getBatchByKey } from "../src/config/batch-registry";
 import { getDatabaseUrl } from "../src/lib/database";
 import { closeGen4Import, runImport387416 } from "./import-gen4";
 
@@ -11,6 +12,9 @@ function ok(value: unknown, message: string): asserts value {
 function client(url: string) {
   return new PrismaClient({ adapter: new PrismaBetterSqlite3({ url }) });
 }
+
+const gen4Entry = getBatchByKey("387-416");
+if (gen4Entry.import.adapter !== "gen4") throw new Error("Batch 387-416 is not owned by the Gen4 adapter.");
 
 async function seedHistoricalPrerequisites(url: string) {
   const db = client(url);
@@ -34,10 +38,10 @@ async function seedHistoricalPrerequisites(url: string) {
 async function verify(url: string) {
   const db = client(url);
   try {
-    const scope = { pokemonForm: { species: { dexNumber: { gte: 387, lte: 416 } } } };
+    const scope = { pokemonForm: { species: { dexNumber: { gte: gen4Entry.minDex, lte: gen4Entry.maxDex } } } };
     const [species, forms, variants, released, categories, evaluations, roselia, roserade, legacyRoserade, roseradeEdges, purified, shadowPve, normalPve, shadowEmpoleon, rampardos, dmaxCombee] = await Promise.all([
-      db.pokemonSpecies.count({ where: { dexNumber: { gte: 387, lte: 416 } } }),
-      db.pokemonForm.count({ where: { species: { dexNumber: { gte: 387, lte: 416 } } } }),
+      db.pokemonSpecies.count({ where: { dexNumber: { gte: gen4Entry.minDex, lte: gen4Entry.maxDex } } }),
+      db.pokemonForm.count({ where: { species: { dexNumber: { gte: gen4Entry.minDex, lte: gen4Entry.maxDex } } } }),
       db.battleVariant.count({ where: scope }),
       db.battleVariant.count({ where: { ...scope, releaseStatus: "RELEASED" } }),
       db.categoryEvaluation.count({ where: { battleVariant: scope } }),

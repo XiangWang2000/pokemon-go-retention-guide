@@ -65,8 +65,6 @@ export type Gen4EvidenceAdapter = "legacy-387-416" | "generic";
 
 export type Gen4BatchDefinition = {
   batch: string;
-  start: number;
-  end: number;
   species: readonly Gen4BatchSpecies[];
   forms: readonly Gen4BatchForm[];
   evolutionPairs: readonly Gen4EvolutionPair[];

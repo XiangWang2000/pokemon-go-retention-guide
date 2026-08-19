@@ -1,7 +1,7 @@
 import "dotenv/config";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
-import { BATCH_REGISTRY } from "../src/config/batch-registry";
+import { BATCH_REGISTRY, getBatchByKey } from "../src/config/batch-registry";
 import { getGen4BatchDefinitions, getGen4BatchDefinition } from "../src/data/batch-gen4";
 import { loadCrossGenerationEvolutionData } from "../src/data/cross-generation-evolution";
 import { getDatabaseUrl } from "../src/lib/database";
@@ -170,21 +170,23 @@ function expectedVariantIds(batch: string) {
 }
 
 async function verifyBatch(url: string, batch: string) {
+  const entry = getBatchByKey(batch);
+  assert(entry.import.adapter === "gen4", `${batch}: batch is not owned by the Gen4 adapter.`);
   const definition = getGen4BatchDefinition(batch);
   const db = client(url);
   try {
     const scope = {
-      pokemonForm: { species: { dexNumber: { gte: definition.start, lte: definition.end } } },
+      pokemonForm: { species: { dexNumber: { gte: entry.minDex, lte: entry.maxDex } } },
     };
     const [species, forms, variants, released, categories, evaluations, rows] = await Promise.all([
-      db.pokemonSpecies.count({ where: { dexNumber: { gte: definition.start, lte: definition.end } } }),
-      db.pokemonForm.count({ where: { species: { dexNumber: { gte: definition.start, lte: definition.end } } } }),
+      db.pokemonSpecies.count({ where: { dexNumber: { gte: entry.minDex, lte: entry.maxDex } } }),
+      db.pokemonForm.count({ where: { species: { dexNumber: { gte: entry.minDex, lte: entry.maxDex } } } }),
       db.battleVariant.findMany({ where: scope, select: { id: true } }),
       db.battleVariant.count({ where: { ...scope, releaseStatus: "RELEASED" } }),
       db.categoryEvaluation.count({ where: { battleVariant: scope } }),
       db.retentionEvaluation.count({ where: { battleVariant: scope } }),
       db.pokemonForm.findMany({
-        where: { species: { dexNumber: { gte: definition.start, lte: definition.end } } },
+        where: { species: { dexNumber: { gte: entry.minDex, lte: entry.maxDex } } },
         select: { id: true },
       }),
     ]);

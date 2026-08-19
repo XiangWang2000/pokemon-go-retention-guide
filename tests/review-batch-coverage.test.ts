@@ -9,6 +9,7 @@ import {
   getBatchByKey,
   parseBatchKey,
 } from "@/config/batch-registry";
+import { getGen4BatchDefinitions } from "@/data/batch-gen4";
 import { getBatchImportInvocation } from "../scripts/import-batch";
 
 describe("review batch coverage", () => {
@@ -27,6 +28,30 @@ describe("review batch coverage", () => {
       expect(ranges[index]?.minDex).toBe((ranges[index - 1]?.maxDex ?? 0) + 1);
     }
     expect(ranges.at(-1)?.maxDex).toBe(CURRENT_DATA_MAX_DEX);
+  });
+
+  it("keeps every Gen4 definition uniquely mapped to its Registry range", () => {
+    const entries = BATCH_REGISTRY.filter((entry) => entry.import.adapter === "gen4");
+    const definitions = getGen4BatchDefinitions();
+
+    expect(definitions.map((definition) => definition.batch).sort()).toEqual(
+      entries.map((entry) => entry.key).sort(),
+    );
+    for (const definition of definitions) {
+      const matches = entries.filter((entry) => entry.key === definition.batch);
+      expect(matches).toHaveLength(1);
+      const entry = matches[0]!;
+      expect(definition).not.toHaveProperty("start");
+      expect(definition).not.toHaveProperty("end");
+      expect(
+        definition.species.every(
+          (species) => species.dexNumber >= entry.minDex && species.dexNumber <= entry.maxDex,
+        ),
+      ).toBe(true);
+    }
+    for (const entry of entries) {
+      expect(definitions.filter((definition) => definition.batch === entry.key)).toHaveLength(1);
+    }
   });
 
   it("supports batch ranges that cross into four-digit Pokédex numbers", () => {
