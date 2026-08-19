@@ -9,6 +9,7 @@ import {
 import { prisma } from "../src/lib/prisma";
 import { assertOfficialEvolutionPathsMaterialized } from "../src/data/research-import";
 import { getGen4BatchDefinitions } from "../src/data/batch-gen4";
+import { BATCH_REGISTRY } from "../src/config/batch-registry";
 import { CURRENT_RELEASE_CONTRACT } from "../src/config/release-contract";
 import { buildAuditSummary } from "../src/lib/audit-data";
 import { buildHomeSnapshot } from "../src/presentation/home-snapshot";
@@ -25,9 +26,11 @@ async function main() {
     getSources(),
   ]);
   const expectedCounts = CURRENT_RELEASE_CONTRACT.expectedCounts;
+  const gen4Entries = BATCH_REGISTRY.filter((entry) => entry.import.adapter === "gen4");
+  assert(gen4Entries.length > 0, "Batch Registry does not contain a Gen4 entry.");
   const gen4Definitions = getGen4BatchDefinitions();
-  const gen4MinDex = gen4Definitions[0]!.start;
-  const gen4MaxDex = gen4Definitions.at(-1)!.end;
+  const gen4MinDex = gen4Entries[0]!.minDex;
+  const gen4MaxDex = gen4Entries.at(-1)!.maxDex;
   const expectedGen4FormIds = new Set(
     gen4Definitions.flatMap((definition) => definition.forms.map((form) => form.id)),
   );

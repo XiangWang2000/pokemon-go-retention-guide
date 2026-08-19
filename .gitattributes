@@ -1,0 +1,4 @@
+# Release snapshot artifacts are byte-addressed; keep their checkout bytes deterministic across platforms.
+site-data/** text eol=lf
+public/data/** text eol=lf
+public/exports/** binary

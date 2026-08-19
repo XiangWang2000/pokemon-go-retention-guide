@@ -3,7 +3,7 @@ import { createHash } from "node:crypto";
 import { readFile, readFileSync } from "node:fs";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import { PrismaClient } from "../generated/prisma/client";
-import { getBatchByKey } from "../src/config/batch-registry";
+import { getBatchByKey, type BatchRegistryEntry } from "../src/config/batch-registry";
 import { getGen4BatchDefinition } from "../src/data/batch-gen4";
 import {
   buildGen4ImportPlan,
@@ -142,6 +142,7 @@ async function upsertPvPokeSources(prisma: PrismaClient) {
 }
 
 type Gen4Definition = ReturnType<typeof getGen4BatchDefinition>;
+type Gen4BatchRange = Pick<BatchRegistryEntry, "minDex" | "maxDex">;
 
 function usesLegacyEvidenceAdapter(definition: Gen4Definition) {
   return definition.evidenceAdapter === "legacy-387-416";
@@ -263,12 +264,13 @@ function evaluationPresentation(row: Gen4ImportPlanRow, definition: Gen4Definiti
 async function removeSupersededStubs(
   prisma: PrismaClient,
   definition: ReturnType<typeof getGen4BatchDefinition>,
+  range: Gen4BatchRange,
 ) {
   const canonicalIds = new Set(definition.forms.map((form) => form.id));
   const stubs = await prisma.pokemonForm.findMany({
     where: {
       isEvolutionStub: true,
-      species: { dexNumber: { gte: definition.start, lte: definition.end } },
+      species: { dexNumber: { gte: range.minDex, lte: range.maxDex } },
     },
     select: {
       id: true,
@@ -306,8 +308,9 @@ async function removeSupersededStubs(
 async function upsertSpeciesAndForms(
   prisma: PrismaClient,
   definition: ReturnType<typeof getGen4BatchDefinition>,
+  range: Gen4BatchRange,
 ) {
-  await removeSupersededStubs(prisma, definition);
+  await removeSupersededStubs(prisma, definition, range);
   for (const species of definition.species) {
     const id = `species-${String(species.dexNumber).padStart(3, "0")}`;
     await prisma.pokemonSpecies.upsert({
@@ -790,7 +793,7 @@ export async function runImportGen4(batch: string, databaseUrl = getDatabaseUrl(
       await upsertSource(prisma, source, releaseResearch.checkedAt ?? "2026-08-16");
     }
     await upsertPvPokeSources(prisma);
-    await upsertSpeciesAndForms(prisma, definition);
+    await upsertSpeciesAndForms(prisma, definition, entry);
     await materializeEvolutionPaths(prisma, definition, releaseResearch);
     const rankings = await readRankings();
     const plan = buildGen4ImportPlan(definition, rankings);

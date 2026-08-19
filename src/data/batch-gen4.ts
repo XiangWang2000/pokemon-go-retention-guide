@@ -55,13 +55,11 @@ import type { Gen4BatchDefinition } from "./batch-gen4-types";
 
 const definition = (
   batch: string,
-  start: number,
-  end: number,
-  input: Omit<Gen4BatchDefinition, "batch" | "start" | "end">,
-): Gen4BatchDefinition => ({ batch, start, end, ...input });
+  input: Omit<Gen4BatchDefinition, "batch">,
+): Gen4BatchDefinition => ({ batch, ...input });
 
 const definitions: Record<string, Gen4BatchDefinition> = {
-  "387-416": definition("387-416", 387, 416, {
+  "387-416": definition("387-416", {
     species: species387416,
     forms: forms387416,
     evolutionPairs: evolutionPairs387416,
@@ -76,7 +74,7 @@ const definitions: Record<string, Gen4BatchDefinition> = {
     pveEvidenceForVariant: pveEvidenceForVariant387416,
     evidenceAdapter: "legacy-387-416",
   }),
-  "417-446": definition("417-446", 417, 446, {
+  "417-446": definition("417-446", {
     species: species417446,
     forms: forms417446,
     evolutionPairs: evolutionPairs417446,
@@ -91,7 +89,7 @@ const definitions: Record<string, Gen4BatchDefinition> = {
     pveEvidenceForVariant: pveEvidenceForVariant417493,
     evidenceAdapter: "generic",
   }),
-  "447-476": definition("447-476", 447, 476, {
+  "447-476": definition("447-476", {
     species: species447476,
     forms: forms447476,
     evolutionPairs: evolutionPairs447476,
@@ -106,7 +104,7 @@ const definitions: Record<string, Gen4BatchDefinition> = {
     pveEvidenceForVariant: pveEvidenceForVariant417493,
     evidenceAdapter: "generic",
   }),
-  "477-493": definition("477-493", 477, 493, {
+  "477-493": definition("477-493", {
     species: species477493,
     forms: forms477493,
     evolutionPairs: evolutionPairs477493,
