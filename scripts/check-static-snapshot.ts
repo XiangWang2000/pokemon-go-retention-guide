@@ -100,10 +100,13 @@ export async function verifyStaticSnapshot({
   const databaseLocation = resolveDatabaseLocation(undefined, databaseRoot);
   const manifest = JSON.parse(await readFile(manifestPath, "utf8")) as SnapshotManifest;
   assert(manifest.schemaVersion === 1, "Static snapshot manifest schemaVersion 不支援。");
-  assert(manifest.batch === CURRENT_RELEASE_CONTRACT.scope, "Static snapshot scope 不正確。");
   assert(
-    manifest.dataVersion === CURRENT_RELEASE_CONTRACT.dataVersion,
-    "Static snapshot dataVersion 不正確。",
+    typeof manifest.batch === "string" && manifest.batch.length > 0,
+    "Static snapshot batch metadata 不正確。",
+  );
+  assert(
+    typeof manifest.dataVersion === "string" && manifest.dataVersion.length > 0,
+    "Static snapshot dataVersion metadata 不正確。",
   );
 
   const payloads: Uint8Array[] = [];
@@ -142,14 +145,14 @@ export async function verifyStaticSnapshot({
   assert(dashboard.length === manifest.counts.dashboardRows, "dashboard 筆數不一致。");
   assert(home.schemaVersion === 1, "home snapshot schemaVersion 不支援。");
   assert(
-    home.dataVersion === CURRENT_RELEASE_CONTRACT.dataVersion,
-    "home snapshot dataVersion 不正確。",
+    home.dataVersion === manifest.dataVersion,
+    "home snapshot dataVersion 與 manifest 不一致。",
   );
   assert(home.families.length === manifest.counts.homeFamilies, "home 家族筆數不一致。");
   assert(homeSummary.schemaVersion === 1, "home summary schemaVersion 不正確。");
   assert(
-    homeSummary.dataVersion === CURRENT_RELEASE_CONTRACT.dataVersion,
-    "home summary dataVersion 不正確。",
+    homeSummary.dataVersion === manifest.dataVersion,
+    "home summary dataVersion 與 manifest 不一致。",
   );
   assert(auditSummary.schemaVersion === 1, "audit summary schemaVersion 不正確。");
   assert(
@@ -246,8 +249,8 @@ export async function verifyStaticSnapshot({
     families: Array<{ detailsLoaded?: boolean; members: Array<{ form: { variants: unknown[] } }> }>;
   };
   assert(
-    runtimeHomePayload.dataVersion === CURRENT_RELEASE_CONTRACT.dataVersion,
-    "首頁 runtime dataVersion 不正確。",
+    runtimeHomePayload.dataVersion === manifest.dataVersion,
+    "首頁 runtime dataVersion 與 manifest 不一致。",
   );
   assert(
     runtimeHomePayload.families.every(

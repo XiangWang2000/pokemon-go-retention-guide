@@ -1,7 +1,7 @@
 import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { describe, expect, it, vi } from "vitest";
+import { beforeEach, describe, expect, it, vi } from "vitest";
 import { siteSnapshotManifest } from "@/lib/data";
 import { CURRENT_RELEASE_CONTRACT, expectedReleaseReviewPaths } from "@/config/release-contract";
 import type { SnapshotManifest } from "../scripts/check-static-snapshot";
@@ -24,19 +24,27 @@ async function writeFixture(root: string, relativePath: string, value: string) {
   await writeFile(filePath, value, "utf8");
 }
 
+async function writeReleaseReviewFixture(root: string) {
+  await writeFixture(
+    root,
+    "site-data/dashboard.json",
+    JSON.stringify([{ dexNumber: CURRENT_RELEASE_CONTRACT.minDex }]),
+  );
+  for (const reviewPath of expectedReleaseReviewPaths()) {
+    await writeFixture(root, reviewPath, "{}");
+  }
+}
+
 describe("release verification layers", () => {
+  beforeEach(() => {
+    vi.clearAllMocks();
+  });
+
   it("uses the typed artifact manifest returned by the snapshot checker", async () => {
     const root = await mkdtemp(path.join(os.tmpdir(), "pokemon-release-verify-"));
     try {
       const manifest: SnapshotManifest = siteSnapshotManifest;
-      await writeFixture(
-        root,
-        "site-data/dashboard.json",
-        JSON.stringify([{ dexNumber: CURRENT_RELEASE_CONTRACT.minDex }]),
-      );
-      for (const reviewPath of expectedReleaseReviewPaths()) {
-        await writeFixture(root, reviewPath, "{}");
-      }
+      await writeReleaseReviewFixture(root);
 
       verifyStaticSnapshot.mockResolvedValueOnce(manifest);
       validateReviewConsistency.mockResolvedValueOnce({
@@ -58,6 +66,45 @@ describe("release verification layers", () => {
         dataRoot: root,
         reviewRoot: root,
       });
+    } finally {
+      await rm(root, { recursive: true, force: true });
+    }
+  });
+
+  it("keeps current scope policy in the release verifier", async () => {
+    const root = await mkdtemp(path.join(os.tmpdir(), "pokemon-release-verify-"));
+    try {
+      const manifest: SnapshotManifest = { ...siteSnapshotManifest, batch: "001-416" };
+      await writeReleaseReviewFixture(root);
+      verifyStaticSnapshot.mockResolvedValueOnce(manifest);
+      validateReviewConsistency.mockResolvedValueOnce({
+        trueDataPending: CURRENT_RELEASE_CONTRACT.expectedCounts.trueDataPending,
+      });
+
+      await expect(
+        verifyRelease({ snapshotRoot: root, reviewRoot: root, databaseRoot: root }),
+      ).rejects.toThrow("Release snapshot scope is stale.");
+    } finally {
+      await rm(root, { recursive: true, force: true });
+    }
+  });
+
+  it("keeps current dataVersion policy in the release verifier", async () => {
+    const root = await mkdtemp(path.join(os.tmpdir(), "pokemon-release-verify-"));
+    try {
+      const manifest: SnapshotManifest = {
+        ...siteSnapshotManifest,
+        dataVersion: "2026.08.15-r24",
+      };
+      await writeReleaseReviewFixture(root);
+      verifyStaticSnapshot.mockResolvedValueOnce(manifest);
+      validateReviewConsistency.mockResolvedValueOnce({
+        trueDataPending: CURRENT_RELEASE_CONTRACT.expectedCounts.trueDataPending,
+      });
+
+      await expect(
+        verifyRelease({ snapshotRoot: root, reviewRoot: root, databaseRoot: root }),
+      ).rejects.toThrow("Release snapshot dataVersion is stale.");
     } finally {
       await rm(root, { recursive: true, force: true });
     }
