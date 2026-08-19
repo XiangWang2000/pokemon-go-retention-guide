@@ -5,37 +5,53 @@ import { CURRENT_RELEASE_CONTRACT } from "../src/config/release-contract";
 import { resolveDatabaseLocation } from "../src/lib/database";
 import { auditDataFileName, familyDataFileName } from "../src/lib/site-data-paths";
 
-interface ManifestFile {
+export interface SnapshotManifestFile {
   path: string;
   bytes: number;
   sha256: string;
 }
 
-interface Manifest {
+export interface SnapshotManifest {
   schemaVersion: number;
   batch: string;
   dataVersion: string;
+  dataAsOf: string | null;
   sourceDatabase: { path: string; bytes: number; sha256: string };
+  rulesVersions: string[];
   counts: {
+    pokemonSpecies: number;
+    pokemonForms: number;
     dashboardRows: number;
+    battleVariants: number;
+    evolutionPaths: number;
+    moves: number;
+    variantMoves: number;
+    sourceReferences: number;
+    rawEvaluationData: number;
+    retentionEvaluations: number;
+    evaluationSources: number;
+    evaluationRuleTraces: number;
+    changeLogs: number;
+    dataIssues: number;
+    categoryEvaluations: number;
+    categoryEvaluationSources: number;
+    ivRecommendations: number;
     homeFamilies: number;
     auditSummaryRows: number;
     runtimeFamilyFiles: number;
     runtimeAuditDetailFiles: number;
     runtimeDetailFiles: number;
     openReviewIssues: number;
-    sourceReferences: number;
-    changeLogs: number;
     detailRecords: number;
   };
   snapshotSha256: string;
-  files: Record<string, ManifestFile>;
-  runtimeHome: ManifestFile;
+  files: Record<string, SnapshotManifestFile>;
+  runtimeHome: SnapshotManifestFile;
   runtimeFamilyData: { directory: string; count: number; bytes: number };
   runtimeAuditData: { directory: string; count: number; bytes: number };
   runtimeDetailData: { directory: string; count: number; bytes: number };
-  runtimeStaticData: Record<string, ManifestFile>;
-  excel: { path: string; bytes: number; sha256: string; sheets: number };
+  runtimeStaticData: Record<string, SnapshotManifestFile>;
+  excel: SnapshotManifestFile & { sheets: number };
 }
 
 export interface SnapshotCheckOptions {
@@ -76,13 +92,13 @@ function snapshotPath(snapshotRoot: string, relativePath: string) {
 export async function verifyStaticSnapshot({
   snapshotRoot: requestedSnapshotRoot = process.cwd(),
   databaseRoot: requestedDatabaseRoot = process.cwd(),
-}: SnapshotCheckOptions = {}) {
+}: SnapshotCheckOptions = {}): Promise<SnapshotManifest> {
   const snapshotRoot = path.resolve(requestedSnapshotRoot);
   const databaseRoot = path.resolve(requestedDatabaseRoot);
   const manifestPath = snapshotPath(snapshotRoot, CURRENT_RELEASE_CONTRACT.snapshot.manifestPath);
   const siteDataDirectory = path.dirname(manifestPath);
   const databaseLocation = resolveDatabaseLocation(undefined, databaseRoot);
-  const manifest = JSON.parse(await readFile(manifestPath, "utf8")) as Manifest;
+  const manifest = JSON.parse(await readFile(manifestPath, "utf8")) as SnapshotManifest;
   assert(manifest.schemaVersion === 1, "Static snapshot manifest schemaVersion 不支援。");
   assert(manifest.batch === CURRENT_RELEASE_CONTRACT.scope, "Static snapshot scope 不正確。");
   assert(

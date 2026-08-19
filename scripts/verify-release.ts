@@ -9,7 +9,7 @@ import {
 } from "../src/config/release-contract";
 import { assertBatchRegistry } from "../src/config/batch-registry";
 import { validateReviewConsistency } from "./validate-review-consistency";
-import { verifyStaticSnapshot } from "./check-static-snapshot";
+import { verifyStaticSnapshot, type SnapshotManifest } from "./check-static-snapshot";
 
 const execFileAsync = promisify(execFile);
 
@@ -19,18 +19,6 @@ export interface ReleaseVerificationOptions {
   databaseRoot?: string;
   repositoryRoot?: string;
   checkGeneratedPaths?: boolean;
-}
-
-interface SnapshotManifest {
-  batch?: string;
-  dataVersion?: string;
-  counts?: {
-    dashboardRows?: number;
-    battleVariants?: number;
-    homeFamilies?: number;
-    ivRecommendations?: number;
-  };
-  excel?: { path?: string };
 }
 
 function assert(condition: unknown, message: string): asserts condition {
@@ -83,35 +71,30 @@ export async function verifyRelease({
       throw new Error(`Release review output is missing: ${reviewPath}.`);
     }
   }
-  await verifyStaticSnapshot({ snapshotRoot, databaseRoot });
-
-  const manifest = JSON.parse(
-    await readFile(path.join(snapshotRoot, CURRENT_RELEASE_CONTRACT.snapshot.manifestPath), "utf8"),
-  ) as SnapshotManifest;
+  const manifest: SnapshotManifest = await verifyStaticSnapshot({ snapshotRoot, databaseRoot });
   assert(manifest.batch === CURRENT_RELEASE_CONTRACT.scope, "Release snapshot scope is stale.");
   assert(
     manifest.dataVersion === CURRENT_RELEASE_CONTRACT.dataVersion,
     "Release snapshot dataVersion is stale.",
   );
   assert(
-    manifest.excel?.path === CURRENT_RELEASE_CONTRACT.snapshot.exportPath,
+    manifest.excel.path === CURRENT_RELEASE_CONTRACT.snapshot.exportPath,
     `Release snapshot Excel path must be ${CURRENT_RELEASE_CONTRACT.snapshot.exportPath}.`,
   );
   assert(
-    manifest.counts?.battleVariants === CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
+    manifest.counts.battleVariants === CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
     "Release snapshot BattleVariant count is not the current release count.",
   );
   assert(
-    manifest.counts?.dashboardRows === CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
+    manifest.counts.dashboardRows === CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
     "Release snapshot dashboard row count is not the current release count.",
   );
   assert(
-    manifest.counts?.homeFamilies === CURRENT_RELEASE_CONTRACT.expectedCounts.families,
+    manifest.counts.homeFamilies === CURRENT_RELEASE_CONTRACT.expectedCounts.families,
     "Release snapshot family count is not the current release count.",
   );
   assert(
-    manifest.counts?.ivRecommendations ===
-      CURRENT_RELEASE_CONTRACT.expectedCounts.ivRecommendations,
+    manifest.counts.ivRecommendations === CURRENT_RELEASE_CONTRACT.expectedCounts.ivRecommendations,
     "Release snapshot IV recommendation count is not the current release count.",
   );
   const dashboard = JSON.parse(
