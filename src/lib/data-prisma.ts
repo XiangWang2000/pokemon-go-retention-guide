@@ -1,6 +1,6 @@
 import { prisma } from "./prisma";
 import { isPrimalFormId, variantLabelZhTw } from "@/presentation/variant-label";
-import { normalizeDashboardIvRecommendation, type DashboardRow } from "./data-read-model";
+import type { DashboardRow } from "./data-read-model";
 
 function parseArray(value: string) {
   try {
@@ -205,15 +205,19 @@ export async function getDashboardRows(): Promise<DashboardRow[]> {
           }
           return recommendation.scopeKey === variant.id;
         })
-        .map((recommendation) => ({
-          ...normalizeDashboardIvRecommendation(recommendation),
-          ivRecommendationZhTw: isPrimalFormId(variant.pokemonForm.id)
-            ? recommendation.ivRecommendationZhTw.replaceAll("Mega", "原始回歸")
-            : recommendation.ivRecommendationZhTw,
-          shortIvLabelZhTw: isPrimalFormId(variant.pokemonForm.id)
-            ? recommendation.shortIvLabelZhTw.replaceAll("Mega", "原始回歸")
-            : recommendation.shortIvLabelZhTw,
-        })),
+        .map(({ createdAt, updatedAt, ...recommendation }) => {
+          void createdAt;
+          void updatedAt;
+          return {
+            ...recommendation,
+            ivRecommendationZhTw: isPrimalFormId(variant.pokemonForm.id)
+              ? recommendation.ivRecommendationZhTw.replaceAll("Mega", "原始回歸")
+              : recommendation.ivRecommendationZhTw,
+            shortIvLabelZhTw: isPrimalFormId(variant.pokemonForm.id)
+              ? recommendation.shortIvLabelZhTw.replaceAll("Mega", "原始回歸")
+              : recommendation.shortIvLabelZhTw,
+          } satisfies DashboardRow["ivRecommendations"][number];
+        }),
       reasonZhTw: evaluation?.reasonZhTw ?? "規則引擎尚未產生結論。",
       evaluationId: evaluation?.id ?? null,
       rulesVersion: evaluation?.rulesVersion ?? "—",

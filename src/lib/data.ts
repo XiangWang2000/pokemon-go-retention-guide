@@ -1,5 +1,4 @@
 import manifestSnapshot from "../../site-data/manifest.json";
-import { normalizeDashboardRows } from "./data-read-model";
 import type { DashboardRow } from "./data-read-model";
 import type {
   PrismaChangeLogRow,
@@ -11,6 +10,31 @@ import type {
 export type { DashboardRow } from "./data-read-model";
 
 export const siteSnapshotManifest = manifestSnapshot;
+
+type SerializedDashboardIvRecommendation = DashboardRow["ivRecommendations"][number] & {
+  createdAt?: unknown;
+  updatedAt?: unknown;
+};
+
+type SerializedDashboardRow = Omit<DashboardRow, "ivRecommendations"> & {
+  ivRecommendations: SerializedDashboardIvRecommendation[];
+};
+
+/**
+ * Older snapshots may still carry persistence-only IV audit timestamps. The
+ * static reader removes them at this single JSON adapter boundary.
+ */
+function normalizeDashboardRows(value: unknown): DashboardRow[] {
+  const rows = value as SerializedDashboardRow[];
+  return rows.map(({ ivRecommendations, ...row }) => ({
+    ...row,
+    ivRecommendations: ivRecommendations.map(({ createdAt, updatedAt, ...recommendation }) => {
+      void createdAt;
+      void updatedAt;
+      return recommendation;
+    }),
+  }));
+}
 
 export async function getDashboardRows(): Promise<DashboardRow[]> {
   const { default: snapshot } = await import("../../site-data/dashboard.json");

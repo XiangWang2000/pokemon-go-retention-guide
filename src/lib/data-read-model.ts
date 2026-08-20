@@ -262,26 +262,3 @@ export interface DashboardRow {
   traces: DashboardRuleTrace[];
   moves: DashboardMove[];
 }
-
-type SerializedDashboardRow = Omit<DashboardRow, "ivRecommendations"> & {
-  ivRecommendations: unknown[];
-};
-
-export function normalizeDashboardIvRecommendation(value: unknown): DashboardIvRecommendation {
-  const recommendation = { ...(value as Record<string, unknown>) };
-  delete recommendation.createdAt;
-  delete recommendation.updatedAt;
-  return recommendation as unknown as DashboardIvRecommendation;
-}
-
-/**
- * Keep persistence-only IV audit timestamps out of the source-neutral
- * dashboard contract. Older snapshots may still carry those fields, so the
- * static reader projects them away at the boundary.
- */
-export function normalizeDashboardRows(value: unknown): DashboardRow[] {
-  return (value as SerializedDashboardRow[]).map(({ ivRecommendations, ...row }) => ({
-    ...row,
-    ivRecommendations: ivRecommendations.map(normalizeDashboardIvRecommendation),
-  }));
-}

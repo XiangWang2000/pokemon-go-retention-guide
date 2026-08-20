@@ -24,10 +24,19 @@ import type { DashboardRow } from "@/lib/data-read-model";
 import type { HomeSnapshot } from "@/presentation/home-snapshot";
 import homeSnapshot from "../site-data/home.json";
 
-const hasReadableDb = (() => {
+const hasCanonicalDb = (() => {
   const location = resolveDatabaseLocation();
-  if (!existsSync(location.absolutePath)) return false;
-  return readFileSync(location.absolutePath).byteLength > 0;
+  const sourceDatabase = siteSnapshotManifest.sourceDatabase;
+
+  if (location.manifestPath !== sourceDatabase.path || !existsSync(location.absolutePath)) {
+    return false;
+  }
+
+  const database = readFileSync(location.absolutePath);
+  return (
+    database.byteLength === sourceDatabase.bytes &&
+    createHash("sha256").update(database).digest("hex") === sourceDatabase.sha256
+  );
 })();
 
 function canonicalize(value: unknown): unknown {
@@ -53,7 +62,7 @@ describe("static 唯讀 snapshot", () => {
     await prisma.$disconnect();
   });
 
-  it.skipIf(!hasReadableDb)(
+  it.skipIf(!hasCanonicalDb)(
     "與本機 Prisma read model 完全一致",
     async () => {
       const [snapshotDashboard, prismaDashboard, snapshotReview, prismaReview]: [
