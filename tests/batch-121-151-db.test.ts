@@ -1,11 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import type { PrismaDashboardRow, PrismaSourceRow } from "@/lib/data-prisma";
+import type { PrismaSourceRow } from "@/lib/data-prisma";
+import type { DashboardRow } from "@/lib/data-read-model";
 import officialResearch from "../research_notes/official-121-151.json";
 
 const dashboardRows = JSON.parse(
   readFileSync(new URL("../site-data/dashboard.json", import.meta.url), "utf8"),
-) as PrismaDashboardRow[];
+) as DashboardRow[];
 const sourceRows = JSON.parse(
   readFileSync(new URL("../site-data/sources.json", import.meta.url), "utf8"),
 ) as PrismaSourceRow[];
@@ -63,7 +64,9 @@ describe("#121～#151 部署快照安全回歸", () => {
     );
 
     for (const id of ids) expect(byId[id]?.decision, id).toBe("KEEP");
-    expect(byId["150-kanto-normal"]?.recommendedIvStrategyZhTw).toContain("15攻／96%以上為一般候選");
+    expect(byId["150-kanto-normal"]?.recommendedIvStrategyZhTw).toContain(
+      "15攻／96%以上為一般候選",
+    );
     expect(byId["150-kanto-normal"]?.recommendedIvStrategyZhTw).toContain("CMP與攻防門檻");
     expect(byId["150-kanto-shadow"]?.recommendedIvStrategyZhTw).toContain("不設硬性最低IV");
     expect(byId["151-kanto-normal"]?.recommendedIvStrategyZhTw).toContain("不以 IV 作傳送門檻");

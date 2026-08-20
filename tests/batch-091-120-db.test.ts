@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import type { PrismaDashboardRow } from "@/lib/data-prisma";
+import type { DashboardRow } from "@/lib/data-read-model";
 
 const dashboardRows = JSON.parse(
   readFileSync(new URL("../site-data/dashboard.json", import.meta.url), "utf8"),
-) as PrismaDashboardRow[];
+) as DashboardRow[];
 
 describe("#091～#120 部署快照安全回歸", () => {
   it("不會誤傳暗影海星星與已開放 Mega 的基底個體", () => {

@@ -1,13 +1,14 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { DATA_VERSION } from "@/config/release";
-import type { PrismaDashboardRow, PrismaSourceRow } from "@/lib/data-prisma";
+import type { PrismaSourceRow } from "@/lib/data-prisma";
+import type { DashboardRow } from "@/lib/data-read-model";
 import review from "../review/152-181.json";
 import officialResearch from "../research_notes/official-152-181.json";
 
 const dashboardRows = JSON.parse(
   readFileSync(new URL("../site-data/dashboard.json", import.meta.url), "utf8"),
-) as PrismaDashboardRow[];
+) as DashboardRow[];
 const sourceRows = JSON.parse(
   readFileSync(new URL("../site-data/sources.json", import.meta.url), "utf8"),
 ) as PrismaSourceRow[];
@@ -34,7 +35,9 @@ function familyContaining(formId: string) {
 
 describe("#152-181 generated runtime and review data", () => {
   it("generates the expected species, forms, variants, categories, and review payload", () => {
-    const rows = dashboardRows.filter((candidate) => candidate.dexNumber >= 152 && candidate.dexNumber <= 181);
+    const rows = dashboardRows.filter(
+      (candidate) => candidate.dexNumber >= 152 && candidate.dexNumber <= 181,
+    );
     expect(new Set(rows.map((candidate) => candidate.speciesId)).size).toBe(30);
     expect(new Set(rows.map((candidate) => candidate.formId)).size).toBe(30);
     expect(new Set(rows.map((candidate) => candidate.regionKey))).toEqual(new Set(["JOHTO"]));
@@ -43,7 +46,12 @@ describe("#152-181 generated runtime and review data", () => {
     expect(rows).toHaveLength(121);
     expect(rows.reduce((sum, candidate) => sum + candidate.categoryStatuses.length, 0)).toBe(847);
     expect(review.dataVersion).toBe(DATA_VERSION);
-    expect(review.counts).toMatchObject({ species: 30, forms: 30, battleVariants: 121, trueDataPending: 0 });
+    expect(review.counts).toMatchObject({
+      species: 30,
+      forms: 30,
+      battleVariants: 121,
+      trueDataPending: 0,
+    });
     expect(review.crossBatchIntegration.result).toBe("PASS");
   });
 
@@ -61,24 +69,24 @@ describe("#152-181 generated runtime and review data", () => {
       expect.arrayContaining([expect.objectContaining({ toFormId: "039-kanto" })]),
     );
     expect(familyContaining("172-johto")?.familyId).toBe("KANTO_FAMILY_025:025-kanto");
-    expect(new Set(familyContaining("172-johto")?.members.map((member) => member.form.formId))).toEqual(
-      new Set(["172-johto", "025-kanto", "026-kanto"]),
-    );
+    expect(
+      new Set(familyContaining("172-johto")?.members.map((member) => member.form.formId)),
+    ).toEqual(new Set(["172-johto", "025-kanto", "026-kanto"]));
     expect(familyContaining("173-johto")?.familyId).toBe("KANTO_FAMILY_035:035-kanto");
-    expect(new Set(familyContaining("173-johto")?.members.map((member) => member.form.formId))).toEqual(
-      new Set(["173-johto", "035-kanto", "036-kanto"]),
-    );
+    expect(
+      new Set(familyContaining("173-johto")?.members.map((member) => member.form.formId)),
+    ).toEqual(new Set(["173-johto", "035-kanto", "036-kanto"]));
     expect(familyContaining("174-johto")?.familyId).toBe("KANTO_FAMILY_039:039-kanto");
-    expect(new Set(familyContaining("174-johto")?.members.map((member) => member.form.formId))).toEqual(
-      new Set(["174-johto", "039-kanto", "040-kanto"]),
-    );
+    expect(
+      new Set(familyContaining("174-johto")?.members.map((member) => member.form.formId)),
+    ).toEqual(new Set(["174-johto", "039-kanto", "040-kanto"]));
   });
 
   it("keeps actual Johto extensions distinct from completed evolution targets", () => {
     expect(row("169-johto-normal")?.familyKey).toBe("KANTO_FAMILY_041");
-    expect(new Set(familyContaining("169-johto")?.members.map((member) => member.form.formId))).toEqual(
-      new Set(["041-kanto", "042-kanto", "169-johto"]),
-    );
+    expect(
+      new Set(familyContaining("169-johto")?.members.map((member) => member.form.formId)),
+    ).toEqual(new Set(["041-kanto", "042-kanto", "169-johto"]));
     expect(familyContaining("169-johto")?.isBatchTruncated).toBe(false);
     expect(row("176-johto-normal")?.evolutionPaths).toEqual(
       expect.arrayContaining([

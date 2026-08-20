@@ -86,6 +86,17 @@ jobs:
           npm run build
           npm run pages:verify
 
+      - name: Upload canonical release database
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-release-database-${{ github.run_id }}
+          path: |
+            rebuild-ci.db
+            site-data/manifest.json
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 90
+
       - name: Remove disposable rebuild outputs
         shell: bash
         run: |

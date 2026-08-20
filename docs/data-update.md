@@ -51,6 +51,18 @@ npm run release:verify
 資料庫、review 與目前 scope，最後才 promote 到 `site-data/`、`public/data/`、`public/exports/` 與
 正式 static artifact。驗證失敗時不會留下半成品正式 artifact。
 
+`Prepare Release Snapshot` workflow 會在 Pages 建置驗證後，將同一次驗證使用的 `rebuild-ci.db` 與
+`site-data/manifest.json` 保留為 `canonical-release-database-<run-id>` artifact（90 天）。需要在本機
+重現 strict provenance check 時，可從該次 workflow 下載 artifact 到 repository root，再執行：
+
+```powershell
+gh run download <run-id> --name canonical-release-database-<run-id> --dir .
+$env:DATABASE_URL = "file:./rebuild-ci.db"
+npm run snapshot:check
+```
+
+Artifact 只供 provenance 重現使用，不會部署到 GitHub Pages，也不取代 manifest 的 bytes 與 SHA-256 驗證。
+
 驗收除了批次範圍與資料版本，還要確認 2344 個 BattleVariants、302 個展示家族、13 個 IV
 recommendations、`407-sinnoh`、唯一的 `315-hoenn -> 407-sinnoh`，以及不存在 `407-other`。
 
