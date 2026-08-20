@@ -1,5 +1,6 @@
 import { prisma } from "./prisma";
 import { isPrimalFormId, variantLabelZhTw } from "@/presentation/variant-label";
+import { normalizeDashboardIvRecommendation, type DashboardRow } from "./data-read-model";
 
 function parseArray(value: string) {
   try {
@@ -9,7 +10,6 @@ function parseArray(value: string) {
     return [];
   }
 }
-
 
 const batchEvidenceSourceIds = new Set([
   "OFF-GMAX-MEOWTH-2026",
@@ -71,7 +71,7 @@ function formatSourceTarget(variant: {
   return `#${String(species.dexNumber).padStart(3, "0")} ${species.nameZhTw}（${variant.pokemonForm.formNameZhTw}／${variantLabelZhTw(variant.variantKey, variant.pokemonForm.id) ?? "其他版本"}）`;
 }
 
-export async function getDashboardRows() {
+export async function getDashboardRows(): Promise<DashboardRow[]> {
   const variants = [];
   for (let skip = 0; ; skip += 150) {
     const page = await prisma.battleVariant.findMany({
@@ -206,15 +206,13 @@ export async function getDashboardRows() {
           return recommendation.scopeKey === variant.id;
         })
         .map((recommendation) => ({
-          ...recommendation,
+          ...normalizeDashboardIvRecommendation(recommendation),
           ivRecommendationZhTw: isPrimalFormId(variant.pokemonForm.id)
             ? recommendation.ivRecommendationZhTw.replaceAll("Mega", "原始回歸")
             : recommendation.ivRecommendationZhTw,
           shortIvLabelZhTw: isPrimalFormId(variant.pokemonForm.id)
             ? recommendation.shortIvLabelZhTw.replaceAll("Mega", "原始回歸")
             : recommendation.shortIvLabelZhTw,
-          createdAt: recommendation.createdAt.toISOString(),
-          updatedAt: recommendation.updatedAt.toISOString(),
         })),
       reasonZhTw: evaluation?.reasonZhTw ?? "規則引擎尚未產生結論。",
       evaluationId: evaluation?.id ?? null,
@@ -308,8 +306,6 @@ export async function getDashboardRows() {
     };
   });
 }
-
-export type DashboardRow = Awaited<ReturnType<typeof getDashboardRows>>[number];
 
 export async function getVariantDetailMeta(
   formId: string,
@@ -531,7 +527,6 @@ export async function getChangeLogs() {
   }));
 }
 
-export type PrismaDashboardRow = Awaited<ReturnType<typeof getDashboardRows>>[number];
 export type PrismaVariantDetailMeta = Awaited<ReturnType<typeof getVariantDetailMeta>>;
 export type PrismaReviewIssue = Awaited<ReturnType<typeof getReviewIssues>>[number];
 export type PrismaSourceRow = Awaited<ReturnType<typeof getSources>>[number];

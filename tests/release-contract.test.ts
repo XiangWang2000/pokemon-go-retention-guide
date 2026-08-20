@@ -80,6 +80,22 @@ describe("current release contract", () => {
     expect(rebuildWorkflow).toContain("npm run data:verify:published-integrity");
     expect(rebuildWorkflow).not.toContain("verify-gen4-publication-candidate");
   });
+
+  it("retains the validated database and manifest as a downloadable artifact", async () => {
+    const workflow = await readFile(".github/workflows/prepare-release-snapshot.yml", "utf8");
+    expect(workflow).toContain("uses: actions/upload-artifact@v4");
+    expect(workflow).toContain("name: canonical-release-database-${{ github.run_id }}");
+    expect(workflow).toContain("rebuild-ci.db");
+    expect(workflow).toContain("site-data/manifest.json");
+    expect(workflow).toContain("if-no-files-found: error");
+    expect(workflow).toContain("compression-level: 0");
+    expect(workflow).toContain("retention-days: 90");
+    const pagesVerification = workflow.indexOf("- name: Build and verify GitHub Pages artifact");
+    const upload = workflow.indexOf("- name: Upload canonical release database");
+    const removal = workflow.indexOf("- name: Remove disposable rebuild outputs");
+    expect(upload).toBeGreaterThan(pagesVerification);
+    expect(removal).toBeGreaterThan(upload);
+  });
 });
 
 describe("release publication ref guard", () => {

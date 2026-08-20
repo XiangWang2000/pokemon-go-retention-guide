@@ -1,20 +1,21 @@
 import manifestSnapshot from "../../site-data/manifest.json";
+import { normalizeDashboardRows } from "./data-read-model";
+import type { DashboardRow } from "./data-read-model";
 import type {
   PrismaChangeLogRow,
-  PrismaDashboardRow,
   PrismaReviewIssue,
   PrismaSourceRow,
   PrismaVariantDetailMeta,
 } from "./data-prisma";
 
+export type { DashboardRow } from "./data-read-model";
+
 export const siteSnapshotManifest = manifestSnapshot;
 
-export async function getDashboardRows() {
+export async function getDashboardRows(): Promise<DashboardRow[]> {
   const { default: snapshot } = await import("../../site-data/dashboard.json");
-  return snapshot as unknown as PrismaDashboardRow[];
+  return normalizeDashboardRows(snapshot);
 }
-
-export type DashboardRow = PrismaDashboardRow;
 
 export async function getVariantDetailMeta(
   _formId: string,

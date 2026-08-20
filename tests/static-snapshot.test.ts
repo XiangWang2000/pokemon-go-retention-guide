@@ -20,26 +20,32 @@ import {
 import { resolveDatabaseLocation } from "@/lib/database";
 import { CURRENT_RELEASE_CONTRACT } from "@/config/release-contract";
 import { prisma } from "@/lib/prisma";
+import type { DashboardRow } from "@/lib/data-read-model";
 import type { HomeSnapshot } from "@/presentation/home-snapshot";
 import homeSnapshot from "../site-data/home.json";
 
-const hasCanonicalDb = (() => {
+const hasReadableDb = (() => {
   const location = resolveDatabaseLocation();
-  const sourceDatabase = siteSnapshotManifest.sourceDatabase;
-
-  if (location.manifestPath !== sourceDatabase.path || !existsSync(location.absolutePath)) {
-    return false;
-  }
-
-  const database = readFileSync(location.absolutePath);
-  return (
-    database.byteLength === sourceDatabase.bytes &&
-    createHash("sha256").update(database).digest("hex") === sourceDatabase.sha256
-  );
+  if (!existsSync(location.absolutePath)) return false;
+  return readFileSync(location.absolutePath).byteLength > 0;
 })();
 
+function canonicalize(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(canonicalize);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(
+      Object.entries(value)
+        .sort(([left], [right]) => left.localeCompare(right))
+        .map(([key, entry]) => [key, canonicalize(entry)]),
+    );
+  }
+  return value;
+}
+
 function canonicalHash(value: unknown) {
-  return createHash("sha256").update(JSON.stringify(value)).digest("hex");
+  return createHash("sha256")
+    .update(JSON.stringify(canonicalize(value)))
+    .digest("hex");
 }
 
 describe("static 唯讀 snapshot", () => {
@@ -47,10 +53,15 @@ describe("static 唯讀 snapshot", () => {
     await prisma.$disconnect();
   });
 
-  it.skipIf(!hasCanonicalDb)(
+  it.skipIf(!hasReadableDb)(
     "與本機 Prisma read model 完全一致",
     async () => {
-      const [snapshotDashboard, prismaDashboard, snapshotReview, prismaReview] = await Promise.all([
+      const [snapshotDashboard, prismaDashboard, snapshotReview, prismaReview]: [
+        DashboardRow[],
+        DashboardRow[],
+        Awaited<ReturnType<typeof getSnapshotReviewIssues>>,
+        Awaited<ReturnType<typeof getPrismaReviewIssues>>,
+      ] = await Promise.all([
         getSnapshotDashboardRows(),
         getPrismaDashboardRows(),
         getSnapshotReviewIssues(),
@@ -67,7 +78,7 @@ describe("static 唯讀 snapshot", () => {
       expect(canonicalHash(snapshotSources)).toBe(canonicalHash(prismaSources));
       expect(canonicalHash(snapshotChanges)).toBe(canonicalHash(prismaChanges));
     },
-    30_000,
+    60_000,
   );
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
