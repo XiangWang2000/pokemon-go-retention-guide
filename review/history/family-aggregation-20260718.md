@@ -1,3 +1,4 @@
+> **歷史檔案註記**：此 Markdown 在歷次編碼轉換中損壞，含 398 個無法還原的 `?` 字元。請以同目錄的 [`family-aggregation-20260718.json`](family-aggregation-20260718.json) 為結構化 canonical record；本檔僅保留原始歷史呈現。
 # ????????????
 
 - ???2026-07-18

@@ -1,31 +1,124 @@
 {
   "scope": "1-386",
-  "dataVersion": "2026.08.16-r25",
-  "updatedAt": "2026-08-16",
-  "generatedAt": "2026-08-15T16:00:00.000Z",
+  "dataVersion": "2026.08.28-r26",
+  "updatedAt": "2026-08-28",
+  "generatedAt": "2026-08-27T16:00:00.000Z",
   "rulesVersion": "2026.08.06-v7",
   "counts": {
-    "variants": 1776,
+    "variants": 1780,
     "decisions": {
-      "TRANSFER_CANDIDATE": 1207,
-      "CONDITIONAL_KEEP": 412,
-      "KEEP": 157
+      "TRANSFER_CANDIDATE": 1173,
+      "CONDITIONAL_KEEP": 432,
+      "KEEP": 157,
+      "HOLD_FOR_NOW": 18
     },
     "dispositions": {
-      "NO_SIGNIFICANT_USE": 697,
-      "CLEAR_USE": 107,
-      "LIMITED_USE": 462,
-      "NOT_APPLICABLE_OR_UNRELEASED": 510
+      "NO_SIGNIFICANT_USE": 684,
+      "CLEAR_USE": 109,
+      "LIMITED_USE": 480,
+      "TRUE_DATA_PENDING": 18,
+      "NOT_APPLICABLE_OR_UNRELEASED": 489
     },
     "pveUseLevels": {
-      "NO_SIGNIFICANT_USE": 1417,
-      "CORE_INVESTMENT": 108,
-      "SPECIAL_USE": 179,
+      "NO_SIGNIFICANT_USE": 1400,
+      "CORE_INVESTMENT": 110,
+      "SPECIAL_USE": 198,
       "USABLE_OR_BUDGET": 72
     },
-    "changedFields": 1374
+    "changedFields": 1394
   },
-  "trueDataPending": [],
+  "trueDataPending": [
+    {
+      "id": "010-kanto-dynamax",
+      "formId": "010-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "011-kanto-dynamax",
+      "formId": "011-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "013-kanto-dynamax",
+      "formId": "013-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "014-kanto-dynamax",
+      "formId": "014-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "016-kanto-dynamax",
+      "formId": "016-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "017-kanto-dynamax",
+      "formId": "017-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "019-alola-dynamax",
+      "formId": "019-alola",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "019-kanto-dynamax",
+      "formId": "019-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "020-kanto-normal",
+      "formId": "020-kanto",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "020-kanto-shadow",
+      "formId": "020-kanto",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "021-kanto-dynamax",
+      "formId": "021-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "023-kanto-dynamax",
+      "formId": "023-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "024-kanto-normal",
+      "formId": "024-kanto",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "024-kanto-shadow",
+      "formId": "024-kanto",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "025-kanto-dynamax",
+      "formId": "025-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "027-alola-dynamax",
+      "formId": "027-alola",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "027-kanto-dynamax",
+      "formId": "027-kanto",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "029-kanto-dynamax",
+      "formId": "029-kanto",
+      "variantKey": "DYNAMAX"
+    }
+  ],
   "highRiskReview": [
     {
       "id": "063-kanto-dynamax",
@@ -1678,6 +1771,16 @@
       "laterEvolutionTarget": "烏鴉頭頭"
     },
     {
+      "id": "199-galar-dynamax",
+      "dexNumber": 199,
+      "nameZhTw": "呆呆王",
+      "variantKey": "DYNAMAX",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
       "id": "199-johto-dynamax",
       "dexNumber": 199,
       "nameZhTw": "呆呆王",
@@ -1685,6 +1788,16 @@
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
       "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "199-galar-normal",
+      "dexNumber": 199,
+      "nameZhTw": "呆呆王",
+      "variantKey": "NORMAL",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -1698,6 +1811,16 @@
       "laterEvolutionTarget": null
     },
     {
+      "id": "199-galar-purified",
+      "dexNumber": 199,
+      "nameZhTw": "呆呆王",
+      "variantKey": "PURIFIED",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
       "id": "199-johto-purified",
       "dexNumber": 199,
       "nameZhTw": "呆呆王",
@@ -1705,6 +1828,16 @@
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
       "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
+    },
+    {
+      "id": "199-galar-shadow",
+      "dexNumber": 199,
+      "nameZhTw": "呆呆王",
+      "variantKey": "SHADOW",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -1852,10 +1985,10 @@
       "dexNumber": 204,
       "nameZhTw": "榛果球",
       "variantKey": "NORMAL",
-      "decision": "TRANSFER_CANDIDATE",
+      "decision": "CONDITIONAL_KEEP",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
-      "laterEvolutionTarget": null
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "佛烈托斯"
     },
     {
       "id": "204-johto-purified",
@@ -1872,10 +2005,10 @@
       "dexNumber": 204,
       "nameZhTw": "榛果球",
       "variantKey": "SHADOW",
-      "decision": "TRANSFER_CANDIDATE",
+      "decision": "CONDITIONAL_KEEP",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
-      "laterEvolutionTarget": null
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "佛烈托斯"
     },
     {
       "id": "205-johto-dynamax",
@@ -2322,10 +2455,10 @@
       "dexNumber": 216,
       "nameZhTw": "熊寶寶",
       "variantKey": "NORMAL",
-      "decision": "TRANSFER_CANDIDATE",
+      "decision": "CONDITIONAL_KEEP",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
-      "laterEvolutionTarget": null
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "圈圈熊"
     },
     {
       "id": "216-johto-purified",
@@ -2342,10 +2475,10 @@
       "dexNumber": 216,
       "nameZhTw": "熊寶寶",
       "variantKey": "SHADOW",
-      "decision": "TRANSFER_CANDIDATE",
+      "decision": "CONDITIONAL_KEEP",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
-      "laterEvolutionTarget": null
+      "disposition": "LIMITED_USE",
+      "laterEvolutionTarget": "圈圈熊"
     },
     {
       "id": "217-johto-dynamax",
@@ -2402,10 +2535,10 @@
       "dexNumber": 220,
       "nameZhTw": "小山豬",
       "variantKey": "NORMAL",
-      "decision": "TRANSFER_CANDIDATE",
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
-      "laterEvolutionTarget": null
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "象牙豬"
     },
     {
       "id": "220-johto-purified",
@@ -2422,10 +2555,10 @@
       "dexNumber": 220,
       "nameZhTw": "小山豬",
       "variantKey": "SHADOW",
-      "decision": "TRANSFER_CANDIDATE",
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
-      "laterEvolutionTarget": null
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "象牙豬"
     },
     {
       "id": "221-johto-dynamax",

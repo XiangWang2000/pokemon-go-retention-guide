@@ -24,7 +24,7 @@
       "evolutionMethodZhTw": "Buddy 後消耗糖果進化",
       "availabilityNotesZhTw": "正式後續進化；已補查目標 PvP 排名，目前評估為無顯著用途，不把範圍外目標再升級成待判斷。",
       "requiresEvent": false,
-      "verifiedAt": "2026-08-15T16:00:00.000Z"
+      "verifiedAt": "2026-08-27T16:00:00.000Z"
     }
   ],
   "conflicts": [],
@@ -35,7 +35,7 @@
       "previousValue": "HOLD_FOR_NOW",
       "newValue": "TRANSFER_CANDIDATE",
       "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-      "changedAt": "2026-08-15T16:00:00.000Z",
+      "changedAt": "2026-08-27T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": null
     },
@@ -45,18 +45,18 @@
       "previousValue": "TRUE_DATA_PENDING",
       "newValue": "NO_SIGNIFICANT_USE",
       "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-08-15T16:00:00.000Z",
+      "changedAt": "2026-08-27T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": null
     },
     {
-      "id": "change-r8-eval-042-kanto-shadow-iv-20260728",
+      "id": "change-r8-eval-042-kanto-shadow-iv-aba23cf7b26f7de1",
       "fieldName": "recommendedIvStrategyZhTw",
       "previousValue": "暗影標準較寬；15攻優先，不設硬性最低IV。先留用途候選再篩選。",
       "newValue": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
       "changeReasonZhTw": "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。",
       "changedAt": "2026-07-28T04:00:00.000Z",
-      "rulesVersion": "2026.07.28-iv-v2",
+      "rulesVersion": "2026.07.28-v2",
       "source": null
     }
   ]

@@ -1,7 +1,7 @@
 {
   "batch": "342-371",
-  "updatedAt": "2026-08-16",
-  "dataVersion": "2026.08.16-r25",
+  "updatedAt": "2026-08-28",
+  "dataVersion": "2026.08.28-r26",
   "rulesVersion": "2026.08.06-v7",
   "status": "ACCEPTED",
   "counts": {
@@ -69,11 +69,22 @@
         "result": "PASS"
       },
       {
+        "familyId": "JOHTO_FAMILY_202:202-johto",
         "name": "Wynaut merge",
+        "members": [
+          "360-hoenn",
+          "202-johto"
+        ],
         "result": "PASS"
       },
       {
+        "familyId": "HOENN_FAMILY_366:366-hoenn",
         "name": "Clamperl branches",
+        "members": [
+          "366-hoenn",
+          "367-hoenn",
+          "368-hoenn"
+        ],
         "result": "PASS"
       },
       {
@@ -81,11 +92,11 @@
         "result": "PASS"
       },
       {
-        "name": "Dusknoir evolution stub",
+        "name": "Dusknoir evolution target",
         "result": "PASS"
       },
       {
-        "name": "Froslass evolution stub",
+        "name": "Froslass evolution target",
         "result": "PASS"
       },
       {

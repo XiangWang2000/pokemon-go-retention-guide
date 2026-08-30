@@ -97,18 +97,18 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-004-kanto-normal-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-004-kanto-normal-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
               "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -383,29 +383,38 @@
               "assessmentDisposition": "CLEAR_USE",
               "provenance": "DATA_UNAVAILABLE",
               "confidence": "MEDIUM",
-              "dataStatus": "UNKNOWN_RELEASE_STATUS",
+              "dataStatus": "SOURCE_MISSING",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-004-kanto-shadow-2026.08.06-v7-unknown-release-status-0",
+                  "id": "issue-004-kanto-shadow-2026.08.06-v7-unknown-release-status-variant",
                   "issueType": "UNKNOWN_RELEASE_STATUS",
                   "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-004-kanto-shadow-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
+                  "issueType": "OPTIONAL_DATA_MISSING",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "CONDITIONAL_KEEP",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
-              "pvpSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
               "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "rocketSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+              "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
-              "maxBattleSummaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+              "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
+              "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，14攻高整體IV亦可留；Max依角色分開。",
@@ -425,10 +434,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
-                  "materialToDecision": false,
+                  "status": "VERIFIED",
+                  "provenance": "SOURCE_VERIFIED",
+                  "summaryZhTw": "已有結構化進化路徑；是否值得保留仍由目標進化的實際用途判定，不因可進化而自動保留。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -444,9 +453,9 @@
                 },
                 {
                   "category": "GYM",
-                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "status": "DATA_UNAVAILABLE",
                   "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+                  "summaryZhTw": "缺少統一精確排名，以 DATA_UNAVAILABLE 表示，不影響已有充分關鍵資料的結論。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -463,9 +472,9 @@
                 },
                 {
                   "category": "MAX_BATTLE",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+                  "status": "NOT_APPLICABLE",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -482,9 +491,9 @@
                 },
                 {
                   "category": "MEGA",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+                  "status": "NOT_APPLICABLE",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -501,7 +510,7 @@
                 },
                 {
                   "category": "PVE",
-                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "status": "SOURCE_MISSING",
                   "provenance": "DATA_UNAVAILABLE",
                   "summaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
                   "materialToDecision": false,
@@ -520,9 +529,9 @@
                 },
                 {
                   "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+                  "status": "UNRANKED",
+                  "provenance": "SOURCE_VERIFIED",
+                  "summaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -539,11 +548,11 @@
                 },
                 {
                   "category": "ROCKET",
-                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "status": "DATA_UNAVAILABLE",
                   "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "尚無法確認此戰鬥版本是否推出，可能影響保留結論。",
+                  "summaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
                   "materialToDecision": false,
-                  "rocketRating": "NOT_APPLICABLE",
+                  "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
                   "maxTypeTier": null,
@@ -558,7 +567,53 @@
                 }
               ],
               "raw": [],
-              "sources": [],
+              "sources": [
+                {
+                  "id": "OFF-ROCKET-INVASION",
+                  "name": "Pokémon GO",
+                  "title": "Team GO Rocket invades Pokémon GO!",
+                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                },
+                {
+                  "id": "OFF-TCG-2022",
+                  "name": "Pokémon GO",
+                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                },
+                {
+                  "id": "pvpoke-gl-20260715",
+                  "name": "PvPoke",
+                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "type": "PVP",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                },
+                {
+                  "id": "pvpoke-ml-20260715",
+                  "name": "PvPoke",
+                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "type": "PVP",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                },
+                {
+                  "id": "pvpoke-ul-20260715",
+                  "name": "PvPoke",
+                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "type": "PVP",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                }
+              ],
               "traces": [
                 {
                   "ruleKey": "VALUABLE_EVOLUTION",
@@ -627,19 +682,38 @@
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "DATA_UNAVAILABLE",
               "confidence": "MEDIUM",
-              "dataStatus": "UNKNOWN_RELEASE_STATUS",
+              "dataStatus": "SOURCE_MISSING",
               "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
+              "reviewIssues": [
+                {
+                  "id": "issue-004-kanto-purified-2026.08.06-v7-unknown-release-status-variant",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-004-kanto-purified-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
+                  "issueType": "OPTIONAL_DATA_MISSING",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                }
+              ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
-              "pvpSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-              "rocketSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+              "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
-              "megaSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
-              "maxBattleSummaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+              "megaSummaryZhTw": "Purified 個體本身不是 Mega 版本；Mega 候選價值由最終規則另行說明。",
+              "maxBattleSummaryZhTw": "Purified 一般個體不會自動成為 Dynamax／Gigantamax 個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
               "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
@@ -659,10 +733,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
-                  "materialToDecision": false,
+                  "status": "VERIFIED",
+                  "provenance": "INHERITED",
+                  "summaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。已有結構化進化路徑；是否值得保留仍由目標進化的實際用途判定，不因可進化而自動保留。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -678,9 +752,9 @@
                 },
                 {
                   "category": "GYM",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+                  "status": "DATA_UNAVAILABLE",
+                  "provenance": "INHERITED",
+                  "summaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。缺少統一精確排名，以 DATA_UNAVAILABLE 表示，不影響已有充分關鍵資料的結論。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -697,9 +771,9 @@
                 },
                 {
                   "category": "MAX_BATTLE",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+                  "status": "NOT_APPLICABLE",
+                  "provenance": "SOURCE_VERIFIED",
+                  "summaryZhTw": "Purified 一般個體不會自動成為 Dynamax／Gigantamax 個體。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -716,9 +790,9 @@
                 },
                 {
                   "category": "MEGA",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+                  "status": "NOT_APPLICABLE",
+                  "provenance": "SOURCE_VERIFIED",
+                  "summaryZhTw": "Purified 個體本身不是 Mega 版本；Mega 候選價值由最終規則另行說明。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -735,8 +809,8 @@
                 },
                 {
                   "category": "PVE",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "DATA_UNAVAILABLE",
+                  "status": "SOURCE_MISSING",
+                  "provenance": "INHERITED",
                   "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
                   "materialToDecision": false,
                   "rocketRating": null,
@@ -754,9 +828,9 @@
                 },
                 {
                   "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+                  "status": "UNRANKED",
+                  "provenance": "INHERITED",
+                  "summaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -773,11 +847,11 @@
                 },
                 {
                   "category": "ROCKET",
-                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "status": "DATA_UNAVAILABLE",
                   "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "對應暗影型態的推出狀態仍不明，無法確認此 Purified 版本是否可取得。",
+                  "summaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
                   "materialToDecision": false,
-                  "rocketRating": "NOT_APPLICABLE",
+                  "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
                   "maxTypeTier": null,
@@ -792,7 +866,62 @@
                 }
               ],
               "raw": [],
-              "sources": [],
+              "sources": [
+                {
+                  "id": "OFF-ROCKET-INVASION",
+                  "name": "Pokémon GO",
+                  "title": "Team GO Rocket invades Pokémon GO!",
+                  "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                },
+                {
+                  "id": "OFF-TCG-2022",
+                  "name": "Pokémon GO",
+                  "title": "Celebrate the Pokémon TCG: Pokémon GO expansion with our Pokémon TCG Crossover Event!",
+                  "url": "https://pokemongo.com/post/Pokemon-TCG-Crossover-Event?hl=en",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                },
+                {
+                  "id": "official-shadow-mechanic-20260715",
+                  "name": "Pokémon GO Help Center",
+                  "title": "Shadow Pokémon & Purified Pokémon",
+                  "url": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+                  "type": "OFFICIAL",
+                  "accessedAt": "2026-07-14T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                },
+                {
+                  "id": "pvpoke-gl-20260715",
+                  "name": "PvPoke",
+                  "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "type": "PVP",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                },
+                {
+                  "id": "pvpoke-ml-20260715",
+                  "name": "PvPoke",
+                  "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "type": "PVP",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                },
+                {
+                  "id": "pvpoke-ul-20260715",
+                  "name": "PvPoke",
+                  "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "type": "PVP",
+                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+                }
+              ],
               "traces": [
                 {
                   "ruleKey": "NO_MAJOR_USE",
@@ -863,18 +992,18 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-004-kanto-dynamax-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-004-kanto-dynamax-2026.08.06-v7-optional-data-missing-categories-max-battle-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -1140,7 +1269,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-15T16:00:00.000Z",
+        "updatedAt": "2026-08-27T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1188,9 +1317,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
           "shortIvLabelZhTw": "UL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.051Z",
-          "updatedAt": "2026-08-16T09:42:39.051Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-master-league",
@@ -1220,9 +1347,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.042Z",
-          "updatedAt": "2026-08-16T09:42:39.042Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-pve",
@@ -1252,9 +1377,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.027Z",
-          "updatedAt": "2026-08-16T09:42:39.027Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -1284,9 +1407,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.055Z",
-          "updatedAt": "2026-08-16T09:42:39.055Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-mega",
@@ -1316,9 +1437,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
           "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.037Z",
-          "updatedAt": "2026-08-16T09:42:39.037Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-max-attack",
@@ -1348,9 +1467,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
           "shortIvLabelZhTw": "Max攻擊：15攻優先",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.064Z",
-          "updatedAt": "2026-08-16T09:42:39.064Z"
+          "rulesVersion": "2026.07.28-v2"
         }
       ],
       "isRoot": true,
@@ -1448,18 +1565,18 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-005-kanto-normal-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-005-kanto-normal-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
               "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -1735,30 +1852,39 @@
                 "噴火龍"
               ],
               "variantKey": "SHADOW",
-              "isReleased": true,
-              "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "isReleased": null,
+              "releaseStatus": "UNKNOWN",
+              "releaseVerifiedAt": null,
               "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
               "decision": "CONDITIONAL_KEEP",
               "assessmentDisposition": "CLEAR_USE",
-              "provenance": "MANUAL_CURATED",
+              "provenance": "DATA_UNAVAILABLE",
               "confidence": "MEDIUM",
               "dataStatus": "SOURCE_MISSING",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-005-kanto-shadow-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-005-kanto-shadow-2026.08.06-v7-unknown-release-status-variant",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "CONDITIONAL_KEEP",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-005-kanto-shadow-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。噴火龍：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -1773,7 +1899,7 @@
               "reasonZhTw": "用途有限：後續進化（噴火龍）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "evaluation-005-kanto-shadow-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -2049,30 +2175,39 @@
                 "噴火龍"
               ],
               "variantKey": "PURIFIED",
-              "isReleased": true,
-              "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "isReleased": null,
+              "releaseStatus": "UNKNOWN",
+              "releaseVerifiedAt": null,
               "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
-              "provenance": "MANUAL_CURATED",
+              "provenance": "DATA_UNAVAILABLE",
               "confidence": "MEDIUM",
               "dataStatus": "SOURCE_MISSING",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-005-kanto-purified-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-005-kanto-purified-2026.08.06-v7-unknown-release-status-variant",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-005-kanto-purified-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "基礎評價繼承普通版，另以報恩（Return）的可重現資料建立 Purified override。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
@@ -2087,7 +2222,7 @@
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
               "evaluationId": "evaluation-005-kanto-purified-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
               "inheritance": {
                 "inheritsFromVariantId": "005-kanto-normal",
                 "inheritanceMode": "NORMAL_BASE_WITH_OVERRIDE",
@@ -2400,18 +2535,18 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-005-kanto-dynamax-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-005-kanto-dynamax-2026.08.06-v7-optional-data-missing-categories-max-battle-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -2654,14 +2789,11 @@
         ],
         "releasedVariantKeys": [
           "NORMAL",
-          "SHADOW",
-          "PURIFIED",
           "DYNAMAX"
         ],
         "pvp": {
-          "label": "低",
-          "detail": "超級聯盟",
-          "tone": "LOW"
+          "label": "無明確用途",
+          "tone": "NONE"
         },
         "pve": {
           "label": "核心投資",
@@ -2689,7 +2821,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-15T16:00:00.000Z",
+        "updatedAt": "2026-08-27T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2737,9 +2869,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
           "shortIvLabelZhTw": "UL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.051Z",
-          "updatedAt": "2026-08-16T09:42:39.051Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-master-league",
@@ -2769,9 +2899,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.042Z",
-          "updatedAt": "2026-08-16T09:42:39.042Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-pve",
@@ -2801,9 +2929,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.027Z",
-          "updatedAt": "2026-08-16T09:42:39.027Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -2833,9 +2959,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.055Z",
-          "updatedAt": "2026-08-16T09:42:39.055Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-mega",
@@ -2865,9 +2989,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
           "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.037Z",
-          "updatedAt": "2026-08-16T09:42:39.037Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-max-attack",
@@ -2897,9 +3019,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
           "shortIvLabelZhTw": "Max攻擊：15攻優先",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.064Z",
-          "updatedAt": "2026-08-16T09:42:39.064Z"
+          "rulesVersion": "2026.07.28-v2"
         }
       ],
       "isRoot": false,
@@ -2969,18 +3089,18 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-normal-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-006-kanto-normal-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "可用／預算型。本版本有直接 PvE 證據",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -3410,9 +3530,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.051Z",
-                "updatedAt": "2026-08-16T09:42:39.051Z"
+                "rulesVersion": "2026.07.28-v2"
               },
               {
                 "id": "iv-global-master-league",
@@ -3442,9 +3560,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
                 "shortIvLabelZhTw": "ML：15攻／98%優先",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.042Z",
-                "updatedAt": "2026-08-16T09:42:39.042Z"
+                "rulesVersion": "2026.07.28-v2"
               },
               {
                 "id": "iv-global-pve",
@@ -3474,9 +3590,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
                 "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.027Z",
-                "updatedAt": "2026-08-16T09:42:39.027Z"
+                "rulesVersion": "2026.07.28-v2"
               }
             ],
             "ivShortLabels": [
@@ -3513,30 +3627,39 @@
               ],
               "evolutionNames": [],
               "variantKey": "SHADOW",
-              "isReleased": true,
-              "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "isReleased": null,
+              "releaseStatus": "UNKNOWN",
+              "releaseVerifiedAt": null,
               "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
               "decision": "KEEP",
               "assessmentDisposition": "CLEAR_USE",
-              "provenance": "MANUAL_CURATED",
+              "provenance": "DATA_UNAVAILABLE",
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-shadow-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-006-kanto-shadow-2026.08.06-v7-unknown-release-status-variant",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "KEEP",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-006-kanto-shadow-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -3551,7 +3674,7 @@
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
               "evaluationId": "evaluation-006-kanto-shadow-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -3938,9 +4061,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.051Z",
-                "updatedAt": "2026-08-16T09:42:39.051Z"
+                "rulesVersion": "2026.07.28-v2"
               },
               {
                 "id": "iv-global-master-league",
@@ -3970,9 +4091,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
                 "shortIvLabelZhTw": "ML：15攻／98%優先",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.042Z",
-                "updatedAt": "2026-08-16T09:42:39.042Z"
+                "rulesVersion": "2026.07.28-v2"
               },
               {
                 "id": "iv-global-shadow-pve",
@@ -4002,9 +4121,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
                 "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.055Z",
-                "updatedAt": "2026-08-16T09:42:39.055Z"
+                "rulesVersion": "2026.07.28-v2"
               }
             ],
             "ivShortLabels": [
@@ -4041,30 +4158,39 @@
               ],
               "evolutionNames": [],
               "variantKey": "PURIFIED",
-              "isReleased": true,
-              "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "isReleased": null,
+              "releaseStatus": "UNKNOWN",
+              "releaseVerifiedAt": null,
               "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
-              "provenance": "MANUAL_CURATED",
+              "provenance": "DATA_UNAVAILABLE",
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-purified-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-006-kanto-purified-2026.08.06-v7-unknown-release-status-variant",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "affectsFinalDecision": false,
+                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                },
+                {
+                  "id": "issue-006-kanto-purified-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
@@ -4079,7 +4205,7 @@
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
               "evaluationId": "evaluation-006-kanto-purified-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
+              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
               "inheritance": {
                 "inheritsFromVariantId": "006-kanto-normal",
                 "inheritanceMode": "NORMAL_BASE_WITH_OVERRIDE",
@@ -4354,18 +4480,18 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-mega-x-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-006-kanto-mega-x-2026.08.06-v7-optional-data-missing-categories-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響MEGA_X 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響MEGA_X 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -4670,9 +4796,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
                 "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.027Z",
-                "updatedAt": "2026-08-16T09:42:39.027Z"
+                "rulesVersion": "2026.07.28-v2"
               },
               {
                 "id": "iv-global-mega",
@@ -4702,9 +4826,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
                 "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.037Z",
-                "updatedAt": "2026-08-16T09:42:39.037Z"
+                "rulesVersion": "2026.07.28-v2"
               }
             ],
             "ivShortLabels": [
@@ -4752,18 +4874,18 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-mega-y-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-006-kanto-mega-y-2026.08.06-v7-optional-data-missing-categories-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響MEGA_Y 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響MEGA_Y 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -5068,9 +5190,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
                 "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.027Z",
-                "updatedAt": "2026-08-16T09:42:39.027Z"
+                "rulesVersion": "2026.07.28-v2"
               },
               {
                 "id": "iv-global-mega",
@@ -5100,9 +5220,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
                 "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.037Z",
-                "updatedAt": "2026-08-16T09:42:39.037Z"
+                "rulesVersion": "2026.07.28-v2"
               }
             ],
             "ivShortLabels": [
@@ -5150,18 +5268,18 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-dynamax-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-006-kanto-dynamax-2026.08.06-v7-optional-data-missing-categories-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -5464,9 +5582,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
                 "shortIvLabelZhTw": "Max攻擊：15攻優先",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.064Z",
-                "updatedAt": "2026-08-16T09:42:39.064Z"
+                "rulesVersion": "2026.07.28-v2"
               }
             ],
             "ivShortLabels": [
@@ -5513,18 +5629,18 @@
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
                 {
-                  "id": "issue-006-kanto-gigantamax-2026.08.06-v7-optional-data-missing-0",
+                  "id": "issue-006-kanto-gigantamax-2026.08.06-v7-optional-data-missing-categories-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響GIGANTAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響GIGANTAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-15T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-15T16:00:00.000Z",
+              "updatedAt": "2026-08-27T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -5827,9 +5943,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
                 "shortIvLabelZhTw": "Max攻擊：15攻優先",
-                "rulesVersion": "2026.07.28-v2",
-                "createdAt": "2026-08-16T09:42:39.064Z",
-                "updatedAt": "2026-08-16T09:42:39.064Z"
+                "rulesVersion": "2026.07.28-v2"
               }
             ],
             "ivShortLabels": [
@@ -5850,8 +5964,6 @@
         ],
         "releasedVariantKeys": [
           "NORMAL",
-          "SHADOW",
-          "PURIFIED",
           "MEGA_X",
           "MEGA_Y",
           "DYNAMAX",
@@ -5864,7 +5976,7 @@
         },
         "pve": {
           "label": "核心投資",
-          "detail": "團體戰／暗影：本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
+          "detail": "團體戰／Mega／Primal：本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
           "tone": "HIGH"
         },
         "gym": {
@@ -5877,7 +5989,7 @@
           "tone": "HIGH"
         },
         "decision": "CONDITIONAL_KEEP",
-        "decisionReason": "PvP看目標聯盟個體Rank；PvE先看招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留。",
+        "decisionReason": "普通重複個體通常可傳送；Mega候選先看招式與既有投入，15攻優先，14攻高整體IV亦可留。",
         "ivRecommendations": [
           {
             "id": "iv-global-ultra-league",
@@ -5907,9 +6019,7 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
             "shortIvLabelZhTw": "UL：Rank≤100",
-            "rulesVersion": "2026.07.28-v2",
-            "createdAt": "2026-08-16T09:42:39.051Z",
-            "updatedAt": "2026-08-16T09:42:39.051Z"
+            "rulesVersion": "2026.07.28-v2"
           },
           {
             "id": "iv-global-master-league",
@@ -5939,9 +6049,7 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
             "shortIvLabelZhTw": "ML：15攻／98%優先",
-            "rulesVersion": "2026.07.28-v2",
-            "createdAt": "2026-08-16T09:42:39.042Z",
-            "updatedAt": "2026-08-16T09:42:39.042Z"
+            "rulesVersion": "2026.07.28-v2"
           },
           {
             "id": "iv-global-pve",
@@ -5971,9 +6079,7 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
             "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-            "rulesVersion": "2026.07.28-v2",
-            "createdAt": "2026-08-16T09:42:39.027Z",
-            "updatedAt": "2026-08-16T09:42:39.027Z"
+            "rulesVersion": "2026.07.28-v2"
           },
           {
             "id": "iv-global-shadow-pve",
@@ -6003,9 +6109,7 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
             "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-            "rulesVersion": "2026.07.28-v2",
-            "createdAt": "2026-08-16T09:42:39.055Z",
-            "updatedAt": "2026-08-16T09:42:39.055Z"
+            "rulesVersion": "2026.07.28-v2"
           },
           {
             "id": "iv-global-mega",
@@ -6035,9 +6139,7 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
             "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-            "rulesVersion": "2026.07.28-v2",
-            "createdAt": "2026-08-16T09:42:39.037Z",
-            "updatedAt": "2026-08-16T09:42:39.037Z"
+            "rulesVersion": "2026.07.28-v2"
           },
           {
             "id": "iv-global-max-attack",
@@ -6067,9 +6169,7 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
             "shortIvLabelZhTw": "Max攻擊：15攻優先",
-            "rulesVersion": "2026.07.28-v2",
-            "createdAt": "2026-08-16T09:42:39.064Z",
-            "updatedAt": "2026-08-16T09:42:39.064Z"
+            "rulesVersion": "2026.07.28-v2"
           }
         ],
         "ivShortLabels": [
@@ -6099,7 +6199,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-15T16:00:00.000Z",
+        "updatedAt": "2026-08-27T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -6153,9 +6253,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
           "shortIvLabelZhTw": "UL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.051Z",
-          "updatedAt": "2026-08-16T09:42:39.051Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-master-league",
@@ -6185,9 +6283,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.042Z",
-          "updatedAt": "2026-08-16T09:42:39.042Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-pve",
@@ -6217,9 +6313,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.027Z",
-          "updatedAt": "2026-08-16T09:42:39.027Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -6249,9 +6343,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.055Z",
-          "updatedAt": "2026-08-16T09:42:39.055Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-mega",
@@ -6281,9 +6373,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
           "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.037Z",
-          "updatedAt": "2026-08-16T09:42:39.037Z"
+          "rulesVersion": "2026.07.28-v2"
         },
         {
           "id": "iv-global-max-attack",
@@ -6313,9 +6403,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
           "shortIvLabelZhTw": "Max攻擊：15攻優先",
-          "rulesVersion": "2026.07.28-v2",
-          "createdAt": "2026-08-16T09:42:39.064Z",
-          "updatedAt": "2026-08-16T09:42:39.064Z"
+          "rulesVersion": "2026.07.28-v2"
         }
       ],
       "isRoot": false,
@@ -6327,8 +6415,6 @@
   "releasedVariantKeys": [
     "NORMAL",
     "DYNAMAX",
-    "SHADOW",
-    "PURIFIED",
     "MEGA_X",
     "MEGA_Y",
     "GIGANTAMAX"
@@ -6419,9 +6505,7 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
       "shortIvLabelZhTw": "UL：Rank≤100",
-      "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-16T09:42:39.051Z",
-      "updatedAt": "2026-08-16T09:42:39.051Z"
+      "rulesVersion": "2026.07.28-v2"
     },
     {
       "id": "iv-global-master-league",
@@ -6451,9 +6535,7 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
-      "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-16T09:42:39.042Z",
-      "updatedAt": "2026-08-16T09:42:39.042Z"
+      "rulesVersion": "2026.07.28-v2"
     },
     {
       "id": "iv-global-pve",
@@ -6483,9 +6565,7 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
       "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-      "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-16T09:42:39.027Z",
-      "updatedAt": "2026-08-16T09:42:39.027Z"
+      "rulesVersion": "2026.07.28-v2"
     },
     {
       "id": "iv-global-shadow-pve",
@@ -6515,9 +6595,7 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
       "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-      "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-16T09:42:39.055Z",
-      "updatedAt": "2026-08-16T09:42:39.055Z"
+      "rulesVersion": "2026.07.28-v2"
     },
     {
       "id": "iv-global-mega",
@@ -6547,9 +6625,7 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
       "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-      "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-16T09:42:39.037Z",
-      "updatedAt": "2026-08-16T09:42:39.037Z"
+      "rulesVersion": "2026.07.28-v2"
     },
     {
       "id": "iv-global-max-attack",
@@ -6579,9 +6655,7 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
       "shortIvLabelZhTw": "Max攻擊：15攻優先",
-      "rulesVersion": "2026.07.28-v2",
-      "createdAt": "2026-08-16T09:42:39.064Z",
-      "updatedAt": "2026-08-16T09:42:39.064Z"
+      "rulesVersion": "2026.07.28-v2"
     }
   ],
   "ivSummaryZhTw": "依成員用途分開保留：UL：Rank≤100；ML：15攻／98%優先；PvE：15攻優先；14攻高整體IV亦可留；暗影標準較寬；15攻優先，不設硬性最低IV；Mega：15攻優先；14攻高整體IV亦可留；Max攻擊：15攻優先",
@@ -6596,7 +6670,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-15T16:00:00.000Z",
+  "updatedAt": "2026-08-27T16:00:00.000Z",
   "minDexNumber": 4,
   "maxDexNumber": 6,
   "detailsLoaded": true
