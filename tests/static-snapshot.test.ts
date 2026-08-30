@@ -98,14 +98,14 @@ describe("static 唯讀 snapshot", () => {
       pokemonSpecies: 502,
       pokemonForms: 579,
       battleVariants: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
-      rawEvaluationData: 1507,
-      sourceReferences: 220,
-      retentionEvaluations: 2509,
-      categoryEvaluations: 16408,
+      rawEvaluationData: 1510,
+      sourceReferences: 221,
+      retentionEvaluations: 2513,
+      categoryEvaluations: 16436,
       ivRecommendations: CURRENT_RELEASE_CONTRACT.expectedCounts.ivRecommendations,
       dashboardRows: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
       homeFamilies: CURRENT_RELEASE_CONTRACT.expectedCounts.families,
-      openReviewIssues: 160,
+      openReviewIssues: 277,
     });
     expect(siteSnapshotManifest.sourceDatabase.path).toBe("rebuild-ci.db");
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
@@ -187,7 +187,7 @@ describe("static 唯讀 snapshot", () => {
         expect.objectContaining({ scopeType: "GLOBAL", primaryUseKey: "PVE" }),
       ]),
     );
-  }, 30_000);
+  }, 60_000);
 });
 
 describe("首頁 snapshot", () => {

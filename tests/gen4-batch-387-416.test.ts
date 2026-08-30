@@ -1,9 +1,5 @@
 import { describe, expect, it } from "vitest";
-import {
-  evolutionPairs387416,
-  forms387416,
-  species387416,
-} from "@/data/batch-387-416";
+import { evolutionPairs387416, forms387416, species387416 } from "@/data/batch-387-416";
 import { validateGen4BatchSource } from "@/data/gen4-batch-validation";
 
 describe("Gen 4 batch source #387-#416", () => {
@@ -26,10 +22,7 @@ describe("Gen 4 batch source #387-#416", () => {
 
   it("represents both Burmy evolution branches without collapsing cloaks", () => {
     for (const cloak of ["plant", "sandy", "trash"] as const) {
-      expect(evolutionPairs387416).toContainEqual([
-        `412-${cloak}-cloak`,
-        `413-${cloak}-cloak`,
-      ]);
+      expect(evolutionPairs387416).toContainEqual([`412-${cloak}-cloak`, `413-${cloak}-cloak`]);
       expect(evolutionPairs387416).toContainEqual([`412-${cloak}-cloak`, "414-sinnoh"]);
     }
   });

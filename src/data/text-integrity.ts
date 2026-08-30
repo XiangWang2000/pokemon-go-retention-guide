@@ -5,21 +5,21 @@ const QUESTION_MARK_RUN = /\?{2,}/;
 const EMBEDDED_SINGLE_QUESTION_MARK = /[\p{L}\p{N}\u4e00-\u9fff]\?(?=[\p{L}\p{N}\u4e00-\u9fff])/u;
 const HAN_TERMINAL_SINGLE_QUESTION_MARK = /[\u4e00-\u9fff]\?(?:$|[。！？；，、：])/u;
 const URL_PATH = /(?:^|\.)(?:sourceUrl|url|href)$/i;
-const VISIBLE_KEY = /(?:ZhTw|name|title|summary|note|method|availability|conclusion|strategy|reason|description|message|action|target|formName|alias|label|detail|review|pve|pvp|gym|mega|max|rocket|evolution|family|member|status|supports|text|scope)/i;
+const VISIBLE_KEY =
+  /(?:ZhTw|name|title|summary|note|method|availability|conclusion|strategy|reason|description|message|action|target|formName|alias|label|detail|review|pve|pvp|gym|mega|max|rocket|evolution|family|member|status|supports|text|scope)/i;
 const URL_LITERAL = /^(?:https?|ftp):\/\/\S+$/i;
 const URL_QUERY_LITERAL = /^\/[A-Za-z0-9_.~!$&'()*+,;=:@%/-]*\?[A-Za-z][A-Za-z0-9_-]*=/;
 
 function hasCorruptedSingleQuestionMark(value: string) {
-  return (
-    EMBEDDED_SINGLE_QUESTION_MARK.test(value) ||
-    HAN_TERMINAL_SINGLE_QUESTION_MARK.test(value)
-  );
+  return EMBEDDED_SINGLE_QUESTION_MARK.test(value) || HAN_TERMINAL_SINGLE_QUESTION_MARK.test(value);
 }
 
 function hasCorruptedText(value: string) {
-  return value.includes(REPLACEMENT_CHARACTER) ||
+  return (
+    value.includes(REPLACEMENT_CHARACTER) ||
     QUESTION_MARK_RUN.test(value) ||
-    hasCorruptedSingleQuestionMark(value);
+    hasCorruptedSingleQuestionMark(value)
+  );
 }
 
 export interface TextIntegrityIssue {
@@ -27,7 +27,11 @@ export interface TextIntegrityIssue {
   value: string;
 }
 
-export function findTextIntegrityIssues(value: unknown, path = "$", visible = false): TextIntegrityIssue[] {
+export function findTextIntegrityIssues(
+  value: unknown,
+  path = "$",
+  visible = false,
+): TextIntegrityIssue[] {
   const issues: TextIntegrityIssue[] = [];
   const visit = (current: unknown, currentPath: string, isVisible: boolean) => {
     if (typeof current === "string") {
@@ -59,12 +63,18 @@ export function findTextIntegrityIssues(value: unknown, path = "$", visible = fa
 export function assertNoTextIntegrityIssues(value: unknown, label: string) {
   const issues = findTextIntegrityIssues(value);
   if (issues.length) {
-    const sample = issues.slice(0, 8).map((issue) => `${issue.path}: ${issue.value}`).join("\n");
+    const sample = issues
+      .slice(0, 8)
+      .map((issue) => `${issue.path}: ${issue.value}`)
+      .join("\n");
     throw new Error(`${label} contains corrupted text fields (${issues.length}):\n${sample}`);
   }
 }
 
-export function findSourceTextIntegrityIssues(source: string, filePath = "$source"): TextIntegrityIssue[] {
+export function findSourceTextIntegrityIssues(
+  source: string,
+  filePath = "$source",
+): TextIntegrityIssue[] {
   const sourceFile = ts.createSourceFile(
     filePath,
     source,

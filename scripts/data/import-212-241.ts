@@ -1,0 +1,130 @@
+import {
+  evolutionPairs212241,
+  forms212241,
+  migratedStubIds212241,
+  pvpokeSpeciesId212241,
+  pveUseLevels212241,
+  releasedDynamaxForms212241,
+  releasedGigantamaxForms212241,
+  releasedMegaForms212241,
+  releasedShadowForms212241,
+  specialVariants212241,
+  species212241,
+} from "../../src/data/batch-212-241";
+import { runLegacyBatchImport } from "./legacy-batch-import";
+
+const changeLogs = [
+  {
+    id: "r19-batch-212-241",
+    entityType: "Batch",
+    entityId: "212-241",
+    fieldName: "status",
+    previousValue: null,
+    newValue: "RESEARCHED",
+    sourceId: "OFF-JOHTO-TOUR-2022",
+    changeReasonZhTw: "新增 #212～#241，沿用共用保留規則與逐版本資料處置。",
+  },
+  {
+    id: "r19-family-scizor",
+    entityType: "EvolutionFamily",
+    entityId: "KANTO_FAMILY_123",
+    fieldName: "members",
+    previousValue: "#123",
+    newValue: "#123→#212",
+    sourceId: "OFF-JOHTO-TOUR-2022",
+    changeReasonZhTw: "巨鉗螳螂使用既有飛天螳螂 familyKey 與正式進化路徑，不因跨世代圖鑑號拆家族。",
+  },
+  {
+    id: "r19-family-kingdra",
+    entityType: "EvolutionFamily",
+    entityId: "KANTO_FAMILY_116",
+    fieldName: "members",
+    previousValue: "#116→#117",
+    newValue: "#116→#117→#230",
+    sourceId: "OFF-JOHTO-TOUR-2022",
+    changeReasonZhTw: "刺龍王使用既有海刺龍 familyKey 與正式進化路徑。",
+  },
+  {
+    id: "r19-family-porygon",
+    entityType: "EvolutionFamily",
+    entityId: "KANTO_FAMILY_137",
+    fieldName: "members",
+    previousValue: "#137",
+    newValue: "#137→#233→#474",
+    sourceId: "OFF-JOHTO-TOUR-2022",
+    changeReasonZhTw: "多邊獸Ⅱ使用既有多邊獸 familyKey 與正式進化路徑。",
+  },
+  {
+    id: "r19-family-tyrogue",
+    entityType: "EvolutionFamily",
+    entityId: "KANTO_FAMILY_236",
+    fieldName: "members",
+    previousValue: "#106；#107",
+    newValue: "#236→#106；#236→#107；#236→#237",
+    sourceId: "OFF-JOHTO-TOUR-2022",
+    changeReasonZhTw:
+      "無畏小子與飛腿郎、快拳郎、戰舞郎共用既有 familyKey，依正式分支進化路徑整合家族。",
+  },
+];
+
+runLegacyBatchImport({
+  batchStart: 212,
+  batchEnd: 241,
+  batchLabel: "#212～#241",
+  checkedAt: new Date("2026-08-08T18:00:00+08:00"),
+  pvpokeCommit: "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+  revision: "r19",
+  officialResearchPath: new URL(
+    "../../research_notes/sources/official-212-241.json",
+    import.meta.url,
+  ),
+  sourceNotes: "第 #212～#241 批次來源研究表。",
+  sourceOptions: { includeMaxSource: true },
+  species: species212241,
+  forms: forms212241,
+  evolutionPairs: evolutionPairs212241,
+  specialVariants: specialVariants212241,
+  pveUseLevels: pveUseLevels212241,
+  pvpokeSpeciesId: pvpokeSpeciesId212241,
+  releaseSets: {
+    shadow: releasedShadowForms212241,
+    mega: releasedMegaForms212241,
+    dynamax: releasedDynamaxForms212241,
+    gigantamax: releasedGigantamaxForms212241,
+  },
+  migratedStubIds: migratedStubIds212241,
+  resetEvolutionFromFormIds: ["106-kanto", "107-kanto"],
+  changeLogIds: [
+    "r19-batch-212-241",
+    "r19-family-scizor",
+    "r19-family-kingdra",
+    "r19-family-porygon",
+    "r19-family-tyrogue",
+  ],
+  changeLogs,
+  expectedStaticCounts: {
+    species: 30,
+    forms: 30,
+    variants: 124,
+    message: "#212～#241 靜態計數不符 30 species／31 forms（含 Galar stub）／121 variants。",
+  },
+  expectedDatabaseCounts: {
+    species: 30,
+    forms: 30,
+    variants: 124,
+    categoryEvaluations: 868,
+  },
+  texts: {
+    battleMega: "Mega 電龍是獨立戰鬥型態；只與普通基底、暗影及 Max 版本分開評估。",
+    battleDynamax: "本批沒有來源確認此物種的極巨版本已推出；普通個體不能替代極巨個體。",
+    retentionPveMega:
+      "Mega 電龍有特殊 PvE 與 Mega boost 用途，非核心投資；先核對 Volt Switch／Zap Cannon、等級與投入。",
+    retentionPveDefault: "未列為本批普通版本的核心 PvE 投資目標；不因 100% 自動升格為實戰必留。",
+    retentionMega: "Mega 電龍已推出且與其他版本分開；只留實際投入候選。",
+    retentionMegaBase: "普通電龍可作 Mega 基底候選；不把 Mega 用途回推成全家族必留。",
+    retentionMax: (variant) =>
+      variant.variantKey === "DYNAMAX"
+        ? "本批未確認此極巨版本推出；普通個體不能替代極巨個體。"
+        : "Max 用途與普通／暗影／Mega 分開評估。",
+  },
+});

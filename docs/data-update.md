@@ -10,39 +10,35 @@
 8. 更新後先明確產生 review 與 static snapshot，再執行完整驗證；驗證不得代替產生步驟或隱性改寫受控產物。
 9. 人工確認本批 Markdown／JSON 報告後才可開始下一批。
 
-## 目前批次執行順序
+## 批次更新入口
 
-```powershell
-npm run db:seed
-npm run data:remediate
-npm run data:import:batch -- <batch-key>
-npm run data:recompute -- --max <max-dex>
-npm run data:validate
-npm run review:generate
-npm run release:snapshot
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1 -Full
-```
+正式資料更新以後述的 `Current release clean rebuild` 為唯一完整入口。`npm run db:seed` 不是可重入操作，
+不得直接對根目錄 `dev.db` 重跑；`data:import:batch` 與 `data:recompute` 只供新的可拋棄資料庫或已具備
+前置批次的開發資料庫做定向驗證，不能單獨產生正式 snapshot。
 
-`data:import:batch` 接受 Batch Registry 中的一個 `batch-key`；批次順序、範圍與 adapter 以 Registry 為準，不再由 package scripts 維護一串別名。完成所有已登錄批次後，使用 `data:recompute -- --max <max-dex>` 執行目前 scope 的共用重算。#312～#386 仍使用 `312-341`、`342-371`、`372-386` 三個可獨立驗證的來源、batch、form 與 review 單位；第三世代的 `canonicalGen3Species` 與獨立 `canonicalGen3Forms` 分別驗證物種、正式型態、型態名稱、屬性與 BattleVariant 邊界。Castform 天氣型態、Deoxys 四種 Forme、Shadow evolution closure、Primal 與 Mega 顯示名稱都不可由 batch 自己同時產生 expected 值繞過檢查。沒有完成重算、review、snapshot 與完整驗證前，不得把新 snapshot 視為最終驗收結果。
+`data:import:batch` 接受 Batch Registry 中的一個 `batch-key`；批次順序、範圍與 adapter 以 Registry 為準，
+不再由 package scripts 維護一串別名。完成所有 pre-recompute 批次後，使用
+`npm run data:recompute -- --max <max-dex>` 執行該階段的共用重算。沒有完成完整重建、review、snapshot
+與完整驗證前，不得把新 snapshot 視為最終驗收結果。
 
 ## Current release clean rebuild
 
-完整重建由 `scripts/verify-research-rebuild.ts` 建立新的 `rebuild-ci` SQLite 檔案，依 Batch Registry
-的 seed、pre-recompute 與 post-recompute phase 執行匯入、重算、IV backfill 與資料驗證，再由共用
+完整重建由 `scripts/data/verify-research-rebuild.ts` 建立新的 `rebuild-ci` SQLite 檔案，依 Batch Registry
+的 seed、pre-recompute 與 post-recompute phase 執行匯入、重算、IV materialization 與資料驗證，再由共用
 release contract 驗證目前 scope、review 與 snapshot。Gen3／Gen4 的證據差異仍由各自 importer adapter
 處理，不在 release verifier 內重複路由。
-`research_notes/cross-generation-evolution-targets.json` 必須在重建前後保持不變；不能以暫時改寫來源檔
+`research_notes/sources/cross-generation-evolution-targets.json` 必須在重建前後保持不變；不能以暫時改寫來源檔
 來通過舊版相容邏輯。跨批次進化邊界由尚未存在 endpoint 時延後，並由擁有該 endpoint 的批次匯入，
 不得新增批次或 Pokémon 專用的 rebuild stub。
 
 ```powershell
 $env:ALLOW_DESTRUCTIVE_REBUILD = "1"
 $env:DATABASE_URL = "file:./rebuild-ci.db"
-npx tsx scripts/verify-research-rebuild.ts
+npx tsx scripts/data/verify-research-rebuild.ts
 $env:DATABASE_URL = "file:./rebuild-ci.db"
 npm run data:verify:published-integrity
 npm run review:generate
-npx tsx scripts/generate-current-recalibration-report.ts
+npx tsx scripts/review/generate-current-recalibration-report.ts
 npm run release:snapshot
 npm run release:verify
 ```
@@ -63,8 +59,9 @@ npm run snapshot:check
 
 Artifact 只供 provenance 重現使用，不會部署到 GitHub Pages，也不取代 manifest 的 bytes 與 SHA-256 驗證。
 
-驗收除了批次範圍與資料版本，還要確認 2344 個 BattleVariants、302 個展示家族、13 個 IV
-recommendations、`407-sinnoh`、唯一的 `315-hoenn -> 407-sinnoh`，以及不存在 `407-other`。
+驗收除了批次範圍與資料版本，還要確認 2348 個 BattleVariants、302 個展示家族、13 個 IV
+recommendations、18 個目前有效的 `TRUE_DATA_PENDING`、`407-sinnoh`、唯一的 `315-hoenn -> 407-sinnoh`，以及不存在
+`407-other`。待補資料主要來自移除沒有正式來源的推出狀態推測；不得為恢復零待補數而重新加入圖鑑號或榜單存在性 fallback。
 
 ## 共用重算規則
 

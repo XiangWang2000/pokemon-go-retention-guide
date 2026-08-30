@@ -32,7 +32,9 @@ export function PokemonIdentityCell({
           {form.nameZhTw}
         </span>
         <span className="block truncate text-xs text-[var(--muted)]">{form.nameEn}</span>
-        <span className="mt-1 block text-xs font-bold text-[var(--muted)]">{form.formNameZhTw}</span>
+        <span className="mt-1 block text-xs font-bold text-[var(--muted)]">
+          {form.formNameZhTw}
+        </span>
       </span>
     </button>
   );

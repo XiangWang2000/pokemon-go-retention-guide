@@ -1,6 +1,7 @@
 import path from "node:path";
 
 export const DEFAULT_DATABASE_URL = "file:./dev.db";
+export const DISPOSABLE_DATABASE_FILENAME = "rebuild-ci.db";
 
 export function getDatabaseUrl(env: Partial<NodeJS.ProcessEnv> = process.env) {
   const value = env.DATABASE_URL?.trim();
@@ -56,4 +57,28 @@ export function resolveDatabaseLocation(
       ? relativePath.split(path.sep).join("/")
       : absolutePath.split(path.sep).join("/"),
   };
+}
+
+export function assertDisposableDatabase(
+  databaseUrl = getDatabaseUrl(),
+  env: { ALLOW_DESTRUCTIVE_REBUILD?: string } = {
+    ALLOW_DESTRUCTIVE_REBUILD: process.env.ALLOW_DESTRUCTIVE_REBUILD,
+  },
+  root = process.cwd(),
+) {
+  const databasePath = resolveDatabaseLocation(databaseUrl, root).absolutePath;
+  const disposablePath = resolveDatabaseLocation(
+    `file:./${DISPOSABLE_DATABASE_FILENAME}`,
+    root,
+  ).absolutePath;
+  const normalize = (value: string) => (process.platform === "win32" ? value.toLowerCase() : value);
+
+  if (
+    env.ALLOW_DESTRUCTIVE_REBUILD !== "1" ||
+    normalize(databasePath) !== normalize(disposablePath)
+  ) {
+    throw new Error(
+      `Destructive data operation requires ALLOW_DESTRUCTIVE_REBUILD=1 and DATABASE_URL=file:./${DISPOSABLE_DATABASE_FILENAME}.`,
+    );
+  }
 }

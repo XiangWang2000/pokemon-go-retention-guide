@@ -4,7 +4,7 @@ The canonical production site for this repository is:
 
 `https://xiangwang2000.github.io/pokemon-go-retention-guide/`
 
-GitHub Pages is the only supported production publishing target. The retired Sites/Vinext/Cloudflare runtime has been removed from the active repository path; historical migration notes remain in `docs/legacy-sites-migration.md` and the #001-#030 review records.
+GitHub Pages is the only supported production publishing target. The retired Sites/Vinext/Cloudflare runtime has been removed from the active repository path; historical migration notes remain in `docs/history/legacy-sites-migration.md` and the #001-#030 review records.
 
 ## Default development and build workflow
 
@@ -16,6 +16,10 @@ npm run build
 npm run pages:verify
 npm start
 ```
+
+`dev.db` remains the local research database. Snapshot and release verification resolve the canonical
+`rebuild-ci.db` through the release contract, so the documented commands do not require temporarily
+rewriting `.env`.
 
 `npm run dev` validates the Pages snapshot and starts Next.js development mode. `npm run build` creates the production static export in `out/`. `npm run pages:verify` validates the generated artifact, and `npm start` serves `out/` locally under the GitHub Pages project base path.
 

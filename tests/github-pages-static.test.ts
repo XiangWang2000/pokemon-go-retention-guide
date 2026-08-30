@@ -1,18 +1,12 @@
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import {
-  GITHUB_PAGES_BASE_PATH,
-  sitePath,
-  versionedAssetPath,
-  versionedDataPath,
-} from "@/config/site";
+import { GITHUB_PAGES_BASE_PATH, sitePath, versionedAssetPath } from "@/config/site";
 import { DATA_VERSION } from "@/config/release";
 
 describe("GitHub Pages static export", () => {
   it("builds project-site paths and versioned JSON URLs", () => {
     expect(GITHUB_PAGES_BASE_PATH).toBe("/pokemon-go-retention-guide");
     expect(sitePath("/review", GITHUB_PAGES_BASE_PATH)).toBe("/pokemon-go-retention-guide/review");
-    expect(versionedDataPath("/data/home.json")).toContain(`v=${encodeURIComponent(DATA_VERSION)}`);
     expect(versionedAssetPath("/exports/current.xlsx")).toContain(
       `v=${encodeURIComponent(DATA_VERSION)}`,
     );
@@ -36,9 +30,11 @@ describe("GitHub Pages static export", () => {
     expect(pkg.scripts.dev).toContain("next dev");
     expect(pkg.scripts.dev).toContain("snapshot:check");
     expect(pkg.scripts.build).toBe("npm run build:pages");
-    expect(pkg.scripts.start).toBe("node scripts/serve-pages.mjs");
+    expect(pkg.scripts.start).toBe("node scripts/pages/serve-pages.mjs");
     expect(pkg.scripts["release:snapshot"]).toContain("prepare-release-snapshot.ts");
     expect(pkg.scripts["snapshot:check"]).toContain("check-static-snapshot.ts");
+    expect(pkg.scripts["snapshot:check"]).toContain("--database-url file:./rebuild-ci.db");
+    expect(pkg.scripts["release:verify"]).toContain("--database-url file:./rebuild-ci.db");
     expect(Object.keys(pkg.scripts).some((name) => name.startsWith("sites:"))).toBe(false);
     expect(pkg.devDependencies).not.toHaveProperty("vinext");
     expect(pkg.devDependencies).not.toHaveProperty("wrangler");
@@ -49,14 +45,19 @@ describe("GitHub Pages static export", () => {
     expect(pkg.devDependencies).not.toHaveProperty("vite");
   });
 
-  it("uses an explicit Pages signal for Next static export", () => {
+  it("uses the Pages base path for Next static export", () => {
     const config = readFileSync("next.config.ts", "utf8");
-    const buildScript = readFileSync("scripts/build-pages.mjs", "utf8");
+    const buildScript = readFileSync("scripts/pages/build-pages.mjs", "utf8");
     expect(config).toContain('output: "export"');
-    expect(config).toContain("NEXT_STATIC_EXPORT");
     expect(config).toContain("NEXT_PUBLIC_BASE_PATH");
+    expect(config).toContain("Boolean(process.env.NEXT_PUBLIC_BASE_PATH)");
+    expect(config).not.toContain("NEXT_STATIC_EXPORT");
     expect(config).not.toContain("GITHUB_ACTIONS");
-    expect(buildScript).toContain('NEXT_STATIC_EXPORT: "true"');
+    expect(buildScript).not.toContain("NEXT_STATIC_EXPORT");
+    expect(buildScript).toContain('const defaultBasePath = "/pokemon-go-retention-guide"');
+    expect(buildScript).toContain(
+      "NEXT_PUBLIC_BASE_PATH: process.env.NEXT_PUBLIC_BASE_PATH ?? defaultBasePath",
+    );
     expect(config).toContain("trailingSlash: true");
     expect(config).toContain("basePath");
     expect(config).toContain("assetPrefix");

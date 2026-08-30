@@ -1,13 +1,33 @@
 import { describe, expect, it } from "vitest";
 import {
   buildLegacyEvidenceLinks,
+  assertDisposableDatabase,
   findLegacyRanks,
   isLegacyVariantReleased,
   legacyInitialDecision,
   LEGACY_LEAGUES,
-} from "../scripts/legacy-import-shared";
+} from "../scripts/data/legacy-import-shared";
 
 describe("shared legacy import adapter", () => {
+  it("allows destructive imports only on the disposable rebuild database", () => {
+    const root = "C:\\pokemon";
+    const approved = { ALLOW_DESTRUCTIVE_REBUILD: "1" };
+
+    expect(() => assertDisposableDatabase("file:./rebuild-ci.db", approved, root)).not.toThrow();
+    expect(() => assertDisposableDatabase("file:./dev.db", approved, root)).toThrow(
+      "DATABASE_URL=file:./rebuild-ci.db",
+    );
+    expect(() => assertDisposableDatabase("file:./rebuild-ci-backup.db", approved, root)).toThrow(
+      "DATABASE_URL=file:./rebuild-ci.db",
+    );
+    expect(() => assertDisposableDatabase("file:C:/other/rebuild-ci.db", approved, root)).toThrow(
+      "DATABASE_URL=file:./rebuild-ci.db",
+    );
+    expect(() => assertDisposableDatabase("file:./rebuild-ci.db", {}, root)).toThrow(
+      "ALLOW_DESTRUCTIVE_REBUILD=1",
+    );
+  });
+
   it("keeps evidence categorization configurable without duplicating importer code", () => {
     const source = (id: string, supports: string[]) => ({
       id,

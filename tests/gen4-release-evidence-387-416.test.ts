@@ -18,13 +18,15 @@ type ResearchManifest = {
 };
 
 const research = JSON.parse(
-  readFileSync("research_notes/official-387-416.json", "utf8"),
+  readFileSync("research_notes/sources/official-387-416.json", "utf8"),
 ) as ResearchManifest;
 
 describe("Gen 4 #387-#416 release evidence", () => {
   it("marks every canonical batch form as released normally", () => {
     expect(releasedNormalForms387416.size).toBe(forms387416.length);
-    expect([...releasedNormalForms387416].sort()).toEqual(forms387416.map((form) => form.id).sort());
+    expect([...releasedNormalForms387416].sort()).toEqual(
+      forms387416.map((form) => form.id).sort(),
+    );
   });
 
   it("separates direct Shadow encounters from evolution-derived descendants", () => {

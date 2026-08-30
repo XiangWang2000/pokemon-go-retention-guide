@@ -84,10 +84,10 @@ describe("checkpoint validation", () => {
         return value.dataVersion === DATA_VERSION;
       })
       .concat([
-        "research_notes/cross-generation-evolution-targets.json",
-        ...readdirSync("research_notes")
+        "research_notes/sources/cross-generation-evolution-targets.json",
+        ...readdirSync("research_notes/sources")
           .filter((name) => /^(official|battle)-.*\.json$/.test(name))
-          .map((name) => `research_notes/${name}`),
+          .map((name) => `research_notes/sources/${name}`),
         "site-data/manifest.json",
         "site-data/home.json",
         "site-data/details.json",

@@ -1,6 +1,9 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
-import { releasedNormalForms387416, releasedShadowForms387416 } from "@/data/batch-387-416-gameplay";
+import {
+  releasedNormalForms387416,
+  releasedShadowForms387416,
+} from "@/data/batch-387-416-gameplay";
 import { pveEvidence387416, pveEvidenceForVariant387416 } from "@/data/batch-387-416-pve";
 
 type ResearchManifest = {
@@ -9,7 +12,7 @@ type ResearchManifest = {
 };
 
 const research = JSON.parse(
-  readFileSync("research_notes/pve-387-416.json", "utf8"),
+  readFileSync("research_notes/sources/pve-387-416.json", "utf8"),
 ) as ResearchManifest;
 
 describe("Gen 4 #387-#416 variant-level PvE evidence", () => {

@@ -165,7 +165,8 @@ export async function buildExportWorkbook(prisma: PrismaClient) {
           releaseStatus: zhTw.releaseStatus[variant.releaseStatus],
           pvpStatus: localizedDataStatus(variant.categoryEvaluations, "PVP"),
           pveStatus: localizedDataStatus(variant.categoryEvaluations, "PVE"),
-          pveUseLevel: variant.categoryEvaluations.find((item) => item.category === "PVE")?.pveUseLevel
+          pveUseLevel: variant.categoryEvaluations.find((item) => item.category === "PVE")
+            ?.pveUseLevel
             ? zhTw.pveUseLevel[
                 variant.categoryEvaluations.find((item) => item.category === "PVE")!
                   .pveUseLevel as keyof typeof zhTw.pveUseLevel

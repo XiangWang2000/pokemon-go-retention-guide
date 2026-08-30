@@ -30,15 +30,16 @@ function cloneForm(form: FormOverview, changes: Partial<FormOverview>): FormOver
 }
 
 describe("家族價值與清包策略聚合", () => {
-  it("8/10. 單純存在進化路徑且所有成員用途低，不會自動選擇性保留", () => {
-    for (const formId of ["019-kanto", "019-alola"]) {
-      const family = familyContaining(formId);
+  it("8/10. 只有推出狀態未確認的家族維持安全暫存", () => {
+    const kanto = familyContaining("019-kanto");
+    const alola = familyContaining("019-alola");
+    for (const family of [kanto, alola]) {
       expect(family.members.some((member) => member.roles.includes("EVOLUTION_MATERIAL"))).toBe(
         true,
       );
-      expect(family.familyValue).toBe("LOW");
-      expect(family.retentionStrategy).toBe("MOSTLY_TRANSFER");
     }
+    expect(kanto).toMatchObject({ familyValue: "UNKNOWN", retentionStrategy: "HOLD_FOR_NOW" });
+    expect(alola).toMatchObject({ familyValue: "LOW", retentionStrategy: "MOSTLY_TRANSFER" });
   });
 
   it("3. 只有 Mega 候選有價值時為 MEDIUM＋SELECTIVE_KEEP", () => {
@@ -213,7 +214,7 @@ describe("家族直接處理結論", () => {
   });
 
   it("低價值與已補齊跨批次家族給出安全的清包動作", () => {
-    expect(familyContaining("020-kanto").handlingSummaryZhTw).toContain("普通重複可直接傳送");
+    expect(familyContaining("020-kanto").handlingSummaryZhTw).toContain("先不要大量傳送");
     expect(familyContaining("030-kanto").handlingSummaryZhTw).toContain("尼多后");
     expect(familyContaining("030-kanto").handlingSummaryZhTw).toContain("普通重複個體可傳");
     expect(familyContaining("030-kanto").isBatchTruncated).toBe(false);

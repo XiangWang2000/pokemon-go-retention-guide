@@ -12,7 +12,7 @@ Pokémon GO 通用寶可夢保留價值指南。系統以 `PokemonForm × Battle
 
 GitHub Pages 採 Next.js static export，production 不依賴 runtime Prisma／SQLite、Next.js API route 或舊 Sites／Vinext worker。完整部署與驗證流程請見 [`docs/github-pages.md`](docs/github-pages.md)。
 
-退休 Sites／Vinext／Cloudflare Worker 僅保留在歷史 review 與遷移紀錄中；目前正式路徑只使用 GitHub Pages。歷史說明請見 [`docs/legacy-sites-migration.md`](docs/legacy-sites-migration.md)。
+退休 Sites／Vinext／Cloudflare Worker 僅保留在歷史 review 與遷移紀錄中；目前正式路徑只使用 GitHub Pages。歷史說明請見 [`docs/history/legacy-sites-migration.md`](docs/history/legacy-sites-migration.md)。
 
 ## 公開資料的 source of truth
 
@@ -22,7 +22,7 @@ GitHub Pages 採 Next.js static export，production 不依賴 runtime Prisma／S
 - `src/config/release.ts`：目前資料版本與更新日期。
 - `src/config/batch-registry.ts`：已發布批次的順序、匯入 phase／adapter 與 review 輸出。
 - `src/config/release-contract.ts`：目前 release 的共用驗證契約與 generated-path allowlist。
-- `scripts/verify-published-integrity.ts`：保留歷史批次、Gen4 canonical form 與跨世代 family 的完整性檢查。
+- `scripts/data/verify-published-integrity.ts`：保留歷史批次、Gen4 canonical form 與跨世代 family 的完整性檢查。
 - `site-data/manifest.json`：snapshot 來源、筆數、SHA-256、runtime JSON 與 Excel artifact 資訊。
 
 首頁顯示的資料範圍與更新日期由上述設定產生，新增下一批寶可夢時不需要再手動修改 README 的批次數字。
@@ -94,6 +94,9 @@ npm run db:generate
 npm run dev
 ```
 
+`dev.db` 仍是本機研究資料庫；`snapshot:check` 與 `release:verify` 會依 release contract 明確驗證
+`rebuild-ci.db`，所以不需要為了啟動開發或建置而改寫 `.env`。
+
 完整 production build／驗證：
 
 ```powershell
@@ -111,7 +114,7 @@ npm start
 ```powershell
 npm run data:validate
 npm run review:generate
-npx tsx scripts/generate-current-recalibration-report.ts
+npx tsx scripts/review/generate-current-recalibration-report.ts
 npm run release:snapshot
 npm run release:verify
 npm run build
@@ -125,18 +128,19 @@ release preparation 共用的驗證入口。`site-data/manifest.json` 會記錄�
 ## 歷史遷移紀錄
 
 舊 Sites／Vinext／Cloudflare Worker 的實作已從現行 runtime 與 npm workflow 移除；
-可重現性與決策背景保留在 [`docs/legacy-sites-migration.md`](docs/legacy-sites-migration.md)
-及 `review/001-030-sites-migration.*`，不應作為目前部署或驗證入口。
+可重現性與決策背景保留在 [`docs/history/legacy-sites-migration.md`](docs/history/legacy-sites-migration.md)
+及 `review/history/001-030-sites-migration.*`，不應作為目前部署或驗證入口。
 
 ## 重要目錄
 
 - `src/`：網站、規則、presentation 與 runtime loader。
 - `prisma/`：研究資料模型與 migrations。
-- `scripts/`：資料匯入、驗證、snapshot、Pages build／smoke 工具。
+- `scripts/data/`、`scripts/review/`、`scripts/release/`、`scripts/pages/`：依責任分類的資料、審核、發布與 Pages 工具；`scripts/verify.ps1` 是共用驗證入口。
 - `site-data/`：versioned snapshot 與 manifest。
 - `public/data/`：GitHub Pages 瀏覽器實際讀取的 runtime JSON。
-- `review/`：逐批審核報告與修正紀錄。
-- `docs/`：部署、遷移與維護說明。
+- `review/`：目前 release 的逐批審核報告；`review/history/` 保存歷史 checkpoint 與遷移紀錄。
+- `research_notes/sources/`：可追溯的研究來源 JSON；`research_notes/history/` 保存早期人工筆記。
+- `docs/`：現行部署與維護說明；`docs/history/` 保存退休架構與歷史截圖。
 - `tests/`：規則、資料一致性、Pages 與 regression tests。
 
 ## 非目標

@@ -54,7 +54,7 @@ interface OfficialResearch {
   officialResearchGapsZhTw: string[];
 }
 
-const officialResearchPath = "research_notes/official-001-030.json";
+const officialResearchPath = "research_notes/sources/official-001-030.json";
 
 export interface ResearchImportOptions {
   deferMissingEvolutionPaths?: boolean;
@@ -263,7 +263,7 @@ async function importOfficialResearch(
           accessedAt: new Date(`${source.accessedAt}T00:00:00+08:00`),
           publishedAt: optionalDate(source.publishedAt),
           dataVersion: source.publishedAt ?? "official live page",
-          notes: "第一批官方研究原始頁；保存於 research_notes/official-001-030.json。",
+          notes: "第一批官方研究原始頁；保存於 research_notes/sources/official-001-030.json。",
         },
         update: {
           sourceName: source.sourceName,
@@ -833,8 +833,8 @@ export async function integrateResearchData(
 ) {
   const [official, battle1, battle2] = await Promise.all([
     readJson<OfficialResearch>(officialResearchPath),
-    readJson<JsonRecord>("research_notes/battle-001-015.json"),
-    readJson<JsonRecord>("research_notes/battle-016-030.json"),
+    readJson<JsonRecord>("research_notes/sources/battle-001-015.json"),
+    readJson<JsonRecord>("research_notes/sources/battle-016-030.json"),
   ]);
   await importOfficialResearch(prisma, official, checkedAt, options);
   const battle1Map = await importBattleSources(

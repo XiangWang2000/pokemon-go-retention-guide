@@ -77,7 +77,7 @@ function formIdForTarget(target: { dexNumber: number; formKey: string }) {
 }
 
 const crossGenerationManifest = JSON.parse(
-  readFileSync("research_notes/cross-generation-evolution-targets.json", "utf8"),
+  readFileSync("research_notes/sources/cross-generation-evolution-targets.json", "utf8"),
 ) as {
   targets: Array<{ dexNumber: number; formKey: string; familyKey: string }>;
 };

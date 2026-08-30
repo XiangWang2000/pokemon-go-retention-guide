@@ -1,7 +1,4 @@
-import type {
-  CanonicalGen4Form,
-  CanonicalGen4Species,
-} from "./canonical/gen4-387-416";
+import type { CanonicalGen4Form, CanonicalGen4Species } from "./canonical/gen4-387-416";
 
 const pokemonTypes = new Set([
   "NORMAL",

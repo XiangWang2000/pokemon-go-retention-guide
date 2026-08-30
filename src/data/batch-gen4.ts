@@ -1,8 +1,4 @@
-import {
-  evolutionPairs387416,
-  forms387416,
-  species387416,
-} from "./batch-387-416";
+import { evolutionPairs387416, forms387416, species387416 } from "./batch-387-416";
 import { pveEvidenceForVariant387416 } from "./batch-387-416-pve";
 import { pvpokeSpeciesId387416 } from "./batch-387-416-pvpoke";
 import {

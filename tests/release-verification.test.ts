@@ -4,7 +4,7 @@ import path from "node:path";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { siteSnapshotManifest } from "@/lib/data";
 import { CURRENT_RELEASE_CONTRACT, expectedReleaseReviewPaths } from "@/config/release-contract";
-import type { SnapshotManifest } from "../scripts/check-static-snapshot";
+import type { SnapshotManifest } from "../scripts/release/check-static-snapshot";
 
 const { verifyStaticSnapshot } = vi.hoisted(() => ({
   verifyStaticSnapshot: vi.fn(),
@@ -13,10 +13,10 @@ const { validateReviewConsistency } = vi.hoisted(() => ({
   validateReviewConsistency: vi.fn(),
 }));
 
-vi.mock("../scripts/check-static-snapshot", () => ({ verifyStaticSnapshot }));
-vi.mock("../scripts/validate-review-consistency", () => ({ validateReviewConsistency }));
+vi.mock("../scripts/release/check-static-snapshot", () => ({ verifyStaticSnapshot }));
+vi.mock("../scripts/review/validate-review-consistency", () => ({ validateReviewConsistency }));
 
-import { verifyRelease } from "../scripts/verify-release";
+import { verifyRelease } from "../scripts/release/verify-release";
 
 async function writeFixture(root: string, relativePath: string, value: string) {
   const filePath = path.join(root, relativePath);

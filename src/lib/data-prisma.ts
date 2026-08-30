@@ -57,6 +57,7 @@ const batchEvidenceSourceIds = new Set([
   "OFF-ARMORED-MEWTWO-2020",
   "OFF-MEGA-MEWTWO-2026",
   "OFF-MEW-TRADING-2023",
+  "OFF-HALLOWEEN-GALAR-SLOWKING-2021",
 ]);
 
 function formatSourceTarget(variant: {

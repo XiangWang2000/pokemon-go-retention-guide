@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 
 describe("review validation CI contract", () => {
   it("validates committed snapshots without a runtime database", () => {
-    const validator = readFileSync("scripts/validate-review-consistency.ts", "utf8");
+    const validator = readFileSync("scripts/review/validate-review-consistency.ts", "utf8");
 
     expect(validator).toContain('"site-data/dashboard.json"');
     expect(validator).toContain('"site-data/review.json"');

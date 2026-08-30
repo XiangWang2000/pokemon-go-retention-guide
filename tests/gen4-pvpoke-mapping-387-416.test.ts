@@ -2,10 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { forms387416 } from "@/data/batch-387-416";
 import { releasedShadowForms387416 } from "@/data/batch-387-416-gameplay";
-import {
-  allPvpokeMappings387416,
-  pvpokeSpeciesId387416,
-} from "@/data/batch-387-416-pvpoke";
+import { allPvpokeMappings387416, pvpokeSpeciesId387416 } from "@/data/batch-387-416-pvpoke";
 
 type RankingRow = { speciesId: string };
 

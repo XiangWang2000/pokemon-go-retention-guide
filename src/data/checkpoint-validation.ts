@@ -247,22 +247,34 @@ export function validateGen3FormCompleteness(
       continue;
     }
     if (actualForm.dexNumber !== undefined && actualForm.dexNumber !== form.dexNumber) {
-      errors.push(`${form.id} dexNumber mismatch: expected ${form.dexNumber}, got ${actualForm.dexNumber}.`);
+      errors.push(
+        `${form.id} dexNumber mismatch: expected ${form.dexNumber}, got ${actualForm.dexNumber}.`,
+      );
     }
     if (actualForm.formKey !== undefined && actualForm.formKey !== form.formKey) {
-      errors.push(`${form.id} formKey mismatch: expected ${form.formKey}, got ${actualForm.formKey}.`);
+      errors.push(
+        `${form.id} formKey mismatch: expected ${form.formKey}, got ${actualForm.formKey}.`,
+      );
     }
     if (actualForm.regionKey !== undefined && actualForm.regionKey !== form.regionKey) {
-      errors.push(`${form.id} region mismatch: expected ${form.regionKey}, got ${actualForm.regionKey}.`);
+      errors.push(
+        `${form.id} region mismatch: expected ${form.regionKey}, got ${actualForm.regionKey}.`,
+      );
     }
     if (actualForm.formNameEn !== form.formNameEn) {
-      errors.push(`${form.id} English form name mismatch: expected ${form.formNameEn}, got ${actualForm.formNameEn}.`);
+      errors.push(
+        `${form.id} English form name mismatch: expected ${form.formNameEn}, got ${actualForm.formNameEn}.`,
+      );
     }
     if (actualForm.formNameZhTw !== form.formNameZhTw) {
-      errors.push(`${form.id} Traditional Chinese form name mismatch: expected ${form.formNameZhTw}, got ${actualForm.formNameZhTw}.`);
+      errors.push(
+        `${form.id} Traditional Chinese form name mismatch: expected ${form.formNameZhTw}, got ${actualForm.formNameZhTw}.`,
+      );
     }
     if (!sameTypes(actualForm.types, form.types)) {
-      errors.push(`${form.id} types mismatch: expected ${JSON.stringify(form.types)}, got ${String(actualForm.types)}.`);
+      errors.push(
+        `${form.id} types mismatch: expected ${JSON.stringify(form.types)}, got ${String(actualForm.types)}.`,
+      );
     }
   }
   for (const form of actual) {
@@ -288,7 +300,9 @@ export function validateGen3FormCompleteness(
         seen.add(variant.variantKey);
         const expectedId = `${form.id}-${variant.variantKey.toLowerCase()}`;
         if (variant.id !== expectedId) {
-          errors.push(`${form.id} variant ${variant.variantKey} has unexpected id ${variant.id}; expected ${expectedId}.`);
+          errors.push(
+            `${form.id} variant ${variant.variantKey} has unexpected id ${variant.id}; expected ${expectedId}.`,
+          );
         }
       }
       const expectedKeys = [...form.variantKeys].sort();
@@ -300,7 +314,8 @@ export function validateGen3FormCompleteness(
       }
     }
     for (const formId of variantsByForm.keys()) {
-      if (!expectedById.has(formId)) errors.push(`Unexpected variant owner in Gen3 checkpoint: ${formId}.`);
+      if (!expectedById.has(formId))
+        errors.push(`Unexpected variant owner in Gen3 checkpoint: ${formId}.`);
     }
   }
 

@@ -10,7 +10,7 @@ import {
   parseBatchKey,
 } from "@/config/batch-registry";
 import { getGen4BatchDefinitions } from "@/data/batch-gen4";
-import { getBatchImportInvocation } from "../scripts/import-batch";
+import { getBatchImportInvocation } from "../scripts/data/import-batch";
 
 describe("review batch coverage", () => {
   it("keeps the published registry ordered, unique, and contiguous", () => {
@@ -107,10 +107,10 @@ describe("review batch coverage", () => {
     const pkg = JSON.parse(readFileSync("package.json", "utf8")) as {
       scripts: Record<string, string>;
     };
-    const runner = readFileSync("scripts/generate-all-reviews.ts", "utf8");
+    const runner = readFileSync("scripts/review/generate-all-reviews.ts", "utf8");
 
-    expect(pkg.scripts["review:generate"]).toBe("tsx scripts/generate-all-reviews.ts");
-    expect(pkg.scripts["data:import:batch"]).toBe("tsx scripts/import-batch.ts");
+    expect(pkg.scripts["review:generate"]).toBe("tsx scripts/review/generate-all-reviews.ts");
+    expect(pkg.scripts["data:import:batch"]).toBe("tsx scripts/data/import-batch.ts");
     expect(Object.keys(pkg.scripts).filter((name) => name.startsWith("data:import:"))).toEqual([
       "data:import:batch",
     ]);
@@ -119,9 +119,9 @@ describe("review batch coverage", () => {
         (entry) => [entry.review.generator, entry.review.passBatchKey],
       ),
     ).toEqual([
-      ["scripts/generate-review-johto.ts", true],
-      ["scripts/generate-review-johto.ts", true],
-      ["scripts/generate-review-johto.ts", true],
+      ["scripts/review/generate-review-johto.ts", true],
+      ["scripts/review/generate-review-johto.ts", true],
+      ["scripts/review/generate-review-johto.ts", true],
     ]);
     expect(runner).toContain("BATCH_REGISTRY");
     expect(runner).toContain("batchReviewArgs");

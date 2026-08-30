@@ -12,9 +12,7 @@ dist/
 .sites/
 .vite/
 prisma/dev.db
-prisma/dev.db-journal
 /dev.db
-/dev.db-journal
 *.log
 *.tsbuildinfo
 ~$*.xlsx
@@ -22,6 +20,7 @@ prisma/dev.db-journal
 # Local packaging and temporary output
 .codex-site-package/
 .tmp/
+.video_work/
 *.tar.gz
 *.zip
 
@@ -29,6 +28,8 @@ prisma/dev.db-journal
 *.sqlite
 *.sqlite3
 rebuild-*.db
+gen4-ci.db
+*.db-journal
 *.db-wal
 *.db-shm
 

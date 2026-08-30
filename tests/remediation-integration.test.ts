@@ -1,9 +1,9 @@
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { prisma } from "@/lib/prisma";
 import { RULES_VERSION } from "@/rules/rules";
 
-const hasCanonicalDb = existsSync("dev.db");
+const hasCanonicalDb = existsSync("rebuild-ci.db");
 
 describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
   it("8. 暗影推出狀態補證後不再留下會影響結論的開放 issue", async () => {
@@ -80,7 +80,7 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
     expect(change?.changeReasonZhTw).toContain("固定 commit");
   });
 
-  it("16. 類別缺資料不會覆蓋已可合理作出的人工結論", async () => {
+  it("16. 主要類別缺資料時維持不可逆操作前的安全暫存", async () => {
     const [evaluation, issue] = await Promise.all([
       prisma.retentionEvaluation.findFirst({
         where: { battleVariantId: "020-kanto-shadow" },
@@ -91,19 +91,20 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
           battleVariantId: "020-kanto-shadow",
           issueType: "MATERIAL_DATA_GAP",
           status: "OPEN",
+          batchKey: "001-030",
         },
       }),
     ]);
     expect(evaluation).toMatchObject({
-      finalDecision: "TRANSFER_CANDIDATE",
-      provenance: "MANUAL_CURATED",
-      confidence: "MEDIUM",
+      finalDecision: "HOLD_FOR_NOW",
+      provenance: "DATA_UNAVAILABLE",
+      confidence: "LOW",
     });
-    expect(issue?.affectsFinalDecision).toBe(false);
-    expect(issue?.provisionalDecision).toBe("TRANSFER_CANDIDATE");
+    expect(issue?.affectsFinalDecision).toBe(true);
+    expect(issue?.provisionalDecision).toBe("HOLD_FOR_NOW");
   });
 
-  it("9. affectsFinalDecision=false 不會覆蓋正式結論", async () => {
+  it("9. 次要 issue 不影響主要缺口所要求的安全暫存", async () => {
     const evaluation = await prisma.retentionEvaluation.findFirst({
       where: { battleVariantId: "020-kanto-shadow", rulesVersion: RULES_VERSION },
       orderBy: { generatedAt: "desc" },
@@ -112,7 +113,7 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
       where: { battleVariantId: "020-kanto-shadow", status: "OPEN" },
     });
     expect(issues.some((issue) => !issue.affectsFinalDecision)).toBe(true);
-    expect(evaluation?.finalDecision).toBe("TRANSFER_CANDIDATE");
+    expect(evaluation?.finalDecision).toBe("HOLD_FOR_NOW");
   });
 
   it("10. 所有資料庫 HOLD_FOR_NOW 都有具體中文理由", async () => {
@@ -124,6 +125,15 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
       expect(evaluation.reasonZhTw.length).toBeGreaterThan(25);
       expect(evaluation.reasonZhTw).not.toBe("資料不足");
     }
+  });
+
+  it("10b. remediation metrics 只列出每個版本的最新 HOLD_FOR_NOW", () => {
+    const metrics = JSON.parse(readFileSync("data/remediation/001-030-metrics.json", "utf8")) as {
+      holdForNowReasons: Array<{ battleVariantId: string }>;
+    };
+    const variantIds = metrics.holdForNowReasons.map((item) => item.battleVariantId);
+    expect(variantIds.length).toBeGreaterThan(0);
+    expect(new Set(variantIds).size).toBe(variantIds.length);
   });
 
   it("17. Purified 類別以 INHERITED 明確標示繼承 Normal", async () => {

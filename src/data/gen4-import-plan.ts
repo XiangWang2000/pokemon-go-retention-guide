@@ -9,10 +9,7 @@ import type {
 export type { Gen4VariantKey as Gen4PlanVariantKey } from "./batch-gen4-types";
 export type Gen4PlanDecision = "KEEP" | "CONDITIONAL_KEEP" | "TRANSFER_CANDIDATE";
 export type Gen4PlanDisposition =
-  | "CLEAR_USE"
-  | "LIMITED_USE"
-  | "NO_SIGNIFICANT_USE"
-  | "NOT_APPLICABLE_OR_UNRELEASED";
+  "CLEAR_USE" | "LIMITED_USE" | "NO_SIGNIFICANT_USE" | "NOT_APPLICABLE_OR_UNRELEASED";
 export type Gen4PlanLeague = "GREAT" | "ULTRA" | "MASTER";
 
 export type Gen4PvpRankingRow = {
@@ -29,9 +26,7 @@ export type Gen4PlanRank = {
   moves: string[];
 };
 
-export type Gen4RankingSnapshots = Readonly<
-  Record<Gen4PlanLeague, readonly Gen4PvpRankingRow[]>
->;
+export type Gen4RankingSnapshots = Readonly<Record<Gen4PlanLeague, readonly Gen4PvpRankingRow[]>>;
 
 export type Gen4ImportPlanRow = {
   id: string;
@@ -110,10 +105,7 @@ function initialDecision(
   return "TRANSFER_CANDIDATE";
 }
 
-function initialDisposition(
-  decision: Gen4PlanDecision,
-  released: boolean,
-): Gen4PlanDisposition {
+function initialDisposition(decision: Gen4PlanDecision, released: boolean): Gen4PlanDisposition {
   if (!released) return "NOT_APPLICABLE_OR_UNRELEASED";
   if (decision === "KEEP") return "CLEAR_USE";
   if (decision === "CONDITIONAL_KEEP") return "LIMITED_USE";

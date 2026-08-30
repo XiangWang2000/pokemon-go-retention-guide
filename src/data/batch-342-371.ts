@@ -2,1000 +2,729 @@ import type { Gen3Form, Gen3Species, Gen3SpecialVariant, PveUseLevel } from "./b
 
 export const species342371: Gen3Species[] = [
   {
-    "dexNumber": 342,
-    "nameEn": "crawdaunt",
-    "nameZhTw": "鐵螯龍蝦",
-    "types": [
-      "WATER",
-      "DARK"
-    ],
-    "familyKey": "HOENN_FAMILY_341"
+    dexNumber: 342,
+    nameEn: "crawdaunt",
+    nameZhTw: "鐵螯龍蝦",
+    types: ["WATER", "DARK"],
+    familyKey: "HOENN_FAMILY_341",
   },
   {
-    "dexNumber": 343,
-    "nameEn": "baltoy",
-    "nameZhTw": "天秤偶",
-    "types": [
-      "GROUND",
-      "PSYCHIC"
-    ],
-    "familyKey": "HOENN_FAMILY_343"
+    dexNumber: 343,
+    nameEn: "baltoy",
+    nameZhTw: "天秤偶",
+    types: ["GROUND", "PSYCHIC"],
+    familyKey: "HOENN_FAMILY_343",
   },
   {
-    "dexNumber": 344,
-    "nameEn": "claydol",
-    "nameZhTw": "念力土偶",
-    "types": [
-      "GROUND",
-      "PSYCHIC"
-    ],
-    "familyKey": "HOENN_FAMILY_343"
+    dexNumber: 344,
+    nameEn: "claydol",
+    nameZhTw: "念力土偶",
+    types: ["GROUND", "PSYCHIC"],
+    familyKey: "HOENN_FAMILY_343",
   },
   {
-    "dexNumber": 345,
-    "nameEn": "lileep",
-    "nameZhTw": "觸手百合",
-    "types": [
-      "ROCK",
-      "GRASS"
-    ],
-    "familyKey": "HOENN_FAMILY_345"
+    dexNumber: 345,
+    nameEn: "lileep",
+    nameZhTw: "觸手百合",
+    types: ["ROCK", "GRASS"],
+    familyKey: "HOENN_FAMILY_345",
   },
   {
-    "dexNumber": 346,
-    "nameEn": "cradily",
-    "nameZhTw": "搖籃百合",
-    "types": [
-      "ROCK",
-      "GRASS"
-    ],
-    "familyKey": "HOENN_FAMILY_345"
+    dexNumber: 346,
+    nameEn: "cradily",
+    nameZhTw: "搖籃百合",
+    types: ["ROCK", "GRASS"],
+    familyKey: "HOENN_FAMILY_345",
   },
   {
-    "dexNumber": 347,
-    "nameEn": "anorith",
-    "nameZhTw": "太古羽蟲",
-    "types": [
-      "ROCK",
-      "BUG"
-    ],
-    "familyKey": "HOENN_FAMILY_347"
+    dexNumber: 347,
+    nameEn: "anorith",
+    nameZhTw: "太古羽蟲",
+    types: ["ROCK", "BUG"],
+    familyKey: "HOENN_FAMILY_347",
   },
   {
-    "dexNumber": 348,
-    "nameEn": "armaldo",
-    "nameZhTw": "太古盔甲",
-    "types": [
-      "ROCK",
-      "BUG"
-    ],
-    "familyKey": "HOENN_FAMILY_347"
+    dexNumber: 348,
+    nameEn: "armaldo",
+    nameZhTw: "太古盔甲",
+    types: ["ROCK", "BUG"],
+    familyKey: "HOENN_FAMILY_347",
   },
   {
-    "dexNumber": 349,
-    "nameEn": "feebas",
-    "nameZhTw": "醜醜魚",
-    "types": [
-      "WATER"
-    ],
-    "familyKey": "HOENN_FAMILY_349"
+    dexNumber: 349,
+    nameEn: "feebas",
+    nameZhTw: "醜醜魚",
+    types: ["WATER"],
+    familyKey: "HOENN_FAMILY_349",
   },
   {
-    "dexNumber": 350,
-    "nameEn": "milotic",
-    "nameZhTw": "美納斯",
-    "types": [
-      "WATER"
-    ],
-    "familyKey": "HOENN_FAMILY_349"
+    dexNumber: 350,
+    nameEn: "milotic",
+    nameZhTw: "美納斯",
+    types: ["WATER"],
+    familyKey: "HOENN_FAMILY_349",
   },
   {
-    "dexNumber": 351,
-    "nameEn": "castform",
-    "nameZhTw": "飄浮泡泡",
-    "types": [
-      "NORMAL"
-    ],
-    "familyKey": "HOENN_FAMILY_351"
+    dexNumber: 351,
+    nameEn: "castform",
+    nameZhTw: "飄浮泡泡",
+    types: ["NORMAL"],
+    familyKey: "HOENN_FAMILY_351",
   },
   {
-    "dexNumber": 352,
-    "nameEn": "kecleon",
-    "nameZhTw": "變隱龍",
-    "types": [
-      "NORMAL"
-    ],
-    "familyKey": "HOENN_FAMILY_352"
+    dexNumber: 352,
+    nameEn: "kecleon",
+    nameZhTw: "變隱龍",
+    types: ["NORMAL"],
+    familyKey: "HOENN_FAMILY_352",
   },
   {
-    "dexNumber": 353,
-    "nameEn": "shuppet",
-    "nameZhTw": "怨影娃娃",
-    "types": [
-      "GHOST"
-    ],
-    "familyKey": "HOENN_FAMILY_353"
+    dexNumber: 353,
+    nameEn: "shuppet",
+    nameZhTw: "怨影娃娃",
+    types: ["GHOST"],
+    familyKey: "HOENN_FAMILY_353",
   },
   {
-    "dexNumber": 354,
-    "nameEn": "banette",
-    "nameZhTw": "詛咒娃娃",
-    "types": [
-      "GHOST"
-    ],
-    "familyKey": "HOENN_FAMILY_353"
+    dexNumber: 354,
+    nameEn: "banette",
+    nameZhTw: "詛咒娃娃",
+    types: ["GHOST"],
+    familyKey: "HOENN_FAMILY_353",
   },
   {
-    "dexNumber": 355,
-    "nameEn": "duskull",
-    "nameZhTw": "夜巡靈",
-    "types": [
-      "GHOST"
-    ],
-    "familyKey": "HOENN_FAMILY_355"
+    dexNumber: 355,
+    nameEn: "duskull",
+    nameZhTw: "夜巡靈",
+    types: ["GHOST"],
+    familyKey: "HOENN_FAMILY_355",
   },
   {
-    "dexNumber": 356,
-    "nameEn": "dusclops",
-    "nameZhTw": "彷徨夜靈",
-    "types": [
-      "GHOST"
-    ],
-    "familyKey": "HOENN_FAMILY_355"
+    dexNumber: 356,
+    nameEn: "dusclops",
+    nameZhTw: "彷徨夜靈",
+    types: ["GHOST"],
+    familyKey: "HOENN_FAMILY_355",
   },
   {
-    "dexNumber": 357,
-    "nameEn": "tropius",
-    "nameZhTw": "熱帶龍",
-    "types": [
-      "GRASS",
-      "FLYING"
-    ],
-    "familyKey": "HOENN_FAMILY_357"
+    dexNumber: 357,
+    nameEn: "tropius",
+    nameZhTw: "熱帶龍",
+    types: ["GRASS", "FLYING"],
+    familyKey: "HOENN_FAMILY_357",
   },
   {
-    "dexNumber": 358,
-    "nameEn": "chimecho",
-    "nameZhTw": "風鈴鈴",
-    "types": [
-      "PSYCHIC"
-    ],
-    "familyKey": "HOENN_FAMILY_358"
+    dexNumber: 358,
+    nameEn: "chimecho",
+    nameZhTw: "風鈴鈴",
+    types: ["PSYCHIC"],
+    familyKey: "HOENN_FAMILY_358",
   },
   {
-    "dexNumber": 359,
-    "nameEn": "absol",
-    "nameZhTw": "阿勃梭魯",
-    "types": [
-      "DARK"
-    ],
-    "familyKey": "HOENN_FAMILY_359"
+    dexNumber: 359,
+    nameEn: "absol",
+    nameZhTw: "阿勃梭魯",
+    types: ["DARK"],
+    familyKey: "HOENN_FAMILY_359",
   },
   {
-    "dexNumber": 360,
-    "nameEn": "wynaut",
-    "nameZhTw": "小果然",
-    "types": [
-      "PSYCHIC"
-    ],
-    "familyKey": "JOHTO_FAMILY_202"
+    dexNumber: 360,
+    nameEn: "wynaut",
+    nameZhTw: "小果然",
+    types: ["PSYCHIC"],
+    familyKey: "JOHTO_FAMILY_202",
   },
   {
-    "dexNumber": 361,
-    "nameEn": "snorunt",
-    "nameZhTw": "雪童子",
-    "types": [
-      "ICE"
-    ],
-    "familyKey": "HOENN_FAMILY_361"
+    dexNumber: 361,
+    nameEn: "snorunt",
+    nameZhTw: "雪童子",
+    types: ["ICE"],
+    familyKey: "HOENN_FAMILY_361",
   },
   {
-    "dexNumber": 362,
-    "nameEn": "glalie",
-    "nameZhTw": "冰鬼護",
-    "types": [
-      "ICE"
-    ],
-    "familyKey": "HOENN_FAMILY_361"
+    dexNumber: 362,
+    nameEn: "glalie",
+    nameZhTw: "冰鬼護",
+    types: ["ICE"],
+    familyKey: "HOENN_FAMILY_361",
   },
   {
-    "dexNumber": 363,
-    "nameEn": "spheal",
-    "nameZhTw": "海豹球",
-    "types": [
-      "ICE",
-      "WATER"
-    ],
-    "familyKey": "HOENN_FAMILY_363"
+    dexNumber: 363,
+    nameEn: "spheal",
+    nameZhTw: "海豹球",
+    types: ["ICE", "WATER"],
+    familyKey: "HOENN_FAMILY_363",
   },
   {
-    "dexNumber": 364,
-    "nameEn": "sealeo",
-    "nameZhTw": "海魔獅",
-    "types": [
-      "ICE",
-      "WATER"
-    ],
-    "familyKey": "HOENN_FAMILY_363"
+    dexNumber: 364,
+    nameEn: "sealeo",
+    nameZhTw: "海魔獅",
+    types: ["ICE", "WATER"],
+    familyKey: "HOENN_FAMILY_363",
   },
   {
-    "dexNumber": 365,
-    "nameEn": "walrein",
-    "nameZhTw": "帝牙海獅",
-    "types": [
-      "ICE",
-      "WATER"
-    ],
-    "familyKey": "HOENN_FAMILY_363"
+    dexNumber: 365,
+    nameEn: "walrein",
+    nameZhTw: "帝牙海獅",
+    types: ["ICE", "WATER"],
+    familyKey: "HOENN_FAMILY_363",
   },
   {
-    "dexNumber": 366,
-    "nameEn": "clamperl",
-    "nameZhTw": "珍珠貝",
-    "types": [
-      "WATER"
-    ],
-    "familyKey": "HOENN_FAMILY_366"
+    dexNumber: 366,
+    nameEn: "clamperl",
+    nameZhTw: "珍珠貝",
+    types: ["WATER"],
+    familyKey: "HOENN_FAMILY_366",
   },
   {
-    "dexNumber": 367,
-    "nameEn": "huntail",
-    "nameZhTw": "獵斑魚",
-    "types": [
-      "WATER"
-    ],
-    "familyKey": "HOENN_FAMILY_366"
+    dexNumber: 367,
+    nameEn: "huntail",
+    nameZhTw: "獵斑魚",
+    types: ["WATER"],
+    familyKey: "HOENN_FAMILY_366",
   },
   {
-    "dexNumber": 368,
-    "nameEn": "gorebyss",
-    "nameZhTw": "櫻花魚",
-    "types": [
-      "WATER"
-    ],
-    "familyKey": "HOENN_FAMILY_366"
+    dexNumber: 368,
+    nameEn: "gorebyss",
+    nameZhTw: "櫻花魚",
+    types: ["WATER"],
+    familyKey: "HOENN_FAMILY_366",
   },
   {
-    "dexNumber": 369,
-    "nameEn": "relicanth",
-    "nameZhTw": "古空棘魚",
-    "types": [
-      "WATER",
-      "ROCK"
-    ],
-    "familyKey": "HOENN_FAMILY_369"
+    dexNumber: 369,
+    nameEn: "relicanth",
+    nameZhTw: "古空棘魚",
+    types: ["WATER", "ROCK"],
+    familyKey: "HOENN_FAMILY_369",
   },
   {
-    "dexNumber": 370,
-    "nameEn": "luvdisc",
-    "nameZhTw": "愛心魚",
-    "types": [
-      "WATER"
-    ],
-    "familyKey": "HOENN_FAMILY_370"
+    dexNumber: 370,
+    nameEn: "luvdisc",
+    nameZhTw: "愛心魚",
+    types: ["WATER"],
+    familyKey: "HOENN_FAMILY_370",
   },
   {
-    "dexNumber": 371,
-    "nameEn": "bagon",
-    "nameZhTw": "寶貝龍",
-    "types": [
-      "DRAGON"
-    ],
-    "familyKey": "HOENN_FAMILY_371"
-  }
+    dexNumber: 371,
+    nameEn: "bagon",
+    nameZhTw: "寶貝龍",
+    types: ["DRAGON"],
+    familyKey: "HOENN_FAMILY_371",
+  },
 ];
 
 export const forms342371: Gen3Form[] = [
   {
-    "id": "342-hoenn",
-    "dexNumber": 342,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "WATER",
-      "DARK"
-    ],
-    "aliases": [
-      "crawdaunt",
-      "鐵螯龍蝦"
-    ],
-    "evolvesFromFormId": "341-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "342-hoenn",
+    dexNumber: 342,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["WATER", "DARK"],
+    aliases: ["crawdaunt", "鐵螯龍蝦"],
+    evolvesFromFormId: "341-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "343-hoenn",
-    "dexNumber": 343,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "GROUND",
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "baltoy",
-      "天秤偶"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "343-hoenn",
+    dexNumber: 343,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["GROUND", "PSYCHIC"],
+    aliases: ["baltoy", "天秤偶"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "344-hoenn",
-    "dexNumber": 344,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "GROUND",
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "claydol",
-      "念力土偶"
-    ],
-    "evolvesFromFormId": "343-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "344-hoenn",
+    dexNumber: 344,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["GROUND", "PSYCHIC"],
+    aliases: ["claydol", "念力土偶"],
+    evolvesFromFormId: "343-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "345-hoenn",
-    "dexNumber": 345,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ROCK",
-      "GRASS"
-    ],
-    "aliases": [
-      "lileep",
-      "觸手百合"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "345-hoenn",
+    dexNumber: 345,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ROCK", "GRASS"],
+    aliases: ["lileep", "觸手百合"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "346-hoenn",
-    "dexNumber": 346,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ROCK",
-      "GRASS"
-    ],
-    "aliases": [
-      "cradily",
-      "搖籃百合"
-    ],
-    "evolvesFromFormId": "345-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "346-hoenn",
+    dexNumber: 346,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ROCK", "GRASS"],
+    aliases: ["cradily", "搖籃百合"],
+    evolvesFromFormId: "345-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "347-hoenn",
-    "dexNumber": 347,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ROCK",
-      "BUG"
-    ],
-    "aliases": [
-      "anorith",
-      "太古羽蟲"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "347-hoenn",
+    dexNumber: 347,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ROCK", "BUG"],
+    aliases: ["anorith", "太古羽蟲"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "348-hoenn",
-    "dexNumber": 348,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ROCK",
-      "BUG"
-    ],
-    "aliases": [
-      "armaldo",
-      "太古盔甲"
-    ],
-    "evolvesFromFormId": "347-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "348-hoenn",
+    dexNumber: 348,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ROCK", "BUG"],
+    aliases: ["armaldo", "太古盔甲"],
+    evolvesFromFormId: "347-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "349-hoenn",
-    "dexNumber": 349,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "WATER"
-    ],
-    "aliases": [
-      "feebas",
-      "醜醜魚"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "349-hoenn",
+    dexNumber: 349,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["WATER"],
+    aliases: ["feebas", "醜醜魚"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "350-hoenn",
-    "dexNumber": 350,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "WATER"
-    ],
-    "aliases": [
-      "milotic",
-      "美納斯"
-    ],
-    "evolvesFromFormId": "349-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "350-hoenn",
+    dexNumber: 350,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["WATER"],
+    aliases: ["milotic", "美納斯"],
+    evolvesFromFormId: "349-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "351-normal",
-    "dexNumber": 351,
-    "formKey": "NORMAL",
-    "formNameEn": "Normal Forme",
-    "formNameZhTw": "一般型態",
-    "regionKey": "HOENN",
-    "types": [
-      "NORMAL"
-    ],
-    "aliases": [
-      "castform",
-      "飄浮泡泡",
-      "normal"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "飄浮泡泡的一般、晴天、雨水與雪雲型態分開評估；型態差異不代表進化關係。",
-    "isStub": false,
-    "includeVariants": true
+    id: "351-normal",
+    dexNumber: 351,
+    formKey: "NORMAL",
+    formNameEn: "Normal Forme",
+    formNameZhTw: "一般型態",
+    regionKey: "HOENN",
+    types: ["NORMAL"],
+    aliases: ["castform", "飄浮泡泡", "normal"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "飄浮泡泡的一般、晴天、雨水與雪雲型態分開評估；型態差異不代表進化關係。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "351-rainy",
-    "dexNumber": 351,
-    "formKey": "RAINY",
-    "formNameEn": "Rainy Forme",
-    "formNameZhTw": "雨水型態",
-    "regionKey": "HOENN",
-    "types": [
-      "WATER"
-    ],
-    "aliases": [
-      "castform_rainy",
-      "飄浮泡泡雨水型態",
-      "rainy"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "飄浮泡泡的一般、晴天、雨水與雪雲型態分開評估；型態差異不代表進化關係。",
-    "isStub": false,
-    "includeVariants": true
+    id: "351-rainy",
+    dexNumber: 351,
+    formKey: "RAINY",
+    formNameEn: "Rainy Forme",
+    formNameZhTw: "雨水型態",
+    regionKey: "HOENN",
+    types: ["WATER"],
+    aliases: ["castform_rainy", "飄浮泡泡雨水型態", "rainy"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "飄浮泡泡的一般、晴天、雨水與雪雲型態分開評估；型態差異不代表進化關係。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "351-snowy",
-    "dexNumber": 351,
-    "formKey": "SNOWY",
-    "formNameEn": "Snowy Forme",
-    "formNameZhTw": "雪雲型態",
-    "regionKey": "HOENN",
-    "types": [
-      "ICE"
-    ],
-    "aliases": [
-      "castform_snowy",
-      "飄浮泡泡雪雲型態",
-      "snowy"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "飄浮泡泡的一般、晴天、雨水與雪雲型態分開評估；型態差異不代表進化關係。",
-    "isStub": false,
-    "includeVariants": true
+    id: "351-snowy",
+    dexNumber: 351,
+    formKey: "SNOWY",
+    formNameEn: "Snowy Forme",
+    formNameZhTw: "雪雲型態",
+    regionKey: "HOENN",
+    types: ["ICE"],
+    aliases: ["castform_snowy", "飄浮泡泡雪雲型態", "snowy"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "飄浮泡泡的一般、晴天、雨水與雪雲型態分開評估；型態差異不代表進化關係。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "351-sunny",
-    "dexNumber": 351,
-    "formKey": "SUNNY",
-    "formNameEn": "Sunny Forme",
-    "formNameZhTw": "晴天型態",
-    "regionKey": "HOENN",
-    "types": [
-      "FIRE"
-    ],
-    "aliases": [
-      "castform_sunny",
-      "飄浮泡泡晴天型態",
-      "sunny"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "飄浮泡泡的一般、晴天、雨水與雪雲型態分開評估；型態差異不代表進化關係。",
-    "isStub": false,
-    "includeVariants": true
+    id: "351-sunny",
+    dexNumber: 351,
+    formKey: "SUNNY",
+    formNameEn: "Sunny Forme",
+    formNameZhTw: "晴天型態",
+    regionKey: "HOENN",
+    types: ["FIRE"],
+    aliases: ["castform_sunny", "飄浮泡泡晴天型態", "sunny"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "飄浮泡泡的一般、晴天、雨水與雪雲型態分開評估；型態差異不代表進化關係。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "352-hoenn",
-    "dexNumber": 352,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "NORMAL"
-    ],
-    "aliases": [
-      "kecleon",
-      "變隱龍"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "352-hoenn",
+    dexNumber: 352,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["NORMAL"],
+    aliases: ["kecleon", "變隱龍"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "353-hoenn",
-    "dexNumber": 353,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "GHOST"
-    ],
-    "aliases": [
-      "shuppet",
-      "怨影娃娃"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "353-hoenn",
+    dexNumber: 353,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["GHOST"],
+    aliases: ["shuppet", "怨影娃娃"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "354-hoenn",
-    "dexNumber": 354,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "GHOST"
-    ],
-    "aliases": [
-      "banette",
-      "詛咒娃娃"
-    ],
-    "evolvesFromFormId": "353-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "354-hoenn",
+    dexNumber: 354,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["GHOST"],
+    aliases: ["banette", "詛咒娃娃"],
+    evolvesFromFormId: "353-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "355-hoenn",
-    "dexNumber": 355,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "GHOST"
-    ],
-    "aliases": [
-      "duskull",
-      "夜巡靈"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "355-hoenn",
+    dexNumber: 355,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["GHOST"],
+    aliases: ["duskull", "夜巡靈"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "356-hoenn",
-    "dexNumber": 356,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "GHOST"
-    ],
-    "aliases": [
-      "dusclops",
-      "彷徨夜靈"
-    ],
-    "evolvesFromFormId": "355-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "356-hoenn",
+    dexNumber: 356,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["GHOST"],
+    aliases: ["dusclops", "彷徨夜靈"],
+    evolvesFromFormId: "355-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "357-hoenn",
-    "dexNumber": 357,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "GRASS",
-      "FLYING"
-    ],
-    "aliases": [
-      "tropius",
-      "熱帶龍"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "357-hoenn",
+    dexNumber: 357,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["GRASS", "FLYING"],
+    aliases: ["tropius", "熱帶龍"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "358-hoenn",
-    "dexNumber": 358,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "chimecho",
-      "風鈴鈴"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "358-hoenn",
+    dexNumber: 358,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["PSYCHIC"],
+    aliases: ["chimecho", "風鈴鈴"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "359-hoenn",
-    "dexNumber": 359,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "DARK"
-    ],
-    "aliases": [
-      "absol",
-      "阿勃梭魯"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "359-hoenn",
+    dexNumber: 359,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["DARK"],
+    aliases: ["absol", "阿勃梭魯"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "360-hoenn",
-    "dexNumber": 360,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "wynaut",
-      "小果然"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "小果然是果然翁的寶寶前階；以小果然→果然翁正式進化邊合併城都家族。",
-    "isStub": false,
-    "includeVariants": true
+    id: "360-hoenn",
+    dexNumber: 360,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["PSYCHIC"],
+    aliases: ["wynaut", "小果然"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw: "小果然是果然翁的寶寶前階；以小果然→果然翁正式進化邊合併城都家族。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "361-hoenn",
-    "dexNumber": 361,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ICE"
-    ],
-    "aliases": [
-      "snorunt",
-      "雪童子"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "雪童子可進化為冰鬼護，並保留後續分支進化雪妖女的 stub邊界。",
-    "isStub": false,
-    "includeVariants": true
+    id: "361-hoenn",
+    dexNumber: 361,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ICE"],
+    aliases: ["snorunt", "雪童子"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw: "雪童子可進化為冰鬼護，並保留後續分支進化雪妖女的 stub邊界。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "362-hoenn",
-    "dexNumber": 362,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ICE"
-    ],
-    "aliases": [
-      "glalie",
-      "冰鬼護"
-    ],
-    "evolvesFromFormId": "361-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "362-hoenn",
+    dexNumber: 362,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ICE"],
+    aliases: ["glalie", "冰鬼護"],
+    evolvesFromFormId: "361-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "363-hoenn",
-    "dexNumber": 363,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ICE",
-      "WATER"
-    ],
-    "aliases": [
-      "spheal",
-      "海豹球"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "363-hoenn",
+    dexNumber: 363,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ICE", "WATER"],
+    aliases: ["spheal", "海豹球"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "364-hoenn",
-    "dexNumber": 364,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ICE",
-      "WATER"
-    ],
-    "aliases": [
-      "sealeo",
-      "海魔獅"
-    ],
-    "evolvesFromFormId": "363-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "364-hoenn",
+    dexNumber: 364,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ICE", "WATER"],
+    aliases: ["sealeo", "海魔獅"],
+    evolvesFromFormId: "363-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "365-hoenn",
-    "dexNumber": 365,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ICE",
-      "WATER"
-    ],
-    "aliases": [
-      "walrein",
-      "帝牙海獅"
-    ],
-    "evolvesFromFormId": "364-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "365-hoenn",
+    dexNumber: 365,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ICE", "WATER"],
+    aliases: ["walrein", "帝牙海獅"],
+    evolvesFromFormId: "364-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "366-hoenn",
-    "dexNumber": 366,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "WATER"
-    ],
-    "aliases": [
-      "clamperl",
-      "珍珠貝"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "珍珠貝有獵斑魚與櫻花魚兩條分支進化；兩條路徑都正式結構化。",
-    "isStub": false,
-    "includeVariants": true
+    id: "366-hoenn",
+    dexNumber: 366,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["WATER"],
+    aliases: ["clamperl", "珍珠貝"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw: "珍珠貝有獵斑魚與櫻花魚兩條分支進化；兩條路徑都正式結構化。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "367-hoenn",
-    "dexNumber": 367,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "WATER"
-    ],
-    "aliases": [
-      "huntail",
-      "獵斑魚"
-    ],
-    "evolvesFromFormId": "366-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "367-hoenn",
+    dexNumber: 367,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["WATER"],
+    aliases: ["huntail", "獵斑魚"],
+    evolvesFromFormId: "366-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "368-hoenn",
-    "dexNumber": 368,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "WATER"
-    ],
-    "aliases": [
-      "gorebyss",
-      "櫻花魚"
-    ],
-    "evolvesFromFormId": "366-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "368-hoenn",
+    dexNumber: 368,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["WATER"],
+    aliases: ["gorebyss", "櫻花魚"],
+    evolvesFromFormId: "366-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "369-hoenn",
-    "dexNumber": 369,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "WATER",
-      "ROCK"
-    ],
-    "aliases": [
-      "relicanth",
-      "古空棘魚"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "369-hoenn",
+    dexNumber: 369,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["WATER", "ROCK"],
+    aliases: ["relicanth", "古空棘魚"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "370-hoenn",
-    "dexNumber": 370,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "WATER"
-    ],
-    "aliases": [
-      "luvdisc",
-      "愛心魚"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "370-hoenn",
+    dexNumber: 370,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["WATER"],
+    aliases: ["luvdisc", "愛心魚"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "371-hoenn",
-    "dexNumber": 371,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "DRAGON"
-    ],
-    "aliases": [
-      "bagon",
-      "寶貝龍"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
-  }
+    id: "371-hoenn",
+    dexNumber: 371,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["DRAGON"],
+    aliases: ["bagon", "寶貝龍"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
+  },
 ];
 
 export const evolutionPairs342371: readonly [string, string][] = [
-  [
-    "341-hoenn",
-    "342-hoenn"
-  ],
-  [
-    "343-hoenn",
-    "344-hoenn"
-  ],
-  [
-    "345-hoenn",
-    "346-hoenn"
-  ],
-  [
-    "347-hoenn",
-    "348-hoenn"
-  ],
-  [
-    "349-hoenn",
-    "350-hoenn"
-  ],
-  [
-    "353-hoenn",
-    "354-hoenn"
-  ],
-  [
-    "355-hoenn",
-    "356-hoenn"
-  ],
-  [
-    "356-hoenn",
-    "477-sinnoh"
-  ],
-  [
-    "360-hoenn",
-    "202-johto"
-  ],
-  [
-    "361-hoenn",
-    "362-hoenn"
-  ],
-  [
-    "361-hoenn",
-    "478-sinnoh"
-  ],
-  [
-    "363-hoenn",
-    "364-hoenn"
-  ],
-  [
-    "364-hoenn",
-    "365-hoenn"
-  ],
-  [
-    "366-hoenn",
-    "367-hoenn"
-  ],
-  [
-    "366-hoenn",
-    "368-hoenn"
-  ],
-  [
-    "371-hoenn",
-    "372-hoenn"
-  ]
+  ["341-hoenn", "342-hoenn"],
+  ["343-hoenn", "344-hoenn"],
+  ["345-hoenn", "346-hoenn"],
+  ["347-hoenn", "348-hoenn"],
+  ["349-hoenn", "350-hoenn"],
+  ["353-hoenn", "354-hoenn"],
+  ["355-hoenn", "356-hoenn"],
+  ["356-hoenn", "477-sinnoh"],
+  ["360-hoenn", "202-johto"],
+  ["361-hoenn", "362-hoenn"],
+  ["361-hoenn", "478-sinnoh"],
+  ["363-hoenn", "364-hoenn"],
+  ["364-hoenn", "365-hoenn"],
+  ["366-hoenn", "367-hoenn"],
+  ["366-hoenn", "368-hoenn"],
+  ["371-hoenn", "372-hoenn"],
 ];
 
 export const releasedShadowForms342371 = new Set<string>([
@@ -1018,38 +747,34 @@ export const releasedShadowForms342371 = new Set<string>([
   "363-hoenn",
   "364-hoenn",
   "365-hoenn",
-  "371-hoenn"
+  "371-hoenn",
 ]);
-export const releasedMegaForms342371 = new Set<string>([
-  "354-hoenn",
-  "359-hoenn",
-  "362-hoenn"
-]);
+export const releasedMegaForms342371 = new Set<string>(["354-hoenn", "359-hoenn", "362-hoenn"]);
 export const releasedDynamaxForms342371 = new Set<string>();
 export const releasedGigantamaxForms342371 = new Set<string>();
 
 export const specialVariants342371: Gen3SpecialVariant[] = [
   {
-    "id": "354-hoenn-mega",
-    "formId": "354-hoenn",
-    "variantKey": "MEGA",
-    "released": true,
-    "nameZhTw": "Mega 詛咒娃娃"
+    id: "354-hoenn-mega",
+    formId: "354-hoenn",
+    variantKey: "MEGA",
+    released: true,
+    nameZhTw: "Mega 詛咒娃娃",
   },
   {
-    "id": "359-hoenn-mega",
-    "formId": "359-hoenn",
-    "variantKey": "MEGA",
-    "released": true,
-    "nameZhTw": "Mega 阿勃梭魯"
+    id: "359-hoenn-mega",
+    formId: "359-hoenn",
+    variantKey: "MEGA",
+    released: true,
+    nameZhTw: "Mega 阿勃梭魯",
   },
   {
-    "id": "362-hoenn-mega",
-    "formId": "362-hoenn",
-    "variantKey": "MEGA",
-    "released": true,
-    "nameZhTw": "Mega 冰鬼護"
-  }
+    id: "362-hoenn-mega",
+    formId: "362-hoenn",
+    variantKey: "MEGA",
+    released: true,
+    nameZhTw: "Mega 冰鬼護",
+  },
 ];
 
 export const pveClassifications342371: Record<string, PveUseLevel> = {
@@ -1085,7 +810,7 @@ export const pveClassifications342371: Record<string, PveUseLevel> = {
   "368-hoenn": "NO_SIGNIFICANT_USE",
   "369-hoenn": "NO_SIGNIFICANT_USE",
   "370-hoenn": "NO_SIGNIFICANT_USE",
-  "371-hoenn": "NO_SIGNIFICANT_USE"
+  "371-hoenn": "NO_SIGNIFICANT_USE",
 };
 export const pveUseLevels342371: Record<string, PveUseLevel> = {
   "342-hoenn": "SPECIAL_USE",
@@ -1093,142 +818,142 @@ export const pveUseLevels342371: Record<string, PveUseLevel> = {
   "354-hoenn": "SPECIAL_USE",
   "359-hoenn": "SPECIAL_USE",
   "362-hoenn": "SPECIAL_USE",
-  "365-hoenn": "USABLE_OR_BUDGET"
+  "365-hoenn": "USABLE_OR_BUDGET",
 };
 
 const pvpokeIds342371: Record<string, { normal: string; shadow: string }> = {
   "342-hoenn": {
-    "normal": "crawdaunt",
-    "shadow": "crawdaunt_shadow"
+    normal: "crawdaunt",
+    shadow: "crawdaunt_shadow",
   },
   "343-hoenn": {
-    "normal": "baltoy",
-    "shadow": "baltoy_shadow"
+    normal: "baltoy",
+    shadow: "baltoy_shadow",
   },
   "344-hoenn": {
-    "normal": "claydol",
-    "shadow": "claydol_shadow"
+    normal: "claydol",
+    shadow: "claydol_shadow",
   },
   "345-hoenn": {
-    "normal": "lileep",
-    "shadow": "lileep_shadow"
+    normal: "lileep",
+    shadow: "lileep_shadow",
   },
   "346-hoenn": {
-    "normal": "cradily",
-    "shadow": "cradily_shadow"
+    normal: "cradily",
+    shadow: "cradily_shadow",
   },
   "347-hoenn": {
-    "normal": "anorith",
-    "shadow": "anorith_shadow"
+    normal: "anorith",
+    shadow: "anorith_shadow",
   },
   "348-hoenn": {
-    "normal": "armaldo",
-    "shadow": "armaldo_shadow"
+    normal: "armaldo",
+    shadow: "armaldo_shadow",
   },
   "349-hoenn": {
-    "normal": "feebas",
-    "shadow": "feebas_shadow"
+    normal: "feebas",
+    shadow: "feebas_shadow",
   },
   "350-hoenn": {
-    "normal": "milotic",
-    "shadow": "milotic_shadow"
+    normal: "milotic",
+    shadow: "milotic_shadow",
   },
   "351-normal": {
-    "normal": "castform",
-    "shadow": "castform_shadow"
+    normal: "castform",
+    shadow: "castform_shadow",
   },
   "351-rainy": {
-    "normal": "castform_rainy",
-    "shadow": "castform_rainy_shadow"
+    normal: "castform_rainy",
+    shadow: "castform_rainy_shadow",
   },
   "351-snowy": {
-    "normal": "castform_snowy",
-    "shadow": "castform_snowy_shadow"
+    normal: "castform_snowy",
+    shadow: "castform_snowy_shadow",
   },
   "351-sunny": {
-    "normal": "castform_sunny",
-    "shadow": "castform_sunny_shadow"
+    normal: "castform_sunny",
+    shadow: "castform_sunny_shadow",
   },
   "352-hoenn": {
-    "normal": "kecleon",
-    "shadow": "kecleon_shadow"
+    normal: "kecleon",
+    shadow: "kecleon_shadow",
   },
   "353-hoenn": {
-    "normal": "shuppet",
-    "shadow": "shuppet_shadow"
+    normal: "shuppet",
+    shadow: "shuppet_shadow",
   },
   "354-hoenn": {
-    "normal": "banette",
-    "shadow": "banette_shadow"
+    normal: "banette",
+    shadow: "banette_shadow",
   },
   "355-hoenn": {
-    "normal": "duskull",
-    "shadow": "duskull_shadow"
+    normal: "duskull",
+    shadow: "duskull_shadow",
   },
   "356-hoenn": {
-    "normal": "dusclops",
-    "shadow": "dusclops_shadow"
+    normal: "dusclops",
+    shadow: "dusclops_shadow",
   },
   "357-hoenn": {
-    "normal": "tropius",
-    "shadow": "tropius_shadow"
+    normal: "tropius",
+    shadow: "tropius_shadow",
   },
   "358-hoenn": {
-    "normal": "chimecho",
-    "shadow": "chimecho_shadow"
+    normal: "chimecho",
+    shadow: "chimecho_shadow",
   },
   "359-hoenn": {
-    "normal": "absol",
-    "shadow": "absol_shadow"
+    normal: "absol",
+    shadow: "absol_shadow",
   },
   "360-hoenn": {
-    "normal": "wynaut",
-    "shadow": "wynaut_shadow"
+    normal: "wynaut",
+    shadow: "wynaut_shadow",
   },
   "361-hoenn": {
-    "normal": "snorunt",
-    "shadow": "snorunt_shadow"
+    normal: "snorunt",
+    shadow: "snorunt_shadow",
   },
   "362-hoenn": {
-    "normal": "glalie",
-    "shadow": "glalie_shadow"
+    normal: "glalie",
+    shadow: "glalie_shadow",
   },
   "363-hoenn": {
-    "normal": "spheal",
-    "shadow": "spheal_shadow"
+    normal: "spheal",
+    shadow: "spheal_shadow",
   },
   "364-hoenn": {
-    "normal": "sealeo",
-    "shadow": "sealeo_shadow"
+    normal: "sealeo",
+    shadow: "sealeo_shadow",
   },
   "365-hoenn": {
-    "normal": "walrein",
-    "shadow": "walrein_shadow"
+    normal: "walrein",
+    shadow: "walrein_shadow",
   },
   "366-hoenn": {
-    "normal": "clamperl",
-    "shadow": "clamperl_shadow"
+    normal: "clamperl",
+    shadow: "clamperl_shadow",
   },
   "367-hoenn": {
-    "normal": "huntail",
-    "shadow": "huntail_shadow"
+    normal: "huntail",
+    shadow: "huntail_shadow",
   },
   "368-hoenn": {
-    "normal": "gorebyss",
-    "shadow": "gorebyss_shadow"
+    normal: "gorebyss",
+    shadow: "gorebyss_shadow",
   },
   "369-hoenn": {
-    "normal": "relicanth",
-    "shadow": "relicanth_shadow"
+    normal: "relicanth",
+    shadow: "relicanth_shadow",
   },
   "370-hoenn": {
-    "normal": "luvdisc",
-    "shadow": "luvdisc_shadow"
+    normal: "luvdisc",
+    shadow: "luvdisc_shadow",
   },
   "371-hoenn": {
-    "normal": "bagon",
-    "shadow": "bagon_shadow"
-  }
+    normal: "bagon",
+    shadow: "bagon_shadow",
+  },
 };
 export function pvpokeSpeciesId342371(form: Gen3Form, shadow: boolean) {
   const ids = pvpokeIds342371[form.id];
@@ -1237,4 +962,3 @@ export function pvpokeSpeciesId342371(form: Gen3Form, shadow: boolean) {
 }
 
 export const truncatedForms342371 = new Set<string>();
-export const migratedStubIds342371 = new Set<string>();

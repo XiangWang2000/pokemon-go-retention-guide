@@ -70,22 +70,20 @@ export const species282311: Gen3Species[] = speciesSpecs.map(
   }),
 );
 
-export const forms282311: Gen3Form[] = speciesSpecs.map(
-  ([dexNumber, nameEn, nameZhTw, types]) => ({
-    id: `${String(dexNumber).padStart(3, "0")}-hoenn`,
-    dexNumber,
-    formKey: "HOENN",
-    formNameEn: "Hoenn",
-    formNameZhTw: "豐緣",
-    regionKey: "HOENN",
-    types: [...types],
-    aliases: [nameEn, nameZhTw],
-    evolvesFromFormId: evolvesFromByDex[dexNumber] ?? null,
-    evolutionFamilyNotesZhTw: familyNotes[dexNumber] ?? standardNote,
-    isStub: false,
-    includeVariants: true,
-  }),
-);
+export const forms282311: Gen3Form[] = speciesSpecs.map(([dexNumber, nameEn, nameZhTw, types]) => ({
+  id: `${String(dexNumber).padStart(3, "0")}-hoenn`,
+  dexNumber,
+  formKey: "HOENN",
+  formNameEn: "Hoenn",
+  formNameZhTw: "豐緣",
+  regionKey: "HOENN",
+  types: [...types],
+  aliases: [nameEn, nameZhTw],
+  evolvesFromFormId: evolvesFromByDex[dexNumber] ?? null,
+  evolutionFamilyNotesZhTw: familyNotes[dexNumber] ?? standardNote,
+  isStub: false,
+  includeVariants: true,
+}));
 
 export const evolutionPairs282311: readonly [string, string][] = [
   ["281-hoenn", "282-hoenn"],
@@ -107,14 +105,34 @@ export const evolutionPairs282311: readonly [string, string][] = [
 
 export const releasedShadowForms282311 = new Set<string>([
   // 來源直接列出的 Shadow 物種；import 時會沿正式 evolution edges 推導後續型態。
-  "282-hoenn", "283-hoenn", "285-hoenn", "287-hoenn", "290-hoenn",
-  "293-hoenn", "296-hoenn", "299-hoenn", "300-hoenn", "302-hoenn",
-  "303-hoenn", "304-hoenn", "305-hoenn", "306-hoenn", "307-hoenn",
-  "308-hoenn", "309-hoenn", "310-hoenn", "311-hoenn",
+  "282-hoenn",
+  "283-hoenn",
+  "285-hoenn",
+  "287-hoenn",
+  "290-hoenn",
+  "293-hoenn",
+  "296-hoenn",
+  "299-hoenn",
+  "300-hoenn",
+  "302-hoenn",
+  "303-hoenn",
+  "304-hoenn",
+  "305-hoenn",
+  "306-hoenn",
+  "307-hoenn",
+  "308-hoenn",
+  "309-hoenn",
+  "310-hoenn",
+  "311-hoenn",
 ]);
 
 export const releasedMegaForms282311 = new Set<string>([
-  "282-hoenn", "302-hoenn", "303-hoenn", "306-hoenn", "308-hoenn", "310-hoenn",
+  "282-hoenn",
+  "302-hoenn",
+  "303-hoenn",
+  "306-hoenn",
+  "308-hoenn",
+  "310-hoenn",
 ]);
 export const releasedDynamaxForms282311 = new Set<string>();
 export const releasedGigantamaxForms282311 = new Set<string>();
@@ -143,7 +161,6 @@ export const pveUseLevels282311: Record<string, PveUseLevel> = {
 };
 
 export const truncatedForms282311 = new Set<string>();
-export const migratedStubIds282311 = new Set<string>();
 
 const pvpokeIds282311: Record<string, string> = Object.fromEntries(
   speciesSpecs.map(([dexNumber, nameEn]) => [
@@ -153,6 +170,11 @@ const pvpokeIds282311: Record<string, string> = Object.fromEntries(
 );
 
 export function pvpokeSpeciesId282311(form: Gen3Form, shadow: boolean) {
-  const base = pvpokeIds282311[form.id] ?? form.aliases[0].toLowerCase().replace(/[^a-z0-9-]+/g, "").replace(/-/g, "_");
+  const base =
+    pvpokeIds282311[form.id] ??
+    form.aliases[0]
+      .toLowerCase()
+      .replace(/[^a-z0-9-]+/g, "")
+      .replace(/-/g, "_");
   return shadow ? base + "_shadow" : base;
 }

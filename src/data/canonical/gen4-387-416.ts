@@ -56,10 +56,7 @@ export const canonicalGen4Species387416 = [
   { dexNumber: 416, nameEn: "vespiquen", nameZhTw: "蜂女王" },
 ] as const satisfies readonly CanonicalGen4Species[];
 
-const sinnohForm = (
-  dexNumber: number,
-  types: readonly string[],
-): CanonicalGen4Form => ({
+const sinnohForm = (dexNumber: number, types: readonly string[]): CanonicalGen4Form => ({
   id: `${dexNumber}-sinnoh`,
   dexNumber,
   formKey: "SINNOH",

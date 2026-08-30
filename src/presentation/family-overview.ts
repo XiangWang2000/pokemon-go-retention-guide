@@ -257,9 +257,7 @@ export function buildFamilyMemberSummaries(graph: ComponentGraph): FamilyMemberS
       form,
       roles,
       roleLabelsZhTw: roles.map((role) =>
-        role === "MEGA_CANDIDATE" && isPrimalFormId(form.formId)
-          ? "原始回歸候選"
-          : roleLabel[role],
+        role === "MEGA_CANDIDATE" && isPrimalFormId(form.formId) ? "原始回歸候選" : roleLabel[role],
       ),
       mainUseZhTw,
       memberSummaryZhTw,
@@ -880,7 +878,9 @@ function connectedComponents(forms: FormOverview[], familyKey: string) {
       incoming.get(path.toFormId)!.add(path.fromFormId);
     }
   }
-  for (const association of specialFamilyAssociations.filter((item) => item.familyKey === familyKey)) {
+  for (const association of specialFamilyAssociations.filter(
+    (item) => item.familyKey === familyKey,
+  )) {
     const present = association.formIds.filter((formId) => byId.has(formId));
     const [anchor, ...related] = present;
     for (const formId of related) {
@@ -920,9 +920,7 @@ export function buildFamilyOverview(graph: ComponentGraph, familyKey: string): F
   const isBatchTruncated =
     forms.some((form) => /範圍外|可繼續進化/.test(form.evolutionFamilyNotesZhTw)) ||
     forms.some((form) =>
-      form.evolutionPaths.some(
-        (path) => Number(path.toFormId.slice(0, 3)) > CURRENT_DATA_MAX_DEX,
-      ),
+      form.evolutionPaths.some((path) => Number(path.toFormId.slice(0, 3)) > CURRENT_DATA_MAX_DEX),
     );
   const regionKeys = unique(forms.map((form) => form.regionKey));
   const regionHintZhTw =

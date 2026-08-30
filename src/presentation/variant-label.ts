@@ -10,18 +10,12 @@ export function primalNameZhTw(formId: string | null | undefined) {
   return "原始回歸";
 }
 
-export function variantLabelZhTw(
-  variantKey: string,
-  formId?: string | null,
-) {
+export function variantLabelZhTw(variantKey: string, formId?: string | null) {
   if (variantKey === "MEGA" && isPrimalFormId(formId)) return primalNameZhTw(formId);
   return zhTw.variant[variantKey as keyof typeof zhTw.variant] ?? variantKey;
 }
 
-export function variantShortLabelZhTw(
-  variantKey: string,
-  formId?: string | null,
-) {
+export function variantShortLabelZhTw(variantKey: string, formId?: string | null) {
   if (variantKey === "MEGA" && isPrimalFormId(formId)) return "原始回歸";
   return variantLabelZhTw(variantKey, formId);
 }

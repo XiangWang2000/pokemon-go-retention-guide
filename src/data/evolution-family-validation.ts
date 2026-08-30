@@ -78,7 +78,9 @@ export function validateEvolutionFamilyConsistency({
     if (!toFamily) addError(`Missing family identity for evolution target ${toFormId}.`);
     if (!fromFamily || !toFamily) continue;
     if (fromFamily !== toFamily) {
-      addError(`Evolution edge ${fromFormId}->${toFormId} splits family keys: ${fromFamily} -> ${toFamily}.`);
+      addError(
+        `Evolution edge ${fromFormId}->${toFormId} splits family keys: ${fromFamily} -> ${toFamily}.`,
+      );
     }
   }
 

@@ -7,7 +7,7 @@
 1. `AGENTS.md`
 2. `docs/repo-map.md`
 3. `docs/codex-thread-summary.md`
-4. 相關的 `docs/data-update.md`、`docs/github-pages.md`、`docs/legacy-sites-migration.md` 與目標程式碼
+4. 相關的 `docs/data-update.md`、`docs/github-pages.md`、`docs/history/legacy-sites-migration.md` 與目標程式碼
 
 ## Subagent Orchestration Policy（專案覆寫）
 
@@ -23,7 +23,7 @@
 ## Runtime 與資料邊界
 
 - GitHub Pages／Next.js static export 是預設開發、建置與部署路徑；`dev:local`、`build:local`、`start:local` 僅供本機 Node fallback。
-- `research_notes/`、`data/sources/` 與 `prisma/` 分別保存研究證據、來源快照與資料模型；正式研究資料庫為根目錄 `dev.db`，不得以空的 `prisma/dev.db` 覆蓋。
+- `research_notes/sources/`、`data/sources/` 與 `prisma/` 分別保存研究證據、來源快照與資料模型；`research_notes/history/` 只保存早期人工筆記；正式研究資料庫為根目錄 `dev.db`，不得以空的 `prisma/dev.db` 覆蓋。
 - 每批資料更新必須遵守 `docs/data-update.md` 的來源、人工審核與變更紀錄規則；人工核准前不得把下一批列為已完成。
 - `site-data/`、`public/data/`、`public/exports/` 等交付產物必須透過既有 scripts 產生；需要新 snapshot 時明確執行 `npm run release:snapshot`，驗證不得隱性改寫它們。
 

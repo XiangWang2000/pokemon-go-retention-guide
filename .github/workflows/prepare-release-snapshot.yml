@@ -43,13 +43,13 @@ jobs:
           RELEASE_REF_TYPE: ${{ github.ref_type }}
           RELEASE_REF_NAME: ${{ github.ref_name }}
           DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
-        run: npx tsx scripts/verify-release-ref.ts
+        run: npx tsx scripts/release/verify-release-ref.ts
 
       - name: Rebuild research database for the current release
         shell: bash
         run: |
           set -euo pipefail
-          if ! npx tsx scripts/verify-research-rebuild.ts > rebuild.log 2>&1; then
+          if ! npx tsx scripts/data/verify-research-rebuild.ts > rebuild.log 2>&1; then
             echo "Research rebuild failed; showing the final 120 log lines."
             tail -n 120 rebuild.log
             exit 1
@@ -64,7 +64,7 @@ jobs:
         run: |
           set -euo pipefail
           npm run review:generate
-          npx tsx scripts/generate-current-recalibration-report.ts
+          npx tsx scripts/review/generate-current-recalibration-report.ts
 
       - name: Generate, validate, and promote release snapshot
         run: npm run release:snapshot
@@ -73,7 +73,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          npx tsx scripts/restore-transient-review-outputs.ts
+          npx tsx scripts/review/restore-transient-review-outputs.ts
           git restore --worktree -- data/remediation/001-030-metrics.json
 
       - name: Verify release contract and generated paths

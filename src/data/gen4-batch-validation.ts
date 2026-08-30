@@ -1,7 +1,4 @@
-import {
-  canonicalGen4Forms387416,
-  canonicalGen4Species387416,
-} from "./canonical/gen4-387-416";
+import { canonicalGen4Forms387416, canonicalGen4Species387416 } from "./canonical/gen4-387-416";
 import { getPublishedDefaultFormIds } from "../config/batch-registry";
 import type { Gen4BatchForm, Gen4BatchSpecies, Gen4EvolutionPair } from "./batch-gen4-types";
 import { getCrossGenerationEvolutionFormIds } from "./cross-generation-evolution";
@@ -35,7 +32,8 @@ export function validateGen4BatchSource(
   const formsById = new Map(forms.map((item) => [item.id, item] as const));
   const edges = new Set(evolutionPairs.map(([from, to]) => `${from}->${to}`));
 
-  if (speciesByDex.size !== species.length) errors.push("Gen4 batch has duplicate species dex numbers.");
+  if (speciesByDex.size !== species.length)
+    errors.push("Gen4 batch has duplicate species dex numbers.");
   if (formsById.size !== forms.length) errors.push("Gen4 batch has duplicate form ids.");
 
   for (const canonicalSpecies of canonical.species) {
@@ -48,7 +46,9 @@ export function validateGen4BatchSource(
       errors.push(`#${canonicalSpecies.dexNumber} English name mismatch: ${actual.nameEn}.`);
     }
     if (actual.nameZhTw !== canonicalSpecies.nameZhTw) {
-      errors.push(`#${canonicalSpecies.dexNumber} Traditional Chinese name mismatch: ${actual.nameZhTw}.`);
+      errors.push(
+        `#${canonicalSpecies.dexNumber} Traditional Chinese name mismatch: ${actual.nameZhTw}.`,
+      );
     }
     if (!actual.familyKey) errors.push(`#${canonicalSpecies.dexNumber} has no familyKey.`);
   }
@@ -59,14 +59,19 @@ export function validateGen4BatchSource(
       errors.push(`Missing Gen4 batch form ${canonicalForm.id}.`);
       continue;
     }
-    if (actual.dexNumber !== canonicalForm.dexNumber) errors.push(`${canonicalForm.id} dex number mismatch.`);
-    if (actual.formKey !== canonicalForm.formKey) errors.push(`${canonicalForm.id} form key mismatch.`);
-    if (actual.formNameEn !== canonicalForm.formNameEn) errors.push(`${canonicalForm.id} English form name mismatch.`);
+    if (actual.dexNumber !== canonicalForm.dexNumber)
+      errors.push(`${canonicalForm.id} dex number mismatch.`);
+    if (actual.formKey !== canonicalForm.formKey)
+      errors.push(`${canonicalForm.id} form key mismatch.`);
+    if (actual.formNameEn !== canonicalForm.formNameEn)
+      errors.push(`${canonicalForm.id} English form name mismatch.`);
     if (actual.formNameZhTw !== canonicalForm.formNameZhTw) {
       errors.push(`${canonicalForm.id} Traditional Chinese form name mismatch.`);
     }
-    if (actual.regionKey !== canonicalForm.regionKey) errors.push(`${canonicalForm.id} region mismatch.`);
-    if (!sameStrings(actual.types, canonicalForm.types)) errors.push(`${canonicalForm.id} type mismatch.`);
+    if (actual.regionKey !== canonicalForm.regionKey)
+      errors.push(`${canonicalForm.id} region mismatch.`);
+    if (!sameStrings(actual.types, canonicalForm.types))
+      errors.push(`${canonicalForm.id} type mismatch.`);
   }
 
   if (forms.length !== canonical.forms.length) {

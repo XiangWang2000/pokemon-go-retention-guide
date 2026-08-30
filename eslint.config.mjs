@@ -10,12 +10,9 @@ export default defineConfig([
   globalIgnores([
     ".next/**",
     ".tmp/**",
-    "dist/**",
-    ".wrangler/**",
     "site-data/**",
     "generated/**",
     "coverage/**",
     "prisma/migrations/**",
-    ".sites/**",
   ]),
 ]);

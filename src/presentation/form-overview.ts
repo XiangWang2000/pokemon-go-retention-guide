@@ -7,10 +7,7 @@ import {
   pveUseLevelLabelZhTw,
   type PveUseLevel,
 } from "@/rules/battle-assessment";
-import {
-  isPrimalFormId,
-  variantShortLabelZhTw,
-} from "@/presentation/variant-label";
+import { isPrimalFormId, variantShortLabelZhTw } from "@/presentation/variant-label";
 
 export type OverviewTone = "HIGH" | "MEDIUM" | "LOW" | "SPECIAL" | "NONE" | "REVIEW";
 
@@ -301,7 +298,9 @@ export function buildPvpOverview(rows: DashboardRow[]): CompactOverview {
     const rank = ranked.raw.rank ?? Number.MAX_SAFE_INTEGER;
     const league = zhTw.league[ranked.raw.league as keyof typeof zhTw.league] ?? "主要聯盟";
     const variant =
-      ranked.row.variantKey === "NORMAL" ? "" : `${variantShortLabelZhTw(ranked.row.variantKey, ranked.row.formId)}版`;
+      ranked.row.variantKey === "NORMAL"
+        ? ""
+        : `${variantShortLabelZhTw(ranked.row.variantKey, ranked.row.formId)}版`;
     if (ranked.raw.league === "SPECIAL_CUP") {
       return {
         label: "特殊盃",

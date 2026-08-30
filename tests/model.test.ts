@@ -3,7 +3,7 @@ import { resolve } from "node:path";
 import { afterAll, describe, expect, it } from "vitest";
 import { prisma } from "@/lib/prisma";
 
-const hasCanonicalDb = existsSync(resolve("dev.db"));
+const hasCanonicalDb = existsSync(resolve("rebuild-ci.db"));
 
 describe("Prisma SQLite 資料模型", () => {
   it.skipIf(!hasCanonicalDb)("同編號多型態可同時存在且不互相覆蓋", async () => {

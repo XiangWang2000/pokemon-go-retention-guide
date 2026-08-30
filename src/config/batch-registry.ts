@@ -42,7 +42,7 @@ export const BATCH_REGISTRY = [
     generation: 1,
     import: { adapter: "seed", phase: "seed", entrypoint: null, passBatchKey: false },
     review: {
-      generator: "scripts/generate-review.ts",
+      generator: "scripts/review/generate-review.ts",
       passBatchKey: false,
       jsonPath: "review/001-030.json",
       markdownPath: "review/001-030.md",
@@ -56,11 +56,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "legacy",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-031-060.ts",
+      entrypoint: "scripts/data/import-031-060.ts",
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-031-060.ts",
+      generator: "scripts/review/generate-review-031-060.ts",
       passBatchKey: false,
       jsonPath: "review/031-060.json",
       markdownPath: "review/031-060.md",
@@ -74,11 +74,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "legacy",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-061-090.ts",
+      entrypoint: "scripts/data/import-061-090.ts",
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-061-090.ts",
+      generator: "scripts/review/generate-review-061-090.ts",
       passBatchKey: false,
       jsonPath: "review/061-090.json",
       markdownPath: "review/061-090.md",
@@ -92,11 +92,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "legacy",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-091-120.ts",
+      entrypoint: "scripts/data/import-091-120.ts",
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-091-120.ts",
+      generator: "scripts/review/generate-review-091-120.ts",
       passBatchKey: false,
       jsonPath: "review/091-120.json",
       markdownPath: "review/091-120.md",
@@ -110,11 +110,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "legacy",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-121-151.ts",
+      entrypoint: "scripts/data/import-121-151.ts",
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-121-151.ts",
+      generator: "scripts/review/generate-review-121-151.ts",
       passBatchKey: false,
       jsonPath: "review/121-151.json",
       markdownPath: "review/121-151.md",
@@ -128,11 +128,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "legacy",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-152-181.ts",
+      entrypoint: "scripts/data/import-152-181.ts",
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-152-181.ts",
+      generator: "scripts/review/generate-review-152-181.ts",
       passBatchKey: false,
       jsonPath: "review/152-181.json",
       markdownPath: "review/152-181.md",
@@ -146,11 +146,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "legacy",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-182-211.ts",
+      entrypoint: "scripts/data/import-182-211.ts",
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-johto.ts",
+      generator: "scripts/review/generate-review-johto.ts",
       passBatchKey: true,
       jsonPath: "review/182-211.json",
       markdownPath: "review/182-211.md",
@@ -164,11 +164,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "legacy",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-212-241.ts",
+      entrypoint: "scripts/data/import-212-241.ts",
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-johto.ts",
+      generator: "scripts/review/generate-review-johto.ts",
       passBatchKey: true,
       jsonPath: "review/212-241.json",
       markdownPath: "review/212-241.md",
@@ -182,11 +182,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "legacy",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-242-251.ts",
+      entrypoint: "scripts/data/import-242-251.ts",
       passBatchKey: false,
     },
     review: {
-      generator: "scripts/generate-review-johto.ts",
+      generator: "scripts/review/generate-review-johto.ts",
       passBatchKey: true,
       jsonPath: "review/242-251.json",
       markdownPath: "review/242-251.md",
@@ -200,11 +200,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "gen3",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-gen3.ts",
+      entrypoint: "scripts/data/import-gen3.ts",
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-gen3.ts",
+      generator: "scripts/review/generate-review-gen3.ts",
       passBatchKey: true,
       jsonPath: "review/252-281.json",
       markdownPath: "review/252-281.md",
@@ -218,11 +218,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "gen3",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-gen3.ts",
+      entrypoint: "scripts/data/import-gen3.ts",
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-gen3.ts",
+      generator: "scripts/review/generate-review-gen3.ts",
       passBatchKey: true,
       jsonPath: "review/282-311.json",
       markdownPath: "review/282-311.md",
@@ -236,11 +236,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "gen3",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-gen3.ts",
+      entrypoint: "scripts/data/import-gen3.ts",
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-gen3.ts",
+      generator: "scripts/review/generate-review-gen3.ts",
       passBatchKey: true,
       jsonPath: "review/312-341.json",
       markdownPath: "review/312-341.md",
@@ -254,12 +254,12 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "gen3",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-gen3.ts",
+      entrypoint: "scripts/data/import-gen3.ts",
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-342-371.ts",
-      passBatchKey: false,
+      generator: "scripts/review/generate-review-gen3.ts",
+      passBatchKey: true,
       jsonPath: "review/342-371.json",
       markdownPath: "review/342-371.md",
     },
@@ -272,11 +272,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "gen3",
       phase: "pre-recompute",
-      entrypoint: "scripts/import-gen3.ts",
+      entrypoint: "scripts/data/import-gen3.ts",
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-gen3.ts",
+      generator: "scripts/review/generate-review-gen3.ts",
       passBatchKey: true,
       jsonPath: "review/372-386.json",
       markdownPath: "review/372-386.md",
@@ -290,11 +290,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "gen4",
       phase: "post-recompute",
-      entrypoint: "scripts/import-gen4.ts",
+      entrypoint: "scripts/data/import-gen4.ts",
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-gen4.ts",
+      generator: "scripts/review/generate-review-gen4.ts",
       passBatchKey: true,
       jsonPath: "review/387-416.json",
       markdownPath: "review/387-416.md",
@@ -308,11 +308,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "gen4",
       phase: "post-recompute",
-      entrypoint: "scripts/import-gen4.ts",
+      entrypoint: "scripts/data/import-gen4.ts",
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-gen4.ts",
+      generator: "scripts/review/generate-review-gen4.ts",
       passBatchKey: true,
       jsonPath: "review/417-446.json",
       markdownPath: "review/417-446.md",
@@ -326,11 +326,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "gen4",
       phase: "post-recompute",
-      entrypoint: "scripts/import-gen4.ts",
+      entrypoint: "scripts/data/import-gen4.ts",
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-gen4.ts",
+      generator: "scripts/review/generate-review-gen4.ts",
       passBatchKey: true,
       jsonPath: "review/447-476.json",
       markdownPath: "review/447-476.md",
@@ -344,11 +344,11 @@ export const BATCH_REGISTRY = [
     import: {
       adapter: "gen4",
       phase: "post-recompute",
-      entrypoint: "scripts/import-gen4.ts",
+      entrypoint: "scripts/data/import-gen4.ts",
       passBatchKey: true,
     },
     review: {
-      generator: "scripts/generate-review-gen4.ts",
+      generator: "scripts/review/generate-review-gen4.ts",
       passBatchKey: true,
       jsonPath: "review/477-493.json",
       markdownPath: "review/477-493.md",
@@ -379,7 +379,9 @@ export function getBatchByKey(batch: string): BatchRegistryEntry {
  * so cross-generation source validation can accept an already-published form
  * without trusting the evolution pairs under test.
  */
-export function getPublishedDefaultFormIds(entries: readonly BatchRegistryEntry[] = BATCH_REGISTRY) {
+export function getPublishedDefaultFormIds(
+  entries: readonly BatchRegistryEntry[] = BATCH_REGISTRY,
+) {
   const regionByGeneration = { 1: "kanto", 2: "johto", 3: "hoenn", 4: "sinnoh" } as const;
   const formIds = new Set<string>();
   for (const entry of entries) {

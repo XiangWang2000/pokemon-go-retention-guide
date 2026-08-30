@@ -36,11 +36,23 @@ if (-not $Full) {
 }
 
 if ($Full) {
-    Invoke-NpmScript "test:integration"
-    Invoke-NpmScript "data:validate"
-    Invoke-NpmScript "release:verify"
-    Invoke-NpmScript "build"
-    Invoke-NpmScript "build:local"
+    $PreviousDatabaseUrl = $env:DATABASE_URL
+    try {
+        $env:DATABASE_URL = "file:./rebuild-ci.db"
+        Invoke-NpmScript "test:integration"
+        Invoke-NpmScript "data:validate"
+        Invoke-NpmScript "release:verify"
+        Invoke-NpmScript "build"
+        Invoke-NpmScript "build:local"
+    }
+    finally {
+        if ($null -eq $PreviousDatabaseUrl) {
+            Remove-Item Env:DATABASE_URL -ErrorAction SilentlyContinue
+        }
+        else {
+            $env:DATABASE_URL = $PreviousDatabaseUrl
+        }
+    }
 }
 
 Write-Host "Verification passed."

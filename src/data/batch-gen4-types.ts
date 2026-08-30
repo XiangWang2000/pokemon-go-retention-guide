@@ -26,10 +26,7 @@ export type Gen4BatchForm = {
 export type Gen4EvolutionPair = readonly [fromFormId: string, toFormId: string];
 
 export type Gen4PveUseLevel =
-  | "CORE_INVESTMENT"
-  | "USABLE_OR_BUDGET"
-  | "SPECIAL_USE"
-  | "NO_SIGNIFICANT_USE";
+  "CORE_INVESTMENT" | "USABLE_OR_BUDGET" | "SPECIAL_USE" | "NO_SIGNIFICANT_USE";
 
 export type Gen4PveEvidence = {
   level: Exclude<Gen4PveUseLevel, "NO_SIGNIFICANT_USE">;
@@ -39,13 +36,7 @@ export type Gen4PveEvidence = {
   summaryZhTw: string;
 };
 
-export type Gen4VariantKey =
-  | "NORMAL"
-  | "SHADOW"
-  | "PURIFIED"
-  | "MEGA"
-  | "DYNAMAX"
-  | "GIGANTAMAX";
+export type Gen4VariantKey = "NORMAL" | "SHADOW" | "PURIFIED" | "MEGA" | "DYNAMAX" | "GIGANTAMAX";
 
 export type Gen4SpecialVariant = {
   id: string;

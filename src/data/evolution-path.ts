@@ -38,10 +38,7 @@ type EvolutionPathValues = Omit<EvolutionPathWrite, "id">;
  * The endpoint pair is the canonical identity, so an owning importer updates
  * an existing manifest edge instead of creating a second row.
  */
-export async function upsertEvolutionPath(
-  prisma: PrismaClient,
-  path: EvolutionPathWrite,
-) {
+export async function upsertEvolutionPath(prisma: PrismaClient, path: EvolutionPathWrite) {
   const [byEndpoint, byId] = await Promise.all([
     prisma.evolutionPath.findMany({
       where: { fromFormId: path.fromFormId, toFormId: path.toFormId },
@@ -57,10 +54,7 @@ export async function upsertEvolutionPath(
       `Multiple evolution paths already exist for ${path.fromFormId}->${path.toFormId}.`,
     );
   }
-  if (
-    byId &&
-    (byId.fromFormId !== path.fromFormId || byId.toFormId !== path.toFormId)
-  ) {
+  if (byId && (byId.fromFormId !== path.fromFormId || byId.toFormId !== path.toFormId)) {
     throw new Error(`Evolution path ID collision: ${path.id}.`);
   }
 

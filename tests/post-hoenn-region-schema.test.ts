@@ -23,7 +23,16 @@ describe("post-Hoenn Prisma region support", () => {
 
   it("preserves all currently published regional-form regions", () => {
     const values = regionEnumValues();
-    for (const region of ["KANTO", "JOHTO", "HOENN", "ALOLA", "GALAR", "HISUI", "PALDEA", "OTHER"]) {
+    for (const region of [
+      "KANTO",
+      "JOHTO",
+      "HOENN",
+      "ALOLA",
+      "GALAR",
+      "HISUI",
+      "PALDEA",
+      "OTHER",
+    ]) {
       expect(values).toContain(region);
     }
   });

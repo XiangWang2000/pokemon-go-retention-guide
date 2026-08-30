@@ -43,8 +43,7 @@ export function deriveShadowReleaseEvidence(
   const directRosterFormIds = [...directReleaseIds];
   const derivedFormIds = [...releasedFormIds].filter((formId) => !directReleaseIds.has(formId));
   const formalEvolutionEdges = evolutionPairs.filter(
-    ([fromFormId, toFormId]) =>
-      releasedFormIds.has(fromFormId) && releasedFormIds.has(toFormId),
+    ([fromFormId, toFormId]) => releasedFormIds.has(fromFormId) && releasedFormIds.has(toFormId),
   );
   return {
     directRosterFormIds,

@@ -52,7 +52,7 @@ describe("independent curated PvP evidence", () => {
 
   it("keeps generated decision output out of current PvP assessment helpers", () => {
     const source = readFileSync(
-      new URL("../scripts/recompute-001-311.ts", import.meta.url),
+      new URL("../scripts/data/recompute-retention.ts", import.meta.url),
       "utf8",
     );
     const start = source.indexOf("function curatedPvpEvidenceFor");
@@ -111,15 +111,18 @@ describe("independent curated PvP evidence", () => {
       scripts: Record<string, string>;
     };
     const source = readFileSync(
-      new URL("../scripts/recompute-001-311.ts", import.meta.url),
+      new URL("../scripts/data/recompute-retention.ts", import.meta.url),
       "utf8",
     );
     const report = readFileSync(
-      new URL("../review/001-386-recalibration.md", import.meta.url),
+      new URL("../review/history/001-386-recalibration.md", import.meta.url),
       "utf8",
     );
 
-    expect(packageJson.scripts["data:recompute"]).toBe("tsx scripts/recompute-001-311.ts");
+    expect(packageJson.scripts["data:recompute"]).toBe("tsx scripts/data/recompute-retention.ts");
+    expect(
+      Object.keys(packageJson.scripts).filter((name) => name.startsWith("data:recompute:")),
+    ).toEqual([]);
     expect(source).not.toContain('process.argv.indexOf("--max")');
     expect(source).not.toContain("#001～#211 共用規則重算報告");
     expect(report.split(/\r?\n/, 1)[0]).toBe(

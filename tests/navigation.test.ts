@@ -1,8 +1,5 @@
 import { describe, expect, it } from "vitest";
-import {
-  isPrimaryNavigationActive,
-  normalizeNavigationPathname,
-} from "@/lib/navigation";
+import { isPrimaryNavigationActive, normalizeNavigationPathname } from "@/lib/navigation";
 
 const basePath = "/pokemon-go-retention-guide";
 
@@ -15,9 +12,9 @@ describe("primary site navigation", () => {
 
   it("keeps the Pokédex navigation active on the home and Pokémon detail routes", () => {
     expect(isPrimaryNavigationActive(`${basePath}/`, "/", basePath)).toBe(true);
-    expect(
-      isPrimaryNavigationActive(`${basePath}/pokemon/001-kanto-normal/`, "/", basePath),
-    ).toBe(true);
+    expect(isPrimaryNavigationActive(`${basePath}/pokemon/001-kanto-normal/`, "/", basePath)).toBe(
+      true,
+    );
     expect(isPrimaryNavigationActive(`${basePath}/review/`, "/", basePath)).toBe(false);
   });
 

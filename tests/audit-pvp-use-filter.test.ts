@@ -14,9 +14,7 @@ const bulbasaur = JSON.parse(
 const committedAuditSummary = JSON.parse(
   readFileSync("public/data/audit-summary.json", "utf8"),
 ) as { rows: AuditRowSummary[] };
-const committedBulbasaur = committedAuditSummary.rows.find(
-  (row) => row.id === "001-kanto-normal",
-);
+const committedBulbasaur = committedAuditSummary.rows.find((row) => row.id === "001-kanto-normal");
 
 const pvpQuery: AuditQuery = {
   query: "",

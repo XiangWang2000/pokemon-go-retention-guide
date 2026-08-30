@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import type { PrismaSourceRow } from "@/lib/data-prisma";
 import type { DashboardRow } from "@/lib/data-read-model";
-import officialResearch from "../research_notes/official-121-151.json";
+import officialResearch from "../research_notes/sources/official-121-151.json";
 
 const dashboardRows = JSON.parse(
   readFileSync(new URL("../site-data/dashboard.json", import.meta.url), "utf8"),

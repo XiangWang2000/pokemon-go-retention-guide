@@ -219,12 +219,18 @@ describe("Gen 4 canonical source #417-#493", () => {
   });
 
   it("keeps the Chingling cross-generation edge and its fact-scoped source", () => {
-    expect(evolutionPairs417446.filter(([from, to]) => from === "433-sinnoh" && to === "358-hoenn")).toHaveLength(1);
-    const manifest = JSON.parse(readFileSync("research_notes/official-417-446.json", "utf8")) as {
+    expect(
+      evolutionPairs417446.filter(([from, to]) => from === "433-sinnoh" && to === "358-hoenn"),
+    ).toHaveLength(1);
+    const manifest = JSON.parse(
+      readFileSync("research_notes/sources/official-417-446.json", "utf8"),
+    ) as {
       sources: Array<{ id: string; supports?: string[] }>;
     };
     const source = manifest.sources.find((item) => item.id === "EVOLUTION-SINNOH-433-20260816");
-    expect(source?.supports).toEqual(expect.arrayContaining(["433-sinnoh", "358-hoenn", "EVOLUTION_VALUE"]));
+    expect(source?.supports).toEqual(
+      expect.arrayContaining(["433-sinnoh", "358-hoenn", "EVOLUTION_VALUE"]),
+    );
   });
 
   it("reuses canonical family identity for every owned evolution edge", () => {
@@ -266,33 +272,46 @@ describe("Gen 4 canonical source #417-#493", () => {
   });
 
   it("keeps release provenance fact-scoped and review-facing summaries in Traditional Chinese", () => {
-    const manifests = ["417-446", "447-476", "477-493"].map((batch) =>
-      JSON.parse(readFileSync(`research_notes/official-${batch}.json`, "utf8")) as {
-        sources: Array<{
-          id: string;
-          sourceUrl?: string;
-          publishedAt?: string | null;
-          sourceSummaryZhTw?: string;
-          supports?: string[];
-        }>;
-      },
+    const manifests = ["417-446", "447-476", "477-493"].map(
+      (batch) =>
+        JSON.parse(readFileSync(`research_notes/sources/official-${batch}.json`, "utf8")) as {
+          sources: Array<{
+            id: string;
+            sourceUrl?: string;
+            publishedAt?: string | null;
+            sourceSummaryZhTw?: string;
+            supports?: string[];
+          }>;
+        },
     );
     for (const manifest of manifests) {
-      expect(manifest.sources.every((source) => /[\u3400-\u9fff]/u.test(source.sourceSummaryZhTw ?? ""))).toBe(true);
+      expect(
+        manifest.sources.every((source) => /[\u3400-\u9fff]/u.test(source.sourceSummaryZhTw ?? "")),
+      ).toBe(true);
     }
-    const official = manifests[0].sources.find((source) => source.id === "OFF-SINNOH-GEN4-20260816");
+    const official = manifests[0].sources.find(
+      (source) => source.id === "OFF-SINNOH-GEN4-20260816",
+    );
     expect(official?.sourceUrl).toBe("https://pokemongo.com/post/sinnoh-pokemon?hl=en");
     expect(official?.publishedAt).toBe("2018-10-16");
     expect(official?.supports).toEqual([]);
 
-    const formsSource = manifests[2].sources.find((source) => source.id === "SECONDARY-SINNOH-FORMS-20260816");
+    const formsSource = manifests[2].sources.find(
+      (source) => source.id === "SECONDARY-SINNOH-FORMS-20260816",
+    );
     expect(formsSource?.sourceSummaryZhTw).toContain("屬性");
     expect(formsSource?.supports?.some((id) => /-(mega|dynamax|gigantamax)$/.test(id))).toBe(false);
     expect(formsSource?.sourceSummaryZhTw).not.toMatch(/release|availability|released/i);
 
-    const releaseSource = manifests[2].sources.find((source) => source.id === "PVP-SINNOH-RELEASE-20260816");
-    expect(releaseSource?.supports?.some((id) => /-(mega|dynamax|gigantamax)$/.test(id))).toBe(false);
-    const shadowSource = manifests[2].sources.find((source) => source.id === "SHADOW-SINNOH-ROSTER-20260816");
+    const releaseSource = manifests[2].sources.find(
+      (source) => source.id === "PVP-SINNOH-RELEASE-20260816",
+    );
+    expect(releaseSource?.supports?.some((id) => /-(mega|dynamax|gigantamax)$/.test(id))).toBe(
+      false,
+    );
+    const shadowSource = manifests[2].sources.find(
+      (source) => source.id === "SHADOW-SINNOH-ROSTER-20260816",
+    );
     expect(shadowSource?.supports).toEqual(
       expect.arrayContaining([
         "483-sinnoh-shadow",

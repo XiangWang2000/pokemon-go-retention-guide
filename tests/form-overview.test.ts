@@ -42,7 +42,7 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
 
   it("妙蛙種子總覽只顯示已推出徽章，展開仍保留所有版本", () => {
     const bulbasaur = form("001-kanto");
-    expect(bulbasaur.releasedVariantKeys).toEqual(["NORMAL", "SHADOW", "PURIFIED", "DYNAMAX"]);
+    expect(bulbasaur.releasedVariantKeys).toEqual(["NORMAL", "DYNAMAX"]);
     expect(bulbasaur.variants.map((variant) => variant.row.variantKey)).toEqual([
       "NORMAL",
       "SHADOW",
@@ -182,7 +182,7 @@ describe("快速總覽與資料審核 UI", () => {
     expect(html).toContain("原始資料與規則軌跡");
     expect(html).toContain("類別狀態");
     expect(html).toContain("此欄位待補，但不影響普通個體結論");
-    expect(html).toContain("查看");
+    expect(html).toContain("收合審核資料");
   });
 
   it("每個快速總覽項目仍可由搜尋層使用完整中英文與進化名稱", () => {

@@ -22,7 +22,9 @@ describe("Gen2 #242-#251 JOHTO integration", () => {
       new Set(Array.from({ length: 10 }, (_, index) => index + 242)),
     );
     expect(new Set(batchRows.map((row) => row.formId))).toEqual(
-      new Set(Array.from({ length: 10 }, (_, index) => `${String(index + 242).padStart(3, "0")}-johto`)),
+      new Set(
+        Array.from({ length: 10 }, (_, index) => `${String(index + 242).padStart(3, "0")}-johto`),
+      ),
     );
     expect(rows.some((row) => row.formId === "242-kanto")).toBe(false);
   });
@@ -41,7 +43,9 @@ describe("Gen2 #242-#251 JOHTO integration", () => {
       releaseStatus: "RELEASED",
     });
     for (const dex of [242, 243, 244, 245, 249, 250]) {
-      expect(rows.find((row) => row.id === `${String(dex).padStart(3, "0")}-johto-dynamax`)).toMatchObject({
+      expect(
+        rows.find((row) => row.id === `${String(dex).padStart(3, "0")}-johto-dynamax`),
+      ).toMatchObject({
         releaseStatus: "RELEASED",
       });
     }

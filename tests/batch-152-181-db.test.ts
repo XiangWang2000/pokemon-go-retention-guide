@@ -4,7 +4,7 @@ import { DATA_VERSION } from "@/config/release";
 import type { PrismaSourceRow } from "@/lib/data-prisma";
 import type { DashboardRow } from "@/lib/data-read-model";
 import review from "../review/152-181.json";
-import officialResearch from "../research_notes/official-152-181.json";
+import officialResearch from "../research_notes/sources/official-152-181.json";
 
 const dashboardRows = JSON.parse(
   readFileSync(new URL("../site-data/dashboard.json", import.meta.url), "utf8"),

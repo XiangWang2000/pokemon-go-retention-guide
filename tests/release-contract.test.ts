@@ -10,8 +10,11 @@ import {
 } from "@/config/release-contract";
 import { CURRENT_DATA_SCOPE } from "@/config/data-scope";
 import { DATA_VERSION } from "@/config/release";
-import { assertSafeReleasePublishRef } from "../scripts/verify-release-ref";
-import { promoteSnapshot, SNAPSHOT_PROMOTION_TARGETS } from "../scripts/prepare-release-snapshot";
+import { assertSafeReleasePublishRef } from "../scripts/release/verify-release-ref";
+import {
+  promoteSnapshot,
+  SNAPSHOT_PROMOTION_TARGETS,
+} from "../scripts/release/prepare-release-snapshot";
 
 async function writeFixture(root: string, relativePath: string, value: string) {
   const filePath = path.join(root, relativePath);
@@ -26,6 +29,7 @@ describe("current release contract", () => {
     expect(CURRENT_RELEASE_CONTRACT.maxDex).toBe(BATCH_REGISTRY.at(-1)?.maxDex);
     expect(CURRENT_RELEASE_CONTRACT.scope).toBe(CURRENT_DATA_SCOPE);
     expect(CURRENT_RELEASE_CONTRACT.dataVersion).toBe(DATA_VERSION);
+    expect(CURRENT_RELEASE_CONTRACT.snapshot.databaseUrl).toBe("file:./rebuild-ci.db");
 
     const expectedReviewPaths = expectedReleaseReviewPaths();
     expect(expectedReviewPaths.size).toBe(BATCH_REGISTRY.length * 2 + 2);
@@ -136,7 +140,7 @@ describe("release publication ref guard", () => {
 
   it("makes the release workflow use the guarded branch ref for publication", async () => {
     const workflow = await readFile(".github/workflows/prepare-release-snapshot.yml", "utf8");
-    expect(workflow).toContain("run: npx tsx scripts/verify-release-ref.ts");
+    expect(workflow).toContain("run: npx tsx scripts/release/verify-release-ref.ts");
     expect(workflow).toContain('git push origin "HEAD:refs/heads/${GITHUB_REF_NAME}"');
     expect(workflow).toContain("RELEASE_REF_TYPE: ${{ github.ref_type }}");
     expect(workflow).toContain("DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}");

@@ -40,12 +40,10 @@ describe("visible text integrity and cross-generation target provenance", () => 
   });
 
   it("keeps current manifest, runtime, and review visible text clean", () => {
-    const roots = ["research_notes", "site-data", "review", "public/data"];
-    const historicalReviewArchives =
-      /(?:family-aggregation-20260718|001-(?:151|181|211|241)-recalibration)\.json$/;
+    const roots = ["research_notes/sources", "site-data", "review", "public/data"];
     const files = roots
       .flatMap((root) => jsonFiles(root))
-      .filter((file) => !historicalReviewArchives.test(file));
+      .filter((file) => !file.replaceAll("\\", "/").startsWith("review/history/"));
     const issues = files.flatMap((file) =>
       findTextIntegrityIssues(loadJson(file), relative(process.cwd(), file)),
     );
@@ -59,7 +57,7 @@ describe("visible text integrity and cross-generation target provenance", () => 
   }, 30_000);
 
   it("uses the corrected names, regions, and evolution edges", () => {
-    const manifest = loadJson("research_notes/cross-generation-evolution-targets.json") as {
+    const manifest = loadJson("research_notes/sources/cross-generation-evolution-targets.json") as {
       targets: Array<Record<string, unknown>>;
       paths: Array<Record<string, unknown>>;
     };

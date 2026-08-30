@@ -5,18 +5,9 @@ on:
     branches: [main]
     paths:
       - "prisma/**"
-      - "scripts/import-*.ts"
-      - "scripts/recompute-*.ts"
-      - "scripts/backfill-*.ts"
-      - "scripts/validate-data.ts"
-      - "scripts/verify-research-rebuild.ts"
-      - "scripts/verify-published-integrity.ts"
-      - "scripts/verify-release.ts"
-      - "scripts/prepare-release-snapshot.ts"
-      - "scripts/generate-static-snapshot.ts"
-      - "scripts/check-static-snapshot.ts"
-      - "scripts/validate-review-consistency.ts"
-      - "scripts/restore-transient-review-outputs.ts"
+      - "scripts/data/**"
+      - "scripts/release/**"
+      - "scripts/review/**"
       - "src/data/**"
       - "src/config/batch-registry.ts"
       - "src/config/data-scope.ts"
@@ -59,7 +50,7 @@ jobs:
       - name: Rebuild and validate research database for the current release
         shell: bash
         run: |
-          if ! npx tsx scripts/verify-research-rebuild.ts > rebuild.log 2>&1; then
+          if ! npx tsx scripts/data/verify-research-rebuild.ts > rebuild.log 2>&1; then
             echo "Research rebuild failed; showing the final 120 log lines."
             tail -n 120 rebuild.log
             exit 1

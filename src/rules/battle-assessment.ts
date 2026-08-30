@@ -24,14 +24,6 @@ export const pveUseLevelLabelZhTw: Record<PveUseLevel, string> = {
   NO_SIGNIFICANT_USE: "無顯著用途",
 };
 
-export const assessmentDispositionLabelZhTw: Record<AssessmentDisposition, string> = {
-  CLEAR_USE: "已有明確用途",
-  LIMITED_USE: "用途有限",
-  NO_SIGNIFICANT_USE: "無顯著用途",
-  NOT_APPLICABLE_OR_UNRELEASED: "不適用／尚未推出",
-  TRUE_DATA_PENDING: "真正待補資料",
-};
-
 export interface BattleUseEvidence {
   pveTiers?: Array<string | null | undefined>;
   pveRanks?: Array<number | null | undefined>;

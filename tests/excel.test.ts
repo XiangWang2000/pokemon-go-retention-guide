@@ -9,7 +9,7 @@ import {
 } from "@/export/excel";
 import { prisma } from "@/lib/prisma";
 
-const hasCanonicalDb = existsSync("dev.db");
+const hasCanonicalDb = existsSync("rebuild-ci.db");
 
 describe("Excel 匯出", () => {
   it("可開啟、工作表齊全、中文欄位與可重匯入 ID 正常", async () => {
@@ -50,15 +50,15 @@ describe("Excel 匯出", () => {
     expect(overviewHeaders).toContain("火箭隊資料狀態");
     expect(overviewHeaders).toContain("Max資料狀態");
     expect(overviewHeaders).toContain("結論依據Enum");
-    const manualRow = workbook.worksheets[1]
+    const pendingRow = workbook.worksheets[1]
       .getColumn("variantId")
       .values.findIndex((value) => value === "020-kanto-shadow");
     expect(
       workbook.worksheets[1].getCell(
-        manualRow,
+        pendingRow,
         workbook.worksheets[1].getColumn("provenance").number,
       ).value,
-    ).toBe("MANUAL_CURATED");
+    ).toBe("DATA_UNAVAILABLE");
 
     const reviewHeaders = workbook.worksheets[7].getRow(1).values as unknown[];
     expect(reviewHeaders).toContain("影響最終結論");

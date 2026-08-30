@@ -16,7 +16,9 @@ describe("database provenance", () => {
     try {
       expect(getDatabaseUrl({})).toBe("file:./dev.db");
       expect(getDatabaseUrl({ DATABASE_URL: "file:./fixture.db" })).toBe("file:./fixture.db");
-      expect(resolveDatabaseLocation(getDatabaseUrl({ DATABASE_URL: "file:./fixture.db" }), root)).toMatchObject({
+      expect(
+        resolveDatabaseLocation(getDatabaseUrl({ DATABASE_URL: "file:./fixture.db" }), root),
+      ).toMatchObject({
         url: "file:./fixture.db",
         absolutePath: fixturePath,
         manifestPath: "fixture.db",

@@ -5,7 +5,7 @@ import { assertNoTextIntegrityIssues } from "./text-integrity";
 import { isRegionKey, type RegionKey } from "./region-key";
 import { upsertEvolutionPath } from "./evolution-path";
 
-const sourceFile = "research_notes/cross-generation-evolution-targets.json";
+const sourceFile = "research_notes/sources/cross-generation-evolution-targets.json";
 
 export const evolutionTargetUseLevels = [
   "CORE_INVESTMENT",
@@ -177,10 +177,7 @@ export async function ensureCrossGenerationEvolutionTargets(prisma: PrismaClient
   if (staleStubIds.length) {
     await prisma.evolutionPath.deleteMany({
       where: {
-        OR: [
-          { fromFormId: { in: staleStubIds } },
-          { toFormId: { in: staleStubIds } },
-        ],
+        OR: [{ fromFormId: { in: staleStubIds } }, { toFormId: { in: staleStubIds } }],
       },
     });
     await prisma.pokemonForm.deleteMany({ where: { id: { in: staleStubIds } } });
@@ -200,7 +197,8 @@ export async function ensureCrossGenerationEvolutionTargets(prisma: PrismaClient
         accessedAt: optionalDate(source.accessedAt) ?? checkedDate,
         publishedAt: null,
         dataVersion: data.dataVersion,
-        notes: "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
+        notes:
+          "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
       },
       update: {
         sourceName: source.sourceName,
@@ -211,7 +209,8 @@ export async function ensureCrossGenerationEvolutionTargets(prisma: PrismaClient
         sourceSummaryZhTw: source.sourceSummaryZhTw,
         accessedAt: optionalDate(source.accessedAt) ?? checkedDate,
         dataVersion: data.dataVersion,
-        notes: "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
+        notes:
+          "跨世代進化 manifest 的來源紀錄；只用於核對進化關係與目標用途，不替代本批完整戰鬥資料。",
       },
     });
   }
@@ -241,10 +240,11 @@ export async function ensureCrossGenerationEvolutionTargets(prisma: PrismaClient
       select: {
         id: true,
         evolutionFamilyNotesZhTw: true,
+        isEvolutionStub: true,
         _count: { select: { battleVariants: true } },
       },
     });
-    const isStub = !existing || existing._count.battleVariants === 0;
+    const isStub = !existing || (existing._count.battleVariants === 0 && existing.isEvolutionStub);
     const targetNote =
       existing && !isStub
         ? existing.evolutionFamilyNotesZhTw

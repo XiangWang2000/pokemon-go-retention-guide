@@ -3,10 +3,7 @@ import { describe, expect, it } from "vitest";
 
 describe("Pokémon static route source", () => {
   it("enumerates detail routes and sitemap entries from the compact audit summary", () => {
-    for (const sourcePath of [
-      "src/app/pokemon/[variantId]/page.tsx",
-      "src/app/sitemap.ts",
-    ]) {
+    for (const sourcePath of ["src/app/pokemon/[variantId]/page.tsx", "src/app/sitemap.ts"]) {
       const source = readFileSync(sourcePath, "utf8");
       expect(source).toContain("site-data/auditSummary.json");
       expect(source).not.toContain("site-data/dashboard.json");

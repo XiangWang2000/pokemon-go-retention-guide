@@ -3,8 +3,7 @@ import { DATA_VERSION, DATA_VERSION_DATE_ZH_TW } from "@/config/release";
 import { sitePath } from "@/config/site";
 
 export const SITE_TITLE = "Pokémon GO 寶可夢保留價值指南";
-export const SITE_DESCRIPTION =
-  "以可追溯來源與集中式規則評估 Pokémon GO 各型態的通用保留價值。";
+export const SITE_DESCRIPTION = "以可追溯來源與集中式規則評估 Pokémon GO 各型態的通用保留價值。";
 
 export const SITE_URL = new URL(
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://xiangwang2000.github.io/pokemon-go-retention-guide/",

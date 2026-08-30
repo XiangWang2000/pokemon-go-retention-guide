@@ -116,6 +116,7 @@ describe("#061～#090 批次與跨批次家族", () => {
     expect(familyByMember("079-galar").members.map((member) => member.form.formId)).toEqual([
       "079-galar",
       "080-galar",
+      "199-galar",
     ]);
   });
 

@@ -45,12 +45,15 @@ describe("Gen 3 #252-#281 integration", () => {
   it("defines exactly 30 Hoenn species and standard forms", () => {
     expect(species252281).toHaveLength(30);
     expect(forms252281).toHaveLength(30);
-    expect(forms252281.every((form) =>
-      form.id.endsWith("-hoenn") &&
-      form.formKey === "HOENN" &&
-      form.regionKey === "HOENN" &&
-      form.formNameZhTw === "\u8c50\u7de3",
-    )).toBe(true);
+    expect(
+      forms252281.every(
+        (form) =>
+          form.id.endsWith("-hoenn") &&
+          form.formKey === "HOENN" &&
+          form.regionKey === "HOENN" &&
+          form.formNameZhTw === "\u8c50\u7de3",
+      ),
+    ).toBe(true);
     expect(new Set(forms252281.map((form) => form.dexNumber)).size).toBe(30);
   });
 
@@ -59,16 +62,14 @@ describe("Gen 3 #252-#281 integration", () => {
       nameZhTw: "橡實果",
     });
     expect(forms252281.find((form) => form.id === "273-hoenn")?.aliases).toContain("橡實果");
-    expect([...releasedMegaForms252281]).toEqual([
-      "254-hoenn",
-      "257-hoenn",
-      "260-hoenn",
-    ]);
-    expect(specialVariants252281).toEqual(expect.arrayContaining([
-      expect.objectContaining({ id: "254-hoenn-mega", formId: "254-hoenn", released: true }),
-      expect.objectContaining({ id: "257-hoenn-mega", formId: "257-hoenn", released: true }),
-      expect.objectContaining({ id: "260-hoenn-mega", formId: "260-hoenn", released: true }),
-    ]));
+    expect([...releasedMegaForms252281]).toEqual(["254-hoenn", "257-hoenn", "260-hoenn"]);
+    expect(specialVariants252281).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ id: "254-hoenn-mega", formId: "254-hoenn", released: true }),
+        expect.objectContaining({ id: "257-hoenn-mega", formId: "257-hoenn", released: true }),
+        expect.objectContaining({ id: "260-hoenn-mega", formId: "260-hoenn", released: true }),
+      ]),
+    );
     expect(row("260-hoenn-mega")).toMatchObject({
       formId: "260-hoenn",
       variantKey: "MEGA",
@@ -77,27 +78,62 @@ describe("Gen 3 #252-#281 integration", () => {
       decision: "KEEP",
     });
     expect([...releasedShadowForms252281]).toEqual([
-      "252-hoenn", "253-hoenn", "254-hoenn", "255-hoenn", "256-hoenn", "257-hoenn",
-      "258-hoenn", "259-hoenn", "260-hoenn", "261-hoenn", "262-hoenn", "263-hoenn",
-      "264-hoenn", "265-hoenn", "270-hoenn", "271-hoenn", "272-hoenn", "273-hoenn",
-      "274-hoenn", "275-hoenn", "276-hoenn", "277-hoenn", "278-hoenn", "279-hoenn",
-      "280-hoenn", "281-hoenn",
+      "252-hoenn",
+      "253-hoenn",
+      "254-hoenn",
+      "255-hoenn",
+      "256-hoenn",
+      "257-hoenn",
+      "258-hoenn",
+      "259-hoenn",
+      "260-hoenn",
+      "261-hoenn",
+      "262-hoenn",
+      "263-hoenn",
+      "264-hoenn",
+      "265-hoenn",
+      "270-hoenn",
+      "271-hoenn",
+      "272-hoenn",
+      "273-hoenn",
+      "274-hoenn",
+      "275-hoenn",
+      "276-hoenn",
+      "277-hoenn",
+      "278-hoenn",
+      "279-hoenn",
+      "280-hoenn",
+      "281-hoenn",
     ]);
-    const releasedClosure = deriveEvolutionReleaseClosure(releasedShadowForms252281, evolutionPairs252281);
-    expect([...releasedClosure]).toEqual(expect.arrayContaining([
-      "266-hoenn", "267-hoenn", "268-hoenn", "269-hoenn",
-    ]));
+    const releasedClosure = deriveEvolutionReleaseClosure(
+      releasedShadowForms252281,
+      evolutionPairs252281,
+    );
+    expect([...releasedClosure]).toEqual(
+      expect.arrayContaining(["266-hoenn", "267-hoenn", "268-hoenn", "269-hoenn"]),
+    );
     const battle = JSON.parse(
-      readFileSync(new URL("../research_notes/battle-252-281.json", import.meta.url), "utf8"),
+      readFileSync(
+        new URL("../research_notes/sources/battle-252-281.json", import.meta.url),
+        "utf8",
+      ),
     ) as { mega: Array<{ formId: string }>; shadow: Array<{ formId: string }> };
     expect(battle.mega.map((item) => item.formId)).toEqual([...releasedMegaForms252281]);
     expect(battle.shadow.map((item) => item.formId)).toEqual([...releasedShadowForms252281]);
     const official = JSON.parse(
-      readFileSync(new URL("../research_notes/official-252-281.json", import.meta.url), "utf8"),
+      readFileSync(
+        new URL("../research_notes/sources/official-252-281.json", import.meta.url),
+        "utf8",
+      ),
     ) as { sources: Array<{ id: string; supports: string[] }> };
-    const shadowSource = official.sources.find((source) => source.id === "SECONDARY-SHADOW-HOENN-2026");
+    const shadowSource = official.sources.find(
+      (source) => source.id === "SECONDARY-SHADOW-HOENN-2026",
+    );
     expect(shadowSource?.supports).toEqual(
-      [...releasedShadowForms252281].flatMap((formId) => [`${formId}-shadow`, `${formId}-purified`]),
+      [...releasedShadowForms252281].flatMap((formId) => [
+        `${formId}-shadow`,
+        `${formId}-purified`,
+      ]),
     );
     const megaSource = official.sources.find((source) => source.id === "OFF-MEGA-HOENN-20260809");
     expect(megaSource?.supports).toEqual([
@@ -107,17 +143,23 @@ describe("Gen 3 #252-#281 integration", () => {
   });
 
   it("keeps both Wurmple branch paths without inventing a cross-branch edge", () => {
-    expect(evolutionPairs252281).toEqual(expect.arrayContaining([
-      ["265-hoenn", "266-hoenn"],
-      ["265-hoenn", "268-hoenn"],
-      ["266-hoenn", "267-hoenn"],
-      ["268-hoenn", "269-hoenn"],
-    ]));
+    expect(evolutionPairs252281).toEqual(
+      expect.arrayContaining([
+        ["265-hoenn", "266-hoenn"],
+        ["265-hoenn", "268-hoenn"],
+        ["266-hoenn", "267-hoenn"],
+        ["268-hoenn", "269-hoenn"],
+      ]),
+    );
     expect(row("265-hoenn-normal")?.evolutionPaths.map((path) => path.toFormId)).toEqual(
       expect.arrayContaining(["266-hoenn", "268-hoenn"]),
     );
-    expect(row("265-hoenn-normal")?.evolutionPaths.map((path) => path.toFormId)).not.toContain("267-hoenn");
-    expect(row("265-hoenn-normal")?.evolutionPaths.map((path) => path.toFormId)).not.toContain("269-hoenn");
+    expect(row("265-hoenn-normal")?.evolutionPaths.map((path) => path.toFormId)).not.toContain(
+      "267-hoenn",
+    );
+    expect(row("265-hoenn-normal")?.evolutionPaths.map((path) => path.toFormId)).not.toContain(
+      "269-hoenn",
+    );
   });
 
   it("materializes the owning Gen4 Gallade form from Kirlia", () => {
@@ -129,40 +171,44 @@ describe("Gen 3 #252-#281 integration", () => {
   });
 
   it("has no duplicate standard forms, dangling paths, or text corruption", () => {
-    const standard = dashboard.filter((candidate) =>
-      candidate.dexNumber >= 252 && candidate.dexNumber <= 281 &&
-      candidate.formKey === "HOENN",
+    const standard = dashboard.filter(
+      (candidate) =>
+        candidate.dexNumber >= 252 && candidate.dexNumber <= 281 && candidate.formKey === "HOENN",
     );
     expect(new Set(standard.map((candidate) => candidate.formId)).size).toBe(30);
-    expect(standard.every((candidate) =>
-      candidate.evolutionPaths.every((path) =>
-        path.toFormId === "475-sinnoh" || dashboard.some((item) => item.formId === path.toFormId),
+    expect(
+      standard.every((candidate) =>
+        candidate.evolutionPaths.every(
+          (path) =>
+            path.toFormId === "475-sinnoh" ||
+            dashboard.some((item) => item.formId === path.toFormId),
+        ),
       ),
-    )).toBe(true);
+    ).toBe(true);
     for (const file of [
-      "../research_notes/official-252-281.json",
-      "../research_notes/battle-252-281.json",
+      "../research_notes/sources/official-252-281.json",
+      "../research_notes/sources/battle-252-281.json",
       "../review/252-281.json",
       "../site-data/dashboard.json",
       "../site-data/home.json",
-      "../research_notes/cross-generation-evolution-targets.json",
+      "../research_notes/sources/cross-generation-evolution-targets.json",
     ]) {
       const value = JSON.parse(readFileSync(new URL(file, import.meta.url), "utf8"));
       expect(findTextIntegrityIssues(value, file), file).toEqual([]);
     }
   });
 
-  it("preserves the accepted Gen 1-2 conclusion set while propagating canonical family value", () => {
+  it("propagates the conservative release-evidence policy through the Gen 1-2 conclusion set", () => {
     const existing = dashboard.filter((candidate) => candidate.dexNumber <= 251);
-    expect(existing).toHaveLength(1190);
+    expect(existing).toHaveLength(1194);
     expect(existing.filter((candidate) => candidate.decision === "KEEP")).toHaveLength(91);
     expect(existing.filter((candidate) => candidate.decision === "CONDITIONAL_KEEP")).toHaveLength(
-      302,
+      316,
     );
     expect(
       existing.filter((candidate) => candidate.decision === "TRANSFER_CANDIDATE"),
-    ).toHaveLength(797);
-    expect(existing.some((candidate) => candidate.decision === "HOLD_FOR_NOW")).toBe(false);
+    ).toHaveLength(769);
+    expect(existing.filter((candidate) => candidate.decision === "HOLD_FOR_NOW")).toHaveLength(18);
     expect(
       existing.filter(
         (candidate) =>
@@ -174,9 +220,13 @@ describe("Gen 3 #252-#281 integration", () => {
   });
 
   it("keeps the first batch free of safety holds", () => {
-    const batchRows = dashboard.filter((candidate) => candidate.dexNumber >= 252 && candidate.dexNumber <= 281);
+    const batchRows = dashboard.filter(
+      (candidate) => candidate.dexNumber >= 252 && candidate.dexNumber <= 281,
+    );
     expect(batchRows).toHaveLength(123);
-    expect(batchRows.some((candidate) => candidate.assessmentDisposition === "TRUE_DATA_PENDING")).toBe(false);
+    expect(
+      batchRows.some((candidate) => candidate.assessmentDisposition === "TRUE_DATA_PENDING"),
+    ).toBe(false);
     expect(batchRows.some((candidate) => candidate.decision === "HOLD_FOR_NOW")).toBe(false);
     expect(review).toMatchObject({
       dataVersion: DATA_VERSION,

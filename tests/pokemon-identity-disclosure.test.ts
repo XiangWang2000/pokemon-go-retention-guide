@@ -8,8 +8,10 @@ describe("Pokémon identity disclosure", () => {
     expect(source.match(/<button/g)?.length).toBe(1);
     expect(source).toContain("onClick={onToggle}");
     expect(source).toContain("aria-expanded={expanded}");
-    expect(source).toContain('aria-controls={controlsId ?? `form-detail-${form.formId}`}');
-    expect(source).toContain('aria-label={`${expanded ? "收合" : "展開"}${form.nameZhTw}詳細資料`}');
+    expect(source).toContain("aria-controls={controlsId ?? `form-detail-${form.formId}`}");
+    expect(source).toContain(
+      'aria-label={`${expanded ? "收合" : "展開"}${form.nameZhTw}詳細資料`}',
+    );
   });
 
   it("keeps the 44 px disclosure icon target while making the name area clickable", () => {

@@ -4,12 +4,12 @@ import { getDashboardRows } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
 import { buildFormOverviews } from "@/presentation/form-overview";
 import { loadCrossGenerationEvolutionData } from "@/data/cross-generation-evolution";
-import recalibrationReport from "../review/001-311-recalibration.json";
+import recalibrationReport from "../review/history/001-311-recalibration.json";
 
 const forms = buildFormOverviews(await getDashboardRows());
 const families = buildFamilyOverviews(forms);
 const crossGenerationManifest = JSON.parse(
-  readFileSync("research_notes/cross-generation-evolution-targets.json", "utf8"),
+  readFileSync("research_notes/sources/cross-generation-evolution-targets.json", "utf8"),
 ) as {
   targets: Array<Record<string, unknown>>;
   paths: Array<Record<string, unknown>>;
@@ -35,9 +35,19 @@ describe("cross-generation evolution targets", () => {
       regionKey: "SINNOH",
       fromFormId: "315-hoenn",
     });
-    expect(loadedCrossGenerationData.targets.some((target) => target.formKey === "OTHER" && target.dexNumber === 407)).toBe(false);
-    expect(loadedCrossGenerationData.paths.filter((path) => path.fromFormId === "315-hoenn" && path.toFormId === "407-sinnoh")).toHaveLength(1);
-    expect(loadedCrossGenerationData.paths.some((path) => path.toFormId === "407-other")).toBe(false);
+    expect(
+      loadedCrossGenerationData.targets.some(
+        (target) => target.formKey === "OTHER" && target.dexNumber === 407,
+      ),
+    ).toBe(false);
+    expect(
+      loadedCrossGenerationData.paths.filter(
+        (path) => path.fromFormId === "315-hoenn" && path.toFormId === "407-sinnoh",
+      ),
+    ).toHaveLength(1);
+    expect(loadedCrossGenerationData.paths.some((path) => path.toFormId === "407-other")).toBe(
+      false,
+    );
   });
 
   it("keeps formal later-generation paths for high-risk families", () => {
@@ -111,13 +121,14 @@ describe("cross-generation evolution targets", () => {
 
     for (const [dexNumber, targetName] of Object.entries(expectedTargets)) {
       const rows = recalibrationReport.highRiskReview.filter(
-        (item) => item.dexNumber === Number(dexNumber) && ["NORMAL", "SHADOW"].includes(item.variantKey),
+        (item) =>
+          item.dexNumber === Number(dexNumber) && ["NORMAL", "SHADOW"].includes(item.variantKey),
       );
       expect(rows, `#${dexNumber}`).toHaveLength(2);
-      expect(rows.map((item) => item.laterEvolutionTarget), `#${dexNumber}`).toEqual([
-        targetName,
-        targetName,
-      ]);
+      expect(
+        rows.map((item) => item.laterEvolutionTarget),
+        `#${dexNumber}`,
+      ).toEqual([targetName, targetName]);
     }
   });
 
@@ -158,8 +169,12 @@ describe("cross-generation evolution targets", () => {
   it("keeps Deoxys Defense retention layers aligned", () => {
     const defense = forms.find((form) => form.formId === "386-defense");
     expect(defense?.decision).toBe("TRANSFER_CANDIDATE");
-    expect(defense?.variants.find((variant) => variant.row.variantKey === "NORMAL")?.row)
-      .toMatchObject({ assessmentDisposition: "NO_SIGNIFICANT_USE", decision: "TRANSFER_CANDIDATE" });
+    expect(
+      defense?.variants.find((variant) => variant.row.variantKey === "NORMAL")?.row,
+    ).toMatchObject({
+      assessmentDisposition: "NO_SIGNIFICANT_USE",
+      decision: "TRANSFER_CANDIDATE",
+    });
 
     const family = familyContaining("386-defense");
     expect(family.retentionStrategy).toBe("MOSTLY_TRANSFER");

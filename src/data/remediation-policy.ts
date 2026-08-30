@@ -1,5 +1,38 @@
 import type { EvaluationDataStatusValue } from "@/rules/engine";
 
+export type RemediationReleaseStatus = "RELEASED" | "UNRELEASED" | "UNKNOWN";
+
+export function resolveReleaseStatus(
+  officialStatus: RemediationReleaseStatus | null | undefined,
+): RemediationReleaseStatus {
+  return officialStatus ?? "UNKNOWN";
+}
+
+export function resolveCategoryProvenance(input: {
+  status: EvaluationDataStatusValue;
+  explicit?: "SOURCE_VERIFIED" | "MANUAL_CURATED" | "INHERITED" | "DATA_UNAVAILABLE";
+  linkedSourceCount: number;
+}) {
+  if (input.explicit) return input.explicit;
+  if (["DATA_UNAVAILABLE", "SOURCE_MISSING", "UNKNOWN_RELEASE_STATUS"].includes(input.status)) {
+    return "DATA_UNAVAILABLE" as const;
+  }
+  return input.linkedSourceCount > 0 ? ("SOURCE_VERIFIED" as const) : ("MANUAL_CURATED" as const);
+}
+
+export function stableReviewIssueKey(input: {
+  type: string;
+  category?: string | null;
+  categories?: readonly string[];
+}) {
+  const scope = input.category
+    ? `category-${input.category}`
+    : input.categories?.length
+      ? `categories-${[...new Set(input.categories)].sort().join("-")}`
+      : "variant";
+  return `${input.type}-${scope}`;
+}
+
 export interface PvpRankInput {
   league?: string;
   cup?: string;
@@ -42,6 +75,19 @@ export function normalizePvpRank(input: PvpRankInput) {
 
 export function pvpCategoryCanPopulateOverall(category: string | null | undefined) {
   return category === "OVERALL";
+}
+
+export function unknownReleaseIssueDetails(variantKey: string) {
+  const affectsFamily =
+    variantKey === "NORMAL" || variantKey.startsWith("MEGA") || variantKey === "GIGANTAMAX";
+  const scopedVariantLabel =
+    variantKey === "PURIFIED" ? "淨化" : variantKey === "SHADOW" ? "暗影" : "戰鬥";
+  return {
+    affectsFamily,
+    messageZhTw: affectsFamily
+      ? "此版本是否已在 Pokémon GO 推出仍無法由可靠原始來源確認，可能影響家族總結。"
+      : `此${scopedVariantLabel}版本是否已推出仍待確認；僅影響此版本，不影響家族總結。`,
+  } as const;
 }
 
 export interface PokebattlerIdentity {

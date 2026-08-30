@@ -28,12 +28,13 @@ export const CURRENT_RELEASE_CONTRACT = {
   dataVersion: DATA_VERSION,
   dataAsOf: DATA_VERSION_DATE_ISO,
   expectedCounts: {
-    battleVariants: 2344,
+    battleVariants: 2348,
     families: 302,
     ivRecommendations: 13,
-    trueDataPending: 0,
+    trueDataPending: 18,
   },
   snapshot: {
+    databaseUrl: "file:./rebuild-ci.db",
     manifestPath: "site-data/manifest.json",
     exportPath: `public/exports/pokemon-go-retention-${registryScope}.xlsx`,
     generatedRoots: ["site-data", "public/data", "public/exports"] as const,

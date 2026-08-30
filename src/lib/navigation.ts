@@ -14,11 +14,7 @@ export function normalizeNavigationPathname(pathname: string, basePath = "") {
   return normalized || "/";
 }
 
-export function isPrimaryNavigationActive(
-  pathname: string,
-  href: string,
-  basePath = "",
-) {
+export function isPrimaryNavigationActive(pathname: string, href: string, basePath = "") {
   const current = normalizeNavigationPathname(pathname, basePath);
   const target = normalizeNavigationPathname(href);
 

@@ -5,7 +5,7 @@ import { assertOfficialEvolutionPathsMaterialized } from "@/data/research-import
 type EvolutionEndpoint = { fromFormId: string; toFormId: string };
 
 const officialPaths = (
-  JSON.parse(readFileSync("research_notes/official-001-030.json", "utf8")) as {
+  JSON.parse(readFileSync("research_notes/sources/official-001-030.json", "utf8")) as {
     evolutionPaths: EvolutionEndpoint[];
   }
 ).evolutionPaths;

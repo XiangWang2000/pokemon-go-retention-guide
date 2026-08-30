@@ -2,524 +2,390 @@ import type { Gen3Form, Gen3Species, Gen3SpecialVariant, PveUseLevel } from "./b
 
 export const species372386: Gen3Species[] = [
   {
-    "dexNumber": 372,
-    "nameEn": "shelgon",
-    "nameZhTw": "甲殼龍",
-    "types": [
-      "DRAGON"
-    ],
-    "familyKey": "HOENN_FAMILY_371"
+    dexNumber: 372,
+    nameEn: "shelgon",
+    nameZhTw: "甲殼龍",
+    types: ["DRAGON"],
+    familyKey: "HOENN_FAMILY_371",
   },
   {
-    "dexNumber": 373,
-    "nameEn": "salamence",
-    "nameZhTw": "暴飛龍",
-    "types": [
-      "DRAGON",
-      "FLYING"
-    ],
-    "familyKey": "HOENN_FAMILY_371"
+    dexNumber: 373,
+    nameEn: "salamence",
+    nameZhTw: "暴飛龍",
+    types: ["DRAGON", "FLYING"],
+    familyKey: "HOENN_FAMILY_371",
   },
   {
-    "dexNumber": 374,
-    "nameEn": "beldum",
-    "nameZhTw": "鐵啞鈴",
-    "types": [
-      "STEEL",
-      "PSYCHIC"
-    ],
-    "familyKey": "HOENN_FAMILY_374"
+    dexNumber: 374,
+    nameEn: "beldum",
+    nameZhTw: "鐵啞鈴",
+    types: ["STEEL", "PSYCHIC"],
+    familyKey: "HOENN_FAMILY_374",
   },
   {
-    "dexNumber": 375,
-    "nameEn": "metang",
-    "nameZhTw": "金屬怪",
-    "types": [
-      "STEEL",
-      "PSYCHIC"
-    ],
-    "familyKey": "HOENN_FAMILY_374"
+    dexNumber: 375,
+    nameEn: "metang",
+    nameZhTw: "金屬怪",
+    types: ["STEEL", "PSYCHIC"],
+    familyKey: "HOENN_FAMILY_374",
   },
   {
-    "dexNumber": 376,
-    "nameEn": "metagross",
-    "nameZhTw": "巨金怪",
-    "types": [
-      "STEEL",
-      "PSYCHIC"
-    ],
-    "familyKey": "HOENN_FAMILY_374"
+    dexNumber: 376,
+    nameEn: "metagross",
+    nameZhTw: "巨金怪",
+    types: ["STEEL", "PSYCHIC"],
+    familyKey: "HOENN_FAMILY_374",
   },
   {
-    "dexNumber": 377,
-    "nameEn": "regirock",
-    "nameZhTw": "雷吉洛克",
-    "types": [
-      "ROCK"
-    ],
-    "familyKey": "HOENN_FAMILY_377"
+    dexNumber: 377,
+    nameEn: "regirock",
+    nameZhTw: "雷吉洛克",
+    types: ["ROCK"],
+    familyKey: "HOENN_FAMILY_377",
   },
   {
-    "dexNumber": 378,
-    "nameEn": "regice",
-    "nameZhTw": "雷吉艾斯",
-    "types": [
-      "ICE"
-    ],
-    "familyKey": "HOENN_FAMILY_378"
+    dexNumber: 378,
+    nameEn: "regice",
+    nameZhTw: "雷吉艾斯",
+    types: ["ICE"],
+    familyKey: "HOENN_FAMILY_378",
   },
   {
-    "dexNumber": 379,
-    "nameEn": "registeel",
-    "nameZhTw": "雷吉斯奇魯",
-    "types": [
-      "STEEL"
-    ],
-    "familyKey": "HOENN_FAMILY_379"
+    dexNumber: 379,
+    nameEn: "registeel",
+    nameZhTw: "雷吉斯奇魯",
+    types: ["STEEL"],
+    familyKey: "HOENN_FAMILY_379",
   },
   {
-    "dexNumber": 380,
-    "nameEn": "latias",
-    "nameZhTw": "拉帝亞斯",
-    "types": [
-      "DRAGON",
-      "PSYCHIC"
-    ],
-    "familyKey": "HOENN_FAMILY_380"
+    dexNumber: 380,
+    nameEn: "latias",
+    nameZhTw: "拉帝亞斯",
+    types: ["DRAGON", "PSYCHIC"],
+    familyKey: "HOENN_FAMILY_380",
   },
   {
-    "dexNumber": 381,
-    "nameEn": "latios",
-    "nameZhTw": "拉帝歐斯",
-    "types": [
-      "DRAGON",
-      "PSYCHIC"
-    ],
-    "familyKey": "HOENN_FAMILY_381"
+    dexNumber: 381,
+    nameEn: "latios",
+    nameZhTw: "拉帝歐斯",
+    types: ["DRAGON", "PSYCHIC"],
+    familyKey: "HOENN_FAMILY_381",
   },
   {
-    "dexNumber": 382,
-    "nameEn": "kyogre",
-    "nameZhTw": "蓋歐卡",
-    "types": [
-      "WATER"
-    ],
-    "familyKey": "HOENN_FAMILY_382"
+    dexNumber: 382,
+    nameEn: "kyogre",
+    nameZhTw: "蓋歐卡",
+    types: ["WATER"],
+    familyKey: "HOENN_FAMILY_382",
   },
   {
-    "dexNumber": 383,
-    "nameEn": "groudon",
-    "nameZhTw": "固拉多",
-    "types": [
-      "GROUND"
-    ],
-    "familyKey": "HOENN_FAMILY_383"
+    dexNumber: 383,
+    nameEn: "groudon",
+    nameZhTw: "固拉多",
+    types: ["GROUND"],
+    familyKey: "HOENN_FAMILY_383",
   },
   {
-    "dexNumber": 384,
-    "nameEn": "rayquaza",
-    "nameZhTw": "烈空坐",
-    "types": [
-      "DRAGON",
-      "FLYING"
-    ],
-    "familyKey": "HOENN_FAMILY_384"
+    dexNumber: 384,
+    nameEn: "rayquaza",
+    nameZhTw: "烈空坐",
+    types: ["DRAGON", "FLYING"],
+    familyKey: "HOENN_FAMILY_384",
   },
   {
-    "dexNumber": 385,
-    "nameEn": "jirachi",
-    "nameZhTw": "基拉祈",
-    "types": [
-      "STEEL",
-      "PSYCHIC"
-    ],
-    "familyKey": "HOENN_FAMILY_385"
+    dexNumber: 385,
+    nameEn: "jirachi",
+    nameZhTw: "基拉祈",
+    types: ["STEEL", "PSYCHIC"],
+    familyKey: "HOENN_FAMILY_385",
   },
   {
-    "dexNumber": 386,
-    "nameEn": "deoxys",
-    "nameZhTw": "代歐奇希斯",
-    "types": [
-      "PSYCHIC"
-    ],
-    "familyKey": "HOENN_FAMILY_386"
-  }
+    dexNumber: 386,
+    nameEn: "deoxys",
+    nameZhTw: "代歐奇希斯",
+    types: ["PSYCHIC"],
+    familyKey: "HOENN_FAMILY_386",
+  },
 ];
 
 export const forms372386: Gen3Form[] = [
   {
-    "id": "372-hoenn",
-    "dexNumber": 372,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "DRAGON"
-    ],
-    "aliases": [
-      "shelgon",
-      "甲殼龍"
-    ],
-    "evolvesFromFormId": "371-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "372-hoenn",
+    dexNumber: 372,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["DRAGON"],
+    aliases: ["shelgon", "甲殼龍"],
+    evolvesFromFormId: "371-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "373-hoenn",
-    "dexNumber": 373,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "DRAGON",
-      "FLYING"
-    ],
-    "aliases": [
-      "salamence",
-      "暴飛龍"
-    ],
-    "evolvesFromFormId": "372-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "373-hoenn",
+    dexNumber: 373,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["DRAGON", "FLYING"],
+    aliases: ["salamence", "暴飛龍"],
+    evolvesFromFormId: "372-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "374-hoenn",
-    "dexNumber": 374,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "STEEL",
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "beldum",
-      "鐵啞鈴"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "374-hoenn",
+    dexNumber: 374,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["STEEL", "PSYCHIC"],
+    aliases: ["beldum", "鐵啞鈴"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "375-hoenn",
-    "dexNumber": 375,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "STEEL",
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "metang",
-      "金屬怪"
-    ],
-    "evolvesFromFormId": "374-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "375-hoenn",
+    dexNumber: 375,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["STEEL", "PSYCHIC"],
+    aliases: ["metang", "金屬怪"],
+    evolvesFromFormId: "374-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "376-hoenn",
-    "dexNumber": 376,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "STEEL",
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "metagross",
-      "巨金怪"
-    ],
-    "evolvesFromFormId": "375-hoenn",
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "376-hoenn",
+    dexNumber: 376,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["STEEL", "PSYCHIC"],
+    aliases: ["metagross", "巨金怪"],
+    evolvesFromFormId: "375-hoenn",
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "377-hoenn",
-    "dexNumber": 377,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ROCK"
-    ],
-    "aliases": [
-      "regirock",
-      "雷吉洛克"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "377-hoenn",
+    dexNumber: 377,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ROCK"],
+    aliases: ["regirock", "雷吉洛克"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "378-hoenn",
-    "dexNumber": 378,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "ICE"
-    ],
-    "aliases": [
-      "regice",
-      "雷吉艾斯"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "378-hoenn",
+    dexNumber: 378,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["ICE"],
+    aliases: ["regice", "雷吉艾斯"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "379-hoenn",
-    "dexNumber": 379,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "STEEL"
-    ],
-    "aliases": [
-      "registeel",
-      "雷吉斯奇魯"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "379-hoenn",
+    dexNumber: 379,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["STEEL"],
+    aliases: ["registeel", "雷吉斯奇魯"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "380-hoenn",
-    "dexNumber": 380,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "DRAGON",
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "latias",
-      "拉帝亞斯"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "380-hoenn",
+    dexNumber: 380,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["DRAGON", "PSYCHIC"],
+    aliases: ["latias", "拉帝亞斯"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "381-hoenn",
-    "dexNumber": 381,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "DRAGON",
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "latios",
-      "拉帝歐斯"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "381-hoenn",
+    dexNumber: 381,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["DRAGON", "PSYCHIC"],
+    aliases: ["latios", "拉帝歐斯"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "382-hoenn",
-    "dexNumber": 382,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "WATER"
-    ],
-    "aliases": [
-      "kyogre",
-      "蓋歐卡"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、原始回歸、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "382-hoenn",
+    dexNumber: 382,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["WATER"],
+    aliases: ["kyogre", "蓋歐卡"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、原始回歸、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "383-hoenn",
-    "dexNumber": 383,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "GROUND"
-    ],
-    "aliases": [
-      "groudon",
-      "固拉多"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、原始回歸、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "383-hoenn",
+    dexNumber: 383,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["GROUND"],
+    aliases: ["groudon", "固拉多"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、原始回歸、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "384-hoenn",
-    "dexNumber": 384,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "DRAGON",
-      "FLYING"
-    ],
-    "aliases": [
-      "rayquaza",
-      "烈空坐"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "384-hoenn",
+    dexNumber: 384,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["DRAGON", "FLYING"],
+    aliases: ["rayquaza", "烈空坐"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "385-hoenn",
-    "dexNumber": 385,
-    "formKey": "HOENN",
-    "formNameEn": "Hoenn",
-    "formNameZhTw": "豐緣",
-    "regionKey": "HOENN",
-    "types": [
-      "STEEL",
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "jirachi",
-      "基拉祈"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
-    "isStub": false,
-    "includeVariants": true
+    id: "385-hoenn",
+    dexNumber: 385,
+    formKey: "HOENN",
+    formNameEn: "Hoenn",
+    formNameZhTw: "豐緣",
+    regionKey: "HOENN",
+    types: ["STEEL", "PSYCHIC"],
+    aliases: ["jirachi", "基拉祈"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "第三世代標準豐緣型態；普通、暗影、Mega、Max 與後續進化用途分門評估。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "386-attack",
-    "dexNumber": 386,
-    "formKey": "ATTACK",
-    "formNameEn": "Attack Forme",
-    "formNameZhTw": "攻擊形態",
-    "regionKey": "HOENN",
-    "types": [
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "deoxys_attack",
-      "代歐奇希斯攻擊形態",
-      "attack"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "代歐奇希斯的 Normal、Attack、Defense 與 Speed Forme 分開評估；Defense Forme 的 PvP 用途不得被其他型態覆蓋。",
-    "isStub": false,
-    "includeVariants": true
+    id: "386-attack",
+    dexNumber: 386,
+    formKey: "ATTACK",
+    formNameEn: "Attack Forme",
+    formNameZhTw: "攻擊形態",
+    regionKey: "HOENN",
+    types: ["PSYCHIC"],
+    aliases: ["deoxys_attack", "代歐奇希斯攻擊形態", "attack"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "代歐奇希斯的 Normal、Attack、Defense 與 Speed Forme 分開評估；Defense Forme 的 PvP 用途不得被其他型態覆蓋。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "386-defense",
-    "dexNumber": 386,
-    "formKey": "DEFENSE",
-    "formNameEn": "Defense Forme",
-    "formNameZhTw": "防禦形態",
-    "regionKey": "HOENN",
-    "types": [
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "deoxys_defense",
-      "代歐奇希斯防禦形態",
-      "defense"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "代歐奇希斯的 Normal、Attack、Defense 與 Speed Forme 分開評估；Defense Forme 的 PvP 用途不得被其他型態覆蓋。",
-    "isStub": false,
-    "includeVariants": true
+    id: "386-defense",
+    dexNumber: 386,
+    formKey: "DEFENSE",
+    formNameEn: "Defense Forme",
+    formNameZhTw: "防禦形態",
+    regionKey: "HOENN",
+    types: ["PSYCHIC"],
+    aliases: ["deoxys_defense", "代歐奇希斯防禦形態", "defense"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "代歐奇希斯的 Normal、Attack、Defense 與 Speed Forme 分開評估；Defense Forme 的 PvP 用途不得被其他型態覆蓋。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "386-normal",
-    "dexNumber": 386,
-    "formKey": "NORMAL",
-    "formNameEn": "Normal Forme",
-    "formNameZhTw": "一般形態",
-    "regionKey": "HOENN",
-    "types": [
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "deoxys",
-      "代歐奇希斯",
-      "normal"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "代歐奇希斯的 Normal、Attack、Defense 與 Speed Forme 分開評估；Defense Forme 的 PvP 用途不得被其他型態覆蓋。",
-    "isStub": false,
-    "includeVariants": true
+    id: "386-normal",
+    dexNumber: 386,
+    formKey: "NORMAL",
+    formNameEn: "Normal Forme",
+    formNameZhTw: "一般形態",
+    regionKey: "HOENN",
+    types: ["PSYCHIC"],
+    aliases: ["deoxys", "代歐奇希斯", "normal"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "代歐奇希斯的 Normal、Attack、Defense 與 Speed Forme 分開評估；Defense Forme 的 PvP 用途不得被其他型態覆蓋。",
+    isStub: false,
+    includeVariants: true,
   },
   {
-    "id": "386-speed",
-    "dexNumber": 386,
-    "formKey": "SPEED",
-    "formNameEn": "Speed Forme",
-    "formNameZhTw": "速度形態",
-    "regionKey": "HOENN",
-    "types": [
-      "PSYCHIC"
-    ],
-    "aliases": [
-      "deoxys_speed",
-      "代歐奇希斯速度形態",
-      "speed"
-    ],
-    "evolvesFromFormId": null,
-    "evolutionFamilyNotesZhTw": "代歐奇希斯的 Normal、Attack、Defense 與 Speed Forme 分開評估；Defense Forme 的 PvP 用途不得被其他型態覆蓋。",
-    "isStub": false,
-    "includeVariants": true
-  }
+    id: "386-speed",
+    dexNumber: 386,
+    formKey: "SPEED",
+    formNameEn: "Speed Forme",
+    formNameZhTw: "速度形態",
+    regionKey: "HOENN",
+    types: ["PSYCHIC"],
+    aliases: ["deoxys_speed", "代歐奇希斯速度形態", "speed"],
+    evolvesFromFormId: null,
+    evolutionFamilyNotesZhTw:
+      "代歐奇希斯的 Normal、Attack、Defense 與 Speed Forme 分開評估；Defense Forme 的 PvP 用途不得被其他型態覆蓋。",
+    isStub: false,
+    includeVariants: true,
+  },
 ];
 
 export const evolutionPairs372386: readonly [string, string][] = [
-  [
-    "371-hoenn",
-    "372-hoenn"
-  ],
-  [
-    "372-hoenn",
-    "373-hoenn"
-  ],
-  [
-    "374-hoenn",
-    "375-hoenn"
-  ],
-  [
-    "375-hoenn",
-    "376-hoenn"
-  ]
+  ["371-hoenn", "372-hoenn"],
+  ["372-hoenn", "373-hoenn"],
+  ["374-hoenn", "375-hoenn"],
+  ["375-hoenn", "376-hoenn"],
 ];
 
 export const releasedShadowForms372386 = new Set<string>([
@@ -534,7 +400,7 @@ export const releasedShadowForms372386 = new Set<string>([
   "380-hoenn",
   "381-hoenn",
   "382-hoenn",
-  "383-hoenn"
+  "383-hoenn",
 ]);
 export const releasedMegaForms372386 = new Set<string>([
   "373-hoenn",
@@ -543,61 +409,61 @@ export const releasedMegaForms372386 = new Set<string>([
   "381-hoenn",
   "382-hoenn",
   "383-hoenn",
-  "384-hoenn"
+  "384-hoenn",
 ]);
 export const releasedDynamaxForms372386 = new Set<string>();
 export const releasedGigantamaxForms372386 = new Set<string>();
 
 export const specialVariants372386: Gen3SpecialVariant[] = [
   {
-    "id": "373-hoenn-mega",
-    "formId": "373-hoenn",
-    "variantKey": "MEGA",
-    "released": true,
-    "nameZhTw": "Mega 暴飛龍"
+    id: "373-hoenn-mega",
+    formId: "373-hoenn",
+    variantKey: "MEGA",
+    released: true,
+    nameZhTw: "Mega 暴飛龍",
   },
   {
-    "id": "376-hoenn-mega",
-    "formId": "376-hoenn",
-    "variantKey": "MEGA",
-    "released": true,
-    "nameZhTw": "Mega 巨金怪"
+    id: "376-hoenn-mega",
+    formId: "376-hoenn",
+    variantKey: "MEGA",
+    released: true,
+    nameZhTw: "Mega 巨金怪",
   },
   {
-    "id": "380-hoenn-mega",
-    "formId": "380-hoenn",
-    "variantKey": "MEGA",
-    "released": true,
-    "nameZhTw": "Mega 拉帝亞斯"
+    id: "380-hoenn-mega",
+    formId: "380-hoenn",
+    variantKey: "MEGA",
+    released: true,
+    nameZhTw: "Mega 拉帝亞斯",
   },
   {
-    "id": "381-hoenn-mega",
-    "formId": "381-hoenn",
-    "variantKey": "MEGA",
-    "released": true,
-    "nameZhTw": "Mega 拉帝歐斯"
+    id: "381-hoenn-mega",
+    formId: "381-hoenn",
+    variantKey: "MEGA",
+    released: true,
+    nameZhTw: "Mega 拉帝歐斯",
   },
   {
-    "id": "382-hoenn-mega",
-    "formId": "382-hoenn",
-    "variantKey": "MEGA",
-    "released": true,
-    "nameZhTw": "原始蓋歐卡"
+    id: "382-hoenn-mega",
+    formId: "382-hoenn",
+    variantKey: "MEGA",
+    released: true,
+    nameZhTw: "原始蓋歐卡",
   },
   {
-    "id": "383-hoenn-mega",
-    "formId": "383-hoenn",
-    "variantKey": "MEGA",
-    "released": true,
-    "nameZhTw": "原始固拉多"
+    id: "383-hoenn-mega",
+    formId: "383-hoenn",
+    variantKey: "MEGA",
+    released: true,
+    nameZhTw: "原始固拉多",
   },
   {
-    "id": "384-hoenn-mega",
-    "formId": "384-hoenn",
-    "variantKey": "MEGA",
-    "released": true,
-    "nameZhTw": "Mega 烈空坐"
-  }
+    id: "384-hoenn-mega",
+    formId: "384-hoenn",
+    variantKey: "MEGA",
+    released: true,
+    nameZhTw: "Mega 烈空坐",
+  },
 ];
 
 export const pveClassifications372386: Record<string, PveUseLevel> = {
@@ -618,88 +484,88 @@ export const pveClassifications372386: Record<string, PveUseLevel> = {
   "386-attack": "NO_SIGNIFICANT_USE",
   "386-defense": "NO_SIGNIFICANT_USE",
   "386-normal": "NO_SIGNIFICANT_USE",
-  "386-speed": "NO_SIGNIFICANT_USE"
+  "386-speed": "NO_SIGNIFICANT_USE",
 };
 export const pveUseLevels372386: Record<string, PveUseLevel> = {
   "373-hoenn": "CORE_INVESTMENT",
   "376-hoenn": "CORE_INVESTMENT",
   "382-hoenn": "CORE_INVESTMENT",
   "383-hoenn": "CORE_INVESTMENT",
-  "384-hoenn": "CORE_INVESTMENT"
+  "384-hoenn": "CORE_INVESTMENT",
 };
 const pvpokeIds372386: Record<string, { normal: string; shadow: string }> = {
   "372-hoenn": {
-    "normal": "shelgon",
-    "shadow": "shelgon_shadow"
+    normal: "shelgon",
+    shadow: "shelgon_shadow",
   },
   "373-hoenn": {
-    "normal": "salamence",
-    "shadow": "salamence_shadow"
+    normal: "salamence",
+    shadow: "salamence_shadow",
   },
   "374-hoenn": {
-    "normal": "beldum",
-    "shadow": "beldum_shadow"
+    normal: "beldum",
+    shadow: "beldum_shadow",
   },
   "375-hoenn": {
-    "normal": "metang",
-    "shadow": "metang_shadow"
+    normal: "metang",
+    shadow: "metang_shadow",
   },
   "376-hoenn": {
-    "normal": "metagross",
-    "shadow": "metagross_shadow"
+    normal: "metagross",
+    shadow: "metagross_shadow",
   },
   "377-hoenn": {
-    "normal": "regirock",
-    "shadow": "regirock_shadow"
+    normal: "regirock",
+    shadow: "regirock_shadow",
   },
   "378-hoenn": {
-    "normal": "regice",
-    "shadow": "regice_shadow"
+    normal: "regice",
+    shadow: "regice_shadow",
   },
   "379-hoenn": {
-    "normal": "registeel",
-    "shadow": "registeel_shadow"
+    normal: "registeel",
+    shadow: "registeel_shadow",
   },
   "380-hoenn": {
-    "normal": "latias",
-    "shadow": "latias_shadow"
+    normal: "latias",
+    shadow: "latias_shadow",
   },
   "381-hoenn": {
-    "normal": "latios",
-    "shadow": "latios_shadow"
+    normal: "latios",
+    shadow: "latios_shadow",
   },
   "382-hoenn": {
-    "normal": "kyogre",
-    "shadow": "kyogre_shadow"
+    normal: "kyogre",
+    shadow: "kyogre_shadow",
   },
   "383-hoenn": {
-    "normal": "groudon",
-    "shadow": "groudon_shadow"
+    normal: "groudon",
+    shadow: "groudon_shadow",
   },
   "384-hoenn": {
-    "normal": "rayquaza",
-    "shadow": "rayquaza_shadow"
+    normal: "rayquaza",
+    shadow: "rayquaza_shadow",
   },
   "385-hoenn": {
-    "normal": "jirachi",
-    "shadow": "jirachi_shadow"
+    normal: "jirachi",
+    shadow: "jirachi_shadow",
   },
   "386-attack": {
-    "normal": "deoxys_attack",
-    "shadow": "deoxys_attack_shadow"
+    normal: "deoxys_attack",
+    shadow: "deoxys_attack_shadow",
   },
   "386-defense": {
-    "normal": "deoxys_defense",
-    "shadow": "deoxys_defense_shadow"
+    normal: "deoxys_defense",
+    shadow: "deoxys_defense_shadow",
   },
   "386-normal": {
-    "normal": "deoxys",
-    "shadow": "deoxys_shadow"
+    normal: "deoxys",
+    shadow: "deoxys_shadow",
   },
   "386-speed": {
-    "normal": "deoxys_speed",
-    "shadow": "deoxys_speed_shadow"
-  }
+    normal: "deoxys_speed",
+    shadow: "deoxys_speed_shadow",
+  },
 };
 export function pvpokeSpeciesId372386(form: Gen3Form, shadow: boolean) {
   const ids = pvpokeIds372386[form.id];
@@ -708,4 +574,3 @@ export function pvpokeSpeciesId372386(form: Gen3Form, shadow: boolean) {
 }
 
 export const truncatedForms372386 = new Set<string>();
-export const migratedStubIds372386 = new Set<string>();

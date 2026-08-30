@@ -834,7 +834,9 @@ export function EvaluationBrowser({
               <span className="sr-only">用途</span>
               <select
                 value={valueFilter}
-                onChange={(event) => changeFilter(setValueFilter, "valueFilter", event.target.value)}
+                onChange={(event) =>
+                  changeFilter(setValueFilter, "valueFilter", event.target.value)
+                }
                 className={selectClass}
               >
                 <option value="ALL">所有用途</option>

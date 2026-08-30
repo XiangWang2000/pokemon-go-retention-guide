@@ -3,8 +3,12 @@ import {
   normalizePvpRank,
   pokebattlerIdentityKey,
   pvpCategoryCanPopulateOverall,
+  resolveCategoryProvenance,
   resolvePurifiedInheritance,
+  resolveReleaseStatus,
   splitMaxEvaluation,
+  stableReviewIssueKey,
+  unknownReleaseIssueDetails,
 } from "@/data/remediation-policy";
 
 const completeRank = {
@@ -87,6 +91,44 @@ describe("資料修正政策", () => {
     };
     expect(pokebattlerIdentityKey(base)).not.toBe(
       pokebattlerIdentityKey({ ...base, chargedMoveKey: "SOLAR_BEAM" }),
+    );
+  });
+
+  it("13. 推出狀態不明的 Purified 版本保留獨立 review issue", () => {
+    expect(unknownReleaseIssueDetails("PURIFIED")).toEqual({
+      affectsFamily: false,
+      messageZhTw: "此淨化版本是否已推出仍待確認；僅影響此版本，不影響家族總結。",
+    });
+  });
+
+  it("14. 其他非家族版本使用可讀的 review issue 文案", () => {
+    expect(unknownReleaseIssueDetails("DYNAMAX")).toEqual({
+      affectsFamily: false,
+      messageZhTw: "此戰鬥版本是否已推出仍待確認；僅影響此版本，不影響家族總結。",
+    });
+  });
+
+  it("15. 官方未推出狀態優先，沒有正式狀態時維持 UNKNOWN", () => {
+    expect(resolveReleaseStatus("UNRELEASED")).toBe("UNRELEASED");
+    expect(resolveReleaseStatus("RELEASED")).toBe("RELEASED");
+    expect(resolveReleaseStatus(null)).toBe("UNKNOWN");
+  });
+
+  it("16. 實際沒有連結來源時不得標為 SOURCE_VERIFIED", () => {
+    expect(resolveCategoryProvenance({ status: "VERIFIED", linkedSourceCount: 0 })).toBe(
+      "MANUAL_CURATED",
+    );
+    expect(resolveCategoryProvenance({ status: "VERIFIED", linkedSourceCount: 1 })).toBe(
+      "SOURCE_VERIFIED",
+    );
+  });
+
+  it("17. review issue identity 不受類別查詢順序影響", () => {
+    expect(
+      stableReviewIssueKey({ type: "OPTIONAL_DATA_MISSING", categories: ["PVE", "PVP"] }),
+    ).toBe(stableReviewIssueKey({ type: "OPTIONAL_DATA_MISSING", categories: ["PVP", "PVE"] }));
+    expect(stableReviewIssueKey({ type: "MATERIAL_DATA_GAP", category: "PVP" })).not.toBe(
+      stableReviewIssueKey({ type: "MATERIAL_DATA_GAP", category: "PVE" }),
     );
   });
 });
