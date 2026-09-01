@@ -30,7 +30,7 @@ function cloneForm(form: FormOverview, changes: Partial<FormOverview>): FormOver
 }
 
 describe("家族價值與清包策略聚合", () => {
-  it("8/10. 只有推出狀態未確認的家族維持安全暫存", () => {
+  it("8/10. 普通型態已確認後，未知特殊版本不阻擋普通重複清包", () => {
     const kanto = familyContaining("019-kanto");
     const alola = familyContaining("019-alola");
     for (const family of [kanto, alola]) {
@@ -38,7 +38,7 @@ describe("家族價值與清包策略聚合", () => {
         true,
       );
     }
-    expect(kanto).toMatchObject({ familyValue: "UNKNOWN", retentionStrategy: "HOLD_FOR_NOW" });
+    expect(kanto).toMatchObject({ familyValue: "LOW", retentionStrategy: "MOSTLY_TRANSFER" });
     expect(alola).toMatchObject({ familyValue: "LOW", retentionStrategy: "MOSTLY_TRANSFER" });
   });
 
@@ -184,7 +184,7 @@ describe("家族價值與清包策略聚合", () => {
 describe("家族直接處理結論", () => {
   it("高價值家族直接列出聯盟、特殊版本與普通重複處理方式", () => {
     const family = familyContaining("003-kanto");
-    expect(family.handlingSummaryZhTw).toContain("PvP（GL Rank≤100、UL Rank≤100）");
+    expect(family.handlingSummaryZhTw).toContain("PvP（UL Rank≤100）");
     expect(family.handlingSummaryZhTw).toContain("PvE 實戰候選");
     expect(family.handlingSummaryZhTw).toContain("Mega 候選");
     expect(family.handlingSummaryZhTw).toContain("超極巨版本本身");
@@ -214,7 +214,7 @@ describe("家族直接處理結論", () => {
   });
 
   it("低價值與已補齊跨批次家族給出安全的清包動作", () => {
-    expect(familyContaining("020-kanto").handlingSummaryZhTw).toContain("先不要大量傳送");
+    expect(familyContaining("020-kanto").handlingSummaryZhTw).toContain("普通重複可直接傳送");
     expect(familyContaining("030-kanto").handlingSummaryZhTw).toContain("尼多后");
     expect(familyContaining("030-kanto").handlingSummaryZhTw).toContain("普通重複個體可傳");
     expect(familyContaining("030-kanto").isBatchTruncated).toBe(false);

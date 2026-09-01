@@ -89,7 +89,7 @@
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
               "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
               "decision": "CONDITIONAL_KEEP",
               "assessmentDisposition": "CLEAR_USE",
@@ -105,12 +105,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -151,7 +151,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -170,7 +170,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -189,7 +189,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -208,7 +208,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -227,7 +227,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "CORE_INVESTMENT",
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -246,7 +246,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -265,7 +265,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -280,9 +280,9 @@
                   "speciesKey": "bulbasaur",
                   "formKey": "001-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 1040,
-                  "rating": "421",
-                  "score": 421,
+                  "rank": 1041,
+                  "rating": "422",
+                  "score": 422,
                   "tier": null,
                   "recommendedMoves": [
                     "VINE_WHIP",
@@ -290,16 +290,16 @@
                     "SEED_BOMB"
                   ],
                   "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-                  "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-14T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
@@ -323,12 +323,12 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -393,26 +393,17 @@
                 "妙蛙草"
               ],
               "variantKey": "SHADOW",
-              "isReleased": null,
-              "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": null,
-              "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
+              "isReleased": true,
+              "releaseStatus": "RELEASED",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
+              "notesZhTw": "完整暗影歷史名單明列此型態與首次推出日期。（官方研究狀態：VERIFIED_SECONDARY_ROSTER）",
               "decision": "CONDITIONAL_KEEP",
               "assessmentDisposition": "CLEAR_USE",
-              "provenance": "DATA_UNAVAILABLE",
+              "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "SOURCE_MISSING",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
-                {
-                  "id": "issue-001-kanto-shadow-2026.08.06-v7-unknown-release-status-variant",
-                  "issueType": "UNKNOWN_RELEASE_STATUS",
-                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
-                },
                 {
                   "id": "issue-001-kanto-shadow-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
@@ -420,12 +411,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -434,13 +425,13 @@
               "megaSummaryZhTw": "此戰鬥版本本身不是 Mega；若物種有 Mega，普通候選價值由最終規則另行處理。",
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-              "requiredMovesSummaryZhTw": "來源建議招式：VINE_WHIP、POWER_WHIP、SLUDGE_BOMB。請先確認限定招式取得方式。",
+              "requiredMovesSummaryZhTw": "來源建議招式：VINE_WHIP、POWER_WHIP、SEED_BOMB。請先確認限定招式取得方式。",
               "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，14攻高整體IV亦可留；Max依角色分開。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：後續進化（妙蛙花）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "evaluation-001-kanto-shadow-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -466,7 +457,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -485,7 +476,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -504,7 +495,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -523,7 +514,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -542,7 +533,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "CORE_INVESTMENT",
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -561,7 +552,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -580,7 +571,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -595,26 +586,26 @@
                   "speciesKey": "bulbasaur_shadow",
                   "formKey": "001-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 1105,
-                  "rating": "343",
-                  "score": 343,
+                  "rank": 1044,
+                  "rating": "411",
+                  "score": 411,
                   "tier": null,
                   "recommendedMoves": [
                     "VINE_WHIP",
                     "POWER_WHIP",
-                    "SLUDGE_BOMB"
+                    "SEED_BOMB"
                   ],
                   "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-                  "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-14T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
@@ -638,12 +629,12 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -708,26 +699,17 @@
                 "妙蛙草"
               ],
               "variantKey": "PURIFIED",
-              "isReleased": null,
-              "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": null,
-              "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
+              "isReleased": true,
+              "releaseStatus": "RELEASED",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
+              "notesZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。（官方研究狀態：AVAILABLE_FROM_PURIFICATION）",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
-              "provenance": "DATA_UNAVAILABLE",
+              "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "SOURCE_MISSING",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
-                {
-                  "id": "issue-001-kanto-purified-2026.08.06-v7-unknown-release-status-variant",
-                  "issueType": "UNKNOWN_RELEASE_STATUS",
-                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
-                },
                 {
                   "id": "issue-001-kanto-purified-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
@@ -735,12 +717,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
@@ -755,7 +737,7 @@
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
               "evaluationId": "evaluation-001-kanto-purified-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
                 "inheritsFromVariantId": "001-kanto-normal",
                 "inheritanceMode": "NORMAL_BASE",
@@ -781,7 +763,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -800,7 +782,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -819,7 +801,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -838,7 +820,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -857,7 +839,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -876,7 +858,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -895,7 +877,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -929,12 +911,12 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -999,7 +981,7 @@
               "variantKey": "DYNAMAX",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
               "notesZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。（官方研究狀態：RELEASED）",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
@@ -1015,12 +997,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -1061,7 +1043,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1080,7 +1062,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1099,7 +1081,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1118,7 +1100,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1137,7 +1119,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1156,7 +1138,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1175,7 +1157,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -1200,30 +1182,30 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -1254,6 +1236,8 @@
         ],
         "releasedVariantKeys": [
           "NORMAL",
+          "SHADOW",
+          "PURIFIED",
           "DYNAMAX"
         ],
         "pvp": {
@@ -1287,7 +1271,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-27T16:00:00.000Z",
+        "updatedAt": "2026-08-31T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1299,7 +1283,6 @@
       "mainUseZhTw": "進化素材",
       "memberSummaryZhTw": "妙蛙種子本體沒有獨立用途；前階主要作符合條件的進化候選。",
       "ivShortLabels": [
-        "GL：Rank≤100",
         "UL：Rank≤100",
         "PvE：15攻優先；14攻高整體IV亦可留",
         "暗影標準較寬；15攻優先，不設硬性最低IV",
@@ -1307,36 +1290,6 @@
         "Max坦克：防禦／HP優先"
       ],
       "ivRecommendations": [
-        {
-          "id": "iv-global-great-league",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "GREAT_LEAGUE",
-          "ivStrategyKey": "GREAT_LEAGUE_RANK",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": null,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": 100,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": 97.5,
-          "recommendedQuantity": null,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
-          "shortIvLabelZhTw": "GL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2"
-        },
         {
           "id": "iv-global-ultra-league",
           "scopeType": "GLOBAL",
@@ -1575,7 +1528,7 @@
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
               "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
               "decision": "CONDITIONAL_KEEP",
               "assessmentDisposition": "CLEAR_USE",
@@ -1591,12 +1544,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -1637,7 +1590,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1656,7 +1609,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1675,7 +1628,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1694,7 +1647,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1713,7 +1666,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "CORE_INVESTMENT",
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1732,7 +1685,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1751,7 +1704,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -1766,7 +1719,7 @@
                   "speciesKey": "ivysaur",
                   "formKey": "002-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 716,
+                  "rank": 722,
                   "rating": "480",
                   "score": 480,
                   "tier": null,
@@ -1776,16 +1729,16 @@
                     "SLUDGE_BOMB"
                   ],
                   "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-                  "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-14T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
@@ -1818,12 +1771,12 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -1888,26 +1841,17 @@
                 "妙蛙花"
               ],
               "variantKey": "SHADOW",
-              "isReleased": null,
-              "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": null,
-              "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
+              "isReleased": true,
+              "releaseStatus": "RELEASED",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
+              "notesZhTw": "完整暗影歷史名單明列此型態與首次推出日期。（官方研究狀態：VERIFIED_SECONDARY_ROSTER）",
               "decision": "CONDITIONAL_KEEP",
               "assessmentDisposition": "CLEAR_USE",
-              "provenance": "DATA_UNAVAILABLE",
+              "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "SOURCE_MISSING",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
-                {
-                  "id": "issue-002-kanto-shadow-2026.08.06-v7-unknown-release-status-variant",
-                  "issueType": "UNKNOWN_RELEASE_STATUS",
-                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "CONDITIONAL_KEEP",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
-                },
                 {
                   "id": "issue-002-kanto-shadow-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
@@ -1915,12 +1859,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。妙蛙花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -1935,7 +1879,7 @@
               "reasonZhTw": "用途有限：後續進化（妙蛙花）已有用途；只保留少量符合條件的進化候選。",
               "evaluationId": "evaluation-002-kanto-shadow-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -1961,7 +1905,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1980,7 +1924,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1999,7 +1943,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2018,7 +1962,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2037,7 +1981,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "CORE_INVESTMENT",
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2056,7 +2000,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2075,7 +2019,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -2090,9 +2034,9 @@
                   "speciesKey": "ivysaur_shadow",
                   "formKey": "002-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 851,
-                  "rating": "439",
-                  "score": 439,
+                  "rank": 846,
+                  "rating": "441",
+                  "score": 441,
                   "tier": null,
                   "recommendedMoves": [
                     "VINE_WHIP",
@@ -2100,16 +2044,16 @@
                     "SLUDGE_BOMB"
                   ],
                   "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-                  "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-14T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
@@ -2142,12 +2086,12 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -2212,26 +2156,17 @@
                 "妙蛙花"
               ],
               "variantKey": "PURIFIED",
-              "isReleased": null,
-              "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": null,
-              "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
+              "isReleased": true,
+              "releaseStatus": "RELEASED",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
+              "notesZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。（官方研究狀態：AVAILABLE_FROM_PURIFICATION）",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
-              "provenance": "DATA_UNAVAILABLE",
+              "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "SOURCE_MISSING",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
-                {
-                  "id": "issue-002-kanto-purified-2026.08.06-v7-unknown-release-status-variant",
-                  "issueType": "UNKNOWN_RELEASE_STATUS",
-                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
-                },
                 {
                   "id": "issue-002-kanto-purified-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
@@ -2239,12 +2174,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
@@ -2259,7 +2194,7 @@
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
               "evaluationId": "evaluation-002-kanto-purified-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
                 "inheritsFromVariantId": "002-kanto-normal",
                 "inheritanceMode": "NORMAL_BASE",
@@ -2285,7 +2220,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2304,7 +2239,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2323,7 +2258,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2342,7 +2277,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2361,7 +2296,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2380,7 +2315,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2399,7 +2334,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -2442,12 +2377,12 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -2512,7 +2447,7 @@
               "variantKey": "DYNAMAX",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
               "notesZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。（官方研究狀態：RELEASED）",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
@@ -2528,12 +2463,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -2574,7 +2509,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2593,7 +2528,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2612,7 +2547,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2631,7 +2566,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2650,7 +2585,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2669,7 +2604,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2688,7 +2623,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -2722,30 +2657,30 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -2776,6 +2711,8 @@
         ],
         "releasedVariantKeys": [
           "NORMAL",
+          "SHADOW",
+          "PURIFIED",
           "DYNAMAX"
         ],
         "pvp": {
@@ -2809,7 +2746,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-27T16:00:00.000Z",
+        "updatedAt": "2026-08-31T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2821,7 +2758,6 @@
       "mainUseZhTw": "進化素材",
       "memberSummaryZhTw": "妙蛙草本體沒有獨立用途；前階主要作符合條件的進化候選。",
       "ivShortLabels": [
-        "GL：Rank≤100",
         "UL：Rank≤100",
         "PvE：15攻優先；14攻高整體IV亦可留",
         "暗影標準較寬；15攻優先，不設硬性最低IV",
@@ -2829,36 +2765,6 @@
         "Max坦克：防禦／HP優先"
       ],
       "ivRecommendations": [
-        {
-          "id": "iv-global-great-league",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "GREAT_LEAGUE",
-          "ivStrategyKey": "GREAT_LEAGUE_RANK",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": null,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": 100,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": 97.5,
-          "recommendedQuantity": null,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
-          "shortIvLabelZhTw": "GL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2"
-        },
         {
           "id": "iv-global-ultra-league",
           "scopeType": "GLOBAL",
@@ -3067,7 +2973,7 @@
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
               "notesZhTw": "官方頁面有逐物種出現紀錄。（官方研究狀態：RELEASED）",
               "decision": "KEEP",
               "assessmentDisposition": "CLEAR_USE",
@@ -3083,12 +2989,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -3098,7 +3004,7 @@
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "來源建議招式：VINE_WHIP、FRENZY_PLANT、SLUDGE。請先確認限定招式取得方式。",
-              "recommendedIvStrategyZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
+              "recommendedIvStrategyZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
               "evaluationId": "evaluation-003-kanto-normal-2026.08.06-v7",
@@ -3129,7 +3035,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3148,7 +3054,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3167,7 +3073,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3186,7 +3092,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3205,7 +3111,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "CORE_INVESTMENT",
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3224,7 +3130,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3243,11 +3149,107 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
               "raw": [
+                {
+                  "id": "raw-003-kanto-normal-great",
+                  "category": "PVP",
+                  "status": "VERIFIED",
+                  "league": "GREAT",
+                  "cup": "OPEN",
+                  "pvpCategory": "OVERALL",
+                  "speciesKey": "venusaur",
+                  "formKey": "003-kanto",
+                  "variantKey": "NORMAL",
+                  "rank": 252,
+                  "rating": "605",
+                  "score": 605,
+                  "tier": null,
+                  "recommendedMoves": [
+                    "VINE_WHIP",
+                    "FRENZY_PLANT",
+                    "SLUDGE"
+                  ],
+                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
+                  "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
+                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "reproducible": true,
+                  "migrationNote": null,
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
+                  "source": {
+                    "id": "pvpoke-gl-20260901",
+                    "name": "PvPoke",
+                    "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
+                  }
+                },
+                {
+                  "id": "raw-003-kanto-normal-master",
+                  "category": "PVP",
+                  "status": "VERIFIED",
+                  "league": "MASTER",
+                  "cup": "OPEN",
+                  "pvpCategory": "OVERALL",
+                  "speciesKey": "venusaur",
+                  "formKey": "003-kanto",
+                  "variantKey": "NORMAL",
+                  "rank": 279,
+                  "rating": "506",
+                  "score": 506,
+                  "tier": null,
+                  "recommendedMoves": [
+                    "VINE_WHIP",
+                    "FRENZY_PLANT",
+                    "SLUDGE"
+                  ],
+                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
+                  "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
+                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "reproducible": true,
+                  "migrationNote": null,
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
+                  "source": {
+                    "id": "pvpoke-ml-20260901",
+                    "name": "PvPoke",
+                    "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
+                  }
+                },
+                {
+                  "id": "raw-003-kanto-normal-ultra",
+                  "category": "PVP",
+                  "status": "VERIFIED",
+                  "league": "ULTRA",
+                  "cup": "OPEN",
+                  "pvpCategory": "OVERALL",
+                  "speciesKey": "venusaur",
+                  "formKey": "003-kanto",
+                  "variantKey": "NORMAL",
+                  "rank": 223,
+                  "rating": "611",
+                  "score": 611,
+                  "tier": null,
+                  "recommendedMoves": [
+                    "VINE_WHIP",
+                    "FRENZY_PLANT",
+                    "SLUDGE"
+                  ],
+                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
+                  "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
+                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "reproducible": true,
+                  "migrationNote": null,
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
+                  "source": {
+                    "id": "pvpoke-ul-20260901",
+                    "name": "PvPoke",
+                    "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
+                  }
+                },
                 {
                   "id": "research-003-kanto-normal-gym-23",
                   "category": "GYM",
@@ -3306,102 +3308,6 @@
                     "title": "Venusaur: Best Moveset, Counters & Max CP | Pokémon GO",
                     "url": "https://db.pokemongohub.net/pokemon/3"
                   }
-                },
-                {
-                  "id": "raw-003-kanto-normal-great",
-                  "category": "PVP",
-                  "status": "VERIFIED",
-                  "league": "GREAT",
-                  "cup": "OPEN",
-                  "pvpCategory": "OVERALL",
-                  "speciesKey": "venusaur",
-                  "formKey": "003-kanto",
-                  "variantKey": "NORMAL",
-                  "rank": 248,
-                  "rating": "606",
-                  "score": 606,
-                  "tier": null,
-                  "recommendedMoves": [
-                    "VINE_WHIP",
-                    "FRENZY_PLANT",
-                    "SLUDGE"
-                  ],
-                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-                  "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-                  "reproducible": true,
-                  "migrationNote": null,
-                  "checkedAt": "2026-07-14T16:00:00.000Z",
-                  "source": {
-                    "id": "pvpoke-gl-20260715",
-                    "name": "PvPoke",
-                    "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
-                  }
-                },
-                {
-                  "id": "raw-003-kanto-normal-master",
-                  "category": "PVP",
-                  "status": "VERIFIED",
-                  "league": "MASTER",
-                  "cup": "OPEN",
-                  "pvpCategory": "OVERALL",
-                  "speciesKey": "venusaur",
-                  "formKey": "003-kanto",
-                  "variantKey": "NORMAL",
-                  "rank": 283,
-                  "rating": "505",
-                  "score": 505,
-                  "tier": null,
-                  "recommendedMoves": [
-                    "VINE_WHIP",
-                    "FRENZY_PLANT",
-                    "SLUDGE"
-                  ],
-                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-                  "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-                  "reproducible": true,
-                  "migrationNote": null,
-                  "checkedAt": "2026-07-14T16:00:00.000Z",
-                  "source": {
-                    "id": "pvpoke-ml-20260715",
-                    "name": "PvPoke",
-                    "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
-                  }
-                },
-                {
-                  "id": "raw-003-kanto-normal-ultra",
-                  "category": "PVP",
-                  "status": "VERIFIED",
-                  "league": "ULTRA",
-                  "cup": "OPEN",
-                  "pvpCategory": "OVERALL",
-                  "speciesKey": "venusaur",
-                  "formKey": "003-kanto",
-                  "variantKey": "NORMAL",
-                  "rank": 224,
-                  "rating": "611",
-                  "score": 611,
-                  "tier": null,
-                  "recommendedMoves": [
-                    "VINE_WHIP",
-                    "FRENZY_PLANT",
-                    "SLUDGE"
-                  ],
-                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-                  "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-                  "reproducible": true,
-                  "migrationNote": null,
-                  "checkedAt": "2026-07-14T16:00:00.000Z",
-                  "source": {
-                    "id": "pvpoke-ul-20260715",
-                    "name": "PvPoke",
-                    "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
-                  }
                 }
               ],
               "sources": [
@@ -3442,30 +3348,30 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -3485,41 +3391,10 @@
               "PvE"
             ],
             "primaryUseKeys": [
-              "GREAT_LEAGUE",
               "ULTRA_LEAGUE",
               "PVE"
             ],
             "ivRecommendations": [
-              {
-                "id": "iv-global-great-league",
-                "scopeType": "GLOBAL",
-                "scopeKey": "GLOBAL",
-                "primaryUseKey": "GREAT_LEAGUE",
-                "ivStrategyKey": "GREAT_LEAGUE_RANK",
-                "maxBattleRole": null,
-                "attackIvMin": null,
-                "attackIvPriority": null,
-                "attackIvConditionalMin": null,
-                "secondaryAttackIv": null,
-                "defenseIvMin": null,
-                "defenseIvPriority": null,
-                "staminaIvMin": null,
-                "staminaIvPriority": null,
-                "totalIvPercentMin": null,
-                "totalIvPercentPriority": null,
-                "secondaryTotalIvPercentMin": null,
-                "pvpRankMax": 100,
-                "pvpRankConditionalMax": null,
-                "pvpPrMin": 97.5,
-                "recommendedQuantity": null,
-                "hundoPriority": false,
-                "appliesOnlyWhenUseConfirmed": true,
-                "speciesSpecificOverride": false,
-                "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
-                "shortIvLabelZhTw": "GL：Rank≤100",
-                "rulesVersion": "2026.07.28-v2"
-              },
               {
                 "id": "iv-global-ultra-league",
                 "scopeType": "GLOBAL",
@@ -3582,11 +3457,10 @@
               }
             ],
             "ivShortLabels": [
-              "GL：Rank≤100",
               "UL：Rank≤100",
               "PvE：15攻優先；14攻高整體IV亦可留"
             ],
-            "ivDirection": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
+            "ivDirection": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
             "shortReason": "主要用途：PvP、PvE。"
           },
           {
@@ -3615,26 +3489,17 @@
               ],
               "evolutionNames": [],
               "variantKey": "SHADOW",
-              "isReleased": null,
-              "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": null,
-              "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
+              "isReleased": true,
+              "releaseStatus": "RELEASED",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
+              "notesZhTw": "完整暗影歷史名單明列此型態與首次推出日期。（官方研究狀態：VERIFIED_SECONDARY_ROSTER）",
               "decision": "KEEP",
               "assessmentDisposition": "CLEAR_USE",
-              "provenance": "DATA_UNAVAILABLE",
+              "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
-                {
-                  "id": "issue-003-kanto-shadow-2026.08.06-v7-unknown-release-status-variant",
-                  "issueType": "UNKNOWN_RELEASE_STATUS",
-                  "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "KEEP",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
-                },
                 {
                   "id": "issue-003-kanto-shadow-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
@@ -3642,12 +3507,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -3662,7 +3527,7 @@
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
               "evaluationId": "evaluation-003-kanto-shadow-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
                 "inheritsFromVariantId": null,
                 "inheritanceMode": "NONE",
@@ -3688,7 +3553,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3707,7 +3572,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3726,7 +3591,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3745,7 +3610,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3764,7 +3629,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "CORE_INVESTMENT",
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3783,7 +3648,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3802,11 +3667,107 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
               "raw": [
+                {
+                  "id": "raw-003-kanto-shadow-great",
+                  "category": "PVP",
+                  "status": "VERIFIED",
+                  "league": "GREAT",
+                  "cup": "OPEN",
+                  "pvpCategory": "OVERALL",
+                  "speciesKey": "venusaur_shadow",
+                  "formKey": "003-kanto",
+                  "variantKey": "SHADOW",
+                  "rank": 333,
+                  "rating": "589",
+                  "score": 589,
+                  "tier": null,
+                  "recommendedMoves": [
+                    "VINE_WHIP",
+                    "FRENZY_PLANT",
+                    "SLUDGE"
+                  ],
+                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
+                  "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
+                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "reproducible": true,
+                  "migrationNote": null,
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
+                  "source": {
+                    "id": "pvpoke-gl-20260901",
+                    "name": "PvPoke",
+                    "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
+                  }
+                },
+                {
+                  "id": "raw-003-kanto-shadow-master",
+                  "category": "PVP",
+                  "status": "VERIFIED",
+                  "league": "MASTER",
+                  "cup": "OPEN",
+                  "pvpCategory": "OVERALL",
+                  "speciesKey": "venusaur_shadow",
+                  "formKey": "003-kanto",
+                  "variantKey": "SHADOW",
+                  "rank": 264,
+                  "rating": "510",
+                  "score": 510,
+                  "tier": null,
+                  "recommendedMoves": [
+                    "VINE_WHIP",
+                    "FRENZY_PLANT",
+                    "SLUDGE"
+                  ],
+                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
+                  "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
+                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "reproducible": true,
+                  "migrationNote": null,
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
+                  "source": {
+                    "id": "pvpoke-ml-20260901",
+                    "name": "PvPoke",
+                    "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
+                  }
+                },
+                {
+                  "id": "raw-003-kanto-shadow-ultra",
+                  "category": "PVP",
+                  "status": "VERIFIED",
+                  "league": "ULTRA",
+                  "cup": "OPEN",
+                  "pvpCategory": "OVERALL",
+                  "speciesKey": "venusaur_shadow",
+                  "formKey": "003-kanto",
+                  "variantKey": "SHADOW",
+                  "rank": 224,
+                  "rating": "611",
+                  "score": 611,
+                  "tier": null,
+                  "recommendedMoves": [
+                    "VINE_WHIP",
+                    "FRENZY_PLANT",
+                    "SLUDGE"
+                  ],
+                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
+                  "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
+                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "reproducible": true,
+                  "migrationNote": null,
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
+                  "source": {
+                    "id": "pvpoke-ul-20260901",
+                    "name": "PvPoke",
+                    "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
+                  }
+                },
                 {
                   "id": "research-003-kanto-shadow-pve-1",
                   "category": "PVE",
@@ -3836,102 +3797,6 @@
                     "name": "Pokémon GO Hub Database",
                     "title": "Shadow Venusaur: Best Moveset, Counters & Max CP | Pokémon GO",
                     "url": "https://db.pokemongohub.net/pokemon/3-Shadow"
-                  }
-                },
-                {
-                  "id": "raw-003-kanto-shadow-great",
-                  "category": "PVP",
-                  "status": "VERIFIED",
-                  "league": "GREAT",
-                  "cup": "OPEN",
-                  "pvpCategory": "OVERALL",
-                  "speciesKey": "venusaur_shadow",
-                  "formKey": "003-kanto",
-                  "variantKey": "SHADOW",
-                  "rank": 333,
-                  "rating": "588",
-                  "score": 588,
-                  "tier": null,
-                  "recommendedMoves": [
-                    "VINE_WHIP",
-                    "FRENZY_PLANT",
-                    "SLUDGE"
-                  ],
-                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-                  "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-                  "reproducible": true,
-                  "migrationNote": null,
-                  "checkedAt": "2026-07-14T16:00:00.000Z",
-                  "source": {
-                    "id": "pvpoke-gl-20260715",
-                    "name": "PvPoke",
-                    "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
-                  }
-                },
-                {
-                  "id": "raw-003-kanto-shadow-master",
-                  "category": "PVP",
-                  "status": "VERIFIED",
-                  "league": "MASTER",
-                  "cup": "OPEN",
-                  "pvpCategory": "OVERALL",
-                  "speciesKey": "venusaur_shadow",
-                  "formKey": "003-kanto",
-                  "variantKey": "SHADOW",
-                  "rank": 263,
-                  "rating": "507",
-                  "score": 507,
-                  "tier": null,
-                  "recommendedMoves": [
-                    "VINE_WHIP",
-                    "FRENZY_PLANT",
-                    "SLUDGE"
-                  ],
-                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-                  "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-                  "reproducible": true,
-                  "migrationNote": null,
-                  "checkedAt": "2026-07-14T16:00:00.000Z",
-                  "source": {
-                    "id": "pvpoke-ml-20260715",
-                    "name": "PvPoke",
-                    "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
-                  }
-                },
-                {
-                  "id": "raw-003-kanto-shadow-ultra",
-                  "category": "PVP",
-                  "status": "VERIFIED",
-                  "league": "ULTRA",
-                  "cup": "OPEN",
-                  "pvpCategory": "OVERALL",
-                  "speciesKey": "venusaur_shadow",
-                  "formKey": "003-kanto",
-                  "variantKey": "SHADOW",
-                  "rank": 225,
-                  "rating": "612",
-                  "score": 612,
-                  "tier": null,
-                  "recommendedMoves": [
-                    "VINE_WHIP",
-                    "FRENZY_PLANT",
-                    "SLUDGE"
-                  ],
-                  "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-                  "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-                  "reproducible": true,
-                  "migrationNote": null,
-                  "checkedAt": "2026-07-14T16:00:00.000Z",
-                  "source": {
-                    "id": "pvpoke-ul-20260715",
-                    "name": "PvPoke",
-                    "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -3973,30 +3838,30 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -4114,26 +3979,17 @@
               ],
               "evolutionNames": [],
               "variantKey": "PURIFIED",
-              "isReleased": null,
-              "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": null,
-              "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
+              "isReleased": true,
+              "releaseStatus": "RELEASED",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
+              "notesZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。（官方研究狀態：AVAILABLE_FROM_PURIFICATION）",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
-              "provenance": "DATA_UNAVAILABLE",
+              "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [
-                {
-                  "id": "issue-003-kanto-purified-2026.08.06-v7-unknown-release-status-variant",
-                  "issueType": "UNKNOWN_RELEASE_STATUS",
-                  "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "affectsFinalDecision": false,
-                  "provisionalDecision": "TRANSFER_CANDIDATE",
-                  "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
-                },
                 {
                   "id": "issue-003-kanto-purified-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
                   "issueType": "OPTIONAL_DATA_MISSING",
@@ -4141,12 +3997,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "TRANSFER_CANDIDATE",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
@@ -4161,7 +4017,7 @@
               "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
               "evaluationId": "evaluation-003-kanto-purified-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
-              "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+              "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
               "inheritance": {
                 "inheritsFromVariantId": "003-kanto-normal",
                 "inheritanceMode": "NORMAL_BASE_WITH_OVERRIDE",
@@ -4187,7 +4043,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4206,7 +4062,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4225,7 +4081,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4244,7 +4100,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4263,7 +4119,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4282,7 +4138,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4301,7 +4157,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -4353,30 +4209,30 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -4426,7 +4282,7 @@
               "variantKey": "MEGA",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
               "notesZhTw": "Mega Venusaur 已正式推出。（官方研究狀態：RELEASED）",
               "decision": "KEEP",
               "assessmentDisposition": "CLEAR_USE",
@@ -4442,12 +4298,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響MEGA 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -4488,7 +4344,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4507,7 +4363,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4526,7 +4382,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4545,7 +4401,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4564,7 +4420,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "CORE_INVESTMENT",
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4583,7 +4439,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4602,7 +4458,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "CLEAR_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -4677,30 +4533,30 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -4820,7 +4676,7 @@
               "variantKey": "DYNAMAX",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
               "notesZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。（官方研究狀態：RELEASED）",
               "decision": "CONDITIONAL_KEEP",
               "assessmentDisposition": "LIMITED_USE",
@@ -4836,12 +4692,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -4882,7 +4738,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4901,7 +4757,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4920,7 +4776,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4939,7 +4795,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4958,7 +4814,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "SPECIAL_USE",
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4977,7 +4833,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -4996,7 +4852,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -5071,30 +4927,30 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -5144,7 +5000,7 @@
               "variantKey": "GIGANTAMAX",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
               "notesZhTw": "Gigantamax Venusaur 已於 2024-10-26 至 2024-10-27 首次登場。（官方研究狀態：RELEASED）",
               "decision": "CONDITIONAL_KEEP",
               "assessmentDisposition": "LIMITED_USE",
@@ -5160,12 +5016,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響GIGANTAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
               "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -5206,7 +5062,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -5225,7 +5081,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -5244,7 +5100,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -5263,7 +5119,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -5282,7 +5138,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "SPECIAL_USE",
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -5301,7 +5157,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -5320,7 +5176,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-07-28T04:00:00.000Z",
+                  "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -5395,30 +5251,30 @@
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
                 }
               ],
@@ -5488,6 +5344,8 @@
         ],
         "releasedVariantKeys": [
           "NORMAL",
+          "SHADOW",
+          "PURIFIED",
           "MEGA",
           "DYNAMAX",
           "GIGANTAMAX"
@@ -5514,36 +5372,6 @@
         "decision": "KEEP",
         "decisionReason": "PvP看目標聯盟個體Rank；PvE先看招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留。",
         "ivRecommendations": [
-          {
-            "id": "iv-global-great-league",
-            "scopeType": "GLOBAL",
-            "scopeKey": "GLOBAL",
-            "primaryUseKey": "GREAT_LEAGUE",
-            "ivStrategyKey": "GREAT_LEAGUE_RANK",
-            "maxBattleRole": null,
-            "attackIvMin": null,
-            "attackIvPriority": null,
-            "attackIvConditionalMin": null,
-            "secondaryAttackIv": null,
-            "defenseIvMin": null,
-            "defenseIvPriority": null,
-            "staminaIvMin": null,
-            "staminaIvPriority": null,
-            "totalIvPercentMin": null,
-            "totalIvPercentPriority": null,
-            "secondaryTotalIvPercentMin": null,
-            "pvpRankMax": 100,
-            "pvpRankConditionalMax": null,
-            "pvpPrMin": 97.5,
-            "recommendedQuantity": null,
-            "hundoPriority": false,
-            "appliesOnlyWhenUseConfirmed": true,
-            "speciesSpecificOverride": false,
-            "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
-            "shortIvLabelZhTw": "GL：Rank≤100",
-            "rulesVersion": "2026.07.28-v2"
-          },
           {
             "id": "iv-global-ultra-league",
             "scopeType": "GLOBAL",
@@ -5696,14 +5524,13 @@
           }
         ],
         "ivShortLabels": [
-          "GL：Rank≤100",
           "UL：Rank≤100",
           "PvE：15攻優先；14攻高整體IV亦可留",
           "暗影標準較寬；15攻優先，不設硬性最低IV",
           "Mega：15攻優先；14攻高整體IV亦可留",
           "Max坦克：防禦／HP優先"
         ],
-        "ivDirection": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。；Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。；Max坦克：防禦／HP優先；依實際耐久與物種角色比較，不套攻擊手門檻。",
+        "ivDirection": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。；Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。；Max坦克：防禦／HP優先；依實際耐久與物種角色比較，不套攻擊手門檻。",
         "primaryUses": [
           "PvP",
           "PvE",
@@ -5711,7 +5538,6 @@
           "Max Battle"
         ],
         "primaryUseKeys": [
-          "GREAT_LEAGUE",
           "ULTRA_LEAGUE",
           "PVE",
           "SHADOW_PVE",
@@ -5722,7 +5548,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-27T16:00:00.000Z",
+        "updatedAt": "2026-08-31T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -5738,9 +5564,8 @@
         "Max候選"
       ],
       "mainUseZhTw": "獨立PvP用途、獨立PvE用途、Mega 候選、Max候選",
-      "memberSummaryZhTw": "主要保留妙蛙花；IV以GL：Rank≤100、UL：Rank≤100、PvE：15攻優先；14攻高整體IV亦可留為準。",
+      "memberSummaryZhTw": "主要保留妙蛙花；IV以UL：Rank≤100、PvE：15攻優先；14攻高整體IV亦可留、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
       "ivShortLabels": [
-        "GL：Rank≤100",
         "UL：Rank≤100",
         "PvE：15攻優先；14攻高整體IV亦可留",
         "暗影標準較寬；15攻優先，不設硬性最低IV",
@@ -5748,36 +5573,6 @@
         "Max坦克：防禦／HP優先"
       ],
       "ivRecommendations": [
-        {
-          "id": "iv-global-great-league",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "GREAT_LEAGUE",
-          "ivStrategyKey": "GREAT_LEAGUE_RANK",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": null,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": 100,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": 97.5,
-          "recommendedQuantity": null,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
-          "shortIvLabelZhTw": "GL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2"
-        },
         {
           "id": "iv-global-ultra-league",
           "scopeType": "GLOBAL",
@@ -5937,6 +5732,8 @@
   ],
   "releasedVariantKeys": [
     "NORMAL",
+    "SHADOW",
+    "PURIFIED",
     "DYNAMAX",
     "MEGA",
     "GIGANTAMAX"
@@ -5968,7 +5765,6 @@
       "memberNameZhTw": "妙蛙花",
       "displayNameZhTw": "妙蛙花",
       "useKeys": [
-        "GREAT_LEAGUE",
         "ULTRA_LEAGUE",
         "PVE",
         "SHADOW_PVE",
@@ -5986,10 +5782,9 @@
   ],
   "primaryTargetSummaryZhTw": "妙蛙花",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
-  "handlingSummaryZhTw": "保留妙蛙花（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、Mega 候選、超極巨版本本身、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留妙蛙花；前階主要作符合條件的進化候選。IV：GL：Rank≤100；UL：Rank≤100；PvE：15攻優先；14攻高整體IV亦可留。",
+  "handlingSummaryZhTw": "保留妙蛙花（PvP（UL Rank≤100）、PvE 實戰候選、Mega 候選、超極巨版本本身、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留妙蛙花；前階主要作符合條件的進化候選。IV：UL：Rank≤100；PvE：15攻優先；14攻高整體IV亦可留；暗影標準較寬；15攻優先，不設硬性最低IV。",
   "ivShortLabels": [
-    "GL：Rank≤100",
     "UL：Rank≤100",
     "PvE：15攻優先；14攻高整體IV亦可留",
     "暗影標準較寬；15攻優先，不設硬性最低IV",
@@ -5997,36 +5792,6 @@
     "Max坦克：防禦／HP優先"
   ],
   "ivRecommendations": [
-    {
-      "id": "iv-global-great-league",
-      "scopeType": "GLOBAL",
-      "scopeKey": "GLOBAL",
-      "primaryUseKey": "GREAT_LEAGUE",
-      "ivStrategyKey": "GREAT_LEAGUE_RANK",
-      "maxBattleRole": null,
-      "attackIvMin": null,
-      "attackIvPriority": null,
-      "attackIvConditionalMin": null,
-      "secondaryAttackIv": null,
-      "defenseIvMin": null,
-      "defenseIvPriority": null,
-      "staminaIvMin": null,
-      "staminaIvPriority": null,
-      "totalIvPercentMin": null,
-      "totalIvPercentPriority": null,
-      "secondaryTotalIvPercentMin": null,
-      "pvpRankMax": 100,
-      "pvpRankConditionalMax": null,
-      "pvpPrMin": 97.5,
-      "recommendedQuantity": null,
-      "hundoPriority": false,
-      "appliesOnlyWhenUseConfirmed": true,
-      "speciesSpecificOverride": false,
-      "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
-      "shortIvLabelZhTw": "GL：Rank≤100",
-      "rulesVersion": "2026.07.28-v2"
-    },
     {
       "id": "iv-global-ultra-league",
       "scopeType": "GLOBAL",
@@ -6178,7 +5943,7 @@
       "rulesVersion": "2026.07.28-v2"
     }
   ],
-  "ivSummaryZhTw": "依成員用途分開保留：GL：Rank≤100；UL：Rank≤100；PvE：15攻優先；14攻高整體IV亦可留；暗影標準較寬；15攻優先，不設硬性最低IV；Mega：15攻優先；14攻高整體IV亦可留；Max坦克：防禦／HP優先",
+  "ivSummaryZhTw": "依成員用途分開保留：UL：Rank≤100；PvE：15攻優先；14攻高整體IV亦可留；暗影標準較寬；15攻優先，不設硬性最低IV；Mega：15攻優先；14攻高整體IV亦可留；Max坦克：防禦／HP優先",
   "primaryUses": [
     "後續進化",
     "PvP",
@@ -6190,7 +5955,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-27T16:00:00.000Z",
+  "updatedAt": "2026-08-31T16:00:00.000Z",
   "minDexNumber": 1,
   "maxDexNumber": 3,
   "detailsLoaded": true

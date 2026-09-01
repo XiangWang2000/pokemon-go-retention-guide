@@ -38,7 +38,7 @@ describe("audit PvP use filtering", () => {
   it("does not generate PvP use for a verified but non-actionable standard-league rank", () => {
     const summary = toAuditRowSummary(bulbasaur);
 
-    expect(summary.pvpRanks.GREAT).toBe(1040);
+    expect(summary.pvpRanks.GREAT).toBe(1041);
     expect(summary.hasPvpUse).toBe(false);
     expect(summary.hasSpecialCupUse).toBe(false);
     expect(summary.hasCuratedPvpUse).toBe(false);
@@ -48,7 +48,7 @@ describe("audit PvP use filtering", () => {
   it("keeps the regenerated committed summary free of the previous false positive", () => {
     expect(committedBulbasaur).toBeDefined();
     expect(committedBulbasaur?.hasPvpUse).toBe(false);
-    expect(committedBulbasaur?.pvpRanks.GREAT).toBe(1040);
+    expect(committedBulbasaur?.pvpRanks.GREAT).toBe(1041);
     expect(filtered([committedBulbasaur!])).toEqual([]);
   });
 

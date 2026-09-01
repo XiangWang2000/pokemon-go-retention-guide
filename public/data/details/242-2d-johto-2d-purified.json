@@ -17,16 +17,6 @@
   "conflicts": [],
   "changeLogs": [
     {
-      "id": "recalibrate-20260809-disposition-242-johto-purified",
-      "fieldName": "assessmentDisposition",
-      "previousValue": "NOT_APPLICABLE_OR_UNRELEASED",
-      "newValue": "NO_SIGNIFICANT_USE",
-      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-08-27T16:00:00.000Z",
-      "rulesVersion": "2026.08.06-v7",
-      "source": null
-    },
-    {
       "id": "change-r20-eval-242-johto-purified-iv-c868126bf460ec3e",
       "fieldName": "recommendedIvStrategyZhTw",
       "previousValue": "沒有主要用途時，不因 100% 自動產生保留理由。",

@@ -14,6 +14,7 @@ import {
   toFormId,
 } from "../src/data/batch-001-030";
 import { evaluateRetention } from "../src/rules/engine";
+import { releaseStatusFromPvpRanking } from "../src/data/remediation-policy";
 import { RULES_VERSION } from "../src/rules/rules";
 import { integrateResearchData } from "../src/data/research-import";
 
@@ -24,6 +25,8 @@ const adapter = new PrismaBetterSqlite3({
 });
 const prisma = new PrismaClient({ adapter });
 const checkedAt = new Date("2026-07-15T00:00:00+08:00");
+const pvpCheckedAt = new Date("2026-09-01T00:00:00+08:00");
+const pvpSnapshotRoot = "data/sources/pvpoke/2026-09-01";
 
 interface PvpokeEntry {
   speciesId: string;
@@ -37,15 +40,20 @@ interface RankingRecord extends PvpokeEntry {
 }
 
 const cpLeague = [
-  { cp: 1500, league: "GREAT", sourceId: "pvpoke-gl-20260715" },
-  { cp: 2500, league: "ULTRA", sourceId: "pvpoke-ul-20260715" },
-  { cp: 10000, league: "MASTER", sourceId: "pvpoke-ml-20260715" },
+  { cp: 1500, league: "GREAT", sourceId: "pvpoke-gl-20260901" },
+  { cp: 2500, league: "ULTRA", sourceId: "pvpoke-ul-20260901" },
+  { cp: 10000, league: "MASTER", sourceId: "pvpoke-ml-20260901" },
+] as const;
+const legacyCpLeague = [
+  { cp: 1500, sourceId: "pvpoke-gl-20260715" },
+  { cp: 2500, sourceId: "pvpoke-ul-20260715" },
+  { cp: 10000, sourceId: "pvpoke-ml-20260715" },
 ] as const;
 
 async function readRankings() {
   const result = new Map<string, Map<string, RankingRecord>>();
   for (const item of cpLeague) {
-    const json = await readFile(`data/sources/pvpoke/rankings-${item.cp}.json`, "utf8");
+    const json = await readFile(`${pvpSnapshotRoot}/rankings-${item.cp}.json`, "utf8");
     const rows = JSON.parse(json.replace(/^\uFEFF/, "")) as PvpokeEntry[];
     result.set(
       item.league,
@@ -58,11 +66,20 @@ async function readRankings() {
 async function seedSources() {
   let version = "pvpoke/master";
   try {
-    const raw = await readFile("data/sources/pvpoke/source-version.json", "utf8");
+    const raw = await readFile(`${pvpSnapshotRoot}/source-version.json`, "utf8");
     const parsed = JSON.parse(raw.replace(/^\uFEFF/, "")) as Array<{ sha?: string }>;
     if (parsed[0]?.sha) version = parsed[0].sha;
   } catch {
     // 保留可重跑的分支版本；驗證工具會提示缺少快照版本。
+  }
+
+  let legacyVersion = "pvpoke/master";
+  try {
+    const raw = await readFile("data/sources/pvpoke/source-version.json", "utf8");
+    const parsed = JSON.parse(raw.replace(/^\uFEFF/, "")) as Array<{ sha?: string }>;
+    if (parsed[0]?.sha) legacyVersion = parsed[0].sha;
+  } catch {
+    // Later batch importers still require the legacy source rows and will validate their snapshot.
   }
 
   const sources = cpLeague.map((item) => ({
@@ -73,14 +90,28 @@ async function seedSources() {
     sourceTitleOriginal: `PvPoke Open League Overall Rankings (${item.cp} CP JSON)`,
     sourceLanguage: "en",
     sourceSummaryZhTw: "PvPoke 公開儲存庫的物種整體排名資料；此排名不是個體 IV Rank。",
-    accessedAt: checkedAt,
+    accessedAt: pvpCheckedAt,
     publishedAt: null,
     dataVersion: version,
-    notes: "本機原始快照保存於 data/sources/pvpoke。",
+    notes: `本機原始快照保存於 ${pvpSnapshotRoot}。`,
+  }));
+  const legacySources = legacyCpLeague.map((item) => ({
+    id: item.sourceId,
+    sourceName: "PvPoke",
+    sourceUrl: `https://raw.githubusercontent.com/pvpoke/pvpoke/${legacyVersion}/src/data/rankings/all/overall/rankings-${item.cp}.json`,
+    sourceType: "PVP" as const,
+    sourceTitleOriginal: `PvPoke Open League Overall Rankings (${item.cp} CP JSON)`,
+    sourceLanguage: "en",
+    sourceSummaryZhTw: "PvPoke 公開儲存庫的物種整體排名資料；此排名不是個體 IV Rank。",
+    accessedAt: checkedAt,
+    publishedAt: null,
+    dataVersion: legacyVersion,
+    notes: "本機原始快照保存於 data/sources/pvpoke；供 #031 之後既有批次重現。",
   }));
   await prisma.sourceReference.createMany({
     data: [
       ...sources,
+      ...legacySources,
       {
         id: "official-shadow-mechanic-20260715",
         sourceName: "Pokémon GO Help Center",
@@ -241,8 +272,11 @@ async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, Rank
       const isShadow = variantKey === "SHADOW";
       const isPurified = variantKey === "PURIFIED";
       const isMega = variantKey.startsWith("MEGA");
+      // PvPoke ranking presence is battle evidence, never release evidence.
+      // Batch importers and remediation attach the actual release sources later.
+      const initialReleaseStatus = releaseStatusFromPvpRanking(Boolean(best));
       const released =
-        isNormal || isMega ? true : isShadow || isPurified ? (best ? true : null) : null;
+        initialReleaseStatus === "UNKNOWN" ? null : initialReleaseStatus === "RELEASED";
       const variantId = `${form.id}-${variantKey.toLowerCase().replaceAll("_", "-")}`;
       await prisma.battleVariant.create({
         data: {
@@ -251,12 +285,7 @@ async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, Rank
           variantKey: variantKey as never,
           isReleased: released,
           releaseVerifiedAt: released === null ? null : checkedAt,
-          notesZhTw:
-            released === null
-              ? "目前缺少能確認此戰鬥版本推出狀態的官方物種級來源。"
-              : isPurified
-                ? "淨化版本必須由已推出的暗影版本產生，與暗影分開評估。"
-                : "此戰鬥版本以獨立記錄評估。",
+          notesZhTw: "初始 seed 不使用 PvPoke 排名推導推出狀態；由批次來源與推導規則更新。",
         },
       });
 
@@ -279,9 +308,9 @@ async function seedVariantsAndEvaluations(rankings: Map<string, Map<string, Rank
               recommendedMoves: JSON.stringify(row.moveset ?? []),
               rawNotes:
                 "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-              seasonOrVersion: "PvPoke master snapshot 2026-07-15",
+              seasonOrVersion: "PvPoke master snapshot 2026-09-01",
               sourceId: item.sourceId,
-              checkedAt,
+              checkedAt: pvpCheckedAt,
             },
           });
         }

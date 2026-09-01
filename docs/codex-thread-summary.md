@@ -68,6 +68,16 @@
 - Release remediation now preserves official `UNRELEASED`, treats missing evidence as `UNKNOWN`, and no longer infers Dynamax or Gigantamax release from Pokédex ranges or ranking presence. The controlled contract therefore records 30 current `TRUE_DATA_PENDING` evaluations instead of concealing those gaps with fallback assertions.
 - Destructive seed/import/recompute/remediation/materialization entrypoints require `ALLOW_DESTRUCTIVE_REBUILD=1` and the repository-owned `file:./rebuild-ci.db` disposable database.
 
+## 2026-09-01 r27 first-batch official release audit
+
+- DATA_VERSION is `2026.09.01-r27`; the #001～#030 official-source pass confirms Dynamax Caterpie directly and Dynamax Metapod／Butterfree through the official evolution rule, and fills official normal-form evidence for Metapod, Kanto Raticate, Fearow, and Arbok.
+- Mega Raichu X／Y are now `RELEASED`, backed by the 2026-07-18 debut announcement and a later official live update. The current release contract records 19 `TRUE_DATA_PENDING` evaluations; unresolved Dynamax, Shadow, Purified, PvE, and source-conflict gaps remain review items rather than inferred conclusions.
+
+## 2026-09-01 r29 deterministic release boundary
+
+- DATA_VERSION is `2026.09.01-r29`; the release contract again has zero `TRUE_DATA_PENDING` rows. This is not a Pokédex-range or PvPoke fallback: #001～#030 Shadow, Dynamax, and Gigantamax states are resolved independently against dated, complete historical rosters after explicit user authorization, and those sources remain typed `SECONDARY`.
+- Purified availability now strictly follows the same-form Shadow release state plus the official purification mechanic. A released Shadow implies released Purified; an unreleased Shadow implies unreleased Purified. The seed no longer treats PvPoke ranking presence as release evidence, and recomputation no longer forces every Purified row to `RELEASED`.
+
 ## 2026-08-20 Source-neutral Dashboard read model
 
 - `src/lib/data-read-model.ts` is the Prisma- and snapshot-independent contract for `DashboardRow` and its serialized nested rows. Both `src/lib/data-prisma.ts` and `src/lib/data.ts` return `Promise<DashboardRow[]>` from this shared contract.

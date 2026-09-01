@@ -8,6 +8,17 @@ export function resolveReleaseStatus(
   return officialStatus ?? "UNKNOWN";
 }
 
+export function derivePurifiedReleaseStatus(
+  shadowStatus: RemediationReleaseStatus,
+): RemediationReleaseStatus {
+  return shadowStatus;
+}
+
+export function releaseStatusFromPvpRanking(hasPvpRanking: boolean): RemediationReleaseStatus {
+  void hasPvpRanking;
+  return "UNKNOWN";
+}
+
 export function resolveCategoryProvenance(input: {
   status: EvaluationDataStatusValue;
   explicit?: "SOURCE_VERIFIED" | "MANUAL_CURATED" | "INHERITED" | "DATA_UNAVAILABLE";

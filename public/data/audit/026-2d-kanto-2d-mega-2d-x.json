@@ -22,30 +22,40 @@
   ],
   "evolutionNames": [],
   "variantKey": "MEGA_X",
-  "isReleased": false,
-  "releaseStatus": "UNRELEASED",
-  "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
-  "notesZhTw": "預定 2026-07-18 首次登場；本批查閱日 2026-07-15 尚未推出。（官方研究狀態：ANNOUNCED_NOT_YET_RELEASED）",
-  "decision": "TRANSFER_CANDIDATE",
-  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+  "isReleased": true,
+  "releaseStatus": "RELEASED",
+  "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
+  "notesZhTw": "官方公告 Mega Raichu X 於 2026-07-18 首次登場，並由後續官方現行更新交叉確認已推出。（官方研究狀態：RELEASED）",
+  "decision": "CONDITIONAL_KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
-  "confidence": "HIGH",
-  "dataStatus": "VERIFIED",
+  "confidence": "MEDIUM",
+  "dataStatus": "SOURCE_MISSING",
   "reviewStatus": "RESOLVED",
-  "reviewIssues": [],
-  "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+  "reviewIssues": [
+    {
+      "id": "issue-026-kanto-mega-x-2026.08.06-v7-optional-data-missing-categories-pve-rocket",
+      "issueType": "OPTIONAL_DATA_MISSING",
+      "messageZhTw": "此欄位待補，但不影響MEGA_X 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "affectsFinalDecision": false,
+      "provisionalDecision": "CONDITIONAL_KEEP",
+      "suggestedResearchActionZhTw": "此欄位待補，但不影響MEGA_X 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "lastResearchedAt": "2026-08-31T16:00:00.000Z"
+    }
+  ],
+  "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
-  "updatedAt": "2026-08-27T16:00:00.000Z",
-  "pvpSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
-  "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-  "rocketSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+  "updatedAt": "2026-08-31T16:00:00.000Z",
+  "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
+  "pveSummaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估",
+  "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
-  "megaSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
-  "maxBattleSummaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+  "megaSummaryZhTw": "Mega 版本獨立評估；保存屬性定位與來源，不以普通版名次替代。",
+  "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "來源建議招式：THUNDER_SHOCK、WILD_CHARGE。請先確認限定招式取得方式。",
-  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+  "recommendedIvStrategyZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -438,7 +448,7 @@
       "rulesVersion": "2026.07.28-v2"
     }
   ],
-  "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
+  "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
   "evaluationId": "evaluation-026-kanto-mega-x-2026.08.06-v7",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -453,9 +463,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "UNRELEASED",
+      "status": "NOT_APPLICABLE",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+      "summaryZhTw": "本批資料中沒有後續進化路徑。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -466,8 +476,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "assessmentDisposition": "LIMITED_USE",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "OFF-MEGA-RAICHU-2026",
@@ -479,9 +489,9 @@
     },
     {
       "category": "GYM",
-      "status": "UNRELEASED",
-      "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+      "status": "NOT_APPLICABLE",
+      "provenance": "MANUAL_CURATED",
+      "summaryZhTw": "缺少統一精確排名，以 DATA_UNAVAILABLE 表示，不影響已有充分關鍵資料的結論。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -492,22 +502,15 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": [
-        {
-          "id": "OFF-MEGA-RAICHU-2026",
-          "title": "Sparks fly for Raichu Super Mega Raid Day!",
-          "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026",
-          "usageZhTw": "GYM 類別資料狀態與摘要的依據。"
-        }
-      ]
+      "assessmentDisposition": "LIMITED_USE",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
+      "sources": []
     },
     {
       "category": "MAX_BATTLE",
-      "status": "UNRELEASED",
-      "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+      "status": "NOT_APPLICABLE",
+      "provenance": "MANUAL_CURATED",
+      "summaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -518,23 +521,16 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": [
-        {
-          "id": "OFF-MEGA-RAICHU-2026",
-          "title": "Sparks fly for Raichu Super Mega Raid Day!",
-          "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026",
-          "usageZhTw": "MAX_BATTLE 類別資料狀態與摘要的依據。"
-        }
-      ]
+      "assessmentDisposition": "LIMITED_USE",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
+      "sources": []
     },
     {
       "category": "MEGA",
-      "status": "UNRELEASED",
+      "status": "PARTIALLY_VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
-      "materialToDecision": false,
+      "summaryZhTw": "Mega 版本獨立評估；保存屬性定位與來源，不以普通版名次替代。",
+      "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
@@ -544,22 +540,22 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "assessmentDisposition": "LIMITED_USE",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
-          "id": "OFF-MEGA-RAICHU-2026",
-          "title": "Sparks fly for Raichu Super Mega Raid Day!",
-          "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026",
+          "id": "battle2-gohub-mega-raichu-x",
+          "title": "Mega Raichu X: Best Moveset, Counters & Max CP | Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon/26-Mega_X",
           "usageZhTw": "MEGA 類別資料狀態與摘要的依據。"
         }
       ]
     },
     {
       "category": "PVE",
-      "status": "UNRELEASED",
-      "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+      "status": "SOURCE_MISSING",
+      "provenance": "DATA_UNAVAILABLE",
+      "summaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -569,23 +565,16 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": [
-        {
-          "id": "OFF-MEGA-RAICHU-2026",
-          "title": "Sparks fly for Raichu Super Mega Raid Day!",
-          "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026",
-          "usageZhTw": "PVE 類別資料狀態與摘要的依據。"
-        }
-      ]
+      "pveUseLevel": "SPECIAL_USE",
+      "assessmentDisposition": "LIMITED_USE",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
+      "sources": []
     },
     {
       "category": "PVP",
-      "status": "UNRELEASED",
+      "status": "NOT_APPLICABLE",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+      "summaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -596,24 +585,36 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "assessmentDisposition": "LIMITED_USE",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
-          "id": "OFF-MEGA-RAICHU-2026",
-          "title": "Sparks fly for Raichu Super Mega Raid Day!",
-          "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026",
+          "id": "pvpoke-gl-20260901",
+          "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
+          "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
+        },
+        {
+          "id": "pvpoke-ml-20260901",
+          "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
+          "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
+        },
+        {
+          "id": "pvpoke-ul-20260901",
+          "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         }
       ]
     },
     {
       "category": "ROCKET",
-      "status": "UNRELEASED",
-      "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "已確認此戰鬥版本尚未推出，本類別目前不需完整評估。",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
+      "summaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
       "materialToDecision": false,
-      "rocketRating": "NOT_APPLICABLE",
+      "rocketRating": "DATA_UNAVAILABLE",
       "rocketRoles": [],
       "maxTypeRank": null,
       "maxTypeTier": null,
@@ -622,13 +623,13 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "assessmentDisposition": "LIMITED_USE",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
-          "id": "OFF-MEGA-RAICHU-2026",
-          "title": "Sparks fly for Raichu Super Mega Raid Day!",
-          "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026",
+          "id": "OFF-ROCKET-INVASION",
+          "title": "Team GO Rocket invades Pokémon GO!",
+          "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
           "usageZhTw": "ROCKET 類別資料狀態與摘要的依據。"
         }
       ]
@@ -674,17 +675,62 @@
       "title": "Sparks fly for Raichu Super Mega Raid Day!",
       "url": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026",
       "type": "OFFICIAL",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
+      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+    },
+    {
+      "id": "OFF-ROCKET-INVASION",
+      "name": "Pokémon GO",
+      "title": "Team GO Rocket invades Pokémon GO!",
+      "url": "https://pokemongo.com/post/teamgorocket-invasion-2019?hl=en",
+      "type": "OFFICIAL",
       "accessedAt": "2026-07-14T16:00:00.000Z",
+      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+    },
+    {
+      "id": "battle2-gohub-mega-raichu-x",
+      "name": "GO Hub Database",
+      "title": "Mega Raichu X: Best Moveset, Counters & Max CP | Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon/26-Mega_X",
+      "type": "PVE",
+      "accessedAt": "2026-07-14T16:00:00.000Z",
+      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+    },
+    {
+      "id": "pvpoke-gl-20260901",
+      "name": "PvPoke",
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
+      "type": "PVP",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
+      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+    },
+    {
+      "id": "pvpoke-ml-20260901",
+      "name": "PvPoke",
+      "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
+      "type": "PVP",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
+      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+    },
+    {
+      "id": "pvpoke-ul-20260901",
+      "name": "PvPoke",
+      "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
+      "type": "PVP",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     }
   ],
   "traces": [
     {
-      "ruleKey": "UNRELEASED_VARIANT",
-      "priority": 950,
+      "ruleKey": "CONDITIONAL_USE",
+      "priority": 700,
       "matched": true,
-      "resultDecision": "TRANSFER_CANDIDATE",
-      "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
+      "resultDecision": "CONDITIONAL_KEEP",
+      "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
     }
   ],
   "moves": []

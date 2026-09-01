@@ -58,7 +58,7 @@ describe("Excel 匯出", () => {
         pendingRow,
         workbook.worksheets[1].getColumn("provenance").number,
       ).value,
-    ).toBe("DATA_UNAVAILABLE");
+    ).toBe("MANUAL_CURATED");
 
     const reviewHeaders = workbook.worksheets[7].getRow(1).values as unknown[];
     expect(reviewHeaders).toContain("影響最終結論");

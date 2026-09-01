@@ -2087,7 +2087,7 @@
         "typeRank": 78,
         "score": {
           "dps": 11.01,
-          "tdo": 151.0
+          "tdo": 151
         },
         "moves": [
           "GUST",
@@ -2154,7 +2154,7 @@
         "typeRank": 93,
         "score": {
           "dps": 10.39,
-          "tdo": 127.0
+          "tdo": 127
         },
         "moves": [
           "PECK",
@@ -2678,7 +2678,8 @@
       "sourceIds": [
         "pvpoke-gl-json",
         "gohub-fearow"
-      ]
+      ],
+      "affectsDecision": false
     },
     {
       "entity": "018-kanto:MEGA",
@@ -2688,8 +2689,18 @@
       "sourceIds": [
         "gohub-mega-pidgeot",
         "pokebattler-mega-pidgeot-guide"
-      ]
-    },
+      ],
+      "affectsDecision": false
+    }
+  ],
+  "reviewGaps": [
+    "火箭隊用途在 PvPoke、Pokebattler、GO Hub 本輪原始頁中沒有一致的專門排名；所有 #016～#030 ROCKET 欄位應先 NEEDS_REVIEW，而不是從 PvP/PvE 分數直接推算。",
+    "PvPoke 當期 overall 檔未列出的幼體不等於所有特殊盃都無用；僅能記錄 NOT_LISTED，特殊盃另批研究。",
+    "Purified 沒有獨立 speciesId；只有 Return 推薦時可確認招式差異，普通與淨化不能共用結論。",
+    "Max Boss counter 頁只表示該物種可作 Boss 模擬目標，不能證明玩家可持有對應 Dynamax 型態。",
+    "依批次上限未研究 #031 尼多后；#029／#030 的後續進化價值保留 NEEDS_REVIEW。"
+  ],
+  "resolvedSourceConflicts": [
     {
       "entity": "025-kanto:GIGANTAMAX",
       "category": "MAX_BATTLE",
@@ -2699,7 +2710,10 @@
         "gohub-gmax-toxtricity",
         "gohub-gmax-volt-crash",
         "gohub-pikachu"
-      ]
+      ],
+      "status": "RESOLVED",
+      "resolvedAt": "2026-09-01",
+      "resolutionZhTw": "官方推出頁已直接確認超極巨化皮卡丘存在；目前只保留 Max Battle 效益資料缺口，不再視為推出狀態衝突。"
     },
     {
       "entity": "026-kanto:MEGA_X/MEGA_Y",
@@ -2711,7 +2725,10 @@
         "gohub-mega-raichu-y",
         "pokebattler-mega-raichu-x",
         "pokebattler-mega-raichu-y"
-      ]
+      ],
+      "status": "RESOLVED",
+      "resolvedAt": "2026-09-01",
+      "resolutionZhTw": "官方公告與後續官方更新已確認 Mega Raichu X／Y 推出；攻擊手排名不足改列資料缺口，不再視為互斥來源衝突。"
     },
     {
       "entity": "020-alola:NORMAL/PURIFIED",
@@ -2720,14 +2737,10 @@
       "summaryZhTw": "PvPoke 的 raticate_alolan entry 推薦 Return，但 Return 只能來自淨化；不能把該排名原樣寫入普通版。需要將該 raw row 指向 PURIFIED，普通版另跑不含 Return 的模擬。",
       "sourceIds": [
         "pvpoke-gl-json"
-      ]
+      ],
+      "status": "RESOLVED",
+      "resolvedAt": "2026-09-01",
+      "resolutionZhTw": "Return 資料已移至淨化版本 override；普通版不再沿用該招式，原型態歸類衝突已解決。"
     }
-  ],
-  "reviewGaps": [
-    "火箭隊用途在 PvPoke、Pokebattler、GO Hub 本輪原始頁中沒有一致的專門排名；所有 #016～#030 ROCKET 欄位應先 NEEDS_REVIEW，而不是從 PvP/PvE 分數直接推算。",
-    "PvPoke 當期 overall 檔未列出的幼體不等於所有特殊盃都無用；僅能記錄 NOT_LISTED，特殊盃另批研究。",
-    "Purified 沒有獨立 speciesId；只有 Return 推薦時可確認招式差異，普通與淨化不能共用結論。",
-    "Max Boss counter 頁只表示該物種可作 Boss 模擬目標，不能證明玩家可持有對應 Dynamax 型態。",
-    "依批次上限未研究 #031 尼多后；#029／#030 的後續進化價值保留 NEEDS_REVIEW。"
   ]
 }

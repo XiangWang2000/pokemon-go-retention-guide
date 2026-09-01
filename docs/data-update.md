@@ -60,8 +60,13 @@ npm run snapshot:check
 Artifact 只供 provenance 重現使用，不會部署到 GitHub Pages，也不取代 manifest 的 bytes 與 SHA-256 驗證。
 
 驗收除了批次範圍與資料版本，還要確認 2348 個 BattleVariants、302 個展示家族、13 個 IV
-recommendations、18 個目前有效的 `TRUE_DATA_PENDING`、`407-sinnoh`、唯一的 `315-hoenn -> 407-sinnoh`，以及不存在
+recommendations、0 個目前有效的 `TRUE_DATA_PENDING`、`407-sinnoh`、唯一的 `315-hoenn -> 407-sinnoh`，以及不存在
 `407-other`。待補資料主要來自移除沒有正式來源的推出狀態推測；不得為恢復零待補數而重新加入圖鑑號或榜單存在性 fallback。
+
+#001～#030 的 Shadow、Dynamax 與 Gigantamax 推出邊界另以 2026-09-01 完整歷史名單補足：名單明列者
+視為已推出，未列者在取得使用者明確授權後視為截至該查閱日尚未推出；每筆保留名單網址、查閱日與
+SECONDARY 來源類型，Dynamax 與 Gigantamax 分別判定、不互相外推。Purified 狀態只由同型態 Shadow
+與官方淨化機制推導，PvPoke 排名不得參與推出判定。
 
 ## 共用重算規則
 

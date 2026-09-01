@@ -36,7 +36,7 @@
   "reviewIssues": [],
   "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
   "reviewed": true,
-  "updatedAt": "2026-08-27T16:00:00.000Z",
+  "updatedAt": "2026-08-31T16:00:00.000Z",
   "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
   "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -46,7 +46,7 @@
   "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-  "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -593,36 +593,7 @@
       "sources": []
     }
   ],
-  "raw": [
-    {
-      "id": "raw-gen3-372-386-384-hoenn-shadow-pve",
-      "category": "PVE",
-      "status": "PARTIALLY_VERIFIED",
-      "league": "NOT_APPLICABLE",
-      "cup": null,
-      "pvpCategory": null,
-      "speciesKey": "rayquaza_shadow",
-      "formKey": "384-hoenn",
-      "variantKey": "SHADOW",
-      "rank": null,
-      "rating": "A",
-      "score": null,
-      "tier": "A",
-      "recommendedMoves": [],
-      "rawNotes": "PvE 用途依第三世代研究表區分四級用途；不虛構 IV 硬門檻。",
-      "seasonOrVersion": "GO Hub accessed 2026-08-09",
-      "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
-      "reproducible": false,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T16:00:00.000Z",
-      "source": {
-        "id": "PVE-HOENN-20260809",
-        "name": "GO Hub Hoenn PVE data",
-        "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-        "url": "https://db.pokemongohub.net/pokedex/hoenn"
-      }
-    }
-  ],
+  "raw": [],
   "sources": [
     {
       "id": "PVE-HOENN-20260809",

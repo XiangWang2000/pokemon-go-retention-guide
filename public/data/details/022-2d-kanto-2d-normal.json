@@ -14,17 +14,26 @@
       "verifiedAt": null
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    {
+      "id": "issue-022-kanto-normal-2026.08.06-v7-source-conflict-category-pvp",
+      "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "detectedAt": "2026-09-01T04:00:00.000Z"
+    }
+  ],
   "changeLogs": [
     {
-      "id": "recalibrate-20260809-decision-022-kanto-normal",
-      "fieldName": "decision",
-      "previousValue": "HOLD_FOR_NOW",
-      "newValue": "KEEP",
-      "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-      "changedAt": "2026-08-27T16:00:00.000Z",
+      "id": "remediation-release-022-kanto-normal",
+      "fieldName": "releaseStatus",
+      "previousValue": "UNKNOWN",
+      "newValue": "RELEASED",
+      "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
+      "changedAt": "2026-09-01T04:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
-      "source": null
+      "source": {
+        "title": "Celebrate Pokémon’s anniversary with a brand-new event—Pokémon GO Tour: Kanto!",
+        "url": "https://pokemongo.com/post/pokemongotour-kanto?hl=en"
+      }
     },
     {
       "id": "recalibrate-20260809-disposition-022-kanto-normal",
@@ -32,7 +41,7 @@
       "previousValue": "TRUE_DATA_PENDING",
       "newValue": "LIMITED_USE",
       "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-08-27T16:00:00.000Z",
+      "changedAt": "2026-08-31T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": null
     },

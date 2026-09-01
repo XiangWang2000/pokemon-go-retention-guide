@@ -99,13 +99,13 @@ describe("static 唯讀 snapshot", () => {
       pokemonForms: 579,
       battleVariants: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
       rawEvaluationData: 1510,
-      sourceReferences: 221,
+      sourceReferences: 231,
       retentionEvaluations: 2513,
       categoryEvaluations: 16436,
       ivRecommendations: CURRENT_RELEASE_CONTRACT.expectedCounts.ivRecommendations,
       dashboardRows: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
       homeFamilies: CURRENT_RELEASE_CONTRACT.expectedCounts.families,
-      openReviewIssues: 277,
+      openReviewIssues: 166,
     });
     expect(siteSnapshotManifest.sourceDatabase.path).toBe("rebuild-ci.db");
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);

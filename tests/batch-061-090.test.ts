@@ -203,7 +203,7 @@ describe("#061～#090 批次與跨批次家族", () => {
       }),
     );
     expect(html).toContain("立即處理結論");
-    expect(html).toContain("要保留的條件");
+    expect(html).toContain("符合這些條件才留");
     expect(html).toContain("其他普通重複可傳");
   });
 

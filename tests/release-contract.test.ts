@@ -190,6 +190,9 @@ describe("release snapshot promotion", () => {
       await expect(readFile(path.join(target, "public/data/payload.txt"), "utf8")).resolves.toBe(
         "old data",
       );
+      await expect(readFile(path.join(staging, "site-data/payload.txt"), "utf8")).resolves.toBe(
+        "new",
+      );
     } finally {
       await rm(root, { recursive: true, force: true });
     }

@@ -42,7 +42,7 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
 
   it("妙蛙種子總覽只顯示已推出徽章，展開仍保留所有版本", () => {
     const bulbasaur = form("001-kanto");
-    expect(bulbasaur.releasedVariantKeys).toEqual(["NORMAL", "DYNAMAX"]);
+    expect(bulbasaur.releasedVariantKeys).toEqual(["NORMAL", "SHADOW", "PURIFIED", "DYNAMAX"]);
     expect(bulbasaur.variants.map((variant) => variant.row.variantKey)).toEqual([
       "NORMAL",
       "SHADOW",

@@ -6,6 +6,7 @@ import { PrismaClient, type RetentionDecision } from "../../generated/prisma/cli
 import { assertDisposableDatabase, getDatabaseUrl } from "../../src/lib/database";
 import { pvpokeSpeciesId } from "../../src/data/batch-001-030";
 import {
+  derivePurifiedReleaseStatus,
   resolveCategoryProvenance,
   resolveReleaseStatus,
   stableReviewIssueKey,
@@ -14,13 +15,14 @@ import {
 import { evaluateRetention, type EvaluationFacts } from "../../src/rules/engine";
 import { RULES_VERSION } from "../../src/rules/rules";
 
-const checkedAt = new Date("2026-07-28T12:00:00+08:00");
+const checkedAt = new Date("2026-09-01T12:00:00+08:00");
 const databaseUrl = getDatabaseUrl();
 assertDisposableDatabase(databaseUrl);
 const prisma = new PrismaClient({
   adapter: new PrismaBetterSqlite3({ url: databaseUrl }),
 });
 const baseDexRange = { gte: 1, lte: 30 } as const;
+const pvpSnapshotRoot = "data/sources/pvpoke/2026-09-01";
 
 const categories = [
   "PVP",
@@ -32,9 +34,9 @@ const categories = [
   "EVOLUTION_VALUE",
 ] as const;
 const pvpSnapshots = [
-  { league: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260715" },
-  { league: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260715" },
-  { league: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260715" },
+  { league: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260901" },
+  { league: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260901" },
+  { league: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260901" },
 ] as const;
 
 type Category = (typeof categories)[number];
@@ -69,6 +71,17 @@ interface OfficialResearch {
     releaseSourceIds: string[];
     variants: Record<string, { status: string; sourceIds: string[]; noteZhTw: string }>;
   }>;
+}
+interface BattleConflictResearch {
+  entity: string;
+  category: Category;
+  severity: "HIGH" | "MEDIUM" | "LOW";
+  affectsDecision?: boolean;
+  summaryZhTw: string;
+  sourceIds: string[];
+}
+interface BattleResearch {
+  sourceConflicts: BattleConflictResearch[];
 }
 interface RankingRow {
   speciesId: string;
@@ -123,7 +136,7 @@ async function ensureOfficialSources(official: OfficialResearch) {
         sourceSummaryZhTw: source.sourceSummaryZhTw,
         accessedAt,
         publishedAt,
-        dataVersion: source.publishedAt ?? "live page accessed 2026-08-08",
+        dataVersion: source.publishedAt ?? `live page accessed ${source.accessedAt}`,
         notes: "第一批研究來源；保存於 research_notes/sources/official-001-030.json。",
       },
       update: {
@@ -135,7 +148,7 @@ async function ensureOfficialSources(official: OfficialResearch) {
         sourceSummaryZhTw: source.sourceSummaryZhTw,
         accessedAt,
         publishedAt,
-        dataVersion: source.publishedAt ?? "live page accessed 2026-08-08",
+        dataVersion: source.publishedAt ?? `live page accessed ${source.accessedAt}`,
       },
     });
   }
@@ -217,14 +230,12 @@ async function baselineDecisionMap() {
 }
 
 async function loadPvpRankings() {
-  const version = await readJson<Array<{ sha?: string }>>(
-    "data/sources/pvpoke/source-version.json",
-  );
+  const version = await readJson<Array<{ sha?: string }>>(`${pvpSnapshotRoot}/source-version.json`);
   const sha = version[0]?.sha;
   if (!sha) throw new Error("PvPoke 快照缺少 commit SHA，無法重現精確排名。");
   const rankings = new Map<string, RankingRow[]>();
   for (const snapshot of pvpSnapshots) {
-    const path = `data/sources/pvpoke/rankings-${snapshot.cp}.json`;
+    const path = `${pvpSnapshotRoot}/rankings-${snapshot.cp}.json`;
     const bytes = await readFile(path);
     const hash = createHash("sha256").update(bytes).digest("hex");
     const rows = JSON.parse(bytes.toString("utf8").replace(/^\uFEFF/, "")) as RankingRow[];
@@ -244,12 +255,24 @@ async function loadPvpRankings() {
 
 function mapOfficialStatus(value: string | undefined): ReleaseStatus | null {
   if (
-    ["RELEASED", "RELEASED_BY_EVOLUTION_INFERENCE", "AVAILABLE_FROM_PURIFICATION"].includes(
-      value ?? "",
-    )
+    [
+      "VERIFIED",
+      "RELEASED",
+      "RELEASED_BY_EVOLUTION_INFERENCE",
+      "AVAILABLE_FROM_PURIFICATION",
+      "VERIFIED_SECONDARY_ROSTER",
+    ].includes(value ?? "")
   )
     return "RELEASED";
-  if (["ANNOUNCED_NOT_YET_RELEASED", "UNRELEASED"].includes(value ?? "")) return "UNRELEASED";
+  if (
+    [
+      "ANNOUNCED_NOT_YET_RELEASED",
+      "UNRELEASED",
+      "NOT_RELEASED_IN_COMPLETE_ROSTER",
+      "UNRELEASED_BY_SHADOW_AVAILABILITY",
+    ].includes(value ?? "")
+  )
+    return "UNRELEASED";
   return null;
 }
 
@@ -275,8 +298,11 @@ async function applyReleaseStatuses(official: OfficialResearch) {
     for (const variant of form.battleVariants) {
       let status = mapOfficialStatus(source?.variants[variant.variantKey]?.status);
       if (variant.variantKey === "NORMAL" && status === null) status = formStatus;
-      if (variant.variantKey === "PURIFIED" && status === null) {
-        status = mapOfficialStatus(source?.variants.SHADOW?.status);
+      if (variant.variantKey === "PURIFIED") {
+        const shadowStatus = resolveReleaseStatus(
+          mapOfficialStatus(source?.variants.SHADOW?.status),
+        );
+        status = derivePurifiedReleaseStatus(shadowStatus);
       }
       status = resolveReleaseStatus(status);
 
@@ -398,17 +424,17 @@ async function verifyPvpRows(sha: string, rankings: Map<string, RankingRow[]>) {
   const fearow = await prisma.rawEvaluationData.findUnique({
     where: { id: "raw-022-kanto-normal-great" },
   });
-  if (fearow?.rank === 20 && fearow.reproducible) {
+  if (fearow?.rank === 21 && fearow.reproducible) {
     await addChange({
       id: "remediation-fearow-gl-rank-verification",
       entityType: "RawEvaluationData",
       entityId: fearow.id,
       fieldName: "rankVerification",
       previousValue: "候選 #20，重現性未記錄",
-      newValue: "#20，完整榜單可重現",
+      newValue: "#21，完整榜單可重現",
       sourceId: fearow.sourceId,
       reasonZhTw:
-        "逐列驗證 speciesId=fearow、Open Great League、Overall、固定 commit 與陣列索引；#20 可重現，因此保留而非移除。",
+        "逐列驗證 speciesId=fearow、Open Great League、Overall、固定 commit 與陣列索引；#21 可重現，因此保留而非移除。",
     });
   }
   return invalidVariants;
@@ -573,6 +599,74 @@ async function upsertCategory(data: {
         usageZhTw: `${data.category} 類別資料狀態與摘要的依據。`,
       })),
     });
+  }
+}
+
+function normalizedConflictRows(conflicts: BattleConflictResearch[]) {
+  return conflicts.flatMap((conflict) => {
+    const separator = conflict.entity.lastIndexOf(":");
+    if (separator < 1) throw new Error(`無法解析來源衝突 entity：${conflict.entity}`);
+    const formId = conflict.entity.slice(0, separator);
+    return conflict.entity
+      .slice(separator + 1)
+      .split("/")
+      .map((variantKey) => ({
+        ...conflict,
+        variantId: `${formId}-${variantKey.toLowerCase().replaceAll("_", "-")}`,
+      }));
+  });
+}
+
+async function applySourceConflicts(conflicts: BattleConflictResearch[]) {
+  for (const conflict of normalizedConflictRows(conflicts)) {
+    const category = await prisma.categoryEvaluation.findUnique({
+      where: {
+        battleVariantId_category: {
+          battleVariantId: conflict.variantId,
+          category: conflict.category,
+        },
+      },
+    });
+    if (!category) {
+      throw new Error(`來源衝突找不到類別評估：${conflict.variantId}/${conflict.category}`);
+    }
+    const sourceIds = conflict.sourceIds.map((sourceId) => `battle2-${sourceId}`);
+    const existingSources = await prisma.sourceReference.findMany({
+      where: { id: { in: sourceIds } },
+      select: { id: true },
+    });
+    if (existingSources.length !== sourceIds.length) {
+      const existing = new Set(existingSources.map((source) => source.id));
+      throw new Error(
+        `來源衝突缺少來源：${sourceIds.filter((sourceId) => !existing.has(sourceId)).join(", ")}`,
+      );
+    }
+    await prisma.categoryEvaluation.update({
+      where: { id: category.id },
+      data: {
+        status: "SOURCE_CONFLICT",
+        provenance: "SOURCE_VERIFIED",
+        materialToDecision: conflict.affectsDecision ?? conflict.severity === "HIGH",
+        summaryZhTw: `${category.summaryZhTw} 來源衝突：${conflict.summaryZhTw}`,
+        checkedAt,
+      },
+    });
+    for (const sourceId of sourceIds) {
+      await prisma.categoryEvaluationSource.upsert({
+        where: {
+          categoryEvaluationId_sourceId: {
+            categoryEvaluationId: category.id,
+            sourceId,
+          },
+        },
+        create: {
+          categoryEvaluationId: category.id,
+          sourceId,
+          usageZhTw: `支持 ${conflict.category} 來源衝突的雙方證據。`,
+        },
+        update: { usageZhTw: `支持 ${conflict.category} 來源衝突的雙方證據。` },
+      });
+    }
   }
 }
 
@@ -1012,7 +1106,9 @@ async function recomputeEvaluations(invalidPvpVariants: Set<string>) {
       hasOptionalDataGap: variant.categoryEvaluations.some(
         (category) =>
           !category.materialToDecision &&
-          ["SOURCE_MISSING", "DATA_UNAVAILABLE", "PARTIALLY_VERIFIED"].includes(category.status),
+          ["SOURCE_MISSING", "SOURCE_CONFLICT", "DATA_UNAVAILABLE", "PARTIALLY_VERIFIED"].includes(
+            category.status,
+          ),
       ),
       hasStaleNonCriticalData: false,
       decisionProvenance: "MANUAL_CURATED",
@@ -1220,6 +1316,7 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
         | "UNREPRODUCIBLE_RANK"
         | "RULE_NOT_COVERED"
         | "LOW_CONFIDENCE"
+        | "SOURCE_CONFLICT"
         | "OPTIONAL_DATA_MISSING";
       message: string;
       affects: boolean;
@@ -1239,7 +1336,7 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
     for (const category of variant.categoryEvaluations.filter(
       (item) =>
         item.materialToDecision &&
-        ["SOURCE_MISSING", "SOURCE_CONFLICT", "UNKNOWN_RELEASE_STATUS"].includes(item.status),
+        ["SOURCE_MISSING", "UNKNOWN_RELEASE_STATUS"].includes(item.status),
     )) {
       issues.push({
         type: "MATERIAL_DATA_GAP",
@@ -1252,6 +1349,17 @@ async function createReviewIssues(invalidPvpVariants: Set<string>) {
           type: "MATERIAL_DATA_GAP",
           category: category.category,
         }),
+      });
+    }
+    for (const category of variant.categoryEvaluations.filter(
+      (item) => item.status === "SOURCE_CONFLICT",
+    )) {
+      issues.push({
+        type: "SOURCE_CONFLICT",
+        message: `${category.category} 來源的版本、方法或敘述互相衝突。${category.summaryZhTw}`,
+        affects: category.materialToDecision,
+        action: `同時核對 ${category.category} 衝突來源，不可任選單一來源覆蓋；確認方法差異後重新計算。`,
+        identity: stableReviewIssueKey({ type: "SOURCE_CONFLICT", category: category.category }),
       });
     }
     if (invalidPvpVariants.has(variant.id)) {
@@ -1422,7 +1530,10 @@ async function writeMetrics(before: Map<string, string>) {
 
 async function main() {
   const before = await baselineDecisionMap();
-  const official = await readJson<OfficialResearch>("research_notes/sources/official-001-030.json");
+  const [official, battle] = await Promise.all([
+    readJson<OfficialResearch>("research_notes/sources/official-001-030.json"),
+    readJson<BattleResearch>("research_notes/sources/battle-016-030.json"),
+  ]);
   const { sha, rankings } = await loadPvpRankings();
   await ensureOfficialSources(official);
   await applyReleaseStatuses(official);
@@ -1432,6 +1543,7 @@ async function main() {
   await configurePurifiedInheritance();
   await createBaseCategoryEvaluations(scopedRanks, official);
   await createPurifiedCategoryEvaluations();
+  await applySourceConflicts(battle.sourceConflicts);
   await recomputeEvaluations(invalidPvpVariants);
   await createReviewIssues(invalidPvpVariants);
   const metrics = await writeMetrics(before);

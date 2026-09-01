@@ -894,7 +894,7 @@ async function main() {
       direct.hasSpecialAcquisition ||
       later.hasValue;
     const disposition = classifyAssessmentDisposition({
-      releaseStatus: variant.variantKey === "PURIFIED" ? "RELEASED" : variant.releaseStatus,
+      releaseStatus: variant.releaseStatus,
       pveUseLevel,
       hasAnyActionableUse: hasActionableUse && variant.variantKey !== "PURIFIED",
       hasTrueDataGap,

@@ -105,12 +105,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #895；招式 MUD_SLAP／BULLDOZE／STOMP",
               "pveSummaryZhTw": "核心投資。超甲狂犀：可進化為超甲狂犀；後續 PvE 投資價值不能因本體仍在關都而忽略。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -393,12 +393,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #820；招式 MUD_SLAP／BULLDOZE／STOMP",
               "pveSummaryZhTw": "核心投資。超甲狂犀：可進化為超甲狂犀；後續 PvE 投資價值不能因本體仍在關都而忽略。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -676,7 +676,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -909,7 +909,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1131,7 +1131,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-27T16:00:00.000Z",
+        "updatedAt": "2026-08-31T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1144,8 +1144,7 @@
       "memberSummaryZhTw": "獨角犀牛本體沒有獨立用途；前階主要作符合條件的進化候選。",
       "ivShortLabels": [
         "ML：15攻／98%優先",
-        "PvE：15攻優先；14攻高整體IV亦可留",
-        "暗影標準較寬；15攻優先，不設硬性最低IV"
+        "PvE：15攻優先；14攻高整體IV亦可留"
       ],
       "ivRecommendations": [
         {
@@ -1206,36 +1205,6 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
-        },
-        {
-          "id": "iv-global-shadow-pve",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "SHADOW_PVE",
-          "ivStrategyKey": "SHADOW_PVE",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": 15,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": null,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": null,
-          "recommendedQuantity": null,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-          "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
           "rulesVersion": "2026.07.28-v2"
         }
       ],
@@ -1342,12 +1311,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #888；招式 MUD_SLAP／STONE_EDGE／SURF；UL（高級聯盟） Overall #771；招式 MUD_SLAP／STONE_EDGE／EARTHQUAKE；ML（大師聯盟） Overall #346；招式 MUD_SLAP／STONE_EDGE／EARTHQUAKE",
               "pveSummaryZhTw": "核心投資。超甲狂犀：可進化為超甲狂犀；保留少量高品質進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1714,12 +1683,12 @@
                   "affectsFinalDecision": false,
                   "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要規則邊界或非關鍵型態的覆蓋；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-                  "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+                  "lastResearchedAt": "2026-08-31T16:00:00.000Z"
                 }
               ],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #836；招式 MUD_SLAP／STONE_EDGE／SURF；UL（高級聯盟） Overall #790；招式 MUD_SLAP／STONE_EDGE／EARTHQUAKE；ML（大師聯盟） Overall #359；招式 MUD_SLAP／STONE_EDGE／EARTHQUAKE",
               "pveSummaryZhTw": "核心投資。超甲狂犀：可進化為超甲狂犀；保留少量高品質進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2081,7 +2050,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2314,7 +2283,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-27T16:00:00.000Z",
+              "updatedAt": "2026-08-31T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -2538,7 +2507,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-08-27T16:00:00.000Z",
+        "updatedAt": "2026-08-31T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2548,11 +2517,10 @@
         "進化素材"
       ],
       "mainUseZhTw": "進化素材",
-      "memberSummaryZhTw": "主要保留鑽角犀獸；IV以ML：15攻／98%優先、PvE：15攻優先；14攻高整體IV亦可留、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
+      "memberSummaryZhTw": "主要保留鑽角犀獸；IV以ML：15攻／98%優先、PvE：15攻優先；14攻高整體IV亦可留為準。",
       "ivShortLabels": [
         "ML：15攻／98%優先",
-        "PvE：15攻優先；14攻高整體IV亦可留",
-        "暗影標準較寬；15攻優先，不設硬性最低IV"
+        "PvE：15攻優先；14攻高整體IV亦可留"
       ],
       "ivRecommendations": [
         {
@@ -2613,36 +2581,6 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
-        },
-        {
-          "id": "iv-global-shadow-pve",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "SHADOW_PVE",
-          "ivStrategyKey": "SHADOW_PVE",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": 15,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": null,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": null,
-          "recommendedQuantity": null,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-          "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
           "rulesVersion": "2026.07.28-v2"
         }
       ],
@@ -3201,7 +3139,7 @@
               "maxBattleSummaryZhTw": "此版本沒有獨立 Max 型態。",
               "evolutionSummaryZhTw": "擁有該型態的第四世代批次提供正式進化身份與路徑。",
               "requiredMovesSummaryZhTw": "目前沒有記錄需要特別保留的招式結論。",
-              "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
               "reasonZhTw": "此戰鬥版本目前尚未在 Pokémon GO 推出。",
               "evaluationId": "gen4-447-476-eval-464-sinnoh-shadow",
@@ -3350,36 +3288,7 @@
                   "sources": []
                 }
               ],
-              "raw": [
-                {
-                  "id": "raw-gen4-447-476-464-sinnoh-shadow-pve",
-                  "category": "PVE",
-                  "status": "PARTIALLY_VERIFIED",
-                  "league": "NOT_APPLICABLE",
-                  "cup": null,
-                  "pvpCategory": null,
-                  "speciesKey": null,
-                  "formKey": "464-sinnoh",
-                  "variantKey": "SHADOW",
-                  "rank": null,
-                  "rating": "Rock attacker",
-                  "score": null,
-                  "tier": "CORE_INVESTMENT",
-                  "recommendedMoves": [],
-                  "rawNotes": "本批版本級 PvE 證據：464-sinnoh-shadow。",
-                  "seasonOrVersion": "GO Hub accessed 2026-08-16",
-                  "extractionMethod": "日期化的版本級 PvE 研究證據。",
-                  "reproducible": false,
-                  "migrationNote": null,
-                  "checkedAt": "2026-08-15T16:00:00.000Z",
-                  "source": {
-                    "id": "PVE-SINNOH-464-SHADOW-20260816",
-                    "name": "Pokémon GO Hub PvE reference",
-                    "title": "Rhyperior PvE reference",
-                    "url": "https://db.pokemongohub.net/pokemon/464-Shadow"
-                  }
-                }
-              ],
+              "raw": [],
               "sources": [
                 {
                   "id": "PVE-SINNOH-464-SHADOW-20260816",
@@ -3402,48 +3311,11 @@
               ],
               "moves": []
             },
-            "primaryUses": [
-              "PvE"
-            ],
-            "primaryUseKeys": [
-              "SHADOW_PVE"
-            ],
-            "ivRecommendations": [
-              {
-                "id": "iv-global-shadow-pve",
-                "scopeType": "GLOBAL",
-                "scopeKey": "GLOBAL",
-                "primaryUseKey": "SHADOW_PVE",
-                "ivStrategyKey": "SHADOW_PVE",
-                "maxBattleRole": null,
-                "attackIvMin": null,
-                "attackIvPriority": 15,
-                "attackIvConditionalMin": null,
-                "secondaryAttackIv": null,
-                "defenseIvMin": null,
-                "defenseIvPriority": null,
-                "staminaIvMin": null,
-                "staminaIvPriority": null,
-                "totalIvPercentMin": null,
-                "totalIvPercentPriority": null,
-                "secondaryTotalIvPercentMin": null,
-                "pvpRankMax": null,
-                "pvpRankConditionalMax": null,
-                "pvpPrMin": null,
-                "recommendedQuantity": null,
-                "hundoPriority": false,
-                "appliesOnlyWhenUseConfirmed": true,
-                "speciesSpecificOverride": false,
-                "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-                "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-                "rulesVersion": "2026.07.28-v2"
-              }
-            ],
-            "ivShortLabels": [
-              "暗影標準較寬；15攻優先，不設硬性最低IV"
-            ],
-            "ivDirection": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+            "primaryUses": [],
+            "primaryUseKeys": [],
+            "ivRecommendations": [],
+            "ivShortLabels": [],
+            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
             "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
           },
           {
@@ -3978,52 +3850,20 @@
             "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
             "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
             "rulesVersion": "2026.07.28-v2"
-          },
-          {
-            "id": "iv-global-shadow-pve",
-            "scopeType": "GLOBAL",
-            "scopeKey": "GLOBAL",
-            "primaryUseKey": "SHADOW_PVE",
-            "ivStrategyKey": "SHADOW_PVE",
-            "maxBattleRole": null,
-            "attackIvMin": null,
-            "attackIvPriority": 15,
-            "attackIvConditionalMin": null,
-            "secondaryAttackIv": null,
-            "defenseIvMin": null,
-            "defenseIvPriority": null,
-            "staminaIvMin": null,
-            "staminaIvPriority": null,
-            "totalIvPercentMin": null,
-            "totalIvPercentPriority": null,
-            "secondaryTotalIvPercentMin": null,
-            "pvpRankMax": null,
-            "pvpRankConditionalMax": null,
-            "pvpPrMin": null,
-            "recommendedQuantity": null,
-            "hundoPriority": false,
-            "appliesOnlyWhenUseConfirmed": true,
-            "speciesSpecificOverride": false,
-            "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-            "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-            "rulesVersion": "2026.07.28-v2"
           }
         ],
         "ivShortLabels": [
           "ML：15攻／98%優先",
-          "PvE：15攻優先；14攻高整體IV亦可留",
-          "暗影標準較寬；15攻優先，不設硬性最低IV"
+          "PvE：15攻優先；14攻高整體IV亦可留"
         ],
-        "ivDirection": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+        "ivDirection": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
         "primaryUses": [
           "PvP",
           "PvE"
         ],
         "primaryUseKeys": [
           "MASTER_LEAGUE",
-          "PVE",
-          "SHADOW_PVE"
+          "PVE"
         ],
         "hasRocketUse": false,
         "hasEvolutionUse": false,
@@ -4041,11 +3881,10 @@
         "獨立PvE用途"
       ],
       "mainUseZhTw": "獨立PvP用途、獨立PvE用途",
-      "memberSummaryZhTw": "主要保留超甲狂犀；IV以ML：15攻／98%優先、PvE：15攻優先；14攻高整體IV亦可留、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
+      "memberSummaryZhTw": "主要保留超甲狂犀；IV以ML：15攻／98%優先、PvE：15攻優先；14攻高整體IV亦可留為準。",
       "ivShortLabels": [
         "ML：15攻／98%優先",
-        "PvE：15攻優先；14攻高整體IV亦可留",
-        "暗影標準較寬；15攻優先，不設硬性最低IV"
+        "PvE：15攻優先；14攻高整體IV亦可留"
       ],
       "ivRecommendations": [
         {
@@ -4107,36 +3946,6 @@
           "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
           "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
           "rulesVersion": "2026.07.28-v2"
-        },
-        {
-          "id": "iv-global-shadow-pve",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "SHADOW_PVE",
-          "ivStrategyKey": "SHADOW_PVE",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": 15,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": null,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": null,
-          "recommendedQuantity": null,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-          "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.07.28-v2"
         }
       ],
       "isRoot": false,
@@ -4157,7 +3966,7 @@
   },
   "pve": {
     "label": "核心投資",
-    "detail": "暗影版本；超甲狂犀有獨立用途",
+    "detail": "最終進化為主要投資目標",
     "tone": "HIGH"
   },
   "gym": {
@@ -4201,11 +4010,10 @@
   "primaryTargetSummaryZhTw": "鑽角犀獸、超甲狂犀",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
   "handlingSummaryZhTw": "保留超甲狂犀（ML 高 IV 投資候選、PvE 實戰候選）；保留可進化為超甲狂犀的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留鑽角犀獸、超甲狂犀；前階主要作符合條件的進化候選。IV：ML：15攻／98%優先；PvE：15攻優先；14攻高整體IV亦可留；暗影標準較寬；15攻優先，不設硬性最低IV。",
+  "actionSummaryZhTw": "主要保留鑽角犀獸、超甲狂犀；前階主要作符合條件的進化候選。IV：ML：15攻／98%優先；PvE：15攻優先；14攻高整體IV亦可留。",
   "ivShortLabels": [
     "ML：15攻／98%優先",
-    "PvE：15攻優先；14攻高整體IV亦可留",
-    "暗影標準較寬；15攻優先，不設硬性最低IV"
+    "PvE：15攻優先；14攻高整體IV亦可留"
   ],
   "ivRecommendations": [
     {
@@ -4267,39 +4075,9 @@
       "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
       "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
       "rulesVersion": "2026.07.28-v2"
-    },
-    {
-      "id": "iv-global-shadow-pve",
-      "scopeType": "GLOBAL",
-      "scopeKey": "GLOBAL",
-      "primaryUseKey": "SHADOW_PVE",
-      "ivStrategyKey": "SHADOW_PVE",
-      "maxBattleRole": null,
-      "attackIvMin": null,
-      "attackIvPriority": 15,
-      "attackIvConditionalMin": null,
-      "secondaryAttackIv": null,
-      "defenseIvMin": null,
-      "defenseIvPriority": null,
-      "staminaIvMin": null,
-      "staminaIvPriority": null,
-      "totalIvPercentMin": null,
-      "totalIvPercentPriority": null,
-      "secondaryTotalIvPercentMin": null,
-      "pvpRankMax": null,
-      "pvpRankConditionalMax": null,
-      "pvpPrMin": null,
-      "recommendedQuantity": null,
-      "hundoPriority": false,
-      "appliesOnlyWhenUseConfirmed": true,
-      "speciesSpecificOverride": false,
-      "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-      "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-      "rulesVersion": "2026.07.28-v2"
     }
   ],
-  "ivSummaryZhTw": "依成員用途分開保留：ML：15攻／98%優先；PvE：15攻優先；14攻高整體IV亦可留；暗影標準較寬；15攻優先，不設硬性最低IV",
+  "ivSummaryZhTw": "依成員用途分開保留：ML：15攻／98%優先；PvE：15攻優先；14攻高整體IV亦可留",
   "primaryUses": [
     "後續進化",
     "PvP",
@@ -4309,7 +4087,7 @@
   "notices": [],
   "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-27T16:00:00.000Z",
+  "updatedAt": "2026-08-31T16:00:00.000Z",
   "minDexNumber": 111,
   "maxDexNumber": 464,
   "detailsLoaded": true

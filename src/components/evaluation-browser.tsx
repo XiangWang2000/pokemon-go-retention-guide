@@ -963,7 +963,7 @@ export function EvaluationBrowser({
         <p className="mt-3 text-xs leading-5 text-[var(--muted)]">{zhTw.disclaimer}</p>
       </div>
 
-      <div ref={resultsTopRef} className="scroll-mt-24">
+      <div id="evaluation-results" ref={resultsTopRef} className="scroll-mt-24">
         {loading ? (
           <section
             className="surface rounded-2xl p-6"

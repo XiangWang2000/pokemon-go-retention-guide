@@ -1,124 +1,31 @@
 {
   "scope": "1-386",
-  "dataVersion": "2026.08.28-r26",
-  "updatedAt": "2026-08-28",
-  "generatedAt": "2026-08-27T16:00:00.000Z",
+  "dataVersion": "2026.09.01-r28",
+  "updatedAt": "2026-09-01",
+  "generatedAt": "2026-08-31T16:00:00.000Z",
   "rulesVersion": "2026.08.06-v7",
   "counts": {
     "variants": 1780,
     "decisions": {
-      "TRANSFER_CANDIDATE": 1173,
-      "CONDITIONAL_KEEP": 432,
-      "KEEP": 157,
-      "HOLD_FOR_NOW": 18
+      "TRANSFER_CANDIDATE": 1205,
+      "CONDITIONAL_KEEP": 418,
+      "KEEP": 157
     },
     "dispositions": {
-      "NO_SIGNIFICANT_USE": 684,
+      "NO_SIGNIFICANT_USE": 578,
       "CLEAR_USE": 109,
-      "LIMITED_USE": 480,
-      "TRUE_DATA_PENDING": 18,
-      "NOT_APPLICABLE_OR_UNRELEASED": 489
+      "LIMITED_USE": 466,
+      "NOT_APPLICABLE_OR_UNRELEASED": 627
     },
     "pveUseLevels": {
-      "NO_SIGNIFICANT_USE": 1400,
+      "NO_SIGNIFICANT_USE": 1415,
       "CORE_INVESTMENT": 110,
-      "SPECIAL_USE": 198,
+      "SPECIAL_USE": 183,
       "USABLE_OR_BUDGET": 72
     },
-    "changedFields": 1394
+    "changedFields": 1320
   },
-  "trueDataPending": [
-    {
-      "id": "010-kanto-dynamax",
-      "formId": "010-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "011-kanto-dynamax",
-      "formId": "011-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "013-kanto-dynamax",
-      "formId": "013-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "014-kanto-dynamax",
-      "formId": "014-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "016-kanto-dynamax",
-      "formId": "016-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "017-kanto-dynamax",
-      "formId": "017-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "019-alola-dynamax",
-      "formId": "019-alola",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "019-kanto-dynamax",
-      "formId": "019-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "020-kanto-normal",
-      "formId": "020-kanto",
-      "variantKey": "NORMAL"
-    },
-    {
-      "id": "020-kanto-shadow",
-      "formId": "020-kanto",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "021-kanto-dynamax",
-      "formId": "021-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "023-kanto-dynamax",
-      "formId": "023-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "024-kanto-normal",
-      "formId": "024-kanto",
-      "variantKey": "NORMAL"
-    },
-    {
-      "id": "024-kanto-shadow",
-      "formId": "024-kanto",
-      "variantKey": "SHADOW"
-    },
-    {
-      "id": "025-kanto-dynamax",
-      "formId": "025-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "027-alola-dynamax",
-      "formId": "027-alola",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "027-kanto-dynamax",
-      "formId": "027-kanto",
-      "variantKey": "DYNAMAX"
-    },
-    {
-      "id": "029-kanto-dynamax",
-      "formId": "029-kanto",
-      "variantKey": "DYNAMAX"
-    }
-  ],
+  "trueDataPending": [],
   "highRiskReview": [
     {
       "id": "063-kanto-dynamax",
@@ -347,7 +254,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -667,7 +574,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -747,7 +654,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -827,7 +734,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -967,7 +874,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -1227,7 +1134,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -1307,7 +1214,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -1347,7 +1254,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -1677,7 +1584,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -1717,7 +1624,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -1817,7 +1724,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -2387,7 +2294,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -2847,7 +2754,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -2927,7 +2834,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -2967,7 +2874,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -3007,7 +2914,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -3047,7 +2954,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {
@@ -3417,7 +3324,7 @@
       "variantKey": "PURIFIED",
       "decision": "TRANSFER_CANDIDATE",
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
+      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
     {

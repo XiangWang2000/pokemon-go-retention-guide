@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { AlertTriangle, CheckCircle2, CircleDot, Send } from "lucide-react";
+import { AlertTriangle, CheckCircle2, CircleDot, Search, Send } from "lucide-react";
 import { EvaluationBrowser } from "@/components/evaluation-browser";
 import { CURRENT_DATA_MAX_DEX } from "@/config/data-scope";
 import { DATA_VERSION_DATE_ISO, DATA_VERSION_DATE_ZH_TW } from "@/config/release";
@@ -14,17 +14,12 @@ import {
   type AuditSummarySnapshot,
 } from "@/lib/audit-data";
 import type { DashboardRow } from "@/lib/data";
+import { zhTw } from "@/locales/zh-TW";
 import type { FamilyOverview } from "@/presentation/family-overview";
 import type { HomeRuntimeSnapshot } from "@/presentation/home-snapshot";
 
-const strategyLabels = {
-  KEEP_TARGETS: "建議保留",
-  SELECTIVE_KEEP: "選擇性保留",
-  MOSTLY_TRANSFER: "大多可傳",
-  HOLD_FOR_NOW: "暫時保留",
-} as const;
-
 export function HomeDataLoader() {
+  const [homeQuery, setHomeQuery] = useState("");
   const [home, setHome] = useState<HomeRuntimeSnapshot | null>(null);
   const [homeLoading, setHomeLoading] = useState(true);
   const [homeError, setHomeError] = useState(false);
@@ -63,6 +58,15 @@ export function HomeDataLoader() {
     const timer = window.setTimeout(loadHome, 0);
     return () => window.clearTimeout(timer);
   }, [loadHome]);
+
+  useEffect(() => {
+    const syncHomeQuery = () => {
+      setHomeQuery(new URLSearchParams(window.location.search).get("q") ?? "");
+    };
+    syncHomeQuery();
+    window.addEventListener("popstate", syncHomeQuery);
+    return () => window.removeEventListener("popstate", syncHomeQuery);
+  }, []);
 
   const families = useMemo(
     () => home?.families.map((family) => familyDetails[family.familyId] ?? family) ?? [],
@@ -162,28 +166,32 @@ export function HomeDataLoader() {
   const isLoading = homeLoading;
   const stats = [
     {
-      label: strategyLabels.KEEP_TARGETS,
+      strategy: "KEEP_TARGETS",
+      label: zhTw.familyRetentionStrategy.KEEP_TARGETS,
       value: home
         ? families.filter((family) => family.retentionStrategy === "KEEP_TARGETS").length
         : null,
       icon: CheckCircle2,
     },
     {
-      label: strategyLabels.SELECTIVE_KEEP,
+      strategy: "SELECTIVE_KEEP",
+      label: zhTw.familyRetentionStrategy.SELECTIVE_KEEP,
       value: home
         ? families.filter((family) => family.retentionStrategy === "SELECTIVE_KEEP").length
         : null,
       icon: CircleDot,
     },
     {
-      label: strategyLabels.MOSTLY_TRANSFER,
+      strategy: "MOSTLY_TRANSFER",
+      label: zhTw.familyRetentionStrategy.MOSTLY_TRANSFER,
       value: home
         ? families.filter((family) => family.retentionStrategy === "MOSTLY_TRANSFER").length
         : null,
       icon: Send,
     },
     {
-      label: strategyLabels.HOLD_FOR_NOW,
+      strategy: "HOLD_FOR_NOW",
+      label: zhTw.familyRetentionStrategy.HOLD_FOR_NOW,
       value: home
         ? families.filter((family) => family.retentionStrategy === "HOLD_FOR_NOW").length
         : null,
@@ -199,31 +207,76 @@ export function HomeDataLoader() {
             資料範圍 · #001～#{CURRENT_DATA_MAX_DEX}
           </p>
           <h1 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">
-            搜尋後直接看保留結論
+            這隻寶可夢可以傳嗎？
           </h1>
           <p className="mt-2 max-w-3xl text-sm leading-6 text-[var(--muted)] sm:text-base">
-            先看家族的「要留／可傳」；型態、IV、來源與完整論證收在展開內容。
+            輸入名稱或圖鑑編號，先看每隻與版本的「要留／符合條件才留／普通重複可傳」。
           </p>
           <p className="mt-2 text-xs font-semibold tracking-wide text-[var(--muted)]">
             資料更新日期：{DATA_VERSION_DATE_ZH_TW}（完整資料由瀏覽器載入）
           </p>
         </div>
-        <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
-          {stats.map(({ label, value, icon: Icon }) => (
-            <div key={label} className="rounded-xl border bg-[var(--surface)] px-3 py-2.5">
-              <div className="flex items-center gap-1.5 text-xs font-bold text-[var(--muted)]">
-                <Icon aria-hidden size={15} />
-                {label}
-              </div>
-              <p
-                className="mt-1 font-mono text-2xl font-black"
-                aria-label={value === null ? `${label}資料載入中` : undefined}
-              >
-                {value ?? "—"}
-              </p>
+        <form
+          action="#evaluation-results"
+          method="get"
+          aria-label="直接搜尋寶可夢保留結論"
+          className="mt-4 rounded-2xl border bg-[var(--surface)] p-3 shadow-sm sm:p-4"
+        >
+          <label htmlFor="home-pokemon-search" className="text-sm font-black">
+            搜尋你剛抓到的寶可夢
+          </label>
+          <div className="mt-2 flex flex-col gap-2 sm:flex-row">
+            <div className="relative min-w-0 flex-1">
+              <Search
+                aria-hidden
+                size={20}
+                className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[var(--muted)]"
+              />
+              <input
+                id="home-pokemon-search"
+                name="q"
+                type="search"
+                enterKeyHint="search"
+                value={homeQuery}
+                onChange={(event) => setHomeQuery(event.target.value)}
+                placeholder="例如：妙蛙種子、皮卡丘或 025"
+                className="min-h-12 w-full rounded-xl border bg-[var(--surface)] pl-11 pr-3 text-base"
+              />
             </div>
-          ))}
-        </div>
+            <button
+              type="submit"
+              className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[var(--primary)] px-5 text-sm font-black text-[var(--primary-contrast)] transition hover:brightness-95"
+            >
+              直接看結論
+            </button>
+          </div>
+        </form>
+        <details className="mt-3 rounded-xl border bg-[var(--surface)] px-3 py-2.5">
+          <summary className="cursor-pointer text-sm font-bold text-[var(--muted)]">
+            依家族處理方式分類瀏覽
+          </summary>
+          <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+            {stats.map(({ strategy, label, value, icon: Icon }) => (
+              <a
+                key={strategy}
+                href={`?decision=${strategy}#evaluation-results`}
+                aria-label={`只看「${label}」的進化家族`}
+                className="rounded-xl border bg-[var(--surface)] px-3 py-2.5 transition hover:border-[var(--primary)] hover:bg-[var(--surface-muted)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--primary)]"
+              >
+                <div className="flex items-center gap-1.5 text-xs font-bold text-[var(--muted)]">
+                  <Icon aria-hidden size={15} />
+                  {label}
+                </div>
+                <p
+                  className="mt-1 font-mono text-xl font-black"
+                  aria-label={value === null ? `${label}資料載入中` : undefined}
+                >
+                  {value ?? "—"}
+                </p>
+              </a>
+            ))}
+          </div>
+        </details>
       </section>
       {homeError ? (
         <section className="surface rounded-2xl p-6 text-center">

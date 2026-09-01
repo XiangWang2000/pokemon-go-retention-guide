@@ -17,27 +17,27 @@
   "conflicts": [],
   "changeLogs": [
     {
-      "id": "recalibrate-20260809-disposition-006-kanto-mega-x",
-      "fieldName": "assessmentDisposition",
-      "previousValue": "TRUE_DATA_PENDING",
-      "newValue": "CLEAR_USE",
-      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-08-27T16:00:00.000Z",
-      "rulesVersion": "2026.08.06-v7",
-      "source": null
-    },
-    {
       "id": "remediation-release-006-kanto-mega-x",
       "fieldName": "releaseStatus",
       "previousValue": "UNKNOWN",
       "newValue": "RELEASED",
       "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
-      "changedAt": "2026-07-28T04:00:00.000Z",
+      "changedAt": "2026-09-01T04:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": {
         "title": "Mega Evolution is here! Battle in raids against Mega Venusaur, Mega Charizard, Mega Blastoise, and more!",
         "url": "https://pokemongo.com/en/post/megaevolution-launch"
       }
+    },
+    {
+      "id": "recalibrate-20260809-disposition-006-kanto-mega-x",
+      "fieldName": "assessmentDisposition",
+      "previousValue": "TRUE_DATA_PENDING",
+      "newValue": "CLEAR_USE",
+      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+      "changedAt": "2026-08-31T16:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": null
     },
     {
       "id": "change-evaluation-006-kanto-mega-x-2026.08.06-v7-iv-c633b55da4a2c4a3",

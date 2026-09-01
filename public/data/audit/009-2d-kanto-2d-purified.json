@@ -22,26 +22,17 @@
   ],
   "evolutionNames": [],
   "variantKey": "PURIFIED",
-  "isReleased": null,
-  "releaseStatus": "UNKNOWN",
-  "releaseVerifiedAt": null,
-  "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
+  "isReleased": true,
+  "releaseStatus": "RELEASED",
+  "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
+  "notesZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。（官方研究狀態：AVAILABLE_FROM_PURIFICATION）",
   "decision": "TRANSFER_CANDIDATE",
   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-  "provenance": "DATA_UNAVAILABLE",
+  "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [
-    {
-      "id": "issue-009-kanto-purified-2026.08.06-v7-unknown-release-status-variant",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "affectsFinalDecision": false,
-      "provisionalDecision": "TRANSFER_CANDIDATE",
-      "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "lastResearchedAt": "2026-08-27T16:00:00.000Z"
-    },
     {
       "id": "issue-009-kanto-purified-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
       "issueType": "OPTIONAL_DATA_MISSING",
@@ -49,12 +40,12 @@
       "affectsFinalDecision": false,
       "provisionalDecision": "TRANSFER_CANDIDATE",
       "suggestedResearchActionZhTw": "此欄位待補，但不影響PURIFIED 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+      "lastResearchedAt": "2026-08-31T16:00:00.000Z"
     }
   ],
   "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
-  "updatedAt": "2026-08-27T16:00:00.000Z",
+  "updatedAt": "2026-08-31T16:00:00.000Z",
   "pvpSummaryZhTw": "基礎評價繼承普通版；另考慮強化成本、IV 增加、報恩與失去暗影型態的不可逆影響。精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "沒有完整可重現的逐物種火箭隊排名；淨化版不使用 PvP／PvE 名次代替火箭隊角色。",
@@ -460,7 +451,7 @@
   "reasonZhTw": "淨化版本不另設主要榜單；淨化不可逆，不因缺少次要欄位而整個家族暫停判斷。",
   "evaluationId": "evaluation-009-kanto-purified-2026.08.06-v7",
   "rulesVersion": "2026.08.06-v7",
-  "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+  "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
   "inheritance": {
     "inheritsFromVariantId": "009-kanto-normal",
     "inheritanceMode": "NORMAL_BASE_WITH_OVERRIDE",
@@ -486,7 +477,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "OFF-MEGA-LAUNCH",
@@ -524,7 +515,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "battle1-GOHUB_009",
@@ -556,7 +547,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "official-shadow-mechanic-20260715",
@@ -582,7 +573,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "official-shadow-mechanic-20260715",
@@ -608,7 +599,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "battle1-GOHUB_009",
@@ -640,7 +631,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "official-shadow-mechanic-20260715",
@@ -649,21 +640,21 @@
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         },
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         },
         {
-          "id": "pvpoke-ml-20260715",
+          "id": "pvpoke-ml-20260901",
           "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         }
       ]
@@ -684,7 +675,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "OFF-ROCKET-INVASION",
@@ -749,30 +740,30 @@
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     },
     {
-      "id": "pvpoke-ml-20260715",
+      "id": "pvpoke-ml-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     }
   ],

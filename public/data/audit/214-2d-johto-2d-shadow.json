@@ -36,7 +36,7 @@
   "reviewIssues": [],
   "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
   "reviewed": true,
-  "updatedAt": "2026-08-27T16:00:00.000Z",
+  "updatedAt": "2026-08-31T16:00:00.000Z",
   "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
   "pveSummaryZhTw": "可用／預算型。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -46,7 +46,7 @@
   "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-  "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -586,36 +586,7 @@
       "sources": []
     }
   ],
-  "raw": [
-    {
-      "id": "raw-r19-214-johto-shadow-pve",
-      "category": "PVE",
-      "status": "PARTIALLY_VERIFIED",
-      "league": "NOT_APPLICABLE",
-      "cup": null,
-      "pvpCategory": null,
-      "speciesKey": "heracross_shadow",
-      "formKey": "214-johto",
-      "variantKey": "SHADOW",
-      "rank": null,
-      "rating": "B",
-      "score": null,
-      "tier": "B",
-      "recommendedMoves": [],
-      "rawNotes": "本批 PvE 類別用途層級由研究表與 GO Hub Johto 版本狀態核對；不虛構 IV 硬門檻。",
-      "seasonOrVersion": "GO Hub accessed 2026-08-08",
-      "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
-      "reproducible": false,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
-      "source": {
-        "id": "PVE-GEN2-20260808",
-        "name": "GO Hub 城都圖鑑／PvE／Mega",
-        "title": "Johto Pokédex and Pokémon GO PvE rankings",
-        "url": "https://db.pokemongohub.net/pokedex/johto"
-      }
-    }
-  ],
+  "raw": [],
   "sources": [],
   "traces": [
     {

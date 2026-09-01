@@ -39,7 +39,7 @@
   "variantKey": "SHADOW",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-07-28T04:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
   "notesZhTw": "官方頁面說明 Team GO Rocket 開始使用 Shadow Sandshrew。（官方研究狀態：RELEASED）",
   "decision": "TRANSFER_CANDIDATE",
   "assessmentDisposition": "NO_SIGNIFICANT_USE",
@@ -55,12 +55,12 @@
       "affectsFinalDecision": false,
       "provisionalDecision": "TRANSFER_CANDIDATE",
       "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+      "lastResearchedAt": "2026-08-31T16:00:00.000Z"
     }
   ],
   "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
-  "updatedAt": "2026-08-27T16:00:00.000Z",
+  "updatedAt": "2026-08-31T16:00:00.000Z",
   "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -492,7 +492,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "OFF-CD-SANDSHREW",
@@ -518,7 +518,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": []
     },
     {
@@ -537,7 +537,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": []
     },
     {
@@ -556,7 +556,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": []
     },
     {
@@ -575,7 +575,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": []
     },
     {
@@ -594,12 +594,12 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         }
       ]
@@ -620,7 +620,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "OFF-ROCKET-INVASION",
@@ -642,9 +642,9 @@
       "speciesKey": "sandshrew_shadow",
       "formKey": "027-kanto",
       "variantKey": "SHADOW",
-      "rank": 645,
-      "rating": "524",
-      "score": 524,
+      "rank": 654,
+      "rating": "523",
+      "score": 523,
       "tier": null,
       "recommendedMoves": [
         "SAND_ATTACK",
@@ -652,16 +652,16 @@
         "ROCK_TOMB"
       ],
       "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-      "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-07-14T16:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     }
   ],
@@ -685,12 +685,12 @@
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     }
   ],

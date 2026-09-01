@@ -291,7 +291,7 @@ async function importOfficialResearch(
       },
     });
     const keys = Object.entries(form.variants)
-      .filter(([key, value]) => baseKeys.has(key) || value.status !== "NEEDS_REVIEW")
+      .filter(([key, value]) => baseKeys.has(key) || releasedValue(value.status) === true)
       .map(([key]) => key as VariantKey);
     for (const key of keys) {
       const research = form.variants[key];
@@ -500,7 +500,8 @@ function normalizeBattleFindings(battle1: JsonRecord, battle2: JsonRecord) {
       lane: "battle2",
       battleVariant: String(item.battleVariant),
       category: "MAX_BATTLE",
-      tier: item.status ? String(item.status) : null,
+      // Evidence status describes verification completeness; it is never a combat tier.
+      tier: null,
       rank: null,
       rating: null,
       recommendedMoves: [],
@@ -850,7 +851,18 @@ export async function integrateResearchData(
   const findings = normalizeBattleFindings(battle1, battle2);
   await importFindings(prisma, findings, { battle1: battle1Map, battle2: battle2Map }, checkedAt);
   const conflicts = new Set<string>(
-    ((battle2.sourceConflicts as JsonRecord[]) ?? []).map((item) => String(item.entity)),
+    ((battle2.sourceConflicts as JsonRecord[]) ?? [])
+      .filter((item) => item.affectsDecision !== false)
+      .flatMap((item) => {
+        const entity = String(item.entity);
+        const separator = entity.lastIndexOf(":");
+        if (separator < 1) throw new Error(`無法解析來源衝突 entity：${entity}`);
+        const formId = entity.slice(0, separator);
+        return entity
+          .slice(separator + 1)
+          .split("/")
+          .map((variantKey) => `${formId}:${variantKey}`);
+      }),
   );
   await recomputeEvaluations(prisma, conflicts, checkedAt);
 }

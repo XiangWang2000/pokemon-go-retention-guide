@@ -1,15 +1,19 @@
 {
   "batch": "001-030",
-  "accessedAt": "2026-07-15",
+  "accessedAt": "2026-09-01",
   "researchLane": "OFFICIAL_AND_SECONDARY",
-  "scopeNoteZhTw": "僅保存 Pokémon GO 官方網站／官方新聞的可追溯證據。本檔不做 PvP/PvE 排名或保留結論；沒有逐物種官方證據者保留 NEEDS_REVIEW，不以模型記憶補值。",
+  "scopeNoteZhTw": "優先保存 Pokémon GO 官方網站／官方新聞證據；官方沒有完整負面名單時，以具查閱日的完整歷史名單補足推出邊界並保留 SECONDARY 類型。本檔不使用 PvP/PvE 排名推導推出狀態。",
   "statusDefinitions": {
+    "VERIFIED": "已由本批可追溯來源確認一般型態存在；套用時等同 RELEASED。",
     "RELEASED": "官方原始頁面明確列名或明示首次登場已發生。",
-    "RELEASED_BY_EVOLUTION_INFERENCE": "暗影前階已確認，進化後型態依進化鏈推導；仍需人工覆核。",
+    "RELEASED_BY_EVOLUTION_INFERENCE": "前一進化階段已由官方確認，且官方機制明示該個體及其進化可沿用此特殊版本；仍需保留推導註記。",
     "AVAILABLE_FROM_PURIFICATION": "由已確認暗影型態與官方淨化機制推導。",
     "ANNOUNCED_NOT_YET_RELEASED": "官方已公告，但以 accessedAt 判斷首次登場日期尚未到。",
     "NEEDS_REVIEW": "證據缺失、不足或只可間接推導；不可解讀為未推出。",
-    "UNRELEASED": "官方資料明確標示尚未推出或目前不可用；不得以此欄位推論其他型態。"
+    "UNRELEASED": "官方資料明確標示尚未推出或目前不可用；不得以此欄位推論其他型態。",
+    "VERIFIED_SECONDARY_ROSTER": "由具日期與逐物種歷史的完整名單確認已推出；保留次要來源類型與較低信心。",
+    "NOT_RELEASED_IN_COMPLETE_ROSTER": "經使用者授權，以截至查閱日的完整歷史推出名單判定未列名型態尚未推出；後續更新時重新核對。",
+    "UNRELEASED_BY_SHADOW_AVAILABILITY": "同型態暗影尚未推出，因此目前無法取得對應淨化版本。"
   },
   "sources": [
     {
@@ -195,9 +199,9 @@
       "sourceTitleOriginal": "Sparks fly for Raichu Super Mega Raid Day!",
       "sourceLanguage": "en",
       "sourceUrl": "https://pokemongo.com/en/news/raichu-super-mega-raid-day-2026",
-      "accessedAt": "2026-07-15",
+      "accessedAt": "2026-09-01",
       "publishedAt": "2026-07-07",
-      "sourceSummaryZhTw": "公告 Mega Raichu X/Y 將於 2026-07-18 首次登場；查閱日 2026-07-15 尚未推出。"
+      "sourceSummaryZhTw": "官方公告 Mega Raichu X/Y 於 2026-07-18 首次登場；本批於 2026-09-01 再查閱，活動日期已過，並由後續官方更新交叉確認已推出。"
     },
     {
       "id": "OFF-GO-BIG",
@@ -428,6 +432,78 @@
       "sourceUrl": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_in_Pok%C3%A9mon_GO",
       "accessedAt": "2026-08-08",
       "sourceSummaryZhTw": "截至 2026-08-08 的 Shadow Pokémon 名單；核對 #019 小拉達、#023 阿柏蛇、#021 烈雀、#022 大嘴雀、#025 皮卡丘，以及關都／阿羅拉雷丘等型態的暗影推出狀態。"
+    },
+    {
+      "id": "OFF-GOFEST-MAX-FINALE-2025",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Pokémon GO Fest 2025: Max Finale",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/gofestmaxfinale?hl=en",
+      "accessedAt": "2026-09-01",
+      "sourceSummaryZhTw": "官方活動頁明列 Dynamax Caterpie 於 2025-08-18 的 Max Battle 出現，並說明活動帶回截至當時已出現的 Dynamax 寶可夢。"
+    },
+    {
+      "id": "OFF-LUSH-JUNGLE-2022",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Pokémon GO’s Lush Jungle event features Cottonee, Fomantis, Tapu Lele, a weekend park spotlight, and more!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/lush-jungle-event",
+      "accessedAt": "2026-09-01",
+      "publishedAt": "2022-03-17",
+      "sourceSummaryZhTw": "官方活動頁明列 Metapod 為野外遭遇，確認普通型態已推出。"
+    },
+    {
+      "id": "OFF-KANTO-TOUR-2021",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Celebrate Pokémon’s anniversary with a brand-new event—Pokémon GO Tour: Kanto!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/post/pokemongotour-kanto?hl=en",
+      "accessedAt": "2026-09-01",
+      "publishedAt": "2021-02-09",
+      "sourceSummaryZhTw": "官方說明最初發現於關都地區的前 150 隻寶可夢可透過野外、團體戰、研究、薰香、交換或進化取得，確認關都拉達、大嘴雀與阿柏怪普通型態已推出。"
+    },
+    {
+      "id": "OFF-MORE-MEGA-UPDATES-2026",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "More mega moments! Additional Charged Attacks and Mega Mewtwo Adventure Effects debut during Mega Finale!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/news/more-mega-updates-2026",
+      "accessedAt": "2026-09-01",
+      "sourceSummaryZhTw": "官方現行更新明示 Mega Raichu X 與 Mega Raichu Y 已可在 Mega 進化時使用新增招式，交叉確認兩型態已推出。"
+    },
+    {
+      "id": "OFF-PURIFICATION-MECHANIC-20260901",
+      "sourceName": "Pokémon GO Help Center",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Shadow Pokémon & Purified Pokémon",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+      "accessedAt": "2026-09-01",
+      "sourceSummaryZhTw": "官方說明暗影寶可夢可用星星沙子與糖果淨化；因此同型態暗影已推出時，對應淨化版本必然可取得。"
+    },
+    {
+      "id": "BULBA-SHADOW-ROSTER-20260901",
+      "sourceName": "Bulbapedia",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "List of Shadow Pokémon (GO)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://bulbapedia.bulbagarden.net/wiki/List_of_Shadow_Pok%C3%A9mon_(GO)",
+      "accessedAt": "2026-09-01",
+      "sourceSummaryZhTw": "逐物種保存暗影寶可夢首次推出日期的完整歷史名單；本批用來補證明列的 #001～#030 暗影型態。"
+    },
+    {
+      "id": "GOHUB-DYNAMAX-ROSTER-20260901",
+      "sourceName": "Pokémon GO Hub Database",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
+      "accessedAt": "2026-09-01",
+      "sourceSummaryZhTw": "截至查閱日的完整 Dynamax／Gigantamax 歷史推出名單；經使用者授權，本批未列名的 Dynamax 與 Gigantamax 型態分別判定尚未推出，兩者不合併。"
     }
   ],
   "forms": [
@@ -452,14 +528,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -485,9 +566,11 @@
           "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -515,14 +598,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -548,9 +636,11 @@
           "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -578,14 +668,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "RELEASED",
@@ -643,14 +738,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -676,9 +776,11 @@
           "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -706,14 +808,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -739,9 +846,11 @@
           "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -769,14 +878,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -838,14 +952,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -871,9 +990,11 @@
           "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -901,14 +1022,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -934,9 +1060,11 @@
           "noteZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -964,14 +1092,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "RELEASED",
@@ -1041,9 +1174,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-SHADOW-CATERPIE",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1061,14 +1194,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-GOFEST-MAX-FINALE-2025"
+          ],
+          "noteZhTw": "官方 Max Finale 活動頁直接列出 Dynamax Caterpie，確認此版本已推出。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -1081,13 +1218,17 @@
       "formKey": "KANTO",
       "formNameEn": "Kanto",
       "formNameZhTw": "關都",
-      "releaseStatus": "NEEDS_REVIEW",
-      "releaseSourceIds": [],
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-LUSH-JUNGLE-2022"
+      ],
       "variants": {
         "NORMAL": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-LUSH-JUNGLE-2022"
+          ],
+          "noteZhTw": "官方活動頁直接列出 Metapod 野外遭遇。"
         },
         "SHADOW": {
           "status": "RELEASED_BY_EVOLUTION_INFERENCE",
@@ -1100,9 +1241,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-SHADOW-CATERPIE",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1120,18 +1261,22 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "RELEASED_BY_EVOLUTION_INFERENCE",
+          "sourceIds": [
+            "OFF-GOFEST-MAX-FINALE-2025",
+            "OFF-GO-BIG"
+          ],
+          "noteZhTw": "Dynamax Caterpie 已由官方逐名確認；官方 Max 規則明示 Max Battle 捕獲個體及其進化可 Dynamax，因此此狀態為進化規則推導。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": [
-        "普通型態推出狀態需以另一個官方原始頁面重新確認。",
         "暗影狀態為進化推導，非同頁逐名確認。"
       ]
     },
@@ -1166,9 +1311,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-SHADOW-CATERPIE",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1186,9 +1331,12 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "RELEASED_BY_EVOLUTION_INFERENCE",
+          "sourceIds": [
+            "OFF-GOFEST-MAX-FINALE-2025",
+            "OFF-GO-BIG"
+          ],
+          "noteZhTw": "Dynamax Caterpie 已由官方逐名確認；官方 Max 規則明示 Max Battle 捕獲個體及其進化可 Dynamax，因此此狀態為進化規則推導。"
         },
         "GIGANTAMAX": {
           "status": "RELEASED",
@@ -1233,9 +1381,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-HALLOWEEN-2019",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1253,14 +1401,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -1298,9 +1450,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-HALLOWEEN-2019",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1318,14 +1470,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -1363,9 +1519,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-HALLOWEEN-2019",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "RELEASED",
@@ -1386,14 +1542,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -1431,9 +1591,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-SHADOW-PIDGEY",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1451,14 +1611,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -1496,9 +1660,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-SHADOW-PIDGEY",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1516,14 +1680,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": [
@@ -1563,9 +1731,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-SHADOW-PIDGEY",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "RELEASED",
@@ -1586,14 +1754,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": [
@@ -1633,9 +1805,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-ROCKET-RETREAT",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1653,14 +1825,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -1681,21 +1857,24 @@
         "NORMAL": {
           "status": "RELEASED",
           "sourceIds": [
-            "OFF-SHADOW-SANDSHREW"
+            "OFF-KANTO-TOUR-2021"
           ],
-          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+          "noteZhTw": "官方關都活動資料確認此一般型態已在遊戲中出現。"
         },
         "SHADOW": {
-          "status": "RELEASED",
+          "status": "VERIFIED_SECONDARY_ROSTER",
           "sourceIds": [
-            "BULBA-SHADOW-LIST-20260808"
+            "BULBA-SHADOW-ROSTER-20260901"
           ],
-          "noteZhTw": "官方／來源清單已列出暗影型態；暗影版本與普通版本分開評估。"
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1713,14 +1892,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -1756,9 +1939,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-ROCKET-RETREAT",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1776,14 +1959,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": [
@@ -1798,23 +1985,32 @@
       "formKey": "KANTO",
       "formNameEn": "Kanto",
       "formNameZhTw": "關都",
-      "releaseStatus": "NEEDS_REVIEW",
-      "releaseSourceIds": [],
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-KANTO-TOUR-2021"
+      ],
       "variants": {
         "NORMAL": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-KANTO-TOUR-2021"
+          ],
+          "noteZhTw": "官方關都 Tour 說明前 150 隻關都寶可夢均可透過活動取得，確認普通型態已推出。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1832,19 +2028,21 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
-      "reviewNotesZhTw": [
-        "普通型態推出狀態需以另一個官方原始頁面重新確認。"
-      ]
+      "reviewNotesZhTw": []
     },
     {
       "dexNumber": 21,
@@ -1867,16 +2065,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "UNRELEASED",
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
           "sourceIds": [
-            "BULBA-SHADOW-LIST-20260808"
+            "BULBA-SHADOW-ROSTER-20260901"
           ],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "noteZhTw": "截至 2026-09-01 未列於完整暗影歷史推出名單，判定尚未推出。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "UNRELEASED_BY_SHADOW_AVAILABILITY",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "同型態暗影尚未推出，因此目前無法取得對應淨化版本。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1894,14 +2095,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -1914,25 +2119,32 @@
       "formKey": "KANTO",
       "formNameEn": "Kanto",
       "formNameZhTw": "關都",
-      "releaseStatus": "NEEDS_REVIEW",
-      "releaseSourceIds": [],
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-KANTO-TOUR-2021"
+      ],
       "variants": {
         "NORMAL": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-KANTO-TOUR-2021"
+          ],
+          "noteZhTw": "官方關都 Tour 說明前 150 隻關都寶可夢均可透過活動取得，確認普通型態已推出。"
         },
         "SHADOW": {
-          "status": "UNRELEASED",
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
           "sourceIds": [
-            "BULBA-SHADOW-LIST-20260808"
+            "BULBA-SHADOW-ROSTER-20260901"
           ],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "noteZhTw": "截至 2026-09-01 未列於完整暗影歷史推出名單，判定尚未推出。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "UNRELEASED_BY_SHADOW_AVAILABILITY",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "同型態暗影尚未推出，因此目前無法取得對應淨化版本。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -1950,19 +2162,21 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
-      "reviewNotesZhTw": [
-        "普通型態推出狀態需以另一個官方原始頁面重新確認。"
-      ]
+      "reviewNotesZhTw": []
     },
     {
       "dexNumber": 23,
@@ -1980,21 +2194,24 @@
         "NORMAL": {
           "status": "RELEASED",
           "sourceIds": [
-            "OFF-SHADOW-SANDSHREW"
+            "OFF-KANTO-TOUR-2021"
           ],
-          "noteZhTw": "官方頁面有逐物種出現紀錄。"
+          "noteZhTw": "官方關都活動資料確認此一般型態已在遊戲中出現。"
         },
         "SHADOW": {
-          "status": "RELEASED",
+          "status": "VERIFIED_SECONDARY_ROSTER",
           "sourceIds": [
-            "BULBA-SHADOW-LIST-20260808"
+            "BULBA-SHADOW-ROSTER-20260901"
           ],
-          "noteZhTw": "官方／來源清單已列出暗影型態；暗影版本與普通版本分開評估。"
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2012,14 +2229,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -2032,23 +2253,32 @@
       "formKey": "KANTO",
       "formNameEn": "Kanto",
       "formNameZhTw": "關都",
-      "releaseStatus": "NEEDS_REVIEW",
-      "releaseSourceIds": [],
+      "releaseStatus": "VERIFIED",
+      "releaseSourceIds": [
+        "OFF-KANTO-TOUR-2021"
+      ],
       "variants": {
         "NORMAL": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
+          "status": "RELEASED",
+          "sourceIds": [
+            "OFF-KANTO-TOUR-2021"
+          ],
+          "noteZhTw": "官方關都 Tour 說明前 150 隻關都寶可夢均可透過活動取得，確認普通型態已推出。"
         },
         "SHADOW": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "VERIFIED_SECONDARY_ROSTER",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901"
+          ],
+          "noteZhTw": "完整暗影歷史名單明列此型態與首次推出日期。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "AVAILABLE_FROM_PURIFICATION",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2066,19 +2296,21 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
-      "reviewNotesZhTw": [
-        "普通型態推出狀態需以另一個官方原始頁面重新確認。"
-      ]
+      "reviewNotesZhTw": []
     },
     {
       "dexNumber": 25,
@@ -2103,16 +2335,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "UNRELEASED",
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
           "sourceIds": [
-            "BULBA-SHADOW-LIST-20260808"
+            "BULBA-SHADOW-ROSTER-20260901"
           ],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "noteZhTw": "截至 2026-09-01 未列於完整暗影歷史推出名單，判定尚未推出。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "UNRELEASED_BY_SHADOW_AVAILABILITY",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "同型態暗影尚未推出，因此目前無法取得對應淨化版本。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2130,9 +2365,11 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
           "status": "RELEASED",
@@ -2167,16 +2404,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "UNRELEASED",
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
           "sourceIds": [
-            "BULBA-SHADOW-LIST-20260808"
+            "BULBA-SHADOW-ROSTER-20260901"
           ],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "noteZhTw": "截至 2026-09-01 未列於完整暗影歷史推出名單，判定尚未推出。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "UNRELEASED_BY_SHADOW_AVAILABILITY",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "同型態暗影尚未推出，因此目前無法取得對應淨化版本。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2194,14 +2434,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": [
@@ -2229,16 +2473,19 @@
           "noteZhTw": "官方頁面有逐物種出現紀錄。"
         },
         "SHADOW": {
-          "status": "UNRELEASED",
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
           "sourceIds": [
-            "BULBA-SHADOW-LIST-20260808"
+            "BULBA-SHADOW-ROSTER-20260901"
           ],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "noteZhTw": "截至 2026-09-01 未列於完整暗影歷史推出名單，判定尚未推出。"
         },
         "PURIFIED": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "UNRELEASED_BY_SHADOW_AVAILABILITY",
+          "sourceIds": [
+            "BULBA-SHADOW-ROSTER-20260901",
+            "OFF-PURIFICATION-MECHANIC-20260901"
+          ],
+          "noteZhTw": "同型態暗影尚未推出，因此目前無法取得對應淨化版本。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2246,28 +2493,34 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "MEGA_X": {
-          "status": "ANNOUNCED_NOT_YET_RELEASED",
+          "status": "RELEASED",
           "sourceIds": [
-            "OFF-MEGA-RAICHU-2026"
+            "OFF-MEGA-RAICHU-2026",
+            "OFF-MORE-MEGA-UPDATES-2026"
           ],
-          "noteZhTw": "預定 2026-07-18 首次登場；本批查閱日 2026-07-15 尚未推出。"
+          "noteZhTw": "官方公告 Mega Raichu X 於 2026-07-18 首次登場，並由後續官方現行更新交叉確認已推出。"
         },
         "MEGA_Y": {
-          "status": "ANNOUNCED_NOT_YET_RELEASED",
+          "status": "RELEASED",
           "sourceIds": [
-            "OFF-MEGA-RAICHU-2026"
+            "OFF-MEGA-RAICHU-2026",
+            "OFF-MORE-MEGA-UPDATES-2026"
           ],
-          "noteZhTw": "預定 2026-07-18 首次登場；本批查閱日 2026-07-15 尚未推出。"
+          "noteZhTw": "官方公告 Mega Raichu Y 於 2026-07-18 首次登場，並由後續官方現行更新交叉確認已推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -2305,9 +2558,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-ROCKET-RETREAT",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2325,14 +2578,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -2368,9 +2625,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-SHADOW-SANDSHREW",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2388,14 +2645,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -2431,9 +2692,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-WORLDS-2023",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2451,14 +2712,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -2494,9 +2759,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-SHADOW-SANDSHREW",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2514,14 +2779,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": [
@@ -2563,9 +2832,9 @@
           "sourceIds": [
             "OFF-SHADOW-NIDORAN",
             "OFF-NOXIOUS-2023",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2583,14 +2852,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -2626,9 +2899,9 @@
           "status": "AVAILABLE_FROM_PURIFICATION",
           "sourceIds": [
             "OFF-SHADOW-NIDORAN",
-            "OFF-ROCKET-INVASION"
+            "OFF-PURIFICATION-MECHANIC-20260901"
           ],
-          "noteZhTw": "由已確認的暗影個體配合官方淨化機制推導；淨化不可逆等細節須由規則/UI另行提示。"
+          "noteZhTw": "暗影已推出；依官方淨化機制，對應淨化版本可取得。"
         },
         "MEGA": {
           "status": "NEEDS_REVIEW",
@@ -2646,14 +2919,18 @@
           "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
         },
         "DYNAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 未列於完整 Max 歷史推出名單，判定此 Dynamax 型態尚未推出；Gigantamax 型態不共用此狀態。"
         },
         "GIGANTAMAX": {
-          "status": "NEEDS_REVIEW",
-          "sourceIds": [],
-          "noteZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
+          "status": "NOT_RELEASED_IN_COMPLETE_ROSTER",
+          "sourceIds": [
+            "GOHUB-DYNAMAX-ROSTER-20260901"
+          ],
+          "noteZhTw": "截至 2026-09-01 的完整 Dynamax／Gigantamax 歷史名單未列此型態；依使用者授權，判定尚未推出。"
         }
       },
       "reviewNotesZhTw": []
@@ -2990,16 +3267,6 @@
   "reviewQueue": [
     {
       "pokemonFormId": "001-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "001-kanto",
-      "category": "PURIFIED",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "001-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
@@ -3011,21 +3278,6 @@
     {
       "pokemonFormId": "001-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "001-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "002-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "002-kanto",
-      "category": "PURIFIED",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3044,21 +3296,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "002-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "003-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "003-kanto",
-      "category": "PURIFIED",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "003-kanto",
       "category": "MEGA_X",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3066,16 +3303,6 @@
     {
       "pokemonFormId": "003-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "004-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "004-kanto",
-      "category": "PURIFIED",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3094,21 +3321,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "004-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "005-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "005-kanto",
-      "category": "PURIFIED",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "005-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3121,21 +3333,6 @@
     {
       "pokemonFormId": "005-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "005-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "006-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "006-kanto",
-      "category": "PURIFIED",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3145,16 +3342,6 @@
     },
     {
       "pokemonFormId": "007-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "007-kanto",
-      "category": "PURIFIED",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "007-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
@@ -3166,21 +3353,6 @@
     {
       "pokemonFormId": "007-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "007-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "008-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "008-kanto",
-      "category": "PURIFIED",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3196,21 +3368,6 @@
     {
       "pokemonFormId": "008-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "008-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "009-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "009-kanto",
-      "category": "PURIFIED",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3239,31 +3396,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "010-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "010-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "011-kanto",
-      "category": "RELEASE_STATUS",
-      "reasonZhTw": "缺少本輪可直接開啟且逐物種列名的官方來源。"
-    },
-    {
-      "pokemonFormId": "011-kanto",
-      "category": "NORMAL",
-      "reasonZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
-    },
-    {
-      "pokemonFormId": "011-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
-    },
-    {
       "pokemonFormId": "011-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3279,21 +3411,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "011-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "011-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "012-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
-    },
-    {
       "pokemonFormId": "012-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3306,11 +3423,6 @@
     {
       "pokemonFormId": "012-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "012-kanto",
-      "category": "DYNAMAX",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3329,16 +3441,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "013-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "013-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "014-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3351,16 +3453,6 @@
     {
       "pokemonFormId": "014-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "014-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "014-kanto",
-      "category": "GIGANTAMAX",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3374,16 +3466,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "015-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "015-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "016-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3397,21 +3479,6 @@
       "pokemonFormId": "016-kanto",
       "category": "MEGA_Y",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "016-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "016-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "017-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
     },
     {
       "pokemonFormId": "017-kanto",
@@ -3429,21 +3496,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "017-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "017-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "018-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
-    },
-    {
       "pokemonFormId": "018-kanto",
       "category": "MEGA_X",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3451,16 +3503,6 @@
     {
       "pokemonFormId": "018-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "018-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "018-kanto",
-      "category": "GIGANTAMAX",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3479,26 +3521,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "019-alola",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "019-alola",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "019-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "019-kanto",
-      "category": "PURIFIED",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "019-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3512,21 +3534,6 @@
       "pokemonFormId": "019-kanto",
       "category": "MEGA_Y",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "019-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "019-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "020-alola",
-      "category": "SHADOW",
-      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
     },
     {
       "pokemonFormId": "020-alola",
@@ -3544,36 +3551,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "020-alola",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "020-alola",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "020-kanto",
-      "category": "RELEASE_STATUS",
-      "reasonZhTw": "缺少本輪可直接開啟且逐物種列名的官方來源。"
-    },
-    {
-      "pokemonFormId": "020-kanto",
-      "category": "NORMAL",
-      "reasonZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
-    },
-    {
-      "pokemonFormId": "020-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "020-kanto",
-      "category": "PURIFIED",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "020-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3586,26 +3563,6 @@
     {
       "pokemonFormId": "020-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "020-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "020-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "021-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "021-kanto",
-      "category": "PURIFIED",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3624,36 +3581,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "021-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "021-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "022-kanto",
-      "category": "RELEASE_STATUS",
-      "reasonZhTw": "缺少本輪可直接開啟且逐物種列名的官方來源。"
-    },
-    {
-      "pokemonFormId": "022-kanto",
-      "category": "NORMAL",
-      "reasonZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
-    },
-    {
-      "pokemonFormId": "022-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "022-kanto",
-      "category": "PURIFIED",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "022-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3666,26 +3593,6 @@
     {
       "pokemonFormId": "022-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "022-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "022-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "023-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "023-kanto",
-      "category": "PURIFIED",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3704,36 +3611,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "023-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "023-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "024-kanto",
-      "category": "RELEASE_STATUS",
-      "reasonZhTw": "缺少本輪可直接開啟且逐物種列名的官方來源。"
-    },
-    {
-      "pokemonFormId": "024-kanto",
-      "category": "NORMAL",
-      "reasonZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。"
-    },
-    {
-      "pokemonFormId": "024-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "024-kanto",
-      "category": "PURIFIED",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "024-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3746,26 +3623,6 @@
     {
       "pokemonFormId": "024-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "024-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "024-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "025-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "025-kanto",
-      "category": "PURIFIED",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3784,21 +3641,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "025-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "026-alola",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "026-alola",
-      "category": "PURIFIED",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "026-alola",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3811,41 +3653,11 @@
     {
       "pokemonFormId": "026-alola",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "026-alola",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "026-alola",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "026-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "026-kanto",
-      "category": "PURIFIED",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
       "pokemonFormId": "026-kanto",
       "category": "MEGA",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "026-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "026-kanto",
-      "category": "GIGANTAMAX",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3864,16 +3676,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "027-alola",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "027-alola",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "027-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3886,16 +3688,6 @@
     {
       "pokemonFormId": "027-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "027-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "027-kanto",
-      "category": "GIGANTAMAX",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3914,21 +3706,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "028-alola",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "028-alola",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "028-kanto",
-      "category": "SHADOW",
-      "reasonZhTw": "由已確認的暗影前階依結構化進化路徑推導；官方事件頁未在同一頁逐名確認此進化後型態，需人工覆核。"
-    },
-    {
       "pokemonFormId": "028-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3941,16 +3718,6 @@
     {
       "pokemonFormId": "028-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "028-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "028-kanto",
-      "category": "GIGANTAMAX",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -3969,16 +3736,6 @@
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
-      "pokemonFormId": "029-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "029-kanto",
-      "category": "GIGANTAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
       "pokemonFormId": "030-kanto",
       "category": "MEGA",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
@@ -3991,16 +3748,6 @@
     {
       "pokemonFormId": "030-kanto",
       "category": "MEGA_Y",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "030-kanto",
-      "category": "DYNAMAX",
-      "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
-    },
-    {
-      "pokemonFormId": "030-kanto",
-      "category": "GIGANTAMAX",
       "reasonZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。"
     },
     {
@@ -4055,12 +3802,12 @@
     }
   ],
   "officialResearchGapsZhTw": [
-    "本輪官方來源未覆蓋所有普通型態、暗影型態及進化路徑；空缺均維持 NEEDS_REVIEW。",
+    "本輪官方來源仍未覆蓋所有普通型態、Mega 型態及進化路徑；只有缺少可用完整名單或直接證據的空缺維持 NEEDS_REVIEW。",
     "官方活動文章可證明某型態曾出現，但通常不能證明目前可取得。資料模型應區分 everReleased 與 currentAvailability。",
-    "未取得逐物種的官方『不存在／未推出』清單，因此未將搜尋不到的 Mega、Dynamax、Gigantamax 或 Shadow 填成 NOT_RELEASED。",
+    "未取得逐物種的官方 Mega『不存在／未推出』清單，因此未將搜尋不到的 Mega 型態填成 NOT_RELEASED；Shadow、Dynamax 與 Gigantamax 已依具查閱日的完整歷史名單分別解析。",
     "招式繁中名稱尚未逐筆由 zh-TW 官方頁面覆核；英文原名與活動取得條件已留存。",
     "阿羅拉雷丘在官方頁面以團體戰出現；本輪未找到官方頁面明示其不可由皮卡丘進化，取得方式仍需覆核。",
-    "Mega Raichu X/Y 的 2026-07-18 首次登場晚於本批 2026-07-15 查閱日，因此只能標為 ANNOUNCED_NOT_YET_RELEASED。",
-    "Gigantamax Pikachu 官方明示無法進化；不可把一般皮卡丘的進化路徑套用至該個體。"
+    "Gigantamax Pikachu 官方明示無法進化；不可把一般皮卡丘的進化路徑套用至該個體。",
+    "Mega Raichu X/Y 已由 2026-07-18 首次登場公告與 2026-09-01 查閱的後續官方更新交叉確認為 RELEASED。"
   ]
 }

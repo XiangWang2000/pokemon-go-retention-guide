@@ -49,7 +49,7 @@
   "maxBattleSummaryZhTw": "此版本沒有獨立 Max 型態。",
   "evolutionSummaryZhTw": "擁有該型態的第四世代批次提供正式進化身份與路徑。",
   "requiredMovesSummaryZhTw": "目前沒有記錄需要特別保留的招式結論。",
-  "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -596,36 +596,7 @@
       "sources": []
     }
   ],
-  "raw": [
-    {
-      "id": "raw-gen4-447-476-448-sinnoh-shadow-pve",
-      "category": "PVE",
-      "status": "PARTIALLY_VERIFIED",
-      "league": "NOT_APPLICABLE",
-      "cup": null,
-      "pvpCategory": null,
-      "speciesKey": null,
-      "formKey": "448-sinnoh",
-      "variantKey": "SHADOW",
-      "rank": null,
-      "rating": "Fighting attacker",
-      "score": null,
-      "tier": "USABLE_OR_BUDGET",
-      "recommendedMoves": [],
-      "rawNotes": "本批版本級 PvE 證據：448-sinnoh-shadow。",
-      "seasonOrVersion": "GO Hub accessed 2026-08-16",
-      "extractionMethod": "日期化的版本級 PvE 研究證據。",
-      "reproducible": false,
-      "migrationNote": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
-      "source": {
-        "id": "PVE-SINNOH-448-SHADOW-20260816",
-        "name": "Pokémon GO Hub PvE reference",
-        "title": "Lucario PvE reference",
-        "url": "https://db.pokemongohub.net/pokemon/448-Shadow"
-      }
-    }
-  ],
+  "raw": [],
   "sources": [
     {
       "id": "PVE-SINNOH-448-SHADOW-20260816",

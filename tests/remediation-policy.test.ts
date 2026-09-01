@@ -1,10 +1,12 @@
 import { describe, expect, it } from "vitest";
 import {
+  derivePurifiedReleaseStatus,
   normalizePvpRank,
   pokebattlerIdentityKey,
   pvpCategoryCanPopulateOverall,
   resolveCategoryProvenance,
   resolvePurifiedInheritance,
+  releaseStatusFromPvpRanking,
   resolveReleaseStatus,
   splitMaxEvaluation,
   stableReviewIssueKey,
@@ -130,5 +132,16 @@ describe("資料修正政策", () => {
     expect(stableReviewIssueKey({ type: "MATERIAL_DATA_GAP", category: "PVP" })).not.toBe(
       stableReviewIssueKey({ type: "MATERIAL_DATA_GAP", category: "PVE" }),
     );
+  });
+
+  it("18. Purified 推出狀態嚴格跟隨同型態 Shadow", () => {
+    expect(derivePurifiedReleaseStatus("RELEASED")).toBe("RELEASED");
+    expect(derivePurifiedReleaseStatus("UNRELEASED")).toBe("UNRELEASED");
+    expect(derivePurifiedReleaseStatus("UNKNOWN")).toBe("UNKNOWN");
+  });
+
+  it("19. PvPoke 是否有排名都不得推導推出狀態", () => {
+    expect(releaseStatusFromPvpRanking(true)).toBe("UNKNOWN");
+    expect(releaseStatusFromPvpRanking(false)).toBe("UNKNOWN");
   });
 });

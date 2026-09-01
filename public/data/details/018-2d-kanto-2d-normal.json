@@ -14,30 +14,36 @@
       "verifiedAt": "2026-07-14T16:00:00.000Z"
     }
   ],
-  "conflicts": [],
-  "changeLogs": [
+  "conflicts": [
     {
-      "id": "recalibrate-20260809-disposition-018-kanto-normal",
-      "fieldName": "assessmentDisposition",
-      "previousValue": "TRUE_DATA_PENDING",
-      "newValue": "LIMITED_USE",
-      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-08-27T16:00:00.000Z",
-      "rulesVersion": "2026.08.06-v7",
-      "source": null
-    },
+      "id": "issue-018-kanto-mega-2026.08.06-v7-source-conflict-category-pve",
+      "messageZhTw": "此欄位待補，但不影響MEGA 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
+      "detectedAt": "2026-09-01T04:00:00.000Z"
+    }
+  ],
+  "changeLogs": [
     {
       "id": "remediation-release-018-kanto-normal",
       "fieldName": "releaseStatus",
       "previousValue": "UNKNOWN",
       "newValue": "RELEASED",
       "changeReasonZhTw": "將舊 nullable boolean 正式化為 RELEASED／UNRELEASED／UNKNOWN 三態；UNRELEASED 不再等同待審核。",
-      "changedAt": "2026-07-28T04:00:00.000Z",
+      "changedAt": "2026-09-01T04:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": {
         "title": "GO Battle League Season 4 begins Monday, September 14, 2020, at 1:00 p.m. PDT (GMT −7)",
         "url": "https://pokemongo.com/en/post/gobattleleague-season4/"
       }
+    },
+    {
+      "id": "recalibrate-20260809-disposition-018-kanto-normal",
+      "fieldName": "assessmentDisposition",
+      "previousValue": "TRUE_DATA_PENDING",
+      "newValue": "LIMITED_USE",
+      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+      "changedAt": "2026-08-31T16:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": null
     },
     {
       "id": "change-evaluation-018-kanto-normal-2026.08.06-v7-iv-d3ea02465c84ee6c",

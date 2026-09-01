@@ -46,7 +46,8 @@ export async function promoteSnapshot(stagingRoot: string, targetRoot = process.
   const target = path.resolve(targetRoot);
   await mkdir(path.join(target, ".tmp"), { recursive: true });
   const backupRoot = await mkdtemp(path.join(target, ".tmp", "snapshot-backup-"));
-  const moved: string[] = [];
+  const backedUp: string[] = [];
+  const promoted: string[] = [];
 
   try {
     for (const relativePath of SNAPSHOT_PROMOTION_TARGETS) {
@@ -54,19 +55,27 @@ export async function promoteSnapshot(stagingRoot: string, targetRoot = process.
       if (!(await exists(stagedPath))) {
         throw new Error(`Staged snapshot is missing ${relativePath}.`);
       }
+    }
 
+    for (const relativePath of SNAPSHOT_PROMOTION_TARGETS) {
+      const stagedPath = path.join(staging, relativePath);
       const targetPath = path.join(target, relativePath);
       const backupPath = path.join(backupRoot, relativePath);
-      moved.push(relativePath);
       if (await exists(targetPath)) {
         await mkdir(path.dirname(backupPath), { recursive: true });
         await rename(targetPath, backupPath);
+        backedUp.push(relativePath);
       }
       await mkdir(path.dirname(targetPath), { recursive: true });
       await rename(stagedPath, targetPath);
+      promoted.push(relativePath);
     }
   } catch (error) {
-    for (const relativePath of moved.reverse()) {
+    for (const relativePath of promoted.reverse()) {
+      const targetPath = path.join(target, relativePath);
+      await rm(targetPath, { recursive: true, force: true });
+    }
+    for (const relativePath of backedUp.reverse()) {
       const targetPath = path.join(target, relativePath);
       const backupPath = path.join(backupRoot, relativePath);
       await rm(targetPath, { recursive: true, force: true });

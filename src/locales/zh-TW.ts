@@ -1,9 +1,9 @@
 export const zhTw = {
   decision: {
-    KEEP: "建議保留",
-    CONDITIONAL_KEEP: "條件式保留",
-    HOLD_FOR_NOW: "暫時保留",
-    TRANSFER_CANDIDATE: "通常可傳送",
+    KEEP: "要留",
+    CONDITIONAL_KEEP: "符合條件才留",
+    HOLD_FOR_NOW: "資料不足，先不要傳",
+    TRANSFER_CANDIDATE: "普通重複可傳",
   },
   familyValue: {
     HIGH: "高",
@@ -12,10 +12,10 @@ export const zhTw = {
     UNKNOWN: "待確認",
   },
   familyRetentionStrategy: {
-    KEEP_TARGETS: "建議保留",
-    SELECTIVE_KEEP: "選擇性保留",
-    MOSTLY_TRANSFER: "大多可傳",
-    HOLD_FOR_NOW: "暫時保留",
+    KEEP_TARGETS: "有明確保留目標",
+    SELECTIVE_KEEP: "只留符合條件者",
+    MOSTLY_TRANSFER: "普通重複可傳",
+    HOLD_FOR_NOW: "資料不足，先不要傳",
   },
   confidence: { HIGH: "高", MEDIUM: "中", LOW: "低" },
   variant: {

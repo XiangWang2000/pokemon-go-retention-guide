@@ -22,39 +22,30 @@
   ],
   "evolutionNames": [],
   "variantKey": "NORMAL",
-  "isReleased": null,
-  "releaseStatus": "UNKNOWN",
-  "releaseVerifiedAt": null,
-  "notesZhTw": "本輪未找到逐物種官方頁面；不代表遊戲中未推出。（官方研究狀態：NEEDS_REVIEW）",
-  "decision": "HOLD_FOR_NOW",
-  "assessmentDisposition": "TRUE_DATA_PENDING",
-  "provenance": "DATA_UNAVAILABLE",
-  "confidence": "LOW",
+  "isReleased": true,
+  "releaseStatus": "RELEASED",
+  "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
+  "notesZhTw": "官方關都 Tour 說明前 150 隻關都寶可夢均可透過活動取得，確認普通型態已推出。（官方研究狀態：RELEASED）",
+  "decision": "TRANSFER_CANDIDATE",
+  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+  "provenance": "MANUAL_CURATED",
+  "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
-  "reviewStatus": "DATA_PENDING",
+  "reviewStatus": "RESOLVED",
   "reviewIssues": [
-    {
-      "id": "issue-020-kanto-normal-2026.08.06-v7-unknown-release-status-variant",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "真正待補資料：缺少關鍵用途欄位的可重現證據；影響此版本的實戰用途與保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
-      "affectsFinalDecision": true,
-      "provisionalDecision": "HOLD_FOR_NOW",
-      "suggestedResearchActionZhTw": "真正待補資料：缺少關鍵用途欄位的可重現證據；影響此版本的實戰用途與保留判斷；補齊後可能把目前的暫時保留改為可傳、條件保留或明確用途；需要補查 Pokémon GO 官方公告／遊戲內進化介面與對應 PvP、PvE、火箭隊、道館或 Max 原始來源。",
-      "lastResearchedAt": "2026-08-27T16:00:00.000Z"
-    },
     {
       "id": "issue-020-kanto-normal-2026.08.06-v7-optional-data-missing-categories-gym-rocket",
       "issueType": "OPTIONAL_DATA_MISSING",
       "messageZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
       "affectsFinalDecision": false,
-      "provisionalDecision": "HOLD_FOR_NOW",
+      "provisionalDecision": "TRANSFER_CANDIDATE",
       "suggestedResearchActionZhTw": "此欄位待補，但不影響普通個體結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+      "lastResearchedAt": "2026-08-31T16:00:00.000Z"
     }
   ],
-  "missingDataSummaryZhTw": "無法判斷，暫時不要傳。",
-  "reviewed": false,
-  "updatedAt": "2026-08-27T16:00:00.000Z",
+  "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
+  "reviewed": true,
+  "updatedAt": "2026-08-31T16:00:00.000Z",
   "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -64,7 +55,7 @@
   "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "來源建議招式：QUICK_ATTACK、HYPER_FANG、DIG。請先確認限定招式取得方式。",
-  "recommendedIvStrategyZhTw": "先保留一隻；關鍵用途確認前不以IV篩除。",
+  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -457,10 +448,10 @@
       "rulesVersion": "2026.07.28-v2"
     }
   ],
-  "reasonZhTw": "真正待補資料：無法判斷，暫時不要傳；請補齊主要來源後再重算。",
+  "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
   "evaluationId": "evaluation-020-kanto-normal-2026.08.06-v7",
   "rulesVersion": "2026.08.06-v7",
-  "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+  "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
   "inheritance": {
     "inheritsFromVariantId": null,
     "inheritanceMode": "NONE",
@@ -473,7 +464,7 @@
     {
       "category": "EVOLUTION_VALUE",
       "status": "NOT_APPLICABLE",
-      "provenance": "MANUAL_CURATED",
+      "provenance": "SOURCE_VERIFIED",
       "summaryZhTw": "本批資料中沒有後續進化路徑。",
       "materialToDecision": false,
       "rocketRating": null,
@@ -486,8 +477,15 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
-      "sources": []
+      "checkedAt": "2026-09-01T04:00:00.000Z",
+      "sources": [
+        {
+          "id": "OFF-KANTO-TOUR-2021",
+          "title": "Celebrate Pokémon’s anniversary with a brand-new event—Pokémon GO Tour: Kanto!",
+          "url": "https://pokemongo.com/post/pokemongotour-kanto?hl=en",
+          "usageZhTw": "EVOLUTION_VALUE 類別資料狀態與摘要的依據。"
+        }
+      ]
     },
     {
       "category": "GYM",
@@ -505,7 +503,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": []
     },
     {
@@ -524,7 +522,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": []
     },
     {
@@ -543,7 +541,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "battle2-gohub-raticate",
@@ -568,8 +566,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "assessmentDisposition": "TRUE_DATA_PENDING",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "battle2-gohub-raticate",
@@ -594,13 +592,13 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "TRUE_DATA_PENDING",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         }
       ]
@@ -621,7 +619,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "OFF-ROCKET-INVASION",
@@ -633,6 +631,38 @@
     }
   ],
   "raw": [
+    {
+      "id": "raw-020-kanto-normal-great",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "GREAT",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "raticate",
+      "formKey": "020-kanto",
+      "variantKey": "NORMAL",
+      "rank": 958,
+      "rating": "411",
+      "score": 411,
+      "tier": null,
+      "recommendedMoves": [
+        "QUICK_ATTACK",
+        "HYPER_FANG",
+        "DIG"
+      ],
+      "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
+      "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-08-31T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-gl-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    },
     {
       "id": "research-020-kanto-normal-pve-30",
       "category": "PVE",
@@ -660,41 +690,18 @@
         "title": "Raticate: Best Moveset, Counters & Max CP | Pokémon GO",
         "url": "https://db.pokemongohub.net/pokemon/20"
       }
-    },
-    {
-      "id": "raw-020-kanto-normal-great",
-      "category": "PVP",
-      "status": "VERIFIED",
-      "league": "GREAT",
-      "cup": "OPEN",
-      "pvpCategory": "OVERALL",
-      "speciesKey": "raticate",
-      "formKey": "020-kanto",
-      "variantKey": "NORMAL",
-      "rank": 957,
-      "rating": "412",
-      "score": 412,
-      "tier": null,
-      "recommendedMoves": [
-        "QUICK_ATTACK",
-        "HYPER_FANG",
-        "DIG"
-      ],
-      "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-      "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-      "reproducible": true,
-      "migrationNote": null,
-      "checkedAt": "2026-07-14T16:00:00.000Z",
-      "source": {
-        "id": "pvpoke-gl-20260715",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
-      }
     }
   ],
   "sources": [
+    {
+      "id": "OFF-KANTO-TOUR-2021",
+      "name": "Pokémon GO",
+      "title": "Celebrate Pokémon’s anniversary with a brand-new event—Pokémon GO Tour: Kanto!",
+      "url": "https://pokemongo.com/post/pokemongotour-kanto?hl=en",
+      "type": "OFFICIAL",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
+      "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
+    },
     {
       "id": "OFF-ROCKET-INVASION",
       "name": "Pokémon GO",
@@ -714,22 +721,22 @@
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     }
   ],
   "traces": [
     {
-      "ruleKey": "MATERIAL_UNCERTAINTY",
-      "priority": 1000,
+      "ruleKey": "LOW_GENERAL_VALUE",
+      "priority": 100,
       "matched": true,
-      "resultDecision": "HOLD_FOR_NOW",
-      "explanationZhTw": "真正待補資料：無法判斷，暫時不要傳；請補齊主要來源後再重算。"
+      "resultDecision": "TRANSFER_CANDIDATE",
+      "explanationZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。"
     }
   ],
   "moves": []

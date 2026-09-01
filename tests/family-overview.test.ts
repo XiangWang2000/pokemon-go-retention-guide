@@ -160,21 +160,40 @@ describe("家族總覽 UI", () => {
     expect(html).not.toContain("建議保留");
     expect(html).toContain('data-testid="family-handling-summary"');
     expect(html).toContain("立即處理結論");
-    expect(html).toContain("先留再篩");
+    expect(html).toContain("有明確保留目標");
+    expect(html).toContain('data-testid="family-member-decision-summary"');
+    expect(html).toContain("逐隻快速判定");
+    expect(html).toContain("符合條件才留");
+    expect(html).toContain("妙蛙種子、妙蛙草");
+    expect(html).toContain("妙蛙花");
+    expect(html).toContain('data-testid="family-target-version-summary"');
+    expect(html).toContain("保留目標與版本狀態");
+    expect(html).toContain('aria-label="妙蛙花適用版本"');
+    expect(html).toContain(">普通<");
+    expect(html).toContain(">暗影<");
+    expect(html).toContain(">Mega<");
+    expect(html).toContain(">超極巨化<");
     expect(html).toContain('data-testid="family-keep-condition"');
-    expect(html).toContain(">要保留的條件<");
-    expect(html).toContain("PvP（GL Rank≤100、UL Rank≤100）");
+    expect(html).toContain(">符合這些條件才留<");
+    expect(html).toContain("PvP（UL Rank≤100）");
     expect(html).toContain('data-testid="family-transfer-condition"');
     expect(html).toContain("其他普通重複可傳");
     expect(html).toContain("其餘不符合上述用途的普通重複個體可傳");
+    expect(html).toContain('data-testid="transfer-safety-note"');
+    expect(html).toContain("傳送前排除");
+    expect(html).toContain("異色、特殊造型、活動背卡、紀念與個人收藏個體");
     expect(html).toContain("text-lg leading-7");
     expect(html.indexOf('data-testid="family-keep-condition"')).toBeLessThan(
       html.indexOf('data-testid="family-transfer-condition"'),
     );
-    expect(html.indexOf('data-testid="family-handling-summary"')).toBeLessThan(
-      html.indexOf('aria-label="展開妙蛙花家族成員"'),
+    expect(html.indexOf('aria-label="展開妙蛙花家族成員"')).toBeLessThan(
+      html.indexOf('data-testid="family-handling-summary"'),
     );
+    expect(html.indexOf(">直接判定<")).toBeLessThan(html.indexOf(">成員<"));
     expect(html).toContain('data-testid="family-term-glossary"');
+    expect(html.indexOf('data-testid="family-handling-summary"')).toBeLessThan(
+      html.indexOf('data-testid="family-term-glossary"'),
+    );
     expect(html).toContain("GL");
     expect(html).toContain("超級聯盟，CP 上限 1500");
     expect(html).toContain("Rank");
@@ -204,6 +223,64 @@ describe("家族總覽 UI", () => {
     expect(html).toContain("特殊取得不可傳");
     expect(html).toContain("特殊取得個體不以 IV 作傳送門檻");
     expect(html).not.toContain("其他普通重複可傳");
+  });
+
+  it("選擇性保留、暫緩與可傳家族都顯示不含糊的處理邊界", () => {
+    const renderFamily = (targetFamily: (typeof families)[number]) =>
+      renderToStaticMarkup(
+        createElement(FamilyOverviewComponent, {
+          families: [targetFamily],
+          expandedFamilies: new Set<string>(),
+          expandedForms: new Set<string>(),
+          onToggleFamily: () => undefined,
+          onToggleForm: () => undefined,
+        }),
+      );
+
+    const selectiveHtml = renderFamily(byMember("012-kanto"));
+    expect(selectiveHtml).toContain("只留符合條件者");
+    expect(selectiveHtml).toContain("超極巨巴大蝶");
+    expect(selectiveHtml).toContain(">超極巨化<");
+    expect(selectiveHtml).toContain("不符合上述用途的普通重複個體可傳");
+
+    const kantoRaticateHtml = renderFamily(byMember("019-kanto"));
+    expect(kantoRaticateHtml).not.toContain("資料不足，先不要傳");
+    expect(kantoRaticateHtml).toContain("普通重複可傳");
+    expect(kantoRaticateHtml).toContain("排除收藏需求後，普通重複可直接傳送");
+    expect(kantoRaticateHtml).toContain('data-testid="transfer-safety-note"');
+
+    const transferHtml = renderFamily(byMember("019-alola"));
+    expect(transferHtml).toContain("普通重複可傳");
+    expect(transferHtml).toContain("排除收藏需求後，普通重複可直接傳送");
+
+    const primalHtml = renderFamily(byMember("382-hoenn"));
+    expect(primalHtml).toContain(">原始回歸<");
+  });
+
+  it("首頁摘要未載入 BattleVariant 時仍以保留目標顯示適用版本", () => {
+    const summaryFamily = {
+      ...family,
+      detailsLoaded: false,
+      members: family.members.map((member) => ({
+        ...member,
+        form: { ...member.form, variants: [], detailsLoaded: false },
+      })),
+    };
+    const html = renderToStaticMarkup(
+      createElement(FamilyOverviewComponent, {
+        families: [summaryFamily],
+        expandedFamilies: new Set<string>(),
+        expandedForms: new Set<string>(),
+        onToggleFamily: () => undefined,
+        onToggleForm: () => undefined,
+      }),
+    );
+
+    expect(html).toContain('data-testid="family-target-version-summary"');
+    expect(html).toContain('aria-label="妙蛙花適用版本"');
+    expect(html).toContain(">暗影<");
+    expect(html).toContain(">Mega<");
+    expect(html).toContain(">超極巨化<");
   });
 
   it("2/7/27. 展開家族及成員後仍能查看各版本、來源與資料狀態", () => {

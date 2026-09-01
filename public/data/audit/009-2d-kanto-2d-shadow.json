@@ -22,26 +22,17 @@
   ],
   "evolutionNames": [],
   "variantKey": "SHADOW",
-  "isReleased": null,
-  "releaseStatus": "UNKNOWN",
-  "releaseVerifiedAt": null,
-  "notesZhTw": "本輪官方搜尋未找到足以確認現況的逐物種原始頁面；不可據此推論未推出。（官方研究狀態：NEEDS_REVIEW）",
+  "isReleased": true,
+  "releaseStatus": "RELEASED",
+  "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
+  "notesZhTw": "完整暗影歷史名單明列此型態與首次推出日期。（官方研究狀態：VERIFIED_SECONDARY_ROSTER）",
   "decision": "KEEP",
   "assessmentDisposition": "CLEAR_USE",
-  "provenance": "DATA_UNAVAILABLE",
+  "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [
-    {
-      "id": "issue-009-kanto-shadow-2026.08.06-v7-unknown-release-status-variant",
-      "issueType": "UNKNOWN_RELEASE_STATUS",
-      "messageZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "affectsFinalDecision": false,
-      "provisionalDecision": "KEEP",
-      "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要型態的發佈狀態欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "lastResearchedAt": "2026-08-27T16:00:00.000Z"
-    },
     {
       "id": "issue-009-kanto-shadow-2026.08.06-v7-optional-data-missing-categories-gym-pve-rocket",
       "issueType": "OPTIONAL_DATA_MISSING",
@@ -49,12 +40,12 @@
       "affectsFinalDecision": false,
       "provisionalDecision": "KEEP",
       "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "lastResearchedAt": "2026-08-27T16:00:00.000Z"
+      "lastResearchedAt": "2026-08-31T16:00:00.000Z"
     }
   ],
   "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
   "reviewed": true,
-  "updatedAt": "2026-08-27T16:00:00.000Z",
+  "updatedAt": "2026-08-31T16:00:00.000Z",
   "pvpSummaryZhTw": "精確名次來自固定 commit 的完整結構化榜單，可重現 species、型態、聯盟與 Overall 分類。",
   "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
   "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -460,7 +451,7 @@
   "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
   "evaluationId": "evaluation-009-kanto-shadow-2026.08.06-v7",
   "rulesVersion": "2026.08.06-v7",
-  "reviewNotesZhTw": "資料仍有關鍵不確定性；系統依傳送不可逆原則暫時建議保留，使用者不需自行判斷戰鬥價值。",
+  "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
   "inheritance": {
     "inheritsFromVariantId": null,
     "inheritanceMode": "NONE",
@@ -486,7 +477,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "CLEAR_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "OFF-MEGA-LAUNCH",
@@ -518,7 +509,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "CLEAR_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": []
     },
     {
@@ -537,7 +528,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "CLEAR_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": []
     },
     {
@@ -556,7 +547,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "CLEAR_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "battle1-GOHUB_SHADOW_009",
@@ -582,7 +573,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "CORE_INVESTMENT",
       "assessmentDisposition": "CLEAR_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "battle1-GOHUB_SHADOW_009",
@@ -608,24 +599,24 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "CLEAR_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         },
         {
-          "id": "pvpoke-ml-20260715",
+          "id": "pvpoke-ml-20260901",
           "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         }
       ]
@@ -646,7 +637,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "CLEAR_USE",
-      "checkedAt": "2026-07-28T04:00:00.000Z",
+      "checkedAt": "2026-09-01T04:00:00.000Z",
       "sources": [
         {
           "id": "OFF-ROCKET-INVASION",
@@ -658,6 +649,102 @@
     }
   ],
   "raw": [
+    {
+      "id": "raw-009-kanto-shadow-great",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "GREAT",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "blastoise_shadow",
+      "formKey": "009-kanto",
+      "variantKey": "SHADOW",
+      "rank": 183,
+      "rating": "612",
+      "score": 612,
+      "tier": null,
+      "recommendedMoves": [
+        "ROLLOUT",
+        "HYDRO_CANNON",
+        "SKULL_BASH"
+      ],
+      "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
+      "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-08-31T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-gl-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    },
+    {
+      "id": "raw-009-kanto-shadow-master",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "MASTER",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "blastoise_shadow",
+      "formKey": "009-kanto",
+      "variantKey": "SHADOW",
+      "rank": 320,
+      "rating": "445",
+      "score": 445,
+      "tier": null,
+      "recommendedMoves": [
+        "ROLLOUT",
+        "HYDRO_CANNON",
+        "ICE_BEAM"
+      ],
+      "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
+      "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-08-31T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-ml-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
+      }
+    },
+    {
+      "id": "raw-009-kanto-shadow-ultra",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "ULTRA",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "blastoise_shadow",
+      "formKey": "009-kanto",
+      "variantKey": "SHADOW",
+      "rank": 78,
+      "rating": "637",
+      "score": 637,
+      "tier": null,
+      "recommendedMoves": [
+        "ROLLOUT",
+        "HYDRO_CANNON",
+        "SKULL_BASH"
+      ],
+      "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
+      "seasonOrVersion": "PvPoke Open League Overall @ 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-08-31T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-ul-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    },
     {
       "id": "research-009-kanto-shadow-pve-8",
       "category": "PVE",
@@ -687,102 +774,6 @@
         "name": "Pokémon GO Hub Database",
         "title": "Shadow Blastoise: Best Moveset, Counters & Max CP | Pokémon GO",
         "url": "https://db.pokemongohub.net/pokemon/9-Shadow"
-      }
-    },
-    {
-      "id": "raw-009-kanto-shadow-great",
-      "category": "PVP",
-      "status": "VERIFIED",
-      "league": "GREAT",
-      "cup": "OPEN",
-      "pvpCategory": "OVERALL",
-      "speciesKey": "blastoise_shadow",
-      "formKey": "009-kanto",
-      "variantKey": "SHADOW",
-      "rank": 181,
-      "rating": "614",
-      "score": 614,
-      "tier": null,
-      "recommendedMoves": [
-        "ROLLOUT",
-        "HYDRO_CANNON",
-        "SKULL_BASH"
-      ],
-      "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-      "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-      "reproducible": true,
-      "migrationNote": null,
-      "checkedAt": "2026-07-14T16:00:00.000Z",
-      "source": {
-        "id": "pvpoke-gl-20260715",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
-      }
-    },
-    {
-      "id": "raw-009-kanto-shadow-master",
-      "category": "PVP",
-      "status": "VERIFIED",
-      "league": "MASTER",
-      "cup": "OPEN",
-      "pvpCategory": "OVERALL",
-      "speciesKey": "blastoise_shadow",
-      "formKey": "009-kanto",
-      "variantKey": "SHADOW",
-      "rank": 317,
-      "rating": "446",
-      "score": 446,
-      "tier": null,
-      "recommendedMoves": [
-        "ROLLOUT",
-        "HYDRO_CANNON",
-        "ICE_BEAM"
-      ],
-      "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-      "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-      "reproducible": true,
-      "migrationNote": null,
-      "checkedAt": "2026-07-14T16:00:00.000Z",
-      "source": {
-        "id": "pvpoke-ml-20260715",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
-      }
-    },
-    {
-      "id": "raw-009-kanto-shadow-ultra",
-      "category": "PVP",
-      "status": "VERIFIED",
-      "league": "ULTRA",
-      "cup": "OPEN",
-      "pvpCategory": "OVERALL",
-      "speciesKey": "blastoise_shadow",
-      "formKey": "009-kanto",
-      "variantKey": "SHADOW",
-      "rank": 77,
-      "rating": "637",
-      "score": 637,
-      "tier": null,
-      "recommendedMoves": [
-        "ROLLOUT",
-        "HYDRO_CANNON",
-        "ICE_BEAM"
-      ],
-      "rawNotes": "PvPoke 物種整體排名；不代表此物種內部的個體 IV Rank。排名以 JSON 陣列位置計算。",
-      "seasonOrVersion": "PvPoke Open League Overall @ 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-      "reproducible": true,
-      "migrationNote": null,
-      "checkedAt": "2026-07-14T16:00:00.000Z",
-      "source": {
-        "id": "pvpoke-ul-20260715",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
       }
     }
   ],
@@ -824,30 +815,30 @@
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     },
     {
-      "id": "pvpoke-ml-20260715",
+      "id": "pvpoke-ml-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     }
   ],
