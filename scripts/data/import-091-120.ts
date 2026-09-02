@@ -26,6 +26,7 @@ const prisma = new PrismaClient({
 });
 
 const checkedAt = new Date("2026-08-03T16:30:00+08:00");
+const releaseAuditAt = new Date("2026-09-02T00:00:00+08:00");
 const pvpCheckedAt = new Date("2026-09-01T00:00:00+08:00");
 const pvpSnapshotRoot = "data/sources/pvpoke/2026-09-01";
 const pvpokeCommit = "7b96d91fb553780653190ad32de001b5d9086a7f";
@@ -161,7 +162,7 @@ const officialEvidenceLinks: Array<{
     variantId: "120-kanto-normal",
     category: "EVOLUTION_VALUE",
     usageZhTw:
-      "官方已公告超級寶石海星將於 2026-08-22 登場；截至查閱日尚未開放，只讓海星星保留少量未來進化候選。",
+      "官方活動頁確認超級寶石海星已於 2026-08-22 正式登場；海星星只需保留少量實際 Mega／進化候選。",
   },
   {
     sourceId: "OFF-SHADOW-STARYU-2025",
@@ -317,7 +318,7 @@ async function upsertOfficialSources() {
       id: "OFF-MEGA-STARMIE-2026",
       sourceUrl: "https://pokemongo.com/en/news/starmie-super-mega-raid-day-2026",
       title: "Starmie Super Mega Raid Day 2026",
-      summary: "公告超級寶石海星將於 2026-08-22 登場；截至 2026-08-03 查閱時尚未開放。",
+      summary: "官方活動頁確認超級寶石海星已於 2026-08-22 正式登場。",
       publishedAt: new Date("2026-07-14T00:00:00Z"),
     },
     {
@@ -329,6 +330,7 @@ async function upsertOfficialSources() {
     },
   ];
   for (const source of sources) {
+    const sourceCheckedAt = source.id === "OFF-MEGA-STARMIE-2026" ? releaseAuditAt : checkedAt;
     await prisma.sourceReference.upsert({
       where: { id: source.id },
       create: {
@@ -339,14 +341,14 @@ async function upsertOfficialSources() {
         sourceTitleOriginal: source.title,
         sourceLanguage: "en",
         sourceSummaryZhTw: source.summary,
-        accessedAt: checkedAt,
+        accessedAt: sourceCheckedAt,
         publishedAt: source.publishedAt,
         dataVersion: "accessed-2026-08-03",
         notes: "第 #091～#120 批次的型態、進化、Mega 與 Max 推出證據。",
       },
       update: {
         sourceSummaryZhTw: source.summary,
-        accessedAt: checkedAt,
+        accessedAt: sourceCheckedAt,
         publishedAt: source.publishedAt,
         dataVersion: "accessed-2026-08-03",
         notes: "第 #091～#120 批次的型態、進化、Mega 與 Max 推出證據。",
