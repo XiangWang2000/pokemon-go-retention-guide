@@ -1130,7 +1130,7 @@ async function addChangeLogs() {
       reason: "將 #121 寶石海星接回前批 #120 海星星。",
     },
     {
-      id: "r31-gen1-mega-starmie-released",
+      id: "r13-mega-starmie-released",
       entityType: "BattleVariant",
       entityId: "121-kanto-mega",
       fieldName: "releaseStatus",
@@ -1191,7 +1191,7 @@ async function addChangeLogs() {
         newValue: change.newValue,
         sourceId: change.sourceId,
         changeReasonZhTw: change.reason,
-        changedAt: change.id === "r31-gen1-mega-starmie-released" ? releaseAuditAt : checkedAt,
+        changedAt: change.id === "r13-mega-starmie-released" ? releaseAuditAt : checkedAt,
         rulesVersion: RULES_VERSION,
       },
     });
