@@ -1,6 +1,6 @@
 {
   "batch": "282-311",
-  "checkedAt": "2026-08-09",
+  "checkedAt": "2026-09-03",
   "sources": [
     {
       "id": "OFF-HOENN-TOUR-2023",
@@ -156,16 +156,21 @@
       ]
     },
     {
-      "id": "MAX-HOENN-20260809",
-      "sourceName": "GO Hub Max Battle and Dynamax list",
+      "id": "MAX-HOENN-20260903",
+      "sourceName": "Pokémon GO Hub",
       "sourceType": "MAX_BATTLE",
-      "sourceTitleOriginal": "Pokemon GO Max Battle Pokemon list",
+      "sourceTitleOriginal": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
       "sourceLanguage": "en",
       "sourceUrl": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
-      "accessedAt": "2026-08-09",
+      "accessedAt": "2026-09-03",
       "publishedAt": null,
-      "sourceSummaryZhTw": "Max Battle evidence confirms which Max variants are released; unverified variants remain unreleased.",
-      "supports": []
+      "sourceSummaryZhTw": "截至 2026-09-03 的可用 Dynamax／Gigantamax 清單；用於核對 Hoenn 已推出 Max 型態。Max 版本與普通、暗影、Mega／原始回歸分開評估。",
+      "supports": [
+        "282-hoenn-normal",
+        "282-hoenn-dynamax",
+        "302-hoenn-normal",
+        "302-hoenn-dynamax"
+      ]
     },
     {
       "id": "EVOLUTION-HOENN-20260809",
@@ -221,6 +226,50 @@
       "publishedAt": null,
       "sourceSummaryZhTw": "Shadow evolution mechanism source: a descendant is derived/inherited only through a formal evolution path from a directly released Shadow starting form; it is not treated as a direct roster entry.",
       "supports": []
+    },
+    {
+      "id": "MAX-ATTACKERS-GEN3-20260903",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Pokémon GO Max Attackers Tier List (September 2026)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
+      "accessedAt": "2026-09-03",
+      "publishedAt": "2026-08-27",
+      "sourceSummaryZhTw": "2026-09 Max 攻擊手榜，用於校正已推出 Hoenn Dynamax 最終型態的攻擊價值；排名是投入分級依據，不代表所有已推出 Max 都必須保留。",
+      "supports": [
+        "282-hoenn-dynamax",
+        "302-hoenn-dynamax"
+      ]
+    },
+    {
+      "id": "MAX-DEFENDERS-GEN3-20260903",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Pokémon GO Max Defenders Tier List (September 2026)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+      "accessedAt": "2026-09-03",
+      "publishedAt": "2026-08-27",
+      "sourceSummaryZhTw": "2026-09 Max 防守／充能手榜，用於校正 Hoenn Dynamax 的防守與充能角色。",
+      "supports": [
+        "282-hoenn-dynamax"
+      ]
+    },
+    {
+      "id": "MAX-HEALERS-GEN3-20260903",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Pokémon GO Max Healers Tier List (September 2026)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-healers-tier-list-june-2025/",
+      "accessedAt": "2026-09-03",
+      "publishedAt": "2026-08-27",
+      "sourceSummaryZhTw": "2026-09 Max 治療手榜，用於校正 Hoenn Dynamax 的治療角色；只作角色分級，不把已推出自動等同核心投資。",
+      "supports": [
+        "282-hoenn-dynamax",
+        "302-hoenn-dynamax"
+      ]
     }
   ],
   "notes": "Hoenn standard forms, evolution paths, Shadow, Mega, and Max boundaries for #282-#311."
