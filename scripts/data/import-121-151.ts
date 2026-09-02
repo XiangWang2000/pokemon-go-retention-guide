@@ -556,7 +556,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         evolutionFamilyNotesZhTw: form.evolutionFamilyNotesZhTw,
         isReleasedInPokemonGo: true,
         releaseStatus: "RELEASED",
-        releaseVerifiedAt: id === "121-kanto-mega" ? releaseAuditAt : checkedAt,
+        releaseVerifiedAt: checkedAt,
       };
     }),
   });
@@ -638,7 +638,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       variantKey,
       isReleased: released,
       releaseStatus: released ? "RELEASED" : "UNRELEASED",
-      releaseVerifiedAt: checkedAt,
+      releaseVerifiedAt: id === "121-kanto-mega" ? releaseAuditAt : checkedAt,
       notesZhTw:
         variantKey === "GIGANTAMAX"
           ? "超極巨是獨立 Max 版本；不得與普通、暗影、Mega 或極巨版本混為一談。"
