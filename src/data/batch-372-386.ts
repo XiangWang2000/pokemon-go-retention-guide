@@ -471,13 +471,13 @@ export const pveClassifications372386: Record<string, PveUseLevel> = {
   "373-hoenn": "CORE_INVESTMENT",
   "374-hoenn": "NO_SIGNIFICANT_USE",
   "375-hoenn": "NO_SIGNIFICANT_USE",
-  "376-hoenn": "CORE_INVESTMENT",
+  "376-hoenn": "USABLE_OR_BUDGET",
   "377-hoenn": "NO_SIGNIFICANT_USE",
   "378-hoenn": "NO_SIGNIFICANT_USE",
   "379-hoenn": "NO_SIGNIFICANT_USE",
   "380-hoenn": "NO_SIGNIFICANT_USE",
   "381-hoenn": "NO_SIGNIFICANT_USE",
-  "382-hoenn": "CORE_INVESTMENT",
+  "382-hoenn": "USABLE_OR_BUDGET",
   "383-hoenn": "CORE_INVESTMENT",
   "384-hoenn": "CORE_INVESTMENT",
   "385-hoenn": "NO_SIGNIFICANT_USE",
@@ -488,10 +488,27 @@ export const pveClassifications372386: Record<string, PveUseLevel> = {
 };
 export const pveUseLevels372386: Record<string, PveUseLevel> = {
   "373-hoenn": "CORE_INVESTMENT",
-  "376-hoenn": "CORE_INVESTMENT",
-  "382-hoenn": "CORE_INVESTMENT",
+  "376-hoenn": "USABLE_OR_BUDGET",
+  "382-hoenn": "USABLE_OR_BUDGET",
   "383-hoenn": "CORE_INVESTMENT",
   "384-hoenn": "CORE_INVESTMENT",
+};
+export const pveVariantUseLevels372386: Record<string, PveUseLevel> = {
+  "373-hoenn-shadow": "CORE_INVESTMENT",
+  "373-hoenn-mega": "CORE_INVESTMENT",
+  "376-hoenn-shadow": "CORE_INVESTMENT",
+  "376-hoenn-mega": "CORE_INVESTMENT",
+  "377-hoenn-shadow": "SPECIAL_USE",
+  "378-hoenn-shadow": "SPECIAL_USE",
+  "380-hoenn-shadow": "CORE_INVESTMENT",
+  "380-hoenn-mega": "CORE_INVESTMENT",
+  "381-hoenn-shadow": "CORE_INVESTMENT",
+  "381-hoenn-mega": "CORE_INVESTMENT",
+  "382-hoenn-shadow": "CORE_INVESTMENT",
+  "382-hoenn-mega": "CORE_INVESTMENT",
+  "383-hoenn-shadow": "CORE_INVESTMENT",
+  "383-hoenn-mega": "CORE_INVESTMENT",
+  "384-hoenn-mega": "CORE_INVESTMENT",
 };
 const pvpokeIds372386: Record<string, { normal: string; shadow: string }> = {
   "372-hoenn": {
