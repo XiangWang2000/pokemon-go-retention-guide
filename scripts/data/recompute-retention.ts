@@ -315,9 +315,10 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
     mega?.materialToDecision ||
     (variant.variantKey === "NORMAL" && normalMegaCandidateForms.has(variant.pokemonFormId)),
   );
+  const isMaxVariant = variant.variantKey === "DYNAMAX" || variant.variantKey === "GIGANTAMAX";
   const hasMaxValue = Boolean(
-    max?.materialToDecision ||
-    (variant.variantKey === "GIGANTAMAX" && variant.releaseStatus === "RELEASED"),
+    isMaxVariant &&
+    (max?.materialToDecision || variant.releaseStatus === "RELEASED"),
   );
   const rawGym = variant.rawEvaluationData.filter((item) => item.category === "GYM");
   const rawGymRating = rawGym.some((item) => item.rating === "HIGH" || item.tier === "A")
@@ -332,7 +333,7 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
   );
   const gymRating = gym?.materialToDecision ? "SPECIAL_CASE" : (rawGymRating ?? "NOT_APPLICABLE");
   const hasMaxCore = Boolean(
-    variant.variantKey === "GIGANTAMAX" &&
+    isMaxVariant &&
     ["HIGH", "CORE"].includes(max?.maxOverallRating ?? max?.maxInvestmentRating ?? ""),
   );
   const classifiedPveLevel = classifyPveUse({
@@ -593,7 +594,8 @@ function makeDecision(input: {
     direct.hasDirectPveCore ||
     (direct.bestPvpRank !== null && direct.bestPvpRank <= 100) ||
     (direct.hasMegaValue && variant.variantKey.startsWith("MEGA") && direct.hasDirectPveValue) ||
-    (direct.hasMaxCore && variant.variantKey === "GIGANTAMAX") ||
+    (direct.hasMaxCore &&
+      (variant.variantKey === "DYNAMAX" || variant.variantKey === "GIGANTAMAX")) ||
     direct.gymRating === "HIGH"
   ) {
     return {
@@ -743,6 +745,7 @@ function releaseStatusCanAffectDecision(variant: VariantRecord) {
   return (
     variant.variantKey === "NORMAL" ||
     variant.variantKey.startsWith("MEGA") ||
+    variant.variantKey === "DYNAMAX" ||
     variant.variantKey === "GIGANTAMAX"
   );
 }
