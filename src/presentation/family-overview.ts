@@ -740,7 +740,34 @@ function targetHandlingParts(target: FamilyRetentionTarget, members: FamilyMembe
   if (leagueRecommendations.length) {
     parts.push(`PvP（${leagueRecommendations.join("、")}）`);
   }
-  if (uses.has("MASTER_LEAGUE")) parts.push("ML 高 IV 投資候選");
+  if (uses.has("MASTER_LEAGUE")) {
+    const relevantVariantKeys = new Set(target.variantKeys);
+    const masterRank = member?.form.variants
+      .filter(
+        (variant) =>
+          relevantVariantKeys.has(variant.row.variantKey) &&
+          variant.primaryUseKeys.includes("MASTER_LEAGUE"),
+      )
+      .flatMap((variant) =>
+        variant.row.raw
+          .filter(
+            (raw) =>
+              raw.category === "PVP" &&
+              raw.league === "MASTER" &&
+              typeof raw.rank === "number",
+          )
+          .map((raw) => raw.rank as number),
+      )
+      .sort((a, b) => a - b)[0];
+
+    if (masterRank !== undefined && masterRank <= 100) {
+      parts.push(`ML 主力候選（物種榜 #${masterRank}；高 IV 投資）`);
+    } else if (masterRank !== undefined && masterRank <= 250) {
+      parts.push(`ML 次要候選（物種榜 #${masterRank}；少量高 IV 即可）`);
+    } else {
+      parts.push("ML 特定用途候選");
+    }
+  }
   if (uses.has("PVE") || uses.has("SHADOW_PVE")) parts.push("PvE 實戰候選");
   if (uses.has("GYM_DEFENSE")) parts.push("道館防守候選");
   if (uses.has("SPECIAL_ACQUISITION")) parts.push("特殊取得，應保留");
