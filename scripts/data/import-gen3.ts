@@ -15,6 +15,7 @@ import {
   specialVariants252281,
   species252281,
   pveUseLevels252281,
+  maxUseLevels252281,
 } from "../../src/data/batch-252-281";
 import type {
   Gen3Form,
@@ -33,6 +34,7 @@ import {
   specialVariants282311,
   species282311,
   pveUseLevels282311,
+  maxUseLevels282311,
 } from "../../src/data/batch-282-311";
 import {
   forms312341,
@@ -46,6 +48,7 @@ import {
   species312341,
   pveClassifications312341,
   pveUseLevels312341,
+  maxUseLevels312341,
 } from "../../src/data/batch-312-341";
 import {
   forms342371,
@@ -59,6 +62,7 @@ import {
   species342371,
   pveClassifications342371,
   pveUseLevels342371,
+  maxUseLevels342371,
 } from "../../src/data/batch-342-371";
 import {
   forms372386,
@@ -72,6 +76,7 @@ import {
   species372386,
   pveClassifications372386,
   pveUseLevels372386,
+  maxUseLevels372386,
 } from "../../src/data/batch-372-386";
 import {
   ensureCrossGenerationEvolutionTargets,
@@ -156,6 +161,7 @@ type BatchDefinition = {
   specialVariants: Gen3SpecialVariant[];
   pveClassifications: Record<string, PveUseLevel>;
   pveUseLevels: Record<string, PveUseLevel>;
+  maxUseLevels: Record<string, PveUseLevel>;
   pvpokeSpeciesId: (form: Gen3Form, shadow: boolean) => string;
   shadowUnavailableFormIds: ReadonlySet<string>;
 };
@@ -199,6 +205,7 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants252281,
       pveClassifications: pveUseLevels252281,
       pveUseLevels: pveUseLevels252281,
+      maxUseLevels: maxUseLevels252281,
       pvpokeSpeciesId: pvpokeSpeciesId252281,
       shadowUnavailableFormIds: new Set(),
     };
@@ -218,6 +225,7 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants282311,
       pveClassifications: pveUseLevels282311,
       pveUseLevels: pveUseLevels282311,
+      maxUseLevels: maxUseLevels282311,
       pvpokeSpeciesId: pvpokeSpeciesId282311,
       shadowUnavailableFormIds: new Set(),
     };
@@ -237,6 +245,7 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants312341,
       pveClassifications: pveClassifications312341,
       pveUseLevels: pveUseLevels312341,
+      maxUseLevels: maxUseLevels312341,
       pvpokeSpeciesId: pvpokeSpeciesId312341,
       shadowUnavailableFormIds: new Set(),
     };
@@ -256,6 +265,7 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants342371,
       pveClassifications: pveClassifications342371,
       pveUseLevels: pveUseLevels342371,
+      maxUseLevels: maxUseLevels342371,
       pvpokeSpeciesId: pvpokeSpeciesId342371,
       shadowUnavailableFormIds: new Set(),
     };
@@ -275,6 +285,7 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants372386,
       pveClassifications: pveClassifications372386,
       pveUseLevels: pveUseLevels372386,
+      maxUseLevels: maxUseLevels372386,
       pvpokeSpeciesId: pvpokeSpeciesId372386,
       shadowUnavailableFormIds: new Set(),
     };
@@ -511,9 +522,12 @@ function initialDecision(
 ) {
   if (!released) return "TRANSFER_CANDIDATE" as const;
   if (variantKey === "MEGA") return "KEEP" as const;
-  if (variantKey === "DYNAMAX" || batch.pveUseLevels[formId] === "CORE_INVESTMENT") {
-    return "KEEP" as const;
+  if (variantKey === "DYNAMAX") {
+    if (batch.maxUseLevels[formId] === "CORE_INVESTMENT") return "KEEP" as const;
+    if (batch.maxUseLevels[formId]) return "CONDITIONAL_KEEP" as const;
+    return "TRANSFER_CANDIDATE" as const;
   }
+  if (batch.pveUseLevels[formId] === "CORE_INVESTMENT") return "KEEP" as const;
   if (batch.pveUseLevels[formId]) return "CONDITIONAL_KEEP" as const;
   const best = Math.min(...ranks.map((rank) => rank.rank), Number.POSITIVE_INFINITY);
   if (best <= 100) return "KEEP" as const;
@@ -1038,9 +1052,30 @@ export async function runImport(batchName: string) {
         maxTypeRank: null,
         maxTypeTier: null,
         maxTypeKey: null,
-        maxOverallRating: null,
-        maxInvestmentRating: null,
-        maxUseCaseBreadth: null,
+        maxOverallRating:
+          category === "MAX_BATTLE" && batch.maxUseLevels[variant.form.id]
+            ? batch.maxUseLevels[variant.form.id] === "CORE_INVESTMENT"
+              ? "HIGH"
+              : batch.maxUseLevels[variant.form.id] === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "LOW"
+            : null,
+        maxInvestmentRating:
+          category === "MAX_BATTLE" && batch.maxUseLevels[variant.form.id]
+            ? batch.maxUseLevels[variant.form.id] === "CORE_INVESTMENT"
+              ? "HIGH"
+              : batch.maxUseLevels[variant.form.id] === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "LOW"
+            : null,
+        maxUseCaseBreadth:
+          category === "MAX_BATTLE" && batch.maxUseLevels[variant.form.id]
+            ? batch.maxUseLevels[variant.form.id] === "CORE_INVESTMENT"
+              ? "BROAD"
+              : batch.maxUseLevels[variant.form.id] === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "NARROW"
+            : null,
         pveUseLevel,
         assessmentDisposition: null,
         checkedAt,
