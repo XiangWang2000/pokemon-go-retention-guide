@@ -498,7 +498,6 @@ export const pveVariantUseLevels372386: Record<string, PveUseLevel> = {
   "373-hoenn-mega": "CORE_INVESTMENT",
   "376-hoenn-shadow": "CORE_INVESTMENT",
   "376-hoenn-mega": "CORE_INVESTMENT",
-  "377-hoenn-shadow": "SPECIAL_USE",
   "378-hoenn-shadow": "SPECIAL_USE",
   "380-hoenn-shadow": "CORE_INVESTMENT",
   "380-hoenn-mega": "CORE_INVESTMENT",
