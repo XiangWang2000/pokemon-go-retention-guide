@@ -99,7 +99,7 @@ export interface IvResolutionContext {
   battleVariantId?: string | null;
 }
 
-export const IV_RULES_VERSION = "2026.07.28-v2";
+export const IV_RULES_VERSION = "2026.09.02-v3";
 export const GLOBAL_IV_SCOPE_KEY = "GLOBAL";
 
 function globalRecommendation(
@@ -140,16 +140,20 @@ function globalRecommendation(
 export const GLOBAL_IV_RECOMMENDATIONS: readonly IvRecommendation[] = [
   globalRecommendation("PVE", "PVE_ATTACKER", {
     attackIvPriority: 15,
+    totalIvPercentMin: 91.1,
+    totalIvPercentPriority: 95.6,
     ivRecommendationZhTw:
-      "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-    shortIvLabelZhTw: "PvE：15攻優先；14攻高整體IV亦可留",
+      "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+    shortIvLabelZhTw: "PvE：91%+可投入；96%+／15攻優先",
   }),
   globalRecommendation("MEGA", "MEGA_ATTACKER", {
     attackIvPriority: 15,
+    totalIvPercentMin: 91.1,
+    totalIvPercentPriority: 95.6,
     recommendedQuantity: 1,
     ivRecommendationZhTw:
-      "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-    shortIvLabelZhTw: "Mega：15攻優先；14攻高整體IV亦可留",
+      "Mega／PvE 一般投資門檻：總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。14攻高整體IV亦可留；低於91%只有急用、唯一候選、已高等或實測斷點合適時再投入；通常只需少量候選。",
+    shortIvLabelZhTw: "Mega：91%+可投入；96%+／15攻優先",
   }),
   globalRecommendation("MASTER_LEAGUE", "MASTER_LEAGUE", {
     attackIvMin: 15,
@@ -298,14 +302,16 @@ export function evaluateIvCandidate(
     case "PVE_ATTACKER":
     case "MEGA_ATTACKER": {
       const prefix = recommendation.ivStrategyKey === "MEGA_ATTACKER" ? "Mega：" : "PvE：";
-      if (candidate.attackIv === 15 && total >= 95.6)
-        return result(candidate, "PRIORITY", `${prefix}15攻高整體IV為同種長期投資優先`);
-      if (candidate.attackIv === 14 && total >= 95.6)
-        return result(candidate, "RECOMMENDED", `${prefix}14攻高整體IV亦可留，不得只因非15攻淘汰`);
+      const minimum = recommendation.totalIvPercentMin ?? 91.1;
+      const priority = recommendation.totalIvPercentPriority ?? 95.6;
+      if (candidate.attackIv === 15 && total >= priority)
+        return result(candidate, "PRIORITY", `${prefix}96%以上且15攻，長期／XL投資優先`);
+      if (total >= minimum)
+        return result(candidate, "RECOMMENDED", `${prefix}91%以上已達一般投入門檻；96%以上／15攻更優先`);
       return result(
         candidate,
         "CONDITIONAL",
-        `${prefix}先比較招式、等級／CP、既有投入與斷點；IV不設硬性淘汰線`,
+        `${prefix}低於91%不建議重投入；急用、唯一候選、已高等或達斷點時可例外`,
       );
     }
 

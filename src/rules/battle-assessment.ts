@@ -42,10 +42,42 @@ export interface BattleUseEvidence {
   hasTrueDataGap?: boolean;
 }
 
-const coreTiers = new Set(["SS", "S+", "S", "A+", "A", "TOP", "CORE"]);
-const usableTiers = new Set(["B+", "B", "BUDGET_ONLY", "USABLE", "VIABLE"]);
-const specialTiers = new Set(["LIMITED", "SPECIAL", "NICHE", "NARROW", "SPECIAL_CASE"]);
-const noUseTiers = new Set(["C", "D", "F", "LOW", "NOT_RANKED", "NONE", "NO_USE"]);
+const coreTiers = new Set([
+  "SS",
+  "S+",
+  "S",
+  "A+",
+  "A",
+  "TOP",
+  "CORE",
+  "CORE_INVESTMENT",
+]);
+const usableTiers = new Set([
+  "B+",
+  "B",
+  "BUDGET_ONLY",
+  "USABLE",
+  "VIABLE",
+  "USABLE_OR_BUDGET",
+]);
+const specialTiers = new Set([
+  "LIMITED",
+  "SPECIAL",
+  "NICHE",
+  "NARROW",
+  "SPECIAL_CASE",
+  "SPECIAL_USE",
+]);
+const noUseTiers = new Set([
+  "C",
+  "D",
+  "F",
+  "LOW",
+  "NOT_RANKED",
+  "NONE",
+  "NO_USE",
+  "NO_SIGNIFICANT_USE",
+]);
 
 function normalizedTier(value: string | null | undefined) {
   return (value ?? "").trim().toUpperCase().replace(/\s+/g, "_");

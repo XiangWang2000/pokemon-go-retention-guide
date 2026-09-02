@@ -5,9 +5,9 @@ import { buildFormOverviews } from "../../src/presentation/form-overview";
 import { GLOBAL_IV_RECOMMENDATIONS, IV_RULES_VERSION } from "../../src/iv/strategy";
 import { assertDisposableDatabase, getDatabaseUrl } from "../../src/lib/database";
 
-const policyAdoptedAt = new Date("2026-07-28T12:00:00+08:00");
+const policyAdoptedAt = new Date("2026-09-02T12:00:00+08:00");
 const changeReasonZhTw =
-  "基準驗收移除PvE與暗影硬性IV淘汰線；保留15攻同種排序優先，並明示14攻高整體IV、招式、等級、CP、投入與斷點仍需比較。";
+  "PvE與Mega新增可執行的資源分配線：91%以上可投入，96%以上且15攻優先長期／XL投資；低於91%仍保留急用、唯一候選、既有投入與斷點例外，不作自動傳送線。";
 
 async function ensureGlobalIvRecommendations() {
   for (const recommendation of GLOBAL_IV_RECOMMENDATIONS) {

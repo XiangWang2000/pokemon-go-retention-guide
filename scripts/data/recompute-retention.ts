@@ -240,7 +240,21 @@ function pvpRanks(variant: VariantRecord) {
 }
 
 function rawPveEvidence(variant: VariantRecord) {
-  return variant.rawEvaluationData.filter((item) => item.category === "PVE");
+  return variant.rawEvaluationData.filter(
+    (item) =>
+      item.category === "PVE" ||
+      (variant.variantKey.startsWith("MEGA") && item.category === "MEGA"),
+  );
+}
+
+function hasActionableMegaPveEvidence(variant: VariantRecord) {
+  const raw = variant.rawEvaluationData.filter((item) => item.category === "MEGA");
+  return (
+    classifyPveUse({
+      pveTiers: raw.map((item) => item.tier ?? item.rating),
+      pveRanks: raw.map((item) => item.rank),
+    }) !== "NO_SIGNIFICANT_USE"
+  );
 }
 
 function directPveLevel(variant: VariantRecord, pve: CategoryRecord | undefined) {
@@ -1054,14 +1068,53 @@ async function main() {
       for (const categoryName of categories) {
         const categoryRow = category(variant, categoryName);
         if (!categoryRow) continue;
+        const derivesMegaPve =
+          categoryName === "PVE" &&
+          variant.variantKey.startsWith("MEGA") &&
+          hasActionableMegaPveEvidence(variant);
+        const promotesMegaPve =
+          derivesMegaPve && ["SOURCE_MISSING", "DATA_UNAVAILABLE"].includes(categoryRow.status);
         await tx.categoryEvaluation.update({
           where: { id: categoryRow.id },
           data: {
             pveUseLevel: categoryName === "PVE" ? assessment.pveUseLevel : null,
             assessmentDisposition: categoryDisposition(variant, assessment, categoryRow),
-            ...(categoryName === "PVE" ? { summaryZhTw: assessment.pveSummaryZhTw } : {}),
+            ...(categoryName === "PVE"
+              ? {
+                  summaryZhTw: assessment.pveSummaryZhTw,
+                  ...(promotesMegaPve
+                    ? {
+                        status: "PARTIALLY_VERIFIED" as const,
+                        provenance: "SOURCE_VERIFIED" as const,
+                        materialToDecision: assessment.pveUseLevel !== "NO_SIGNIFICANT_USE",
+                      }
+                    : {}),
+                }
+              : {}),
           },
         });
+        if (promotesMegaPve) {
+          for (const evidence of variant.rawEvaluationData.filter(
+            (item) => item.category === "MEGA",
+          )) {
+            await tx.categoryEvaluationSource.upsert({
+              where: {
+                categoryEvaluationId_sourceId: {
+                  categoryEvaluationId: categoryRow.id,
+                  sourceId: evidence.sourceId,
+                },
+              },
+              create: {
+                categoryEvaluationId: categoryRow.id,
+                sourceId: evidence.sourceId,
+                usageZhTw: "以該 Mega 版本的直接戰鬥資料支持 PvE 用途分級。",
+              },
+              update: {
+                usageZhTw: "以該 Mega 版本的直接戰鬥資料支持 PvE 用途分級。",
+              },
+            });
+          }
+        }
       }
 
       await tx.evaluationRuleTrace.create({

@@ -81,23 +81,46 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
     expect(change?.changeReasonZhTw).toContain("固定 commit");
   });
 
-  it("16. 已確認推出狀態後不再留下安全性待補", async () => {
-    const [evaluation, issue] = await Promise.all([
-      prisma.retentionEvaluation.findFirst({
-        where: { battleVariantId: "020-kanto-shadow" },
+  it("16. 三個暗影版本補齊 PvE 後不再留下實質資料缺口", async () => {
+    const targetIds = ["020-kanto-shadow", "020-alola-shadow", "024-kanto-shadow"];
+    const [evaluations, pveCategories, issues] = await Promise.all([
+      prisma.retentionEvaluation.findMany({
+        where: { battleVariantId: { in: targetIds } },
         orderBy: { generatedAt: "desc" },
       }),
-      prisma.dataIssue.findFirst({
+      prisma.categoryEvaluation.findMany({
+        where: { battleVariantId: { in: targetIds }, category: "PVE" },
+      }),
+      prisma.dataIssue.findMany({
         where: {
-          battleVariantId: "020-kanto-shadow",
+          battleVariantId: { in: targetIds },
           issueType: "MATERIAL_DATA_GAP",
           status: "OPEN",
           batchKey: "001-030",
         },
       }),
     ]);
-    expect(evaluation?.finalDecision).not.toBe("HOLD_FOR_NOW");
-    expect(issue?.affectsFinalDecision).toBe(false);
+    const latestDecisions = new Map<string, string>();
+    for (const evaluation of evaluations) {
+      if (!latestDecisions.has(evaluation.battleVariantId)) {
+        latestDecisions.set(evaluation.battleVariantId, evaluation.finalDecision);
+      }
+    }
+
+    expect([...latestDecisions.values()]).toHaveLength(3);
+    expect([...latestDecisions.values()].every((decision) => decision !== "HOLD_FOR_NOW")).toBe(
+      true,
+    );
+    expect(pveCategories).toHaveLength(3);
+    expect(
+      pveCategories.every(
+        (category) =>
+          category.status === "PARTIALLY_VERIFIED" &&
+          category.materialToDecision &&
+          category.pveUseLevel === "NO_SIGNIFICANT_USE",
+      ),
+    ).toBe(true);
+    expect(issues).toEqual([]);
   });
 
   it("9. 次要 issue 不會製造 HOLD_FOR_NOW", async () => {
@@ -237,7 +260,7 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
     expect(gigantamaxPikachu?.raw[0]?.tier).toBeNull();
   });
 
-  it("20. 未解來源衝突保留在類別、結論與 Review Queue", async () => {
+  it("20. 大嘴雀與 Mega 大比鳥重新核對後關閉舊來源衝突", async () => {
     const [
       fearowCategory,
       fearowEvaluation,
@@ -264,7 +287,7 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
       }),
       prisma.categoryEvaluation.findUnique({
         where: {
-          battleVariantId_category: { battleVariantId: "018-kanto-mega", category: "PVE" },
+          battleVariantId_category: { battleVariantId: "018-kanto-mega", category: "MEGA" },
         },
       }),
       prisma.retentionEvaluation.findFirst({
@@ -279,13 +302,15 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
         },
       }),
     ]);
-    expect(fearowCategory).toMatchObject({ status: "SOURCE_CONFLICT", materialToDecision: false });
+    expect(fearowCategory).toMatchObject({ status: "VERIFIED" });
     expect(fearowEvaluation?.finalDecision).toBe("KEEP");
-    expect(fearowEvaluation?.confidence).toBe("MEDIUM");
-    expect(fearowIssue?.affectsFinalDecision).toBe(false);
-    expect(pidgeotCategory).toMatchObject({ status: "SOURCE_CONFLICT", materialToDecision: false });
+    expect(fearowIssue).toBeNull();
+    expect(pidgeotCategory).toMatchObject({
+      status: "PARTIALLY_VERIFIED",
+      materialToDecision: true,
+    });
     expect(pidgeotEvaluation?.finalDecision).not.toBe("HOLD_FOR_NOW");
-    expect(pidgeotIssue?.affectsFinalDecision).toBe(false);
+    expect(pidgeotIssue).toBeNull();
   });
 
   it("21. #001～#030 與後續批次使用各自固定的 PvPoke 快照", async () => {

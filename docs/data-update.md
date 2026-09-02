@@ -73,3 +73,4 @@ SECONDARY 來源類型，Dynamax 與 Gigantamax 分別判定、不互相外推�
 - PvE 用途固定分為 `CORE_INVESTMENT`（核心投資）、`USABLE_OR_BUDGET`（可用／預算型）、`SPECIAL_USE`（特殊用途）、`NO_SIGNIFICANT_USE`（無顯著用途）。
 - 每個 `BattleVariant` 另存 `AssessmentDisposition`：已有明確用途、用途有限、無顯著用途、不適用／尚未推出、真正待補資料。
 - 只有 `TRUE_DATA_PENDING` 才能使用 `HOLD_FOR_NOW`，並顯示「無法判斷，暫時不要傳」；未推出版本、用途有限與次要欄位缺來源不可沿用這個提示。
+- 已確認具有 PvE／Mega 用途後，通用資源分配線為總 IV 91%以上可投入、96%以上且15攻優先長期／XL投資。這是投入優先度，不是自動傳送線；低於91%的急用、唯一候選、已高等或達實測斷點個體仍可例外。高價值暗影繼續使用較寬標準，不套此最低線。

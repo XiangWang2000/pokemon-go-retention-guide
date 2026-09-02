@@ -94,7 +94,9 @@ export function PokemonDetailLoader({ variantId }: { variantId: string }) {
   const siblings = family.members.flatMap((member) =>
     member.form.variants.map((variant) => variant.row),
   );
-  const sameFormRows = siblings.filter((item) => item.formId === row.formId);
+  const sameFormRows = siblings
+    .filter((item) => item.formId === row.formId)
+    .map((item) => (item.id === row.id ? row : item));
   const formOverview = buildFormOverview(sameFormRows);
   const variantOverview = formOverview.variants.find((item) => item.row.id === row.id);
   if (!variantOverview) {

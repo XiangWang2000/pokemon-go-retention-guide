@@ -30,4 +30,8 @@ describe("Pokémon detail loader localization", () => {
     expect(source).toContain('aria-live="polite"');
     expect(source).toContain('aria-busy="true"');
   });
+
+  it("以 audit payload 的完整 IV 建議取代家族輕量列", () => {
+    expect(source).toContain("item.id === row.id ? row : item");
+  });
 });

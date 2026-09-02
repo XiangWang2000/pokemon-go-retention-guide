@@ -201,9 +201,9 @@ describe("Gen 3 #252-#281 integration", () => {
   it("propagates the conservative release-evidence policy through the Gen 1-2 conclusion set", () => {
     const existing = dashboard.filter((candidate) => candidate.dexNumber <= 251);
     expect(existing).toHaveLength(1194);
-    expect(existing.filter((candidate) => candidate.decision === "KEEP")).toHaveLength(91);
+    expect(existing.filter((candidate) => candidate.decision === "KEEP")).toHaveLength(93);
     expect(existing.filter((candidate) => candidate.decision === "CONDITIONAL_KEEP")).toHaveLength(
-      302,
+      300,
     );
     expect(
       existing.filter((candidate) => candidate.decision === "TRANSFER_CANDIDATE"),

@@ -100,7 +100,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "核心投資。沙奈朵：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -354,7 +354,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "核心投資。沙奈朵：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -599,7 +599,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -842,7 +842,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1063,7 +1063,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-31T16:00:00.000Z",
+        "updatedAt": "2026-09-01T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1075,10 +1075,9 @@
       "mainUseZhTw": "進化素材",
       "memberSummaryZhTw": "拉魯拉絲本體沒有獨立用途；前階主要作符合條件的進化候選。",
       "ivShortLabels": [
-        "PvE：15攻優先；14攻高整體IV亦可留",
+        "PvE：91%+可投入；96%+／15攻優先",
         "ML：15攻／98%優先",
         "暗影標準較寬；15攻優先，不設硬性最低IV",
-        "Mega：15攻優先；14攻高整體IV亦可留",
         "GL：Rank≤100",
         "UL：Rank≤100"
       ],
@@ -1098,8 +1097,8 @@
           "defenseIvPriority": null,
           "staminaIvMin": null,
           "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
+          "totalIvPercentMin": 91.1,
+          "totalIvPercentPriority": 95.6,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": null,
           "pvpRankConditionalMax": null,
@@ -1109,9 +1108,9 @@
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-          "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+          "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-master-league",
@@ -1141,7 +1140,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -1171,37 +1170,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.07.28-v2"
-        },
-        {
-          "id": "iv-global-mega",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "MEGA",
-          "ivStrategyKey": "MEGA_ATTACKER",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": 15,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": null,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": null,
-          "recommendedQuantity": 1,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-          "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-great-league",
@@ -1231,7 +1200,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
           "shortIvLabelZhTw": "GL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-ultra-league",
@@ -1261,7 +1230,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
           "shortIvLabelZhTw": "UL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": true,
@@ -1388,7 +1357,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "核心投資。沙奈朵：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1657,7 +1626,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "核心投資。沙奈朵：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1935,7 +1904,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -2209,7 +2178,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -2432,7 +2401,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-31T16:00:00.000Z",
+        "updatedAt": "2026-09-01T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2442,12 +2411,11 @@
         "進化素材"
       ],
       "mainUseZhTw": "進化素材",
-      "memberSummaryZhTw": "主要保留奇魯莉安；IV以PvE：15攻優先；14攻高整體IV亦可留、ML：15攻／98%優先、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
+      "memberSummaryZhTw": "主要保留奇魯莉安；IV以PvE：91%+可投入；96%+／15攻優先、ML：15攻／98%優先、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
       "ivShortLabels": [
-        "PvE：15攻優先；14攻高整體IV亦可留",
+        "PvE：91%+可投入；96%+／15攻優先",
         "ML：15攻／98%優先",
         "暗影標準較寬；15攻優先，不設硬性最低IV",
-        "Mega：15攻優先；14攻高整體IV亦可留",
         "GL：Rank≤100",
         "UL：Rank≤100"
       ],
@@ -2467,8 +2435,8 @@
           "defenseIvPriority": null,
           "staminaIvMin": null,
           "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
+          "totalIvPercentMin": 91.1,
+          "totalIvPercentPriority": 95.6,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": null,
           "pvpRankConditionalMax": null,
@@ -2478,9 +2446,9 @@
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-          "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+          "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-master-league",
@@ -2510,7 +2478,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -2540,37 +2508,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.07.28-v2"
-        },
-        {
-          "id": "iv-global-mega",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "MEGA",
-          "ivStrategyKey": "MEGA_ATTACKER",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": 15,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": null,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": null,
-          "recommendedQuantity": 1,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-          "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-great-league",
@@ -2600,7 +2538,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
           "shortIvLabelZhTw": "GL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-ultra-league",
@@ -2630,7 +2568,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
           "shortIvLabelZhTw": "UL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": false,
@@ -2701,7 +2639,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #909；招式 CONFUSION／TRIPLE_AXEL／SHADOW_BALL；UL（高級聯盟） Overall #553；招式 CONFUSION／TRIPLE_AXEL／SHADOW_BALL；ML（大師聯盟） Overall #289；招式 CHARM／SHADOW_BALL／TRIPLE_AXEL",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -2711,7 +2649,7 @@
               "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
+              "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
               "evaluationId": "gen3-282-311-eval-282-hoenn-normal",
@@ -3084,8 +3022,8 @@
                 "defenseIvPriority": null,
                 "staminaIvMin": null,
                 "staminaIvPriority": null,
-                "totalIvPercentMin": null,
-                "totalIvPercentPriority": null,
+                "totalIvPercentMin": 91.1,
+                "totalIvPercentPriority": 95.6,
                 "secondaryTotalIvPercentMin": null,
                 "pvpRankMax": null,
                 "pvpRankConditionalMax": null,
@@ -3095,15 +3033,15 @@
                 "appliesOnlyWhenUseConfirmed": true,
                 "speciesSpecificOverride": false,
                 "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-                "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2"
+                "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+                "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+                "rulesVersion": "2026.09.02-v3"
               }
             ],
             "ivShortLabels": [
-              "PvE：15攻優先；14攻高整體IV亦可留"
+              "PvE：91%+可投入；96%+／15攻優先"
             ],
-            "ivDirection": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
+            "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
             "shortReason": "主要用途：PvE。"
           },
           {
@@ -3145,7 +3083,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #934；招式 CONFUSION／TRIPLE_AXEL／SHADOW_BALL；UL（高級聯盟） Overall #586；招式 CONFUSION／TRIPLE_AXEL／SHADOW_BALL；ML（大師聯盟） Overall #242；招式 CHARM／SHADOW_BALL／TRIPLE_AXEL",
               "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -3525,7 +3463,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
                 "shortIvLabelZhTw": "ML：15攻／98%優先",
-                "rulesVersion": "2026.07.28-v2"
+                "rulesVersion": "2026.09.02-v3"
               },
               {
                 "id": "iv-global-shadow-pve",
@@ -3555,7 +3493,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
                 "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-                "rulesVersion": "2026.07.28-v2"
+                "rulesVersion": "2026.09.02-v3"
               }
             ],
             "ivShortLabels": [
@@ -3604,7 +3542,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -3841,7 +3779,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -3851,7 +3789,7 @@
               "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。；Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+              "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
               "ivRecommendations": [],
               "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
               "evaluationId": "gen3-282-311-eval-282-hoenn-mega",
@@ -4085,8 +4023,8 @@
                 "defenseIvPriority": null,
                 "staminaIvMin": null,
                 "staminaIvPriority": null,
-                "totalIvPercentMin": null,
-                "totalIvPercentPriority": null,
+                "totalIvPercentMin": 91.1,
+                "totalIvPercentPriority": 95.6,
                 "secondaryTotalIvPercentMin": null,
                 "pvpRankMax": null,
                 "pvpRankConditionalMax": null,
@@ -4096,46 +4034,15 @@
                 "appliesOnlyWhenUseConfirmed": true,
                 "speciesSpecificOverride": false,
                 "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-                "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2"
-              },
-              {
-                "id": "iv-global-mega",
-                "scopeType": "GLOBAL",
-                "scopeKey": "GLOBAL",
-                "primaryUseKey": "MEGA",
-                "ivStrategyKey": "MEGA_ATTACKER",
-                "maxBattleRole": null,
-                "attackIvMin": null,
-                "attackIvPriority": 15,
-                "attackIvConditionalMin": null,
-                "secondaryAttackIv": null,
-                "defenseIvMin": null,
-                "defenseIvPriority": null,
-                "staminaIvMin": null,
-                "staminaIvPriority": null,
-                "totalIvPercentMin": null,
-                "totalIvPercentPriority": null,
-                "secondaryTotalIvPercentMin": null,
-                "pvpRankMax": null,
-                "pvpRankConditionalMax": null,
-                "pvpPrMin": null,
-                "recommendedQuantity": 1,
-                "hundoPriority": false,
-                "appliesOnlyWhenUseConfirmed": true,
-                "speciesSpecificOverride": false,
-                "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-                "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2"
+                "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+                "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+                "rulesVersion": "2026.09.02-v3"
               }
             ],
             "ivShortLabels": [
-              "PvE：15攻優先；14攻高整體IV亦可留",
-              "Mega：15攻優先；14攻高整體IV亦可留"
+              "PvE：91%+可投入；96%+／15攻優先"
             ],
-            "ivDirection": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。；Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+            "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
             "shortReason": "作為 Mega 候選，通常只需少量；15攻優先，14攻高整體IV亦可留。"
           },
           {
@@ -4177,7 +4084,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -4406,8 +4313,8 @@
             "defenseIvPriority": null,
             "staminaIvMin": null,
             "staminaIvPriority": null,
-            "totalIvPercentMin": null,
-            "totalIvPercentPriority": null,
+            "totalIvPercentMin": 91.1,
+            "totalIvPercentPriority": 95.6,
             "secondaryTotalIvPercentMin": null,
             "pvpRankMax": null,
             "pvpRankConditionalMax": null,
@@ -4417,9 +4324,9 @@
             "appliesOnlyWhenUseConfirmed": true,
             "speciesSpecificOverride": false,
             "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-            "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-            "rulesVersion": "2026.07.28-v2"
+            "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+            "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+            "rulesVersion": "2026.09.02-v3"
           },
           {
             "id": "iv-global-master-league",
@@ -4449,7 +4356,7 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
             "shortIvLabelZhTw": "ML：15攻／98%優先",
-            "rulesVersion": "2026.07.28-v2"
+            "rulesVersion": "2026.09.02-v3"
           },
           {
             "id": "iv-global-shadow-pve",
@@ -4479,46 +4386,15 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
             "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-            "rulesVersion": "2026.07.28-v2"
-          },
-          {
-            "id": "iv-global-mega",
-            "scopeType": "GLOBAL",
-            "scopeKey": "GLOBAL",
-            "primaryUseKey": "MEGA",
-            "ivStrategyKey": "MEGA_ATTACKER",
-            "maxBattleRole": null,
-            "attackIvMin": null,
-            "attackIvPriority": 15,
-            "attackIvConditionalMin": null,
-            "secondaryAttackIv": null,
-            "defenseIvMin": null,
-            "defenseIvPriority": null,
-            "staminaIvMin": null,
-            "staminaIvPriority": null,
-            "totalIvPercentMin": null,
-            "totalIvPercentPriority": null,
-            "secondaryTotalIvPercentMin": null,
-            "pvpRankMax": null,
-            "pvpRankConditionalMax": null,
-            "pvpPrMin": null,
-            "recommendedQuantity": 1,
-            "hundoPriority": false,
-            "appliesOnlyWhenUseConfirmed": true,
-            "speciesSpecificOverride": false,
-            "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-            "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-            "rulesVersion": "2026.07.28-v2"
+            "rulesVersion": "2026.09.02-v3"
           }
         ],
         "ivShortLabels": [
-          "PvE：15攻優先；14攻高整體IV亦可留",
+          "PvE：91%+可投入；96%+／15攻優先",
           "ML：15攻／98%優先",
-          "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "Mega：15攻優先；14攻高整體IV亦可留"
+          "暗影標準較寬；15攻優先，不設硬性最低IV"
         ],
-        "ivDirection": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。；Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+        "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
         "primaryUses": [
           "PvE",
           "PvP",
@@ -4534,7 +4410,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-31T16:00:00.000Z",
+        "updatedAt": "2026-09-01T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -4548,12 +4424,11 @@
         "Mega 候選"
       ],
       "mainUseZhTw": "獨立PvP用途、獨立PvE用途、Mega 候選",
-      "memberSummaryZhTw": "主要保留沙奈朵；IV以PvE：15攻優先；14攻高整體IV亦可留、ML：15攻／98%優先、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
+      "memberSummaryZhTw": "主要保留沙奈朵；IV以PvE：91%+可投入；96%+／15攻優先、ML：15攻／98%優先、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
       "ivShortLabels": [
-        "PvE：15攻優先；14攻高整體IV亦可留",
+        "PvE：91%+可投入；96%+／15攻優先",
         "ML：15攻／98%優先",
-        "暗影標準較寬；15攻優先，不設硬性最低IV",
-        "Mega：15攻優先；14攻高整體IV亦可留"
+        "暗影標準較寬；15攻優先，不設硬性最低IV"
       ],
       "ivRecommendations": [
         {
@@ -4571,8 +4446,8 @@
           "defenseIvPriority": null,
           "staminaIvMin": null,
           "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
+          "totalIvPercentMin": 91.1,
+          "totalIvPercentPriority": 95.6,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": null,
           "pvpRankConditionalMax": null,
@@ -4582,9 +4457,9 @@
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-          "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+          "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-master-league",
@@ -4614,7 +4489,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -4644,37 +4519,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.07.28-v2"
-        },
-        {
-          "id": "iv-global-mega",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "MEGA",
-          "ivStrategyKey": "MEGA_ATTACKER",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": 15,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": null,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": null,
-          "recommendedQuantity": 1,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-          "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": false,
@@ -5103,7 +4948,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
                 "shortIvLabelZhTw": "GL：Rank≤100",
-                "rulesVersion": "2026.07.28-v2"
+                "rulesVersion": "2026.09.02-v3"
               },
               {
                 "id": "iv-global-ultra-league",
@@ -5133,7 +4978,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
                 "shortIvLabelZhTw": "UL：Rank≤100",
-                "rulesVersion": "2026.07.28-v2"
+                "rulesVersion": "2026.09.02-v3"
               },
               {
                 "id": "iv-global-master-league",
@@ -5163,7 +5008,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
                 "shortIvLabelZhTw": "ML：15攻／98%優先",
-                "rulesVersion": "2026.07.28-v2"
+                "rulesVersion": "2026.09.02-v3"
               }
             ],
             "ivShortLabels": [
@@ -5668,7 +5513,7 @@
               "maxBattleSummaryZhTw": "此版本沒有獨立 Max 型態。",
               "evolutionSummaryZhTw": "擁有該型態的第四世代批次提供正式進化身份與路徑。",
               "requiredMovesSummaryZhTw": "目前沒有記錄需要特別保留的招式結論。",
-              "recommendedIvStrategyZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+              "recommendedIvStrategyZhTw": "目前沒有會改變保留結論的通用IV門檻。",
               "ivRecommendations": [],
               "reasonZhTw": "固定證據確認 PvP、PvE、Mega 或 Max 用途，支持保留此版本。",
               "evaluationId": "gen4-447-476-eval-475-sinnoh-mega",
@@ -5846,42 +5691,9 @@
             "primaryUseKeys": [
               "MEGA"
             ],
-            "ivRecommendations": [
-              {
-                "id": "iv-global-mega",
-                "scopeType": "GLOBAL",
-                "scopeKey": "GLOBAL",
-                "primaryUseKey": "MEGA",
-                "ivStrategyKey": "MEGA_ATTACKER",
-                "maxBattleRole": null,
-                "attackIvMin": null,
-                "attackIvPriority": 15,
-                "attackIvConditionalMin": null,
-                "secondaryAttackIv": null,
-                "defenseIvMin": null,
-                "defenseIvPriority": null,
-                "staminaIvMin": null,
-                "staminaIvPriority": null,
-                "totalIvPercentMin": null,
-                "totalIvPercentPriority": null,
-                "secondaryTotalIvPercentMin": null,
-                "pvpRankMax": null,
-                "pvpRankConditionalMax": null,
-                "pvpPrMin": null,
-                "recommendedQuantity": 1,
-                "hundoPriority": false,
-                "appliesOnlyWhenUseConfirmed": true,
-                "speciesSpecificOverride": false,
-                "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-                "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2"
-              }
-            ],
-            "ivShortLabels": [
-              "Mega：15攻優先；14攻高整體IV亦可留"
-            ],
-            "ivDirection": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+            "ivRecommendations": [],
+            "ivShortLabels": [],
+            "ivDirection": "目前沒有會改變保留結論的通用IV門檻。",
             "shortReason": "作為 Mega 候選，通常只需少量；15攻優先，14攻高整體IV亦可留。"
           },
           {
@@ -6177,7 +5989,7 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
             "shortIvLabelZhTw": "GL：Rank≤100",
-            "rulesVersion": "2026.07.28-v2"
+            "rulesVersion": "2026.09.02-v3"
           },
           {
             "id": "iv-global-ultra-league",
@@ -6207,7 +6019,7 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
             "shortIvLabelZhTw": "UL：Rank≤100",
-            "rulesVersion": "2026.07.28-v2"
+            "rulesVersion": "2026.09.02-v3"
           },
           {
             "id": "iv-global-master-league",
@@ -6237,46 +6049,15 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
             "shortIvLabelZhTw": "ML：15攻／98%優先",
-            "rulesVersion": "2026.07.28-v2"
-          },
-          {
-            "id": "iv-global-mega",
-            "scopeType": "GLOBAL",
-            "scopeKey": "GLOBAL",
-            "primaryUseKey": "MEGA",
-            "ivStrategyKey": "MEGA_ATTACKER",
-            "maxBattleRole": null,
-            "attackIvMin": null,
-            "attackIvPriority": 15,
-            "attackIvConditionalMin": null,
-            "secondaryAttackIv": null,
-            "defenseIvMin": null,
-            "defenseIvPriority": null,
-            "staminaIvMin": null,
-            "staminaIvPriority": null,
-            "totalIvPercentMin": null,
-            "totalIvPercentPriority": null,
-            "secondaryTotalIvPercentMin": null,
-            "pvpRankMax": null,
-            "pvpRankConditionalMax": null,
-            "pvpPrMin": null,
-            "recommendedQuantity": 1,
-            "hundoPriority": false,
-            "appliesOnlyWhenUseConfirmed": true,
-            "speciesSpecificOverride": false,
-            "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-            "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-            "rulesVersion": "2026.07.28-v2"
+            "rulesVersion": "2026.09.02-v3"
           }
         ],
         "ivShortLabels": [
           "GL：Rank≤100",
           "UL：Rank≤100",
-          "ML：15攻／98%優先",
-          "Mega：15攻優先；14攻高整體IV亦可留"
+          "ML：15攻／98%優先"
         ],
-        "ivDirection": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+        "ivDirection": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
         "primaryUses": [
           "PvP",
           "Mega"
@@ -6307,8 +6088,7 @@
       "ivShortLabels": [
         "GL：Rank≤100",
         "UL：Rank≤100",
-        "ML：15攻／98%優先",
-        "Mega：15攻優先；14攻高整體IV亦可留"
+        "ML：15攻／98%優先"
       ],
       "ivRecommendations": [
         {
@@ -6339,7 +6119,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
           "shortIvLabelZhTw": "GL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-ultra-league",
@@ -6369,7 +6149,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
           "shortIvLabelZhTw": "UL：Rank≤100",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-master-league",
@@ -6399,37 +6179,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
-          "rulesVersion": "2026.07.28-v2"
-        },
-        {
-          "id": "iv-global-mega",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "MEGA",
-          "ivStrategyKey": "MEGA_ATTACKER",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": 15,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": null,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": null,
-          "recommendedQuantity": 1,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-          "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": false,
@@ -6517,12 +6267,11 @@
   "primaryTargetSummaryZhTw": "奇魯莉安、沙奈朵、艾路雷朵",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
   "handlingSummaryZhTw": "保留沙奈朵（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、有用途的暗影版），以及艾路雷朵（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、Mega 候選）；保留可進化為艾路雷朵的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留奇魯莉安、沙奈朵、艾路雷朵；前階主要作符合條件的進化候選。IV：PvE：15攻優先；14攻高整體IV亦可留；ML：15攻／98%優先；暗影標準較寬；15攻優先，不設硬性最低IV。",
+  "actionSummaryZhTw": "主要保留奇魯莉安、沙奈朵、艾路雷朵；前階主要作符合條件的進化候選。IV：PvE：91%+可投入；96%+／15攻優先；ML：15攻／98%優先；暗影標準較寬；15攻優先，不設硬性最低IV。",
   "ivShortLabels": [
-    "PvE：15攻優先；14攻高整體IV亦可留",
+    "PvE：91%+可投入；96%+／15攻優先",
     "ML：15攻／98%優先",
     "暗影標準較寬；15攻優先，不設硬性最低IV",
-    "Mega：15攻優先；14攻高整體IV亦可留",
     "GL：Rank≤100",
     "UL：Rank≤100"
   ],
@@ -6542,8 +6291,8 @@
       "defenseIvPriority": null,
       "staminaIvMin": null,
       "staminaIvPriority": null,
-      "totalIvPercentMin": null,
-      "totalIvPercentPriority": null,
+      "totalIvPercentMin": 91.1,
+      "totalIvPercentPriority": 95.6,
       "secondaryTotalIvPercentMin": null,
       "pvpRankMax": null,
       "pvpRankConditionalMax": null,
@@ -6553,9 +6302,9 @@
       "appliesOnlyWhenUseConfirmed": true,
       "speciesSpecificOverride": false,
       "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-      "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-      "rulesVersion": "2026.07.28-v2"
+      "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+      "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+      "rulesVersion": "2026.09.02-v3"
     },
     {
       "id": "iv-global-master-league",
@@ -6585,7 +6334,7 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
-      "rulesVersion": "2026.07.28-v2"
+      "rulesVersion": "2026.09.02-v3"
     },
     {
       "id": "iv-global-shadow-pve",
@@ -6615,37 +6364,7 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
       "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-      "rulesVersion": "2026.07.28-v2"
-    },
-    {
-      "id": "iv-global-mega",
-      "scopeType": "GLOBAL",
-      "scopeKey": "GLOBAL",
-      "primaryUseKey": "MEGA",
-      "ivStrategyKey": "MEGA_ATTACKER",
-      "maxBattleRole": null,
-      "attackIvMin": null,
-      "attackIvPriority": 15,
-      "attackIvConditionalMin": null,
-      "secondaryAttackIv": null,
-      "defenseIvMin": null,
-      "defenseIvPriority": null,
-      "staminaIvMin": null,
-      "staminaIvPriority": null,
-      "totalIvPercentMin": null,
-      "totalIvPercentPriority": null,
-      "secondaryTotalIvPercentMin": null,
-      "pvpRankMax": null,
-      "pvpRankConditionalMax": null,
-      "pvpPrMin": null,
-      "recommendedQuantity": 1,
-      "hundoPriority": false,
-      "appliesOnlyWhenUseConfirmed": true,
-      "speciesSpecificOverride": false,
-      "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-      "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-      "rulesVersion": "2026.07.28-v2"
+      "rulesVersion": "2026.09.02-v3"
     },
     {
       "id": "iv-global-great-league",
@@ -6675,7 +6394,7 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
       "shortIvLabelZhTw": "GL：Rank≤100",
-      "rulesVersion": "2026.07.28-v2"
+      "rulesVersion": "2026.09.02-v3"
     },
     {
       "id": "iv-global-ultra-league",
@@ -6705,10 +6424,10 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
       "shortIvLabelZhTw": "UL：Rank≤100",
-      "rulesVersion": "2026.07.28-v2"
+      "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "ivSummaryZhTw": "依成員用途分開保留：PvE：15攻優先；14攻高整體IV亦可留；ML：15攻／98%優先；暗影標準較寬；15攻優先，不設硬性最低IV；Mega：15攻優先；14攻高整體IV亦可留；GL：Rank≤100；UL：Rank≤100",
+  "ivSummaryZhTw": "依成員用途分開保留：PvE：91%+可投入；96%+／15攻優先；ML：15攻／98%優先；暗影標準較寬；15攻優先，不設硬性最低IV；GL：Rank≤100；UL：Rank≤100",
   "primaryUses": [
     "後續進化",
     "PvE",
@@ -6721,7 +6440,7 @@
   ],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-31T16:00:00.000Z",
+  "updatedAt": "2026-09-01T16:00:00.000Z",
   "minDexNumber": 280,
   "maxDexNumber": 475,
   "detailsLoaded": true

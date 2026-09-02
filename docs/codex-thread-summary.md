@@ -78,6 +78,14 @@
 - DATA_VERSION is `2026.09.01-r29`; the release contract again has zero `TRUE_DATA_PENDING` rows. This is not a Pokédex-range or PvPoke fallback: #001～#030 Shadow, Dynamax, and Gigantamax states are resolved independently against dated, complete historical rosters after explicit user authorization, and those sources remain typed `SECONDARY`.
 - Purified availability now strictly follows the same-form Shadow release state plus the official purification mechanic. A released Shadow implies released Purified; an unreleased Shadow implies unreleased Purified. The seed no longer treats PvPoke ranking presence as release evidence, and recomputation no longer forces every Purified row to `RELEASED`.
 
+## 2026-09-02 r30 PvE accuracy and investment thresholds
+
+- Mega Raichu Y is backed by the 2026-09-02 GO Hub live database and the 2026-09-01 Mega PvE tier analysis: Electric S Tier #1 and overall Raid Attacker A+ #32. Its standard Thunder Shock／Wild Charge benchmark is stored separately from the Super Max additional Charged Attack Zap Cannon+, so the normal Raichu F-tier result can no longer leak into the Mega Y family summary.
+- Confirmed PvE and Mega candidates now expose advisory resource thresholds: 91%+ is a general investment candidate, while 96%+ with 15 Attack is preferred for long-term, XL, or maximum-level investment. Below 91% remains a conditional exception for urgent use, the only available copy, existing level investment, or verified breakpoints; it is never an automatic transfer line, and high-value Shadow Pokémon retain their wider IV policy.
+- The homepage, family overview, and direct Pokémon detail surface define PvE, PvP, IV, CP, GL／UL／ML, individual IV Rank／PR, DPS／TDO, Tier, XL Candy, and Elite TM, with an explicit warning that PvPoke species rank is not an individual IV rank.
+- The shared PvE classifier now accepts the canonical `CORE_INVESTMENT`, `USABLE_OR_BUDGET`, `SPECIAL_USE`, and `NO_SIGNIFICANT_USE` evidence values instead of treating them as unknown combat tiers. The full-scope audit corrected 24 affected PvE evidence rows, including nine released variants that had been incorrectly reduced to `TRANSFER_CANDIDATE`.
+- Mega raw battle evidence now participates in the same-form PvE classification with source links while preserving true `SOURCE_CONFLICT` rows. Family PvE aggregation includes Mega-only value, and the detail loader retains the selected audit row's full IV recommendations instead of replacing them with the family payload's compact row.
+
 ## 2026-08-20 Source-neutral Dashboard read model
 
 - `src/lib/data-read-model.ts` is the Prisma- and snapshot-independent contract for `DashboardRow` and its serialized nested rows. Both `src/lib/data-prisma.ts` and `src/lib/data.ts` return `Promise<DashboardRow[]>` from this shared contract.

@@ -70,7 +70,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #597；招式 DRAGON_BREATH／ROCK_SLIDE／EARTH_POWER；UL（高級聯盟） Overall #440；招式 DRAGON_BREATH／ROCK_SLIDE／EARTH_POWER；ML（大師聯盟） Overall #285；招式 DRAGON_BREATH／ROCK_SLIDE／EARTH_POWER",
               "pveSummaryZhTw": "無顯著用途。Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -422,7 +422,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #632；招式 DRAGON_BREATH／ROCK_SLIDE／EARTH_POWER；UL（高級聯盟） Overall #487；招式 DRAGON_BREATH／ROCK_SLIDE／EARTH_POWER；ML（大師聯盟） Overall #251；招式 DRAGON_BREATH／ROCK_SLIDE／EARTH_POWER",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -765,7 +765,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -983,7 +983,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -993,7 +993,7 @@
               "maxBattleSummaryZhTw": "此版本不是 Max 版本；Max 用途不會回推普通個體必留。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把此低用途版本自動升格為必留。",
-              "recommendedIvStrategyZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+              "recommendedIvStrategyZhTw": "目前沒有會改變保留結論的通用IV門檻。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
               "evaluationId": "r13-eval-142-kanto-mega",
@@ -1171,42 +1171,9 @@
             "primaryUseKeys": [
               "MEGA"
             ],
-            "ivRecommendations": [
-              {
-                "id": "iv-global-mega",
-                "scopeType": "GLOBAL",
-                "scopeKey": "GLOBAL",
-                "primaryUseKey": "MEGA",
-                "ivStrategyKey": "MEGA_ATTACKER",
-                "maxBattleRole": null,
-                "attackIvMin": null,
-                "attackIvPriority": 15,
-                "attackIvConditionalMin": null,
-                "secondaryAttackIv": null,
-                "defenseIvMin": null,
-                "defenseIvPriority": null,
-                "staminaIvMin": null,
-                "staminaIvPriority": null,
-                "totalIvPercentMin": null,
-                "totalIvPercentPriority": null,
-                "secondaryTotalIvPercentMin": null,
-                "pvpRankMax": null,
-                "pvpRankConditionalMax": null,
-                "pvpPrMin": null,
-                "recommendedQuantity": 1,
-                "hundoPriority": false,
-                "appliesOnlyWhenUseConfirmed": true,
-                "speciesSpecificOverride": false,
-                "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-                "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2"
-              }
-            ],
-            "ivShortLabels": [
-              "Mega：15攻優先；14攻高整體IV亦可留"
-            ],
-            "ivDirection": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+            "ivRecommendations": [],
+            "ivShortLabels": [],
+            "ivDirection": "目前沒有會改變保留結論的通用IV門檻。",
             "shortReason": "作為 Mega 候選，通常只需少量；15攻優先，14攻高整體IV亦可留。"
           },
           {
@@ -1248,7 +1215,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
@@ -1461,42 +1428,9 @@
         },
         "decision": "CONDITIONAL_KEEP",
         "decisionReason": "依各戰鬥版本的數字IV門檻留少量個體。",
-        "ivRecommendations": [
-          {
-            "id": "iv-global-mega",
-            "scopeType": "GLOBAL",
-            "scopeKey": "GLOBAL",
-            "primaryUseKey": "MEGA",
-            "ivStrategyKey": "MEGA_ATTACKER",
-            "maxBattleRole": null,
-            "attackIvMin": null,
-            "attackIvPriority": 15,
-            "attackIvConditionalMin": null,
-            "secondaryAttackIv": null,
-            "defenseIvMin": null,
-            "defenseIvPriority": null,
-            "staminaIvMin": null,
-            "staminaIvPriority": null,
-            "totalIvPercentMin": null,
-            "totalIvPercentPriority": null,
-            "secondaryTotalIvPercentMin": null,
-            "pvpRankMax": null,
-            "pvpRankConditionalMax": null,
-            "pvpPrMin": null,
-            "recommendedQuantity": 1,
-            "hundoPriority": false,
-            "appliesOnlyWhenUseConfirmed": true,
-            "speciesSpecificOverride": false,
-            "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-            "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-            "rulesVersion": "2026.07.28-v2"
-          }
-        ],
-        "ivShortLabels": [
-          "Mega：15攻優先；14攻高整體IV亦可留"
-        ],
-        "ivDirection": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
+        "ivRecommendations": [],
+        "ivShortLabels": [],
+        "ivDirection": "目前沒有會改變保留結論的通用IV門檻。",
         "primaryUses": [
           "Mega"
         ],
@@ -1507,7 +1441,7 @@
         "hasEvolutionUse": false,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-31T16:00:00.000Z",
+        "updatedAt": "2026-09-01T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1517,42 +1451,9 @@
         "Mega 候選"
       ],
       "mainUseZhTw": "Mega 候選",
-      "memberSummaryZhTw": "主要保留化石翼龍（Mega 候選）；IV以Mega：15攻優先；14攻高整體IV亦可留為準。",
-      "ivShortLabels": [
-        "Mega：15攻優先；14攻高整體IV亦可留"
-      ],
-      "ivRecommendations": [
-        {
-          "id": "iv-global-mega",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "MEGA",
-          "ivStrategyKey": "MEGA_ATTACKER",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": 15,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": null,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": null,
-          "recommendedQuantity": 1,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-          "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
-        }
-      ],
+      "memberSummaryZhTw": "主要保留化石翼龍（Mega 候選）；依該用途的具體條件篩選。",
+      "ivShortLabels": [],
+      "ivRecommendations": [],
       "isRoot": true,
       "isIntermediate": false,
       "isTerminal": true,
@@ -1570,9 +1471,9 @@
     "tone": "NONE"
   },
   "pve": {
-    "label": "無顯著用途",
-    "detail": "目前沒有已確認的 PvE 投資用途",
-    "tone": "LOW"
+    "label": "特殊用途",
+    "detail": "最終進化為主要投資目標",
+    "tone": "SPECIAL"
   },
   "gym": {
     "label": "未列為主要保留理由",
@@ -1602,43 +1503,10 @@
   "primaryTargetSummaryZhTw": "化石翼龍（Mega 候選）",
   "preEvolutionActionZhTw": "沒有僅作進化素材的前階成員。",
   "handlingSummaryZhTw": "保留化石翼龍（Mega 候選）；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留化石翼龍（Mega 候選）；價值集中於特定版本或條件。沒有僅作進化素材的前階成員。其餘普通重複個體大多可傳。IV：Mega：15攻優先；14攻高整體IV亦可留。",
-  "ivShortLabels": [
-    "Mega：15攻優先；14攻高整體IV亦可留"
-  ],
-  "ivRecommendations": [
-    {
-      "id": "iv-global-mega",
-      "scopeType": "GLOBAL",
-      "scopeKey": "GLOBAL",
-      "primaryUseKey": "MEGA",
-      "ivStrategyKey": "MEGA_ATTACKER",
-      "maxBattleRole": null,
-      "attackIvMin": null,
-      "attackIvPriority": 15,
-      "attackIvConditionalMin": null,
-      "secondaryAttackIv": null,
-      "defenseIvMin": null,
-      "defenseIvPriority": null,
-      "staminaIvMin": null,
-      "staminaIvPriority": null,
-      "totalIvPercentMin": null,
-      "totalIvPercentPriority": null,
-      "secondaryTotalIvPercentMin": null,
-      "pvpRankMax": null,
-      "pvpRankConditionalMax": null,
-      "pvpPrMin": null,
-      "recommendedQuantity": 1,
-      "hundoPriority": false,
-      "appliesOnlyWhenUseConfirmed": true,
-      "speciesSpecificOverride": false,
-      "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "Mega／PvE：先看物種、招式、等級／CP與既有投入，再看斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。通常只需保留少量候選。",
-      "shortIvLabelZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
-      "rulesVersion": "2026.07.28-v2"
-    }
-  ],
-  "ivSummaryZhTw": "Mega：15攻優先；14攻高整體IV亦可留",
+  "actionSummaryZhTw": "主要保留化石翼龍（Mega 候選）；價值集中於特定版本或條件。沒有僅作進化素材的前階成員。其餘普通重複個體大多可傳。",
+  "ivShortLabels": [],
+  "ivRecommendations": [],
+  "ivSummaryZhTw": "IV不構成額外保留理由",
   "primaryUses": [
     "Mega"
   ],
@@ -1646,7 +1514,7 @@
   "notices": [],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-31T16:00:00.000Z",
+  "updatedAt": "2026-09-01T16:00:00.000Z",
   "minDexNumber": 142,
   "maxDexNumber": 142,
   "detailsLoaded": true

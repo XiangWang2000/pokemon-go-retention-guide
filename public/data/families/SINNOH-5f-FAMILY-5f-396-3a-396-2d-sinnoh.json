@@ -1028,7 +1028,7 @@
       "mainUseZhTw": "進化素材",
       "memberSummaryZhTw": "姆克兒本體沒有獨立用途；前階主要作符合條件的進化候選。",
       "ivShortLabels": [
-        "PvE：15攻優先；14攻高整體IV亦可留",
+        "PvE：91%+可投入；96%+／15攻優先",
         "暗影標準較寬；15攻優先，不設硬性最低IV"
       ],
       "ivRecommendations": [
@@ -1047,8 +1047,8 @@
           "defenseIvPriority": null,
           "staminaIvMin": null,
           "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
+          "totalIvPercentMin": 91.1,
+          "totalIvPercentPriority": 95.6,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": null,
           "pvpRankConditionalMax": null,
@@ -1058,9 +1058,9 @@
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-          "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+          "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -1090,7 +1090,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": true,
@@ -2207,7 +2207,7 @@
       "mainUseZhTw": "進化素材",
       "memberSummaryZhTw": "姆克鳥本體沒有獨立用途；前階主要作符合條件的進化候選。",
       "ivShortLabels": [
-        "PvE：15攻優先；14攻高整體IV亦可留",
+        "PvE：91%+可投入；96%+／15攻優先",
         "暗影標準較寬；15攻優先，不設硬性最低IV"
       ],
       "ivRecommendations": [
@@ -2226,8 +2226,8 @@
           "defenseIvPriority": null,
           "staminaIvMin": null,
           "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
+          "totalIvPercentMin": 91.1,
+          "totalIvPercentPriority": 95.6,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": null,
           "pvpRankConditionalMax": null,
@@ -2237,9 +2237,9 @@
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-          "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+          "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -2269,7 +2269,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": false,
@@ -2350,7 +2350,7 @@
               "maxBattleSummaryZhTw": "普通、暗影或淨化個體不能替代 Dynamax 個體。",
               "evolutionSummaryZhTw": "第四世代 #387～#416 進化圖已結構化；前階是否保留由後續目標用途決定。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
+              "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或需特定招式／版本；只留少量符合條件的個體。",
               "evaluationId": "gen4-387-416-eval-398-sinnoh-normal",
@@ -2655,8 +2655,8 @@
                 "defenseIvPriority": null,
                 "staminaIvMin": null,
                 "staminaIvPriority": null,
-                "totalIvPercentMin": null,
-                "totalIvPercentPriority": null,
+                "totalIvPercentMin": 91.1,
+                "totalIvPercentPriority": 95.6,
                 "secondaryTotalIvPercentMin": null,
                 "pvpRankMax": null,
                 "pvpRankConditionalMax": null,
@@ -2666,15 +2666,15 @@
                 "appliesOnlyWhenUseConfirmed": true,
                 "speciesSpecificOverride": false,
                 "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-                "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2"
+                "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+                "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+                "rulesVersion": "2026.09.02-v3"
               }
             ],
             "ivShortLabels": [
-              "PvE：15攻優先；14攻高整體IV亦可留"
+              "PvE：91%+可投入；96%+／15攻優先"
             ],
-            "ivDirection": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
+            "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
             "shortReason": "主要用途：PvE。"
           },
           {
@@ -3044,7 +3044,7 @@
                 "overrideReasonZhTw": "",
                 "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
                 "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-                "rulesVersion": "2026.07.28-v2"
+                "rulesVersion": "2026.09.02-v3"
               }
             ],
             "ivShortLabels": [
@@ -3537,8 +3537,8 @@
             "defenseIvPriority": null,
             "staminaIvMin": null,
             "staminaIvPriority": null,
-            "totalIvPercentMin": null,
-            "totalIvPercentPriority": null,
+            "totalIvPercentMin": 91.1,
+            "totalIvPercentPriority": 95.6,
             "secondaryTotalIvPercentMin": null,
             "pvpRankMax": null,
             "pvpRankConditionalMax": null,
@@ -3548,9 +3548,9 @@
             "appliesOnlyWhenUseConfirmed": true,
             "speciesSpecificOverride": false,
             "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-            "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-            "rulesVersion": "2026.07.28-v2"
+            "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+            "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+            "rulesVersion": "2026.09.02-v3"
           },
           {
             "id": "iv-global-shadow-pve",
@@ -3580,14 +3580,14 @@
             "overrideReasonZhTw": "",
             "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
             "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-            "rulesVersion": "2026.07.28-v2"
+            "rulesVersion": "2026.09.02-v3"
           }
         ],
         "ivShortLabels": [
-          "PvE：15攻優先；14攻高整體IV亦可留",
+          "PvE：91%+可投入；96%+／15攻優先",
           "暗影標準較寬；15攻優先，不設硬性最低IV"
         ],
-        "ivDirection": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+        "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
         "primaryUses": [
           "PvE"
         ],
@@ -3609,9 +3609,9 @@
         "獨立PvE用途"
       ],
       "mainUseZhTw": "獨立PvE用途",
-      "memberSummaryZhTw": "主要保留姆克鷹；IV以PvE：15攻優先；14攻高整體IV亦可留、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
+      "memberSummaryZhTw": "主要保留姆克鷹；IV以PvE：91%+可投入；96%+／15攻優先、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
       "ivShortLabels": [
-        "PvE：15攻優先；14攻高整體IV亦可留",
+        "PvE：91%+可投入；96%+／15攻優先",
         "暗影標準較寬；15攻優先，不設硬性最低IV"
       ],
       "ivRecommendations": [
@@ -3630,8 +3630,8 @@
           "defenseIvPriority": null,
           "staminaIvMin": null,
           "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
+          "totalIvPercentMin": 91.1,
+          "totalIvPercentPriority": 95.6,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": null,
           "pvpRankConditionalMax": null,
@@ -3641,9 +3641,9 @@
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-          "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+          "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+          "rulesVersion": "2026.09.02-v3"
         },
         {
           "id": "iv-global-shadow-pve",
@@ -3673,7 +3673,7 @@
           "overrideReasonZhTw": "",
           "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
           "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.07.28-v2"
+          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": false,
@@ -3725,9 +3725,9 @@
   "primaryTargetSummaryZhTw": "姆克鷹",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
   "handlingSummaryZhTw": "保留姆克鷹（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留姆克鷹；前階主要作符合條件的進化候選。IV：PvE：15攻優先；14攻高整體IV亦可留；暗影標準較寬；15攻優先，不設硬性最低IV。",
+  "actionSummaryZhTw": "主要保留姆克鷹；前階主要作符合條件的進化候選。IV：PvE：91%+可投入；96%+／15攻優先；暗影標準較寬；15攻優先，不設硬性最低IV。",
   "ivShortLabels": [
-    "PvE：15攻優先；14攻高整體IV亦可留",
+    "PvE：91%+可投入；96%+／15攻優先",
     "暗影標準較寬；15攻優先，不設硬性最低IV"
   ],
   "ivRecommendations": [
@@ -3746,8 +3746,8 @@
       "defenseIvPriority": null,
       "staminaIvMin": null,
       "staminaIvPriority": null,
-      "totalIvPercentMin": null,
-      "totalIvPercentPriority": null,
+      "totalIvPercentMin": 91.1,
+      "totalIvPercentPriority": 95.6,
       "secondaryTotalIvPercentMin": null,
       "pvpRankMax": null,
       "pvpRankConditionalMax": null,
@@ -3757,9 +3757,9 @@
       "appliesOnlyWhenUseConfirmed": true,
       "speciesSpecificOverride": false,
       "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-      "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-      "rulesVersion": "2026.07.28-v2"
+      "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+      "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+      "rulesVersion": "2026.09.02-v3"
     },
     {
       "id": "iv-global-shadow-pve",
@@ -3789,10 +3789,10 @@
       "overrideReasonZhTw": "",
       "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
       "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-      "rulesVersion": "2026.07.28-v2"
+      "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "ivSummaryZhTw": "依成員用途分開保留：PvE：15攻優先；14攻高整體IV亦可留；暗影標準較寬；15攻優先，不設硬性最低IV",
+  "ivSummaryZhTw": "依成員用途分開保留：PvE：91%+可投入；96%+／15攻優先；暗影標準較寬；15攻優先，不設硬性最低IV",
   "primaryUses": [
     "PvE"
   ],

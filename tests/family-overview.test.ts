@@ -197,7 +197,9 @@ describe("家族總覽 UI", () => {
     expect(html).toContain("GL");
     expect(html).toContain("超級聯盟，CP 上限 1500");
     expect(html).toContain("Rank");
-    expect(html).toContain("同物種同聯盟的 IV 排名");
+    expect(html).toContain("同物種同型態同聯盟的個體 IV 排名");
+    expect(html).toContain("物種排名不等於個體 IV Rank");
+    expect(html).toContain("每秒傷害／倒下前預期總傷害");
     expect(html).toContain("妙蛙花");
     for (const vagueText of ["高攻個體", "高 IV", "高品質個體", "好的 PvP IV", "適合對戰的個體"]) {
       expect(html).not.toContain(vagueText);
@@ -206,6 +208,19 @@ describe("家族總覽 UI", () => {
     expect(html).not.toContain("數字 IV 門檻");
     expect(html).not.toContain('data-testid="iv-recommendation-details"');
     expect(html).not.toContain("來源與資料狀態");
+  });
+
+  it("雷丘家族會把 Mega Y 核心輸出呈現在 PvE 摘要", () => {
+    const raichu = byMember("026-kanto");
+    expect(raichu.pve).toMatchObject({ label: "核心投資", tone: "HIGH" });
+    expect(raichu.pve.detail).toContain("Mega Y 雷丘");
+    expect(raichu.primaryUses).toEqual(expect.arrayContaining(["PvE", "Mega"]));
+  });
+
+  it("Mega-only 家族不會再被 PvE 聚合成無顯著用途", () => {
+    for (const formId of ["080-kanto", "115-kanto", "142-kanto"]) {
+      expect(byMember(formId).pve.label, formId).not.toBe("無顯著用途");
+    }
   });
 
   it("特殊取得家族不會顯示普通重複可傳標籤", () => {

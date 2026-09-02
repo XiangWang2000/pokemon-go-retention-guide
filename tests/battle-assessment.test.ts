@@ -8,7 +8,10 @@ import {
 describe("共用 PvE 用途與逐版本資料處置規則", () => {
   it("把 PvE 用途拆成四級，而不是只有有用／沒用", () => {
     expect(classifyPveUse({ pveTiers: ["S"] })).toBe("CORE_INVESTMENT");
+    expect(classifyPveUse({ pveTiers: ["CORE_INVESTMENT"] })).toBe("CORE_INVESTMENT");
     expect(classifyPveUse({ pveTiers: ["BUDGET_ONLY"] })).toBe("USABLE_OR_BUDGET");
+    expect(classifyPveUse({ pveTiers: ["USABLE_OR_BUDGET"] })).toBe("USABLE_OR_BUDGET");
+    expect(classifyPveUse({ pveTiers: ["SPECIAL_USE"] })).toBe("SPECIAL_USE");
     expect(classifyPveUse({ hasMaxPveValue: true })).toBe("SPECIAL_USE");
     expect(classifyPveUse({ pveTiers: ["F"] })).toBe("NO_SIGNIFICANT_USE");
   });

@@ -127,6 +127,28 @@ describe("PokemonForm 快速總覽 presentation layer", () => {
       tone: "SPECIAL",
     });
   });
+
+  it("Mega 雷丘 Y 的電系第一名證據會進入 PvE 核心投資，不沿用普通雷丘 F 級", () => {
+    const raichu = form("026-kanto");
+    const megaX = raichu.variants.find((variant) => variant.row.variantKey === "MEGA_X")!;
+    const megaY = raichu.variants.find((variant) => variant.row.variantKey === "MEGA_Y")!;
+    expect(megaX.primaryUseKeys).toContain("MEGA");
+    expect(megaX.primaryUseKeys).not.toContain("PVE");
+    expect(megaX.ivShortLabels).toHaveLength(0);
+    expect(megaY.primaryUseKeys).toEqual(expect.arrayContaining(["PVE", "MEGA"]));
+    expect(megaY.row.pveSummaryZhTw).toContain("核心投資");
+    expect(raichu.pve).toMatchObject({
+      label: "核心投資",
+      tone: "HIGH",
+      detail: expect.stringContaining("Mega／Primal"),
+    });
+    expect(megaY.row.raw.find((item) => item.category === "MEGA")).toMatchObject({
+      tier: "S",
+      rank: null,
+      seasonOrVersion: "即時研究快照 2026-09-02",
+      rawNotes: expect.stringContaining("電系 S Tier #1"),
+    });
+  });
 });
 
 describe("快速總覽與資料審核 UI", () => {

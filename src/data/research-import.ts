@@ -582,6 +582,8 @@ async function importFindings(
       .filter((sourceId): sourceId is string => Boolean(sourceId));
     if (!sourceIds[0]) continue;
     const id = `research-${sanitize(variantId)}-${finding.category.toLowerCase()}-${index}`;
+    const findingCheckedAt = new Date(`${finding.checkedAt}T00:00:00+08:00`);
+    const seasonOrVersion = `即時研究快照 ${finding.checkedAt}`;
     await prisma.rawEvaluationData.upsert({
       where: { id },
       create: {
@@ -595,9 +597,9 @@ async function importFindings(
         tier: finding.tier,
         recommendedMoves: JSON.stringify(finding.recommendedMoves),
         rawNotes: finding.rawNotes,
-        seasonOrVersion: "即時研究快照 2026-07-15",
+        seasonOrVersion,
         sourceId: sourceIds[0],
-        checkedAt: new Date(`${finding.checkedAt}T00:00:00+08:00`),
+        checkedAt: findingCheckedAt,
       },
       update: {
         rank: finding.rank,
@@ -605,7 +607,9 @@ async function importFindings(
         tier: finding.tier,
         recommendedMoves: JSON.stringify(finding.recommendedMoves),
         rawNotes: finding.rawNotes,
+        seasonOrVersion,
         sourceId: sourceIds[0],
+        checkedAt: findingCheckedAt,
       },
     });
     for (const sourceId of sourceIds) {

@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AlertTriangle, CheckCircle2, CircleDot, Search, Send } from "lucide-react";
 import { EvaluationBrowser } from "@/components/evaluation-browser";
+import { DomainGlossary } from "@/components/domain-glossary";
 import { CURRENT_DATA_MAX_DEX } from "@/config/data-scope";
 import { DATA_VERSION_DATE_ISO, DATA_VERSION_DATE_ZH_TW } from "@/config/release";
 import { auditDataFileName, familyDataFileName } from "@/lib/site-data-paths";
@@ -278,6 +279,7 @@ export function HomeDataLoader() {
           </div>
         </details>
       </section>
+      <DomainGlossary />
       {homeError ? (
         <section className="surface rounded-2xl p-6 text-center">
           <p className="font-black">首頁資料載入失敗</p>

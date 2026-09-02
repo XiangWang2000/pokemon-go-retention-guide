@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowLeft, ExternalLink } from "lucide-react";
+import { DomainGlossary } from "@/components/domain-glossary";
 import Link from "next/link";
 import { StatusBadge } from "@/components/status-badge";
 import { variantLabelZhTw } from "@/presentation/variant-label";
@@ -172,6 +173,7 @@ export function PokemonDetailView({
           </div>
         ) : null}
       </section>
+      <DomainGlossary compact />
       <section className="surface rounded-2xl p-5">
         <h2 className="text-xl font-black">所有戰鬥版本</h2>
         <div className="mt-3 flex flex-wrap gap-2">

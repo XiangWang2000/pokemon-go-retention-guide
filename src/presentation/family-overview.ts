@@ -3,7 +3,7 @@ import { isTrueDataPending, pveUseLevelLabelZhTw } from "@/rules/battle-assessme
 import { CURRENT_DATA_MAX_DEX } from "@/config/data-scope";
 import { specialFamilyAssociations } from "@/data/family-associations";
 import type { CompactOverview, FormOverview, OverviewTone } from "./form-overview";
-import { isPrimalFormId } from "./variant-label";
+import { isPrimalFormId, variantShortLabelZhTw } from "./variant-label";
 
 export type MemberRoleKey =
   | "EVOLUTION_MATERIAL"
@@ -151,7 +151,7 @@ function bestByTone(members: FamilyMemberSummary[], key: "pvp" | "pve" | "gym" |
 }
 
 const pvpUseKeys = new Set(["GREAT_LEAGUE", "ULTRA_LEAGUE", "MASTER_LEAGUE"]);
-const pveUseKeys = new Set(["PVE", "SHADOW_PVE"]);
+const pveUseKeys = new Set(["PVE", "SHADOW_PVE", "MEGA"]);
 const megaMaxUseKeys = new Set(["MEGA", "MAX_ATTACK", "MAX_TANK", "MAX_SUPPORT", "MAX_FLEX"]);
 
 function bestByConfirmedUse(
@@ -295,7 +295,14 @@ export function buildFamilyPveOverview(members: FamilyMemberSummary[]): CompactO
   const best = bestByConfirmedUse(members, "pve", pveUseKeys);
   if (!best || best.form.pve.tone === "NONE") {
     const assessed = bestByTone(members, "pve");
-    if (assessed?.form.pve.tone === "REVIEW") return assessed.form.pve;
+    if (assessed && ["HIGH", "MEDIUM", "SPECIAL", "REVIEW"].includes(assessed.form.pve.tone)) {
+      return {
+        ...assessed.form.pve,
+        detail:
+          assessed.form.pve.detail ??
+          `${assessed.form.nameZhTw}有已確認的限定用途，投資順位資料仍有限`,
+      };
+    }
     return {
       label: pveUseLevelLabelZhTw.NO_SIGNIFICANT_USE,
       detail: "目前沒有已確認的 PvE 投資用途",
@@ -306,13 +313,30 @@ export function buildFamilyPveOverview(members: FamilyMemberSummary[]): CompactO
     (variant) =>
       variant.row.variantKey === "SHADOW" && variant.primaryUseKeys.includes("SHADOW_PVE"),
   );
+  const directPveVariants = best.form.variants.filter((variant) =>
+    variant.primaryUseKeys.some((key) => key === "PVE" || key === "SHADOW_PVE"),
+  );
+  const megaOnly =
+    directPveVariants.length > 0 &&
+    directPveVariants.every((variant) => variant.row.variantKey.startsWith("MEGA"));
+  const megaLabels = megaOnly
+    ? [
+        ...new Set(
+          directPveVariants.map((variant) =>
+            variantShortLabelZhTw(variant.row.variantKey, variant.row.formId),
+          ),
+        ),
+      ].join("／")
+    : null;
   return {
     label: best.form.pve.label,
     detail: shadow
       ? `暗影版本；${best.form.nameZhTw}有獨立用途`
-      : best.isTerminal
-        ? "最終進化為主要投資目標"
-        : `${best.form.nameZhTw}有獨立用途`,
+      : megaLabels
+        ? `${megaLabels} ${best.form.nameZhTw}為主要投資目標`
+        : best.isTerminal
+          ? "最終進化為主要投資目標"
+          : `${best.form.nameZhTw}有獨立用途`,
     tone: best.form.pve.tone,
   };
 }

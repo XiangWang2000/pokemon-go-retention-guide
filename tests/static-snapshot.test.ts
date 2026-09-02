@@ -98,14 +98,14 @@ describe("static 唯讀 snapshot", () => {
       pokemonSpecies: 502,
       pokemonForms: 579,
       battleVariants: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
-      rawEvaluationData: 1510,
-      sourceReferences: 231,
+      rawEvaluationData: 1513,
+      sourceReferences: 236,
       retentionEvaluations: 2513,
       categoryEvaluations: 16436,
       ivRecommendations: CURRENT_RELEASE_CONTRACT.expectedCounts.ivRecommendations,
       dashboardRows: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
       homeFamilies: CURRENT_RELEASE_CONTRACT.expectedCounts.families,
-      openReviewIssues: 166,
+      openReviewIssues: 161,
     });
     expect(siteSnapshotManifest.sourceDatabase.path).toBe("rebuild-ci.db");
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
@@ -175,6 +175,9 @@ describe("static 唯讀 snapshot", () => {
   it("dashboard snapshot 保留家族、進化路徑與結構化 IV 資料", async () => {
     const rows = await getSnapshotDashboardRows();
     const bulbasaur = rows.find((row) => row.formId === "001-kanto");
+    const megaRaichuY = rows.find(
+      (row) => row.formId === "026-kanto" && row.variantKey === "MEGA_Y",
+    );
 
     expect(bulbasaur?.familyKey).toBe("KANTO_FAMILY_001");
     expect(bulbasaur?.evolutionPaths).toEqual(
@@ -187,6 +190,46 @@ describe("static 唯讀 snapshot", () => {
         expect.objectContaining({ scopeType: "GLOBAL", primaryUseKey: "PVE" }),
       ]),
     );
+    expect(megaRaichuY).toMatchObject({
+      decision: "KEEP",
+      assessmentDisposition: "CLEAR_USE",
+      pveSummaryZhTw: expect.stringContaining("核心投資"),
+    });
+    expect(megaRaichuY?.categoryStatuses).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          category: "PVE",
+          status: "PARTIALLY_VERIFIED",
+          provenance: "SOURCE_VERIFIED",
+          materialToDecision: true,
+          pveUseLevel: "CORE_INVESTMENT",
+        }),
+      ]),
+    );
+  }, 60_000);
+
+  it("用途層級原始值不會讓有 PvE 證據的版本誤入可傳送", async () => {
+    const rows = await getSnapshotDashboardRows();
+    const protectedIds = [
+      "398-sinnoh-normal",
+      "398-sinnoh-shadow",
+      "405-sinnoh-normal",
+      "405-sinnoh-shadow",
+      "409-sinnoh-normal",
+      "409-sinnoh-shadow",
+      "467-sinnoh-normal",
+      "469-sinnoh-normal",
+      "492-sky-normal",
+    ];
+    for (const id of protectedIds) {
+      const row = rows.find((candidate) => candidate.id === id);
+      expect(row, id).toBeDefined();
+      expect(row?.decision, id).not.toBe("TRANSFER_CANDIDATE");
+      expect(
+        row?.categoryStatuses.find((status) => status.category === "PVE")?.pveUseLevel,
+        id,
+      ).not.toBe("NO_SIGNIFICANT_USE");
+    }
   }, 60_000);
 });
 

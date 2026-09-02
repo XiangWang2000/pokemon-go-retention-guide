@@ -100,7 +100,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #925；招式 WING_ATTACK／SILVER_WIND／AERIAL_ACE",
               "pveSummaryZhTw": "可用／預算型。遠古巨蜓：後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -389,7 +389,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "可用／預算型。遠古巨蜓：後續世代正式進化目標；完整戰鬥資料尚未納入目前展示批次，但保留進化價值 stub。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -622,7 +622,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -855,7 +855,7 @@
               "reviewIssues": [],
               "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
               "reviewed": true,
-              "updatedAt": "2026-08-31T16:00:00.000Z",
+              "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
@@ -1077,7 +1077,7 @@
         "hasEvolutionUse": true,
         "hasDataIssues": false,
         "reviewed": true,
-        "updatedAt": "2026-08-31T16:00:00.000Z",
+        "updatedAt": "2026-09-01T16:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1087,9 +1087,9 @@
         "進化素材"
       ],
       "mainUseZhTw": "進化素材",
-      "memberSummaryZhTw": "主要保留蜻蜻蜓；IV以PvE：15攻優先；14攻高整體IV亦可留為準。",
+      "memberSummaryZhTw": "主要保留蜻蜻蜓；IV以PvE：91%+可投入；96%+／15攻優先為準。",
       "ivShortLabels": [
-        "PvE：15攻優先；14攻高整體IV亦可留"
+        "PvE：91%+可投入；96%+／15攻優先"
       ],
       "ivRecommendations": [
         {
@@ -1107,8 +1107,8 @@
           "defenseIvPriority": null,
           "staminaIvMin": null,
           "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
+          "totalIvPercentMin": 91.1,
+          "totalIvPercentPriority": 95.6,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": null,
           "pvpRankConditionalMax": null,
@@ -1118,9 +1118,9 @@
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-          "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+          "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": true,
@@ -1207,7 +1207,7 @@
               "maxBattleSummaryZhTw": "此版本沒有獨立 Max 型態。",
               "evolutionSummaryZhTw": "擁有該型態的第四世代批次提供正式進化身份與路徑。",
               "requiredMovesSummaryZhTw": "目前沒有記錄需要特別保留的招式結論。",
-              "recommendedIvStrategyZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
+              "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
               "ivRecommendations": [],
               "reasonZhTw": "有限的 PvP 或 PvE 證據支持有條件保留。",
               "evaluationId": "gen4-447-476-eval-469-sinnoh-normal",
@@ -1571,8 +1571,8 @@
                 "defenseIvPriority": null,
                 "staminaIvMin": null,
                 "staminaIvPriority": null,
-                "totalIvPercentMin": null,
-                "totalIvPercentPriority": null,
+                "totalIvPercentMin": 91.1,
+                "totalIvPercentPriority": 95.6,
                 "secondaryTotalIvPercentMin": null,
                 "pvpRankMax": null,
                 "pvpRankConditionalMax": null,
@@ -1582,15 +1582,15 @@
                 "appliesOnlyWhenUseConfirmed": true,
                 "speciesSpecificOverride": false,
                 "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-                "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-                "rulesVersion": "2026.07.28-v2"
+                "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+                "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+                "rulesVersion": "2026.09.02-v3"
               }
             ],
             "ivShortLabels": [
-              "PvE：15攻優先；14攻高整體IV亦可留"
+              "PvE：91%+可投入；96%+／15攻優先"
             ],
-            "ivDirection": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
+            "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
             "shortReason": "主要用途：PvE。"
           },
           {
@@ -2302,8 +2302,8 @@
             "defenseIvPriority": null,
             "staminaIvMin": null,
             "staminaIvPriority": null,
-            "totalIvPercentMin": null,
-            "totalIvPercentPriority": null,
+            "totalIvPercentMin": 91.1,
+            "totalIvPercentPriority": 95.6,
             "secondaryTotalIvPercentMin": null,
             "pvpRankMax": null,
             "pvpRankConditionalMax": null,
@@ -2313,15 +2313,15 @@
             "appliesOnlyWhenUseConfirmed": true,
             "speciesSpecificOverride": false,
             "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-            "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-            "rulesVersion": "2026.07.28-v2"
+            "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+            "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+            "rulesVersion": "2026.09.02-v3"
           }
         ],
         "ivShortLabels": [
-          "PvE：15攻優先；14攻高整體IV亦可留"
+          "PvE：91%+可投入；96%+／15攻優先"
         ],
-        "ivDirection": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
+        "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
         "primaryUses": [
           "PvE"
         ],
@@ -2342,9 +2342,9 @@
         "獨立PvE用途"
       ],
       "mainUseZhTw": "獨立PvE用途",
-      "memberSummaryZhTw": "主要保留遠古巨蜓；IV以PvE：15攻優先；14攻高整體IV亦可留為準。",
+      "memberSummaryZhTw": "主要保留遠古巨蜓；IV以PvE：91%+可投入；96%+／15攻優先為準。",
       "ivShortLabels": [
-        "PvE：15攻優先；14攻高整體IV亦可留"
+        "PvE：91%+可投入；96%+／15攻優先"
       ],
       "ivRecommendations": [
         {
@@ -2362,8 +2362,8 @@
           "defenseIvPriority": null,
           "staminaIvMin": null,
           "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
+          "totalIvPercentMin": 91.1,
+          "totalIvPercentPriority": 95.6,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": null,
           "pvpRankConditionalMax": null,
@@ -2373,9 +2373,9 @@
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-          "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-          "rulesVersion": "2026.07.28-v2"
+          "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+          "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": false,
@@ -2435,9 +2435,9 @@
   "primaryTargetSummaryZhTw": "蜻蜻蜓、遠古巨蜓",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
   "handlingSummaryZhTw": "保留遠古巨蜓（PvE 實戰候選）；保留可進化為遠古巨蜓的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留蜻蜻蜓、遠古巨蜓；前階主要作符合條件的進化候選。IV：PvE：15攻優先；14攻高整體IV亦可留。",
+  "actionSummaryZhTw": "主要保留蜻蜻蜓、遠古巨蜓；前階主要作符合條件的進化候選。IV：PvE：91%+可投入；96%+／15攻優先。",
   "ivShortLabels": [
-    "PvE：15攻優先；14攻高整體IV亦可留"
+    "PvE：91%+可投入；96%+／15攻優先"
   ],
   "ivRecommendations": [
     {
@@ -2455,8 +2455,8 @@
       "defenseIvPriority": null,
       "staminaIvMin": null,
       "staminaIvPriority": null,
-      "totalIvPercentMin": null,
-      "totalIvPercentPriority": null,
+      "totalIvPercentMin": 91.1,
+      "totalIvPercentPriority": 95.6,
       "secondaryTotalIvPercentMin": null,
       "pvpRankMax": null,
       "pvpRankConditionalMax": null,
@@ -2466,12 +2466,12 @@
       "appliesOnlyWhenUseConfirmed": true,
       "speciesSpecificOverride": false,
       "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "PvE：先看物種與型態、招式、等級／CP與既有投入，再看攻防耐久斷點，最後才以IV比較同種候選。15攻優先；14攻高整體IV亦可留。不設硬性IV淘汰線。",
-      "shortIvLabelZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
-      "rulesVersion": "2026.07.28-v2"
+      "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+      "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+      "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "ivSummaryZhTw": "PvE：15攻優先；14攻高整體IV亦可留",
+  "ivSummaryZhTw": "PvE：91%+可投入；96%+／15攻優先",
   "primaryUses": [
     "後續進化",
     "PvE"
@@ -2480,7 +2480,7 @@
   "notices": [],
   "hasDataIssues": false,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-08-31T16:00:00.000Z",
+  "updatedAt": "2026-09-01T16:00:00.000Z",
   "minDexNumber": 193,
   "maxDexNumber": 469,
   "detailsLoaded": true

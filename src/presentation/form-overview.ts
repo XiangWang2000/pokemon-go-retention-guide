@@ -3,6 +3,7 @@ import { resolveIvRecommendation, type IvRecommendation, type PrimaryUseKey } fr
 import { zhTw } from "@/locales/zh-TW";
 import { CURRENT_DATA_MAX_DEX } from "@/config/data-scope";
 import {
+  classifyPveUse,
   isTrueDataPending,
   pveUseLevelLabelZhTw,
   type PveUseLevel,
@@ -135,17 +136,38 @@ function hasDirectBattleValue(rows: DashboardRow[]) {
 
 function hasDirectPveUse(row: DashboardRow) {
   if (["PURIFIED", "DYNAMAX", "GIGANTAMAX"].includes(row.variantKey)) return false;
-  const meaningfulRawPve = row.raw.some((item) => {
-    if (item.category !== "PVE") return false;
-    const tier = (item.tier ?? item.rating ?? "").trim().toUpperCase();
-    const noUseTier = new Set(["C", "D", "F", "LOW", "NOT_RANKED", "NONE", "NO_USE"]);
-    return (tier.length > 0 && !noUseTier.has(tier)) || (item.rank !== null && item.rank <= 250);
-  });
+  const meaningfulRawPve = rawPveUseLevel(row) !== "NO_SIGNIFICANT_USE";
   const pve = category(row, "PVE");
   const curatedPve =
     Boolean(pve?.materialToDecision) &&
     ["VERIFIED", "PARTIALLY_VERIFIED"].includes(pve?.status ?? "");
   return meaningfulRawPve || curatedPve;
+}
+
+function rawPveRows(row: DashboardRow) {
+  return row.raw.filter(
+    (item) =>
+      item.category === "PVE" || (row.variantKey.startsWith("MEGA") && item.category === "MEGA"),
+  );
+}
+
+function rawPveUseLevel(row: DashboardRow) {
+  const raw = rawPveRows(row);
+  return classifyPveUse({
+    pveTiers: raw.map((item) => item.tier ?? item.rating),
+    pveRanks: raw.map((item) => item.rank),
+  });
+}
+
+function hasActionableMegaPveEvidence(row: DashboardRow) {
+  if (!row.variantKey.startsWith("MEGA")) return false;
+  const raw = row.raw.filter((item) => item.category === "MEGA");
+  return (
+    classifyPveUse({
+      pveTiers: raw.map((item) => item.tier ?? item.rating),
+      pveRanks: raw.map((item) => item.rank),
+    }) !== "NO_SIGNIFICANT_USE"
+  );
 }
 
 function hasReviewGap(rows: DashboardRow[], key: string) {
@@ -205,17 +227,20 @@ function bestPveEntry(rows: DashboardRow[]): PveEntry | undefined {
   };
   const entries = rows.flatMap<PveEntry>((row): PveEntry[] => {
     const pveStatus = category(row, "PVE");
-    const rawRows = row.raw.filter((item) => item.category === "PVE");
+    const rawRows = rawPveRows(row);
     if (rawRows.length) {
-      return rawRows.map((raw): PveEntry => ({
-        row,
-        raw,
-        pveUseLevel: pveStatus?.pveUseLevel,
-        tone:
-          pveUseLevelTone(pveStatus?.pveUseLevel) ??
-          tierTone(raw.tier ?? raw.rating) ??
-          ("LOW" as OverviewTone),
-      }));
+      return rawRows.map((raw): PveEntry => {
+        const directLevel = classifyPveUse({
+          pveTiers: [raw.tier ?? raw.rating],
+          pveRanks: [raw.rank],
+        });
+        return {
+          row,
+          raw,
+          pveUseLevel: directLevel,
+          tone: pveUseLevelTone(directLevel) ?? ("LOW" as OverviewTone),
+        };
+      });
     }
     return pveStatus?.pveUseLevel
       ? ([
@@ -242,7 +267,7 @@ function pveUseLevelTone(level: string | null | undefined): OverviewTone | null 
 
 function pveContextDetail(entry: PveEntry) {
   const contexts: string[] = [];
-  if (entry.raw?.category === "PVE") contexts.push("團體戰");
+  if (entry.raw?.category === "PVE" || entry.raw?.category === "MEGA") contexts.push("團體戰");
   if (entry.row.variantKey === "SHADOW") contexts.push("暗影");
   if (entry.row.variantKey.startsWith("MEGA")) contexts.push("Mega／Primal");
   if (["DYNAMAX", "GIGANTAMAX"].includes(entry.row.variantKey)) contexts.push("Max Battle");
@@ -538,13 +563,17 @@ type EvolutionPathOverview = Omit<
 
 function buildVariantIvRecommendations(row: DashboardRow, uses: PrimaryUseKey[]) {
   const available = row.ivRecommendations as unknown as IvRecommendation[];
+  const recommendationUses =
+    row.variantKey.startsWith("MEGA") && !hasActionableMegaPveEvidence(row)
+      ? uses.filter((use) => use !== "MEGA")
+      : uses;
   const context = {
     familyKey: row.familyKey,
     speciesId: row.speciesId,
     pokemonFormId: row.formId,
     battleVariantId: row.id,
   };
-  return uses
+  return recommendationUses
     .map((use) => resolveIvRecommendation(available, context, use))
     .map((item) => {
       if (!item || !isPrimalFormId(row.formId)) return item;

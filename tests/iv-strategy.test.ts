@@ -47,7 +47,25 @@ describe("通用 IV 門檻", () => {
       evaluateIvCandidate(recommendation("PVE"), candidate({ defenseIv: 14, staminaIv: 14 })),
     ).toMatchObject({
       level: "PRIORITY",
-      labelZhTw: "PvE：15攻高整體IV為同種長期投資優先",
+      labelZhTw: "PvE：96%以上且15攻，長期／XL投資優先",
+    });
+  });
+
+  it("明示91%一般投入與96%／15攻長期投資的兩段門檻", () => {
+    const rule = recommendation("PVE");
+    expect(rule).toMatchObject({ totalIvPercentMin: 91.1, totalIvPercentPriority: 95.6 });
+    expect(
+      evaluateIvCandidate(rule, candidate({ attackIv: 15, defenseIv: 13, staminaIv: 13 })),
+    ).toMatchObject({
+      level: "RECOMMENDED",
+      totalIvPercentLabel: "91%",
+      labelZhTw: "PvE：91%以上已達一般投入門檻；96%以上／15攻更優先",
+    });
+    expect(
+      evaluateIvCandidate(rule, candidate({ attackIv: 14, defenseIv: 13, staminaIv: 13 })),
+    ).toMatchObject({
+      level: "CONDITIONAL",
+      totalIvPercentLabel: "89%",
     });
   });
 
@@ -246,6 +264,6 @@ describe("IV 覆寫解析", () => {
     ).toBe("family");
     expect(
       resolveIvRecommendation(GLOBAL_IV_RECOMMENDATIONS, context, "PVE")?.shortIvLabelZhTw,
-    ).toBe("PvE：15攻優先；14攻高整體IV亦可留");
+    ).toBe("PvE：91%+可投入；96%+／15攻優先");
   });
 });

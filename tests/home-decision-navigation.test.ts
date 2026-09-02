@@ -20,6 +20,13 @@ describe("首頁快速判定導覽", () => {
     expect(html).toContain("直接看結論");
     expect(html).toContain("<details");
     expect(html).toContain("依家族處理方式分類瀏覽");
+    expect(html).toContain("縮寫與數字怎麼看");
+    expect(html).toContain("Player versus Environment（玩家對環境）");
+    expect(html).toContain("PvPoke 的物種排名是兩件事");
+    expect(html).toContain("DPS／TDO");
+    expect(html).toContain("Charged Move Priority");
+    expect(html).toContain("Same-Type Attack Bonus");
+    expect(html).toContain("極巨化／超極巨化");
 
     expect(html.indexOf('aria-label="直接搜尋寶可夢保留結論"')).toBeLessThan(
       html.indexOf("依家族處理方式分類瀏覽"),
