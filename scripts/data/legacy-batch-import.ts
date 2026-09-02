@@ -323,12 +323,12 @@ async function rebuildBatch<T extends LegacyBatchForm>(
         : [],
     );
   }
-  const useOverride = (variant: LegacyVariantRecord<T>) =>
+  const variantOverride = (variant: LegacyVariantRecord<T>) =>
     config.variantUseOverrides?.[variant.id];
   const pveUseLevelFor = (variant: LegacyVariantRecord<T>) =>
-    useOverride(variant)?.pveUseLevel ?? config.pveUseLevels[variant.form.id] ?? null;
+    variantOverride(variant)?.pveUseLevel ?? config.pveUseLevels[variant.form.id] ?? null;
   const maxUseLevelFor = (variant: LegacyVariantRecord<T>) =>
-    useOverride(variant)?.maxUseLevel ?? null;
+    variantOverride(variant)?.maxUseLevel ?? null;
   const useTier = (level: PveUseLevel | null) =>
     level === "CORE_INVESTMENT"
       ? "A"
@@ -338,7 +338,7 @@ async function rebuildBatch<T extends LegacyBatchForm>(
           ? "SPECIAL"
           : null;
   const decisionFor = (variant: LegacyVariantRecord<T>, ranks: RankResult[]): Decision => {
-    const override = useOverride(variant);
+    const override = variantOverride(variant);
     if (!variant.released) return "TRANSFER_CANDIDATE";
     if (override?.decision) return override.decision;
     if (variant.variantKey === "DYNAMAX") {
@@ -467,14 +467,14 @@ async function rebuildBatch<T extends LegacyBatchForm>(
           materialToDecision = true;
           pveUseLevel = configuredPveUse;
           summaryZhTw =
-            useOverride(variant)?.pveSummaryZhTw ??
+            variantOverride(variant)?.pveSummaryZhTw ??
             "本批 PvE 用途依研究表與來源頁面分成核心投資、可用／預算型、特殊用途或無顯著用途；不把缺少精確斷點誤當成整個家族待判斷。";
         } else if (configuredPveUse === "NO_SIGNIFICANT_USE") {
           status = "VERIFIED";
           provenance = "SOURCE_VERIFIED";
           pveUseLevel = "NO_SIGNIFICANT_USE";
           summaryZhTw =
-            useOverride(variant)?.pveSummaryZhTw ??
+            variantOverride(variant)?.pveSummaryZhTw ??
             "來源已足以判定此版本目前沒有顯著 PvE 投資價值；不因高 IV 自動升格。";
         } else {
           status = "DATA_UNAVAILABLE";
@@ -488,7 +488,7 @@ async function rebuildBatch<T extends LegacyBatchForm>(
         provenance = variant.released ? "DATA_UNAVAILABLE" : "MANUAL_CURATED";
         summaryZhTw = "火箭隊沒有統一逐物種排名；此缺項不單獨觸發暫時保留。";
       } else if (category === "GYM") {
-        const gymSummary = useOverride(variant)?.gymSummaryZhTw;
+        const gymSummary = variantOverride(variant)?.gymSummaryZhTw;
         if (!variant.released) {
           status = "UNRELEASED";
         } else if (gymSummary) {
@@ -539,7 +539,7 @@ async function rebuildBatch<T extends LegacyBatchForm>(
           status = "NOT_APPLICABLE";
         }
         summaryZhTw =
-          useOverride(variant)?.maxSummaryZhTw ??
+          variantOverride(variant)?.maxSummaryZhTw ??
           (isMaxVariant
             ? variant.released
               ? "此 Max 版本已由來源核對為已推出；與普通／暗影版本分開保留。"
@@ -653,7 +653,7 @@ async function rebuildBatch<T extends LegacyBatchForm>(
       provenance: "MANUAL_CURATED" as const,
       pvpSummaryZhTw: legacyRankSummary(result.ranks),
       pveSummaryZhTw:
-        useOverride(variant)?.pveSummaryZhTw ??
+        variantOverride(variant)?.pveSummaryZhTw ??
         (variant.variantKey === "MEGA"
           ? config.texts.retentionPveMega
           : config.texts.retentionPveWithLevel &&
@@ -662,8 +662,8 @@ async function rebuildBatch<T extends LegacyBatchForm>(
             ? config.texts.retentionPveWithLevel
             : config.texts.retentionPveDefault),
       rocketSummaryZhTw: "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
-      gymSummaryZhTw: useOverride(variant)?.gymSummaryZhTw ?? "未列為主要道館保留用途。",
-      gymRating: useOverride(variant)?.gymSummaryZhTw
+      gymSummaryZhTw: variantOverride(variant)?.gymSummaryZhTw ?? "未列為主要道館保留用途。",
+      gymRating: variantOverride(variant)?.gymSummaryZhTw
         ? ("SPECIAL_CASE" as const)
         : ("NOT_APPLICABLE" as const),
       megaSummaryZhTw:
@@ -673,7 +673,7 @@ async function rebuildBatch<T extends LegacyBatchForm>(
             ? config.texts.retentionMegaBase
             : "此版本沒有獨立 Mega 型態用途。",
       maxBattleSummaryZhTw:
-        useOverride(variant)?.maxSummaryZhTw ??
+        variantOverride(variant)?.maxSummaryZhTw ??
         (typeof config.texts.retentionMax === "function"
           ? config.texts.retentionMax(variant)
           : config.texts.retentionMax),
