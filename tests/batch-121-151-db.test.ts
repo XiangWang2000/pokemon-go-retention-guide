@@ -39,7 +39,7 @@ describe("#121～#151 部署快照安全回歸", () => {
     expect([species.size, forms.size, rows.length, categoryCount]).toEqual([31, 39, 165, 1155]);
     expect(crossPath).toBeDefined();
     expect(specialVariants).toEqual({
-      "121-kanto-mega": "UNRELEASED",
+      "121-kanto-mega": "RELEASED",
       "131-kanto-gigantamax": "RELEASED",
       "143-kanto-gigantamax": "RELEASED",
       "150-kanto-mega-x": "RELEASED",
