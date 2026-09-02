@@ -778,7 +778,6 @@ export const specialVariants212241: SpecialVariant212241[] = [
 ];
 export const pveUseLevels212241: Record<string, PveUseLevel> = {
   "214-johto": "USABLE_OR_BUDGET",
-  "227-johto": "SPECIAL_USE",
   "229-johto": "SPECIAL_USE",
 };
 export const truncatedForms212241 = new Set<string>();
