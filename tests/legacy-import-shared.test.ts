@@ -73,6 +73,11 @@ describe("shared legacy import adapter", () => {
         "test-form": "CORE_INVESTMENT",
       }),
     ).toBe("KEEP");
+    expect(
+      legacyInitialDecision("NORMAL", true, [], "test-form", {
+        "test-form": "NO_SIGNIFICANT_USE",
+      }),
+    ).toBe("TRANSFER_CANDIDATE");
   });
 
   it("reconstructs rankings through the shared league contract", () => {
@@ -103,5 +108,25 @@ describe("shared legacy import adapter", () => {
         },
       ],
     );
+
+    const auditedSnapshot = {
+      root: "data/sources/pvpoke/2026-09-01",
+      label: "2026-09-01",
+      checkedAt: new Date("2026-09-01T00:00:00+08:00"),
+      sourceIds: {
+        GREAT: "pvpoke-gl-20260901",
+        ULTRA: "pvpoke-ul-20260901",
+        MASTER: "pvpoke-ml-20260901",
+      },
+    };
+    expect(
+      findLegacyRanks(
+        form,
+        "NORMAL",
+        rankings,
+        (candidate) => candidate.aliases[0]!,
+        auditedSnapshot,
+      )[0]?.sourceId,
+    ).toBe("pvpoke-gl-20260901");
   });
 });
