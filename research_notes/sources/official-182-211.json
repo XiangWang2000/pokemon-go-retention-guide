@@ -1,6 +1,6 @@
 {
   "batch": "182-211",
-  "checkedAt": "2026-08-28",
+  "checkedAt": "2026-09-02",
   "sources": [
     {
       "id": "OFF-JOHTO-TOUR-2022",
@@ -55,7 +55,9 @@
       "accessedAt": "2026-08-28",
       "publishedAt": "2021-10-11",
       "sourceSummaryZhTw": "官方萬聖節公告明確記載伽勒爾呆呆王於 2021 年 10 月首次在 Pokémon GO 推出。",
-      "supports": ["199-galar-normal"]
+      "supports": [
+        "199-galar-normal"
+      ]
     },
     {
       "id": "SECONDARY-SHADOW-JOHTO-2026",
@@ -104,6 +106,63 @@
       "supports": [
         "208-johto-mega",
         "208-johto-normal"
+      ]
+    },
+    {
+      "id": "MAX-GEN2-ESPEON-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Dynamax Espeon: Best Moveset, Counters & Max CP",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/196-Dynamax",
+      "accessedAt": "2026-09-02",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "確認極巨太陽伊布已推出；目前以 Confusion／Max Mindstorm 可作 Psychic Max 攻擊手。",
+      "supports": [
+        "196-johto-dynamax"
+      ]
+    },
+    {
+      "id": "MAX-GEN2-UMBREON-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Dynamax Umbreon: Best Moveset, Counters & Max CP",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/197-Dynamax",
+      "accessedAt": "2026-09-02",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "確認極巨月亮伊布已推出；其 Max 攻擊輸出有限，應與一般月亮伊布及其他 Max 角色分開評估。",
+      "supports": [
+        "197-johto-dynamax"
+      ]
+    },
+    {
+      "id": "MAX-ATTACKERS-GEN2-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Pokémon GO Max Attackers Tier List (September 2026)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
+      "accessedAt": "2026-09-02",
+      "publishedAt": "2026-08-27",
+      "sourceSummaryZhTw": "2026-09 Max 攻擊手榜用於校正 Gen2 已推出 Max 型態的攻擊價值；各物種依 tier 與實際角色分級，不因已推出就一律 KEEP。",
+      "supports": [
+        "196-johto-dynamax",
+        "197-johto-dynamax"
+      ]
+    },
+    {
+      "id": "MAX-HEALERS-GEN2-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Pokémon GO Max Healers Tier List (September 2026)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-healers-tier-list-june-2025/",
+      "accessedAt": "2026-09-02",
+      "publishedAt": "2026-08-27",
+      "sourceSummaryZhTw": "2026-09 Max 治療手榜用於校正 Gen2 已推出 Max 型態的治療／輔助價值；依物種 tier 分級，不因已推出就一律 KEEP。",
+      "supports": [
+        "197-johto-dynamax"
       ]
     }
   ],

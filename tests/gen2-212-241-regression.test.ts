@@ -3,7 +3,7 @@ import { describe, expect, it } from "vitest";
 import { getDashboardRows, getSources } from "@/lib/data";
 import { buildFamilyOverviews } from "@/presentation/family-overview";
 import { buildFormOverviews } from "@/presentation/form-overview";
-import { evolutionPairs212241, forms212241, species212241 } from "@/data/batch-212-241";
+import { evolutionPairs212241, forms212241, releasedDynamaxForms212241, species212241 } from "@/data/batch-212-241";
 
 const batchImportSource = readFileSync(
   new URL("../scripts/data/import-212-241.ts", import.meta.url),
@@ -126,6 +126,9 @@ describe("Gen2 #212-#241 JOHTO integration", () => {
   });
 
   it("keeps future evolution stubs and released Mega or Max variants distinct", () => {
+    expect(releasedDynamaxForms212241).toEqual(
+      new Set(["213-johto", "215-johto", "237-johto"]),
+    );
     for (const [formId, targetId] of [
       ["215-johto", "461-sinnoh"],
       ["217-johto", "901-hisui"],

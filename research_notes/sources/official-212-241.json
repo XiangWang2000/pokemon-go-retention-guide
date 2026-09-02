@@ -1,6 +1,6 @@
 {
   "batch": "212-241",
-  "checkedAt": "2026-08-08",
+  "checkedAt": "2026-09-02",
   "sources": [
     {
       "id": "OFF-JOHTO-TOUR-2022",
@@ -114,6 +114,51 @@
         "213-johto-normal",
         "213-johto-dynamax",
         "237-johto-normal",
+        "237-johto-dynamax"
+      ]
+    },
+    {
+      "id": "MAX-GEN2-SNEASEL-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Dynamax Sneasel: Best Moveset, Counters & Max CP",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/215-Dynamax",
+      "accessedAt": "2026-09-02",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "確認極巨狃拉已推出；冰系 Max 攻擊目前為 C Tier，惡系較低，保留應以少量實際 Max 候選為主。",
+      "supports": [
+        "215-johto-dynamax"
+      ]
+    },
+    {
+      "id": "PVE-SKARMORY-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Skarmory: Best Moveset, Counters & Max CP",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/227",
+      "accessedAt": "2026-09-02",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "普通盔甲鳥目前鋼系與飛行系團戰皆為 F Tier；Mega 價值必須與普通版分開。",
+      "supports": [
+        "227-johto-normal",
+        "227-johto-shadow"
+      ]
+    },
+    {
+      "id": "MAX-ATTACKERS-GEN2-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Pokémon GO Max Attackers Tier List (September 2026)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
+      "accessedAt": "2026-09-02",
+      "publishedAt": "2026-08-27",
+      "sourceSummaryZhTw": "2026-09 Max 攻擊手榜用於校正 Gen2 已推出 Max 型態的攻擊價值；各物種依 tier 與實際角色分級，不因已推出就一律 KEEP。",
+      "supports": [
+        "213-johto-dynamax",
+        "215-johto-dynamax",
         "237-johto-dynamax"
       ]
     }

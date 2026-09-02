@@ -1,6 +1,6 @@
 {
   "batch": "242-251",
-  "checkedAt": "2026-08-08",
+  "checkedAt": "2026-09-02",
   "sources": [
     {
       "id": "OFF-JOHTO-TOUR-2022",
@@ -101,6 +101,119 @@
         "249-johto-normal",
         "249-johto-dynamax",
         "250-johto-normal",
+        "250-johto-dynamax"
+      ]
+    },
+    {
+      "id": "PVE-BLISSEY-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Blissey",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/battledex/blissey/",
+      "accessedAt": "2026-09-02",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "幸福蛋是極強道館防守者，但不是團體戰攻擊手；其一般 PvE 與道館用途必須分開。",
+      "supports": [
+        "242-johto-normal"
+      ]
+    },
+    {
+      "id": "PVE-SHADOW-RAIKOU-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Raikou: Best Moveset, Counters & Max CP",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/243-Shadow",
+      "accessedAt": "2026-09-02",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "暗影雷公目前為 S Tier 電系團戰攻擊手，明確屬高價值暗影 PvE 目標。",
+      "supports": [
+        "243-johto-shadow"
+      ]
+    },
+    {
+      "id": "PVE-SHADOW-ENTEI-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Shadow Entei: Best Moveset, Counters & Max CP",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/244-Shadow",
+      "accessedAt": "2026-09-02",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "暗影炎帝目前火系約 A+ Tier，但整體團戰價值有更強替代；適合少量保留而非核心大量投資。",
+      "supports": [
+        "244-johto-shadow"
+      ]
+    },
+    {
+      "id": "PVE-SUICUNE-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Suicune: Best Moveset, Counters & Max CP",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/245",
+      "accessedAt": "2026-09-02",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "普通水君目前水系團戰約 F Tier；其保留價值主要應由 PvP 或 Max 等其他用途決定。",
+      "supports": [
+        "245-johto-normal"
+      ]
+    },
+    {
+      "id": "MAX-ATTACKERS-GEN2-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Pokémon GO Max Attackers Tier List (September 2026)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
+      "accessedAt": "2026-09-02",
+      "publishedAt": "2026-08-27",
+      "sourceSummaryZhTw": "2026-09 Max 攻擊手榜用於校正 Gen2 已推出 Max 型態的攻擊價值；各物種依 tier 與實際角色分級，不因已推出就一律 KEEP。",
+      "supports": [
+        "242-johto-dynamax",
+        "243-johto-dynamax",
+        "244-johto-dynamax",
+        "245-johto-dynamax",
+        "249-johto-dynamax",
+        "250-johto-dynamax"
+      ]
+    },
+    {
+      "id": "MAX-DEFENDERS-GEN2-242251-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Pokémon GO Max Defenders Tier List (September 2026)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+      "accessedAt": "2026-09-02",
+      "publishedAt": "2026-08-27",
+      "sourceSummaryZhTw": "校正 Gen2 已推出極巨型態的充能／防守角色；水君為 B Tier、幸福蛋為 C Tier，部分傳說則不適合充能防守。",
+      "supports": [
+        "242-johto-dynamax",
+        "243-johto-dynamax",
+        "244-johto-dynamax",
+        "245-johto-dynamax",
+        "249-johto-dynamax",
+        "250-johto-dynamax"
+      ]
+    },
+    {
+      "id": "MAX-HEALERS-GEN2-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Pokémon GO Max Healers Tier List (September 2026)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-healers-tier-list-june-2025/",
+      "accessedAt": "2026-09-02",
+      "publishedAt": "2026-08-27",
+      "sourceSummaryZhTw": "2026-09 Max 治療手榜用於校正 Gen2 已推出 Max 型態的治療／輔助價值；依物種 tier 分級，不因已推出就一律 KEEP。",
+      "supports": [
+        "242-johto-dynamax",
+        "243-johto-dynamax",
+        "244-johto-dynamax",
+        "245-johto-dynamax",
+        "249-johto-dynamax",
         "250-johto-dynamax"
       ]
     }

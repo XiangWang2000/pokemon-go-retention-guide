@@ -1,10 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
-import { evolutionPairs182211, forms182211, species182211 } from "@/data/batch-182-211";
+import { evolutionPairs182211, forms182211, releasedDynamaxForms182211, species182211 } from "@/data/batch-182-211";
 
 const dashboard = JSON.parse(readFileSync("site-data/dashboard.json", "utf8")) as Array<{
   id: string;
   evolutionFamilyNotesZhTw: string;
+  releaseStatus: string;
   releaseVerifiedAt: string | null;
 }>;
 const sources = JSON.parse(readFileSync("site-data/sources.json", "utf8")) as Array<{
@@ -14,6 +15,10 @@ const sources = JSON.parse(readFileSync("site-data/sources.json", "utf8")) as Ar
 }>;
 
 describe("Gen 2 #182-211 data integration", () => {
+  it("configures current Dynamax Espeon and Umbreon variants as released", () => {
+    expect(releasedDynamaxForms182211).toEqual(new Set(["196-johto", "197-johto"]));
+  });
+
   it("uses JOHTO forms and removes the migrated Kanto stub IDs", () => {
     expect(species182211).toHaveLength(30);
     expect(forms182211.filter((form) => form.formKey === "JOHTO")).toHaveLength(30);

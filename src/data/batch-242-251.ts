@@ -290,13 +290,13 @@ export const specialVariants242251: SpecialVariant242251[] = [
   },
 ];
 export const pveUseLevels242251: Record<string, PveUseLevel> = {
-  "242-johto": "SPECIAL_USE",
-  "243-johto": "CORE_INVESTMENT",
-  "244-johto": "CORE_INVESTMENT",
-  "245-johto": "SPECIAL_USE",
+  "242-johto": "NO_SIGNIFICANT_USE",
+  "243-johto": "USABLE_OR_BUDGET",
+  "244-johto": "USABLE_OR_BUDGET",
+  "245-johto": "NO_SIGNIFICANT_USE",
   "248-johto": "CORE_INVESTMENT",
   "249-johto": "SPECIAL_USE",
-  "250-johto": "CORE_INVESTMENT",
+  "250-johto": "SPECIAL_USE",
 };
 export const truncatedForms242251 = new Set<string>();
 export const migratedStubIds242251 = new Set<string>(["242-kanto"]);
