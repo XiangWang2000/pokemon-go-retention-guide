@@ -1014,16 +1014,16 @@ export async function runImport(batchName: string) {
           provenance = variant.released ? "SOURCE_VERIFIED" : "MANUAL_CURATED";
           materialToDecision = variant.released;
         } else if (variant.variantKey === "NORMAL" && hasReleasedMax) {
-          status = "PARTIALLY_VERIFIED";
+          status = "VERIFIED";
           provenance = "SOURCE_VERIFIED";
-          materialToDecision = true;
+          materialToDecision = false;
         }
         summaryZhTw = maxVariant
           ? variant.released
             ? "此 Max 版本已推出；與普通／暗影版本分開保留。"
             : "此 Max 版本尚未推出。"
           : hasReleasedMax
-            ? "此普通型態是已推出 Max 的基底；不把 Max 用途回推成全家族必留。"
+            ? "同物種已有 Max 版本，但普通個體不能轉成 Max；不因此產生普通版保留理由。"
             : isPrimalFormId(variant.form.id)
               ? "普通、暗影或原始回歸個體不等於極巨／超極巨個體。"
               : "普通、暗影或 Mega 個體不等於極巨／超極巨個體。";
