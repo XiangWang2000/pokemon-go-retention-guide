@@ -20,6 +20,15 @@ if (registryScope !== CURRENT_DATA_SCOPE) {
 }
 
 const recalibrationBase = `review/${registryScope}-recalibration`;
+const preRecomputeMaxDex = BATCH_REGISTRY.filter(
+  (entry) => entry.import.phase === "pre-recompute",
+).at(-1)?.maxDex;
+if (preRecomputeMaxDex === undefined) {
+  throw new Error("The published batch registry must contain a pre-recompute phase.");
+}
+const preRecomputeScope = `${scopeNumber(registryMinDex)}-${scopeNumber(preRecomputeMaxDex)}`;
+const preRecomputeRecalibrationBase =
+  `review/history/${preRecomputeScope}-recalibration`;
 
 export const CURRENT_RELEASE_CONTRACT = {
   scope: registryScope,
@@ -44,6 +53,8 @@ export const CURRENT_RELEASE_CONTRACT = {
     batchMarkdownPaths: BATCH_REGISTRY.map((entry) => entry.review.markdownPath),
     recalibrationJsonPath: `${recalibrationBase}.json`,
     recalibrationMarkdownPath: `${recalibrationBase}.md`,
+    preRecomputeRecalibrationJsonPath: `${preRecomputeRecalibrationBase}.json`,
+    preRecomputeRecalibrationMarkdownPath: `${preRecomputeRecalibrationBase}.md`,
   },
 } as const;
 
@@ -74,5 +85,9 @@ export function isExpectedReleaseGeneratedPath(filePath: string) {
     return true;
   }
   if (normalized === CURRENT_RELEASE_CONTRACT.snapshot.exportPath) return true;
-  return expectedReleaseReviewPaths().has(normalized);
+  if (expectedReleaseReviewPaths().has(normalized)) return true;
+  return (
+    normalized === CURRENT_RELEASE_CONTRACT.review.preRecomputeRecalibrationJsonPath ||
+    normalized === CURRENT_RELEASE_CONTRACT.review.preRecomputeRecalibrationMarkdownPath
+  );
 }
