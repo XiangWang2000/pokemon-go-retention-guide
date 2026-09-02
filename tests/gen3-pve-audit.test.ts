@@ -36,12 +36,14 @@ describe("Gen3 PvE audit", () => {
     expect(pveVariantUseLevels282311["282-hoenn-mega"]).toBe("CORE_INVESTMENT");
 
     expect(pveUseLevels312341["330-hoenn"]).toBeUndefined();
+    expect(pveVariantUseLevels312341["319-hoenn-mega"]).toBe("SPECIAL_USE");
     expect(pveVariantUseLevels312341["330-hoenn-shadow"]).toBe("USABLE_OR_BUDGET");
 
     expect(pveUseLevels342371["359-hoenn"]).toBe("USABLE_OR_BUDGET");
     expect(pveVariantUseLevels342371["359-hoenn-mega"]).toBe("CORE_INVESTMENT");
 
     expect(pveUseLevels372386["376-hoenn"]).toBe("USABLE_OR_BUDGET");
+    expect(pveUseLevels372386["381-hoenn"]).toBe("USABLE_OR_BUDGET");
     expect(pveVariantUseLevels372386["376-hoenn-shadow"]).toBe("CORE_INVESTMENT");
     expect(pveVariantUseLevels372386["376-hoenn-mega"]).toBe("CORE_INVESTMENT");
 
