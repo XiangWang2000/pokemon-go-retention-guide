@@ -477,7 +477,6 @@ export const pveClassifications372386: Record<string, PveUseLevel> = {
   "379-hoenn": "NO_SIGNIFICANT_USE",
   "380-hoenn": "NO_SIGNIFICANT_USE",
   "381-hoenn": "USABLE_OR_BUDGET",
-  "381-hoenn": "USABLE_OR_BUDGET",
   "382-hoenn": "USABLE_OR_BUDGET",
   "383-hoenn": "CORE_INVESTMENT",
   "384-hoenn": "CORE_INVESTMENT",
@@ -490,6 +489,7 @@ export const pveClassifications372386: Record<string, PveUseLevel> = {
 export const pveUseLevels372386: Record<string, PveUseLevel> = {
   "373-hoenn": "CORE_INVESTMENT",
   "376-hoenn": "USABLE_OR_BUDGET",
+  "381-hoenn": "USABLE_OR_BUDGET",
   "382-hoenn": "USABLE_OR_BUDGET",
   "383-hoenn": "CORE_INVESTMENT",
   "384-hoenn": "CORE_INVESTMENT",
