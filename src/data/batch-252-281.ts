@@ -711,10 +711,17 @@ export const specialVariants252281: Gen3SpecialVariant[] = [
   },
 ];
 export const pveUseLevels252281: Record<string, PveUseLevel> = {
-  "254-hoenn": "CORE_INVESTMENT",
+  "254-hoenn": "SPECIAL_USE",
   "257-hoenn": "CORE_INVESTMENT",
-  "260-hoenn": "CORE_INVESTMENT",
-  "272-hoenn": "SPECIAL_USE",
+};
+export const pveVariantUseLevels252281: Record<string, PveUseLevel> = {
+  "254-hoenn-shadow": "USABLE_OR_BUDGET",
+  "254-hoenn-mega": "CORE_INVESTMENT",
+  "257-hoenn-shadow": "CORE_INVESTMENT",
+  "257-hoenn-mega": "CORE_INVESTMENT",
+  "260-hoenn-shadow": "USABLE_OR_BUDGET",
+  "260-hoenn-mega": "CORE_INVESTMENT",
+  "275-hoenn-shadow": "SPECIAL_USE",
 };
 export const maxUseLevels252281: Record<string, PveUseLevel> = {
   "280-hoenn": "USABLE_OR_BUDGET",
