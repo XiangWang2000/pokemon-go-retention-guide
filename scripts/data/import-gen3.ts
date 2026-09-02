@@ -166,7 +166,7 @@ type BatchDefinition = {
   shadowUnavailableFormIds: ReadonlySet<string>;
 };
 
-const checkedAt = new Date("2026-08-09T00:00:00+08:00");
+const checkedAt = new Date("2026-09-03T00:00:00+08:00");
 const pvpokeCheckedAt = new Date("2026-09-01T00:00:00+08:00");
 const pvpokeSnapshotRoot = "data/sources/pvpoke/2026-09-01";
 const pvpokeCommit = "7b96d91fb553780653190ad32de001b5d9086a7f";
@@ -1147,9 +1147,16 @@ export async function runImport(batchName: string) {
             : isPrimalFormId(variant.form.id)
               ? "此版本沒有獨立原始回歸型態用途。"
               : "此版本沒有獨立 Mega 型態用途。",
-      maxBattleSummaryZhTw: isPrimalFormId(variant.form.id)
-        ? "Max 用途與普通、暗影、原始回歸分開評估；尚未發布版本不替代現有個體。"
-        : "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
+      maxBattleSummaryZhTw:
+        variant.variantKey === "DYNAMAX" && variant.released
+          ? batch.maxUseLevels[variant.form.id] === "CORE_INVESTMENT"
+            ? "此 Dynamax 版本具高價值 Max 攻擊、防守或充能角色，屬優先投入候選。"
+            : batch.maxUseLevels[variant.form.id] === "USABLE_OR_BUDGET"
+              ? "此 Dynamax 版本有明確 Max 用途，但不需要大量囤積；留少量高品質候選。"
+              : "此 Dynamax 版本已推出但角色偏窄；只留特殊用途或收藏級候選。"
+          : isPrimalFormId(variant.form.id)
+            ? "Max 用途與普通、暗影、原始回歸分開評估；尚未發布版本不替代現有個體。"
+            : "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
       evolutionSummaryZhTw: hasEvolution
         ? "本批進化關係已結構化；前階是否保留由後續目標用途決定。"
         : "單純存在家族關係不會自動產生大量保留理由。",
