@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   evolutionPairs152181,
   forms152181,
+  releasedDynamaxForms152181,
   releasedMegaForms152181,
   releasedShadowForms152181,
   specialVariants152181,
@@ -43,6 +44,7 @@ describe("#152-181 batch source model", () => {
 
   it("keeps released battle variants scoped to known Pokemon GO availability", () => {
     expect(releasedMegaForms152181).toEqual(new Set(["181-johto"]));
+    expect(releasedDynamaxForms152181).toEqual(new Set(["163-johto", "164-johto"]));
     expect(releasedShadowForms152181).toEqual(
       new Set([
         "152-johto",
