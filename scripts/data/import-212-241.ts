@@ -102,6 +102,11 @@ runLegacyBatchImport({
       maxSummaryZhTw:
         "極巨壺壺已推出，但目前岩石 Max 攻擊僅 F Tier，且不屬主流充能防守手；收藏或特殊需求留少量即可。",
     },
+    "215-johto-normal": {
+      categorySourceIds: {
+        MAX_BATTLE: ["MAX-GEN2-SNEASEL-20260902"],
+      },
+    },
     "215-johto-dynamax": {
       maxUseLevel: "USABLE_OR_BUDGET",
       maxSummaryZhTw:
