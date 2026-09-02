@@ -95,10 +95,20 @@ runLegacyBatchImport({
   pveUseLevels: pveUseLevels182211,
   dynamaxDefaultDecision: "CONDITIONAL_KEEP",
   variantUseOverrides: {
+    "196-johto-normal": {
+      categorySourceIds: {
+        MAX_BATTLE: ["MAX-GEN2-ESPEON-20260902"],
+      },
+    },
     "196-johto-dynamax": {
       maxUseLevel: "USABLE_OR_BUDGET",
       maxSummaryZhTw:
         "極巨太陽伊布已推出；Psychic Max 攻擊為 S Tier、目前約同屬性 #3，但整體 Max 投資仍只需少量高品質候選。",
+    },
+    "197-johto-normal": {
+      categorySourceIds: {
+        MAX_BATTLE: ["MAX-GEN2-UMBREON-20260902"],
+      },
     },
     "197-johto-dynamax": {
       maxUseLevel: "SPECIAL_USE",
