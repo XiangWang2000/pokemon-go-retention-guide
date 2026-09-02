@@ -14,6 +14,15 @@ const sources = JSON.parse(readFileSync("site-data/sources.json", "utf8")) as Ar
 }>;
 
 describe("Gen 2 #182-211 data integration", () => {
+  it("publishes current Dynamax Espeon and Umbreon variants", () => {
+    expect(dashboard.find((row) => row.id === "196-johto-dynamax")).toMatchObject({
+      releaseVerifiedAt: expect.any(String),
+    });
+    expect(dashboard.find((row) => row.id === "197-johto-dynamax")).toMatchObject({
+      releaseVerifiedAt: expect.any(String),
+    });
+  });
+
   it("uses JOHTO forms and removes the migrated Kanto stub IDs", () => {
     expect(species182211).toHaveLength(30);
     expect(forms182211.filter((form) => form.formKey === "JOHTO")).toHaveLength(30);
