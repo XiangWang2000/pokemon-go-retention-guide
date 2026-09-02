@@ -27,18 +27,18 @@
   "releaseStatus": "RELEASED",
   "releaseVerifiedAt": "2026-08-03T08:30:00.000Z",
   "notesZhTw": "Mega 是戰鬥型態；只把對應關都型態列為 Mega 候選，不回推全家族必留。",
-  "decision": "KEEP",
-  "assessmentDisposition": "CLEAR_USE",
+  "decision": "CONDITIONAL_KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "DATA_UNAVAILABLE",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
+  "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
   "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-  "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+  "pveSummaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
@@ -439,7 +439,7 @@
       "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
+  "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
   "evaluationId": "r12-eval-094-kanto-mega",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -467,7 +467,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-03T08:30:00.000Z",
       "sources": []
     },
@@ -486,7 +486,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-03T08:30:00.000Z",
       "sources": []
     },
@@ -505,7 +505,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-03T08:30:00.000Z",
       "sources": []
     },
@@ -524,7 +524,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-03T08:30:00.000Z",
       "sources": [
         {
@@ -539,7 +539,7 @@
       "category": "PVE",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+      "summaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -549,8 +549,8 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "CORE_INVESTMENT",
-      "assessmentDisposition": "CLEAR_USE",
+      "pveUseLevel": "SPECIAL_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-03T08:30:00.000Z",
       "sources": [
         {
@@ -576,7 +576,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-03T08:30:00.000Z",
       "sources": []
     },
@@ -595,7 +595,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-03T08:30:00.000Z",
       "sources": []
     }
@@ -614,11 +614,11 @@
   ],
   "traces": [
     {
-      "ruleKey": "MAJOR_BATTLE_VALUE",
-      "priority": 900,
+      "ruleKey": "CONDITIONAL_USE",
+      "priority": 700,
       "matched": true,
-      "resultDecision": "KEEP",
-      "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
+      "resultDecision": "CONDITIONAL_KEEP",
+      "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
     }
   ],
   "moves": []

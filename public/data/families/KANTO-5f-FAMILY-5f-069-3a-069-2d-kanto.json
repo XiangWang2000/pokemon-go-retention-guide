@@ -92,17 +92,17 @@
               "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
               "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
               "decision": "CONDITIONAL_KEEP",
-              "assessmentDisposition": "CLEAR_USE",
+              "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
+              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-              "pveSummaryZhTw": "核心投資。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+              "pveSummaryZhTw": "特殊用途。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -140,7 +140,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -159,7 +159,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -178,7 +178,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -197,7 +197,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -205,7 +205,7 @@
                   "category": "PVE",
                   "status": "DATA_UNAVAILABLE",
                   "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "核心投資。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+                  "summaryZhTw": "特殊用途。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -215,8 +215,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "CORE_INVESTMENT",
-                  "assessmentDisposition": "CLEAR_USE",
+                  "pveUseLevel": "SPECIAL_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -235,7 +235,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -254,7 +254,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 }
@@ -999,9 +999,9 @@
           "tone": "NONE"
         },
         "pve": {
-          "label": "核心投資",
+          "label": "特殊用途",
           "detail": "後續世代進化：大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-          "tone": "HIGH"
+          "tone": "SPECIAL"
         },
         "gym": {
           "label": "—",
@@ -1191,17 +1191,17 @@
               "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
               "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
               "decision": "CONDITIONAL_KEEP",
-              "assessmentDisposition": "CLEAR_USE",
+              "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
+              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #707；招式 ACID／POWER_WHIP／SEED_BOMB",
-              "pveSummaryZhTw": "核心投資。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #711；招式 ACID／POWER_WHIP／SEED_BOMB",
+              "pveSummaryZhTw": "特殊用途。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -1239,7 +1239,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -1258,7 +1258,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -1277,7 +1277,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -1296,7 +1296,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -1304,7 +1304,7 @@
                   "category": "PVE",
                   "status": "DATA_UNAVAILABLE",
                   "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "核心投資。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
+                  "summaryZhTw": "特殊用途。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1314,8 +1314,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "CORE_INVESTMENT",
-                  "assessmentDisposition": "CLEAR_USE",
+                  "pveUseLevel": "SPECIAL_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -1323,7 +1323,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #707；招式 ACID／POWER_WHIP／SEED_BOMB",
+                  "summaryZhTw": "GL（超級聯盟） Overall #711；招式 ACID／POWER_WHIP／SEED_BOMB",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1334,7 +1334,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -1353,7 +1353,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 }
@@ -1369,7 +1369,7 @@
                   "speciesKey": "weepinbell",
                   "formKey": "070-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 707,
+                  "rank": 711,
                   "rating": "551",
                   "score": null,
                   "tier": null,
@@ -1379,27 +1379,27 @@
                     "SEED_BOMB"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -1478,7 +1478,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #977；招式 ACID／POWER_WHIP／SLUDGE_BOMB",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #661；招式 ACID／POWER_WHIP／SEED_BOMB",
               "pveSummaryZhTw": "無顯著用途。大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -1601,7 +1601,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #977；招式 ACID／POWER_WHIP／SLUDGE_BOMB",
+                  "summaryZhTw": "GL（超級聯盟） Overall #661；招式 ACID／POWER_WHIP／SEED_BOMB",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1647,37 +1647,37 @@
                   "speciesKey": "weepinbell_shadow",
                   "formKey": "070-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 977,
-                  "rating": "394",
+                  "rank": 661,
+                  "rating": "538",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
                     "ACID",
                     "POWER_WHIP",
-                    "SLUDGE_BOMB"
+                    "SEED_BOMB"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -2185,9 +2185,9 @@
           "tone": "LOW"
         },
         "pve": {
-          "label": "核心投資",
+          "label": "特殊用途",
           "detail": "後續世代進化：大食花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
-          "tone": "HIGH"
+          "tone": "SPECIAL"
         },
         "gym": {
           "label": "—",
@@ -2356,7 +2356,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #292；招式 ACID／LEAF_BLADE／SLUDGE_BOMB；UL（高級聯盟） Overall #202；招式 ACID／LEAF_BLADE／SLUDGE_BOMB",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #293；招式 ACID／LEAF_BLADE／SLUDGE_BOMB；UL（高級聯盟） Overall #198；招式 ACID／LEAF_BLADE／SLUDGE_BOMB",
               "pveSummaryZhTw": "無顯著用途。Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -2479,7 +2479,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #292；招式 ACID／LEAF_BLADE／SLUDGE_BOMB；UL（高級聯盟） Overall #202；招式 ACID／LEAF_BLADE／SLUDGE_BOMB",
+                  "summaryZhTw": "GL（超級聯盟） Overall #293；招式 ACID／LEAF_BLADE／SLUDGE_BOMB；UL（高級聯盟） Overall #198；招式 ACID／LEAF_BLADE／SLUDGE_BOMB",
                   "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -2525,7 +2525,7 @@
                   "speciesKey": "victreebel",
                   "formKey": "071-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 292,
+                  "rank": 293,
                   "rating": "644",
                   "score": null,
                   "tier": null,
@@ -2535,16 +2535,16 @@
                     "SLUDGE_BOMB"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -2557,7 +2557,7 @@
                   "speciesKey": "victreebel",
                   "formKey": "071-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 202,
+                  "rank": 198,
                   "rating": "628",
                   "score": null,
                   "tier": null,
@@ -2567,36 +2567,36 @@
                     "SLUDGE_BOMB"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -2695,7 +2695,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #259；招式 ACID／LEAF_BLADE／SLUDGE_BOMB；UL（高級聯盟） Overall #193；招式 ACID／LEAF_BLADE／SLUDGE_BOMB",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #260；招式 ACID／LEAF_BLADE／SLUDGE_BOMB；UL（高級聯盟） Overall #189；招式 ACID／LEAF_BLADE／SLUDGE_BOMB",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -2818,7 +2818,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #259；招式 ACID／LEAF_BLADE／SLUDGE_BOMB；UL（高級聯盟） Overall #193；招式 ACID／LEAF_BLADE／SLUDGE_BOMB",
+                  "summaryZhTw": "GL（超級聯盟） Overall #260；招式 ACID／LEAF_BLADE／SLUDGE_BOMB；UL（高級聯盟） Overall #189；招式 ACID／LEAF_BLADE／SLUDGE_BOMB",
                   "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -2864,7 +2864,7 @@
                   "speciesKey": "victreebel_shadow",
                   "formKey": "071-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 259,
+                  "rank": 260,
                   "rating": "643",
                   "score": null,
                   "tier": null,
@@ -2874,16 +2874,16 @@
                     "SLUDGE_BOMB"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -2896,8 +2896,8 @@
                   "speciesKey": "victreebel_shadow",
                   "formKey": "071-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 193,
-                  "rating": "641",
+                  "rank": 189,
+                  "rating": "642",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -2906,36 +2906,36 @@
                     "SLUDGE_BOMB"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -3242,18 +3242,18 @@
               "releaseStatus": "RELEASED",
               "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
               "notesZhTw": "Mega 是戰鬥型態；只把對應關都型態列為 Mega 候選，不回推全家族必留。",
-              "decision": "KEEP",
-              "assessmentDisposition": "CLEAR_USE",
+              "decision": "CONDITIONAL_KEEP",
+              "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
+              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-              "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+              "pveSummaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -3263,7 +3263,7 @@
               "requiredMovesSummaryZhTw": "沒有招式足以把此低用途版本自動升格為必留。",
               "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
               "ivRecommendations": [],
-              "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
+              "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
               "evaluationId": "r10-eval-071-kanto-mega",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -3291,7 +3291,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3310,7 +3310,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3329,7 +3329,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3348,7 +3348,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3356,7 +3356,7 @@
                   "category": "PVE",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+                  "summaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估",
                   "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -3366,8 +3366,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "CORE_INVESTMENT",
-                  "assessmentDisposition": "CLEAR_USE",
+                  "pveUseLevel": "SPECIAL_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3386,7 +3386,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3405,7 +3405,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "CLEAR_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 }
@@ -3424,11 +3424,11 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "MAJOR_BATTLE_VALUE",
-                  "priority": 900,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
-                  "resultDecision": "KEEP",
-                  "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
+                  "resultDecision": "CONDITIONAL_KEEP",
+                  "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
                 }
               ],
               "moves": []
@@ -3717,20 +3717,20 @@
           "tone": "MEDIUM"
         },
         "pve": {
-          "label": "核心投資",
-          "detail": "Mega／Primal：本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
-          "tone": "HIGH"
+          "label": "特殊用途",
+          "detail": "Mega／Primal：Mega／Primal 用途需與普通／暗影版本分開評估",
+          "tone": "SPECIAL"
         },
         "gym": {
           "label": "—",
           "tone": "NONE"
         },
         "megaMax": {
-          "label": "Mega／Primal：高",
-          "tone": "HIGH"
+          "label": "Mega／Primal：限定用途",
+          "tone": "SPECIAL"
         },
         "decision": "CONDITIONAL_KEEP",
-        "decisionReason": "普通重複個體通常可傳送；Mega候選先看招式與既有投入，15攻優先，14攻高整體IV亦可留。",
+        "decisionReason": "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。",
         "ivRecommendations": [
           {
             "id": "iv-global-ultra-league",
@@ -3911,18 +3911,18 @@
     "tone": "MEDIUM"
   },
   "pve": {
-    "label": "核心投資",
+    "label": "特殊用途",
     "detail": "Mega 大食花為主要投資目標",
-    "tone": "HIGH"
+    "tone": "SPECIAL"
   },
   "gym": {
     "label": "未列為主要保留理由",
     "tone": "NONE"
   },
   "megaMax": {
-    "label": "Mega／Primal：高",
+    "label": "Mega／Primal：限定用途",
     "detail": "大食花適用；前階可進化為候選",
-    "tone": "HIGH"
+    "tone": "SPECIAL"
   },
   "familyValue": "HIGH",
   "retentionStrategy": "KEEP_TARGETS",

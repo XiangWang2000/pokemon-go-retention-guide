@@ -111,7 +111,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #531；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #525；招式 VOLT_SWITCH／DISCHARGE／MAGNET_BOMB",
               "pveSummaryZhTw": "可用／預算型。自爆磁怪：可進化為自爆磁怪，具電／鋼屬性戰鬥與部分 PvP 用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -234,7 +234,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #531；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE",
+                  "summaryZhTw": "GL（超級聯盟） Overall #525；招式 VOLT_SWITCH／DISCHARGE／MAGNET_BOMB",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -280,37 +280,37 @@
                   "speciesKey": "magnemite",
                   "formKey": "081-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 531,
+                  "rank": 525,
                   "rating": "598",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
                     "VOLT_SWITCH",
-                    "MAGNET_BOMB",
-                    "DISCHARGE"
+                    "DISCHARGE",
+                    "MAGNET_BOMB"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -399,7 +399,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #444；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #441；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE",
               "pveSummaryZhTw": "可用／預算型。自爆磁怪：可進化為自爆磁怪，具電／鋼屬性戰鬥與部分 PvP 用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -522,7 +522,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #444；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE",
+                  "summaryZhTw": "GL（超級聯盟） Overall #441；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -568,8 +568,8 @@
                   "speciesKey": "magnemite_shadow",
                   "formKey": "081-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 444,
-                  "rating": "600",
+                  "rank": 441,
+                  "rating": "601",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -578,27 +578,27 @@
                     "DISCHARGE"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -1317,7 +1317,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #459；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE；UL（高級聯盟） Overall #329；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #453；招式 VOLT_SWITCH／DISCHARGE／MAGNET_BOMB；UL（高級聯盟） Overall #322；招式 VOLT_SWITCH／DISCHARGE／MAGNET_BOMB",
               "pveSummaryZhTw": "可用／預算型。自爆磁怪：可進化為自爆磁怪；不要只因關都本體沒有後續圖鑑號碼而判為待補。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -1440,7 +1440,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #459；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE；UL（高級聯盟） Overall #329；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE",
+                  "summaryZhTw": "GL（超級聯盟） Overall #453；招式 VOLT_SWITCH／DISCHARGE／MAGNET_BOMB；UL（高級聯盟） Overall #322；招式 VOLT_SWITCH／DISCHARGE／MAGNET_BOMB",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1486,26 +1486,26 @@
                   "speciesKey": "magneton",
                   "formKey": "082-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 459,
+                  "rank": 453,
                   "rating": "608",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
                     "VOLT_SWITCH",
-                    "MAGNET_BOMB",
-                    "DISCHARGE"
+                    "DISCHARGE",
+                    "MAGNET_BOMB"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -1518,46 +1518,46 @@
                   "speciesKey": "magneton",
                   "formKey": "082-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 329,
-                  "rating": "592",
+                  "rank": 322,
+                  "rating": "594",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
                     "VOLT_SWITCH",
-                    "MAGNET_BOMB",
-                    "DISCHARGE"
+                    "DISCHARGE",
+                    "MAGNET_BOMB"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -1648,7 +1648,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #505；招式 THUNDER_SHOCK／DISCHARGE／MAGNET_BOMB；UL（高級聯盟） Overall #284；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #498；招式 THUNDER_SHOCK／DISCHARGE／MAGNET_BOMB；UL（高級聯盟） Overall #284；招式 THUNDER_SHOCK／DISCHARGE／MAGNET_BOMB",
               "pveSummaryZhTw": "可用／預算型。自爆磁怪：可進化為自爆磁怪；不要只因關都本體沒有後續圖鑑號碼而判為待補。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -1771,7 +1771,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #505；招式 THUNDER_SHOCK／DISCHARGE／MAGNET_BOMB；UL（高級聯盟） Overall #284；招式 VOLT_SWITCH／MAGNET_BOMB／DISCHARGE",
+                  "summaryZhTw": "GL（超級聯盟） Overall #498；招式 THUNDER_SHOCK／DISCHARGE／MAGNET_BOMB；UL（高級聯盟） Overall #284；招式 THUNDER_SHOCK／DISCHARGE／MAGNET_BOMB",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1817,8 +1817,8 @@
                   "speciesKey": "magneton_shadow",
                   "formKey": "082-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 505,
-                  "rating": "614",
+                  "rank": 498,
+                  "rating": "615",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -1827,16 +1827,16 @@
                     "MAGNET_BOMB"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -1850,45 +1850,45 @@
                   "formKey": "082-kanto",
                   "variantKey": "SHADOW",
                   "rank": 284,
-                  "rating": "610",
+                  "rating": "612",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
-                    "VOLT_SWITCH",
-                    "MAGNET_BOMB",
-                    "DISCHARGE"
+                    "THUNDER_SHOCK",
+                    "DISCHARGE",
+                    "MAGNET_BOMB"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T15:45:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],

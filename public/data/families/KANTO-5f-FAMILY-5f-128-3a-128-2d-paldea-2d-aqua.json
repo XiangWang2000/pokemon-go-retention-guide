@@ -75,7 +75,7 @@
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #497；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE；UL（高級聯盟） Overall #350；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE；ML（大師聯盟） Overall #258；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #499；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE；UL（高級聯盟） Overall #349；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE；ML（大師聯盟） Overall #259；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -198,7 +198,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #497；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE；UL（高級聯盟） Overall #350；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE；ML（大師聯盟） Overall #258；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE",
+                  "summaryZhTw": "GL（超級聯盟） Overall #499；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE；UL（高級聯盟） Overall #349；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE；ML（大師聯盟） Overall #259；招式 DOUBLE_KICK／AQUA_JET／TRAILBLAZE",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -244,8 +244,8 @@
                   "speciesKey": "tauros_aqua",
                   "formKey": "128-paldea-aqua",
                   "variantKey": "NORMAL",
-                  "rank": 497,
-                  "rating": "564",
+                  "rank": 499,
+                  "rating": "563",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -254,16 +254,16 @@
                     "TRAILBLAZE"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-03T10:30:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -276,8 +276,8 @@
                   "speciesKey": "tauros_aqua",
                   "formKey": "128-paldea-aqua",
                   "variantKey": "NORMAL",
-                  "rank": 258,
-                  "rating": "505",
+                  "rank": 259,
+                  "rating": "504",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -286,16 +286,16 @@
                     "TRAILBLAZE"
                   ],
                   "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-03T10:30:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ml-20260715",
+                    "id": "pvpoke-ml-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
                   }
                 },
                 {
@@ -308,8 +308,8 @@
                   "speciesKey": "tauros_aqua",
                   "formKey": "128-paldea-aqua",
                   "variantKey": "NORMAL",
-                  "rank": 350,
-                  "rating": "567",
+                  "rank": 349,
+                  "rating": "566",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -318,16 +318,16 @@
                     "TRAILBLAZE"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-03T10:30:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -342,30 +342,30 @@
                   "usageZhTw": "官方頁確認此精確型態／版本的推出、進化或取得邊界。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],

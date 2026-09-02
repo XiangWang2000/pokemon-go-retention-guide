@@ -10,8 +10,8 @@
     "battleVariants": 79,
     "families": 15,
     "strategyCounts": {
-      "KEEP_TARGETS": 7,
-      "SELECTIVE_KEEP": 4,
+      "KEEP_TARGETS": 10,
+      "SELECTIVE_KEEP": 1,
       "MOSTLY_TRANSFER": 4,
       "HOLD_FOR_NOW": 0
     },
@@ -82,37 +82,37 @@
     {
       "familyId": "HOENN_FAMILY_374:374-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留金屬怪（PvP（GL Rank≤100）），以及巨金怪（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留鐵啞鈴（極巨候選），以及金屬怪（PvP（GL Rank≤100）、極巨候選），以及巨金怪（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、極巨候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "HOENN_FAMILY_377:377-hoenn",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留雷吉洛克（PvP（UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留雷吉洛克（PvP（UL Rank≤100）、ML 高 IV 投資候選、極巨候選）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "HOENN_FAMILY_378:378-hoenn",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留雷吉艾斯（PvP（UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留雷吉艾斯（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、極巨候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "HOENN_FAMILY_379:379-hoenn",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留雷吉斯奇魯（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留雷吉斯奇魯（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、極巨候選）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "HOENN_FAMILY_380:380-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留拉帝亞斯（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、Mega 候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留拉帝亞斯（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、極巨候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "HOENN_FAMILY_381:381-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留拉帝歐斯（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、Mega 候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留拉帝歐斯（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、極巨候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {

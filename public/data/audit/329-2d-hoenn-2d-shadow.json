@@ -18,7 +18,7 @@
       "fromFormId": "329-hoenn",
       "toFormId": "330-hoenn",
       "requiresEvent": false,
-      "verifiedAt": "2026-08-08T16:00:00.000Z",
+      "verifiedAt": "2026-09-02T16:00:00.000Z",
       "isEvolutionStub": false,
       "targetUseLevel": null,
       "targetNameEn": "flygon",
@@ -40,7 +40,7 @@
   "variantKey": "SHADOW",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "暗影個體獨立評估；暗影標準較寬，不因低總 IV 自動淨化。",
   "decision": "CONDITIONAL_KEEP",
   "assessmentDisposition": "LIMITED_USE",
@@ -52,7 +52,7 @@
   "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #477；招式 DRAGON_BREATH／SAND_TOMB／BUG_BUZZ",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #478；招式 DRAGON_BREATH／SAND_TOMB／BUG_BUZZ",
   "pveSummaryZhTw": "可用／預算型。沙漠蜻蜓：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -483,7 +483,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "EVOLUTION-HOENN-20260809",
@@ -509,26 +509,26 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "MAX_BATTLE",
       "status": "NOT_APPLICABLE",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "普通、暗影或 Mega 個體不等於極巨／超極巨個體。",
+      "summaryZhTw": "同物種已有 Max 版本，但普通個體不能轉成 Max；不因此產生普通版保留理由。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
       "maxTypeTier": null,
       "maxTypeKey": null,
-      "maxOverallRating": null,
-      "maxInvestmentRating": null,
-      "maxUseCaseBreadth": null,
+      "maxOverallRating": "LOW",
+      "maxInvestmentRating": "LOW",
+      "maxUseCaseBreadth": "NARROW",
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -547,7 +547,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -566,14 +566,14 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "USABLE_OR_BUDGET",
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #477；招式 DRAGON_BREATH／SAND_TOMB／BUG_BUZZ",
+      "summaryZhTw": "GL（超級聯盟） Overall #478；招式 DRAGON_BREATH／SAND_TOMB／BUG_BUZZ",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -585,12 +585,12 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -611,7 +611,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "SECONDARY-SHADOW-HOENN-2026",
@@ -639,8 +639,8 @@
       "speciesKey": "vibrava_shadow",
       "formKey": "329-hoenn",
       "variantKey": "SHADOW",
-      "rank": 477,
-      "rating": "594",
+      "rank": 478,
+      "rating": "593",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -649,16 +649,16 @@
         "BUG_BUZZ"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     }
   ],
@@ -691,12 +691,12 @@
       "usageZhTw": "Shadow 可正常進化機制來源（derived/inherited closure）；由已發布 Shadow 起始物種沿正式 evolution path 推導，不代表來源 roster 直接列出。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],

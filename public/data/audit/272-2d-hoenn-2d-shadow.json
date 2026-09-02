@@ -25,20 +25,20 @@
   "variantKey": "SHADOW",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "暗影個體獨立評估；暗影標準較寬，不因低總 IV 自動淨化。",
-  "decision": "CONDITIONAL_KEEP",
-  "assessmentDisposition": "LIMITED_USE",
+  "decision": "TRANSFER_CANDIDATE",
+  "assessmentDisposition": "NO_SIGNIFICANT_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
-  "dataStatus": "PARTIALLY_VERIFIED",
+  "dataStatus": "DATA_UNAVAILABLE",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+  "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
   "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
-  "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
+  "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
@@ -46,7 +46,7 @@
   "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-  "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -439,7 +439,7 @@
       "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
+  "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
   "evaluationId": "gen3-252-281-eval-272-hoenn-shadow",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已核對第三世代家族、分支進化、特殊取得、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
@@ -467,8 +467,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "EVOLUTION-HOENN-20260809",
@@ -493,8 +493,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -512,8 +512,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -531,16 +531,16 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "PVE",
-      "status": "PARTIALLY_VERIFIED",
-      "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
-      "materialToDecision": true,
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
+      "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+      "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
@@ -549,17 +549,10 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "SPECIAL_USE",
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
-      "sources": [
-        {
-          "id": "PVE-HOENN-20260809",
-          "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-          "url": "https://db.pokemongohub.net/pokedex/hoenn",
-          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
-        }
-      ]
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "sources": []
     },
     {
       "category": "PVP",
@@ -576,8 +569,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -595,8 +588,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "NO_SIGNIFICANT_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "SECONDARY-SHADOW-HOENN-2026",
@@ -613,36 +606,7 @@
       ]
     }
   ],
-  "raw": [
-    {
-      "id": "raw-gen3-252-281-272-hoenn-shadow-pve",
-      "category": "PVE",
-      "status": "PARTIALLY_VERIFIED",
-      "league": "NOT_APPLICABLE",
-      "cup": null,
-      "pvpCategory": null,
-      "speciesKey": "ludicolo_shadow",
-      "formKey": "272-hoenn",
-      "variantKey": "SHADOW",
-      "rank": null,
-      "rating": "SPECIAL",
-      "score": null,
-      "tier": "SPECIAL",
-      "recommendedMoves": [],
-      "rawNotes": "PvE 用途依第三世代研究表區分四級用途；不虛構 IV 硬門檻。",
-      "seasonOrVersion": "GO Hub accessed 2026-08-09",
-      "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
-      "reproducible": false,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T16:00:00.000Z",
-      "source": {
-        "id": "PVE-HOENN-20260809",
-        "name": "GO Hub Hoenn PVE data",
-        "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-        "url": "https://db.pokemongohub.net/pokedex/hoenn"
-      }
-    }
-  ],
+  "raw": [],
   "sources": [
     {
       "id": "EVOLUTION-HOENN-20260809",
@@ -652,15 +616,6 @@
       "type": "SECONDARY",
       "accessedAt": "2026-08-08T16:00:00.000Z",
       "usageZhTw": "該物種實際 evolution path 來源（formal evolution edge）；只標示此 Shadow/Purified 目標可沿該正式路徑取得。"
-    },
-    {
-      "id": "PVE-HOENN-20260809",
-      "name": "GO Hub Hoenn PVE data",
-      "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-      "url": "https://db.pokemongohub.net/pokedex/hoenn",
-      "type": "PVE",
-      "accessedAt": "2026-08-08T16:00:00.000Z",
-      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
       "id": "SECONDARY-SHADOW-HOENN-2026",
@@ -683,11 +638,11 @@
   ],
   "traces": [
     {
-      "ruleKey": "CONDITIONAL_USE",
-      "priority": 700,
+      "ruleKey": "LOW_GENERAL_VALUE",
+      "priority": 100,
       "matched": true,
-      "resultDecision": "CONDITIONAL_KEEP",
-      "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
+      "resultDecision": "TRANSFER_CANDIDATE",
+      "explanationZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。"
     }
   ],
   "moves": []

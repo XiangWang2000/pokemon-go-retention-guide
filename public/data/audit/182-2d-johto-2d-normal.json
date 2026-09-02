@@ -36,13 +36,13 @@
   "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #224；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #197；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #229；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #190；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-  "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
+  "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估.",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "依固定快照優先核對：ACID／LEAF_BLADE／DAZZLING_GLEAM",
   "recommendedIvStrategyZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
@@ -557,7 +557,7 @@
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #224；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #197；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
+      "summaryZhTw": "GL（超級聯盟） Overall #229；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #190；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -572,15 +572,15 @@
       "checkedAt": "2026-08-27T16:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -616,8 +616,8 @@
       "speciesKey": "bellossom",
       "formKey": "182-johto",
       "variantKey": "NORMAL",
-      "rank": 224,
-      "rating": "615",
+      "rank": 229,
+      "rating": "616",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -626,16 +626,16 @@
         "DAZZLING_GLEAM"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-27T16:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     },
     {
@@ -648,8 +648,8 @@
       "speciesKey": "bellossom",
       "formKey": "182-johto",
       "variantKey": "NORMAL",
-      "rank": 197,
-      "rating": "599",
+      "rank": 190,
+      "rating": "600",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -658,16 +658,16 @@
         "DAZZLING_GLEAM"
       ],
       "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-27T16:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ul-20260715",
+        "id": "pvpoke-ul-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
       }
     }
   ],
@@ -682,21 +682,21 @@
       "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],

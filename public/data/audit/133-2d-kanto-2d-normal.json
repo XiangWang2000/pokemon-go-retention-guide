@@ -142,7 +142,7 @@
   "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #1083；招式 QUICK_ATTACK／BODY_SLAM／SWIFT",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #1003；招式 QUICK_ATTACK／BODY_SLAM／DIG",
   "pveSummaryZhTw": "特殊用途。後續伊布分支：可進化為多個後續世代分支；依目標分支與用途少量保留。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -656,7 +656,7 @@
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #1083；招式 QUICK_ATTACK／BODY_SLAM／SWIFT",
+      "summaryZhTw": "GL（超級聯盟） Overall #1003；招式 QUICK_ATTACK／BODY_SLAM／DIG",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -671,9 +671,9 @@
       "checkedAt": "2026-08-03T10:30:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -709,37 +709,37 @@
       "speciesKey": "eevee",
       "formKey": "133-kanto",
       "variantKey": "NORMAL",
-      "rank": 1083,
-      "rating": "385",
+      "rank": 1003,
+      "rating": "429",
       "score": null,
       "tier": null,
       "recommendedMoves": [
         "QUICK_ATTACK",
         "BODY_SLAM",
-        "SWIFT"
+        "DIG"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+      "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-03T10:30:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     }
   ],
   "sources": [
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與招式。"
     }
   ],

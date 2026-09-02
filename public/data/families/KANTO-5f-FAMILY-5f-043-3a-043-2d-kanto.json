@@ -111,7 +111,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #813；招式 ACID／SEED_BOMB／SLUDGE_BOMB",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #814；招式 ACID／SEED_BOMB／SLUDGE_BOMB",
               "pveSummaryZhTw": "無顯著用途。美麗花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -234,7 +234,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #813；招式 ACID／SEED_BOMB／SLUDGE_BOMB",
+                  "summaryZhTw": "GL（超級聯盟） Overall #814；招式 ACID／SEED_BOMB／SLUDGE_BOMB",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -280,7 +280,7 @@
                   "speciesKey": "oddish",
                   "formKey": "043-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 813,
+                  "rank": 814,
                   "rating": "514",
                   "score": null,
                   "tier": null,
@@ -290,27 +290,27 @@
                     "SLUDGE_BOMB"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T08:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -399,7 +399,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #793；招式 ACID／SEED_BOMB／SLUDGE_BOMB",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #790；招式 ACID／SEED_BOMB／SLUDGE_BOMB",
               "pveSummaryZhTw": "無顯著用途。美麗花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -522,7 +522,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #793；招式 ACID／SEED_BOMB／SLUDGE_BOMB",
+                  "summaryZhTw": "GL（超級聯盟） Overall #790；招式 ACID／SEED_BOMB／SLUDGE_BOMB",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -568,7 +568,7 @@
                   "speciesKey": "oddish_shadow",
                   "formKey": "043-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 793,
+                  "rank": 790,
                   "rating": "509",
                   "score": null,
                   "tier": null,
@@ -578,27 +578,27 @@
                     "SLUDGE_BOMB"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T08:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -1343,7 +1343,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #805；招式 ACID／SLUDGE_BOMB／MOONBLAST",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #801；招式 ACID／SLUDGE_BOMB／MOONBLAST",
               "pveSummaryZhTw": "無顯著用途。美麗花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -1466,7 +1466,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #805；招式 ACID／SLUDGE_BOMB／MOONBLAST",
+                  "summaryZhTw": "GL（超級聯盟） Overall #801；招式 ACID／SLUDGE_BOMB／MOONBLAST",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1512,8 +1512,8 @@
                   "speciesKey": "gloom",
                   "formKey": "044-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 805,
-                  "rating": "468",
+                  "rank": 801,
+                  "rating": "470",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -1522,27 +1522,27 @@
                     "MOONBLAST"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T08:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -1646,7 +1646,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #927；招式 ACID／SLUDGE_BOMB／MOONBLAST",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #923；招式 ACID／SLUDGE_BOMB／MOONBLAST",
               "pveSummaryZhTw": "無顯著用途。美麗花：後續進化版本已有可執行戰鬥用途；前階只留符合條件的進化候選。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -1769,7 +1769,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #927；招式 ACID／SLUDGE_BOMB／MOONBLAST",
+                  "summaryZhTw": "GL（超級聯盟） Overall #923；招式 ACID／SLUDGE_BOMB／MOONBLAST",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1815,8 +1815,8 @@
                   "speciesKey": "gloom_shadow",
                   "formKey": "044-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 927,
-                  "rating": "436",
+                  "rank": 923,
+                  "rating": "438",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -1825,27 +1825,27 @@
                     "MOONBLAST"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T08:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -2564,7 +2564,7 @@
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #910；招式 ACID／SLUDGE_BOMB／PETAL_BLIZZARD；UL（高級聯盟） Overall #567；招式 ACID／SLUDGE_BOMB／MOONBLAST",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #909；招式 ACID／SLUDGE_BOMB／PETAL_BLIZZARD；UL（高級聯盟） Overall #571；招式 ACID／SLUDGE_BOMB／PETAL_BLIZZARD",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -2687,7 +2687,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #910；招式 ACID／SLUDGE_BOMB／PETAL_BLIZZARD；UL（高級聯盟） Overall #567；招式 ACID／SLUDGE_BOMB／MOONBLAST",
+                  "summaryZhTw": "GL（超級聯盟） Overall #909；招式 ACID／SLUDGE_BOMB／PETAL_BLIZZARD；UL（高級聯盟） Overall #571；招式 ACID／SLUDGE_BOMB／PETAL_BLIZZARD",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -2733,8 +2733,8 @@
                   "speciesKey": "vileplume",
                   "formKey": "045-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 910,
-                  "rating": "438",
+                  "rank": 909,
+                  "rating": "440",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -2743,16 +2743,16 @@
                     "PETAL_BLIZZARD"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T08:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -2765,46 +2765,46 @@
                   "speciesKey": "vileplume",
                   "formKey": "045-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 567,
+                  "rank": 571,
                   "rating": "475",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
                     "ACID",
                     "SLUDGE_BOMB",
-                    "MOONBLAST"
+                    "PETAL_BLIZZARD"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T08:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -2876,7 +2876,7 @@
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #1004；招式 ACID／SLUDGE_BOMB／MOONBLAST；UL（高級聯盟） Overall #651；招式 ACID／SLUDGE_BOMB／MOONBLAST",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #1001；招式 ACID／SLUDGE_BOMB／MOONBLAST；UL（高級聯盟） Overall #648；招式 ACID／SLUDGE_BOMB／MOONBLAST",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -2999,7 +2999,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #1004；招式 ACID／SLUDGE_BOMB／MOONBLAST；UL（高級聯盟） Overall #651；招式 ACID／SLUDGE_BOMB／MOONBLAST",
+                  "summaryZhTw": "GL（超級聯盟） Overall #1001；招式 ACID／SLUDGE_BOMB／MOONBLAST；UL（高級聯盟） Overall #648；招式 ACID／SLUDGE_BOMB／MOONBLAST",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -3045,8 +3045,8 @@
                   "speciesKey": "vileplume_shadow",
                   "formKey": "045-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 1004,
-                  "rating": "408",
+                  "rank": 1001,
+                  "rating": "411",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -3055,16 +3055,16 @@
                     "MOONBLAST"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T08:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -3077,8 +3077,8 @@
                   "speciesKey": "vileplume_shadow",
                   "formKey": "045-kanto",
                   "variantKey": "SHADOW",
-                  "rank": 651,
-                  "rating": "441",
+                  "rank": 648,
+                  "rating": "443",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -3087,36 +3087,36 @@
                     "MOONBLAST"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-07-30T08:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
               "sources": [
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -3695,13 +3695,13 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #224；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #197；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #229；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #190；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
+              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估.",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "依固定快照優先核對：ACID／LEAF_BLADE／DAZZLING_GLEAM",
               "recommendedIvStrategyZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
@@ -3818,7 +3818,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #224；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #197；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
+                  "summaryZhTw": "GL（超級聯盟） Overall #229；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #190；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
                   "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -3864,8 +3864,8 @@
                   "speciesKey": "bellossom",
                   "formKey": "182-johto",
                   "variantKey": "NORMAL",
-                  "rank": 224,
-                  "rating": "615",
+                  "rank": 229,
+                  "rating": "616",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -3874,16 +3874,16 @@
                     "DAZZLING_GLEAM"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-27T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -3896,8 +3896,8 @@
                   "speciesKey": "bellossom",
                   "formKey": "182-johto",
                   "variantKey": "NORMAL",
-                  "rank": 197,
-                  "rating": "599",
+                  "rank": 190,
+                  "rating": "600",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -3906,16 +3906,16 @@
                     "DAZZLING_GLEAM"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-27T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -3930,21 +3930,21 @@
                   "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -4074,13 +4074,13 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #277；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #160；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #277；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #164；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
+              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估.",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "依固定快照優先核對：ACID／LEAF_BLADE／DAZZLING_GLEAM",
               "recommendedIvStrategyZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
@@ -4197,7 +4197,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #277；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #160；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
+                  "summaryZhTw": "GL（超級聯盟） Overall #277；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM；UL（高級聯盟） Overall #164；招式 ACID／LEAF_BLADE／DAZZLING_GLEAM",
                   "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -4253,16 +4253,16 @@
                     "DAZZLING_GLEAM"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-27T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -4275,8 +4275,8 @@
                   "speciesKey": "bellossom_shadow",
                   "formKey": "182-johto",
                   "variantKey": "SHADOW",
-                  "rank": 160,
-                  "rating": "607",
+                  "rank": 164,
+                  "rating": "609",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -4285,16 +4285,16 @@
                     "DAZZLING_GLEAM"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-27T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -4309,21 +4309,21 @@
                   "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -4427,7 +4427,7 @@
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
+              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估.",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
               "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
@@ -4685,7 +4685,7 @@
                   "category": "GYM",
                   "status": "UNRELEASED",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "未找到足以構成主要保留理由的道館用途；次要資料缺失不覆蓋其他結論。",
+                  "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],

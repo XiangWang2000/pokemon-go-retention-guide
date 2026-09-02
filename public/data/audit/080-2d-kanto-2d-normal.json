@@ -37,7 +37,7 @@
   "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #316；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；UL（高級聯盟） Overall #208；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；ML（大師聯盟） Overall #288；招式 CONFUSION／SURF／DRAIN_PUNCH",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #317；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；UL（高級聯盟） Overall #208；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；ML（大師聯盟） Overall #290；招式 CONFUSION／SURF／DRAIN_PUNCH",
   "pveSummaryZhTw": "無顯著用途。Mega／Primal 用途需與普通／暗影版本分開評估",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -551,7 +551,7 @@
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #316；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；UL（高級聯盟） Overall #208；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；ML（大師聯盟） Overall #288；招式 CONFUSION／SURF／DRAIN_PUNCH",
+      "summaryZhTw": "GL（超級聯盟） Overall #317；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；UL（高級聯盟） Overall #208；招式 CONFUSION／DRAIN_PUNCH／ICE_BEAM；ML（大師聯盟） Overall #290；招式 CONFUSION／SURF／DRAIN_PUNCH",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -572,21 +572,21 @@
           "usageZhTw": "確認關都呆殼獸可取得衝浪，供招式檢查使用。"
         },
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ml-20260715",
+          "id": "pvpoke-ml-20260901",
           "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -622,8 +622,8 @@
       "speciesKey": "slowbro",
       "formKey": "080-kanto",
       "variantKey": "NORMAL",
-      "rank": 316,
-      "rating": "616",
+      "rank": 317,
+      "rating": "617",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -632,16 +632,16 @@
         "ICE_BEAM"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+      "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-07-30T15:45:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     },
     {
@@ -654,7 +654,7 @@
       "speciesKey": "slowbro",
       "formKey": "080-kanto",
       "variantKey": "NORMAL",
-      "rank": 288,
+      "rank": 290,
       "rating": "476",
       "score": null,
       "tier": null,
@@ -664,16 +664,16 @@
         "DRAIN_PUNCH"
       ],
       "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+      "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-07-30T15:45:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ml-20260715",
+        "id": "pvpoke-ml-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
       }
     },
     {
@@ -696,16 +696,16 @@
         "ICE_BEAM"
       ],
       "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+      "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-07-30T15:45:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ul-20260715",
+        "id": "pvpoke-ul-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
       }
     }
   ],
@@ -720,30 +720,30 @@
       "usageZhTw": "確認關都呆殼獸可取得衝浪，供招式檢查使用。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與招式。"
     },
     {
-      "id": "pvpoke-ml-20260715",
+      "id": "pvpoke-ml-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與招式。"
     }
   ],

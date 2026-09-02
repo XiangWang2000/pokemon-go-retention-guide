@@ -966,8 +966,8 @@
               "releaseStatus": "RELEASED",
               "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
               "notesZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。（官方研究狀態：RELEASED）",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NO_SIGNIFICANT_USE",
+              "decision": "CONDITIONAL_KEEP",
+              "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "SOURCE_MISSING",
@@ -978,16 +978,16 @@
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
-                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "lastResearchedAt": "2026-09-01T16:00:00.000Z"
                 }
               ],
-              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
+              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
-              "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+              "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -995,9 +995,9 @@
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "recommendedIvStrategyZhTw": "目前沒有會改變保留結論的通用IV門檻。",
               "ivRecommendations": [],
-              "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
+              "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
               "evaluationId": "evaluation-007-kanto-dynamax-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -1025,7 +1025,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -1044,7 +1044,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -1063,7 +1063,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -1082,7 +1082,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -1090,7 +1090,7 @@
                   "category": "PVE",
                   "status": "NOT_APPLICABLE",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+                  "summaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1100,8 +1100,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "pveUseLevel": "SPECIAL_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -1120,7 +1120,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -1139,7 +1139,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
@@ -1194,11 +1194,11 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
-                  "explanationZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。"
+                  "resultDecision": "CONDITIONAL_KEEP",
+                  "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
                 }
               ],
               "moves": []
@@ -1207,8 +1207,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "目前沒有會改變保留結論的通用IV門檻。",
+            "shortReason": "只有具 Max 能力的個體適用，一般舊個體不能替代。"
           }
         ],
         "variantKeys": [
@@ -2476,8 +2476,8 @@
               "releaseStatus": "RELEASED",
               "releaseVerifiedAt": "2026-09-01T04:00:00.000Z",
               "notesZhTw": "官方頁面確認三隻初始夥伴的 Dynamax 個體；並明確說明由 Max Battle 捕捉的個體及其進化可 Dynamax。普通舊個體不會因此自動成為 Dynamax 個體。（官方研究狀態：RELEASED）",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NO_SIGNIFICANT_USE",
+              "decision": "CONDITIONAL_KEEP",
+              "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "SOURCE_MISSING",
@@ -2488,16 +2488,16 @@
                   "issueType": "OPTIONAL_DATA_MISSING",
                   "messageZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "affectsFinalDecision": false,
-                  "provisionalDecision": "TRANSFER_CANDIDATE",
+                  "provisionalDecision": "CONDITIONAL_KEEP",
                   "suggestedResearchActionZhTw": "此欄位待補，但不影響DYNAMAX 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
                   "lastResearchedAt": "2026-09-01T16:00:00.000Z"
                 }
               ],
-              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
+              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "Mega 與 Max 個體不適用一般 GO Battle League 評估。",
-              "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+              "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -2505,9 +2505,9 @@
               "maxBattleSummaryZhTw": "此版本沒有可重現的 Max Battle 評估資料。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "目前沒有會單獨改變保留結論的必要招式資料。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "recommendedIvStrategyZhTw": "目前沒有會改變保留結論的通用IV門檻。",
               "ivRecommendations": [],
-              "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
+              "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
               "evaluationId": "evaluation-008-kanto-dynamax-2026.08.06-v7",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "系統已產生可執行結論；資料缺口另列資料待補清單，不要求使用者自行判斷。",
@@ -2535,7 +2535,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -2554,7 +2554,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -2573,7 +2573,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -2592,7 +2592,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -2600,7 +2600,7 @@
                   "category": "PVE",
                   "status": "NOT_APPLICABLE",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+                  "summaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -2610,8 +2610,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "pveUseLevel": "SPECIAL_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -2630,7 +2630,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 },
@@ -2649,7 +2649,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-09-01T04:00:00.000Z",
                   "sources": []
                 }
@@ -2704,11 +2704,11 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
-                  "explanationZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。"
+                  "resultDecision": "CONDITIONAL_KEEP",
+                  "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
                 }
               ],
               "moves": []
@@ -2717,8 +2717,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "目前沒有會改變保留結論的通用IV門檻。",
+            "shortReason": "只有具 Max 能力的個體適用，一般舊個體不能替代。"
           }
         ],
         "variantKeys": [

@@ -7,23 +7,23 @@
   "counts": {
     "variants": 1780,
     "decisions": {
-      "TRANSFER_CANDIDATE": 1205,
-      "CONDITIONAL_KEEP": 416,
-      "KEEP": 159
+      "CONDITIONAL_KEEP": 440,
+      "TRANSFER_CANDIDATE": 1186,
+      "KEEP": 154
     },
     "dispositions": {
-      "NO_SIGNIFICANT_USE": 578,
-      "CLEAR_USE": 115,
-      "LIMITED_USE": 460,
-      "NOT_APPLICABLE_OR_UNRELEASED": 627
+      "LIMITED_USE": 485,
+      "CLEAR_USE": 109,
+      "NO_SIGNIFICANT_USE": 587,
+      "NOT_APPLICABLE_OR_UNRELEASED": 599
     },
     "pveUseLevels": {
-      "NO_SIGNIFICANT_USE": 1415,
-      "CORE_INVESTMENT": 116,
-      "SPECIAL_USE": 179,
-      "USABLE_OR_BUDGET": 70
+      "SPECIAL_USE": 189,
+      "CORE_INVESTMENT": 109,
+      "NO_SIGNIFICANT_USE": 1418,
+      "USABLE_OR_BUDGET": 64
     },
-    "changedFields": 1318
+    "changedFields": 1242
   },
   "trueDataPending": [],
   "highRiskReview": [
@@ -103,8 +103,8 @@
       "nameZhTw": "腕力",
       "variantKey": "SHADOW",
       "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "CORE_INVESTMENT",
-      "disposition": "CLEAR_USE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": "怪力"
     },
     {
@@ -182,10 +182,10 @@
       "dexNumber": 92,
       "nameZhTw": "鬼斯",
       "variantKey": "SHADOW",
-      "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "CORE_INVESTMENT",
-      "disposition": "CLEAR_USE",
-      "laterEvolutionTarget": "耿鬼"
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
+      "laterEvolutionTarget": null
     },
     {
       "id": "111-kanto-dynamax",
@@ -832,9 +832,9 @@
       "dexNumber": 150,
       "nameZhTw": "超夢",
       "variantKey": "MEGA_X",
-      "decision": "KEEP",
-      "pveUseLevel": "CORE_INVESTMENT",
-      "disposition": "CLEAR_USE",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -842,9 +842,9 @@
       "dexNumber": 150,
       "nameZhTw": "超夢",
       "variantKey": "MEGA_Y",
-      "decision": "KEEP",
-      "pveUseLevel": "CORE_INVESTMENT",
-      "disposition": "CLEAR_USE",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -903,8 +903,8 @@
       "nameZhTw": "超夢",
       "variantKey": "SHADOW",
       "decision": "KEEP",
-      "pveUseLevel": "CORE_INVESTMENT",
-      "disposition": "CLEAR_USE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -1032,9 +1032,9 @@
       "dexNumber": 164,
       "nameZhTw": "貓頭夜鷹",
       "variantKey": "DYNAMAX",
-      "decision": "TRANSFER_CANDIDATE",
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -1562,9 +1562,9 @@
       "dexNumber": 196,
       "nameZhTw": "太陽伊布",
       "variantKey": "DYNAMAX",
-      "decision": "TRANSFER_CANDIDATE",
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -1602,9 +1602,9 @@
       "dexNumber": 197,
       "nameZhTw": "月亮伊布",
       "variantKey": "DYNAMAX",
-      "decision": "TRANSFER_CANDIDATE",
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -2232,9 +2232,9 @@
       "dexNumber": 213,
       "nameZhTw": "壺壺",
       "variantKey": "NORMAL",
-      "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
-      "disposition": "LIMITED_USE",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -2312,9 +2312,9 @@
       "dexNumber": 215,
       "nameZhTw": "狃拉",
       "variantKey": "DYNAMAX",
-      "decision": "TRANSFER_CANDIDATE",
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -2533,7 +2533,7 @@
       "nameZhTw": "盔甲鳥",
       "variantKey": "NORMAL",
       "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
       "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
@@ -2552,9 +2552,9 @@
       "dexNumber": 227,
       "nameZhTw": "盔甲鳥",
       "variantKey": "SHADOW",
-      "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
-      "disposition": "LIMITED_USE",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -2782,9 +2782,9 @@
       "dexNumber": 237,
       "nameZhTw": "戰舞郎",
       "variantKey": "NORMAL",
-      "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
-      "disposition": "LIMITED_USE",
+      "decision": "TRANSFER_CANDIDATE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "disposition": "NO_SIGNIFICANT_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -2932,9 +2932,9 @@
       "dexNumber": 242,
       "nameZhTw": "幸福蛋",
       "variantKey": "DYNAMAX",
-      "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
-      "disposition": "LIMITED_USE",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -2963,7 +2963,7 @@
       "nameZhTw": "幸福蛋",
       "variantKey": "SHADOW",
       "decision": "TRANSFER_CANDIDATE",
-      "pveUseLevel": "SPECIAL_USE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
       "disposition": "NOT_APPLICABLE_OR_UNRELEASED",
       "laterEvolutionTarget": null
     },
@@ -2983,8 +2983,8 @@
       "nameZhTw": "雷公",
       "variantKey": "NORMAL",
       "decision": "KEEP",
-      "pveUseLevel": "CORE_INVESTMENT",
-      "disposition": "CLEAR_USE",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -3022,9 +3022,9 @@
       "dexNumber": 244,
       "nameZhTw": "炎帝",
       "variantKey": "NORMAL",
-      "decision": "KEEP",
-      "pveUseLevel": "CORE_INVESTMENT",
-      "disposition": "CLEAR_USE",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -3042,9 +3042,9 @@
       "dexNumber": 244,
       "nameZhTw": "炎帝",
       "variantKey": "SHADOW",
-      "decision": "KEEP",
-      "pveUseLevel": "CORE_INVESTMENT",
-      "disposition": "CLEAR_USE",
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -3063,7 +3063,7 @@
       "nameZhTw": "水君",
       "variantKey": "NORMAL",
       "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
       "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
@@ -3083,7 +3083,7 @@
       "nameZhTw": "水君",
       "variantKey": "SHADOW",
       "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
       "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
@@ -3273,8 +3273,8 @@
       "nameZhTw": "鳳王",
       "variantKey": "NORMAL",
       "decision": "KEEP",
-      "pveUseLevel": "CORE_INVESTMENT",
-      "disposition": "CLEAR_USE",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -3293,8 +3293,8 @@
       "nameZhTw": "鳳王",
       "variantKey": "SHADOW",
       "decision": "KEEP",
-      "pveUseLevel": "CORE_INVESTMENT",
-      "disposition": "CLEAR_USE",
+      "pveUseLevel": "SPECIAL_USE",
+      "disposition": "LIMITED_USE",
       "laterEvolutionTarget": null
     },
     {

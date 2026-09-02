@@ -52,13 +52,13 @@
   "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #310；招式 POWDER_SNOW／ICICLE_SPEAR／STONE_EDGE；UL（高級聯盟） Overall #298；招式 POWDER_SNOW／AVALANCHE／ICICLE_SPEAR",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #309；招式 POWDER_SNOW／ICICLE_SPEAR／STONE_EDGE；UL（高級聯盟） Overall #298；招式 POWDER_SNOW／ICICLE_SPEAR／STONE_EDGE",
   "pveSummaryZhTw": "核心投資。象牙豬：正式後續進化；象牙豬具核心 PvE／Max 用途，普通長毛豬保留優質進化候選。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-  "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
+  "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估.",
   "evolutionSummaryZhTw": "正式後續進化；象牙豬具核心 PvE／Max 用途，普通長毛豬保留優質進化候選。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
   "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，14攻高整體IV亦可留；Max依角色分開。",
@@ -566,7 +566,7 @@
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #310；招式 POWDER_SNOW／ICICLE_SPEAR／STONE_EDGE；UL（高級聯盟） Overall #298；招式 POWDER_SNOW／AVALANCHE／ICICLE_SPEAR",
+      "summaryZhTw": "GL（超級聯盟） Overall #309；招式 POWDER_SNOW／ICICLE_SPEAR／STONE_EDGE；UL（高級聯盟） Overall #298；招式 POWDER_SNOW／ICICLE_SPEAR／STONE_EDGE",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -581,15 +581,15 @@
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -632,8 +632,8 @@
       "speciesKey": "piloswine_shadow",
       "formKey": "221-johto",
       "variantKey": "SHADOW",
-      "rank": 310,
-      "rating": "607",
+      "rank": 309,
+      "rating": "606",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -642,16 +642,16 @@
         "STONE_EDGE"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     },
     {
@@ -665,25 +665,25 @@
       "formKey": "221-johto",
       "variantKey": "SHADOW",
       "rank": 298,
-      "rating": "609",
+      "rating": "608",
       "score": null,
       "tier": null,
       "recommendedMoves": [
         "POWDER_SNOW",
-        "AVALANCHE",
-        "ICICLE_SPEAR"
+        "ICICLE_SPEAR",
+        "STONE_EDGE"
       ],
       "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ul-20260715",
+        "id": "pvpoke-ul-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
       }
     }
   ],
@@ -698,21 +698,21 @@
       "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],

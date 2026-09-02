@@ -44,7 +44,7 @@
       {
         "variantKey": "NORMAL",
         "releaseStatus": "RELEASED",
-        "decision": "KEEP"
+        "decision": "CONDITIONAL_KEEP"
       },
       {
         "variantKey": "PURIFIED",
@@ -54,7 +54,7 @@
       {
         "variantKey": "SHADOW",
         "releaseStatus": "RELEASED",
-        "decision": "KEEP"
+        "decision": "CONDITIONAL_KEEP"
       }
     ],
     "result": "PASS"
@@ -69,7 +69,7 @@
     {
       "familyId": "KANTO_FAMILY_060:060-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留蚊香泳士（PvP（GL Rank≤100）），以及蚊香蛙皇（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留蚊香泳士（PvP（GL Rank≤100、UL Rank≤100）），以及蚊香蛙皇（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -81,7 +81,7 @@
     {
       "familyId": "KANTO_FAMILY_066:066-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留腕力（極巨候選），以及豪力（PvP（GL Rank≤100）、極巨候選），以及怪力（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、極巨候選、超極巨版本本身、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留腕力（極巨候選），以及豪力（PvP（GL Rank≤100）、極巨候選），以及怪力（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、極巨候選、超極巨版本本身）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {

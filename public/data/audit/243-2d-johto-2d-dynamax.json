@@ -42,10 +42,10 @@
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-  "maxBattleSummaryZhTw": "此 Max 版本已由來源核對為已推出；與普通／暗影版本分開保留。",
+  "maxBattleSummaryZhTw": "極巨雷公目前約 C Tier Max 攻擊手，亦可作 C Tier 治療／防守角色；留少量高品質候選即可。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-  "recommendedIvStrategyZhTw": "目前沒有會改變保留結論的通用IV門檻。",
+  "recommendedIvStrategyZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -493,24 +493,42 @@
       "category": "MAX_BATTLE",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "此 Max 版本已由來源核對為已推出；與普通／暗影版本分開保留。",
+      "summaryZhTw": "極巨雷公目前約 C Tier Max 攻擊手，亦可作 C Tier 治療／防守角色；留少量高品質候選即可。",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
       "maxTypeTier": null,
       "maxTypeKey": null,
-      "maxOverallRating": null,
-      "maxInvestmentRating": null,
-      "maxUseCaseBreadth": null,
+      "maxOverallRating": "MEDIUM",
+      "maxInvestmentRating": "MEDIUM",
+      "maxUseCaseBreadth": "MEDIUM",
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
+          "id": "MAX-ATTACKERS-GEN2-20260902",
+          "title": "Pokémon GO Max Attackers Tier List (September 2026)",
+          "url": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
+          "usageZhTw": "Official batch evidence."
+        },
+        {
+          "id": "MAX-DEFENDERS-GEN2-242251-20260902",
+          "title": "Pokémon GO Max Defenders Tier List (September 2026)",
+          "url": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+          "usageZhTw": "Official batch evidence."
+        },
+        {
           "id": "MAX-GEN2-20260808",
           "title": "Pokémon GO Max Battle Pokémon list",
           "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
+          "usageZhTw": "Official batch evidence."
+        },
+        {
+          "id": "MAX-HEALERS-GEN2-20260902",
+          "title": "Pokémon GO Max Healers Tier List (September 2026)",
+          "url": "https://pokemongohub.net/post/guide/max-healers-tier-list-june-2025/",
           "usageZhTw": "Official batch evidence."
         }
       ]
@@ -595,12 +613,39 @@
   "raw": [],
   "sources": [
     {
+      "id": "MAX-ATTACKERS-GEN2-20260902",
+      "name": "Pokémon GO Hub",
+      "title": "Pokémon GO Max Attackers Tier List (September 2026)",
+      "url": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
+      "type": "MAX_BATTLE",
+      "accessedAt": "2026-09-01T16:00:00.000Z",
+      "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
+    },
+    {
+      "id": "MAX-DEFENDERS-GEN2-242251-20260902",
+      "name": "Pokémon GO Hub",
+      "title": "Pokémon GO Max Defenders Tier List (September 2026)",
+      "url": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+      "type": "MAX_BATTLE",
+      "accessedAt": "2026-09-01T16:00:00.000Z",
+      "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
+    },
+    {
       "id": "MAX-GEN2-20260808",
       "name": "GO Hub Max Battle／Dynamax 清單",
       "title": "Pokémon GO Max Battle Pokémon list",
       "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
       "type": "MAX_BATTLE",
       "accessedAt": "2026-08-07T16:00:00.000Z",
+      "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
+    },
+    {
+      "id": "MAX-HEALERS-GEN2-20260902",
+      "name": "Pokémon GO Hub",
+      "title": "Pokémon GO Max Healers Tier List (September 2026)",
+      "url": "https://pokemongohub.net/post/guide/max-healers-tier-list-june-2025/",
+      "type": "MAX_BATTLE",
+      "accessedAt": "2026-09-01T16:00:00.000Z",
       "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
     }
   ],

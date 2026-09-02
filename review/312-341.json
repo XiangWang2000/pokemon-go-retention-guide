@@ -10,9 +10,9 @@
     "battleVariants": 123,
     "families": 20,
     "strategyCounts": {
-      "KEEP_TARGETS": 7,
-      "SELECTIVE_KEEP": 6,
-      "MOSTLY_TRANSFER": 7,
+      "KEEP_TARGETS": 4,
+      "SELECTIVE_KEEP": 8,
+      "MOSTLY_TRANSFER": 8,
       "HOLD_FOR_NOW": 0
     },
     "openIssues": 0,
@@ -109,8 +109,8 @@
     },
     {
       "familyId": "HOENN_FAMILY_318:318-hoenn",
-      "strategy": "KEEP_TARGETS",
-      "conclusion": "保留巨牙鯊（PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留巨牙鯊（PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -122,7 +122,7 @@
     {
       "familyId": "HOENN_FAMILY_322:322-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留噴火駝（PvP（UL Rank≤100）、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留噴火駝（PvP（UL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -158,7 +158,7 @@
     {
       "familyId": "HOENN_FAMILY_333:333-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留七夕青鳥（PvP（GL Rank≤100）、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留七夕青鳥（PvP（GL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -187,13 +187,13 @@
     },
     {
       "familyId": "HOENN_FAMILY_339:339-hoenn",
-      "strategy": "KEEP_TARGETS",
-      "conclusion": "保留鯰魚王（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
       "familyId": "HOENN_FAMILY_341:341-hoenn",
-      "strategy": "KEEP_TARGETS",
+      "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留鐵螯龍蝦（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     }

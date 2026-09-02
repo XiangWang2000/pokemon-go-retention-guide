@@ -1057,7 +1057,7 @@
       "memberSummaryZhTw": "小福蛋本體沒有獨立用途；前階主要作符合條件的進化候選。",
       "ivShortLabels": [
         "道館：無固定門檻",
-        "PvE：91%+可投入；96%+／15攻優先"
+        "Max：依角色分開保留"
       ],
       "ivRecommendations": [
         {
@@ -1091,22 +1091,22 @@
           "rulesVersion": "2026.09.02-v3"
         },
         {
-          "id": "iv-global-pve",
+          "id": "iv-global-max-flex",
           "scopeType": "GLOBAL",
           "scopeKey": "GLOBAL",
-          "primaryUseKey": "PVE",
-          "ivStrategyKey": "PVE_ATTACKER",
-          "maxBattleRole": null,
+          "primaryUseKey": "MAX_FLEX",
+          "ivStrategyKey": "MAX_FLEX",
+          "maxBattleRole": "FLEX",
           "attackIvMin": null,
-          "attackIvPriority": 15,
+          "attackIvPriority": null,
           "attackIvConditionalMin": null,
           "secondaryAttackIv": null,
           "defenseIvMin": null,
           "defenseIvPriority": null,
           "staminaIvMin": null,
           "staminaIvPriority": null,
-          "totalIvPercentMin": 91.1,
-          "totalIvPercentPriority": 95.6,
+          "totalIvPercentMin": null,
+          "totalIvPercentPriority": null,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": null,
           "pvpRankConditionalMax": null,
@@ -1116,8 +1116,8 @@
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
-          "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+          "ivRecommendationZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+          "shortIvLabelZhTw": "Max：依角色分開保留",
           "rulesVersion": "2026.09.02-v3"
         }
       ],
@@ -1218,7 +1218,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #630；招式 ZEN_HEADBUTT／DAZZLING_GLEAM／PSYCHIC；UL（高級聯盟） Overall #839；招式 ZEN_HEADBUTT／DAZZLING_GLEAM／HYPER_BEAM",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #642；招式 ZEN_HEADBUTT／DAZZLING_GLEAM／PSYCHIC；UL（高級聯盟） Overall #841；招式 ZEN_HEADBUTT／DAZZLING_GLEAM／PSYCHIC",
               "pveSummaryZhTw": "特殊用途。道館防守列為特殊用途；幸福蛋：可進化為幸福蛋；道館防守是特殊用途，不等於核心 PvE。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "道館防守列為特殊用途；只保留少量適合守館或進化的個體。",
@@ -1341,7 +1341,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #630；招式 ZEN_HEADBUTT／DAZZLING_GLEAM／PSYCHIC；UL（高級聯盟） Overall #839；招式 ZEN_HEADBUTT／DAZZLING_GLEAM／HYPER_BEAM",
+                  "summaryZhTw": "GL（超級聯盟） Overall #642；招式 ZEN_HEADBUTT／DAZZLING_GLEAM／PSYCHIC；UL（高級聯盟） Overall #841；招式 ZEN_HEADBUTT／DAZZLING_GLEAM／PSYCHIC",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1387,7 +1387,7 @@
                   "speciesKey": "chansey",
                   "formKey": "113-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 630,
+                  "rank": 642,
                   "rating": "455",
                   "score": null,
                   "tier": null,
@@ -1397,16 +1397,16 @@
                     "PSYCHIC"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-03T08:30:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -1419,26 +1419,26 @@
                   "speciesKey": "chansey",
                   "formKey": "113-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 839,
-                  "rating": "198",
+                  "rank": 841,
+                  "rating": "200",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
                     "ZEN_HEADBUTT",
                     "DAZZLING_GLEAM",
-                    "HYPER_BEAM"
+                    "PSYCHIC"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-03T08:30:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -1453,21 +1453,21 @@
                   "usageZhTw": "確認吉利蛋可進化為幸福蛋；跨批次缺口只保留少量候選，不覆蓋本體結論。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],
@@ -2418,16 +2418,16 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #871；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM；UL（高級聯盟） Overall #616；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM；ML（大師聯盟） Overall #391；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM",
-              "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估；Max Battle 版本需與普通／暗影分開保留",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #869；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM；UL（高級聯盟） Overall #613；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM；ML（大師聯盟） Overall #390；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM",
+              "pveSummaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估；道館防守列為特殊用途",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
-              "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
-              "gymRating": "NOT_APPLICABLE",
+              "gymSummaryZhTw": "道館防守列為特殊用途；只保留少量適合守館或進化的個體。",
+              "gymRating": "SPECIAL_CASE",
               "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
               "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+              "recommendedIvStrategyZhTw": "道館：不設固定IV門檻；同物種比較時再參考既有等級、CP、防禦、HP與總IV。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：其餘普通重複可傳；只留 Mega 候選或符合其他用途的少量個體。",
               "evaluationId": "r20-eval-242-johto-normal",
@@ -2463,10 +2463,10 @@
                 },
                 {
                   "category": "GYM",
-                  "status": "DATA_UNAVAILABLE",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "未找到足以構成主要保留理由的道館用途；次要資料缺失不覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "status": "VERIFIED",
+                  "provenance": "SOURCE_VERIFIED",
+                  "summaryZhTw": "幸福蛋仍是極具代表性的道館防守目標；若在意道館，可留少量高耐久／高整體 IV 候選。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2520,10 +2520,10 @@
                 },
                 {
                   "category": "PVE",
-                  "status": "PARTIALLY_VERIFIED",
+                  "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估；Max Battle 版本需與普通／暗影分開保留",
-                  "materialToDecision": true,
+                  "summaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估；道館防守列為特殊用途",
+                  "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2541,7 +2541,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #871；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM；UL（高級聯盟） Overall #616；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM；ML（大師聯盟） Overall #391；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM",
+                  "summaryZhTw": "GL（超級聯盟） Overall #869；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM；UL（高級聯盟） Overall #613；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM；ML（大師聯盟） Overall #390；招式 ZEN_HEADBUTT／WILD_CHARGE／DAZZLING_GLEAM",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -2578,34 +2578,6 @@
               ],
               "raw": [
                 {
-                  "id": "raw-r20-242-johto-normal-pve",
-                  "category": "PVE",
-                  "status": "PARTIALLY_VERIFIED",
-                  "league": "NOT_APPLICABLE",
-                  "cup": null,
-                  "pvpCategory": null,
-                  "speciesKey": "blissey",
-                  "formKey": "242-johto",
-                  "variantKey": "NORMAL",
-                  "rank": null,
-                  "rating": "SPECIAL",
-                  "score": null,
-                  "tier": "SPECIAL",
-                  "recommendedMoves": [],
-                  "rawNotes": "本批 PvE 類別用途層級由研究表與 GO Hub Johto 版本狀態核對；不虛構 IV 硬門檻。",
-                  "seasonOrVersion": "GO Hub accessed 2026-08-08",
-                  "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
-                  "reproducible": false,
-                  "migrationNote": null,
-                  "checkedAt": "2026-08-08T10:00:00.000Z",
-                  "source": {
-                    "id": "PVE-GEN2-20260808",
-                    "name": "GO Hub 城都圖鑑／PvE／Mega",
-                    "title": "Johto Pokédex and Pokémon GO PvE rankings",
-                    "url": "https://db.pokemongohub.net/pokedex/johto"
-                  }
-                },
-                {
                   "id": "raw-r20-242-johto-normal-great",
                   "category": "PVP",
                   "status": "VERIFIED",
@@ -2615,7 +2587,7 @@
                   "speciesKey": "blissey",
                   "formKey": "242-johto",
                   "variantKey": "NORMAL",
-                  "rank": 871,
+                  "rank": 869,
                   "rating": "394",
                   "score": null,
                   "tier": null,
@@ -2625,16 +2597,16 @@
                     "DAZZLING_GLEAM"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T10:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -2647,8 +2619,8 @@
                   "speciesKey": "blissey",
                   "formKey": "242-johto",
                   "variantKey": "NORMAL",
-                  "rank": 391,
-                  "rating": "322",
+                  "rank": 390,
+                  "rating": "326",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -2657,16 +2629,16 @@
                     "DAZZLING_GLEAM"
                   ],
                   "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T10:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ml-20260715",
+                    "id": "pvpoke-ml-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
                   }
                 },
                 {
@@ -2679,8 +2651,8 @@
                   "speciesKey": "blissey",
                   "formKey": "242-johto",
                   "variantKey": "NORMAL",
-                  "rank": 616,
-                  "rating": "432",
+                  "rank": 613,
+                  "rating": "434",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -2689,16 +2661,16 @@
                     "DAZZLING_GLEAM"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T10:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -2722,6 +2694,15 @@
                   "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
                 },
                 {
+                  "id": "PVE-BLISSEY-20260902",
+                  "name": "Pokémon GO Hub",
+                  "title": "Blissey",
+                  "url": "https://pokemongohub.net/post/battledex/blissey/",
+                  "type": "PVE",
+                  "accessedAt": "2026-09-01T16:00:00.000Z",
+                  "usageZhTw": "此來源直接支援該版本的特定用途分類。"
+                },
+                {
                   "id": "PVE-GEN2-20260808",
                   "name": "GO Hub 城都圖鑑／PvE／Mega",
                   "title": "Johto Pokédex and Pokémon GO PvE rankings",
@@ -2731,30 +2712,30 @@
                   "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -2770,29 +2751,29 @@
               "moves": []
             },
             "primaryUses": [
-              "PvE"
+              "道館"
             ],
             "primaryUseKeys": [
-              "PVE"
+              "GYM_DEFENSE"
             ],
             "ivRecommendations": [
               {
-                "id": "iv-global-pve",
+                "id": "iv-global-gym-defense",
                 "scopeType": "GLOBAL",
                 "scopeKey": "GLOBAL",
-                "primaryUseKey": "PVE",
-                "ivStrategyKey": "PVE_ATTACKER",
+                "primaryUseKey": "GYM_DEFENSE",
+                "ivStrategyKey": "GYM_DEFENDER",
                 "maxBattleRole": null,
                 "attackIvMin": null,
-                "attackIvPriority": 15,
+                "attackIvPriority": null,
                 "attackIvConditionalMin": null,
                 "secondaryAttackIv": null,
                 "defenseIvMin": null,
                 "defenseIvPriority": null,
                 "staminaIvMin": null,
                 "staminaIvPriority": null,
-                "totalIvPercentMin": 91.1,
-                "totalIvPercentPriority": 95.6,
+                "totalIvPercentMin": null,
+                "totalIvPercentPriority": null,
                 "secondaryTotalIvPercentMin": null,
                 "pvpRankMax": null,
                 "pvpRankConditionalMax": null,
@@ -2802,16 +2783,16 @@
                 "appliesOnlyWhenUseConfirmed": true,
                 "speciesSpecificOverride": false,
                 "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
-                "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+                "ivRecommendationZhTw": "道館：不設固定IV門檻；同物種比較時再參考既有等級、CP、防禦、HP與總IV。",
+                "shortIvLabelZhTw": "道館：無固定門檻",
                 "rulesVersion": "2026.09.02-v3"
               }
             ],
             "ivShortLabels": [
-              "PvE：91%+可投入；96%+／15攻優先"
+              "道館：無固定門檻"
             ],
-            "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
-            "shortReason": "主要用途：PvE。"
+            "ivDirection": "道館：不設固定IV門檻；同物種比較時再參考既有等級、CP、防禦、HP與總IV。",
+            "shortReason": "主要用途：道館。"
           },
           {
             "row": {
@@ -2853,7 +2834,7 @@
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-              "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
+              "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -2899,7 +2880,7 @@
                   "category": "GYM",
                   "status": "UNRELEASED",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "未找到足以構成主要保留理由的道館用途；次要資料缺失不覆蓋其他結論。",
+                  "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -2956,7 +2937,7 @@
                   "category": "PVE",
                   "status": "UNRELEASED",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
+                  "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -2966,7 +2947,7 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "SPECIAL_USE",
+                  "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
@@ -3116,7 +3097,7 @@
                   "category": "GYM",
                   "status": "UNRELEASED",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "未找到足以構成主要保留理由的道館用途；次要資料缺失不覆蓋其他結論。",
+                  "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -3276,28 +3257,28 @@
               "releaseStatus": "RELEASED",
               "releaseVerifiedAt": "2026-08-08T10:00:00.000Z",
               "notesZhTw": "此 Max 版本已由來源核對為已推出；普通個體不能替代 Max 個體。",
-              "decision": "CONDITIONAL_KEEP",
-              "assessmentDisposition": "LIMITED_USE",
+              "decision": "KEEP",
+              "assessmentDisposition": "CLEAR_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+              "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-              "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
+              "pveSummaryZhTw": "核心投資。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-              "maxBattleSummaryZhTw": "此 Max 版本已由來源核對為已推出；與普通／暗影版本分開保留。",
+              "maxBattleSummaryZhTw": "極巨幸福蛋是目前 S Tier Max 治療手，並有 C Tier 防守價值；這個 Max 版本值得保留高品質實用候選。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "目前沒有會改變保留結論的通用IV門檻。",
+              "recommendedIvStrategyZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
               "ivRecommendations": [],
-              "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
+              "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
               "evaluationId": "r20-eval-242-johto-dynamax",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "已核對第二世代家族、寶寶併入既有家族、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
@@ -3325,7 +3306,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -3344,7 +3325,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -3352,18 +3333,18 @@
                   "category": "MAX_BATTLE",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "此 Max 版本已由來源核對為已推出；與普通／暗影版本分開保留。",
+                  "summaryZhTw": "極巨幸福蛋是目前 S Tier Max 治療手，並有 C Tier 防守價值；這個 Max 版本值得保留高品質實用候選。",
                   "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
                   "maxTypeTier": null,
                   "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
+                  "maxOverallRating": "HIGH",
+                  "maxInvestmentRating": "HIGH",
+                  "maxUseCaseBreadth": "BROAD",
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -3382,7 +3363,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -3390,7 +3371,7 @@
                   "category": "PVE",
                   "status": "NOT_APPLICABLE",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
+                  "summaryZhTw": "核心投資。Max Battle 版本需與普通／暗影分開保留",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -3400,8 +3381,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "SPECIAL_USE",
-                  "assessmentDisposition": "LIMITED_USE",
+                  "pveUseLevel": "CORE_INVESTMENT",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -3420,7 +3401,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -3439,13 +3420,31 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 }
               ],
               "raw": [],
               "sources": [
+                {
+                  "id": "MAX-ATTACKERS-GEN2-20260902",
+                  "name": "Pokémon GO Hub",
+                  "title": "Pokémon GO Max Attackers Tier List (September 2026)",
+                  "url": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
+                  "type": "MAX_BATTLE",
+                  "accessedAt": "2026-09-01T16:00:00.000Z",
+                  "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
+                },
+                {
+                  "id": "MAX-DEFENDERS-GEN2-242251-20260902",
+                  "name": "Pokémon GO Hub",
+                  "title": "Pokémon GO Max Defenders Tier List (September 2026)",
+                  "url": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+                  "type": "MAX_BATTLE",
+                  "accessedAt": "2026-09-01T16:00:00.000Z",
+                  "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
+                },
                 {
                   "id": "MAX-GEN2-20260808",
                   "name": "GO Hub Max Battle／Dynamax 清單",
@@ -3454,24 +3453,70 @@
                   "type": "MAX_BATTLE",
                   "accessedAt": "2026-08-07T16:00:00.000Z",
                   "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
+                },
+                {
+                  "id": "MAX-HEALERS-GEN2-20260902",
+                  "name": "Pokémon GO Hub",
+                  "title": "Pokémon GO Max Healers Tier List (September 2026)",
+                  "url": "https://pokemongohub.net/post/guide/max-healers-tier-list-june-2025/",
+                  "type": "MAX_BATTLE",
+                  "accessedAt": "2026-09-01T16:00:00.000Z",
+                  "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "MAJOR_BATTLE_VALUE",
+                  "priority": 900,
                   "matched": true,
-                  "resultDecision": "CONDITIONAL_KEEP",
-                  "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
+                  "resultDecision": "KEEP",
+                  "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
                 }
               ],
               "moves": []
             },
-            "primaryUses": [],
-            "primaryUseKeys": [],
-            "ivRecommendations": [],
-            "ivShortLabels": [],
-            "ivDirection": "目前沒有會改變保留結論的通用IV門檻。",
+            "primaryUses": [
+              "Max Battle"
+            ],
+            "primaryUseKeys": [
+              "MAX_FLEX"
+            ],
+            "ivRecommendations": [
+              {
+                "id": "iv-global-max-flex",
+                "scopeType": "GLOBAL",
+                "scopeKey": "GLOBAL",
+                "primaryUseKey": "MAX_FLEX",
+                "ivStrategyKey": "MAX_FLEX",
+                "maxBattleRole": "FLEX",
+                "attackIvMin": null,
+                "attackIvPriority": null,
+                "attackIvConditionalMin": null,
+                "secondaryAttackIv": null,
+                "defenseIvMin": null,
+                "defenseIvPriority": null,
+                "staminaIvMin": null,
+                "staminaIvPriority": null,
+                "totalIvPercentMin": null,
+                "totalIvPercentPriority": null,
+                "secondaryTotalIvPercentMin": null,
+                "pvpRankMax": null,
+                "pvpRankConditionalMax": null,
+                "pvpPrMin": null,
+                "recommendedQuantity": null,
+                "hundoPriority": false,
+                "appliesOnlyWhenUseConfirmed": true,
+                "speciesSpecificOverride": false,
+                "overrideReasonZhTw": "",
+                "ivRecommendationZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+                "shortIvLabelZhTw": "Max：依角色分開保留",
+                "rulesVersion": "2026.09.02-v3"
+              }
+            ],
+            "ivShortLabels": [
+              "Max：依角色分開保留"
+            ],
+            "ivDirection": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
             "shortReason": "只有具 Max 能力的個體適用，一般舊個體不能替代。"
           }
         ],
@@ -3492,37 +3537,38 @@
         },
         "pve": {
           "label": "特殊用途",
-          "detail": "團體戰：本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估；Max Battle 版本需與普通／暗影分開保留",
+          "detail": "道館防守：Mega／Primal 用途需與普通／暗影版本分開評估；道館防守列為特殊用途",
           "tone": "SPECIAL"
         },
         "gym": {
-          "label": "—",
-          "tone": "NONE"
+          "label": "特殊用途",
+          "detail": "只需保留一隻",
+          "tone": "SPECIAL"
         },
         "megaMax": {
-          "label": "極巨：—",
-          "tone": "NONE"
+          "label": "極巨：高",
+          "tone": "HIGH"
         },
         "decision": "CONDITIONAL_KEEP",
-        "decisionReason": "依各戰鬥版本的數字IV門檻留少量個體。",
+        "decisionReason": "只留可極巨版本；一般舊個體不具 Max 能力。",
         "ivRecommendations": [
           {
-            "id": "iv-global-pve",
+            "id": "iv-global-gym-defense",
             "scopeType": "GLOBAL",
             "scopeKey": "GLOBAL",
-            "primaryUseKey": "PVE",
-            "ivStrategyKey": "PVE_ATTACKER",
+            "primaryUseKey": "GYM_DEFENSE",
+            "ivStrategyKey": "GYM_DEFENDER",
             "maxBattleRole": null,
             "attackIvMin": null,
-            "attackIvPriority": 15,
+            "attackIvPriority": null,
             "attackIvConditionalMin": null,
             "secondaryAttackIv": null,
             "defenseIvMin": null,
             "defenseIvPriority": null,
             "staminaIvMin": null,
             "staminaIvPriority": null,
-            "totalIvPercentMin": 91.1,
-            "totalIvPercentPriority": 95.6,
+            "totalIvPercentMin": null,
+            "totalIvPercentPriority": null,
             "secondaryTotalIvPercentMin": null,
             "pvpRankMax": null,
             "pvpRankConditionalMax": null,
@@ -3532,20 +3578,53 @@
             "appliesOnlyWhenUseConfirmed": true,
             "speciesSpecificOverride": false,
             "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
-            "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+            "ivRecommendationZhTw": "道館：不設固定IV門檻；同物種比較時再參考既有等級、CP、防禦、HP與總IV。",
+            "shortIvLabelZhTw": "道館：無固定門檻",
+            "rulesVersion": "2026.09.02-v3"
+          },
+          {
+            "id": "iv-global-max-flex",
+            "scopeType": "GLOBAL",
+            "scopeKey": "GLOBAL",
+            "primaryUseKey": "MAX_FLEX",
+            "ivStrategyKey": "MAX_FLEX",
+            "maxBattleRole": "FLEX",
+            "attackIvMin": null,
+            "attackIvPriority": null,
+            "attackIvConditionalMin": null,
+            "secondaryAttackIv": null,
+            "defenseIvMin": null,
+            "defenseIvPriority": null,
+            "staminaIvMin": null,
+            "staminaIvPriority": null,
+            "totalIvPercentMin": null,
+            "totalIvPercentPriority": null,
+            "secondaryTotalIvPercentMin": null,
+            "pvpRankMax": null,
+            "pvpRankConditionalMax": null,
+            "pvpPrMin": null,
+            "recommendedQuantity": null,
+            "hundoPriority": false,
+            "appliesOnlyWhenUseConfirmed": true,
+            "speciesSpecificOverride": false,
+            "overrideReasonZhTw": "",
+            "ivRecommendationZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+            "shortIvLabelZhTw": "Max：依角色分開保留",
             "rulesVersion": "2026.09.02-v3"
           }
         ],
         "ivShortLabels": [
-          "PvE：91%+可投入；96%+／15攻優先"
+          "道館：無固定門檻",
+          "Max：依角色分開保留"
         ],
-        "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+        "ivDirection": "道館：不設固定IV門檻；同物種比較時再參考既有等級、CP、防禦、HP與總IV。；Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
         "primaryUses": [
-          "PvE"
+          "道館",
+          "Max Battle"
         ],
         "primaryUseKeys": [
-          "PVE"
+          "GYM_DEFENSE",
+          "MAX_FLEX"
         ],
         "hasRocketUse": false,
         "hasEvolutionUse": false,
@@ -3555,34 +3634,37 @@
         "detailsLoaded": true
       },
       "roles": [
-        "INDEPENDENT_PVE"
+        "GYM_DEFENDER",
+        "MAX_CANDIDATE"
       ],
       "roleLabelsZhTw": [
-        "獨立PvE用途"
+        "道館守軍",
+        "Max候選"
       ],
-      "mainUseZhTw": "獨立PvE用途",
-      "memberSummaryZhTw": "主要保留幸福蛋；IV以PvE：91%+可投入；96%+／15攻優先為準。",
+      "mainUseZhTw": "道館守軍、Max候選",
+      "memberSummaryZhTw": "主要保留幸福蛋；IV以道館：無固定門檻、Max：依角色分開保留為準。",
       "ivShortLabels": [
-        "PvE：91%+可投入；96%+／15攻優先"
+        "道館：無固定門檻",
+        "Max：依角色分開保留"
       ],
       "ivRecommendations": [
         {
-          "id": "iv-global-pve",
+          "id": "iv-global-gym-defense",
           "scopeType": "GLOBAL",
           "scopeKey": "GLOBAL",
-          "primaryUseKey": "PVE",
-          "ivStrategyKey": "PVE_ATTACKER",
+          "primaryUseKey": "GYM_DEFENSE",
+          "ivStrategyKey": "GYM_DEFENDER",
           "maxBattleRole": null,
           "attackIvMin": null,
-          "attackIvPriority": 15,
+          "attackIvPriority": null,
           "attackIvConditionalMin": null,
           "secondaryAttackIv": null,
           "defenseIvMin": null,
           "defenseIvPriority": null,
           "staminaIvMin": null,
           "staminaIvPriority": null,
-          "totalIvPercentMin": 91.1,
-          "totalIvPercentPriority": 95.6,
+          "totalIvPercentMin": null,
+          "totalIvPercentPriority": null,
           "secondaryTotalIvPercentMin": null,
           "pvpRankMax": null,
           "pvpRankConditionalMax": null,
@@ -3592,8 +3674,38 @@
           "appliesOnlyWhenUseConfirmed": true,
           "speciesSpecificOverride": false,
           "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
-          "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+          "ivRecommendationZhTw": "道館：不設固定IV門檻；同物種比較時再參考既有等級、CP、防禦、HP與總IV。",
+          "shortIvLabelZhTw": "道館：無固定門檻",
+          "rulesVersion": "2026.09.02-v3"
+        },
+        {
+          "id": "iv-global-max-flex",
+          "scopeType": "GLOBAL",
+          "scopeKey": "GLOBAL",
+          "primaryUseKey": "MAX_FLEX",
+          "ivStrategyKey": "MAX_FLEX",
+          "maxBattleRole": "FLEX",
+          "attackIvMin": null,
+          "attackIvPriority": null,
+          "attackIvConditionalMin": null,
+          "secondaryAttackIv": null,
+          "defenseIvMin": null,
+          "defenseIvPriority": null,
+          "staminaIvMin": null,
+          "staminaIvPriority": null,
+          "totalIvPercentMin": null,
+          "totalIvPercentPriority": null,
+          "secondaryTotalIvPercentMin": null,
+          "pvpRankMax": null,
+          "pvpRankConditionalMax": null,
+          "pvpPrMin": null,
+          "recommendedQuantity": null,
+          "hundoPriority": false,
+          "appliesOnlyWhenUseConfirmed": true,
+          "speciesSpecificOverride": false,
+          "overrideReasonZhTw": "",
+          "ivRecommendationZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+          "shortIvLabelZhTw": "Max：依角色分開保留",
           "rulesVersion": "2026.09.02-v3"
         }
       ],
@@ -3613,7 +3725,7 @@
   },
   "pve": {
     "label": "特殊用途",
-    "detail": "最終進化為主要投資目標",
+    "detail": "道館防守：道館防守列為特殊用途；幸福蛋：可進化為幸福蛋；道館防守是特殊用途，不等於核心 PvE。",
     "tone": "SPECIAL"
   },
   "gym": {
@@ -3622,8 +3734,9 @@
     "tone": "SPECIAL"
   },
   "megaMax": {
-    "label": "—",
-    "tone": "NONE"
+    "label": "極巨：高",
+    "detail": "幸福蛋適用；前階可進化為候選",
+    "tone": "HIGH"
   },
   "familyValue": "HIGH",
   "retentionStrategy": "KEEP_TARGETS",
@@ -3646,21 +3759,23 @@
       "memberNameZhTw": "幸福蛋",
       "displayNameZhTw": "幸福蛋",
       "useKeys": [
-        "PVE"
+        "GYM_DEFENSE",
+        "MAX_FLEX"
       ],
       "variantKeys": [
-        "NORMAL"
+        "NORMAL",
+        "DYNAMAX"
       ],
       "variantSpecificOnly": false
     }
   ],
   "primaryTargetSummaryZhTw": "吉利蛋、幸福蛋",
   "preEvolutionActionZhTw": "前階主要作符合條件的進化候選。",
-  "handlingSummaryZhTw": "保留吉利蛋（道館防守候選），以及幸福蛋（PvE 實戰候選）；保留可進化為幸福蛋的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留吉利蛋、幸福蛋；前階主要作符合條件的進化候選。IV：道館：無固定門檻；PvE：91%+可投入；96%+／15攻優先。",
+  "handlingSummaryZhTw": "保留吉利蛋（道館防守候選），以及幸福蛋（道館防守候選、極巨候選）；保留可進化為幸福蛋的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留吉利蛋、幸福蛋；前階主要作符合條件的進化候選。IV：道館：無固定門檻；Max：依角色分開保留。",
   "ivShortLabels": [
     "道館：無固定門檻",
-    "PvE：91%+可投入；96%+／15攻優先"
+    "Max：依角色分開保留"
   ],
   "ivRecommendations": [
     {
@@ -3694,22 +3809,22 @@
       "rulesVersion": "2026.09.02-v3"
     },
     {
-      "id": "iv-global-pve",
+      "id": "iv-global-max-flex",
       "scopeType": "GLOBAL",
       "scopeKey": "GLOBAL",
-      "primaryUseKey": "PVE",
-      "ivStrategyKey": "PVE_ATTACKER",
-      "maxBattleRole": null,
+      "primaryUseKey": "MAX_FLEX",
+      "ivStrategyKey": "MAX_FLEX",
+      "maxBattleRole": "FLEX",
       "attackIvMin": null,
-      "attackIvPriority": 15,
+      "attackIvPriority": null,
       "attackIvConditionalMin": null,
       "secondaryAttackIv": null,
       "defenseIvMin": null,
       "defenseIvPriority": null,
       "staminaIvMin": null,
       "staminaIvPriority": null,
-      "totalIvPercentMin": 91.1,
-      "totalIvPercentPriority": 95.6,
+      "totalIvPercentMin": null,
+      "totalIvPercentPriority": null,
       "secondaryTotalIvPercentMin": null,
       "pvpRankMax": null,
       "pvpRankConditionalMax": null,
@@ -3719,16 +3834,16 @@
       "appliesOnlyWhenUseConfirmed": true,
       "speciesSpecificOverride": false,
       "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
-      "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
+      "ivRecommendationZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+      "shortIvLabelZhTw": "Max：依角色分開保留",
       "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "ivSummaryZhTw": "依成員用途分開保留：道館：無固定門檻；PvE：91%+可投入；96%+／15攻優先",
+  "ivSummaryZhTw": "依成員用途分開保留：道館：無固定門檻；Max：依角色分開保留",
   "primaryUses": [
     "道館",
     "後續進化",
-    "PvE"
+    "Max Battle"
   ],
   "holdReasons": [],
   "notices": [],

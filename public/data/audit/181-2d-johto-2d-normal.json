@@ -36,7 +36,7 @@
   "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #231；招式 VOLT_SWITCH／BRUTAL_SWING／TRAILBLAZE；UL（高級聯盟） Overall #57；招式 VOLT_SWITCH／BRUTAL_SWING／TRAILBLAZE；ML（大師聯盟） Overall #262；招式 VOLT_SWITCH／BRUTAL_SWING／THUNDER_PUNCH",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #233；招式 VOLT_SWITCH／BRUTAL_SWING／TRAILBLAZE；UL（高級聯盟） Overall #61；招式 VOLT_SWITCH／BRUTAL_SWING／TRAILBLAZE；ML（大師聯盟） Overall #263；招式 VOLT_SWITCH／BRUTAL_SWING／THUNDER_PUNCH",
   "pveSummaryZhTw": "無顯著用途。Mega／Primal 用途需與普通／暗影版本分開評估",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -570,7 +570,7 @@
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #231；招式 VOLT_SWITCH／BRUTAL_SWING／TRAILBLAZE；UL（高級聯盟） Overall #57；招式 VOLT_SWITCH／BRUTAL_SWING／TRAILBLAZE；ML（大師聯盟） Overall #262；招式 VOLT_SWITCH／BRUTAL_SWING／THUNDER_PUNCH",
+      "summaryZhTw": "GL（超級聯盟） Overall #233；招式 VOLT_SWITCH／BRUTAL_SWING／TRAILBLAZE；UL（高級聯盟） Overall #61；招式 VOLT_SWITCH／BRUTAL_SWING／TRAILBLAZE；ML（大師聯盟） Overall #263；招式 VOLT_SWITCH／BRUTAL_SWING／THUNDER_PUNCH",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -585,21 +585,21 @@
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ml-20260715",
+          "id": "pvpoke-ml-20260901",
           "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -635,7 +635,7 @@
       "speciesKey": "ampharos",
       "formKey": "181-johto",
       "variantKey": "NORMAL",
-      "rank": 231,
+      "rank": 233,
       "rating": "621",
       "score": null,
       "tier": null,
@@ -645,16 +645,16 @@
         "TRAILBLAZE"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     },
     {
@@ -667,8 +667,8 @@
       "speciesKey": "ampharos",
       "formKey": "181-johto",
       "variantKey": "NORMAL",
-      "rank": 262,
-      "rating": "497",
+      "rank": 263,
+      "rating": "495",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -677,16 +677,16 @@
         "THUNDER_PUNCH"
       ],
       "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ml-20260715",
+        "id": "pvpoke-ml-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
       }
     },
     {
@@ -699,8 +699,8 @@
       "speciesKey": "ampharos",
       "formKey": "181-johto",
       "variantKey": "NORMAL",
-      "rank": 57,
-      "rating": "618",
+      "rank": 61,
+      "rating": "617",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -709,16 +709,16 @@
         "TRAILBLAZE"
       ],
       "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ul-20260715",
+        "id": "pvpoke-ul-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
       }
     }
   ],
@@ -751,30 +751,30 @@
       "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ml-20260715",
+      "id": "pvpoke-ml-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],
