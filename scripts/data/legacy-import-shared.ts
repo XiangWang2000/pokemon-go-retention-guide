@@ -258,7 +258,9 @@ export function legacyInitialDecision(
   if (variantKey === "MEGA") return "KEEP";
   if ((options.keepDynamax ?? true) && variantKey === "DYNAMAX") return "KEEP";
   if (pveUseLevels[formId] === "CORE_INVESTMENT") return "KEEP";
-  if (pveUseLevels[formId]) return "CONDITIONAL_KEEP";
+  if (pveUseLevels[formId] && pveUseLevels[formId] !== "NO_SIGNIFICANT_USE") {
+    return "CONDITIONAL_KEEP";
+  }
   const best = Math.min(...ranks.map((rank) => rank.rank), Number.POSITIVE_INFINITY);
   if (best <= 100) return "KEEP";
   if (best <= 250 || (variantKey === "NORMAL" && formId === "181-johto")) {
