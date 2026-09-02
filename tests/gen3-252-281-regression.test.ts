@@ -203,11 +203,11 @@ describe("Gen 3 #252-#281 integration", () => {
     expect(existing).toHaveLength(1194);
     expect(existing.filter((candidate) => candidate.decision === "KEEP")).toHaveLength(93);
     expect(existing.filter((candidate) => candidate.decision === "CONDITIONAL_KEEP")).toHaveLength(
-      300,
+      301,
     );
     expect(
       existing.filter((candidate) => candidate.decision === "TRANSFER_CANDIDATE"),
-    ).toHaveLength(801);
+    ).toHaveLength(800);
     expect(existing.filter((candidate) => candidate.decision === "HOLD_FOR_NOW")).toHaveLength(0);
     expect(
       existing.filter(
