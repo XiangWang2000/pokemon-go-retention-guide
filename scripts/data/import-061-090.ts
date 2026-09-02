@@ -24,7 +24,9 @@ const prisma = new PrismaClient({
 
 const checkedAt = new Date("2026-07-30T23:45:00+08:00");
 const correctionAt = new Date("2026-07-31T00:20:00+08:00");
-const pvpokeCommit = "86847e535b7e0a0f4e91f9628b3fc713ae6adca7";
+const pvpCheckedAt = new Date("2026-09-01T00:00:00+08:00");
+const pvpSnapshotRoot = "data/sources/pvpoke/2026-09-01";
+const pvpokeCommit = "7b96d91fb553780653190ad32de001b5d9086a7f";
 const categories = [
   "PVP",
   "PVE",
@@ -35,9 +37,9 @@ const categories = [
   "EVOLUTION_VALUE",
 ] as const;
 const leagues = [
-  { key: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260715", label: "GL（超級聯盟）" },
-  { key: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260715", label: "UL（高級聯盟）" },
-  { key: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260715", label: "ML（大師聯盟）" },
+  { key: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260901", label: "GL（超級聯盟）" },
+  { key: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260901", label: "UL（高級聯盟）" },
+  { key: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260901", label: "ML（大師聯盟）" },
 ] as const;
 
 type LeagueKey = (typeof leagues)[number]["key"];
@@ -176,7 +178,7 @@ const officialEvidenceLinks: Array<{
 async function readRankings() {
   const result = new Map<LeagueKey, RankingRow[]>();
   for (const league of leagues) {
-    const bytes = await readFile(`data/sources/pvpoke/rankings-${league.cp}.json`);
+    const bytes = await readFile(`${pvpSnapshotRoot}/rankings-${league.cp}.json`);
     const rows = JSON.parse(bytes.toString("utf8").replace(/^\uFEFF/, "")) as RankingRow[];
     result.set(league.key, rows);
     const hash = createHash("sha256").update(bytes).digest("hex");
@@ -185,7 +187,7 @@ async function readRankings() {
       data: {
         dataVersion: `${pvpokeCommit}; sha256=${hash}`,
         notes:
-          "Open League／Overall 固定 commit 完整 JSON；名次以陣列索引加一重現，不使用搜尋摘要。",
+          "Open League／Overall 2026-09-01 固定快照；名次以陣列索引加一重現，不使用搜尋摘要。",
       },
     });
   }
@@ -710,11 +712,11 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       rating: rank.rating === null ? null : String(rank.rating),
       recommendedMoves: JSON.stringify(rank.moves),
       rawNotes: `${rank.leagueLabel} Open／Overall；固定 JSON 陣列索引加一，可穩定重現。`,
-      seasonOrVersion: `PvPoke commit ${pvpokeCommit}`,
-      extractionMethod: "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      seasonOrVersion: `PvPoke snapshot 2026-09-01 (${pvpokeCommit})`,
+      extractionMethod: "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
       reproducible: true,
       sourceId: rank.sourceId,
-      checkedAt,
+      checkedAt: pvpCheckedAt,
     })),
   );
   if (rawRows.length) await prisma.rawEvaluationData.createMany({ data: rawRows });

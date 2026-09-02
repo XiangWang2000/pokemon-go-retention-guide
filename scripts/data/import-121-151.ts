@@ -38,7 +38,10 @@ const batchEnd = 151;
 const expectedCounts = { species: 31, forms: 39, variants: 165 } as const;
 const crossBatchEvolution = ["120-kanto", "121-kanto"] as const;
 const checkedAt = new Date("2026-08-03T18:30:00+08:00");
-const pvpokeCommit = "86847e535b7e0a0f4e91f9628b3fc713ae6adca7";
+const releaseAuditAt = new Date("2026-09-02T00:00:00+08:00");
+const pvpCheckedAt = new Date("2026-09-01T00:00:00+08:00");
+const pvpSnapshotRoot = "data/sources/pvpoke/2026-09-01";
+const pvpokeCommit = "7b96d91fb553780653190ad32de001b5d9086a7f";
 const categories = [
   "PVP",
   "PVE",
@@ -49,9 +52,9 @@ const categories = [
   "EVOLUTION_VALUE",
 ] as const;
 const leagues = [
-  { key: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260715", label: "GL（超級聯盟）" },
-  { key: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260715", label: "UL（高級聯盟）" },
-  { key: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260715", label: "ML（大師聯盟）" },
+  { key: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260901", label: "GL（超級聯盟）" },
+  { key: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260901", label: "UL（高級聯盟）" },
+  { key: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260901", label: "ML（大師聯盟）" },
 ] as const;
 
 type LeagueKey = (typeof leagues)[number]["key"];
@@ -83,7 +86,7 @@ const officialSourceMetadata: Record<
 > = {
   "OFF-MEGA-STARMIE-2026": {
     title: "Starmie Super Mega Raid Day 2026",
-    summary: "公告超級寶石海星將於 2026-08-22 登場；截至 2026-08-03 查閱時尚未開放。",
+    summary: "官方活動頁確認超級寶石海星已於 2026-08-22 正式登場。",
     publishedAt: "2026-07-14",
   },
   "OFF-GALAR-MR-MIME-2020": {
@@ -224,7 +227,7 @@ const officialEvidenceLinks = officialResearch.sources.flatMap((source) =>
 async function readRankings() {
   const result = new Map<LeagueKey, RankingRow[]>();
   for (const league of leagues) {
-    const bytes = await readFile(`data/sources/pvpoke/rankings-${league.cp}.json`);
+    const bytes = await readFile(`${pvpSnapshotRoot}/rankings-${league.cp}.json`);
     const rows = JSON.parse(bytes.toString("utf8").replace(/^\uFEFF/, "")) as RankingRow[];
     result.set(league.key, rows);
     const hash = createHash("sha256").update(bytes).digest("hex");
@@ -233,7 +236,7 @@ async function readRankings() {
       data: {
         dataVersion: `${pvpokeCommit}; sha256=${hash}`,
         notes:
-          "Open League／Overall 固定 commit 完整 JSON；名次以陣列索引加一重現，不使用搜尋摘要。",
+          "Open League／Overall 2026-09-01 固定快照；名次以陣列索引加一重現，不使用搜尋摘要。",
       },
     });
   }
@@ -269,6 +272,8 @@ async function upsertOfficialSources() {
     const metadata = officialSourceMetadata[source.id];
     if (!metadata) throw new Error(`官方來源缺少可追溯中繼資料：${source.id}`);
     const publishedAt = metadata.publishedAt ? new Date(`${metadata.publishedAt}T00:00:00Z`) : null;
+    const sourceCheckedAt = source.id === "OFF-MEGA-STARMIE-2026" ? releaseAuditAt : checkedAt;
+    const sourceDataVersion = source.id === "OFF-MEGA-STARMIE-2026" ? "accessed-2026-09-02" : "accessed-2026-08-03";
     await prisma.sourceReference.upsert({
       where: { id: source.id },
       create: {
@@ -279,18 +284,18 @@ async function upsertOfficialSources() {
         sourceTitleOriginal: metadata.title,
         sourceLanguage: "en",
         sourceSummaryZhTw: metadata.summary,
-        accessedAt: checkedAt,
+        accessedAt: sourceCheckedAt,
         publishedAt,
-        dataVersion: "accessed-2026-08-03",
+        dataVersion: sourceDataVersion,
         notes: "第 #121～#151 批次官方研究表。",
       },
       update: {
         sourceUrl: source.url,
         sourceTitleOriginal: metadata.title,
         sourceSummaryZhTw: metadata.summary,
-        accessedAt: checkedAt,
+        accessedAt: sourceCheckedAt,
         publishedAt,
-        dataVersion: "accessed-2026-08-03",
+        dataVersion: sourceDataVersion,
         notes: "第 #121～#151 批次官方研究表。",
       },
     });
@@ -566,7 +571,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
   await prisma.pokemonForm.update({
     where: { id: crossBatchEvolution[0] },
     data: {
-      evolutionFamilyNotesZhTw: "已與 #121 寶石海星整合；超級寶石海星已公告但截至查閱日尚未開放。",
+      evolutionFamilyNotesZhTw: "已與 #121 寶石海星整合；超級寶石海星已於 2026-08-22 正式登場。",
     },
   });
   await prisma.categoryEvaluation.updateMany({
@@ -576,7 +581,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
     },
     data: {
       status: "VERIFIED",
-      summaryZhTw: "#120 海星星已接到 #121 寶石海星；只留實際 PvP／未來 Mega 候選。",
+      summaryZhTw: "#120 海星星已接到 #121 寶石海星；只留實際 PvP／已開放 Mega 候選。",
       materialToDecision: true,
       checkedAt,
     },
@@ -633,7 +638,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       variantKey,
       isReleased: released,
       releaseStatus: released ? "RELEASED" : "UNRELEASED",
-      releaseVerifiedAt: checkedAt,
+      releaseVerifiedAt: id === "121-kanto-mega" ? releaseAuditAt : checkedAt,
       notesZhTw:
         variantKey === "GIGANTAMAX"
           ? "超極巨是獨立 Max 版本；不得與普通、暗影、Mega 或極巨版本混為一談。"
@@ -685,11 +690,11 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       rating: rank.rating === null ? null : String(rank.rating),
       recommendedMoves: JSON.stringify(rank.moves),
       rawNotes: `${rank.leagueLabel} Open／Overall；固定 JSON 陣列索引加一，可穩定重現。`,
-      seasonOrVersion: `PvPoke commit ${pvpokeCommit}`,
-      extractionMethod: "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      seasonOrVersion: `PvPoke snapshot 2026-09-01 (${pvpokeCommit})`,
+      extractionMethod: "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
       reproducible: true,
       sourceId: rank.sourceId,
-      checkedAt,
+      checkedAt: pvpCheckedAt,
     })),
   );
   if (rawRows.length) await prisma.rawEvaluationData.createMany({ data: rawRows });
@@ -808,7 +813,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           materialToDecision = variant.released;
           summaryZhTw = variant.released
             ? "此 Mega 型態已開放且與其他版本分開；只保留精確版本候選，不回推全家族必留。"
-            : "超級寶石海星已公告於 2026-08-22 登場；截至查閱日仍為 UNRELEASED。";
+            : "此 Mega 型態尚未開放。";
         } else if (variant.form.id === "150-armored") {
           status = "NOT_APPLICABLE";
           summaryZhTw = "裝甲超夢是獨立型態，不能作超級超夢 X／Y 候選。";
@@ -833,7 +838,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           status = "PARTIALLY_VERIFIED";
           provenance = "SOURCE_VERIFIED";
           materialToDecision = true;
-          summaryZhTw = "Mega 已公告但截至查閱日尚未開放；普通個體只作少量未來候選。";
+          summaryZhTw = "Mega 已公告但尚未開放；普通個體只作少量未來候選。";
         } else {
           status = "NOT_APPLICABLE";
           summaryZhTw = "此版本不是 Mega 型態；家族有 Mega 不代表所有成員都值得保留。";
@@ -865,7 +870,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         if (variant.form.id === "121-kanto" && variant.variantKey === "NORMAL") {
           status = "VERIFIED";
           provenance = "SOURCE_VERIFIED";
-          summaryZhTw = "已由 #120 海星星接回本批；Mega 將於 2026-08-22 登場且截至查閱日尚未開放。";
+          summaryZhTw = "已由 #120 海星星接回本批；超級寶石海星已於 2026-08-22 正式登場。";
           materialToDecision = true;
         } else if (requiresScopedHold(variant.form.id)) {
           status = "PARTIALLY_VERIFIED";
@@ -943,7 +948,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
     const pvpUseful = result.ranks.some((item) => item.rank <= 250);
     const evolutionText =
       variant.form.id === "121-kanto" && variant.variantKey === "NORMAL"
-        ? "已接回 #120 海星星；Mega 於 2026-08-22 登場且截至查閱日尚未開放。"
+        ? "已接回 #120 海星星；超級寶石海星已於 2026-08-22 正式登場。"
         : requiresScopedHold(variant.form.id)
           ? "仍有 #151 範圍外進化；完整家族補齊前只留少量候選。"
           : isTruncatedComponent(variant.form.id)
@@ -977,7 +982,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         variant.form.id === "121-kanto" && variant.variantKey === "SHADOW"
           ? "官方已確認暗影寶石海星進化線已開放；沒有火箭隊排名不等於未推出。"
           : variant.form.id === "121-kanto" && variant.variantKey === "PURIFIED"
-            ? "淨化版本可存在，但淨化不可逆且不因未來 Mega 自動建議淨化。"
+            ? "淨化版本可存在，但淨化不可逆；已開放 Mega 用途也不構成自動淨化理由。"
             : "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
       gymSummaryZhTw:
         variant.form.id === "143-kanto" && variant.variantKey === "NORMAL"
@@ -990,7 +995,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       megaSummaryZhTw: ["MEGA", "MEGA_X", "MEGA_Y"].includes(variant.variantKey)
         ? variant.released
           ? "此 Mega 型態已開放且與其他版本分開；不回推全家族必留。"
-          : "超級寶石海星已公告於 2026-08-22 登場但截至查閱日尚未開放。"
+          : "此 Mega 型態尚未開放。"
         : variant.form.id === "150-armored"
           ? "裝甲超夢不能作超級超夢 X／Y 候選。"
           : variant.variantKey === "NORMAL" &&
@@ -999,7 +1004,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
                 releasedMegaYForms121151.has(variant.form.id))
             ? "本體可作已開放 Mega 的候選；只留實際投入者，其餘普通重複可傳。"
             : variant.form.id === "121-kanto" && variant.variantKey === "NORMAL"
-              ? "Mega 已公告但尚未開放；普通寶石海星只作少量未來候選。"
+              ? "此型態沒有已確認 Mega 用途；不因同家族其他版本有用途而升格。"
               : "此型態沒有已確認 Mega 用途；不因同家族其他版本有用途而升格。",
       maxBattleSummaryZhTw:
         variant.variantKey === "GIGANTAMAX"
@@ -1125,14 +1130,14 @@ async function addChangeLogs() {
       reason: "將 #121 寶石海星接回前批 #120 海星星。",
     },
     {
-      id: "r13-mega-starmie-announced",
+      id: "r13-mega-starmie-released",
       entityType: "BattleVariant",
       entityId: "121-kanto-mega",
       fieldName: "releaseStatus",
-      previousValue: null,
-      newValue: "ANNOUNCED_UNRELEASED_2026-08-22",
+      previousValue: "ANNOUNCED_UNRELEASED_2026-08-22",
+      newValue: "RELEASED",
       sourceId: "OFF-MEGA-STARMIE-2026",
-      reason: "保留公告證據，但不把尚未登場的 Mega 寫成已開放。",
+      reason: "官方活動頁確認超級寶石海星已於 2026-08-22 正式登場；Gen1 審查更新為已開放。",
     },
     {
       id: "r13-mega-mewtwo-x",
@@ -1186,7 +1191,7 @@ async function addChangeLogs() {
         newValue: change.newValue,
         sourceId: change.sourceId,
         changeReasonZhTw: change.reason,
-        changedAt: checkedAt,
+        changedAt: change.id === "r13-mega-starmie-released" ? releaseAuditAt : checkedAt,
         rulesVersion: RULES_VERSION,
       },
     });
