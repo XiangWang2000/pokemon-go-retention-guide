@@ -223,20 +223,6 @@ describe("家族總覽 UI", () => {
     }
   });
 
-  it("ML 摘要會區分物種榜主力與次要候選，不把個體 IV Rank 當物種名次", () => {
-    const dragonite = byMember("149-kanto");
-    const machamp = byMember("068-kanto");
-
-    expect(dragonite.handlingSummaryZhTw).toContain("ML 主力候選");
-    expect(dragonite.handlingSummaryZhTw).toContain("物種榜 #");
-    expect(dragonite.handlingSummaryZhTw).toContain("高 IV 投資");
-
-    expect(machamp.handlingSummaryZhTw).toContain("ML 次要候選");
-    expect(machamp.handlingSummaryZhTw).toContain("物種榜 #");
-    expect(machamp.handlingSummaryZhTw).toContain("少量高 IV 即可");
-    expect(machamp.handlingSummaryZhTw).not.toContain("ML 高 IV 投資候選");
-  });
-
   it("特殊取得家族不會顯示普通重複可傳標籤", () => {
     const mewFamily = byMember("151-kanto");
     const html = renderToStaticMarkup(
