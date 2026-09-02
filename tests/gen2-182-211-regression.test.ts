@@ -5,6 +5,7 @@ import { evolutionPairs182211, forms182211, species182211 } from "@/data/batch-1
 const dashboard = JSON.parse(readFileSync("site-data/dashboard.json", "utf8")) as Array<{
   id: string;
   evolutionFamilyNotesZhTw: string;
+  releaseStatus: string;
   releaseVerifiedAt: string | null;
 }>;
 const sources = JSON.parse(readFileSync("site-data/sources.json", "utf8")) as Array<{
@@ -16,10 +17,10 @@ const sources = JSON.parse(readFileSync("site-data/sources.json", "utf8")) as Ar
 describe("Gen 2 #182-211 data integration", () => {
   it("publishes current Dynamax Espeon and Umbreon variants", () => {
     expect(dashboard.find((row) => row.id === "196-johto-dynamax")).toMatchObject({
-      releaseVerifiedAt: expect.any(String),
+      releaseStatus: "RELEASED",
     });
     expect(dashboard.find((row) => row.id === "197-johto-dynamax")).toMatchObject({
-      releaseVerifiedAt: expect.any(String),
+      releaseStatus: "RELEASED",
     });
   });
 
