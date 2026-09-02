@@ -556,7 +556,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         evolutionFamilyNotesZhTw: form.evolutionFamilyNotesZhTw,
         isReleasedInPokemonGo: true,
         releaseStatus: "RELEASED",
-        releaseVerifiedAt: checkedAt,
+        releaseVerifiedAt: id === "121-kanto-mega" ? releaseAuditAt : checkedAt,
       };
     }),
   });
@@ -571,7 +571,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
   await prisma.pokemonForm.update({
     where: { id: crossBatchEvolution[0] },
     data: {
-      evolutionFamilyNotesZhTw: "已與 #121 寶石海星整合；超級寶石海星已公告但截至查閱日尚未開放。",
+      evolutionFamilyNotesZhTw: "已與 #121 寶石海星整合；超級寶石海星已於 2026-08-22 正式登場。",
     },
   });
   await prisma.categoryEvaluation.updateMany({
@@ -581,7 +581,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
     },
     data: {
       status: "VERIFIED",
-      summaryZhTw: "#120 海星星已接到 #121 寶石海星；只留實際 PvP／未來 Mega 候選。",
+      summaryZhTw: "#120 海星星已接到 #121 寶石海星；只留實際 PvP／已開放 Mega 候選。",
       materialToDecision: true,
       checkedAt,
     },
@@ -982,7 +982,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         variant.form.id === "121-kanto" && variant.variantKey === "SHADOW"
           ? "官方已確認暗影寶石海星進化線已開放；沒有火箭隊排名不等於未推出。"
           : variant.form.id === "121-kanto" && variant.variantKey === "PURIFIED"
-            ? "淨化版本可存在，但淨化不可逆且不因未來 Mega 自動建議淨化。"
+            ? "淨化版本可存在，但淨化不可逆；已開放 Mega 用途也不構成自動淨化理由。"
             : "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
       gymSummaryZhTw:
         variant.form.id === "143-kanto" && variant.variantKey === "NORMAL"
@@ -995,7 +995,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
       megaSummaryZhTw: ["MEGA", "MEGA_X", "MEGA_Y"].includes(variant.variantKey)
         ? variant.released
           ? "此 Mega 型態已開放且與其他版本分開；不回推全家族必留。"
-          : "超級寶石海星已公告於 2026-08-22 登場但截至查閱日尚未開放。"
+          : "此 Mega 型態尚未開放。"
         : variant.form.id === "150-armored"
           ? "裝甲超夢不能作超級超夢 X／Y 候選。"
           : variant.variantKey === "NORMAL" &&
@@ -1004,7 +1004,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
                 releasedMegaYForms121151.has(variant.form.id))
             ? "本體可作已開放 Mega 的候選；只留實際投入者，其餘普通重複可傳。"
             : variant.form.id === "121-kanto" && variant.variantKey === "NORMAL"
-              ? "Mega 已公告但尚未開放；普通寶石海星只作少量未來候選。"
+              ? "此型態沒有已確認 Mega 用途；不因同家族其他版本有用途而升格。"
               : "此型態沒有已確認 Mega 用途；不因同家族其他版本有用途而升格。",
       maxBattleSummaryZhTw:
         variant.variantKey === "GIGANTAMAX"
