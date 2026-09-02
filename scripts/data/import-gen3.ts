@@ -161,7 +161,9 @@ type BatchDefinition = {
 };
 
 const checkedAt = new Date("2026-08-09T00:00:00+08:00");
-const pvpokeCommit = "86847e535b7e0a0f4e91f9628b3fc713ae6adca7";
+const pvpokeCheckedAt = new Date("2026-09-01T00:00:00+08:00");
+const pvpokeSnapshotRoot = "data/sources/pvpoke/2026-09-01";
+const pvpokeCommit = "7b96d91fb553780653190ad32de001b5d9086a7f";
 const categories: readonly Category[] = [
   "PVP",
   "PVE",
@@ -172,9 +174,9 @@ const categories: readonly Category[] = [
   "EVOLUTION_VALUE",
 ];
 const leagues = [
-  { key: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260715", label: "GL（超級聯盟）" },
-  { key: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260715", label: "UL（高級聯盟）" },
-  { key: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260715", label: "ML（大師聯盟）" },
+  { key: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260901", label: "GL（超級聯盟）" },
+  { key: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260901", label: "UL（高級聯盟）" },
+  { key: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260901", label: "ML（大師聯盟）" },
 ] as const;
 
 function definitionFor(batch: string): BatchDefinition {
@@ -417,7 +419,7 @@ async function assertDatabaseCanonical(batch: BatchDefinition) {
 async function readRankings() {
   const result = new Map<LeagueKey, RankingRow[]>();
   for (const league of leagues) {
-    const bytes = await readFile("data/sources/pvpoke/rankings-" + league.cp + ".json");
+    const bytes = await readFile(pvpokeSnapshotRoot + "/rankings-" + league.cp + ".json");
     const rows = JSON.parse(bytes.toString("utf8").replace(/^\uFEFF/, "")) as RankingRow[];
     result.set(league.key, rows);
     const hash = createHash("sha256").update(bytes).digest("hex");
@@ -430,15 +432,16 @@ async function readRankings() {
         sourceType: "PVP",
         sourceTitleOriginal: "PvPoke Battle League Rankings",
         sourceLanguage: "en",
-        sourceSummaryZhTw: "固定 commit 的 Open League／Overall 排名快照。",
-        accessedAt: checkedAt,
+        sourceSummaryZhTw: "2026-09-01 固定 Open League／Overall 排名快照。",
+        accessedAt: pvpokeCheckedAt,
         publishedAt: null,
         dataVersion: pvpokeCommit + "; sha256=" + hash,
         notes: "完整 JSON 陣列 index + 1 可重現名次。",
       },
       update: {
+        accessedAt: pvpokeCheckedAt,
         dataVersion: pvpokeCommit + "; sha256=" + hash,
-        notes: "完整 JSON 陣列 index + 1 可重現名次。",
+        notes: "2026-09-01 完整 JSON 陣列 index + 1 可重現名次。",
       },
     });
   }
@@ -849,7 +852,7 @@ export async function runImport(batchName: string) {
         extractionMethod: "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
         reproducible: true,
         sourceId: rank.sourceId,
-        checkedAt,
+        checkedAt: pvpokeCheckedAt,
       })),
     ),
     ...variants.flatMap((variant) => {
