@@ -75,6 +75,20 @@ export const LEGACY_LEAGUES = [
   { key: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260715", label: "ML（大師聯盟）" },
 ] as const;
 
+export type LegacyPvpSnapshot = {
+  root: string;
+  label: string;
+  checkedAt: Date;
+  sourceIds: Record<LegacyLeagueKey, string>;
+};
+
+function legacyLeagues(snapshot?: LegacyPvpSnapshot) {
+  return LEGACY_LEAGUES.map((league) => ({
+    ...league,
+    sourceId: snapshot?.sourceIds[league.key] ?? league.sourceId,
+  }));
+}
+
 type SourceReferenceClient = Pick<PrismaClient, "sourceReference">;
 
 export function optionalLegacyDate(value: string | null | undefined) {
@@ -150,19 +164,26 @@ export async function upsertLegacySources(
   }
 }
 
-export async function readLegacyRankings(prisma: SourceReferenceClient, pvpokeCommit: string) {
+export async function readLegacyRankings(
+  prisma: SourceReferenceClient,
+  pvpokeCommit: string,
+  snapshot?: LegacyPvpSnapshot,
+) {
   const result = new Map<LegacyLeagueKey, LegacyRankingRow[]>();
-  for (const league of LEGACY_LEAGUES) {
-    const bytes = await readFile(`data/sources/pvpoke/rankings-${league.cp}.json`);
+  for (const league of legacyLeagues(snapshot)) {
+    const root = snapshot?.root ?? "data/sources/pvpoke";
+    const bytes = await readFile(`${root}/rankings-${league.cp}.json`);
     const rows = JSON.parse(bytes.toString("utf8").replace(/^\uFEFF/, "")) as LegacyRankingRow[];
     result.set(league.key, rows);
     const hash = createHash("sha256").update(bytes).digest("hex");
     await prisma.sourceReference.update({
       where: { id: league.sourceId },
       data: {
+        accessedAt: snapshot?.checkedAt,
         dataVersion: `${pvpokeCommit}; sha256=${hash}`,
-        notes:
-          "Open League／Overall 固定 commit 完整 JSON；名次以陣列索引加一重現，不使用搜尋摘要。",
+        notes: snapshot
+          ? `Open League／Overall ${snapshot.label} 固定快照；名次以陣列索引加一重現，不使用搜尋摘要。`
+          : "Open League／Overall 固定 commit 完整 JSON；名次以陣列索引加一重現，不使用搜尋摘要。",
       },
     });
   }
@@ -194,9 +215,10 @@ export function findLegacyRanks<T extends LegacyForm>(
   variantKey: "NORMAL" | "SHADOW",
   rankings: Map<LegacyLeagueKey, LegacyRankingRow[]>,
   speciesIdFor: (form: T, shadow: boolean) => string,
+  snapshot?: LegacyPvpSnapshot,
 ) {
   const speciesId = speciesIdFor(form, variantKey === "SHADOW");
-  return LEGACY_LEAGUES.flatMap((league) => {
+  return legacyLeagues(snapshot).flatMap((league) => {
     const rows = rankings.get(league.key) ?? [];
     const index = rows.findIndex((row) => row.speciesId === speciesId);
     if (index < 0) return [];
