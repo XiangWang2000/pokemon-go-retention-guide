@@ -2,6 +2,9 @@ name: Prepare Release Snapshot
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - audit-gen3-hoenn
 
 permissions:
   contents: write
