@@ -750,7 +750,7 @@ export const releasedShadowForms342371 = new Set<string>([
   "371-hoenn",
 ]);
 export const releasedMegaForms342371 = new Set<string>(["354-hoenn", "359-hoenn", "362-hoenn"]);
-export const releasedDynamaxForms342371 = new Set<string>();
+export const releasedDynamaxForms342371 = new Set<string>(["349-hoenn", "350-hoenn", "363-hoenn", "364-hoenn", "365-hoenn"]);
 export const releasedGigantamaxForms342371 = new Set<string>();
 
 export const specialVariants342371: Gen3SpecialVariant[] = [
@@ -961,4 +961,11 @@ export function pvpokeSpeciesId342371(form: Gen3Form, shadow: boolean) {
   return shadow ? ids.shadow : ids.normal;
 }
 
+export const maxUseLevels342371: Record<string, PveUseLevel> = {
+  "349-hoenn": "SPECIAL_USE",
+  "350-hoenn": "SPECIAL_USE",
+  "363-hoenn": "USABLE_OR_BUDGET",
+  "364-hoenn": "USABLE_OR_BUDGET",
+  "365-hoenn": "USABLE_OR_BUDGET",
+};
 export const truncatedForms342371 = new Set<string>();
