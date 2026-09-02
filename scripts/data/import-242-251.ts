@@ -79,6 +79,9 @@ runLegacyBatchImport({
   dynamaxDefaultDecision: "CONDITIONAL_KEEP",
   variantUseOverrides: {
     "242-johto-normal": {
+      categorySourceIds: {
+        GYM: ["PVE-BLISSEY-20260902"],
+      },
       pveUseLevel: "NO_SIGNIFICANT_USE",
       pveSummaryZhTw:
         "幸福蛋不適合作為團體戰攻擊手；其主要保留理由是道館防守與 Max 輔助角色，不應標成一般 PvE 攻擊候選。",
