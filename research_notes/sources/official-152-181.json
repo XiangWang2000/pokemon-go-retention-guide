@@ -1,6 +1,6 @@
 {
   "batch": "152-181",
-  "checkedAt": "2026-08-08",
+  "checkedAt": "2026-09-02",
   "sources": [
     {
       "id": "OFF-JOHTO-TOUR-2022",
@@ -148,6 +148,21 @@
       "publishedAt": null,
       "sourceSummaryZhTw": "Togekiss source is used to verify the external evolution stub and a provisional SPECIAL_USE target; full battle data is outside this validation batch.",
       "supports": []
+    },
+    {
+      "id": "MAX-GEN2-HOOTHOOT-20260902",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Dynamax Hoothoot Max Monday: Event Guide",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/dynamax-hoothoot-max-monday-event-guide/",
+      "accessedAt": "2026-09-02",
+      "publishedAt": "2026-06-21",
+      "sourceSummaryZhTw": "確認極巨咕咕於 2026-06-22 Max Monday 首次登場；其可進化的極巨貓頭夜鷹亦作獨立 Max 版本評估。",
+      "supports": [
+        "163-johto-dynamax",
+        "164-johto-dynamax"
+      ]
     }
   ],
   "evolutionPaths": [
