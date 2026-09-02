@@ -343,14 +343,14 @@ async function upsertOfficialSources() {
         sourceSummaryZhTw: source.summary,
         accessedAt: sourceCheckedAt,
         publishedAt: source.publishedAt,
-        dataVersion: "accessed-2026-08-03",
+        dataVersion: source.id === "OFF-MEGA-STARMIE-2026" ? "accessed-2026-09-02" : "accessed-2026-08-03",
         notes: "第 #091～#120 批次的型態、進化、Mega 與 Max 推出證據。",
       },
       update: {
         sourceSummaryZhTw: source.summary,
         accessedAt: sourceCheckedAt,
         publishedAt: source.publishedAt,
-        dataVersion: "accessed-2026-08-03",
+        dataVersion: source.id === "OFF-MEGA-STARMIE-2026" ? "accessed-2026-09-02" : "accessed-2026-08-03",
         notes: "第 #091～#120 批次的型態、進化、Mega 與 Max 推出證據。",
       },
     });
@@ -518,7 +518,7 @@ function decisionFor(input: {
       decision: "CONDITIONAL_KEEP",
       ruleKey: "VALUABLE_EVOLUTION",
       reason:
-        "官方已公告 #121 寶石海星的 Mega 將於 2026-08-22 登場；截至查閱日尚未開放，只留少量未來進化候選。",
+        "超級寶石海星已於 2026-08-22 正式登場；海星星只留少量實際 Mega／進化候選。",
     };
   }
   if (requiresScopedHold(form.id)) {
@@ -908,7 +908,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           status = "VERIFIED";
           provenance = "SOURCE_VERIFIED";
           summaryZhTw =
-            "官方已公告 #121 寶石海星的 Mega 將於 2026-08-22 登場；截至查閱日尚未開放，只留少量進化候選。";
+            "超級寶石海星已於 2026-08-22 正式登場；海星星只留少量實際 Mega／進化候選。";
           materialToDecision = true;
         } else if (requiresScopedHold(variant.form.id)) {
           status = "PARTIALLY_VERIFIED";
@@ -983,7 +983,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
     const pvpUseful = result.ranks.some((item) => item.rank <= 250);
     const evolutionText =
       variant.form.id === "120-kanto" && variant.variantKey === "NORMAL"
-        ? "官方已公告 #121 寶石海星的 Mega 將於 2026-08-22 登場；尚未開放，只留少量進化候選，普通海星星不等於 Mega。"
+        ? "超級寶石海星已於 2026-08-22 正式登場；普通海星星本身不是 Mega，只留少量可進化成實際 Mega 候選的個體。"
         : ["103-alola", "105-alola", "110-galar"].includes(variant.form.id)
           ? "此地區末階只曾由官方指定活動進化取得；已標為 requiresEvent，不偽裝成常駐關都路徑。"
           : requiresScopedHold(variant.form.id)
@@ -1036,7 +1036,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           : ["094-kanto", "115-kanto"].includes(variant.form.id)
             ? "本體可作已開放 Mega 的候選，但仍只留實際要投入者。"
             : variant.form.id === "120-kanto" && variant.variantKey === "NORMAL"
-              ? "超級寶石海星已公告於 2026-08-22 登場但尚未開放；海星星只作少量進化候選，普通個體不能假裝已是 Mega。"
+              ? "超級寶石海星已於 2026-08-22 正式登場；海星星只作少量進化／Mega 基底候選，普通個體本身仍不是 Mega。"
               : "此型態沒有已確認 Mega 用途；不因同家族其他版本有用途而升格。",
       maxBattleSummaryZhTw:
         variant.variantKey === "GIGANTAMAX"
@@ -1227,14 +1227,14 @@ async function addChangeLogs() {
       reason: "普通、暗影、極巨與超極巨巨鉗蟹分開評估。",
     },
     {
-      id: "r12-mega-starmie-announced",
+      id: "r31-gen1-staryu-mega-target-released",
       entityType: "EvolutionFamily",
       entityId: "KANTO_FAMILY_120",
-      fieldName: "futureMegaTarget",
-      previousValue: null,
-      newValue: "ANNOUNCED_UNRELEASED_2026-08-22",
+      fieldName: "megaTargetStatus",
+      previousValue: "ANNOUNCED_UNRELEASED_2026-08-22",
+      newValue: "RELEASED",
       sourceId: "OFF-MEGA-STARMIE-2026",
-      reason: "僅讓 #120 海星星保留少量未來進化候選；不把尚未登場的 Mega 寫成已開放。",
+      reason: "超級寶石海星已於 2026-08-22 正式登場；#120 海星星只需保留少量實際 Mega／進化候選。",
     },
   ];
   for (const change of changes) {
@@ -1248,7 +1248,7 @@ async function addChangeLogs() {
         newValue: change.newValue,
         sourceId: change.sourceId,
         changeReasonZhTw: change.reason,
-        changedAt: checkedAt,
+        changedAt: change.id === "r31-gen1-staryu-mega-target-released" ? releaseAuditAt : checkedAt,
         rulesVersion: RULES_VERSION,
       },
     });
