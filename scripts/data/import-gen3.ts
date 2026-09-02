@@ -1151,6 +1151,7 @@ export async function runImport(batchName: string) {
       batch.evolutionPairs.some(([from]) => from === variant.form.id) ||
       Boolean(variant.form.evolvesFromFormId);
     const variantNameZhTw = specialVariantNameZhTw(variant.form.id, variant.variantKey);
+    const pveUseLevel = pveUseLevelForVariant(batch, variant);
     return {
       id: "gen3-" + batch.batch + "-eval-" + variant.id,
       battleVariantId: variant.id,
@@ -1158,11 +1159,15 @@ export async function runImport(batchName: string) {
       provenance: "MANUAL_CURATED" as const,
       pvpSummaryZhTw: rankSummary(result.ranks),
       pveSummaryZhTw:
-        variant.variantKey === "MEGA"
-          ? variantNameZhTw + "有獨立 PvE 與團體戰 boost 用途；先核對招式、等級與實際投入。"
-          : batch.pveUseLevels[variant.form.id]
-            ? "PvE 用途依研究表分成核心投資、可用／預算型或特殊用途；不把缺少精確斷點誤當成整個家族待判斷。"
-            : "未列為本批普通版本的核心 PvE 投資目標；不因 100% 自動升格為實戰必留。",
+        pveUseLevel === "CORE_INVESTMENT"
+          ? "此精確版本屬核心 PvE 投資；先核對招式、等級與實際投入，15 攻只作同種候選優先而非硬性淘汰線。"
+          : pveUseLevel === "USABLE_OR_BUDGET"
+            ? "此精確版本具可用／預算型 PvE 價值；只留實際會投入的少量候選，不把其他型態的價值回推到此版本。"
+            : pveUseLevel === "SPECIAL_USE"
+              ? variant.variantKey === "MEGA"
+                ? variantNameZhTw + "仍有 Mega boost 或較窄團戰用途；只留實際投入候選，不因能 Mega 就自動視為核心攻擊手。"
+                : "此精確版本屬特殊或替代性高的 PvE 用途；只需少量符合用途的候選。"
+              : "目前沒有足以形成此精確版本主要 PvE 保留理由的資料；不因 100%、暗影加成或同家族其他型態的價值自動升格。",
       rocketSummaryZhTw: "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
       gymSummaryZhTw: "未列為主要道館保留用途；缺少次要欄位來源不覆蓋其他結論。",
       gymRating: "NOT_APPLICABLE" as const,
