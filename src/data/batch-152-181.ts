@@ -178,7 +178,7 @@ export const releasedShadowForms152181 = new Set([
 ]);
 
 export const releasedMegaForms152181 = new Set(["181-johto"]);
-export const releasedDynamaxForms152181 = new Set<string>();
+export const releasedDynamaxForms152181 = new Set<string>(["163-johto", "164-johto"]);
 export const releasedGigantamaxForms152181 = new Set<string>();
 
 export const specialVariants152181: SpecialVariant152181[] = [
