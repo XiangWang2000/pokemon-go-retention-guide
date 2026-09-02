@@ -268,9 +268,8 @@ function directPveLevel(variant: VariantRecord, pve: CategoryRecord | undefined)
       pveRanks: raw.map((item) => item.rank),
     });
   }
-  return pve?.materialToDecision && ["VERIFIED", "PARTIALLY_VERIFIED"].includes(pve.status)
-    ? ("CORE_INVESTMENT" as const)
-    : ("NO_SIGNIFICANT_USE" as const);
+  if (pve?.pveUseLevel) return pve.pveUseLevel as PveUseLevel;
+  return "NO_SIGNIFICANT_USE" as const;
 }
 
 function curatedPvpEvidenceFor(variant: VariantRecord) {
