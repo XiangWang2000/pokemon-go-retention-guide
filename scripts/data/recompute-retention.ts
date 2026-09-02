@@ -268,8 +268,16 @@ function directPveLevel(variant: VariantRecord, pve: CategoryRecord | undefined)
       pveRanks: raw.map((item) => item.rank),
     });
   }
-  if (pve?.pveUseLevel) return pve.pveUseLevel as PveUseLevel;
-  return "NO_SIGNIFICANT_USE" as const;
+  // Gen 1-2 importers predate the four-level PvE model and may carry
+  // placeholder pveUseLevel values even when their accepted category evidence
+  // is material. Preserve their audited legacy behavior until those importers
+  // are migrated; Gen 3 owns explicit per-BattleVariant four-level values.
+  if (variant.pokemonForm.species.generation >= 3 && pve?.pveUseLevel) {
+    return pve.pveUseLevel as PveUseLevel;
+  }
+  return pve?.materialToDecision && ["VERIFIED", "PARTIALLY_VERIFIED"].includes(pve.status)
+    ? ("CORE_INVESTMENT" as const)
+    : ("NO_SIGNIFICANT_USE" as const);
 }
 
 function curatedPvpEvidenceFor(variant: VariantRecord) {
