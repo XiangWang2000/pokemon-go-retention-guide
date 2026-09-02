@@ -76,6 +76,66 @@ runLegacyBatchImport({
   evolutionPairs: evolutionPairs242251,
   specialVariants: specialVariants242251,
   pveUseLevels: pveUseLevels242251,
+  dynamaxDefaultDecision: "CONDITIONAL_KEEP",
+  variantUseOverrides: {
+    "242-johto-normal": {
+      pveUseLevel: "NO_SIGNIFICANT_USE",
+      pveSummaryZhTw:
+        "幸福蛋不適合作為團體戰攻擊手；其主要保留理由是道館防守與 Max 輔助角色，不應標成一般 PvE 攻擊候選。",
+      gymSummaryZhTw:
+        "幸福蛋仍是極具代表性的道館防守目標；若在意道館，可留少量高耐久／高整體 IV 候選。",
+    },
+    "242-johto-dynamax": {
+      maxUseLevel: "CORE_INVESTMENT",
+      maxSummaryZhTw:
+        "極巨幸福蛋是目前 S Tier Max 治療手，並有 C Tier 防守價值；這個 Max 版本值得保留高品質實用候選。",
+    },
+    "243-johto-shadow": {
+      pveUseLevel: "CORE_INVESTMENT",
+      pveSummaryZhTw:
+        "暗影雷公目前為 S Tier 電系團戰攻擊手，且整體團戰約 A+ Tier；暗影保留門檻應明顯寬於普通雷公。",
+    },
+    "243-johto-dynamax": {
+      maxUseLevel: "USABLE_OR_BUDGET",
+      maxSummaryZhTw:
+        "極巨雷公目前約 C Tier Max 攻擊手，亦可作 C Tier 治療／防守角色；留少量高品質候選即可。",
+    },
+    "244-johto-shadow": {
+      pveUseLevel: "USABLE_OR_BUDGET",
+      pveSummaryZhTw:
+        "暗影炎帝目前約 A+ Tier 火系攻擊手，但整體團戰約 B Tier且有更強替代；可留少量優質候選，不必大量囤積。",
+    },
+    "244-johto-dynamax": {
+      maxUseLevel: "USABLE_OR_BUDGET",
+      maxSummaryZhTw:
+        "極巨炎帝攻擊約 D Tier，但 Max 治療達 A Tier；主要以輔助角色保留少量實用候選。",
+    },
+    "245-johto-normal": {
+      pveUseLevel: "NO_SIGNIFICANT_USE",
+      pveSummaryZhTw:
+        "普通水君目前水系團戰約 F Tier，不是一般 PvE 投資目標；若有 PvP 或 Max 用途需分開保留。",
+    },
+    "245-johto-shadow": {
+      pveUseLevel: "NO_SIGNIFICANT_USE",
+      pveSummaryZhTw:
+        "暗影水君也不因暗影加成就自動成為團戰投資目標；若保留應基於 PvP、收藏或其他獨立用途。",
+    },
+    "245-johto-dynamax": {
+      maxUseLevel: "USABLE_OR_BUDGET",
+      maxSummaryZhTw:
+        "極巨水君攻擊偏低，但目前有 B Tier Max 防守與 B Tier 治療價值；保留少量功能型候選。",
+    },
+    "249-johto-dynamax": {
+      maxUseLevel: "SPECIAL_USE",
+      maxSummaryZhTw:
+        "極巨大洛奇亞攻擊偏低、充能防守角色也差，但可作 B Tier Max 治療手；只需少量功能候選。",
+    },
+    "250-johto-dynamax": {
+      maxUseLevel: "USABLE_OR_BUDGET",
+      maxSummaryZhTw:
+        "極巨鳳王目前約 C Tier Max 攻擊手與 C Tier 治療手；有實戰空間但非核心，留少量高品質候選即可。",
+    },
+  },
   pvpokeSpeciesId: pvpokeSpeciesId242251,
   releaseSets: {
     shadow: releasedShadowForms242251,
