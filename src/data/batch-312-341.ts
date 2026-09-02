@@ -763,6 +763,7 @@ export const pveClassifications312341: Record<string, PveUseLevel> = {
 };
 export const pveUseLevels312341: Record<string, PveUseLevel> = {};
 export const pveVariantUseLevels312341: Record<string, PveUseLevel> = {
+  "319-hoenn-mega": "SPECIAL_USE",
   "330-hoenn-shadow": "USABLE_OR_BUDGET",
 };
 
