@@ -75,7 +75,7 @@
     {
       "id": "OFF-MEGA-STARMIE-2026",
       "url": "https://pokemongo.com/en/news/starmie-super-mega-raid-day-2026",
-      "supports": ["120-kanto", "121-kanto-mega", "ANNOUNCED_UNRELEASED"]
+      "supports": ["120-kanto", "121-kanto-mega", "MEGA_RELEASED"]
     },
     {
       "id": "OFF-SHADOW-STARYU-2025",
@@ -89,7 +89,8 @@
     "eventEvolutionPathsRequireEvent": true,
     "megaMaxVersionsSeparated": true,
     "ordinaryPokemonCannotSubstituteForMax": true,
-    "megaStarmieReleasedAsOfCheckedAt": false,
+    "megaStarmieReleasedAsOfCheckedAt": true,
+    "megaStarmieReleaseRecheckedAt": "2026-09-02",
     "shadowAvailabilityLimitedToOfficialOrControlledSnapshot": true,
     "shadowStaryuReleased": true
   }
