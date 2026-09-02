@@ -778,7 +778,7 @@ export const specialVariants342371: Gen3SpecialVariant[] = [
 ];
 
 export const pveClassifications342371: Record<string, PveUseLevel> = {
-  "342-hoenn": "SPECIAL_USE",
+  "342-hoenn": "NO_SIGNIFICANT_USE",
   "343-hoenn": "NO_SIGNIFICANT_USE",
   "344-hoenn": "NO_SIGNIFICANT_USE",
   "345-hoenn": "NO_SIGNIFICANT_USE",
@@ -786,25 +786,25 @@ export const pveClassifications342371: Record<string, PveUseLevel> = {
   "347-hoenn": "NO_SIGNIFICANT_USE",
   "348-hoenn": "NO_SIGNIFICANT_USE",
   "349-hoenn": "NO_SIGNIFICANT_USE",
-  "350-hoenn": "USABLE_OR_BUDGET",
+  "350-hoenn": "NO_SIGNIFICANT_USE",
   "351-normal": "NO_SIGNIFICANT_USE",
   "351-rainy": "NO_SIGNIFICANT_USE",
   "351-snowy": "NO_SIGNIFICANT_USE",
   "351-sunny": "NO_SIGNIFICANT_USE",
   "352-hoenn": "NO_SIGNIFICANT_USE",
   "353-hoenn": "NO_SIGNIFICANT_USE",
-  "354-hoenn": "SPECIAL_USE",
+  "354-hoenn": "NO_SIGNIFICANT_USE",
   "355-hoenn": "NO_SIGNIFICANT_USE",
   "356-hoenn": "NO_SIGNIFICANT_USE",
   "357-hoenn": "NO_SIGNIFICANT_USE",
   "358-hoenn": "NO_SIGNIFICANT_USE",
-  "359-hoenn": "SPECIAL_USE",
+  "359-hoenn": "USABLE_OR_BUDGET",
   "360-hoenn": "NO_SIGNIFICANT_USE",
   "361-hoenn": "NO_SIGNIFICANT_USE",
-  "362-hoenn": "SPECIAL_USE",
+  "362-hoenn": "NO_SIGNIFICANT_USE",
   "363-hoenn": "NO_SIGNIFICANT_USE",
   "364-hoenn": "NO_SIGNIFICANT_USE",
-  "365-hoenn": "USABLE_OR_BUDGET",
+  "365-hoenn": "NO_SIGNIFICANT_USE",
   "366-hoenn": "NO_SIGNIFICANT_USE",
   "367-hoenn": "NO_SIGNIFICANT_USE",
   "368-hoenn": "NO_SIGNIFICANT_USE",
@@ -813,12 +813,15 @@ export const pveClassifications342371: Record<string, PveUseLevel> = {
   "371-hoenn": "NO_SIGNIFICANT_USE",
 };
 export const pveUseLevels342371: Record<string, PveUseLevel> = {
-  "342-hoenn": "SPECIAL_USE",
-  "350-hoenn": "USABLE_OR_BUDGET",
-  "354-hoenn": "SPECIAL_USE",
-  "359-hoenn": "SPECIAL_USE",
-  "362-hoenn": "SPECIAL_USE",
-  "365-hoenn": "USABLE_OR_BUDGET",
+  "359-hoenn": "USABLE_OR_BUDGET",
+};
+export const pveVariantUseLevels342371: Record<string, PveUseLevel> = {
+  "342-hoenn-shadow": "SPECIAL_USE",
+  "354-hoenn-mega": "CORE_INVESTMENT",
+  "359-hoenn-shadow": "USABLE_OR_BUDGET",
+  "359-hoenn-mega": "CORE_INVESTMENT",
+  "362-hoenn-mega": "USABLE_OR_BUDGET",
+  "365-hoenn-shadow": "SPECIAL_USE",
 };
 
 const pvpokeIds342371: Record<string, { normal: string; shadow: string }> = {
