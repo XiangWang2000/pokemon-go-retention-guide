@@ -15,6 +15,7 @@ import {
   type LegacyDecision as Decision,
   type LegacyLeagueKey as LeagueKey,
   type LegacyOfficialResearch as OfficialResearch,
+  type LegacyPvpSnapshot,
   type LegacyRankResult as RankResult,
   type LegacyRankingRow as RankingRow,
   type LegacyVariantKey as VariantKey,
@@ -46,7 +47,17 @@ const prisma = new PrismaClient({
 const batchStart = 152;
 const batchEnd = 181;
 const checkedAt = new Date("2026-08-08T18:00:00+08:00");
-const pvpokeCommit = "86847e535b7e0a0f4e91f9628b3fc713ae6adca7";
+const pvpokeCommit = "7b96d91fb553780653190ad32de001b5d9086a7f";
+const pvpSnapshot = {
+  root: "data/sources/pvpoke/2026-09-01",
+  label: "2026-09-01",
+  checkedAt: new Date("2026-09-01T00:00:00+08:00"),
+  sourceIds: {
+    GREAT: "pvpoke-gl-20260901",
+    ULTRA: "pvpoke-ul-20260901",
+    MASTER: "pvpoke-ml-20260901",
+  },
+} satisfies LegacyPvpSnapshot;
 const officialResearch = JSON.parse(
   readFileSync(
     new URL("../../research_notes/sources/official-152-181.json", import.meta.url),
@@ -220,12 +231,24 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
     rankMap.set(
       variant.id,
       variant.released && (variant.variantKey === "NORMAL" || variant.variantKey === "SHADOW")
-        ? findLegacyRanks(variant.form, variant.variantKey, rankings, pvpokeSpeciesId152181)
+        ? findLegacyRanks(
+            variant.form,
+            variant.variantKey,
+            rankings,
+            pvpokeSpeciesId152181,
+            pvpSnapshot,
+          )
         : [],
     );
   }
   const rawRows = [
-    ...buildLegacyPvpSourceRows(variants, rankMap, pvpokeSpeciesId152181, pvpokeCommit, checkedAt),
+    ...buildLegacyPvpSourceRows(
+      variants,
+      rankMap,
+      pvpokeSpeciesId152181,
+      pvpokeCommit,
+      pvpSnapshot.checkedAt,
+    ),
     {
       id: "raw-r19-181-johto-mega-pve",
       battleVariantId: "181-johto-mega",
@@ -627,7 +650,7 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
 
 async function main() {
   await upsertLegacySources(prisma, officialResearch, checkedAt, "第 #152～#181 批次來源研究表。");
-  const rankings = await readLegacyRankings(prisma, pvpokeCommit);
+  const rankings = await readLegacyRankings(prisma, pvpokeCommit, pvpSnapshot);
   await rebuildBatch(rankings);
 }
 
