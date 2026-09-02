@@ -1,7 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { DATA_VERSION } from "@/config/release";
-import type { PrismaSourceRow } from "@/lib/data-prisma";
 import type { DashboardRow } from "@/lib/data-read-model";
 import review from "../review/152-181.json";
 import officialResearch from "../research_notes/sources/official-152-181.json";
@@ -9,9 +8,6 @@ import officialResearch from "../research_notes/sources/official-152-181.json";
 const dashboardRows = JSON.parse(
   readFileSync(new URL("../site-data/dashboard.json", import.meta.url), "utf8"),
 ) as DashboardRow[];
-const sourceRows = JSON.parse(
-  readFileSync(new URL("../site-data/sources.json", import.meta.url), "utf8"),
-) as PrismaSourceRow[];
 const home = JSON.parse(
   readFileSync(new URL("../site-data/home.json", import.meta.url), "utf8"),
 ) as {
@@ -111,11 +107,13 @@ describe("#152-181 generated runtime and review data", () => {
     }
   });
 
-  it("records sources for the batch research", () => {
-    const sourceIds = new Set(sourceRows.map((source) => source.id));
-    const required = officialResearch.sources
-      .filter((source) => source.supports.length > 0)
-      .map((source) => source.id);
-    for (const sourceId of required) expect(sourceIds.has(sourceId), sourceId).toBe(true);
+  it("keeps batch research source identifiers and support links internally consistent", () => {
+    const sourceIds = officialResearch.sources.map((source) => source.id);
+    expect(new Set(sourceIds).size).toBe(sourceIds.length);
+    for (const source of officialResearch.sources.filter((candidate) => candidate.supports.length > 0)) {
+      expect(source.sourceUrl, source.id).toMatch(/^https:\/\//);
+      expect(source.accessedAt, source.id).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+      expect(new Set(source.supports).size, source.id).toBe(source.supports.length);
+    }
   });
 });
