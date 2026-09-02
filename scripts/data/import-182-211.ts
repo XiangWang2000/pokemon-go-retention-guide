@@ -93,6 +93,19 @@ runLegacyBatchImport({
   evolutionPairs: evolutionPairs182211,
   specialVariants: specialVariants182211,
   pveUseLevels: pveUseLevels182211,
+  dynamaxDefaultDecision: "CONDITIONAL_KEEP",
+  variantUseOverrides: {
+    "196-johto-dynamax": {
+      maxUseLevel: "USABLE_OR_BUDGET",
+      maxSummaryZhTw:
+        "極巨太陽伊布已推出；Psychic Max 攻擊為 S Tier、目前約同屬性 #3，但整體 Max 投資仍只需少量高品質候選。",
+    },
+    "197-johto-dynamax": {
+      maxUseLevel: "SPECIAL_USE",
+      maxSummaryZhTw:
+        "極巨月亮伊布已推出；攻擊與充能防守較弱，但可作 C Tier Max 治療手，只留少量功能候選。",
+    },
+  },
   pvpokeSpeciesId: pvpokeSpeciesId182211,
   releaseSets: {
     shadow: releasedShadowForms182211,
@@ -124,7 +137,10 @@ runLegacyBatchImport({
   },
   texts: {
     battleMega: "Mega 電龍是獨立戰鬥型態；只與普通基底、暗影及 Max 版本分開評估。",
-    battleDynamax: "本批沒有來源確認此物種的極巨版本已推出；普通個體不能替代極巨個體。",
+    battleDynamax: (released) =>
+      released
+        ? "此極巨版本已由來源確認推出；是否保留依實際 Max 角色分級，不因推出就自動大量保留。"
+        : "本批沒有來源確認此物種的極巨版本已推出；普通個體不能替代極巨個體。",
     retentionPveMega:
       "Mega 電龍有特殊 PvE 與 Mega boost 用途，非核心投資；先核對 Volt Switch／Zap Cannon、等級與投入。",
     retentionPveDefault: "未列為本批普通版本的核心 PvE 投資目標；不因 100% 自動升格為實戰必留。",
@@ -132,7 +148,9 @@ runLegacyBatchImport({
     retentionMegaBase: "普通電龍可作 Mega 基底候選；不把 Mega 用途回推成全家族必留。",
     retentionMax: (variant) =>
       variant.variantKey === "DYNAMAX"
-        ? "本批未確認此極巨版本推出；普通個體不能替代極巨個體。"
-        : "Max 用途與普通／暗影／Mega 分開評估。",
+        ? variant.released
+          ? "此極巨版本已推出；依攻擊、治療或防守角色只留實際需要的候選。"
+          : "本批未確認此極巨版本推出；普通個體不能替代極巨個體。"
+        : "Max 用途與普通／暗影／Mega 分開評估.",
   },
 });
