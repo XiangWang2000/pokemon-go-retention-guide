@@ -20,6 +20,7 @@ import {
   type LegacyForm,
   type LegacyLeagueKey as LeagueKey,
   type LegacyOfficialResearch,
+  type LegacyPvpSnapshot,
   type LegacyRankResult as RankResult,
   type LegacyRankingRow as RankingRow,
   type LegacyVariantKey as VariantKey,
@@ -85,6 +86,7 @@ export type LegacyBatchConfig<T extends LegacyBatchForm> = {
   batchLabel: string;
   checkedAt: Date;
   pvpokeCommit: string;
+  pvpSnapshot?: LegacyPvpSnapshot;
   revision: "r19" | "r20";
   officialResearchPath: URL;
   sourceNotes: string;
@@ -300,7 +302,13 @@ async function rebuildBatch<T extends LegacyBatchForm>(
     rankMap.set(
       variant.id,
       variant.released && (variant.variantKey === "NORMAL" || variant.variantKey === "SHADOW")
-        ? findLegacyRanks(variant.form, variant.variantKey, rankings, config.pvpokeSpeciesId)
+        ? findLegacyRanks(
+            variant.form,
+            variant.variantKey,
+            rankings,
+            config.pvpokeSpeciesId,
+            config.pvpSnapshot,
+          )
         : [],
     );
   }
@@ -318,7 +326,7 @@ async function rebuildBatch<T extends LegacyBatchForm>(
       rankMap,
       config.pvpokeSpeciesId,
       config.pvpokeCommit,
-      config.checkedAt,
+      config.pvpSnapshot?.checkedAt ?? config.checkedAt,
       config.revision,
     ),
     ...variants.flatMap((variant) => {
@@ -724,7 +732,7 @@ export async function runLegacyBatchImport<T extends LegacyBatchForm>(
     ) as LegacyOfficialResearch;
     const officialEvidenceLinks = buildLegacyEvidenceLinks(officialResearch, config.sourceOptions);
     await upsertLegacySources(prisma, officialResearch, config.checkedAt, config.sourceNotes);
-    const rankings = await readLegacyRankings(prisma, config.pvpokeCommit);
+    const rankings = await readLegacyRankings(prisma, config.pvpokeCommit, config.pvpSnapshot);
     await rebuildBatch(prisma, config, rankings, officialEvidenceLinks);
   } catch (error) {
     console.error(error);
