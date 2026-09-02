@@ -207,7 +207,9 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
         variantKey === "MEGA"
           ? "Mega 電龍是獨立戰鬥型態；只與普通基底、暗影及 Max 版本分開評估。"
           : variantKey === "DYNAMAX"
-            ? "本批沒有來源確認此物種的極巨版本已推出；普通個體不能替代極巨個體。"
+            ? released
+              ? "此極巨版本已確認推出；與普通個體分開評估，低階 Max 用途只需少量候選。"
+              : "本批沒有來源確認此物種的極巨版本已推出；普通個體不能替代極巨個體。"
             : variantKey === "SHADOW"
               ? "暗影個體依獨立來源與 PvP 快照評估；暗影標準較寬，不因低總 IV 自動淨化。"
               : variantKey === "PURIFIED"
@@ -281,14 +283,17 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
   for (const variant of variants) {
     const ranks = rankMap.get(variant.id) ?? [];
     decisions.set(variant.id, {
-      decision: legacyInitialDecision(
-        variant.variantKey,
-        variant.released,
-        ranks,
-        variant.form.id,
-        {},
-        { keepDynamax: false },
-      ),
+      decision:
+        variant.variantKey === "DYNAMAX" && variant.released
+          ? "CONDITIONAL_KEEP"
+          : legacyInitialDecision(
+              variant.variantKey,
+              variant.released,
+              ranks,
+              variant.form.id,
+              {},
+              { keepDynamax: false },
+            ),
       ranks,
       released: variant.released,
     });
@@ -369,14 +374,24 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
           summaryZhTw = "此版本不是 Mega 型態；家族有 Mega 不代表所有成員都必須保留。";
         }
       } else if (category === "MAX_BATTLE") {
-        status =
-          variant.variantKey === "DYNAMAX" || variant.variantKey === "GIGANTAMAX"
-            ? "UNRELEASED"
-            : "NOT_APPLICABLE";
-        summaryZhTw =
-          variant.variantKey === "DYNAMAX" || variant.variantKey === "GIGANTAMAX"
-            ? "本批沒有來源確認此 Max 版本推出；普通個體不能當作 Max 個體。"
-            : "普通、暗影或 Mega 個體不等於極巨／超極巨個體。";
+        const isMaxVariant =
+          variant.variantKey === "DYNAMAX" || variant.variantKey === "GIGANTAMAX";
+        status = isMaxVariant
+          ? variant.released
+            ? "VERIFIED"
+            : "UNRELEASED"
+          : "NOT_APPLICABLE";
+        if (isMaxVariant && variant.released) {
+          provenance = "SOURCE_VERIFIED";
+          materialToDecision = true;
+        }
+        summaryZhTw = isMaxVariant
+          ? variant.released
+            ? variant.form.id === "164-johto"
+              ? "極巨貓頭夜鷹已推出；目前 Max 輸出偏低，但可作 B Tier 治療手，僅需少量實用候選。"
+              : "極巨咕咕已推出；主要價值是作為極巨貓頭夜鷹的進化基底，只需少量候選。"
+            : "本批沒有來源確認此 Max 版本推出；普通個體不能當作 Max 個體。"
+          : "普通、暗影或 Mega 個體不等於極巨／超極巨個體。";
       } else {
         const outgoing = evolutionPairs152181.some(([from]) => from === variant.form.id);
         status = outgoing ? "VERIFIED" : "NOT_APPLICABLE";
@@ -468,7 +483,11 @@ async function rebuildBatch(rankings: Map<LeagueKey, RankingRow[]>) {
             : "此版本沒有獨立 Mega 型態用途。",
       maxBattleSummaryZhTw:
         variant.variantKey === "DYNAMAX"
-          ? "本批未確認此極巨版本推出；普通個體不能替代極巨個體。"
+          ? variant.released
+            ? variant.form.id === "164-johto"
+              ? "極巨貓頭夜鷹已推出；攻擊價值低，但目前可作 B Tier Max 治療手，只需少量候選。"
+              : "極巨咕咕已推出；主要作極巨貓頭夜鷹進化候選，不需要囤大量重複。"
+            : "本批未確認此極巨版本推出；普通個體不能替代極巨個體。"
           : "Max 用途與普通／暗影／Mega 分開評估。",
       evolutionSummaryZhTw: evolutionPairs152181.some(([from]) => from === variant.form.id)
         ? "本批進化關係已結構化；前階是否保留由後續目標用途決定。"
