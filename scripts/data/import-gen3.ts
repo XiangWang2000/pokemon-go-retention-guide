@@ -896,9 +896,12 @@ export async function runImport(batchName: string) {
       })),
     ),
     ...variants.flatMap((variant) => {
-      const level = pveUseLevelForVariant(batch, variant);
+      const explicitLevel =
+        variant.variantKey === "NORMAL"
+          ? batch.pveUseLevels[variant.form.id]
+          : batch.pveVariantUseLevels[variant.id];
       const tier = ["NORMAL", "SHADOW", "MEGA"].includes(variant.variantKey)
-        ? pveTier(level)
+        ? pveTier(explicitLevel)
         : null;
       if (!tier) return [];
       return [
