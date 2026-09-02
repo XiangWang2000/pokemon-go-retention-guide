@@ -85,6 +85,7 @@ type LegacyVariantUseOverride = {
   maxUseLevel?: PveUseLevel;
   maxSummaryZhTw?: string;
   decision?: Decision;
+  categorySourceIds?: Partial<Record<Category, ReadonlyArray<string>>>;
 };
 
 type LegacyEvidenceLinks = ReturnType<typeof buildLegacyEvidenceLinks>;
@@ -640,6 +641,20 @@ async function rebuildBatch<T extends LegacyBatchForm>(
       );
     }
   }
+  for (const variant of variants) {
+    for (const categoryName of LEGACY_CATEGORIES) {
+      for (const sourceId of variantOverride(variant)?.categorySourceIds?.[categoryName] ?? []) {
+        categorySources.set(
+          `category-${variant.id}-${categoryName.toLowerCase()}|${sourceId}`,
+          {
+            categoryEvaluationId: `category-${variant.id}-${categoryName.toLowerCase()}`,
+            sourceId,
+            usageZhTw: "Variant-specific research evidence for this category.",
+          },
+        );
+      }
+    }
+  }
   if (categorySources.size)
     await prisma.categoryEvaluationSource.createMany({ data: [...categorySources.values()] });
 
@@ -758,6 +773,15 @@ async function rebuildBatch<T extends LegacyBatchForm>(
         sourceId: link.sourceId,
         usageZhTw: "官方或研究來源確認此精確型態、進化或用途邊界。",
       });
+    }
+    for (const categoryName of LEGACY_CATEGORIES) {
+      for (const sourceId of variantOverride(variant)?.categorySourceIds?.[categoryName] ?? []) {
+        evaluationSources.set(`${config.revision}-eval-${variant.id}|${sourceId}`, {
+          evaluationId: `${config.revision}-eval-${variant.id}`,
+          sourceId,
+          usageZhTw: "此來源直接支援該版本的特定用途分類。",
+        });
+      }
     }
   }
   if (evaluationSources.size)
