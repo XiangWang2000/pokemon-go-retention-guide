@@ -1227,7 +1227,7 @@ async function addChangeLogs() {
       reason: "普通、暗影、極巨與超極巨巨鉗蟹分開評估。",
     },
     {
-      id: "r31-gen1-staryu-mega-target-released",
+      id: "r12-mega-starmie-released",
       entityType: "EvolutionFamily",
       entityId: "KANTO_FAMILY_120",
       fieldName: "megaTargetStatus",
@@ -1248,7 +1248,7 @@ async function addChangeLogs() {
         newValue: change.newValue,
         sourceId: change.sourceId,
         changeReasonZhTw: change.reason,
-        changedAt: change.id === "r31-gen1-staryu-mega-target-released" ? releaseAuditAt : checkedAt,
+        changedAt: change.id === "r12-mega-starmie-released" ? releaseAuditAt : checkedAt,
         rulesVersion: RULES_VERSION,
       },
     });
