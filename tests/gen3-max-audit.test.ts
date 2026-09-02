@@ -48,6 +48,7 @@ describe("Gen3 Max audit", () => {
   });
 
   it("does not treat every released Dynamax as a core investment", () => {
+    expect(maxUseLevels252281["280-hoenn"]).toBe("USABLE_OR_BUDGET");
     expect(maxUseLevels282311["282-hoenn"]).toBe("USABLE_OR_BUDGET");
     expect(maxUseLevels282311["302-hoenn"]).toBe("SPECIAL_USE");
     expect(maxUseLevels312341["330-hoenn"]).toBe("SPECIAL_USE");
