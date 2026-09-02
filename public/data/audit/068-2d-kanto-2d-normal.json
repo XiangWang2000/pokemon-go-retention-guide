@@ -26,18 +26,18 @@
   "releaseStatus": "RELEASED",
   "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
   "notesZhTw": "普通版本；與暗影、淨化、極巨及超極巨分開評估。",
-  "decision": "CONDITIONAL_KEEP",
-  "assessmentDisposition": "LIMITED_USE",
+  "decision": "KEEP",
+  "assessmentDisposition": "CLEAR_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+  "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
   "pvpSummaryZhTw": "GL（超級聯盟） Overall #231；招式 KARATE_CHOP／CROSS_CHOP／ROCK_SLIDE；UL（高級聯盟） Overall #238；招式 KARATE_CHOP／CROSS_CHOP／ROCK_SLIDE；ML（大師聯盟） Overall #160；招式 KARATE_CHOP／CROSS_CHOP／ROCK_SLIDE",
-  "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+  "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
@@ -45,7 +45,7 @@
   "maxBattleSummaryZhTw": "此版本不是 Max 版本；Max 用途不會回推普通個體必留。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "依固定快照優先核對：KARATE_CHOP／CROSS_CHOP／ROCK_SLIDE",
-  "recommendedIvStrategyZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
+  "recommendedIvStrategyZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -438,7 +438,7 @@
       "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
+  "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
   "evaluationId": "r10-eval-068-kanto-normal",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -466,7 +466,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
+      "assessmentDisposition": "CLEAR_USE",
       "checkedAt": "2026-07-30T15:45:00.000Z",
       "sources": []
     },
@@ -485,7 +485,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
+      "assessmentDisposition": "CLEAR_USE",
       "checkedAt": "2026-07-30T15:45:00.000Z",
       "sources": []
     },
@@ -504,7 +504,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
+      "assessmentDisposition": "CLEAR_USE",
       "checkedAt": "2026-07-30T15:45:00.000Z",
       "sources": []
     },
@@ -523,7 +523,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
+      "assessmentDisposition": "CLEAR_USE",
       "checkedAt": "2026-07-30T15:45:00.000Z",
       "sources": []
     },
@@ -531,7 +531,7 @@
       "category": "PVE",
       "status": "PARTIALLY_VERIFIED",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+      "summaryZhTw": "核心投資。本版本有直接 PvE 證據",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -541,8 +541,8 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "assessmentDisposition": "LIMITED_USE",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "assessmentDisposition": "CLEAR_USE",
       "checkedAt": "2026-07-30T15:45:00.000Z",
       "sources": []
     },
@@ -561,7 +561,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
+      "assessmentDisposition": "CLEAR_USE",
       "checkedAt": "2026-07-30T15:45:00.000Z",
       "sources": [
         {
@@ -599,7 +599,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
+      "assessmentDisposition": "CLEAR_USE",
       "checkedAt": "2026-07-30T15:45:00.000Z",
       "sources": []
     }
@@ -733,11 +733,11 @@
   ],
   "traces": [
     {
-      "ruleKey": "CONDITIONAL_USE",
-      "priority": 700,
+      "ruleKey": "MAJOR_BATTLE_VALUE",
+      "priority": 900,
       "matched": true,
-      "resultDecision": "CONDITIONAL_KEEP",
-      "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
+      "resultDecision": "KEEP",
+      "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
     }
   ],
   "moves": []

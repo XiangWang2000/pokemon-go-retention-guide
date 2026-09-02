@@ -3345,18 +3345,18 @@
               "releaseStatus": "RELEASED",
               "releaseVerifiedAt": "2026-07-30T15:45:00.000Z",
               "notesZhTw": "Mega 是戰鬥型態；只把對應關都型態列為 Mega 候選，不回推全家族必留。",
-              "decision": "CONDITIONAL_KEEP",
-              "assessmentDisposition": "LIMITED_USE",
+              "decision": "KEEP",
+              "assessmentDisposition": "CLEAR_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
               "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+              "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "PvPoke Open League／Overall 快照未列入可重現名次。",
-              "pveSummaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估",
+              "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -3366,7 +3366,7 @@
               "requiredMovesSummaryZhTw": "沒有招式足以把此低用途版本自動升格為必留。",
               "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
               "ivRecommendations": [],
-              "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
+              "reasonZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。",
               "evaluationId": "r10-eval-065-kanto-mega",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "已人工檢查型態、區域分支、普通／暗影／淨化／極巨／超極巨邊界及可重現 PvP 名次。",
@@ -3394,7 +3394,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3413,7 +3413,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3432,7 +3432,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3451,7 +3451,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3459,7 +3459,7 @@
                   "category": "PVE",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "特殊用途。Mega／Primal 用途需與普通／暗影版本分開評估",
+                  "summaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
                   "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -3469,8 +3469,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "SPECIAL_USE",
-                  "assessmentDisposition": "LIMITED_USE",
+                  "pveUseLevel": "CORE_INVESTMENT",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3489,7 +3489,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 },
@@ -3508,7 +3508,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "CLEAR_USE",
                   "checkedAt": "2026-07-30T15:45:00.000Z",
                   "sources": []
                 }
@@ -3527,11 +3527,11 @@
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "MAJOR_BATTLE_VALUE",
+                  "priority": 900,
                   "matched": true,
-                  "resultDecision": "CONDITIONAL_KEEP",
-                  "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
+                  "resultDecision": "KEEP",
+                  "explanationZhTw": "核心投資：目前已有明確 PvP／PvE／Mega／Max 或高道館用途；保留符合版本與用途的候選。"
                 }
               ],
               "moves": []
@@ -3867,21 +3867,21 @@
           "tone": "LOW"
         },
         "pve": {
-          "label": "特殊用途",
-          "detail": "Mega／Primal：Mega／Primal 用途需與普通／暗影版本分開評估",
-          "tone": "SPECIAL"
+          "label": "核心投資",
+          "detail": "Mega／Primal：本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+          "tone": "HIGH"
         },
         "gym": {
           "label": "—",
           "tone": "NONE"
         },
         "megaMax": {
-          "label": "Mega／Primal：限定用途",
+          "label": "Mega／Primal：高",
           "detail": "極巨：中",
-          "tone": "MEDIUM"
+          "tone": "HIGH"
         },
         "decision": "CONDITIONAL_KEEP",
-        "decisionReason": "依各戰鬥版本的數字IV門檻留少量個體。",
+        "decisionReason": "普通重複個體通常可傳送；Mega候選先看招式與既有投入，15攻優先，14攻高整體IV亦可留。",
         "ivRecommendations": [
           {
             "id": "iv-global-pve",
@@ -4062,18 +4062,18 @@
     "tone": "NONE"
   },
   "pve": {
-    "label": "特殊用途",
+    "label": "核心投資",
     "detail": "Mega 胡地為主要投資目標",
-    "tone": "SPECIAL"
+    "tone": "HIGH"
   },
   "gym": {
     "label": "未列為主要保留理由",
     "tone": "NONE"
   },
   "megaMax": {
-    "label": "極巨：中",
-    "detail": "凱西適用；前階可進化為候選",
-    "tone": "MEDIUM"
+    "label": "Mega／Primal：高",
+    "detail": "胡地適用；前階可進化為候選",
+    "tone": "HIGH"
   },
   "familyValue": "HIGH",
   "retentionStrategy": "KEEP_TARGETS",

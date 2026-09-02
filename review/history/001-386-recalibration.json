@@ -7,23 +7,23 @@
   "counts": {
     "variants": 1780,
     "decisions": {
-      "CONDITIONAL_KEEP": 440,
-      "TRANSFER_CANDIDATE": 1186,
-      "KEEP": 154
+      "CONDITIONAL_KEEP": 435,
+      "TRANSFER_CANDIDATE": 1183,
+      "KEEP": 162
     },
     "dispositions": {
-      "LIMITED_USE": 485,
-      "CLEAR_USE": 109,
-      "NO_SIGNIFICANT_USE": 587,
+      "LIMITED_USE": 473,
+      "CLEAR_USE": 124,
+      "NO_SIGNIFICANT_USE": 584,
       "NOT_APPLICABLE_OR_UNRELEASED": 599
     },
     "pveUseLevels": {
-      "SPECIAL_USE": 189,
-      "CORE_INVESTMENT": 109,
-      "NO_SIGNIFICANT_USE": 1418,
+      "SPECIAL_USE": 182,
+      "CORE_INVESTMENT": 124,
+      "NO_SIGNIFICANT_USE": 1410,
       "USABLE_OR_BUDGET": 64
     },
-    "changedFields": 1242
+    "changedFields": 1236
   },
   "trueDataPending": [],
   "highRiskReview": [
@@ -103,8 +103,8 @@
       "nameZhTw": "腕力",
       "variantKey": "SHADOW",
       "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "LIMITED_USE",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
       "laterEvolutionTarget": "怪力"
     },
     {
@@ -182,10 +182,10 @@
       "dexNumber": 92,
       "nameZhTw": "鬼斯",
       "variantKey": "SHADOW",
-      "decision": "TRANSFER_CANDIDATE",
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "NO_SIGNIFICANT_USE",
-      "laterEvolutionTarget": null
+      "decision": "CONDITIONAL_KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
+      "laterEvolutionTarget": "耿鬼"
     },
     {
       "id": "111-kanto-dynamax",
@@ -832,9 +832,9 @@
       "dexNumber": 150,
       "nameZhTw": "超夢",
       "variantKey": "MEGA_X",
-      "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
-      "disposition": "LIMITED_USE",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -842,9 +842,9 @@
       "dexNumber": 150,
       "nameZhTw": "超夢",
       "variantKey": "MEGA_Y",
-      "decision": "CONDITIONAL_KEEP",
-      "pveUseLevel": "SPECIAL_USE",
-      "disposition": "LIMITED_USE",
+      "decision": "KEEP",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
       "laterEvolutionTarget": null
     },
     {
@@ -903,8 +903,8 @@
       "nameZhTw": "超夢",
       "variantKey": "SHADOW",
       "decision": "KEEP",
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
-      "disposition": "LIMITED_USE",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "disposition": "CLEAR_USE",
       "laterEvolutionTarget": null
     },
     {

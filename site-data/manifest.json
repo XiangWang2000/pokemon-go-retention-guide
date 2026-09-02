@@ -5,8 +5,8 @@
   "dataAsOf": "2026-09-02T16:00:00.000Z",
   "sourceDatabase": {
     "path": "rebuild-ci.db",
-    "bytes": 19382272,
-    "sha256": "4f53760ed9f0a4162575ab6e1d74b74f4256c41cc8591c0d00840288f55af163"
+    "bytes": 19394560,
+    "sha256": "f820688b1e56d8c5be77ead0ef431e13ccd946dbd934ce973b095ca88dce30fb"
   },
   "rulesVersions": [
     "2026.08.06-v7"
@@ -23,7 +23,7 @@
     "retentionEvaluations": 2513,
     "evaluationSources": 3915,
     "evaluationRuleTraces": 3278,
-    "changeLogs": 4041,
+    "changeLogs": 4035,
     "dataIssues": 557,
     "categoryEvaluations": 16436,
     "categoryEvaluationSources": 3925,
@@ -37,12 +37,12 @@
     "openReviewIssues": 161,
     "detailRecords": 2348
   },
-  "snapshotSha256": "36379455d0c9ea6cdeae2bfa8539dcda17a9886d10e7fd0c33b660dae74649ab",
+  "snapshotSha256": "8be3644104bcc3ebe3a3fd33a76795de6a066da5014aac942dc59ee115ad1734",
   "files": {
     "home": {
       "path": "home.json",
-      "bytes": 21943209,
-      "sha256": "f19187cee1e00361b5df6714c76daf88d8afcee7e15227eed4ff5b5354ebca6c"
+      "bytes": 21964220,
+      "sha256": "32d4e84d3a0f52b536e5579603489c2e7638314e8220b1dfeb46e2aadb68b3d8"
     },
     "homeSummary": {
       "path": "homeSummary.json",
@@ -51,13 +51,13 @@
     },
     "dashboard": {
       "path": "dashboard.json",
-      "bytes": 45482629,
-      "sha256": "f932ced2278adbb977927d5202c3d7043269d8a8b18017902a7d012ea3af7019"
+      "bytes": 45483662,
+      "sha256": "bcbaa363c7596fdad3097a6508b96ab6728565fafdc280ec2b089ec33e596ae8"
     },
     "auditSummary": {
       "path": "auditSummary.json",
-      "bytes": 1550950,
-      "sha256": "3027e3375bb04cb41306ff176f6c03f0c385454a01daca4928d72811e8c82b28"
+      "bytes": 1550851,
+      "sha256": "19797e0ba37e6622f5a80769a524148dd90432a829cf1743827064f6268541d2"
     },
     "review": {
       "path": "review.json",
@@ -71,40 +71,40 @@
     },
     "changes": {
       "path": "changes.json",
-      "bytes": 2544289,
-      "sha256": "8af25fae511e75018da478cb4c93bb9d573aea0c4bef2f04e4c8fa65397af471"
+      "bytes": 2543205,
+      "sha256": "d48c21adc8ac938ec89391c04e9d6b98180d22e8063bbcb837e0c9b85071480d"
     },
     "details": {
       "path": "details.json",
-      "bytes": 3254203,
-      "sha256": "dc7b48c766b21b7ed54e970b5992d1810860ed6c9882f60119cbe5f39364d162"
+      "bytes": 3253563,
+      "sha256": "ad4dd90fa689a59bd39fdc0d19fc0fd46fddf658c8b0573a0fd294f856ffba2f"
     }
   },
   "runtimeHome": {
     "path": "public/data/home.json",
-    "bytes": 1405683,
-    "sha256": "0ce0139002c94abc143816617d4235db8fadca81f7dafade9b89818cee59778a"
+    "bytes": 1406327,
+    "sha256": "6067bc78ea2b8d5e5dd18e92159839480907423bed317776a2f44d493132c282"
   },
   "runtimeFamilyData": {
     "directory": "public/data/families",
     "count": 302,
-    "bytes": 34758213
+    "bytes": 34785879
   },
   "runtimeAuditData": {
     "directory": "public/data/audit",
     "count": 2348,
-    "bytes": 56828478
+    "bytes": 56829511
   },
   "runtimeDetailData": {
     "directory": "public/data/details",
     "count": 2348,
-    "bytes": 3760027
+    "bytes": 3758943
   },
   "runtimeStaticData": {
     "audit-summary.json": {
       "path": "public/data/audit-summary.json",
-      "bytes": 1550950,
-      "sha256": "3027e3375bb04cb41306ff176f6c03f0c385454a01daca4928d72811e8c82b28"
+      "bytes": 1550851,
+      "sha256": "19797e0ba37e6622f5a80769a524148dd90432a829cf1743827064f6268541d2"
     },
     "family-index.json": {
       "path": "public/data/family-index.json",
@@ -123,14 +123,14 @@
     },
     "changes.json": {
       "path": "public/data/changes.json",
-      "bytes": 2544289,
-      "sha256": "8af25fae511e75018da478cb4c93bb9d573aea0c4bef2f04e4c8fa65397af471"
+      "bytes": 2543205,
+      "sha256": "d48c21adc8ac938ec89391c04e9d6b98180d22e8063bbcb837e0c9b85071480d"
     }
   },
   "excel": {
     "path": "public/exports/pokemon-go-retention-001-493.xlsx",
-    "bytes": 1176106,
-    "sha256": "83d20d0140d3f78b2961df7cef8fd7346e3b7185839866a34b2e70e46afde0eb",
+    "bytes": 1175628,
+    "sha256": "09fc7ec0c2453cd93451e684f8ae85963710a1e70853932f09024f42a258eb2c",
     "sheets": 10
   }
 }
