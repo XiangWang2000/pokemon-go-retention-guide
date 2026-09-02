@@ -71,7 +71,17 @@ runLegacyBatchImport({
   batchEnd: 211,
   batchLabel: "#182～#211",
   checkedAt: new Date("2026-08-28T00:00:00+08:00"),
-  pvpokeCommit: "86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+  pvpokeCommit: "7b96d91fb553780653190ad32de001b5d9086a7f",
+  pvpSnapshot: {
+    root: "data/sources/pvpoke/2026-09-01",
+    label: "2026-09-01",
+    checkedAt: new Date("2026-09-01T00:00:00+08:00"),
+    sourceIds: {
+      GREAT: "pvpoke-gl-20260901",
+      ULTRA: "pvpoke-ul-20260901",
+      MASTER: "pvpoke-ml-20260901",
+    },
+  },
   revision: "r19",
   officialResearchPath: new URL(
     "../../research_notes/sources/official-182-211.json",
