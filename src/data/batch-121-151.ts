@@ -81,7 +81,7 @@ const complete = "此型態在 #001～#151 已可執行結論；是否保留由�
 const futureCandidate =
   "後續重要進化仍在 #151 之後；只留符合本體或未來用途的少量候選，不需保留全部重複。";
 const starmieNote =
-  "已接回 #120 海星星；超級寶石海星公告 2026-08-22 登場，截至 2026-08-03 尚未開放。";
+  "已接回 #120 海星星；超級寶石海星已於 2026-08-22 正式登場。";
 const scytherNote = "後續可進化為巨鉗螳螂；劈斧螳螂目前不能由飛天螳螂進化，不建立虛假路徑。";
 const eeveeNote = "本批納入水伊布、雷伊布、火伊布；其他伊布進化仍在後續編號，只留各實際用途候選。";
 
@@ -278,9 +278,10 @@ export const truncatedForms121151 = new Set([
   "137-kanto",
 ]);
 
-export const announcedUnreleasedMegaForms121151 = new Map([["121-kanto", "2026-08-22"]]);
+export const announcedUnreleasedMegaForms121151 = new Map<string, string>();
 
 export const releasedMegaForms121151 = new Set([
+  "121-kanto",
   "127-kanto",
   "130-kanto",
   "142-kanto",
@@ -307,7 +308,7 @@ export const specialVariants121151: SpecialVariant121151[] = [
     id: "121-kanto-mega",
     formId: "121-kanto",
     variantKey: "MEGA",
-    released: false,
+    released: true,
     nameZhTw: "超級寶石海星",
   },
   ...[127, 130, 142, 149].map((dexNumber) => ({
@@ -348,7 +349,7 @@ export const specialVariants121151: SpecialVariant121151[] = [
 ];
 
 export const conditionalKeepOverrides121151 = new Map<string, { ruleKey: string; reason: string }>([
-  ...[127, 130, 142, 149, 150].map((dexNumber) => {
+  ...[121, 127, 130, 142, 149, 150].map((dexNumber) => {
     const id = `${dexNumber}-kanto-normal`;
     const name = species121151.find((species) => species.dexNumber === dexNumber)!.nameZhTw;
     return [
