@@ -26,11 +26,12 @@ describe("#121～#151 批次來源資料", () => {
     expect(specialVariants121151).toHaveLength(9);
   });
 
-  it("把 #120 海星星接到 #121 寶石海星，Mega 仍為已公告但未開放", () => {
+  it("把 #120 海星星接到 #121 寶石海星，且 Mega 已於 2026-08-22 開放", () => {
     expect(evolutionPairs121151).toContainEqual(["120-kanto", "121-kanto"]);
-    expect(announcedUnreleasedMegaForms121151.get("121-kanto")).toBe("2026-08-22");
+    expect(announcedUnreleasedMegaForms121151.has("121-kanto")).toBe(false);
+    expect(releasedMegaForms121151.has("121-kanto")).toBe(true);
     expect(specialVariants121151).toContainEqual(
-      expect.objectContaining({ id: "121-kanto-mega", variantKey: "MEGA", released: false }),
+      expect.objectContaining({ id: "121-kanto-mega", variantKey: "MEGA", released: true }),
     );
   });
 
@@ -60,6 +61,7 @@ describe("#121～#151 批次來源資料", () => {
     ]);
     expect([...releasedGigantamaxForms121151]).toEqual(["131-kanto", "143-kanto"]);
     expect([...releasedMegaForms121151]).toEqual([
+      "121-kanto",
       "127-kanto",
       "130-kanto",
       "142-kanto",
