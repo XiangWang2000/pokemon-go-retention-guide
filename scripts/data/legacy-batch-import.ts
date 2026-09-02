@@ -78,6 +78,15 @@ type LegacyChangeLog = {
   changeReasonZhTw: string;
 };
 
+type LegacyVariantUseOverride = {
+  pveUseLevel?: PveUseLevel;
+  pveSummaryZhTw?: string;
+  gymSummaryZhTw?: string;
+  maxUseLevel?: PveUseLevel;
+  maxSummaryZhTw?: string;
+  decision?: Decision;
+};
+
 type LegacyEvidenceLinks = ReturnType<typeof buildLegacyEvidenceLinks>;
 
 export type LegacyBatchConfig<T extends LegacyBatchForm> = {
@@ -96,6 +105,8 @@ export type LegacyBatchConfig<T extends LegacyBatchForm> = {
   evolutionPairs: readonly [string, string][];
   specialVariants: ReadonlyArray<LegacySpecialVariant>;
   pveUseLevels: Readonly<Record<string, PveUseLevel>>;
+  variantUseOverrides?: Readonly<Record<string, LegacyVariantUseOverride>>;
+  dynamaxDefaultDecision?: Decision;
   pvpokeSpeciesId: (form: T, shadow: boolean) => string;
   releaseSets: {
     shadow: ReadonlySet<string>;
@@ -312,14 +323,52 @@ async function rebuildBatch<T extends LegacyBatchForm>(
         : [],
     );
   }
-  const pveTier = (formId: string) =>
-    config.pveUseLevels[formId] === "CORE_INVESTMENT"
+  const useOverride = (variant: LegacyVariantRecord<T>) =>
+    config.variantUseOverrides?.[variant.id];
+  const pveUseLevelFor = (variant: LegacyVariantRecord<T>) =>
+    useOverride(variant)?.pveUseLevel ?? config.pveUseLevels[variant.form.id] ?? null;
+  const maxUseLevelFor = (variant: LegacyVariantRecord<T>) =>
+    useOverride(variant)?.maxUseLevel ?? null;
+  const useTier = (level: PveUseLevel | null) =>
+    level === "CORE_INVESTMENT"
       ? "A"
-      : config.pveUseLevels[formId] === "USABLE_OR_BUDGET"
+      : level === "USABLE_OR_BUDGET"
         ? "B"
-        : config.pveUseLevels[formId] === "SPECIAL_USE"
+        : level === "SPECIAL_USE"
           ? "SPECIAL"
           : null;
+  const decisionFor = (variant: LegacyVariantRecord<T>, ranks: RankResult[]): Decision => {
+    const override = useOverride(variant);
+    if (!variant.released) return "TRANSFER_CANDIDATE";
+    if (override?.decision) return override.decision;
+    if (variant.variantKey === "DYNAMAX") {
+      const level = maxUseLevelFor(variant);
+      if (level === "CORE_INVESTMENT") return "KEEP";
+      if (level && level !== "NO_SIGNIFICANT_USE") return "CONDITIONAL_KEEP";
+      return config.dynamaxDefaultDecision ?? "KEEP";
+    }
+    if (override?.gymSummaryZhTw) return "CONDITIONAL_KEEP";
+    if (override?.pveUseLevel !== undefined) {
+      if (override.pveUseLevel === "CORE_INVESTMENT") return "KEEP";
+      if (override.pveUseLevel !== "NO_SIGNIFICANT_USE") return "CONDITIONAL_KEEP";
+      return legacyInitialDecision(
+        variant.variantKey,
+        variant.released,
+        ranks,
+        variant.form.id,
+        {},
+        { keepDynamax: false },
+      );
+    }
+    return legacyInitialDecision(
+      variant.variantKey,
+      variant.released,
+      ranks,
+      variant.form.id,
+      config.pveUseLevels,
+      { keepDynamax: false },
+    );
+  };
   const rawRows = [
     ...buildLegacyPvpSourceRows(
       variants,
@@ -334,7 +383,7 @@ async function rebuildBatch<T extends LegacyBatchForm>(
         variant.variantKey === "MEGA"
           ? "SPECIAL"
           : ["NORMAL", "SHADOW"].includes(variant.variantKey)
-            ? pveTier(variant.form.id)
+            ? useTier(pveUseLevelFor(variant))
             : null;
       if (!tier) return [];
       return [
@@ -372,13 +421,7 @@ async function rebuildBatch<T extends LegacyBatchForm>(
   for (const variant of variants) {
     const ranks = rankMap.get(variant.id) ?? [];
     decisions.set(variant.id, {
-      decision: legacyInitialDecision(
-        variant.variantKey,
-        variant.released,
-        ranks,
-        variant.form.id,
-        config.pveUseLevels,
-      ),
+      decision: decisionFor(variant, ranks),
       ranks,
       released: variant.released,
     });
@@ -414,16 +457,25 @@ async function rebuildBatch<T extends LegacyBatchForm>(
           summaryZhTw = "固定 PvPoke Open／Overall 快照未列入可重現名次。";
         }
       } else if (category === "PVE") {
+        const configuredPveUse =
+          variant.variantKey === "MEGA" ? "SPECIAL_USE" : pveUseLevelFor(variant);
         if (!variant.released || ["DYNAMAX", "GIGANTAMAX"].includes(variant.variantKey)) {
           status = variant.released ? "NOT_APPLICABLE" : "UNRELEASED";
-        } else if (variant.variantKey === "MEGA" || config.pveUseLevels[variant.form.id]) {
+        } else if (configuredPveUse && configuredPveUse !== "NO_SIGNIFICANT_USE") {
           status = "PARTIALLY_VERIFIED";
           provenance = "SOURCE_VERIFIED";
           materialToDecision = true;
-          pveUseLevel =
-            variant.variantKey === "MEGA" ? "SPECIAL_USE" : config.pveUseLevels[variant.form.id]!;
+          pveUseLevel = configuredPveUse;
           summaryZhTw =
+            useOverride(variant)?.pveSummaryZhTw ??
             "本批 PvE 用途依研究表與來源頁面分成核心投資、可用／預算型、特殊用途或無顯著用途；不把缺少精確斷點誤當成整個家族待判斷。";
+        } else if (configuredPveUse === "NO_SIGNIFICANT_USE") {
+          status = "VERIFIED";
+          provenance = "SOURCE_VERIFIED";
+          pveUseLevel = "NO_SIGNIFICANT_USE";
+          summaryZhTw =
+            useOverride(variant)?.pveSummaryZhTw ??
+            "來源已足以判定此版本目前沒有顯著 PvE 投資價值；不因高 IV 自動升格。";
         } else {
           status = "DATA_UNAVAILABLE";
           provenance = "DATA_UNAVAILABLE";
@@ -436,9 +488,19 @@ async function rebuildBatch<T extends LegacyBatchForm>(
         provenance = variant.released ? "DATA_UNAVAILABLE" : "MANUAL_CURATED";
         summaryZhTw = "火箭隊沒有統一逐物種排名；此缺項不單獨觸發暫時保留。";
       } else if (category === "GYM") {
-        status = variant.released ? "DATA_UNAVAILABLE" : "UNRELEASED";
-        provenance = variant.released ? "DATA_UNAVAILABLE" : "MANUAL_CURATED";
-        summaryZhTw = "未找到足以構成主要保留理由的道館用途；次要資料缺失不覆蓋其他結論。";
+        const gymSummary = useOverride(variant)?.gymSummaryZhTw;
+        if (!variant.released) {
+          status = "UNRELEASED";
+        } else if (gymSummary) {
+          status = "VERIFIED";
+          provenance = "SOURCE_VERIFIED";
+          materialToDecision = true;
+          summaryZhTw = gymSummary;
+        } else {
+          status = "DATA_UNAVAILABLE";
+          provenance = "DATA_UNAVAILABLE";
+          summaryZhTw = "未找到足以構成主要保留理由的道館用途；次要資料缺失不覆蓋其他結論。";
+        }
       } else if (category === "MEGA") {
         if (variant.variantKey === "MEGA") {
           status = variant.released ? "VERIFIED" : "UNRELEASED";
@@ -476,13 +538,15 @@ async function rebuildBatch<T extends LegacyBatchForm>(
         } else {
           status = "NOT_APPLICABLE";
         }
-        summaryZhTw = isMaxVariant
-          ? variant.released
-            ? "此 Max 版本已由來源核對為已推出；與普通／暗影版本分開保留。"
-            : "此 Max 版本尚未推出。"
-          : hasReleasedMax
-            ? "此普通型態是已推出 Max 的基底；只保留實際要投入的少量候選。"
-            : "普通、暗影或 Mega 個體不等於極巨／超極巨個體。";
+        summaryZhTw =
+          useOverride(variant)?.maxSummaryZhTw ??
+          (isMaxVariant
+            ? variant.released
+              ? "此 Max 版本已由來源核對為已推出；與普通／暗影版本分開保留。"
+              : "此 Max 版本尚未推出。"
+            : hasReleasedMax
+              ? "此普通型態是已推出 Max 的基底；只保留實際要投入的少量候選。"
+              : "普通、暗影或 Mega 個體不等於極巨／超極巨個體。");
       } else {
         const outgoing = config.evolutionPairs.some(([from]) => from === variant.form.id);
         status = outgoing ? "VERIFIED" : "NOT_APPLICABLE";
@@ -507,9 +571,30 @@ async function rebuildBatch<T extends LegacyBatchForm>(
         maxTypeRank: null,
         maxTypeTier: null,
         maxTypeKey: null,
-        maxOverallRating: null,
-        maxInvestmentRating: null,
-        maxUseCaseBreadth: null,
+        maxOverallRating:
+          category === "MAX_BATTLE" && maxUseLevelFor(variant)
+            ? maxUseLevelFor(variant) === "CORE_INVESTMENT"
+              ? "HIGH"
+              : maxUseLevelFor(variant) === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "LOW"
+            : null,
+        maxInvestmentRating:
+          category === "MAX_BATTLE" && maxUseLevelFor(variant)
+            ? maxUseLevelFor(variant) === "CORE_INVESTMENT"
+              ? "HIGH"
+              : maxUseLevelFor(variant) === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "LOW"
+            : null,
+        maxUseCaseBreadth:
+          category === "MAX_BATTLE" && maxUseLevelFor(variant)
+            ? maxUseLevelFor(variant) === "CORE_INVESTMENT"
+              ? "BROAD"
+              : maxUseLevelFor(variant) === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "NARROW"
+            : null,
         pveUseLevel,
         assessmentDisposition: null,
         checkedAt: config.checkedAt,
@@ -568,14 +653,19 @@ async function rebuildBatch<T extends LegacyBatchForm>(
       provenance: "MANUAL_CURATED" as const,
       pvpSummaryZhTw: legacyRankSummary(result.ranks),
       pveSummaryZhTw:
-        variant.variantKey === "MEGA"
+        useOverride(variant)?.pveSummaryZhTw ??
+        (variant.variantKey === "MEGA"
           ? config.texts.retentionPveMega
-          : config.texts.retentionPveWithLevel && config.pveUseLevels[variant.form.id]
+          : config.texts.retentionPveWithLevel &&
+              pveUseLevelFor(variant) &&
+              pveUseLevelFor(variant) !== "NO_SIGNIFICANT_USE"
             ? config.texts.retentionPveWithLevel
-            : config.texts.retentionPveDefault,
+            : config.texts.retentionPveDefault),
       rocketSummaryZhTw: "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
-      gymSummaryZhTw: "未列為主要道館保留用途。",
-      gymRating: "NOT_APPLICABLE" as const,
+      gymSummaryZhTw: useOverride(variant)?.gymSummaryZhTw ?? "未列為主要道館保留用途。",
+      gymRating: useOverride(variant)?.gymSummaryZhTw
+        ? ("SPECIAL_CASE" as const)
+        : ("NOT_APPLICABLE" as const),
       megaSummaryZhTw:
         variant.variantKey === "MEGA"
           ? config.texts.retentionMega
@@ -583,9 +673,10 @@ async function rebuildBatch<T extends LegacyBatchForm>(
             ? config.texts.retentionMegaBase
             : "此版本沒有獨立 Mega 型態用途。",
       maxBattleSummaryZhTw:
-        typeof config.texts.retentionMax === "function"
+        useOverride(variant)?.maxSummaryZhTw ??
+        (typeof config.texts.retentionMax === "function"
           ? config.texts.retentionMax(variant)
-          : config.texts.retentionMax,
+          : config.texts.retentionMax),
       evolutionSummaryZhTw: config.evolutionPairs.some(([from]) => from === variant.form.id)
         ? "本批進化關係已結構化；前階是否保留由後續目標用途決定。"
         : "單純存在家族關係不會自動產生大量保留理由。",
