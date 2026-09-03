@@ -66,7 +66,9 @@ describe("Gen5 #524-#553 publication candidate", () => {
 
   it("keeps local evolution edges family-consistent", () => {
     const formById = new Map(forms524553.map((form) => [form.id, form]));
-    const speciesByDex = new Map(species524553.map((species) => [species.dexNumber, species]));
+    const speciesByDex = new Map<number, (typeof species524553)[number]>(
+      species524553.map((species) => [species.dexNumber, species]),
+    );
     expect(evolutionPairs524553).toHaveLength(16);
 
     for (const [fromFormId, toFormId] of evolutionPairs524553) {
