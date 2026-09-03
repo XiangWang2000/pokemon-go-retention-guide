@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-09-04",
+  "purpose": "Gen5-9 species-level presentation variant-isolation guardrails before formal BattleVariant migration",
+  "sources": [
+    {
+      "id": "NIANTIC-GIGANTAMAX-SPECIMEN-ELIGIBILITY",
+      "type": "OFFICIAL",
+      "title": "What is the difference between Dynamax and Gigantamax Pokémon?",
+      "sourceUrl": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/4877-what-is-the-difference-between-dynamax-and-gigantamax-pokemon/",
+      "accessedAt": "2026-09-04",
+      "supports": [
+        "Gigantamax capability is specimen-specific even among eligible species",
+        "ordinary or Dynamax specimens must not inherit Gigantamax investment value automatically"
+      ]
+    },
+    {
+      "id": "NIANTIC-MAX-POKEMON-TYPE",
+      "type": "OFFICIAL",
+      "title": "What are Max Pokémon?",
+      "sourceUrl": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/4795-what-are-max-pokemon-1729886792/",
+      "accessedAt": "2026-09-04",
+      "supports": [
+        "Max Pokémon are a special type of Pokémon",
+        "Dynamax and Gigantamax capability must be represented separately from ordinary specimens"
+      ]
+    },
+    {
+      "id": "GOHUB-HISUIAN-BRAVIARY-20260609",
+      "type": "SECONDARY",
+      "title": "Hisuian Braviary Raid Guide",
+      "sourceUrl": "https://pokemongohub.net/post/guide/hisuian-braviary-raid-guide/",
+      "accessedAt": "2026-09-04",
+      "supports": [
+        "Rufflet cannot currently evolve into Hisuian Braviary in Pokémon GO",
+        "Hisuian Braviary is obtained independently via raids in the checked source"
+      ]
+    },
+    {
+      "id": "GOHUB-PETILIL-EVOLUTION",
+      "type": "SECONDARY",
+      "title": "Petilil: Best Moveset, Counters & Max CP",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/548",
+      "accessedAt": "2026-09-04",
+      "supports": [
+        "Pokémon GO Petilil evolution chart lists ordinary Lilligant, not Hisuian Lilligant"
+      ]
+    }
+  ]
+}

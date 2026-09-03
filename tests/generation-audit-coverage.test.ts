@@ -70,6 +70,47 @@ describe("Gen 1-9 audit coverage", () => {
     expect(CURRENT_DATA_MAX_DEX).toBe(493);
   });
 
+  it("keeps Gen5-9 species-level notes explicit about variant isolation", () => {
+    for (const guide of guides) {
+      const markdown = readFileSync(guide.path, "utf8");
+      expect(markdown).toContain("型態隔離");
+      expect(markdown).toContain("不得互相回灌");
+      expect(markdown).toContain("2026-09-01 PvPoke 快照");
+    }
+  });
+
+  it("does not claim ordinary Gen5 base species can evolve into unavailable Hisuian branches", () => {
+    const markdown = readFileSync("research_notes/history/generation-5-unova-retention.md", "utf8");
+    const rufflet = rows(markdown).find((row) => row.dex === 627);
+    expect(rufflet?.reason).toContain("洗翠勇士雄鷹為獨立地區型態");
+    expect(rufflet?.reason).not.toContain("可進化為勇士雄鷹／洗翠勇士雄鷹");
+    const petilil = rows(markdown).find((row) => row.dex === 548);
+    expect(petilil?.reason).toContain("洗翠裙兒小姐為獨立地區型態");
+    expect(petilil?.reason).not.toContain("可進化為裙兒小姐／洗翠裙兒小姐");
+  });
+
+  it("does not promote Forces of Nature rows by leaking Therian value across formes", () => {
+    const markdown = readFileSync("research_notes/history/generation-5-unova-retention.md", "utf8");
+    for (const dex of [641, 642, 645]) {
+      const item = rows(markdown).find((row) => row.dex === dex);
+      expect(item?.recommendation).toContain("🟡");
+      expect(item?.reason).toContain("型態");
+      expect(item?.reason).toMatch(/回灌|不能直接套用/);
+    }
+  });
+
+  it("does not use Gigantamax value as an automatic ordinary Gen8 keep reason", () => {
+    const markdown = readFileSync("research_notes/history/generation-8-galar-hisui-retention.md", "utf8");
+    expect(markdown).not.toContain("可進化為轟擂金剛猩／GMAX");
+    expect(markdown).not.toContain("可進化為閃焰王牌／GMAX");
+    expect(markdown).not.toContain("可進化為千面避役／GMAX");
+    for (const dex of [812, 815, 818, 849, 861]) {
+      const item = rows(markdown).find((row) => row.dex === dex);
+      expect(item?.recommendation).toContain("🟡");
+      expect(item?.reason).toContain("普通個體不得因 Gigantamax 版本價值自動升級");
+    }
+  });
+
   for (const guide of guides) {
     it(`Gen ${guide.generation} research guide covers every National Dex number exactly once`, () => {
       const markdown = readFileSync(guide.path, "utf8");
