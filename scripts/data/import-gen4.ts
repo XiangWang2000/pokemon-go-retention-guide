@@ -16,8 +16,9 @@ import { assertEvolutionPathEndpoints, upsertEvolutionPath } from "../../src/dat
 import { assertDisposableDatabase, getDatabaseUrl } from "../../src/lib/database";
 import { RULES_VERSION } from "../../src/rules/rules";
 
-const checkedAt = new Date("2026-08-16T00:00:00+08:00");
-const pvpokeCommit = "86847e535b7e0a0f4e91f9628b3fc713ae6adca7";
+const checkedAt = new Date("2026-09-03T00:00:00+08:00");
+const pvpokeCommit = "7b96d91fb553780653190ad32de001b5d9086a7f";
+const pvpokeSnapshotRoot = "data/sources/pvpoke/2026-09-01";
 const categories = [
   "PVP",
   "PVE",
@@ -28,9 +29,9 @@ const categories = [
   "EVOLUTION_VALUE",
 ] as const;
 const leagueMeta: Record<Gen4PlanLeague, { cp: number; sourceId: string; label: string }> = {
-  GREAT: { cp: 1500, sourceId: "pvpoke-gl-20260715", label: "Great League" },
-  ULTRA: { cp: 2500, sourceId: "pvpoke-ul-20260715", label: "Ultra League" },
-  MASTER: { cp: 10000, sourceId: "pvpoke-ml-20260715", label: "Master League" },
+  GREAT: { cp: 1500, sourceId: "pvpoke-gl-20260901", label: "Great League" },
+  ULTRA: { cp: 2500, sourceId: "pvpoke-ul-20260901", label: "Ultra League" },
+  MASTER: { cp: 10000, sourceId: "pvpoke-ml-20260901", label: "Master League" },
 };
 const legacyLeagueLabels: Record<Gen4PlanLeague, string> = {
   GREAT: "GL（超級聯盟）",
@@ -83,7 +84,7 @@ async function readRankings(): Promise<Gen4RankingSnapshots> {
   for (const league of Object.keys(leagueMeta) as Gen4PlanLeague[]) {
     const { cp } = leagueMeta[league];
     const json = await new Promise<string>((resolve, reject) =>
-      readFile(`data/sources/pvpoke/rankings-${cp}.json`, "utf8", (error, data) =>
+      readFile(`${pvpokeSnapshotRoot}/rankings-${cp}.json`, "utf8", (error, data) =>
         error ? reject(error) : resolve(data),
       ),
     );
@@ -122,7 +123,7 @@ async function upsertSource(
 async function upsertPvPokeSources(prisma: PrismaClient) {
   for (const league of Object.keys(leagueMeta) as Gen4PlanLeague[]) {
     const { cp, sourceId, label } = leagueMeta[league];
-    const bytes = readFileSync(`data/sources/pvpoke/rankings-${cp}.json`);
+    const bytes = readFileSync(`${pvpokeSnapshotRoot}/rankings-${cp}.json`);
     const sha256 = createHash("sha256").update(bytes).digest("hex");
     const data = {
       sourceName: "PvPoke fixed ranking snapshot",
@@ -623,7 +624,7 @@ async function writeEvidence(
           !row.released ||
           (legacy
             ? row.variantKey === "DYNAMAX"
-            : ["DYNAMAX", "GIGANTAMAX", "MEGA"].includes(row.variantKey))
+            : ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey))
         ) {
           status = row.released ? "NOT_APPLICABLE" : "UNRELEASED";
         } else if (row.pveEvidence) {
@@ -656,23 +657,19 @@ async function writeEvidence(
             : "已建模但目前尚未推出的 Mega 版本。";
         }
       } else if (category === "MAX_BATTLE") {
-        const isMaxVariant = legacy
-          ? row.variantKey === "DYNAMAX"
-          : ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey);
+        const isMaxVariant = row.variantKey === "DYNAMAX" || row.variantKey === "GIGANTAMAX";
         if (isMaxVariant) {
           status = row.released ? "VERIFIED" : "UNRELEASED";
-          provenance = row.released ? "SOURCE_VERIFIED" : "MANUAL_CURATED";
-          materialToDecision = row.released;
-          summaryZhTw = legacy
-            ? row.released
-              ? "此 Dynamax 版本已推出；與普通／暗影版本分開保留。"
-              : "此 Dynamax 版本尚未推出。"
-            : row.released
-              ? "已推出的 Max 版本。"
-              : "已建模但目前尚未推出的 Max 版本。";
+          provenance =
+            row.released && row.maxEvidence ? "SOURCE_VERIFIED" : "MANUAL_CURATED";
+          materialToDecision = row.released && Boolean(row.maxEvidence);
+          summaryZhTw = !row.released
+            ? "此 Max 版本尚未推出。"
+            : row.maxEvidence?.summaryZhTw ??
+              "此 Max 版本已推出，但目前沒有足以形成主要保留理由的 Max Battle 投資證據。";
         } else {
           status = row.released ? "NOT_APPLICABLE" : "UNRELEASED";
-          if (legacy) summaryZhTw = "普通、暗影或淨化個體不能替代 Dynamax 個體。";
+          summaryZhTw = "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。";
         }
       } else if (category === "EVOLUTION_VALUE") {
         const form = definition.forms.find((candidate) => candidate.id === row.formId);
@@ -707,11 +704,32 @@ async function writeEvidence(
         rocketRating: category === "ROCKET" ? ("DATA_UNAVAILABLE" as const) : null,
         rocketRoles: "[]",
         maxTypeRank: null,
-        maxTypeTier: null,
+        maxTypeTier: category === "MAX_BATTLE" ? (row.maxEvidence?.roles.join("；") ?? null) : null,
         maxTypeKey: null,
-        maxOverallRating: null,
-        maxInvestmentRating: null,
-        maxUseCaseBreadth: null,
+        maxOverallRating:
+          category === "MAX_BATTLE" && row.maxEvidence
+            ? row.maxEvidence.level === "CORE_INVESTMENT"
+              ? "HIGH"
+              : row.maxEvidence.level === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "LOW"
+            : null,
+        maxInvestmentRating:
+          category === "MAX_BATTLE" && row.maxEvidence
+            ? row.maxEvidence.level === "CORE_INVESTMENT"
+              ? "HIGH"
+              : row.maxEvidence.level === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "LOW"
+            : null,
+        maxUseCaseBreadth:
+          category === "MAX_BATTLE" && row.maxEvidence
+            ? row.maxEvidence.level === "CORE_INVESTMENT"
+              ? "BROAD"
+              : row.maxEvidence.level === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "NARROW"
+            : null,
         pveUseLevel,
         assessmentDisposition: null,
         checkedAt,
@@ -901,7 +919,7 @@ export async function runImportGen4(batch: string, databaseUrl = getDatabaseUrl(
     const releaseResearch = readManifest(`research_notes/sources/official-${batch}.json`);
     const pveResearch = readManifest(`research_notes/sources/pve-${batch}.json`);
     for (const source of [...releaseResearch.sources, ...pveResearch.sources]) {
-      await upsertSource(prisma, source, releaseResearch.checkedAt ?? "2026-08-16");
+      await upsertSource(prisma, source, releaseResearch.checkedAt ?? "2026-09-03");
     }
     await upsertPvPokeSources(prisma);
     await upsertSpeciesAndForms(prisma, definition, entry);
