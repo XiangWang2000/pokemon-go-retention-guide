@@ -24,11 +24,19 @@ export type CandidateForm = {
 
 export type CandidateEvolutionPair = readonly [fromFormId: string, toFormId: string];
 
+export type CandidateDeferredEvolutionTarget = {
+  fromFormId: string;
+  targetDexNumber: number;
+  targetFormKey: string;
+  reasonZhTw: string;
+};
+
 export type CandidateBatchDefinition = {
   key: string;
   generation: CandidateGeneration;
   species: readonly CandidateSpecies[];
   forms: readonly CandidateForm[];
   evolutionPairs: readonly CandidateEvolutionPair[];
+  deferredEvolutionTargets?: readonly CandidateDeferredEvolutionTarget[];
   identitySourceIds: readonly string[];
 };
