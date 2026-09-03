@@ -79,11 +79,14 @@ describe("Gen 1-9 audit coverage", () => {
     }
   });
 
-  it("does not claim ordinary Rufflet can evolve into Hisuian Braviary", () => {
+  it("does not claim ordinary Gen5 base species can evolve into unavailable Hisuian branches", () => {
     const markdown = readFileSync("research_notes/history/generation-5-unova-retention.md", "utf8");
-    const item = rows(markdown).find((row) => row.dex === 627);
-    expect(item?.reason).toContain("洗翠勇士雄鷹是獨立地區型態");
-    expect(item?.reason).not.toContain("可進化為勇士雄鷹／洗翠勇士雄鷹");
+    const rufflet = rows(markdown).find((row) => row.dex === 627);
+    expect(rufflet?.reason).toContain("洗翠勇士雄鷹為獨立地區型態");
+    expect(rufflet?.reason).not.toContain("可進化為勇士雄鷹／洗翠勇士雄鷹");
+    const petilil = rows(markdown).find((row) => row.dex === 548);
+    expect(petilil?.reason).toContain("洗翠裙兒小姐為獨立地區型態");
+    expect(petilil?.reason).not.toContain("可進化為裙兒小姐／洗翠裙兒小姐");
   });
 
   it("does not promote Forces of Nature rows by leaking Therian value across formes", () => {
