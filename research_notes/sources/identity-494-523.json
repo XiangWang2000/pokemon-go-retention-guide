@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "494-523",
+  "generation": 5,
+  "status": "CANDIDATE_IDENTITY_ONLY",
+  "sources": [
+    {
+      "id": "POKEAPI-CANONICAL-UNOVA-494-523",
+      "sourceName": "PokeAPI canonical dataset",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PokeAPI data/v2 CSV canonical Pokémon dataset",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "用於核對第五世代 #494～#523 的圖鑑編號、英文名稱、屬性與主系列進化身份；本來源不作為 Pokémon GO 推出狀態、暗影、Mega、Max 或戰鬥價值證據。",
+      "supports": [
+        "494-unova", "495-unova", "496-unova", "497-unova", "498-unova",
+        "499-unova", "500-unova", "501-unova", "502-unova", "503-unova",
+        "504-unova", "505-unova", "506-unova", "507-unova", "508-unova",
+        "509-unova", "510-unova", "511-unova", "512-unova", "513-unova",
+        "514-unova", "515-unova", "516-unova", "517-unova", "518-unova",
+        "519-unova", "520-unova", "521-unova", "522-unova", "523-unova"
+      ]
+    }
+  ],
+  "boundary": "Identity/evolution candidate only. No BattleVariant release state or retention value is inferred from this manifest."
+}
