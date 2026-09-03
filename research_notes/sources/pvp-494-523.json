@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "494-523",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVP",
+  "snapshot": {
+    "provider": "PvPoke",
+    "commit": "7b96d91fb553780653190ad32de001b5d9086a7f",
+    "root": "data/sources/pvpoke/2026-09-01",
+    "leagues": {
+      "GREAT": {
+        "cp": 1500,
+        "blobSha": "11427d49e8020bbb2d022cf6a5072e81a0e3b945"
+      },
+      "ULTRA": {
+        "cp": 2500,
+        "blobSha": "399f2c7708c85bfbb8ea8eaaf56d72bc8c1f48aa"
+      },
+      "MASTER": {
+        "cp": 10000,
+        "blobSha": "5b42677886dad78c8c805973eda7f10ba4880e58"
+      }
+    }
+  },
+  "boundary": "PvPoke ranking presence is battle evidence only. It must never be used to infer Pokémon GO release state, Shadow availability, or any other BattleVariant release status.",
+  "notesZhTw": "#494～#523 先建立普通與暗影的 exact PvPoke speciesId 映射；排名由 repository 固定的 2026-09-01 Open／Overall snapshot 重建。PvPoke 有某個 speciesId 不代表該版本已在 Pokémon GO 推出。"
+}
