@@ -2,6 +2,7 @@ import { getGen4BatchDefinition } from "./batch-gen4";
 import type {
   Gen4BatchDefinition,
   Gen4BatchForm,
+  Gen4MaxEvidence,
   Gen4PveEvidence,
   Gen4VariantKey,
 } from "./batch-gen4-types";
@@ -38,6 +39,7 @@ export type Gen4ImportPlanRow = {
   ranks: Gen4PlanRank[];
   bestPvpRank: number | null;
   pveEvidence: Gen4PveEvidence | null;
+  maxEvidence: Gen4MaxEvidence | null;
   initialDecision: Gen4PlanDecision;
   initialDisposition: Gen4PlanDisposition;
 };
@@ -88,18 +90,22 @@ function initialDecision(
   variantKey: Gen4VariantKey,
   bestPvpRank: number | null,
   pveEvidence: Gen4PveEvidence | null,
+  maxEvidence: Gen4MaxEvidence | null,
 ): Gen4PlanDecision {
   if (!released) return "TRANSFER_CANDIDATE";
   if (
-    variantKey === "MEGA" ||
-    variantKey === "DYNAMAX" ||
-    variantKey === "GIGANTAMAX" ||
     pveEvidence?.level === "CORE_INVESTMENT" ||
+    maxEvidence?.level === "CORE_INVESTMENT" ||
     (bestPvpRank !== null && bestPvpRank <= 100)
   ) {
     return "KEEP";
   }
-  if (pveEvidence !== null || (bestPvpRank !== null && bestPvpRank <= 250)) {
+  if (
+    pveEvidence !== null ||
+    maxEvidence !== null ||
+    (bestPvpRank !== null && bestPvpRank <= 250) ||
+    variantKey === "MEGA"
+  ) {
     return "CONDITIONAL_KEEP";
   }
   return "TRANSFER_CANDIDATE";
@@ -127,7 +133,14 @@ export function buildGen4ImportPlan(
           : [];
       const bestPvpRank = ranks.length ? Math.min(...ranks.map((rank) => rank.rank)) : null;
       const pveEvidence = definition.pveEvidenceForVariant(id);
-      const decision = initialDecision(released, variantKey, bestPvpRank, pveEvidence);
+      const maxEvidence = definition.maxEvidenceForVariant(id);
+      const decision = initialDecision(
+        released,
+        variantKey,
+        bestPvpRank,
+        pveEvidence,
+        maxEvidence,
+      );
       return {
         id,
         formId: form.id,
@@ -138,6 +151,7 @@ export function buildGen4ImportPlan(
         ranks,
         bestPvpRank,
         pveEvidence,
+        maxEvidence,
         initialDecision: decision,
         initialDisposition: initialDisposition(decision, released),
       };
@@ -149,7 +163,14 @@ export function buildGen4ImportPlan(
     if (!form) throw new Error(`Special Gen4 variant ${special.id} references ${special.formId}.`);
     const released = special.released;
     const pveEvidence = definition.pveEvidenceForVariant(special.id);
-    const decision = initialDecision(released, special.variantKey, null, pveEvidence);
+    const maxEvidence = definition.maxEvidenceForVariant(special.id);
+    const decision = initialDecision(
+      released,
+      special.variantKey,
+      null,
+      pveEvidence,
+      maxEvidence,
+    );
     rows.push({
       id: special.id,
       formId: form.id,
@@ -160,6 +181,7 @@ export function buildGen4ImportPlan(
       ranks: [],
       bestPvpRank: null,
       pveEvidence,
+      maxEvidence,
       initialDecision: decision,
       initialDisposition: initialDisposition(decision, released),
     });
