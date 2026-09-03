@@ -1,0 +1,51 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "524-553",
+  "generation": 5,
+  "status": "CANDIDATE_IDENTITY_ONLY",
+  "sources": [
+    {
+      "id": "POKEAPI-CANONICAL-UNOVA-524-553",
+      "sourceName": "PokeAPI canonical dataset",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PokeAPI data/v2 CSV canonical Pokémon dataset",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "用於核對第五世代 #524～#553 的圖鑑編號、英文名稱、屬性與主系列家族身份；不單獨用來推論 Pokémon GO 地區型態可取得性或跨世代進化。"
+    },
+    {
+      "id": "GOHUB-POKEMONGO-FORMS-524-553-20260904",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Unova PokéDex (Gen 5)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokedex/unova",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "當前 Pokémon GO 合眾 Pokédex 明列 #549 普通／洗翠裙兒小姐，以及 #550 野蠻鱸魚紅條紋、藍條紋、白條紋三種 form，供 Pokémon GO form identity 邊界使用。"
+    }
+  ],
+  "expected": {
+    "dexCount": 30,
+    "formCount": 33,
+    "multiFormDex": {
+      "549": [
+        "549-unova",
+        "549-hisui"
+      ],
+      "550": [
+        "550-red-striped",
+        "550-blue-striped",
+        "550-white-striped"
+      ]
+    },
+    "deferredEvolutionTargets": [
+      {
+        "fromFormId": "550-white-striped",
+        "targetDexNumber": 902,
+        "targetFormKey": "HISUI"
+      }
+    ]
+  },
+  "boundary": "Hisuian Lilligant is an independent Pokémon GO form and is not connected as an evolution from ordinary Petilil. White-Striped Basculin's #902 target is deferred until the Gen8 candidate owns that endpoint."
+}
