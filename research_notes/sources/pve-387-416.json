@@ -1,16 +1,42 @@
 {
   "batch": "387-416",
-  "checkedAt": "2026-08-13",
+  "checkedAt": "2026-09-03",
   "sources": [
-    { "id": "PVE-389-SHADOW-20260813", "sourceName": "GO Hub", "sourceType": "PVE", "sourceUrl": "https://db.pokemongohub.net/pokemon/389-Shadow", "summaryZhTw": "暗影土台龜：草 A+ #16、地面 A #24。", "supports": ["389-sinnoh-shadow"] },
-    { "id": "PVE-395-20260813", "sourceName": "GO Hub", "sourceType": "PVE", "sourceUrl": "https://db.pokemongohub.net/pokemon/395", "summaryZhTw": "帝王拿波：水 B #34；加農水炮是主要 PvE 招式。", "supports": ["395-sinnoh-normal"] },
-    { "id": "PVE-395-SHADOW-20260813", "sourceName": "GO Hub", "sourceType": "PVE", "sourceUrl": "https://db.pokemongohub.net/pokemon/395-Shadow", "summaryZhTw": "暗影帝王拿波：現行分析列為頂尖水系團體戰攻擊手之一。", "supports": ["395-sinnoh-shadow"] },
-    { "id": "PVE-398-20260813", "sourceName": "GO Hub", "sourceType": "PVE", "sourceUrl": "https://db.pokemongohub.net/pokemon/398", "summaryZhTw": "姆克鷹：飛行 A #27。", "supports": ["398-sinnoh-normal"] },
-    { "id": "PVE-398-SHADOW-20260813", "sourceName": "GO Hub", "sourceType": "PVE", "sourceUrl": "https://db.pokemongohub.net/pokemon/398-Shadow", "summaryZhTw": "暗影姆克鷹：飛行 A+ #16。", "supports": ["398-sinnoh-shadow"] },
-    { "id": "PVE-405-20260813", "sourceName": "GO Hub", "sourceType": "PVE", "sourceUrl": "https://db.pokemongohub.net/pokemon/405", "summaryZhTw": "倫琴貓：電 A #27。", "supports": ["405-sinnoh-normal"] },
-    { "id": "PVE-405-SHADOW-20260813", "sourceName": "GO Hub", "sourceType": "PVE", "sourceUrl": "https://db.pokemongohub.net/pokemon/405-Shadow", "summaryZhTw": "暗影倫琴貓：電 A #21。", "supports": ["405-sinnoh-shadow"] },
-    { "id": "PVE-407-20260813", "sourceName": "GO Hub", "sourceType": "PVE", "sourceUrl": "https://db.pokemongohub.net/pokemon/407", "summaryZhTw": "羅絲雷朵：草 A+ #17、毒 S #8。", "supports": ["407-sinnoh-normal"] },
-    { "id": "PVE-409-20260813", "sourceName": "GO Hub", "sourceType": "PVE", "sourceUrl": "https://db.pokemongohub.net/pokemon/409", "summaryZhTw": "戰槌龍：岩石 A+ #12；現行分析稱其具有最高的非 Mega／非暗影岩石系 DPS。", "supports": ["409-sinnoh-normal"] },
-    { "id": "PVE-409-SHADOW-20260813", "sourceName": "GO Hub", "sourceType": "PVE", "sourceUrl": "https://db.pokemongohub.net/pokemon/409-Shadow", "summaryZhTw": "暗影戰槌龍：岩石 S #8；現行分析稱其具有最高的岩石系 DPS。", "supports": ["409-sinnoh-shadow"] }
+    {
+      "id": "PVE-SINNOH-387-416-RAID-20260903",
+      "sourceName": "Pokémon GO Hub PvE reference",
+      "sourceType": "PVE",
+      "sourceTitleOriginal": "Best Raid Attackers",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false",
+      "accessedAt": "2026-09-03",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "2026-09-03 團體戰攻擊手榜，用於第四世代早期普通／暗影 BattleVariant 的 PvE 投資分級。",
+      "supports": [
+        "389-sinnoh-shadow",
+        "392-sinnoh-shadow",
+        "395-sinnoh-shadow",
+        "398-sinnoh-normal",
+        "398-sinnoh-shadow",
+        "405-sinnoh-shadow",
+        "407-sinnoh-normal",
+        "409-sinnoh-normal",
+        "409-sinnoh-shadow"
+      ]
+    },
+    {
+      "id": "MAX-SINNOH-416-20260903",
+      "sourceName": "Pokémon GO Hub Max Battle reference",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Max Defenders Tier List",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+      "accessedAt": "2026-09-03",
+      "publishedAt": null,
+      "sourceSummaryZhTw": "2026-09-03 Max 防守用途參考；極巨蜂女王僅列特殊用途，不把已推出本身視為核心投資理由。",
+      "supports": [
+        "416-sinnoh-dynamax"
+      ]
+    }
   ]
 }
