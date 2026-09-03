@@ -16,6 +16,12 @@ import {
   candidatePvpokeSpeciesId494523,
   pvpokeMappings494523,
 } from "@/data/candidates/gen5-pvp-494-523";
+import {
+  candidateReleaseEvidence494523,
+  releasedDynamaxForms494523,
+  releasedPurifiedForms494523,
+  releasedShadowForms494523,
+} from "@/data/candidates/gen5-release-494-523";
 
 type RankingRow = {
   speciesId: string;
@@ -217,4 +223,139 @@ describe("Gen5 #494-#523 publication candidate", () => {
     );
     expect(manifest.boundary).toContain("must never be used to infer Pokémon GO release state");
   });
+
+  it("resolves all NORMAL release states from explicit official evidence", () => {
+    for (const form of forms494523) {
+      const evidence = candidateReleaseEvidence494523(form.id, "NORMAL");
+      expect(evidence.status, form.id).toBe("RELEASED");
+      expect(evidence.sourceIds.length, form.id).toBeGreaterThan(0);
+      expect(evidence.evidenceMode, form.id).not.toBe("UNKNOWN");
+    }
+  });
+
+  it("uses only positive Shadow roster evidence and keeps roster absences UNKNOWN", () => {
+    expect(releasedShadowForms494523.size).toBe(18);
+    const expectedReleased = [
+      "495-unova",
+      "496-unova",
+      "497-unova",
+      "498-unova",
+      "499-unova",
+      "500-unova",
+      "501-unova",
+      "502-unova",
+      "503-unova",
+      "504-unova",
+      "505-unova",
+      "509-unova",
+      "510-unova",
+      "519-unova",
+      "520-unova",
+      "521-unova",
+      "522-unova",
+      "523-unova",
+    ];
+    expect([...releasedShadowForms494523]).toEqual(expectedReleased);
+
+    for (const form of forms494523) {
+      const evidence = candidateReleaseEvidence494523(form.id, "SHADOW");
+      if (releasedShadowForms494523.has(form.id)) {
+        expect(evidence.status, form.id).toBe("RELEASED");
+        expect(evidence.sourceIds).toContain("SECONDARY-SEREBII-SHADOW-ROSTER-20260904");
+      } else {
+        expect(evidence.status, form.id).toBe("UNKNOWN");
+        expect(evidence.sourceIds, form.id).toEqual([]);
+      }
+    }
+  });
+
+  it("derives Purified only from a confirmed same-form Shadow", () => {
+    expect([...releasedPurifiedForms494523]).toEqual([...releasedShadowForms494523]);
+    for (const form of forms494523) {
+      const shadow = candidateReleaseEvidence494523(form.id, "SHADOW");
+      const purified = candidateReleaseEvidence494523(form.id, "PURIFIED");
+      expect(purified.status, form.id).toBe(shadow.status);
+      if (purified.status === "RELEASED") {
+        expect(purified.sourceIds).toEqual(
+          expect.arrayContaining([
+            "SECONDARY-SEREBII-SHADOW-ROSTER-20260904",
+            "OFFICIAL-SHADOW-PURIFICATION-MECHANIC",
+          ]),
+        );
+        expect(purified.evidenceMode).toBe("MECHANIC_DERIVED");
+      }
+    }
+  });
+
+  it("resolves Dynamax Pidove and its evolutions without leaking Max status to other forms", () => {
+    expect([...releasedDynamaxForms494523]).toEqual([
+      "519-unova",
+      "520-unova",
+      "521-unova",
+    ]);
+    expect(candidateReleaseEvidence494523("519-unova", "DYNAMAX")).toMatchObject({
+      status: "RELEASED",
+      evidenceMode: "DIRECT",
+    });
+    for (const formId of ["520-unova", "521-unova"]) {
+      expect(candidateReleaseEvidence494523(formId, "DYNAMAX")).toMatchObject({
+        status: "RELEASED",
+        evidenceMode: "EVOLUTION_DERIVED",
+      });
+    }
+    expect(candidateReleaseEvidence494523("522-unova", "DYNAMAX")).toMatchObject({
+      status: "UNKNOWN",
+      sourceIds: [],
+    });
+  });
+
+  it("stores explicit special-form negatives only when the source says No", () => {
+    expect(candidateReleaseEvidence494523("500-unova", "MEGA")).toMatchObject({
+      status: "UNRELEASED",
+      evidenceMode: "EXPLICIT_UNRELEASED",
+      sourceIds: ["SECONDARY-GOHUB-UNOVA-ROSTER-20260904"],
+    });
+    expect(candidateReleaseEvidence494523("503-unova", "MEGA")).toMatchObject({
+      status: "UNKNOWN",
+      sourceIds: [],
+    });
+    expect(candidateReleaseEvidence494523("500-unova", "GIGANTAMAX")).toMatchObject({
+      status: "UNKNOWN",
+      sourceIds: [],
+    });
+  });
+
+  it("records release provenance and forbids negative inference from roster absence", () => {
+    const manifest = JSON.parse(
+      readFileSync("research_notes/sources/release-494-523.json", "utf8"),
+    ) as {
+      status: string;
+      sources: Array<{ id: string; sourceSummaryZhTw: string }>;
+      confirmed: {
+        normalReleased: string[];
+        shadowReleased: string[];
+        dynamaxReleased: string[];
+        explicitUnreleased: Array<{ formId: string; variantKey: string }>;
+      };
+      boundary: string;
+    };
+
+    expect(manifest.status).toBe("PARTIAL_EVIDENCE_RELEASE");
+    expect(manifest.confirmed.normalReleased).toHaveLength(30);
+    expect(manifest.confirmed.shadowReleased).toHaveLength(18);
+    expect(manifest.confirmed.dynamaxReleased).toEqual([
+      "519-unova",
+      "520-unova",
+      "521-unova",
+    ]);
+    expect(manifest.confirmed.explicitUnreleased).toEqual([
+      { formId: "500-unova", variantKey: "MEGA" },
+    ]);
+    expect(manifest.boundary).toContain("Absence from a roster is never converted to UNRELEASED");
+    expect(manifest.boundary).toContain("PvPoke presence is never release evidence");
+    expect(
+      manifest.sources.every((source) => /[\u3400-\u9fff]/u.test(source.sourceSummaryZhTw)),
+    ).toBe(true);
+  });
+
 });
