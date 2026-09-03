@@ -37,7 +37,9 @@ export const species524553 = [
   { dexNumber: 553, nameEn: "Krookodile", nameZhTw: "流氓鱷", types: ["GROUND", "DARK"], familyKey: "UNOVA_FAMILY_551" },
 ] as const satisfies readonly CandidateSpecies[];
 
-const speciesByDex = new Map(species524553.map((species) => [species.dexNumber, species]));
+const speciesByDex = new Map<number, CandidateSpecies>(
+  species524553.map((species) => [species.dexNumber, species]),
+);
 
 function standardForm(
   dexNumber: number,
