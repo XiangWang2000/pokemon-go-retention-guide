@@ -134,7 +134,7 @@ export const releasedMegaForms282311 = new Set<string>([
   "308-hoenn",
   "310-hoenn",
 ]);
-export const releasedDynamaxForms282311 = new Set<string>();
+export const releasedDynamaxForms282311 = new Set<string>(["282-hoenn", "302-hoenn"]);
 export const releasedGigantamaxForms282311 = new Set<string>();
 
 export const specialVariants282311: Gen3SpecialVariant[] = [
@@ -153,13 +153,23 @@ export const specialVariants282311: Gen3SpecialVariant[] = [
 }));
 
 export const pveUseLevels282311: Record<string, PveUseLevel> = {
-  "282-hoenn": "CORE_INVESTMENT",
-  "297-hoenn": "USABLE_OR_BUDGET",
-  "306-hoenn": "USABLE_OR_BUDGET",
-  "308-hoenn": "SPECIAL_USE",
-  "310-hoenn": "USABLE_OR_BUDGET",
+  "286-hoenn": "USABLE_OR_BUDGET",
+  "297-hoenn": "SPECIAL_USE",
+};
+export const pveVariantUseLevels282311: Record<string, PveUseLevel> = {
+  "282-hoenn-shadow": "CORE_INVESTMENT",
+  "282-hoenn-mega": "CORE_INVESTMENT",
+  "297-hoenn-shadow": "CORE_INVESTMENT",
+  "306-hoenn-shadow": "USABLE_OR_BUDGET",
+  "306-hoenn-mega": "USABLE_OR_BUDGET",
+  "310-hoenn-shadow": "SPECIAL_USE",
+  "310-hoenn-mega": "USABLE_OR_BUDGET",
 };
 
+export const maxUseLevels282311: Record<string, PveUseLevel> = {
+  "282-hoenn": "USABLE_OR_BUDGET",
+  "302-hoenn": "SPECIAL_USE",
+};
 export const truncatedForms282311 = new Set<string>();
 
 const pvpokeIds282311: Record<string, string> = Object.fromEntries(

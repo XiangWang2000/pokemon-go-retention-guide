@@ -15,6 +15,8 @@ import {
   specialVariants252281,
   species252281,
   pveUseLevels252281,
+  pveVariantUseLevels252281,
+  maxUseLevels252281,
 } from "../../src/data/batch-252-281";
 import type {
   Gen3Form,
@@ -33,6 +35,8 @@ import {
   specialVariants282311,
   species282311,
   pveUseLevels282311,
+  pveVariantUseLevels282311,
+  maxUseLevels282311,
 } from "../../src/data/batch-282-311";
 import {
   forms312341,
@@ -46,6 +50,8 @@ import {
   species312341,
   pveClassifications312341,
   pveUseLevels312341,
+  pveVariantUseLevels312341,
+  maxUseLevels312341,
 } from "../../src/data/batch-312-341";
 import {
   forms342371,
@@ -59,6 +65,8 @@ import {
   species342371,
   pveClassifications342371,
   pveUseLevels342371,
+  pveVariantUseLevels342371,
+  maxUseLevels342371,
 } from "../../src/data/batch-342-371";
 import {
   forms372386,
@@ -72,6 +80,8 @@ import {
   species372386,
   pveClassifications372386,
   pveUseLevels372386,
+  pveVariantUseLevels372386,
+  maxUseLevels372386,
 } from "../../src/data/batch-372-386";
 import {
   ensureCrossGenerationEvolutionTargets,
@@ -156,12 +166,16 @@ type BatchDefinition = {
   specialVariants: Gen3SpecialVariant[];
   pveClassifications: Record<string, PveUseLevel>;
   pveUseLevels: Record<string, PveUseLevel>;
+  pveVariantUseLevels: Record<string, PveUseLevel>;
+  maxUseLevels: Record<string, PveUseLevel>;
   pvpokeSpeciesId: (form: Gen3Form, shadow: boolean) => string;
   shadowUnavailableFormIds: ReadonlySet<string>;
 };
 
-const checkedAt = new Date("2026-08-09T00:00:00+08:00");
-const pvpokeCommit = "86847e535b7e0a0f4e91f9628b3fc713ae6adca7";
+const checkedAt = new Date("2026-09-03T00:00:00+08:00");
+const pvpokeCheckedAt = new Date("2026-09-01T00:00:00+08:00");
+const pvpokeSnapshotRoot = "data/sources/pvpoke/2026-09-01";
+const pvpokeCommit = "7b96d91fb553780653190ad32de001b5d9086a7f";
 const categories: readonly Category[] = [
   "PVP",
   "PVE",
@@ -172,9 +186,9 @@ const categories: readonly Category[] = [
   "EVOLUTION_VALUE",
 ];
 const leagues = [
-  { key: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260715", label: "GL（超級聯盟）" },
-  { key: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260715", label: "UL（高級聯盟）" },
-  { key: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260715", label: "ML（大師聯盟）" },
+  { key: "GREAT", cp: 1500, sourceId: "pvpoke-gl-20260901", label: "GL（超級聯盟）" },
+  { key: "ULTRA", cp: 2500, sourceId: "pvpoke-ul-20260901", label: "UL（高級聯盟）" },
+  { key: "MASTER", cp: 10000, sourceId: "pvpoke-ml-20260901", label: "ML（大師聯盟）" },
 ] as const;
 
 function definitionFor(batch: string): BatchDefinition {
@@ -197,6 +211,8 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants252281,
       pveClassifications: pveUseLevels252281,
       pveUseLevels: pveUseLevels252281,
+      pveVariantUseLevels: pveVariantUseLevels252281,
+      maxUseLevels: maxUseLevels252281,
       pvpokeSpeciesId: pvpokeSpeciesId252281,
       shadowUnavailableFormIds: new Set(),
     };
@@ -216,6 +232,8 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants282311,
       pveClassifications: pveUseLevels282311,
       pveUseLevels: pveUseLevels282311,
+      pveVariantUseLevels: pveVariantUseLevels282311,
+      maxUseLevels: maxUseLevels282311,
       pvpokeSpeciesId: pvpokeSpeciesId282311,
       shadowUnavailableFormIds: new Set(),
     };
@@ -235,6 +253,8 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants312341,
       pveClassifications: pveClassifications312341,
       pveUseLevels: pveUseLevels312341,
+      pveVariantUseLevels: pveVariantUseLevels312341,
+      maxUseLevels: maxUseLevels312341,
       pvpokeSpeciesId: pvpokeSpeciesId312341,
       shadowUnavailableFormIds: new Set(),
     };
@@ -254,6 +274,8 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants342371,
       pveClassifications: pveClassifications342371,
       pveUseLevels: pveUseLevels342371,
+      pveVariantUseLevels: pveVariantUseLevels342371,
+      maxUseLevels: maxUseLevels342371,
       pvpokeSpeciesId: pvpokeSpeciesId342371,
       shadowUnavailableFormIds: new Set(),
     };
@@ -273,6 +295,8 @@ function definitionFor(batch: string): BatchDefinition {
       specialVariants: specialVariants372386,
       pveClassifications: pveClassifications372386,
       pveUseLevels: pveUseLevels372386,
+      pveVariantUseLevels: pveVariantUseLevels372386,
+      maxUseLevels: maxUseLevels372386,
       pvpokeSpeciesId: pvpokeSpeciesId372386,
       shadowUnavailableFormIds: new Set(),
     };
@@ -417,7 +441,7 @@ async function assertDatabaseCanonical(batch: BatchDefinition) {
 async function readRankings() {
   const result = new Map<LeagueKey, RankingRow[]>();
   for (const league of leagues) {
-    const bytes = await readFile("data/sources/pvpoke/rankings-" + league.cp + ".json");
+    const bytes = await readFile(pvpokeSnapshotRoot + "/rankings-" + league.cp + ".json");
     const rows = JSON.parse(bytes.toString("utf8").replace(/^\uFEFF/, "")) as RankingRow[];
     result.set(league.key, rows);
     const hash = createHash("sha256").update(bytes).digest("hex");
@@ -430,15 +454,16 @@ async function readRankings() {
         sourceType: "PVP",
         sourceTitleOriginal: "PvPoke Battle League Rankings",
         sourceLanguage: "en",
-        sourceSummaryZhTw: "固定 commit 的 Open League／Overall 排名快照。",
-        accessedAt: checkedAt,
+        sourceSummaryZhTw: "2026-09-01 固定 Open League／Overall 排名快照。",
+        accessedAt: pvpokeCheckedAt,
         publishedAt: null,
         dataVersion: pvpokeCommit + "; sha256=" + hash,
         notes: "完整 JSON 陣列 index + 1 可重現名次。",
       },
       update: {
+        accessedAt: pvpokeCheckedAt,
         dataVersion: pvpokeCommit + "; sha256=" + hash,
-        notes: "完整 JSON 陣列 index + 1 可重現名次。",
+        notes: "2026-09-01 完整 JSON 陣列 index + 1 可重現名次。",
       },
     });
   }
@@ -499,19 +524,37 @@ function rankSummary(ranks: RankResult[]) {
     .join("；");
 }
 
+function pveUseLevelForVariant(
+  batch: BatchDefinition,
+  variant: Pick<VariantRecord, "id" | "variantKey" | "form">,
+): PveUseLevel {
+  if (["DYNAMAX", "GIGANTAMAX", "PURIFIED"].includes(variant.variantKey)) {
+    return "NO_SIGNIFICANT_USE";
+  }
+  return (
+    batch.pveVariantUseLevels[variant.id] ??
+    (variant.variantKey === "NORMAL" ? batch.pveUseLevels[variant.form.id] : undefined) ??
+    (variant.variantKey === "MEGA" ? "SPECIAL_USE" : undefined) ??
+    "NO_SIGNIFICANT_USE"
+  );
+}
+
 function initialDecision(
   batch: BatchDefinition,
-  variantKey: VariantKey,
-  released: boolean,
+  variant: VariantRecord,
   ranks: RankResult[],
-  formId: string,
 ) {
-  if (!released) return "TRANSFER_CANDIDATE" as const;
-  if (variantKey === "MEGA") return "KEEP" as const;
-  if (variantKey === "DYNAMAX" || batch.pveUseLevels[formId] === "CORE_INVESTMENT") {
-    return "KEEP" as const;
+  if (!variant.released) return "TRANSFER_CANDIDATE" as const;
+  if (variant.variantKey === "DYNAMAX" || variant.variantKey === "GIGANTAMAX") {
+    if (batch.maxUseLevels[variant.form.id] === "CORE_INVESTMENT") return "KEEP" as const;
+    if (batch.maxUseLevels[variant.form.id]) return "CONDITIONAL_KEEP" as const;
+    return "TRANSFER_CANDIDATE" as const;
   }
-  if (batch.pveUseLevels[formId]) return "CONDITIONAL_KEEP" as const;
+  const pveLevel = pveUseLevelForVariant(batch, variant);
+  if (pveLevel === "CORE_INVESTMENT") return "KEEP" as const;
+  if (pveLevel === "USABLE_OR_BUDGET" || pveLevel === "SPECIAL_USE") {
+    return "CONDITIONAL_KEEP" as const;
+  }
   const best = Math.min(...ranks.map((rank) => rank.rank), Number.POSITIVE_INFINITY);
   if (best <= 100) return "KEEP" as const;
   if (best <= 250) return "CONDITIONAL_KEEP" as const;
@@ -849,17 +892,17 @@ export async function runImport(batchName: string) {
         extractionMethod: "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
         reproducible: true,
         sourceId: rank.sourceId,
-        checkedAt,
+        checkedAt: pvpokeCheckedAt,
       })),
     ),
     ...variants.flatMap((variant) => {
-      const level = batch.pveUseLevels[variant.form.id];
-      const tier =
-        variant.variantKey === "MEGA"
-          ? "SPECIAL"
-          : variant.variantKey === "NORMAL" || variant.variantKey === "SHADOW"
-            ? pveTier(level)
-            : null;
+      const explicitLevel =
+        variant.variantKey === "NORMAL"
+          ? batch.pveUseLevels[variant.form.id]
+          : batch.pveVariantUseLevels[variant.id];
+      const tier = ["NORMAL", "SHADOW", "MEGA"].includes(variant.variantKey)
+        ? pveTier(explicitLevel)
+        : null;
       if (!tier) return [];
       return [
         {
@@ -877,11 +920,15 @@ export async function runImport(batchName: string) {
           rating: tier,
           recommendedMoves: JSON.stringify([]),
           tier,
-          rawNotes: "PvE 用途依第三世代研究表區分四級用途；不虛構 IV 硬門檻。",
-          seasonOrVersion: "GO Hub accessed 2026-08-09",
-          extractionMethod: "研究表中的用途層級與來源頁面發布狀態",
+          rawNotes:
+            "PvE 用途依 2026-09-03 團戰攻擊手榜逐 BattleVariant 分級；普通、暗影、Mega／原始回歸不互相繼承，不虛構 IV 硬門檻。",
+          seasonOrVersion: "GO Hub Raid Attacker tiers accessed 2026-09-03",
+          extractionMethod: "2026-09-03 團戰攻擊手 tier 與逐版本人工校正",
           reproducible: false,
-          sourceId: "PVE-HOENN-20260809",
+          sourceId:
+            variant.variantKey === "MEGA"
+              ? "PVE-MEGA-HOENN-20260903"
+              : "PVE-ATTACKERS-HOENN-20260903",
           checkedAt,
         },
       ];
@@ -896,13 +943,7 @@ export async function runImport(batchName: string) {
   for (const variant of variants) {
     const ranks = rankMap.get(variant.id) ?? [];
     decisions.set(variant.id, {
-      decision: initialDecision(
-        batch,
-        variant.variantKey,
-        variant.released,
-        ranks,
-        variant.form.id,
-      ),
+      decision: initialDecision(batch, variant, ranks),
       ranks,
       released: variant.released,
     });
@@ -938,22 +979,27 @@ export async function runImport(batchName: string) {
             "固定 PvPoke Open／Overall 快照未列入可重現名次；不把沒有排名誤當成全家族資料缺口。";
         }
       } else if (category === "PVE") {
-        pveUseLevel =
-          variant.variantKey === "MEGA"
-            ? "SPECIAL_USE"
-            : (batch.pveClassifications[variant.form.id] ?? "NO_SIGNIFICANT_USE");
+        pveUseLevel = pveUseLevelForVariant(batch, variant);
+        const hasPveEvidence = links.some((link) => link.category === "PVE");
         if (!variant.released || ["DYNAMAX", "GIGANTAMAX"].includes(variant.variantKey)) {
           status = variant.released ? "NOT_APPLICABLE" : "UNRELEASED";
-        } else if (variant.variantKey === "MEGA" || batch.pveUseLevels[variant.form.id]) {
+        } else if (hasPveEvidence || pveUseLevel !== "NO_SIGNIFICANT_USE") {
           status = "PARTIALLY_VERIFIED";
-          provenance = "SOURCE_VERIFIED";
-          materialToDecision = true;
+          provenance = hasPveEvidence ? "SOURCE_VERIFIED" : "MANUAL_CURATED";
+          materialToDecision = pveUseLevel !== "NO_SIGNIFICANT_USE";
           summaryZhTw =
-            "PvE 用途依研究表分成核心投資、可用／預算型、特殊用途或無顯著用途；不把缺少精確斷點誤當成整個家族待判斷。";
+            pveUseLevel === "CORE_INVESTMENT"
+              ? "此精確版本在目前團戰攻擊手資料屬核心投資等級；15攻是同種篩選優先，不是硬性淘汰門檻。"
+              : pveUseLevel === "USABLE_OR_BUDGET"
+                ? "此精確版本具可用／預算型團戰價值；只留實際會投入的少量候選，不因同家族其他型態較強而大量囤積。"
+                : pveUseLevel === "SPECIAL_USE"
+                  ? "此精確版本屬較窄或替代性高的團戰用途；通常只需少量特殊用途候選。"
+                  : "目前團戰攻擊手資料不足以形成此精確版本的主要 PvE 保留理由；不因 100% 或同家族其他型態的價值自動升格。";
         } else {
           status = "DATA_UNAVAILABLE";
           provenance = "DATA_UNAVAILABLE";
-          summaryZhTw = "目前未列為普通版本的主要 PvE 投資目標；不因缺少精確斷點虛構 IV 淘汰線。";
+          summaryZhTw =
+            "目前未列為此精確版本的主要 PvE 投資目標；不因缺少精確斷點虛構 IV 淘汰線，也不把普通／暗影／Mega 價值互相回推。";
         }
       } else if (category === "ROCKET") {
         status = variant.released ? "DATA_UNAVAILABLE" : "UNRELEASED";
@@ -997,16 +1043,16 @@ export async function runImport(batchName: string) {
           provenance = variant.released ? "SOURCE_VERIFIED" : "MANUAL_CURATED";
           materialToDecision = variant.released;
         } else if (variant.variantKey === "NORMAL" && hasReleasedMax) {
-          status = "PARTIALLY_VERIFIED";
+          status = "VERIFIED";
           provenance = "SOURCE_VERIFIED";
-          materialToDecision = true;
+          materialToDecision = false;
         }
         summaryZhTw = maxVariant
           ? variant.released
             ? "此 Max 版本已推出；與普通／暗影版本分開保留。"
             : "此 Max 版本尚未推出。"
           : hasReleasedMax
-            ? "此普通型態是已推出 Max 的基底；不把 Max 用途回推成全家族必留。"
+            ? "同物種已有 Max 版本，但普通個體不能轉成 Max；不因此產生普通版保留理由。"
             : isPrimalFormId(variant.form.id)
               ? "普通、暗影或原始回歸個體不等於極巨／超極巨個體。"
               : "普通、暗影或 Mega 個體不等於極巨／超極巨個體。";
@@ -1035,9 +1081,30 @@ export async function runImport(batchName: string) {
         maxTypeRank: null,
         maxTypeTier: null,
         maxTypeKey: null,
-        maxOverallRating: null,
-        maxInvestmentRating: null,
-        maxUseCaseBreadth: null,
+        maxOverallRating:
+          category === "MAX_BATTLE" && batch.maxUseLevels[variant.form.id]
+            ? batch.maxUseLevels[variant.form.id] === "CORE_INVESTMENT"
+              ? "HIGH"
+              : batch.maxUseLevels[variant.form.id] === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "LOW"
+            : null,
+        maxInvestmentRating:
+          category === "MAX_BATTLE" && batch.maxUseLevels[variant.form.id]
+            ? batch.maxUseLevels[variant.form.id] === "CORE_INVESTMENT"
+              ? "HIGH"
+              : batch.maxUseLevels[variant.form.id] === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "LOW"
+            : null,
+        maxUseCaseBreadth:
+          category === "MAX_BATTLE" && batch.maxUseLevels[variant.form.id]
+            ? batch.maxUseLevels[variant.form.id] === "CORE_INVESTMENT"
+              ? "BROAD"
+              : batch.maxUseLevels[variant.form.id] === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "NARROW"
+            : null,
         pveUseLevel,
         assessmentDisposition: null,
         checkedAt,
@@ -1084,6 +1151,7 @@ export async function runImport(batchName: string) {
       batch.evolutionPairs.some(([from]) => from === variant.form.id) ||
       Boolean(variant.form.evolvesFromFormId);
     const variantNameZhTw = specialVariantNameZhTw(variant.form.id, variant.variantKey);
+    const pveUseLevel = pveUseLevelForVariant(batch, variant);
     return {
       id: "gen3-" + batch.batch + "-eval-" + variant.id,
       battleVariantId: variant.id,
@@ -1091,11 +1159,15 @@ export async function runImport(batchName: string) {
       provenance: "MANUAL_CURATED" as const,
       pvpSummaryZhTw: rankSummary(result.ranks),
       pveSummaryZhTw:
-        variant.variantKey === "MEGA"
-          ? variantNameZhTw + "有獨立 PvE 與團體戰 boost 用途；先核對招式、等級與實際投入。"
-          : batch.pveUseLevels[variant.form.id]
-            ? "PvE 用途依研究表分成核心投資、可用／預算型或特殊用途；不把缺少精確斷點誤當成整個家族待判斷。"
-            : "未列為本批普通版本的核心 PvE 投資目標；不因 100% 自動升格為實戰必留。",
+        pveUseLevel === "CORE_INVESTMENT"
+          ? "此精確版本屬核心 PvE 投資；先核對招式、等級與實際投入，15 攻只作同種候選優先而非硬性淘汰線。"
+          : pveUseLevel === "USABLE_OR_BUDGET"
+            ? "此精確版本具可用／預算型 PvE 價值；只留實際會投入的少量候選，不把其他型態的價值回推到此版本。"
+            : pveUseLevel === "SPECIAL_USE"
+              ? variant.variantKey === "MEGA"
+                ? variantNameZhTw + "仍有 Mega boost 或較窄團戰用途；只留實際投入候選，不因能 Mega 就自動視為核心攻擊手。"
+                : "此精確版本屬特殊或替代性高的 PvE 用途；只需少量符合用途的候選。"
+              : "目前沒有足以形成此精確版本主要 PvE 保留理由的資料；不因 100%、暗影加成或同家族其他型態的價值自動升格。",
       rocketSummaryZhTw: "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
       gymSummaryZhTw: "未列為主要道館保留用途；缺少次要欄位來源不覆蓋其他結論。",
       gymRating: "NOT_APPLICABLE" as const,
@@ -1109,9 +1181,16 @@ export async function runImport(batchName: string) {
             : isPrimalFormId(variant.form.id)
               ? "此版本沒有獨立原始回歸型態用途。"
               : "此版本沒有獨立 Mega 型態用途。",
-      maxBattleSummaryZhTw: isPrimalFormId(variant.form.id)
-        ? "Max 用途與普通、暗影、原始回歸分開評估；尚未發布版本不替代現有個體。"
-        : "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
+      maxBattleSummaryZhTw:
+        variant.variantKey === "DYNAMAX" && variant.released
+          ? batch.maxUseLevels[variant.form.id] === "CORE_INVESTMENT"
+            ? "此 Dynamax 版本具高價值 Max 攻擊、防守或充能角色，屬優先投入候選。"
+            : batch.maxUseLevels[variant.form.id] === "USABLE_OR_BUDGET"
+              ? "此 Dynamax 版本有明確 Max 用途，但不需要大量囤積；留少量高品質候選。"
+              : "此 Dynamax 版本已推出但角色偏窄；只留特殊用途或收藏級候選。"
+          : isPrimalFormId(variant.form.id)
+            ? "Max 用途與普通、暗影、原始回歸分開評估；尚未發布版本不替代現有個體。"
+            : "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
       evolutionSummaryZhTw: hasEvolution
         ? "本批進化關係已結構化；前階是否保留由後續目標用途決定。"
         : "單純存在家族關係不會自動產生大量保留理由。",

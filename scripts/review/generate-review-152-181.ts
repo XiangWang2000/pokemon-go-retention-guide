@@ -102,8 +102,15 @@ async function main() {
     shadowCrobatReleased: rows.some(
       (row) => row.id === "169-johto-shadow" && row.releaseStatus === "RELEASED",
     ),
-    dynamaxRowsRemainUnreleased: rows
-      .filter((row) => row.variantKey === "DYNAMAX")
+    dynamaxHoothootLineReleased: ["163-johto-dynamax", "164-johto-dynamax"].every((id) =>
+      rows.some((row) => row.id === id && row.releaseStatus === "RELEASED"),
+    ),
+    otherDynamaxRowsRemainUnreleased: rows
+      .filter(
+        (row) =>
+          row.variantKey === "DYNAMAX" &&
+          !["163-johto-dynamax", "164-johto-dynamax"].includes(row.id),
+      )
       .every((row) => row.releaseStatus === "UNRELEASED"),
   };
 

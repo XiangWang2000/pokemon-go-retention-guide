@@ -37,13 +37,13 @@
   "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #984；招式 SNARL／FOUL_PLAY／FLAMETHROWER；UL（高級聯盟） Overall #682；招式 SNARL／FOUL_PLAY／FLAMETHROWER",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #985；招式 SNARL／FOUL_PLAY／FLAMETHROWER；UL（高級聯盟） Overall #684；招式 SNARL／FOUL_PLAY／FLAMETHROWER",
   "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "普通電龍可作 Mega 基底候選；不把 Mega 用途回推成全家族必留。",
-  "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
+  "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估.",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
   "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
@@ -572,7 +572,7 @@
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #984；招式 SNARL／FOUL_PLAY／FLAMETHROWER；UL（高級聯盟） Overall #682；招式 SNARL／FOUL_PLAY／FLAMETHROWER",
+      "summaryZhTw": "GL（超級聯盟） Overall #985；招式 SNARL／FOUL_PLAY／FLAMETHROWER；UL（高級聯盟） Overall #684；招式 SNARL／FOUL_PLAY／FLAMETHROWER",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -587,15 +587,15 @@
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -621,6 +621,70 @@
     }
   ],
   "raw": [
+    {
+      "id": "raw-r19-229-johto-normal-great",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "GREAT",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "houndoom",
+      "formKey": "229-johto",
+      "variantKey": "NORMAL",
+      "rank": 985,
+      "rating": "478",
+      "score": null,
+      "tier": null,
+      "recommendedMoves": [
+        "SNARL",
+        "FOUL_PLAY",
+        "FLAMETHROWER"
+      ],
+      "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-08-31T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-gl-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    },
+    {
+      "id": "raw-r19-229-johto-normal-ultra",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "ULTRA",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "houndoom",
+      "formKey": "229-johto",
+      "variantKey": "NORMAL",
+      "rank": 684,
+      "rating": "477",
+      "score": null,
+      "tier": null,
+      "recommendedMoves": [
+        "SNARL",
+        "FOUL_PLAY",
+        "FLAMETHROWER"
+      ],
+      "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-08-31T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-ul-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    },
     {
       "id": "raw-r19-229-johto-normal-pve",
       "category": "PVE",
@@ -648,70 +712,6 @@
         "title": "Johto Pokédex and Pokémon GO PvE rankings",
         "url": "https://db.pokemongohub.net/pokedex/johto"
       }
-    },
-    {
-      "id": "raw-r19-229-johto-normal-great",
-      "category": "PVP",
-      "status": "VERIFIED",
-      "league": "GREAT",
-      "cup": "OPEN",
-      "pvpCategory": "OVERALL",
-      "speciesKey": "houndoom",
-      "formKey": "229-johto",
-      "variantKey": "NORMAL",
-      "rank": 984,
-      "rating": "479",
-      "score": null,
-      "tier": null,
-      "recommendedMoves": [
-        "SNARL",
-        "FOUL_PLAY",
-        "FLAMETHROWER"
-      ],
-      "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-      "reproducible": true,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
-      "source": {
-        "id": "pvpoke-gl-20260715",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
-      }
-    },
-    {
-      "id": "raw-r19-229-johto-normal-ultra",
-      "category": "PVP",
-      "status": "VERIFIED",
-      "league": "ULTRA",
-      "cup": "OPEN",
-      "pvpCategory": "OVERALL",
-      "speciesKey": "houndoom",
-      "formKey": "229-johto",
-      "variantKey": "NORMAL",
-      "rank": 682,
-      "rating": "478",
-      "score": null,
-      "tier": null,
-      "recommendedMoves": [
-        "SNARL",
-        "FOUL_PLAY",
-        "FLAMETHROWER"
-      ],
-      "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-      "reproducible": true,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
-      "source": {
-        "id": "pvpoke-ul-20260715",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
-      }
     }
   ],
   "sources": [
@@ -734,21 +734,21 @@
       "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],

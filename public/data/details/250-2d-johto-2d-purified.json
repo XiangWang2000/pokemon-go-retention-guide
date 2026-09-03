@@ -15,7 +15,7 @@
     {
       "id": "recalibrate-20260809-decision-250-johto-purified",
       "fieldName": "decision",
-      "previousValue": "KEEP",
+      "previousValue": "CONDITIONAL_KEEP",
       "newValue": "TRANSFER_CANDIDATE",
       "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
       "changedAt": "2026-09-01T16:00:00.000Z",
@@ -25,7 +25,7 @@
     {
       "id": "recalibrate-20260809-disposition-250-johto-purified",
       "fieldName": "assessmentDisposition",
-      "previousValue": "CLEAR_USE",
+      "previousValue": "LIMITED_USE",
       "newValue": "NO_SIGNIFICANT_USE",
       "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
       "changedAt": "2026-09-01T16:00:00.000Z",

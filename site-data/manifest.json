@@ -2,11 +2,11 @@
   "schemaVersion": 1,
   "batch": "001-493",
   "dataVersion": "2026.09.02-r31",
-  "dataAsOf": "2026-09-02T04:00:00.000Z",
+  "dataAsOf": "2026-09-02T16:00:00.000Z",
   "sourceDatabase": {
     "path": "rebuild-ci.db",
-    "bytes": 19382272,
-    "sha256": "fbc48a326c3418d8818e051662676bd66af29cdcaf9da8175c4bda7c6d1b5d9a"
+    "bytes": 19394560,
+    "sha256": "f820688b1e56d8c5be77ead0ef431e13ccd946dbd934ce973b095ca88dce30fb"
   },
   "rulesVersions": [
     "2026.08.06-v7"
@@ -18,15 +18,15 @@
     "evolutionPaths": 276,
     "moves": 9,
     "variantMoves": 9,
-    "sourceReferences": 236,
-    "rawEvaluationData": 1513,
+    "sourceReferences": 252,
+    "rawEvaluationData": 1482,
     "retentionEvaluations": 2513,
-    "evaluationSources": 3837,
+    "evaluationSources": 3915,
     "evaluationRuleTraces": 3278,
-    "changeLogs": 4117,
+    "changeLogs": 4035,
     "dataIssues": 557,
     "categoryEvaluations": 16436,
-    "categoryEvaluationSources": 3850,
+    "categoryEvaluationSources": 3925,
     "ivRecommendations": 13,
     "dashboardRows": 2348,
     "homeFamilies": 302,
@@ -37,74 +37,74 @@
     "openReviewIssues": 161,
     "detailRecords": 2348
   },
-  "snapshotSha256": "fdf20e6bca8cbd2585d6473396ad85f1b41c26d7843cab07f884f4327f01cb3e",
+  "snapshotSha256": "8be3644104bcc3ebe3a3fd33a76795de6a066da5014aac942dc59ee115ad1734",
   "files": {
     "home": {
       "path": "home.json",
-      "bytes": 21993673,
-      "sha256": "c960626f4304c679d16d9b9626989bac5e871d8c4d2f37ea252c2aad3a7e99f8"
+      "bytes": 21964220,
+      "sha256": "32d4e84d3a0f52b536e5579603489c2e7638314e8220b1dfeb46e2aadb68b3d8"
     },
     "homeSummary": {
       "path": "homeSummary.json",
-      "bytes": 184,
-      "sha256": "42ee58db6fcacde49e08d4e782e2a8c2fb1a327cc31bacf688a066b9fcfc2b42"
+      "bytes": 185,
+      "sha256": "078a28a4b26ddaba795bc434a0f7a7c2472de02dec6038f3242d633c862026f8"
     },
     "dashboard": {
       "path": "dashboard.json",
-      "bytes": 45449699,
-      "sha256": "3f4efb79caef2b67f0680bffcbb6c8182abb065de01f4ea151bb5011fff1ba07"
+      "bytes": 45483662,
+      "sha256": "bcbaa363c7596fdad3097a6508b96ab6728565fafdc280ec2b089ec33e596ae8"
     },
     "auditSummary": {
       "path": "auditSummary.json",
-      "bytes": 1550959,
-      "sha256": "2d24f4e4214dc1551385580dec148481a23f697b7fbc956932f9b47c855e575a"
+      "bytes": 1550851,
+      "sha256": "19797e0ba37e6622f5a80769a524148dd90432a829cf1743827064f6268541d2"
     },
     "review": {
       "path": "review.json",
-      "bytes": 361783,
-      "sha256": "6142642b1ab606cbd6f3794c916e616bf016747407d952775301508af517e654"
+      "bytes": 361755,
+      "sha256": "c297e70a8688a119083040d9c7f384fbee5d59bc286f60e7f7b76153d907389d"
     },
     "sources": {
       "path": "sources.json",
-      "bytes": 212283,
-      "sha256": "e4604b5df5c10e12d9fb4bdb2f88e6f4755a78470fb9de99d23ec47b09589cf6"
+      "bytes": 224536,
+      "sha256": "1269c12ad8daed04dd7944fb04e7919d2c66a71ae0ba2f1b9fc0b14ec6da6985"
     },
     "changes": {
       "path": "changes.json",
-      "bytes": 2585192,
-      "sha256": "ef56599bd5abd028732a715dc8711e5c6b06f8c3fbe60d99822cc4ac85faa207"
+      "bytes": 2543205,
+      "sha256": "d48c21adc8ac938ec89391c04e9d6b98180d22e8063bbcb837e0c9b85071480d"
     },
     "details": {
       "path": "details.json",
-      "bytes": 3289316,
-      "sha256": "5afab651837c85cb0f1d178ee2d949b99266c11b69e76b3ae940782818b75b79"
+      "bytes": 3253563,
+      "sha256": "ad4dd90fa689a59bd39fdc0d19fc0fd46fddf658c8b0573a0fd294f856ffba2f"
     }
   },
   "runtimeHome": {
     "path": "public/data/home.json",
-    "bytes": 1402540,
-    "sha256": "dd26c4043eae3860238b827bed5757a7ddf009d2e1657a41a503d2fa74ef1e9e"
+    "bytes": 1406327,
+    "sha256": "6067bc78ea2b8d5e5dd18e92159839480907423bed317776a2f44d493132c282"
   },
   "runtimeFamilyData": {
     "directory": "public/data/families",
     "count": 302,
-    "bytes": 34821203
+    "bytes": 34785879
   },
   "runtimeAuditData": {
     "directory": "public/data/audit",
     "count": 2348,
-    "bytes": 56791806
+    "bytes": 56829511
   },
   "runtimeDetailData": {
     "directory": "public/data/details",
     "count": 2348,
-    "bytes": 3800764
+    "bytes": 3758943
   },
   "runtimeStaticData": {
     "audit-summary.json": {
       "path": "public/data/audit-summary.json",
-      "bytes": 1550959,
-      "sha256": "2d24f4e4214dc1551385580dec148481a23f697b7fbc956932f9b47c855e575a"
+      "bytes": 1550851,
+      "sha256": "19797e0ba37e6622f5a80769a524148dd90432a829cf1743827064f6268541d2"
     },
     "family-index.json": {
       "path": "public/data/family-index.json",
@@ -113,24 +113,24 @@
     },
     "review.json": {
       "path": "public/data/review.json",
-      "bytes": 361783,
-      "sha256": "6142642b1ab606cbd6f3794c916e616bf016747407d952775301508af517e654"
+      "bytes": 361755,
+      "sha256": "c297e70a8688a119083040d9c7f384fbee5d59bc286f60e7f7b76153d907389d"
     },
     "sources.json": {
       "path": "public/data/sources.json",
-      "bytes": 212283,
-      "sha256": "e4604b5df5c10e12d9fb4bdb2f88e6f4755a78470fb9de99d23ec47b09589cf6"
+      "bytes": 224536,
+      "sha256": "1269c12ad8daed04dd7944fb04e7919d2c66a71ae0ba2f1b9fc0b14ec6da6985"
     },
     "changes.json": {
       "path": "public/data/changes.json",
-      "bytes": 2585192,
-      "sha256": "ef56599bd5abd028732a715dc8711e5c6b06f8c3fbe60d99822cc4ac85faa207"
+      "bytes": 2543205,
+      "sha256": "d48c21adc8ac938ec89391c04e9d6b98180d22e8063bbcb837e0c9b85071480d"
     }
   },
   "excel": {
     "path": "public/exports/pokemon-go-retention-001-493.xlsx",
-    "bytes": 1178641,
-    "sha256": "7d3043aaf909f1ea4ca38e35dd6e279881b93f304c6454f8dc5539458d8aafc9",
+    "bytes": 1175628,
+    "sha256": "09fc7ec0c2453cd93451e684f8ae85963710a1e70853932f09024f42a258eb2c",
     "sheets": 10
   }
 }

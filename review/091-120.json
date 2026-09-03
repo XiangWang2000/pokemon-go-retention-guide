@@ -10,8 +10,8 @@
     "battleVariants": 144,
     "families": 19,
     "strategyCounts": {
-      "KEEP_TARGETS": 8,
-      "SELECTIVE_KEEP": 7,
+      "KEEP_TARGETS": 9,
+      "SELECTIVE_KEEP": 6,
       "MOSTLY_TRANSFER": 4,
       "HOLD_FOR_NOW": 0
     },
@@ -145,7 +145,7 @@
     {
       "familyId": "KANTO_FAMILY_113:113-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留吉利蛋（道館防守候選），以及幸福蛋（PvE 實戰候選）；保留可進化為幸福蛋的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留吉利蛋（道館防守候選），以及幸福蛋（道館防守候選、極巨候選）；保留可進化為幸福蛋的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     },
     {
@@ -174,8 +174,8 @@
     },
     {
       "familyId": "KANTO_FAMILY_120:120-kanto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留寶石海星（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留寶石海星（PvP（GL Rank≤100、UL Rank≤100）、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "其他普通重複可傳"
     }
   ]

@@ -24,7 +24,7 @@
   "variantKey": "NORMAL",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "普通版本；與暗影、淨化、Mega 及 Max 分開評估。",
   "decision": "CONDITIONAL_KEEP",
   "assessmentDisposition": "LIMITED_USE",
@@ -36,7 +36,7 @@
   "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #290；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST；UL（高級聯盟） Overall #148；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST；ML（大師聯盟） Overall #147；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #287；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST；UL（高級聯盟） Overall #151；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST；ML（大師聯盟） Overall #148；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -467,7 +467,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "EVOLUTION-HOENN-20260809",
@@ -505,27 +505,34 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "MAX_BATTLE",
-      "status": "NOT_APPLICABLE",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "普通、暗影或 Mega 個體不等於極巨／超極巨個體。",
+      "status": "VERIFIED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "同物種已有 Max 版本，但普通個體不能轉成 Max；不因此產生普通版保留理由。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
       "maxTypeTier": null,
       "maxTypeKey": null,
-      "maxOverallRating": null,
-      "maxInvestmentRating": null,
-      "maxUseCaseBreadth": null,
+      "maxOverallRating": "MEDIUM",
+      "maxInvestmentRating": "MEDIUM",
+      "maxUseCaseBreadth": "MEDIUM",
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
-      "sources": []
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "sources": [
+        {
+          "id": "MAX-HOENN-20260903",
+          "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+          "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
+          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+        }
+      ]
     },
     {
       "category": "MEGA",
@@ -543,7 +550,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -562,14 +569,14 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #290；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST；UL（高級聯盟） Overall #148；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST；ML（大師聯盟） Overall #147；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST",
+      "summaryZhTw": "GL（超級聯盟） Overall #287；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST；UL（高級聯盟） Overall #151；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST；ML（大師聯盟） Overall #148；招式 LOCK_ON／STONE_EDGE／FOCUS_BLAST",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -581,24 +588,24 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ml-20260715",
+          "id": "pvpoke-ml-20260901",
           "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -619,7 +626,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     }
   ],
@@ -634,8 +641,8 @@
       "speciesKey": "regirock",
       "formKey": "377-hoenn",
       "variantKey": "NORMAL",
-      "rank": 290,
-      "rating": "600",
+      "rank": 287,
+      "rating": "598",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -644,16 +651,16 @@
         "FOCUS_BLAST"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     },
     {
@@ -666,8 +673,8 @@
       "speciesKey": "regirock",
       "formKey": "377-hoenn",
       "variantKey": "NORMAL",
-      "rank": 147,
-      "rating": "606",
+      "rank": 148,
+      "rating": "607",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -676,16 +683,16 @@
         "FOCUS_BLAST"
       ],
       "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ml-20260715",
+        "id": "pvpoke-ml-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
       }
     },
     {
@@ -698,7 +705,7 @@
       "speciesKey": "regirock",
       "formKey": "377-hoenn",
       "variantKey": "NORMAL",
-      "rank": 148,
+      "rank": 151,
       "rating": "617",
       "score": null,
       "tier": null,
@@ -708,16 +715,16 @@
         "FOCUS_BLAST"
       ],
       "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ul-20260715",
+        "id": "pvpoke-ul-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
       }
     }
   ],
@@ -729,6 +736,15 @@
       "url": "https://pokeapi.co/docs/v2#evolution-chains",
       "type": "SECONDARY",
       "accessedAt": "2026-08-08T16:00:00.000Z",
+      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+    },
+    {
+      "id": "MAX-HOENN-20260903",
+      "name": "Pokémon GO Hub",
+      "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+      "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
+      "type": "MAX_BATTLE",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
       "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
@@ -750,30 +766,30 @@
       "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ml-20260715",
+      "id": "pvpoke-ml-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],

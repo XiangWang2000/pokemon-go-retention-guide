@@ -57,7 +57,7 @@
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
               "notesZhTw": "普通版本；與暗影、淨化、Mega 及 Max 分開評估。",
               "decision": "CONDITIONAL_KEEP",
               "assessmentDisposition": "LIMITED_USE",
@@ -69,7 +69,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #546；招式 LOCK_ON／BLIZZARD／THUNDER；UL（高級聯盟） Overall #166；招式 LOCK_ON／THUNDER／BLIZZARD；ML（大師聯盟） Overall #226；招式 LOCK_ON／THUNDER／EARTHQUAKE",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #544；招式 LOCK_ON／BLIZZARD／THUNDER；UL（高級聯盟） Overall #167；招式 LOCK_ON／BLIZZARD／THUNDER；ML（大師聯盟） Overall #226；招式 LOCK_ON／THUNDER／EARTHQUAKE",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -77,7 +77,7 @@
               "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
               "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "依固定快照優先核對：LOCK_ON／THUNDER／BLIZZARD／EARTHQUAKE",
+              "requiredMovesSummaryZhTw": "依固定快照優先核對：LOCK_ON／BLIZZARD／THUNDER／EARTHQUAKE",
               "recommendedIvStrategyZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
@@ -109,7 +109,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -128,26 +128,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "MAX_BATTLE",
-                  "status": "NOT_APPLICABLE",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "普通、暗影或 Mega 個體不等於極巨／超極巨個體。",
+                  "status": "VERIFIED",
+                  "provenance": "SOURCE_VERIFIED",
+                  "summaryZhTw": "同物種已有 Max 版本，但普通個體不能轉成 Max；不因此產生普通版保留理由。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
                   "maxTypeTier": null,
                   "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
+                  "maxOverallRating": "MEDIUM",
+                  "maxInvestmentRating": "MEDIUM",
+                  "maxUseCaseBreadth": "MEDIUM",
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -166,7 +166,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -185,14 +185,14 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #546；招式 LOCK_ON／BLIZZARD／THUNDER；UL（高級聯盟） Overall #166；招式 LOCK_ON／THUNDER／BLIZZARD；ML（大師聯盟） Overall #226；招式 LOCK_ON／THUNDER／EARTHQUAKE",
+                  "summaryZhTw": "GL（超級聯盟） Overall #544；招式 LOCK_ON／BLIZZARD／THUNDER；UL（高級聯盟） Overall #167；招式 LOCK_ON／BLIZZARD／THUNDER；ML（大師聯盟） Overall #226；招式 LOCK_ON／THUNDER／EARTHQUAKE",
                   "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -204,7 +204,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -223,7 +223,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "LIMITED_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -238,8 +238,8 @@
                   "speciesKey": "regice",
                   "formKey": "378-hoenn",
                   "variantKey": "NORMAL",
-                  "rank": 546,
-                  "rating": "506",
+                  "rank": 544,
+                  "rating": "507",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -248,16 +248,16 @@
                     "THUNDER"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -271,7 +271,7 @@
                   "formKey": "378-hoenn",
                   "variantKey": "NORMAL",
                   "rank": 226,
-                  "rating": "471",
+                  "rating": "474",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -280,16 +280,16 @@
                     "EARTHQUAKE"
                   ],
                   "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ml-20260715",
+                    "id": "pvpoke-ml-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
                   }
                 },
                 {
@@ -302,26 +302,26 @@
                   "speciesKey": "regice",
                   "formKey": "378-hoenn",
                   "variantKey": "NORMAL",
-                  "rank": 166,
-                  "rating": "569",
+                  "rank": 167,
+                  "rating": "571",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
                     "LOCK_ON",
-                    "THUNDER",
-                    "BLIZZARD"
+                    "BLIZZARD",
+                    "THUNDER"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -333,6 +333,15 @@
                   "url": "https://pokeapi.co/docs/v2#evolution-chains",
                   "type": "SECONDARY",
                   "accessedAt": "2026-08-08T16:00:00.000Z",
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+                },
+                {
+                  "id": "MAX-HOENN-20260903",
+                  "name": "Pokémon GO Hub",
+                  "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+                  "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
+                  "type": "MAX_BATTLE",
+                  "accessedAt": "2026-09-02T16:00:00.000Z",
                   "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
                 },
                 {
@@ -354,30 +363,30 @@
                   "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -495,20 +504,20 @@
               "variantKey": "SHADOW",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
               "notesZhTw": "暗影個體獨立評估；暗影標準較寬，不因低總 IV 自動淨化。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NO_SIGNIFICANT_USE",
+              "decision": "CONDITIONAL_KEEP",
+              "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
-              "dataStatus": "DATA_UNAVAILABLE",
+              "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
+              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #791；招式 LOCK_ON／BLIZZARD／THUNDER；UL（高級聯盟） Overall #367；招式 LOCK_ON／THUNDER／BLIZZARD；ML（大師聯盟） Overall #275；招式 LOCK_ON／THUNDER／EARTHQUAKE",
-              "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #792；招式 LOCK_ON／BLIZZARD／THUNDER；UL（高級聯盟） Overall #365；招式 LOCK_ON／BLIZZARD／THUNDER；ML（大師聯盟） Overall #273；招式 LOCK_ON／THUNDER／EARTHQUAKE",
+              "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
@@ -516,9 +525,9 @@
               "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
               "ivRecommendations": [],
-              "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
+              "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
               "evaluationId": "gen3-372-386-eval-378-hoenn-shadow",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "已核對第三世代家族、分支進化、特殊取得、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
@@ -546,8 +555,8 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -565,27 +574,27 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "MAX_BATTLE",
                   "status": "NOT_APPLICABLE",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "普通、暗影或 Mega 個體不等於極巨／超極巨個體。",
+                  "summaryZhTw": "同物種已有 Max 版本，但普通個體不能轉成 Max；不因此產生普通版保留理由。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
                   "maxTypeTier": null,
                   "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
+                  "maxOverallRating": "MEDIUM",
+                  "maxInvestmentRating": "MEDIUM",
+                  "maxUseCaseBreadth": "MEDIUM",
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -603,16 +612,16 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "PVE",
-                  "status": "DATA_UNAVAILABLE",
-                  "provenance": "DATA_UNAVAILABLE",
-                  "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-                  "materialToDecision": false,
+                  "status": "PARTIALLY_VERIFIED",
+                  "provenance": "SOURCE_VERIFIED",
+                  "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -621,16 +630,16 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "pveUseLevel": "SPECIAL_USE",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #791；招式 LOCK_ON／BLIZZARD／THUNDER；UL（高級聯盟） Overall #367；招式 LOCK_ON／THUNDER／BLIZZARD；ML（大師聯盟） Overall #275；招式 LOCK_ON／THUNDER／EARTHQUAKE",
+                  "summaryZhTw": "GL（超級聯盟） Overall #792；招式 LOCK_ON／BLIZZARD／THUNDER；UL（高級聯盟） Overall #365；招式 LOCK_ON／BLIZZARD／THUNDER；ML（大師聯盟） Overall #273；招式 LOCK_ON／THUNDER／EARTHQUAKE",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -641,8 +650,8 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -660,12 +669,40 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 }
               ],
               "raw": [
+                {
+                  "id": "raw-gen3-372-386-378-hoenn-shadow-pve",
+                  "category": "PVE",
+                  "status": "PARTIALLY_VERIFIED",
+                  "league": "NOT_APPLICABLE",
+                  "cup": null,
+                  "pvpCategory": null,
+                  "speciesKey": "regice_shadow",
+                  "formKey": "378-hoenn",
+                  "variantKey": "SHADOW",
+                  "rank": null,
+                  "rating": "SPECIAL",
+                  "score": null,
+                  "tier": "SPECIAL",
+                  "recommendedMoves": [],
+                  "rawNotes": "PvE 用途依 2026-09-03 團戰攻擊手榜逐 BattleVariant 分級；普通、暗影、Mega／原始回歸不互相繼承，不虛構 IV 硬門檻。",
+                  "seasonOrVersion": "GO Hub Raid Attacker tiers accessed 2026-09-03",
+                  "extractionMethod": "2026-09-03 團戰攻擊手 tier 與逐版本人工校正",
+                  "reproducible": false,
+                  "migrationNote": null,
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
+                  "source": {
+                    "id": "PVE-ATTACKERS-HOENN-20260903",
+                    "name": "Pokémon GO Hub",
+                    "title": "Best Attackers Tier List (Pokémon GO)",
+                    "url": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false"
+                  }
+                },
                 {
                   "id": "raw-gen3-372-386-378-hoenn-shadow-great",
                   "category": "PVP",
@@ -676,8 +713,8 @@
                   "speciesKey": "regice_shadow",
                   "formKey": "378-hoenn",
                   "variantKey": "SHADOW",
-                  "rank": 791,
-                  "rating": "394",
+                  "rank": 792,
+                  "rating": "396",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -686,16 +723,16 @@
                     "THUNDER"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -708,8 +745,8 @@
                   "speciesKey": "regice_shadow",
                   "formKey": "378-hoenn",
                   "variantKey": "SHADOW",
-                  "rank": 275,
-                  "rating": "442",
+                  "rank": 273,
+                  "rating": "447",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -718,16 +755,16 @@
                     "EARTHQUAKE"
                   ],
                   "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ml-20260715",
+                    "id": "pvpoke-ml-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
                   }
                 },
                 {
@@ -740,30 +777,39 @@
                   "speciesKey": "regice_shadow",
                   "formKey": "378-hoenn",
                   "variantKey": "SHADOW",
-                  "rank": 367,
-                  "rating": "512",
+                  "rank": 365,
+                  "rating": "513",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
                     "LOCK_ON",
-                    "THUNDER",
-                    "BLIZZARD"
+                    "BLIZZARD",
+                    "THUNDER"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
               "sources": [
+                {
+                  "id": "PVE-ATTACKERS-HOENN-20260903",
+                  "name": "Pokémon GO Hub",
+                  "title": "Best Attackers Tier List (Pokémon GO)",
+                  "url": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false",
+                  "type": "PVE",
+                  "accessedAt": "2026-09-02T16:00:00.000Z",
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+                },
                 {
                   "id": "SECONDARY-SHADOW-HOENN-2026",
                   "name": "Serebii Pokemon GO Shadow Pokemon",
@@ -774,50 +820,87 @@
                   "usageZhTw": "Shadow 起始物種發布來源（direct roster source）；僅證明來源名單直接列出的起始物種。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
-                  "explanationZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。"
+                  "resultDecision": "CONDITIONAL_KEEP",
+                  "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
                 }
               ],
               "moves": []
             },
-            "primaryUses": [],
-            "primaryUseKeys": [],
-            "ivRecommendations": [],
-            "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "primaryUses": [
+              "PvE"
+            ],
+            "primaryUseKeys": [
+              "SHADOW_PVE"
+            ],
+            "ivRecommendations": [
+              {
+                "id": "iv-global-shadow-pve",
+                "scopeType": "GLOBAL",
+                "scopeKey": "GLOBAL",
+                "primaryUseKey": "SHADOW_PVE",
+                "ivStrategyKey": "SHADOW_PVE",
+                "maxBattleRole": null,
+                "attackIvMin": null,
+                "attackIvPriority": 15,
+                "attackIvConditionalMin": null,
+                "secondaryAttackIv": null,
+                "defenseIvMin": null,
+                "defenseIvPriority": null,
+                "staminaIvMin": null,
+                "staminaIvPriority": null,
+                "totalIvPercentMin": null,
+                "totalIvPercentPriority": null,
+                "secondaryTotalIvPercentMin": null,
+                "pvpRankMax": null,
+                "pvpRankConditionalMax": null,
+                "pvpPrMin": null,
+                "recommendedQuantity": null,
+                "hundoPriority": false,
+                "appliesOnlyWhenUseConfirmed": true,
+                "speciesSpecificOverride": false,
+                "overrideReasonZhTw": "",
+                "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+                "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
+                "rulesVersion": "2026.09.02-v3"
+              }
+            ],
+            "ivShortLabels": [
+              "暗影標準較寬；15攻優先，不設硬性最低IV"
+            ],
+            "ivDirection": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+            "shortReason": "暗影版需獨立判斷，淨化前先確認用途。"
           },
           {
             "row": {
@@ -846,7 +929,7 @@
               "variantKey": "PURIFIED",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
               "notesZhTw": "淨化不可逆；先確認暗影用途與招式，不以淨化取代暗影候選。",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
@@ -898,7 +981,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -917,26 +1000,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "MAX_BATTLE",
                   "status": "NOT_APPLICABLE",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "普通、暗影或 Mega 個體不等於極巨／超極巨個體。",
+                  "summaryZhTw": "同物種已有 Max 版本，但普通個體不能轉成 Max；不因此產生普通版保留理由。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
                   "maxTypeTier": null,
                   "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
+                  "maxOverallRating": "MEDIUM",
+                  "maxInvestmentRating": "MEDIUM",
+                  "maxUseCaseBreadth": "MEDIUM",
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -955,7 +1038,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -974,7 +1057,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -993,7 +1076,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1012,7 +1095,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -1071,32 +1154,32 @@
               ],
               "evolutionNames": [],
               "variantKey": "DYNAMAX",
-              "isReleased": false,
-              "releaseStatus": "UNRELEASED",
-              "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
-              "notesZhTw": "此 Max 版本尚未核實為已推出；普通個體不能替代 Max 個體。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "isReleased": true,
+              "releaseStatus": "RELEASED",
+              "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
+              "notesZhTw": "此 Max 版本已由來源核對為已推出；普通個體不能替代 Max 個體。",
+              "decision": "CONDITIONAL_KEEP",
+              "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
-              "dataStatus": "VERIFIED",
+              "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "此欄位不適用或版本尚未推出，不把它當成現有個體的待補資料。",
+              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
-              "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+              "pveSummaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-              "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
+              "maxBattleSummaryZhTw": "此 Dynamax 版本有明確 Max 用途，但不需要大量囤積；留少量高品質候選。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "recommendedIvStrategyZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
               "ivRecommendations": [],
-              "reasonZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。",
+              "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
               "evaluationId": "gen3-372-386-eval-378-hoenn-dynamax",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "已核對第三世代家族、分支進化、特殊取得、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
@@ -1124,14 +1207,14 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "GYM",
-                  "status": "UNRELEASED",
-                  "provenance": "MANUAL_CURATED",
+                  "status": "DATA_UNAVAILABLE",
+                  "provenance": "DATA_UNAVAILABLE",
                   "summaryZhTw": "未找到足以構成主要保留理由的道館用途；次要資料缺失不覆蓋其他結論。",
                   "materialToDecision": false,
                   "rocketRating": null,
@@ -1143,27 +1226,27 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "MAX_BATTLE",
-                  "status": "UNRELEASED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "此 Max 版本尚未推出。",
-                  "materialToDecision": false,
+                  "status": "VERIFIED",
+                  "provenance": "SOURCE_VERIFIED",
+                  "summaryZhTw": "此 Max 版本已推出；與普通／暗影版本分開保留。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
                   "maxTypeTier": null,
                   "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
+                  "maxOverallRating": "MEDIUM",
+                  "maxInvestmentRating": "MEDIUM",
+                  "maxUseCaseBreadth": "MEDIUM",
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1181,15 +1264,15 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "PVE",
-                  "status": "UNRELEASED",
+                  "status": "NOT_APPLICABLE",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+                  "summaryZhTw": "特殊用途。Max Battle 版本需與普通／暗影分開保留",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1199,14 +1282,14 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "pveUseLevel": "SPECIAL_USE",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "PVP",
-                  "status": "UNRELEASED",
+                  "status": "NOT_APPLICABLE",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
                   "materialToDecision": false,
@@ -1219,14 +1302,14 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "ROCKET",
-                  "status": "UNRELEASED",
-                  "provenance": "MANUAL_CURATED",
+                  "status": "DATA_UNAVAILABLE",
+                  "provenance": "DATA_UNAVAILABLE",
                   "summaryZhTw": "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。",
                   "materialToDecision": false,
                   "rocketRating": "DATA_UNAVAILABLE",
@@ -1238,30 +1321,104 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "assessmentDisposition": "LIMITED_USE",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 }
               ],
               "raw": [],
-              "sources": [],
+              "sources": [
+                {
+                  "id": "MAX-ATTACKERS-GEN3-20260903",
+                  "name": "Pokémon GO Hub",
+                  "title": "Pokémon GO Max Attackers Tier List (September 2026)",
+                  "url": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
+                  "type": "MAX_BATTLE",
+                  "accessedAt": "2026-09-02T16:00:00.000Z",
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+                },
+                {
+                  "id": "MAX-DEFENDERS-GEN3-20260903",
+                  "name": "Pokémon GO Hub",
+                  "title": "Pokémon GO Max Defenders Tier List (September 2026)",
+                  "url": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+                  "type": "MAX_BATTLE",
+                  "accessedAt": "2026-09-02T16:00:00.000Z",
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+                },
+                {
+                  "id": "MAX-HEALERS-GEN3-20260903",
+                  "name": "Pokémon GO Hub",
+                  "title": "Pokémon GO Max Healers Tier List (September 2026)",
+                  "url": "https://pokemongohub.net/post/guide/max-healers-tier-list-june-2025/",
+                  "type": "MAX_BATTLE",
+                  "accessedAt": "2026-09-02T16:00:00.000Z",
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+                },
+                {
+                  "id": "MAX-HOENN-20260903",
+                  "name": "Pokémon GO Hub",
+                  "title": "Available Dynamax and Gigantamax Pokémon in Pokémon GO",
+                  "url": "https://db.pokemongohub.net/pokemon-list/category/dynamax",
+                  "type": "MAX_BATTLE",
+                  "accessedAt": "2026-09-02T16:00:00.000Z",
+                  "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
+                }
+              ],
               "traces": [
                 {
-                  "ruleKey": "UNRELEASED_VARIANT",
-                  "priority": 950,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
-                  "explanationZhTw": "不適用／尚未推出；不要把現有個體誤當成尚未推出版本的候選。"
+                  "resultDecision": "CONDITIONAL_KEEP",
+                  "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
                 }
               ],
               "moves": []
             },
-            "primaryUses": [],
-            "primaryUseKeys": [],
-            "ivRecommendations": [],
-            "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "primaryUses": [
+              "Max Battle"
+            ],
+            "primaryUseKeys": [
+              "MAX_FLEX"
+            ],
+            "ivRecommendations": [
+              {
+                "id": "iv-global-max-flex",
+                "scopeType": "GLOBAL",
+                "scopeKey": "GLOBAL",
+                "primaryUseKey": "MAX_FLEX",
+                "ivStrategyKey": "MAX_FLEX",
+                "maxBattleRole": "FLEX",
+                "attackIvMin": null,
+                "attackIvPriority": null,
+                "attackIvConditionalMin": null,
+                "secondaryAttackIv": null,
+                "defenseIvMin": null,
+                "defenseIvPriority": null,
+                "staminaIvMin": null,
+                "staminaIvPriority": null,
+                "totalIvPercentMin": null,
+                "totalIvPercentPriority": null,
+                "secondaryTotalIvPercentMin": null,
+                "pvpRankMax": null,
+                "pvpRankConditionalMax": null,
+                "pvpPrMin": null,
+                "recommendedQuantity": null,
+                "hundoPriority": false,
+                "appliesOnlyWhenUseConfirmed": true,
+                "speciesSpecificOverride": false,
+                "overrideReasonZhTw": "",
+                "ivRecommendationZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+                "shortIvLabelZhTw": "Max：依角色分開保留",
+                "rulesVersion": "2026.09.02-v3"
+              }
+            ],
+            "ivShortLabels": [
+              "Max：依角色分開保留"
+            ],
+            "ivDirection": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+            "shortReason": "只有具 Max 能力的個體適用，一般舊個體不能替代。"
           }
         ],
         "variantKeys": [
@@ -1273,7 +1430,8 @@
         "releasedVariantKeys": [
           "NORMAL",
           "SHADOW",
-          "PURIFIED"
+          "PURIFIED",
+          "DYNAMAX"
         ],
         "pvp": {
           "label": "中",
@@ -1281,17 +1439,17 @@
           "tone": "MEDIUM"
         },
         "pve": {
-          "label": "無顯著用途",
-          "detail": "目前沒有足以支持 PvE 投資的直接用途。",
-          "tone": "LOW"
+          "label": "特殊用途",
+          "detail": "團體戰／暗影：本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
+          "tone": "SPECIAL"
         },
         "gym": {
           "label": "—",
           "tone": "NONE"
         },
         "megaMax": {
-          "label": "—",
-          "tone": "NONE"
+          "label": "極巨：中",
+          "tone": "MEDIUM"
         },
         "decision": "CONDITIONAL_KEEP",
         "decisionReason": "只保留目標聯盟個體PvP IV Rank≤100或PR≥97.5%的優先候選。",
@@ -1355,19 +1513,85 @@
             "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
             "shortIvLabelZhTw": "ML：15攻／98%優先",
             "rulesVersion": "2026.09.02-v3"
+          },
+          {
+            "id": "iv-global-shadow-pve",
+            "scopeType": "GLOBAL",
+            "scopeKey": "GLOBAL",
+            "primaryUseKey": "SHADOW_PVE",
+            "ivStrategyKey": "SHADOW_PVE",
+            "maxBattleRole": null,
+            "attackIvMin": null,
+            "attackIvPriority": 15,
+            "attackIvConditionalMin": null,
+            "secondaryAttackIv": null,
+            "defenseIvMin": null,
+            "defenseIvPriority": null,
+            "staminaIvMin": null,
+            "staminaIvPriority": null,
+            "totalIvPercentMin": null,
+            "totalIvPercentPriority": null,
+            "secondaryTotalIvPercentMin": null,
+            "pvpRankMax": null,
+            "pvpRankConditionalMax": null,
+            "pvpPrMin": null,
+            "recommendedQuantity": null,
+            "hundoPriority": false,
+            "appliesOnlyWhenUseConfirmed": true,
+            "speciesSpecificOverride": false,
+            "overrideReasonZhTw": "",
+            "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+            "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
+            "rulesVersion": "2026.09.02-v3"
+          },
+          {
+            "id": "iv-global-max-flex",
+            "scopeType": "GLOBAL",
+            "scopeKey": "GLOBAL",
+            "primaryUseKey": "MAX_FLEX",
+            "ivStrategyKey": "MAX_FLEX",
+            "maxBattleRole": "FLEX",
+            "attackIvMin": null,
+            "attackIvPriority": null,
+            "attackIvConditionalMin": null,
+            "secondaryAttackIv": null,
+            "defenseIvMin": null,
+            "defenseIvPriority": null,
+            "staminaIvMin": null,
+            "staminaIvPriority": null,
+            "totalIvPercentMin": null,
+            "totalIvPercentPriority": null,
+            "secondaryTotalIvPercentMin": null,
+            "pvpRankMax": null,
+            "pvpRankConditionalMax": null,
+            "pvpPrMin": null,
+            "recommendedQuantity": null,
+            "hundoPriority": false,
+            "appliesOnlyWhenUseConfirmed": true,
+            "speciesSpecificOverride": false,
+            "overrideReasonZhTw": "",
+            "ivRecommendationZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+            "shortIvLabelZhTw": "Max：依角色分開保留",
+            "rulesVersion": "2026.09.02-v3"
           }
         ],
         "ivShortLabels": [
           "UL：Rank≤100",
-          "ML：15攻／98%優先"
+          "ML：15攻／98%優先",
+          "暗影標準較寬；15攻優先，不設硬性最低IV",
+          "Max：依角色分開保留"
         ],
-        "ivDirection": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
+        "ivDirection": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。；Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
         "primaryUses": [
-          "PvP"
+          "PvP",
+          "PvE",
+          "Max Battle"
         ],
         "primaryUseKeys": [
           "ULTRA_LEAGUE",
-          "MASTER_LEAGUE"
+          "MASTER_LEAGUE",
+          "SHADOW_PVE",
+          "MAX_FLEX"
         ],
         "hasRocketUse": false,
         "hasEvolutionUse": false,
@@ -1377,16 +1601,22 @@
         "detailsLoaded": true
       },
       "roles": [
-        "INDEPENDENT_PVP"
+        "INDEPENDENT_PVP",
+        "INDEPENDENT_PVE",
+        "MAX_CANDIDATE"
       ],
       "roleLabelsZhTw": [
-        "獨立PvP用途"
+        "獨立PvP用途",
+        "獨立PvE用途",
+        "Max候選"
       ],
-      "mainUseZhTw": "獨立PvP用途",
-      "memberSummaryZhTw": "主要保留雷吉艾斯；IV以UL：Rank≤100、ML：15攻／98%優先為準。",
+      "mainUseZhTw": "獨立PvP用途、獨立PvE用途、Max候選",
+      "memberSummaryZhTw": "主要保留雷吉艾斯；IV以UL：Rank≤100、ML：15攻／98%優先、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
       "ivShortLabels": [
         "UL：Rank≤100",
-        "ML：15攻／98%優先"
+        "ML：15攻／98%優先",
+        "暗影標準較寬；15攻優先，不設硬性最低IV",
+        "Max：依角色分開保留"
       ],
       "ivRecommendations": [
         {
@@ -1448,6 +1678,66 @@
           "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
           "shortIvLabelZhTw": "ML：15攻／98%優先",
           "rulesVersion": "2026.09.02-v3"
+        },
+        {
+          "id": "iv-global-shadow-pve",
+          "scopeType": "GLOBAL",
+          "scopeKey": "GLOBAL",
+          "primaryUseKey": "SHADOW_PVE",
+          "ivStrategyKey": "SHADOW_PVE",
+          "maxBattleRole": null,
+          "attackIvMin": null,
+          "attackIvPriority": 15,
+          "attackIvConditionalMin": null,
+          "secondaryAttackIv": null,
+          "defenseIvMin": null,
+          "defenseIvPriority": null,
+          "staminaIvMin": null,
+          "staminaIvPriority": null,
+          "totalIvPercentMin": null,
+          "totalIvPercentPriority": null,
+          "secondaryTotalIvPercentMin": null,
+          "pvpRankMax": null,
+          "pvpRankConditionalMax": null,
+          "pvpPrMin": null,
+          "recommendedQuantity": null,
+          "hundoPriority": false,
+          "appliesOnlyWhenUseConfirmed": true,
+          "speciesSpecificOverride": false,
+          "overrideReasonZhTw": "",
+          "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+          "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
+          "rulesVersion": "2026.09.02-v3"
+        },
+        {
+          "id": "iv-global-max-flex",
+          "scopeType": "GLOBAL",
+          "scopeKey": "GLOBAL",
+          "primaryUseKey": "MAX_FLEX",
+          "ivStrategyKey": "MAX_FLEX",
+          "maxBattleRole": "FLEX",
+          "attackIvMin": null,
+          "attackIvPriority": null,
+          "attackIvConditionalMin": null,
+          "secondaryAttackIv": null,
+          "defenseIvMin": null,
+          "defenseIvPriority": null,
+          "staminaIvMin": null,
+          "staminaIvPriority": null,
+          "totalIvPercentMin": null,
+          "totalIvPercentPriority": null,
+          "secondaryTotalIvPercentMin": null,
+          "pvpRankMax": null,
+          "pvpRankConditionalMax": null,
+          "pvpPrMin": null,
+          "recommendedQuantity": null,
+          "hundoPriority": false,
+          "appliesOnlyWhenUseConfirmed": true,
+          "speciesSpecificOverride": false,
+          "overrideReasonZhTw": "",
+          "ivRecommendationZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+          "shortIvLabelZhTw": "Max：依角色分開保留",
+          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": true,
@@ -1459,7 +1749,8 @@
   "releasedVariantKeys": [
     "NORMAL",
     "SHADOW",
-    "PURIFIED"
+    "PURIFIED",
+    "DYNAMAX"
   ],
   "pvp": {
     "label": "中",
@@ -1467,20 +1758,21 @@
     "tone": "MEDIUM"
   },
   "pve": {
-    "label": "無顯著用途",
-    "detail": "目前沒有已確認的 PvE 投資用途",
-    "tone": "LOW"
+    "label": "特殊用途",
+    "detail": "暗影版本；雷吉艾斯有獨立用途",
+    "tone": "SPECIAL"
   },
   "gym": {
     "label": "未列為主要保留理由",
     "tone": "NONE"
   },
   "megaMax": {
-    "label": "—",
-    "tone": "NONE"
+    "label": "極巨：中",
+    "detail": "雷吉艾斯適用；前階可進化為候選",
+    "tone": "MEDIUM"
   },
-  "familyValue": "MEDIUM",
-  "retentionStrategy": "SELECTIVE_KEEP",
+  "familyValue": "HIGH",
+  "retentionStrategy": "KEEP_TARGETS",
   "primaryRetentionTargets": [
     {
       "formId": "378-hoenn",
@@ -1488,21 +1780,27 @@
       "displayNameZhTw": "雷吉艾斯",
       "useKeys": [
         "ULTRA_LEAGUE",
-        "MASTER_LEAGUE"
+        "MASTER_LEAGUE",
+        "SHADOW_PVE",
+        "MAX_FLEX"
       ],
       "variantKeys": [
-        "NORMAL"
+        "NORMAL",
+        "SHADOW",
+        "DYNAMAX"
       ],
       "variantSpecificOnly": false
     }
   ],
   "primaryTargetSummaryZhTw": "雷吉艾斯",
   "preEvolutionActionZhTw": "沒有僅作進化素材的前階成員。",
-  "handlingSummaryZhTw": "保留雷吉艾斯（PvP（UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留雷吉艾斯；價值集中於特定版本或條件。沒有僅作進化素材的前階成員。其餘普通重複個體大多可傳。IV：UL：Rank≤100；ML：15攻／98%優先。",
+  "handlingSummaryZhTw": "保留雷吉艾斯（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、極巨候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留雷吉艾斯；沒有僅作進化素材的前階成員。IV：UL：Rank≤100；ML：15攻／98%優先；暗影標準較寬；15攻優先，不設硬性最低IV。",
   "ivShortLabels": [
     "UL：Rank≤100",
-    "ML：15攻／98%優先"
+    "ML：15攻／98%優先",
+    "暗影標準較寬；15攻優先，不設硬性最低IV",
+    "Max：依角色分開保留"
   ],
   "ivRecommendations": [
     {
@@ -1564,11 +1862,73 @@
       "ivRecommendationZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
       "shortIvLabelZhTw": "ML：15攻／98%優先",
       "rulesVersion": "2026.09.02-v3"
+    },
+    {
+      "id": "iv-global-shadow-pve",
+      "scopeType": "GLOBAL",
+      "scopeKey": "GLOBAL",
+      "primaryUseKey": "SHADOW_PVE",
+      "ivStrategyKey": "SHADOW_PVE",
+      "maxBattleRole": null,
+      "attackIvMin": null,
+      "attackIvPriority": 15,
+      "attackIvConditionalMin": null,
+      "secondaryAttackIv": null,
+      "defenseIvMin": null,
+      "defenseIvPriority": null,
+      "staminaIvMin": null,
+      "staminaIvPriority": null,
+      "totalIvPercentMin": null,
+      "totalIvPercentPriority": null,
+      "secondaryTotalIvPercentMin": null,
+      "pvpRankMax": null,
+      "pvpRankConditionalMax": null,
+      "pvpPrMin": null,
+      "recommendedQuantity": null,
+      "hundoPriority": false,
+      "appliesOnlyWhenUseConfirmed": true,
+      "speciesSpecificOverride": false,
+      "overrideReasonZhTw": "",
+      "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+      "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
+      "rulesVersion": "2026.09.02-v3"
+    },
+    {
+      "id": "iv-global-max-flex",
+      "scopeType": "GLOBAL",
+      "scopeKey": "GLOBAL",
+      "primaryUseKey": "MAX_FLEX",
+      "ivStrategyKey": "MAX_FLEX",
+      "maxBattleRole": "FLEX",
+      "attackIvMin": null,
+      "attackIvPriority": null,
+      "attackIvConditionalMin": null,
+      "secondaryAttackIv": null,
+      "defenseIvMin": null,
+      "defenseIvPriority": null,
+      "staminaIvMin": null,
+      "staminaIvPriority": null,
+      "totalIvPercentMin": null,
+      "totalIvPercentPriority": null,
+      "secondaryTotalIvPercentMin": null,
+      "pvpRankMax": null,
+      "pvpRankConditionalMax": null,
+      "pvpPrMin": null,
+      "recommendedQuantity": null,
+      "hundoPriority": false,
+      "appliesOnlyWhenUseConfirmed": true,
+      "speciesSpecificOverride": false,
+      "overrideReasonZhTw": "",
+      "ivRecommendationZhTw": "Max彈性角色：依實際攻擊、坦克或支援任務分開比較。",
+      "shortIvLabelZhTw": "Max：依角色分開保留",
+      "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "ivSummaryZhTw": "依成員用途分開保留：UL：Rank≤100；ML：15攻／98%優先",
+  "ivSummaryZhTw": "依成員用途分開保留：UL：Rank≤100；ML：15攻／98%優先；暗影標準較寬；15攻優先，不設硬性最低IV；Max：依角色分開保留",
   "primaryUses": [
-    "PvP"
+    "PvP",
+    "PvE",
+    "Max Battle"
   ],
   "holdReasons": [],
   "notices": [

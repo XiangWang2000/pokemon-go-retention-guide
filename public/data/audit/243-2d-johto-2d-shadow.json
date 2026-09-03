@@ -36,7 +36,7 @@
   "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #269；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；UL（高級聯盟） Overall #58；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；ML（大師聯盟） Overall #67；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #269；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；UL（高級聯盟） Overall #56；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；ML（大師聯盟） Overall #67；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE",
   "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -550,6 +550,12 @@
           "title": "Johto Pokédex and Pokémon GO PvE rankings",
           "url": "https://db.pokemongohub.net/pokedex/johto",
           "usageZhTw": "Official batch evidence."
+        },
+        {
+          "id": "PVE-SHADOW-RAIKOU-20260902",
+          "title": "Shadow Raikou: Best Moveset, Counters & Max CP",
+          "url": "https://db.pokemongohub.net/pokemon/243-Shadow",
+          "usageZhTw": "Official batch evidence."
         }
       ]
     },
@@ -557,7 +563,7 @@
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #269；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；UL（高級聯盟） Overall #58；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；ML（大師聯盟） Overall #67；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE",
+      "summaryZhTw": "GL（超級聯盟） Overall #269；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；UL（高級聯盟） Overall #56；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；ML（大師聯盟） Overall #67；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -572,21 +578,21 @@
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ml-20260715",
+          "id": "pvpoke-ml-20260901",
           "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -620,6 +626,102 @@
   ],
   "raw": [
     {
+      "id": "raw-r20-243-johto-shadow-great",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "GREAT",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "raikou_shadow",
+      "formKey": "243-johto",
+      "variantKey": "SHADOW",
+      "rank": 269,
+      "rating": "656",
+      "score": null,
+      "tier": null,
+      "recommendedMoves": [
+        "THUNDER_SHOCK",
+        "WILD_CHARGE",
+        "AURA_SPHERE"
+      ],
+      "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-08-31T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-gl-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    },
+    {
+      "id": "raw-r20-243-johto-shadow-master",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "MASTER",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "raikou_shadow",
+      "formKey": "243-johto",
+      "variantKey": "SHADOW",
+      "rank": 67,
+      "rating": "695",
+      "score": null,
+      "tier": null,
+      "recommendedMoves": [
+        "THUNDER_SHOCK",
+        "WILD_CHARGE",
+        "AURA_SPHERE"
+      ],
+      "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-08-31T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-ml-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
+      }
+    },
+    {
+      "id": "raw-r20-243-johto-shadow-ultra",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "ULTRA",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "raikou_shadow",
+      "formKey": "243-johto",
+      "variantKey": "SHADOW",
+      "rank": 56,
+      "rating": "655",
+      "score": null,
+      "tier": null,
+      "recommendedMoves": [
+        "THUNDER_SHOCK",
+        "WILD_CHARGE",
+        "AURA_SPHERE"
+      ],
+      "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-08-31T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-ul-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    },
+    {
       "id": "raw-r20-243-johto-shadow-pve",
       "category": "PVE",
       "status": "PARTIALLY_VERIFIED",
@@ -646,102 +748,6 @@
         "title": "Johto Pokédex and Pokémon GO PvE rankings",
         "url": "https://db.pokemongohub.net/pokedex/johto"
       }
-    },
-    {
-      "id": "raw-r20-243-johto-shadow-great",
-      "category": "PVP",
-      "status": "VERIFIED",
-      "league": "GREAT",
-      "cup": "OPEN",
-      "pvpCategory": "OVERALL",
-      "speciesKey": "raikou_shadow",
-      "formKey": "243-johto",
-      "variantKey": "SHADOW",
-      "rank": 269,
-      "rating": "656",
-      "score": null,
-      "tier": null,
-      "recommendedMoves": [
-        "THUNDER_SHOCK",
-        "WILD_CHARGE",
-        "AURA_SPHERE"
-      ],
-      "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-      "reproducible": true,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
-      "source": {
-        "id": "pvpoke-gl-20260715",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
-      }
-    },
-    {
-      "id": "raw-r20-243-johto-shadow-master",
-      "category": "PVP",
-      "status": "VERIFIED",
-      "league": "MASTER",
-      "cup": "OPEN",
-      "pvpCategory": "OVERALL",
-      "speciesKey": "raikou_shadow",
-      "formKey": "243-johto",
-      "variantKey": "SHADOW",
-      "rank": 67,
-      "rating": "697",
-      "score": null,
-      "tier": null,
-      "recommendedMoves": [
-        "THUNDER_SHOCK",
-        "WILD_CHARGE",
-        "AURA_SPHERE"
-      ],
-      "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-      "reproducible": true,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
-      "source": {
-        "id": "pvpoke-ml-20260715",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
-      }
-    },
-    {
-      "id": "raw-r20-243-johto-shadow-ultra",
-      "category": "PVP",
-      "status": "VERIFIED",
-      "league": "ULTRA",
-      "cup": "OPEN",
-      "pvpCategory": "OVERALL",
-      "speciesKey": "raikou_shadow",
-      "formKey": "243-johto",
-      "variantKey": "SHADOW",
-      "rank": 58,
-      "rating": "654",
-      "score": null,
-      "tier": null,
-      "recommendedMoves": [
-        "THUNDER_SHOCK",
-        "WILD_CHARGE",
-        "AURA_SPHERE"
-      ],
-      "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
-      "reproducible": true,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
-      "source": {
-        "id": "pvpoke-ul-20260715",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
-      }
     }
   ],
   "sources": [
@@ -755,6 +761,15 @@
       "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
     },
     {
+      "id": "PVE-SHADOW-RAIKOU-20260902",
+      "name": "Pokémon GO Hub",
+      "title": "Shadow Raikou: Best Moveset, Counters & Max CP",
+      "url": "https://db.pokemongohub.net/pokemon/243-Shadow",
+      "type": "PVE",
+      "accessedAt": "2026-09-01T16:00:00.000Z",
+      "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
+    },
+    {
       "id": "SECONDARY-SHADOW-JOHTO-2026",
       "name": "Serebii Pokémon GO Shadow Pokémon",
       "title": "Shadow Pokémon",
@@ -764,30 +779,30 @@
       "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ml-20260715",
+      "id": "pvpoke-ml-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],

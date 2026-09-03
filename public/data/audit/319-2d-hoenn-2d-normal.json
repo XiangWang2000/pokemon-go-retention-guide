@@ -25,7 +25,7 @@
   "variantKey": "NORMAL",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "普通版本；與暗影、淨化、Mega 及 Max 分開評估。",
   "decision": "CONDITIONAL_KEEP",
   "assessmentDisposition": "LIMITED_USE",
@@ -37,8 +37,8 @@
   "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #792；招式 WATERFALL／CRUNCH／POISON_FANG；UL（高級聯盟） Overall #650；招式 WATERFALL／CRUNCH／POISON_FANG",
-  "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #793；招式 WATERFALL／CRUNCH／POISON_FANG；UL（高級聯盟） Overall #651；招式 WATERFALL／CRUNCH／POISON_FANG",
+  "pveSummaryZhTw": "無顯著用途。Mega／Primal 用途需與普通／暗影版本分開評估",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
@@ -46,7 +46,7 @@
   "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估；尚未發布版本不替代現有個體。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-  "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+  "recommendedIvStrategyZhTw": "目前沒有會改變保留結論的通用IV門檻。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -468,7 +468,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "EVOLUTION-HOENN-20260809",
@@ -506,7 +506,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -525,7 +525,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -544,7 +544,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "OFF-MEGA-HOENN-20260809",
@@ -558,8 +558,8 @@
       "category": "PVE",
       "status": "PARTIALLY_VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
-      "materialToDecision": true,
+      "summaryZhTw": "無顯著用途。Mega／Primal 用途需與普通／暗影版本分開評估",
+      "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
@@ -568,14 +568,14 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "SPECIAL_USE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
-          "id": "PVE-HOENN-20260809",
-          "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-          "url": "https://db.pokemongohub.net/pokedex/hoenn",
+          "id": "PVE-ATTACKERS-HOENN-20260903",
+          "title": "Best Attackers Tier List (Pokémon GO)",
+          "url": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false",
           "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
         }
       ]
@@ -584,7 +584,7 @@
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #792；招式 WATERFALL／CRUNCH／POISON_FANG；UL（高級聯盟） Overall #650；招式 WATERFALL／CRUNCH／POISON_FANG",
+      "summaryZhTw": "GL（超級聯盟） Overall #793；招式 WATERFALL／CRUNCH／POISON_FANG；UL（高級聯盟） Overall #651；招式 WATERFALL／CRUNCH／POISON_FANG",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -596,18 +596,18 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -628,39 +628,11 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     }
   ],
   "raw": [
-    {
-      "id": "raw-gen3-312-341-319-hoenn-normal-pve",
-      "category": "PVE",
-      "status": "PARTIALLY_VERIFIED",
-      "league": "NOT_APPLICABLE",
-      "cup": null,
-      "pvpCategory": null,
-      "speciesKey": "sharpedo",
-      "formKey": "319-hoenn",
-      "variantKey": "NORMAL",
-      "rank": null,
-      "rating": "SPECIAL",
-      "score": null,
-      "tier": "SPECIAL",
-      "recommendedMoves": [],
-      "rawNotes": "PvE 用途依第三世代研究表區分四級用途；不虛構 IV 硬門檻。",
-      "seasonOrVersion": "GO Hub accessed 2026-08-09",
-      "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
-      "reproducible": false,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T16:00:00.000Z",
-      "source": {
-        "id": "PVE-HOENN-20260809",
-        "name": "GO Hub Hoenn PVE data",
-        "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-        "url": "https://db.pokemongohub.net/pokedex/hoenn"
-      }
-    },
     {
       "id": "raw-gen3-312-341-319-hoenn-normal-great",
       "category": "PVP",
@@ -671,8 +643,8 @@
       "speciesKey": "sharpedo",
       "formKey": "319-hoenn",
       "variantKey": "NORMAL",
-      "rank": 792,
-      "rating": "526",
+      "rank": 793,
+      "rating": "525",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -681,16 +653,16 @@
         "POISON_FANG"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     },
     {
@@ -703,8 +675,8 @@
       "speciesKey": "sharpedo",
       "formKey": "319-hoenn",
       "variantKey": "NORMAL",
-      "rank": 650,
-      "rating": "498",
+      "rank": 651,
+      "rating": "497",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -713,16 +685,16 @@
         "POISON_FANG"
       ],
       "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ul-20260715",
+        "id": "pvpoke-ul-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
       }
     }
   ],
@@ -764,30 +736,30 @@
       "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
-      "id": "PVE-HOENN-20260809",
-      "name": "GO Hub Hoenn PVE data",
-      "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-      "url": "https://db.pokemongohub.net/pokedex/hoenn",
+      "id": "PVE-ATTACKERS-HOENN-20260903",
+      "name": "Pokémon GO Hub",
+      "title": "Best Attackers Tier List (Pokémon GO)",
+      "url": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false",
       "type": "PVE",
-      "accessedAt": "2026-08-08T16:00:00.000Z",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
       "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],

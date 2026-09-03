@@ -71,16 +71,16 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #564；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK；UL（高級聯盟） Overall #527；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK",
-              "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #565；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK；UL（高級聯盟） Overall #533；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK",
+              "pveSummaryZhTw": "無顯著用途。Mega／Primal 用途需與普通／暗影版本分開評估",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "普通電龍可作 Mega 基底候選；不把 Mega 用途回推成全家族必留。",
-              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
+              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估.",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+              "recommendedIvStrategyZhTw": "目前沒有會改變保留結論的通用IV門檻。",
               "ivRecommendations": [],
               "reasonZhTw": "用途有限：其餘普通重複可傳；只留 Mega 候選或符合其他用途的少量個體。",
               "evaluationId": "r19-eval-227-johto-normal",
@@ -173,10 +173,10 @@
                 },
                 {
                   "category": "PVE",
-                  "status": "PARTIALLY_VERIFIED",
+                  "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
-                  "materialToDecision": true,
+                  "summaryZhTw": "無顯著用途。Mega／Primal 用途需與普通／暗影版本分開評估",
+                  "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -185,7 +185,7 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "SPECIAL_USE",
+                  "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "LIMITED_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
@@ -194,7 +194,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #564；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK；UL（高級聯盟） Overall #527；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK",
+                  "summaryZhTw": "GL（超級聯盟） Overall #565；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK；UL（高級聯盟） Overall #533；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -231,34 +231,6 @@
               ],
               "raw": [
                 {
-                  "id": "raw-r19-227-johto-normal-pve",
-                  "category": "PVE",
-                  "status": "PARTIALLY_VERIFIED",
-                  "league": "NOT_APPLICABLE",
-                  "cup": null,
-                  "pvpCategory": null,
-                  "speciesKey": "skarmory",
-                  "formKey": "227-johto",
-                  "variantKey": "NORMAL",
-                  "rank": null,
-                  "rating": "SPECIAL",
-                  "score": null,
-                  "tier": "SPECIAL",
-                  "recommendedMoves": [],
-                  "rawNotes": "本批 PvE 類別用途層級由研究表與 GO Hub Johto 版本狀態核對；不虛構 IV 硬門檻。",
-                  "seasonOrVersion": "GO Hub accessed 2026-08-08",
-                  "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
-                  "reproducible": false,
-                  "migrationNote": null,
-                  "checkedAt": "2026-08-08T10:00:00.000Z",
-                  "source": {
-                    "id": "PVE-GEN2-20260808",
-                    "name": "GO Hub 城都圖鑑／PvE／Mega",
-                    "title": "Johto Pokédex and Pokémon GO PvE rankings",
-                    "url": "https://db.pokemongohub.net/pokedex/johto"
-                  }
-                },
-                {
                   "id": "raw-r19-227-johto-normal-great",
                   "category": "PVP",
                   "status": "VERIFIED",
@@ -268,7 +240,7 @@
                   "speciesKey": "skarmory",
                   "formKey": "227-johto",
                   "variantKey": "NORMAL",
-                  "rank": 564,
+                  "rank": 565,
                   "rating": "513",
                   "score": null,
                   "tier": null,
@@ -278,16 +250,16 @@
                     "SKY_ATTACK"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T10:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -300,8 +272,8 @@
                   "speciesKey": "skarmory",
                   "formKey": "227-johto",
                   "variantKey": "NORMAL",
-                  "rank": 527,
-                  "rating": "499",
+                  "rank": 533,
+                  "rating": "498",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -310,16 +282,16 @@
                     "SKY_ATTACK"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T10:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -343,21 +315,30 @@
                   "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "PVE-SKARMORY-20260902",
+                  "name": "Pokémon GO Hub",
+                  "title": "Skarmory: Best Moveset, Counters & Max CP",
+                  "url": "https://db.pokemongohub.net/pokemon/227",
+                  "type": "PVE",
+                  "accessedAt": "2026-09-01T16:00:00.000Z",
+                  "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
+                },
+                {
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -372,49 +353,12 @@
               ],
               "moves": []
             },
-            "primaryUses": [
-              "PvE"
-            ],
-            "primaryUseKeys": [
-              "PVE"
-            ],
-            "ivRecommendations": [
-              {
-                "id": "iv-global-pve",
-                "scopeType": "GLOBAL",
-                "scopeKey": "GLOBAL",
-                "primaryUseKey": "PVE",
-                "ivStrategyKey": "PVE_ATTACKER",
-                "maxBattleRole": null,
-                "attackIvMin": null,
-                "attackIvPriority": 15,
-                "attackIvConditionalMin": null,
-                "secondaryAttackIv": null,
-                "defenseIvMin": null,
-                "defenseIvPriority": null,
-                "staminaIvMin": null,
-                "staminaIvPriority": null,
-                "totalIvPercentMin": 91.1,
-                "totalIvPercentPriority": 95.6,
-                "secondaryTotalIvPercentMin": null,
-                "pvpRankMax": null,
-                "pvpRankConditionalMax": null,
-                "pvpPrMin": null,
-                "recommendedQuantity": null,
-                "hundoPriority": false,
-                "appliesOnlyWhenUseConfirmed": true,
-                "speciesSpecificOverride": false,
-                "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
-                "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
-                "rulesVersion": "2026.09.02-v3"
-              }
-            ],
-            "ivShortLabels": [
-              "PvE：91%+可投入；96%+／15攻優先"
-            ],
-            "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
-            "shortReason": "主要用途：PvE。"
+            "primaryUses": [],
+            "primaryUseKeys": [],
+            "ivRecommendations": [],
+            "ivShortLabels": [],
+            "ivDirection": "目前沒有會改變保留結論的通用IV門檻。",
+            "shortReason": "用途有限，只需依個人需求少量保留。"
           },
           {
             "row": {
@@ -446,28 +390,28 @@
               "releaseStatus": "RELEASED",
               "releaseVerifiedAt": "2026-08-08T10:00:00.000Z",
               "notesZhTw": "暗影個體依獨立來源與 PvP 快照評估；暗影標準較寬，不因低總 IV 自動淨化。",
-              "decision": "CONDITIONAL_KEEP",
-              "assessmentDisposition": "LIMITED_USE",
+              "decision": "TRANSFER_CANDIDATE",
+              "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
-              "dataStatus": "PARTIALLY_VERIFIED",
+              "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+              "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #639；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK；UL（高級聯盟） Overall #556；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK",
-              "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #634；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK；UL（高級聯盟） Overall #564；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK",
+              "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
+              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估.",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-              "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
               "ivRecommendations": [],
-              "reasonZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。",
+              "reasonZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。",
               "evaluationId": "r19-eval-227-johto-shadow",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "已核對第二世代家族、寶寶併入既有家族、普通／暗影／淨化／Mega／Max 邊界與固定 PvPoke 快照。",
@@ -495,7 +439,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -514,7 +458,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -533,7 +477,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -552,16 +496,16 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "PVE",
-                  "status": "PARTIALLY_VERIFIED",
+                  "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
-                  "materialToDecision": true,
+                  "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+                  "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -570,8 +514,8 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "SPECIAL_USE",
-                  "assessmentDisposition": "LIMITED_USE",
+                  "pveUseLevel": "NO_SIGNIFICANT_USE",
+                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -579,7 +523,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #639；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK；UL（高級聯盟） Overall #556；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK",
+                  "summaryZhTw": "GL（超級聯盟） Overall #634；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK；UL（高級聯盟） Overall #564；招式 AIR_SLASH／BRAVE_BIRD／SKY_ATTACK",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -590,7 +534,7 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 },
@@ -609,40 +553,12 @@
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
-                  "assessmentDisposition": "LIMITED_USE",
+                  "assessmentDisposition": "NO_SIGNIFICANT_USE",
                   "checkedAt": "2026-08-08T10:00:00.000Z",
                   "sources": []
                 }
               ],
               "raw": [
-                {
-                  "id": "raw-r19-227-johto-shadow-pve",
-                  "category": "PVE",
-                  "status": "PARTIALLY_VERIFIED",
-                  "league": "NOT_APPLICABLE",
-                  "cup": null,
-                  "pvpCategory": null,
-                  "speciesKey": "skarmory_shadow",
-                  "formKey": "227-johto",
-                  "variantKey": "SHADOW",
-                  "rank": null,
-                  "rating": "SPECIAL",
-                  "score": null,
-                  "tier": "SPECIAL",
-                  "recommendedMoves": [],
-                  "rawNotes": "本批 PvE 類別用途層級由研究表與 GO Hub Johto 版本狀態核對；不虛構 IV 硬門檻。",
-                  "seasonOrVersion": "GO Hub accessed 2026-08-08",
-                  "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
-                  "reproducible": false,
-                  "migrationNote": null,
-                  "checkedAt": "2026-08-08T10:00:00.000Z",
-                  "source": {
-                    "id": "PVE-GEN2-20260808",
-                    "name": "GO Hub 城都圖鑑／PvE／Mega",
-                    "title": "Johto Pokédex and Pokémon GO PvE rankings",
-                    "url": "https://db.pokemongohub.net/pokedex/johto"
-                  }
-                },
                 {
                   "id": "raw-r19-227-johto-shadow-great",
                   "category": "PVP",
@@ -653,8 +569,8 @@
                   "speciesKey": "skarmory_shadow",
                   "formKey": "227-johto",
                   "variantKey": "SHADOW",
-                  "rank": 639,
-                  "rating": "491",
+                  "rank": 634,
+                  "rating": "490",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -663,16 +579,16 @@
                     "SKY_ATTACK"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T10:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -685,8 +601,8 @@
                   "speciesKey": "skarmory_shadow",
                   "formKey": "227-johto",
                   "variantKey": "SHADOW",
-                  "rank": 556,
-                  "rating": "464",
+                  "rank": 564,
+                  "rating": "461",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -695,16 +611,16 @@
                     "SKY_ATTACK"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T10:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -719,6 +635,15 @@
                   "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
                 },
                 {
+                  "id": "PVE-SKARMORY-20260902",
+                  "name": "Pokémon GO Hub",
+                  "title": "Skarmory: Best Moveset, Counters & Max CP",
+                  "url": "https://db.pokemongohub.net/pokemon/227",
+                  "type": "PVE",
+                  "accessedAt": "2026-09-01T16:00:00.000Z",
+                  "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
+                },
+                {
                   "id": "SECONDARY-SHADOW-JOHTO-2026",
                   "name": "Serebii Pokémon GO Shadow Pokémon",
                   "title": "Shadow Pokémon",
@@ -728,78 +653,41 @@
                   "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "CONDITIONAL_USE",
-                  "priority": 700,
+                  "ruleKey": "LOW_GENERAL_VALUE",
+                  "priority": 100,
                   "matched": true,
-                  "resultDecision": "CONDITIONAL_KEEP",
-                  "explanationZhTw": "用途有限或屬特殊用途；只留少量符合版本、招式、IV 或道館需求的個體。"
+                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "explanationZhTw": "無顯著用途：已有足夠資料判定目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體通常可傳。"
                 }
               ],
               "moves": []
             },
-            "primaryUses": [
-              "PvE"
-            ],
-            "primaryUseKeys": [
-              "SHADOW_PVE"
-            ],
-            "ivRecommendations": [
-              {
-                "id": "iv-global-shadow-pve",
-                "scopeType": "GLOBAL",
-                "scopeKey": "GLOBAL",
-                "primaryUseKey": "SHADOW_PVE",
-                "ivStrategyKey": "SHADOW_PVE",
-                "maxBattleRole": null,
-                "attackIvMin": null,
-                "attackIvPriority": 15,
-                "attackIvConditionalMin": null,
-                "secondaryAttackIv": null,
-                "defenseIvMin": null,
-                "defenseIvPriority": null,
-                "staminaIvMin": null,
-                "staminaIvPriority": null,
-                "totalIvPercentMin": null,
-                "totalIvPercentPriority": null,
-                "secondaryTotalIvPercentMin": null,
-                "pvpRankMax": null,
-                "pvpRankConditionalMax": null,
-                "pvpPrMin": null,
-                "recommendedQuantity": null,
-                "hundoPriority": false,
-                "appliesOnlyWhenUseConfirmed": true,
-                "speciesSpecificOverride": false,
-                "overrideReasonZhTw": "",
-                "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-                "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-                "rulesVersion": "2026.09.02-v3"
-              }
-            ],
-            "ivShortLabels": [
-              "暗影標準較寬；15攻優先，不設硬性最低IV"
-            ],
-            "ivDirection": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-            "shortReason": "暗影版需獨立判斷，淨化前先確認用途。"
+            "primaryUses": [],
+            "primaryUseKeys": [],
+            "ivRecommendations": [],
+            "ivShortLabels": [],
+            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
           },
           {
             "row": {
@@ -835,7 +723,7 @@
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
               "provenance": "MANUAL_CURATED",
               "confidence": "MEDIUM",
-              "dataStatus": "PARTIALLY_VERIFIED",
+              "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
@@ -847,7 +735,7 @@
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "此版本沒有獨立 Mega 型態用途。",
-              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
+              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估.",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
               "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
@@ -943,10 +831,10 @@
                 },
                 {
                   "category": "PVE",
-                  "status": "PARTIALLY_VERIFIED",
+                  "status": "DATA_UNAVAILABLE",
                   "provenance": "SOURCE_VERIFIED",
                   "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
-                  "materialToDecision": true,
+                  "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1075,7 +963,7 @@
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 電龍已推出且與其他版本分開；只留實際投入候選。",
-              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估。",
+              "maxBattleSummaryZhTw": "Max 用途與普通／暗影／Mega 分開評估.",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
               "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
               "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
@@ -1412,7 +1300,7 @@
                   "category": "GYM",
                   "status": "UNRELEASED",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "未找到足以構成主要保留理由的道館用途；次要資料缺失不覆蓋其他結論。",
+                  "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -1564,7 +1452,7 @@
         },
         "pve": {
           "label": "特殊用途",
-          "detail": "團體戰：本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+          "detail": "團體戰／Mega／Primal：本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
           "tone": "SPECIAL"
         },
         "gym": {
@@ -1607,50 +1495,18 @@
             "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
             "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
             "rulesVersion": "2026.09.02-v3"
-          },
-          {
-            "id": "iv-global-shadow-pve",
-            "scopeType": "GLOBAL",
-            "scopeKey": "GLOBAL",
-            "primaryUseKey": "SHADOW_PVE",
-            "ivStrategyKey": "SHADOW_PVE",
-            "maxBattleRole": null,
-            "attackIvMin": null,
-            "attackIvPriority": 15,
-            "attackIvConditionalMin": null,
-            "secondaryAttackIv": null,
-            "defenseIvMin": null,
-            "defenseIvPriority": null,
-            "staminaIvMin": null,
-            "staminaIvPriority": null,
-            "totalIvPercentMin": null,
-            "totalIvPercentPriority": null,
-            "secondaryTotalIvPercentMin": null,
-            "pvpRankMax": null,
-            "pvpRankConditionalMax": null,
-            "pvpPrMin": null,
-            "recommendedQuantity": null,
-            "hundoPriority": false,
-            "appliesOnlyWhenUseConfirmed": true,
-            "speciesSpecificOverride": false,
-            "overrideReasonZhTw": "",
-            "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-            "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-            "rulesVersion": "2026.09.02-v3"
           }
         ],
         "ivShortLabels": [
-          "PvE：91%+可投入；96%+／15攻優先",
-          "暗影標準較寬；15攻優先，不設硬性最低IV"
+          "PvE：91%+可投入；96%+／15攻優先"
         ],
-        "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+        "ivDirection": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
         "primaryUses": [
           "PvE",
           "Mega"
         ],
         "primaryUseKeys": [
           "PVE",
-          "SHADOW_PVE",
           "MEGA"
         ],
         "hasRocketUse": false,
@@ -1669,10 +1525,9 @@
         "Mega 候選"
       ],
       "mainUseZhTw": "獨立PvE用途、Mega 候選",
-      "memberSummaryZhTw": "主要保留盔甲鳥；IV以PvE：91%+可投入；96%+／15攻優先、暗影標準較寬；15攻優先，不設硬性最低IV為準。",
+      "memberSummaryZhTw": "主要保留盔甲鳥（Mega 候選）；IV以PvE：91%+可投入；96%+／15攻優先為準。",
       "ivShortLabels": [
-        "PvE：91%+可投入；96%+／15攻優先",
-        "暗影標準較寬；15攻優先，不設硬性最低IV"
+        "PvE：91%+可投入；96%+／15攻優先"
       ],
       "ivRecommendations": [
         {
@@ -1704,36 +1559,6 @@
           "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
           "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
           "rulesVersion": "2026.09.02-v3"
-        },
-        {
-          "id": "iv-global-shadow-pve",
-          "scopeType": "GLOBAL",
-          "scopeKey": "GLOBAL",
-          "primaryUseKey": "SHADOW_PVE",
-          "ivStrategyKey": "SHADOW_PVE",
-          "maxBattleRole": null,
-          "attackIvMin": null,
-          "attackIvPriority": 15,
-          "attackIvConditionalMin": null,
-          "secondaryAttackIv": null,
-          "defenseIvMin": null,
-          "defenseIvPriority": null,
-          "staminaIvMin": null,
-          "staminaIvPriority": null,
-          "totalIvPercentMin": null,
-          "totalIvPercentPriority": null,
-          "secondaryTotalIvPercentMin": null,
-          "pvpRankMax": null,
-          "pvpRankConditionalMax": null,
-          "pvpPrMin": null,
-          "recommendedQuantity": null,
-          "hundoPriority": false,
-          "appliesOnlyWhenUseConfirmed": true,
-          "speciesSpecificOverride": false,
-          "overrideReasonZhTw": "",
-          "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-          "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-          "rulesVersion": "2026.09.02-v3"
         }
       ],
       "isRoot": true,
@@ -1754,7 +1579,7 @@
   },
   "pve": {
     "label": "特殊用途",
-    "detail": "暗影版本；盔甲鳥有獨立用途",
+    "detail": "Mega 盔甲鳥為主要投資目標",
     "tone": "SPECIAL"
   },
   "gym": {
@@ -1766,33 +1591,29 @@
     "detail": "盔甲鳥適用；前階可進化為候選",
     "tone": "SPECIAL"
   },
-  "familyValue": "HIGH",
-  "retentionStrategy": "KEEP_TARGETS",
+  "familyValue": "MEDIUM",
+  "retentionStrategy": "SELECTIVE_KEEP",
   "primaryRetentionTargets": [
     {
       "formId": "227-johto",
       "memberNameZhTw": "盔甲鳥",
-      "displayNameZhTw": "盔甲鳥",
+      "displayNameZhTw": "盔甲鳥（Mega 候選）",
       "useKeys": [
         "PVE",
-        "SHADOW_PVE",
         "MEGA"
       ],
       "variantKeys": [
-        "NORMAL",
-        "SHADOW",
         "MEGA"
       ],
-      "variantSpecificOnly": false
+      "variantSpecificOnly": true
     }
   ],
-  "primaryTargetSummaryZhTw": "盔甲鳥",
+  "primaryTargetSummaryZhTw": "盔甲鳥（Mega 候選）",
   "preEvolutionActionZhTw": "沒有僅作進化素材的前階成員。",
-  "handlingSummaryZhTw": "保留盔甲鳥（PvE 實戰候選、Mega 候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
-  "actionSummaryZhTw": "主要保留盔甲鳥；沒有僅作進化素材的前階成員。IV：PvE：91%+可投入；96%+／15攻優先；暗影標準較寬；15攻優先，不設硬性最低IV。",
+  "handlingSummaryZhTw": "保留盔甲鳥（PvE 實戰候選、Mega 候選）；其餘不符合上述用途的普通重複個體可傳。",
+  "actionSummaryZhTw": "主要保留盔甲鳥（Mega 候選）；價值集中於特定版本或條件。沒有僅作進化素材的前階成員。其餘普通重複個體大多可傳。IV：PvE：91%+可投入；96%+／15攻優先。",
   "ivShortLabels": [
-    "PvE：91%+可投入；96%+／15攻優先",
-    "暗影標準較寬；15攻優先，不設硬性最低IV"
+    "PvE：91%+可投入；96%+／15攻優先"
   ],
   "ivRecommendations": [
     {
@@ -1824,39 +1645,9 @@
       "ivRecommendationZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
       "shortIvLabelZhTw": "PvE：91%+可投入；96%+／15攻優先",
       "rulesVersion": "2026.09.02-v3"
-    },
-    {
-      "id": "iv-global-shadow-pve",
-      "scopeType": "GLOBAL",
-      "scopeKey": "GLOBAL",
-      "primaryUseKey": "SHADOW_PVE",
-      "ivStrategyKey": "SHADOW_PVE",
-      "maxBattleRole": null,
-      "attackIvMin": null,
-      "attackIvPriority": 15,
-      "attackIvConditionalMin": null,
-      "secondaryAttackIv": null,
-      "defenseIvMin": null,
-      "defenseIvPriority": null,
-      "staminaIvMin": null,
-      "staminaIvPriority": null,
-      "totalIvPercentMin": null,
-      "totalIvPercentPriority": null,
-      "secondaryTotalIvPercentMin": null,
-      "pvpRankMax": null,
-      "pvpRankConditionalMax": null,
-      "pvpPrMin": null,
-      "recommendedQuantity": null,
-      "hundoPriority": false,
-      "appliesOnlyWhenUseConfirmed": true,
-      "speciesSpecificOverride": false,
-      "overrideReasonZhTw": "",
-      "ivRecommendationZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
-      "shortIvLabelZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV",
-      "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "ivSummaryZhTw": "依成員用途分開保留：PvE：91%+可投入；96%+／15攻優先；暗影標準較寬；15攻優先，不設硬性最低IV",
+  "ivSummaryZhTw": "PvE：91%+可投入；96%+／15攻優先",
   "primaryUses": [
     "PvE",
     "Mega"

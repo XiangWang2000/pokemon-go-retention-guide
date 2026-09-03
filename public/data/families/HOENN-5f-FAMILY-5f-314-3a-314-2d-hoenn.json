@@ -57,7 +57,7 @@
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
               "notesZhTw": "普通版本；與暗影、淨化、Mega 及 Max 分開評估。",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NO_SIGNIFICANT_USE",
@@ -69,7 +69,7 @@
               "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #1024；招式 TACKLE／SILVER_WIND／DAZZLING_GLEAM；UL（高級聯盟） Overall #833；招式 TACKLE／SILVER_WIND／DAZZLING_GLEAM",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #1028；招式 TACKLE／SILVER_WIND／DAZZLING_GLEAM；UL（高級聯盟） Overall #835；招式 TACKLE／SILVER_WIND／DAZZLING_GLEAM",
               "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -109,7 +109,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -128,7 +128,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -147,7 +147,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -166,7 +166,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -185,14 +185,14 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #1024；招式 TACKLE／SILVER_WIND／DAZZLING_GLEAM；UL（高級聯盟） Overall #833；招式 TACKLE／SILVER_WIND／DAZZLING_GLEAM",
+                  "summaryZhTw": "GL（超級聯盟） Overall #1028；招式 TACKLE／SILVER_WIND／DAZZLING_GLEAM；UL（高級聯盟） Overall #835；招式 TACKLE／SILVER_WIND／DAZZLING_GLEAM",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -204,7 +204,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -223,7 +223,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NO_SIGNIFICANT_USE",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -238,8 +238,8 @@
                   "speciesKey": "illumise",
                   "formKey": "314-hoenn",
                   "variantKey": "NORMAL",
-                  "rank": 1024,
-                  "rating": "396",
+                  "rank": 1028,
+                  "rating": "398",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -248,16 +248,16 @@
                     "DAZZLING_GLEAM"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -270,7 +270,7 @@
                   "speciesKey": "illumise",
                   "formKey": "314-hoenn",
                   "variantKey": "NORMAL",
-                  "rank": 833,
+                  "rank": 835,
                   "rating": "281",
                   "score": null,
                   "tier": null,
@@ -280,16 +280,16 @@
                     "DAZZLING_GLEAM"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+                  "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
                   "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -322,21 +322,21 @@
                   "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與推薦招式。"
                 }
               ],
@@ -385,7 +385,7 @@
               "variantKey": "SHADOW",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
-              "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
               "notesZhTw": "暗影個體獨立評估；暗影標準較寬，不因低總 IV 自動淨化。",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
@@ -437,7 +437,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -456,7 +456,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -475,7 +475,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -494,7 +494,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -513,7 +513,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -532,7 +532,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -551,7 +551,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -602,7 +602,7 @@
               "variantKey": "PURIFIED",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
-              "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
               "notesZhTw": "淨化不可逆；先確認暗影用途與招式，不以淨化取代暗影候選。",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
@@ -654,7 +654,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -673,7 +673,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -692,7 +692,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -711,7 +711,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -730,7 +730,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -749,7 +749,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -768,7 +768,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -819,7 +819,7 @@
               "variantKey": "DYNAMAX",
               "isReleased": false,
               "releaseStatus": "UNRELEASED",
-              "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
               "notesZhTw": "此 Max 版本尚未核實為已推出；普通個體不能替代 Max 個體。",
               "decision": "TRANSFER_CANDIDATE",
               "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
@@ -871,7 +871,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -890,7 +890,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -909,7 +909,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -928,7 +928,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -947,7 +947,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": "NO_SIGNIFICANT_USE",
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -966,7 +966,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -985,7 +985,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-                  "checkedAt": "2026-08-08T16:00:00.000Z",
+                  "checkedAt": "2026-09-02T16:00:00.000Z",
                   "sources": []
                 }
               ],

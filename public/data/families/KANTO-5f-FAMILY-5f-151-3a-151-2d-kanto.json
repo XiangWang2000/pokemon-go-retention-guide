@@ -69,7 +69,7 @@
               "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
               "reviewed": true,
               "updatedAt": "2026-09-01T16:00:00.000Z",
-              "pvpSummaryZhTw": "GL（超級聯盟） Overall #349；招式 SHADOW_CLAW／WILD_CHARGE／PSYSHOCK；UL（高級聯盟） Overall #204；招式 SHADOW_CLAW／PSYSHOCK／WILD_CHARGE；ML（大師聯盟） Overall #114；招式 SHADOW_CLAW／PSYSHOCK／WILD_CHARGE",
+              "pvpSummaryZhTw": "GL（超級聯盟） Overall #347；招式 SHADOW_CLAW／WILD_CHARGE／PSYSHOCK；UL（高級聯盟） Overall #200；招式 SHADOW_CLAW／WILD_CHARGE／PSYSHOCK；ML（大師聯盟） Overall #115；招式 SHADOW_CLAW／PSYSHOCK／WILD_CHARGE",
               "pveSummaryZhTw": "特殊用途。目前沒有足以支持 PvE 投資的直接用途。",
               "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有排行不會單獨觸發暫時保留。",
               "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
@@ -77,7 +77,7 @@
               "megaSummaryZhTw": "此型態沒有已確認 Mega 用途；不因同家族其他版本有用途而升格。",
               "maxBattleSummaryZhTw": "此版本不是 Max 版本；Max 用途不會回推普通個體必留。",
               "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
-              "requiredMovesSummaryZhTw": "依固定快照優先核對：SHADOW_CLAW／PSYSHOCK／WILD_CHARGE",
+              "requiredMovesSummaryZhTw": "依固定快照優先核對：SHADOW_CLAW／WILD_CHARGE／PSYSHOCK",
               "recommendedIvStrategyZhTw": "特殊取得個體應保留；不以 IV 作傳送門檻。實戰 IV 參考：UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
               "ivRecommendations": [],
               "reasonZhTw": "特殊取得個體應保留；不以 IV 或次要資料缺口作傳送門檻。",
@@ -192,7 +192,7 @@
                   "category": "PVP",
                   "status": "VERIFIED",
                   "provenance": "SOURCE_VERIFIED",
-                  "summaryZhTw": "GL（超級聯盟） Overall #349；招式 SHADOW_CLAW／WILD_CHARGE／PSYSHOCK；UL（高級聯盟） Overall #204；招式 SHADOW_CLAW／PSYSHOCK／WILD_CHARGE；ML（大師聯盟） Overall #114；招式 SHADOW_CLAW／PSYSHOCK／WILD_CHARGE",
+                  "summaryZhTw": "GL（超級聯盟） Overall #347；招式 SHADOW_CLAW／WILD_CHARGE／PSYSHOCK；UL（高級聯盟） Overall #200；招式 SHADOW_CLAW／WILD_CHARGE／PSYSHOCK；ML（大師聯盟） Overall #115；招式 SHADOW_CLAW／PSYSHOCK／WILD_CHARGE",
                   "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -238,7 +238,7 @@
                   "speciesKey": "mew",
                   "formKey": "151-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 349,
+                  "rank": 347,
                   "rating": "618",
                   "score": null,
                   "tier": null,
@@ -248,16 +248,16 @@
                     "PSYSHOCK"
                   ],
                   "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-03T10:30:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-gl-20260715",
+                    "id": "pvpoke-gl-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
                   }
                 },
                 {
@@ -270,8 +270,8 @@
                   "speciesKey": "mew",
                   "formKey": "151-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 114,
-                  "rating": "629",
+                  "rank": 115,
+                  "rating": "628",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
@@ -280,16 +280,16 @@
                     "WILD_CHARGE"
                   ],
                   "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-03T10:30:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ml-20260715",
+                    "id": "pvpoke-ml-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
                   }
                 },
                 {
@@ -302,26 +302,26 @@
                   "speciesKey": "mew",
                   "formKey": "151-kanto",
                   "variantKey": "NORMAL",
-                  "rank": 204,
-                  "rating": "611",
+                  "rank": 200,
+                  "rating": "612",
                   "score": null,
                   "tier": null,
                   "recommendedMoves": [
                     "SHADOW_CLAW",
-                    "PSYSHOCK",
-                    "WILD_CHARGE"
+                    "WILD_CHARGE",
+                    "PSYSHOCK"
                   ],
                   "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-                  "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
-                  "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+                  "seasonOrVersion": "PvPoke snapshot 2026-09-01 (7b96d91fb553780653190ad32de001b5d9086a7f)",
+                  "extractionMethod": "固定 2026-09-01 snapshot 的完整 rankings JSON 陣列索引（index + 1）",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-08-03T10:30:00.000Z",
+                  "checkedAt": "2026-08-31T16:00:00.000Z",
                   "source": {
-                    "id": "pvpoke-ul-20260715",
+                    "id": "pvpoke-ul-20260901",
                     "name": "PvPoke",
                     "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+                    "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
                   }
                 }
               ],
@@ -336,30 +336,30 @@
                   "usageZhTw": "官方頁確認此精確型態／版本的推出、進化或取得邊界。"
                 },
                 {
-                  "id": "pvpoke-gl-20260715",
+                  "id": "pvpoke-gl-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ml-20260715",
+                  "id": "pvpoke-ml-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 },
                 {
-                  "id": "pvpoke-ul-20260715",
+                  "id": "pvpoke-ul-20260901",
                   "name": "PvPoke",
                   "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+                  "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
                   "type": "PVP",
-                  "accessedAt": "2026-08-15T16:00:00.000Z",
+                  "accessedAt": "2026-08-31T16:00:00.000Z",
                   "usageZhTw": "Open League／Overall 名次與招式。"
                 }
               ],

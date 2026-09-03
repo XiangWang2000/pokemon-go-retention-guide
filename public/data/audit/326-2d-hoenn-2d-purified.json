@@ -24,7 +24,7 @@
   "variantKey": "PURIFIED",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "淨化不可逆；先確認暗影用途與招式，不以淨化取代暗影候選。",
   "decision": "TRANSFER_CANDIDATE",
   "assessmentDisposition": "NO_SIGNIFICANT_USE",
@@ -467,7 +467,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "EVOLUTION-HOENN-20260809",
@@ -493,7 +493,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -512,7 +512,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -531,13 +531,13 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "PVE",
       "status": "DATA_UNAVAILABLE",
-      "provenance": "SOURCE_VERIFIED",
+      "provenance": "DATA_UNAVAILABLE",
       "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
       "materialToDecision": false,
       "rocketRating": null,
@@ -550,15 +550,8 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
-      "sources": [
-        {
-          "id": "PVE-HOENN-20260809",
-          "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-          "url": "https://db.pokemongohub.net/pokedex/hoenn",
-          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
-        }
-      ]
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "sources": []
     },
     {
       "category": "PVP",
@@ -576,7 +569,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -595,7 +588,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NO_SIGNIFICANT_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "SECONDARY-SHADOW-HOENN-2026",
@@ -622,15 +615,6 @@
       "type": "SECONDARY",
       "accessedAt": "2026-08-08T16:00:00.000Z",
       "usageZhTw": "該物種實際 evolution path 來源（formal evolution edge）；只標示此 Shadow/Purified 目標可沿該正式路徑取得。"
-    },
-    {
-      "id": "PVE-HOENN-20260809",
-      "name": "GO Hub Hoenn PVE data",
-      "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-      "url": "https://db.pokemongohub.net/pokedex/hoenn",
-      "type": "PVE",
-      "accessedAt": "2026-08-08T16:00:00.000Z",
-      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
       "id": "SECONDARY-SHADOW-HOENN-2026",

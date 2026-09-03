@@ -36,8 +36,8 @@
   "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #447；招式 ICE_FANG／BUBBLE_BEAM／SCALD；UL（高級聯盟） Overall #288；招式 ICE_FANG／ICE_BEAM／SCALD；ML（大師聯盟） Overall #181；招式 ICE_FANG／SCALD／ICE_BEAM",
-  "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；Max Battle 版本需與普通／暗影分開保留",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #447；招式 ICE_FANG／BUBBLE_BEAM／SCALD；UL（高級聯盟） Overall #495；招式 ICE_FANG／BUBBLE_BEAM／SCALD；ML（大師聯盟） Overall #182；招式 ICE_FANG／SCALD／ICE_BEAM",
+  "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
@@ -45,7 +45,7 @@
   "maxBattleSummaryZhTw": "Max 用途與普通、暗影、Mega 分開評估。",
   "evolutionSummaryZhTw": "目前沒有需要跨家族回推的已確認進化用途。",
   "requiredMovesSummaryZhTw": "依固定快照優先核對：ICE_FANG／SCALD／ICE_BEAM",
-  "recommendedIvStrategyZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
+  "recommendedIvStrategyZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -543,10 +543,10 @@
     },
     {
       "category": "PVE",
-      "status": "PARTIALLY_VERIFIED",
+      "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；Max Battle 版本需與普通／暗影分開保留",
-      "materialToDecision": true,
+      "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
+      "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
@@ -555,7 +555,7 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "SPECIAL_USE",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
@@ -564,6 +564,12 @@
           "title": "Johto Pokédex and Pokémon GO PvE rankings",
           "url": "https://db.pokemongohub.net/pokedex/johto",
           "usageZhTw": "Official batch evidence."
+        },
+        {
+          "id": "PVE-SUICUNE-20260902",
+          "title": "Suicune: Best Moveset, Counters & Max CP",
+          "url": "https://db.pokemongohub.net/pokemon/245",
+          "usageZhTw": "Official batch evidence."
         }
       ]
     },
@@ -571,7 +577,7 @@
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #447；招式 ICE_FANG／BUBBLE_BEAM／SCALD；UL（高級聯盟） Overall #288；招式 ICE_FANG／ICE_BEAM／SCALD；ML（大師聯盟） Overall #181；招式 ICE_FANG／SCALD／ICE_BEAM",
+      "summaryZhTw": "GL（超級聯盟） Overall #447；招式 ICE_FANG／BUBBLE_BEAM／SCALD；UL（高級聯盟） Overall #495；招式 ICE_FANG／BUBBLE_BEAM／SCALD；ML（大師聯盟） Overall #182；招式 ICE_FANG／SCALD／ICE_BEAM",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -586,21 +592,21 @@
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ml-20260715",
+          "id": "pvpoke-ml-20260901",
           "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -627,34 +633,6 @@
   ],
   "raw": [
     {
-      "id": "raw-r20-245-johto-normal-pve",
-      "category": "PVE",
-      "status": "PARTIALLY_VERIFIED",
-      "league": "NOT_APPLICABLE",
-      "cup": null,
-      "pvpCategory": null,
-      "speciesKey": "suicune",
-      "formKey": "245-johto",
-      "variantKey": "NORMAL",
-      "rank": null,
-      "rating": "SPECIAL",
-      "score": null,
-      "tier": "SPECIAL",
-      "recommendedMoves": [],
-      "rawNotes": "本批 PvE 類別用途層級由研究表與 GO Hub Johto 版本狀態核對；不虛構 IV 硬門檻。",
-      "seasonOrVersion": "GO Hub accessed 2026-08-08",
-      "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
-      "reproducible": false,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
-      "source": {
-        "id": "PVE-GEN2-20260808",
-        "name": "GO Hub 城都圖鑑／PvE／Mega",
-        "title": "Johto Pokédex and Pokémon GO PvE rankings",
-        "url": "https://db.pokemongohub.net/pokedex/johto"
-      }
-    },
-    {
       "id": "raw-r20-245-johto-normal-great",
       "category": "PVP",
       "status": "VERIFIED",
@@ -674,16 +652,16 @@
         "SCALD"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     },
     {
@@ -696,8 +674,8 @@
       "speciesKey": "suicune",
       "formKey": "245-johto",
       "variantKey": "NORMAL",
-      "rank": 181,
-      "rating": "509",
+      "rank": 182,
+      "rating": "508",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -706,16 +684,16 @@
         "ICE_BEAM"
       ],
       "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ml-20260715",
+        "id": "pvpoke-ml-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
       }
     },
     {
@@ -728,26 +706,26 @@
       "speciesKey": "suicune",
       "formKey": "245-johto",
       "variantKey": "NORMAL",
-      "rank": 288,
-      "rating": "535",
+      "rank": 495,
+      "rating": "534",
       "score": null,
       "tier": null,
       "recommendedMoves": [
         "ICE_FANG",
-        "ICE_BEAM",
+        "BUBBLE_BEAM",
         "SCALD"
       ],
       "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ul-20260715",
+        "id": "pvpoke-ul-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
       }
     }
   ],
@@ -780,30 +758,39 @@
       "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "PVE-SUICUNE-20260902",
+      "name": "Pokémon GO Hub",
+      "title": "Suicune: Best Moveset, Counters & Max CP",
+      "url": "https://db.pokemongohub.net/pokemon/245",
+      "type": "PVE",
+      "accessedAt": "2026-09-01T16:00:00.000Z",
+      "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
+    },
+    {
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ml-20260715",
+      "id": "pvpoke-ml-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],

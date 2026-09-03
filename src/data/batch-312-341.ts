@@ -702,7 +702,7 @@ export const releasedShadowForms312341 = new Set<string>([
   "341-hoenn",
 ]);
 export const releasedMegaForms312341 = new Set<string>(["319-hoenn", "323-hoenn", "334-hoenn"]);
-export const releasedDynamaxForms312341 = new Set<string>();
+export const releasedDynamaxForms312341 = new Set<string>(["320-hoenn", "321-hoenn", "328-hoenn", "329-hoenn", "330-hoenn"]);
 export const releasedGigantamaxForms312341 = new Set<string>();
 
 export const specialVariants312341: Gen3SpecialVariant[] = [
@@ -737,36 +737,34 @@ export const pveClassifications312341: Record<string, PveUseLevel> = {
   "316-hoenn": "NO_SIGNIFICANT_USE",
   "317-hoenn": "NO_SIGNIFICANT_USE",
   "318-hoenn": "NO_SIGNIFICANT_USE",
-  "319-hoenn": "SPECIAL_USE",
+  "319-hoenn": "NO_SIGNIFICANT_USE",
   "320-hoenn": "NO_SIGNIFICANT_USE",
   "321-hoenn": "NO_SIGNIFICANT_USE",
   "322-hoenn": "NO_SIGNIFICANT_USE",
-  "323-hoenn": "SPECIAL_USE",
+  "323-hoenn": "NO_SIGNIFICANT_USE",
   "324-hoenn": "NO_SIGNIFICANT_USE",
   "325-hoenn": "NO_SIGNIFICANT_USE",
   "326-hoenn": "NO_SIGNIFICANT_USE",
   "327-hoenn": "NO_SIGNIFICANT_USE",
   "328-hoenn": "NO_SIGNIFICANT_USE",
   "329-hoenn": "NO_SIGNIFICANT_USE",
-  "330-hoenn": "USABLE_OR_BUDGET",
+  "330-hoenn": "NO_SIGNIFICANT_USE",
   "331-hoenn": "NO_SIGNIFICANT_USE",
   "332-hoenn": "NO_SIGNIFICANT_USE",
   "333-hoenn": "NO_SIGNIFICANT_USE",
-  "334-hoenn": "USABLE_OR_BUDGET",
+  "334-hoenn": "NO_SIGNIFICANT_USE",
   "335-hoenn": "NO_SIGNIFICANT_USE",
   "336-hoenn": "NO_SIGNIFICANT_USE",
   "337-hoenn": "NO_SIGNIFICANT_USE",
   "338-hoenn": "NO_SIGNIFICANT_USE",
   "339-hoenn": "NO_SIGNIFICANT_USE",
-  "340-hoenn": "USABLE_OR_BUDGET",
+  "340-hoenn": "NO_SIGNIFICANT_USE",
   "341-hoenn": "NO_SIGNIFICANT_USE",
 };
-export const pveUseLevels312341: Record<string, PveUseLevel> = {
-  "319-hoenn": "SPECIAL_USE",
-  "323-hoenn": "SPECIAL_USE",
-  "330-hoenn": "USABLE_OR_BUDGET",
-  "334-hoenn": "USABLE_OR_BUDGET",
-  "340-hoenn": "USABLE_OR_BUDGET",
+export const pveUseLevels312341: Record<string, PveUseLevel> = {};
+export const pveVariantUseLevels312341: Record<string, PveUseLevel> = {
+  "319-hoenn-mega": "SPECIAL_USE",
+  "330-hoenn-shadow": "USABLE_OR_BUDGET",
 };
 
 const pvpokeIds312341: Record<string, { normal: string; shadow: string }> = {
@@ -897,4 +895,11 @@ export function pvpokeSpeciesId312341(form: Gen3Form, shadow: boolean) {
   return shadow ? ids.shadow : ids.normal;
 }
 
+export const maxUseLevels312341: Record<string, PveUseLevel> = {
+  "320-hoenn": "SPECIAL_USE",
+  "321-hoenn": "SPECIAL_USE",
+  "328-hoenn": "SPECIAL_USE",
+  "329-hoenn": "SPECIAL_USE",
+  "330-hoenn": "SPECIAL_USE",
+};
 export const truncatedForms312341 = new Set<string>();

@@ -40,11 +40,22 @@ describe("current release contract", () => {
       expect(isExpectedReleaseGeneratedPath(entry.review.markdownPath)).toBe(true);
     }
     expect(isExpectedReleaseGeneratedPath(CURRENT_RELEASE_CONTRACT.snapshot.exportPath)).toBe(true);
+    expect(
+      isExpectedReleaseGeneratedPath(
+        CURRENT_RELEASE_CONTRACT.review.preRecomputeRecalibrationJsonPath,
+      ),
+    ).toBe(true);
+    expect(
+      isExpectedReleaseGeneratedPath(
+        CURRENT_RELEASE_CONTRACT.review.preRecomputeRecalibrationMarkdownPath,
+      ),
+    ).toBe(true);
     expect(isExpectedReleaseGeneratedPath("public/_headers")).toBe(false);
   });
 
   it("rejects stale, unrelated, and escaping generated paths", () => {
     expect(isExpectedReleaseGeneratedPath("review/001-417-recalibration.json")).toBe(false);
+    expect(isExpectedReleaseGeneratedPath("review/history/001-385-recalibration.json")).toBe(false);
     expect(isExpectedReleaseGeneratedPath("review/unexpected.json")).toBe(false);
     expect(isExpectedReleaseGeneratedPath("public/data-old/home.json")).toBe(false);
     expect(isExpectedReleaseGeneratedPath("../site-data/manifest.json")).toBe(false);

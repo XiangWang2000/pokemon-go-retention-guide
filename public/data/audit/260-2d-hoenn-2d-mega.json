@@ -25,20 +25,20 @@
   "variantKey": "MEGA",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "Mega 型態獨立評估；不與普通、暗影或 Max 混用。",
   "decision": "KEEP",
-  "assessmentDisposition": "LIMITED_USE",
+  "assessmentDisposition": "CLEAR_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
+  "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
   "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
-  "pveSummaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+  "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
@@ -467,8 +467,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "CLEAR_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -486,8 +486,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "CLEAR_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -505,8 +505,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "CLEAR_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -524,8 +524,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "CLEAR_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "OFF-MEGA-HOENN-20260809",
@@ -534,9 +534,9 @@
           "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
         },
         {
-          "id": "PVE-HOENN-20260809",
-          "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-          "url": "https://db.pokemongohub.net/pokedex/hoenn",
+          "id": "PVE-MEGA-HOENN-20260903",
+          "title": "Best Attackers Tier List (Pokémon GO, Mega Evolutions included)",
+          "url": "https://db.pokemongohub.net/best/raid-attackers",
           "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
         }
       ]
@@ -544,8 +544,8 @@
     {
       "category": "PVE",
       "status": "PARTIALLY_VERIFIED",
-      "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "特殊用途。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
+      "provenance": "MANUAL_CURATED",
+      "summaryZhTw": "核心投資。本版本有直接 PvE 證據；Mega／Primal 用途需與普通／暗影版本分開評估",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -555,14 +555,14 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "SPECIAL_USE",
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "pveUseLevel": "CORE_INVESTMENT",
+      "assessmentDisposition": "CLEAR_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
-          "id": "PVE-HOENN-20260809",
-          "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-          "url": "https://db.pokemongohub.net/pokedex/hoenn",
+          "id": "PVE-MEGA-HOENN-20260903",
+          "title": "Best Attackers Tier List (Pokémon GO, Mega Evolutions included)",
+          "url": "https://db.pokemongohub.net/best/raid-attackers",
           "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
         }
       ]
@@ -582,8 +582,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "CLEAR_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -601,8 +601,8 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "LIMITED_USE",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "assessmentDisposition": "CLEAR_USE",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     }
   ],
@@ -618,21 +618,21 @@
       "formKey": "260-hoenn",
       "variantKey": "MEGA",
       "rank": null,
-      "rating": "SPECIAL",
+      "rating": "A",
       "score": null,
-      "tier": "SPECIAL",
+      "tier": "A",
       "recommendedMoves": [],
-      "rawNotes": "PvE 用途依第三世代研究表區分四級用途；不虛構 IV 硬門檻。",
-      "seasonOrVersion": "GO Hub accessed 2026-08-09",
-      "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
+      "rawNotes": "PvE 用途依 2026-09-03 團戰攻擊手榜逐 BattleVariant 分級；普通、暗影、Mega／原始回歸不互相繼承，不虛構 IV 硬門檻。",
+      "seasonOrVersion": "GO Hub Raid Attacker tiers accessed 2026-09-03",
+      "extractionMethod": "2026-09-03 團戰攻擊手 tier 與逐版本人工校正",
       "reproducible": false,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "source": {
-        "id": "PVE-HOENN-20260809",
-        "name": "GO Hub Hoenn PVE data",
-        "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-        "url": "https://db.pokemongohub.net/pokedex/hoenn"
+        "id": "PVE-MEGA-HOENN-20260903",
+        "name": "Pokémon GO Hub",
+        "title": "Best Attackers Tier List (Pokémon GO, Mega Evolutions included)",
+        "url": "https://db.pokemongohub.net/best/raid-attackers"
       }
     }
   ],
@@ -647,12 +647,12 @@
       "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     },
     {
-      "id": "PVE-HOENN-20260809",
-      "name": "GO Hub Hoenn PVE data",
-      "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-      "url": "https://db.pokemongohub.net/pokedex/hoenn",
+      "id": "PVE-MEGA-HOENN-20260903",
+      "name": "Pokémon GO Hub",
+      "title": "Best Attackers Tier List (Pokémon GO, Mega Evolutions included)",
+      "url": "https://db.pokemongohub.net/best/raid-attackers",
       "type": "PVE",
-      "accessedAt": "2026-08-08T16:00:00.000Z",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
       "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
     }
   ],

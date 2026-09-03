@@ -27,17 +27,17 @@
   "releaseVerifiedAt": "2026-08-08T10:00:00.000Z",
   "notesZhTw": "普通版本；與暗影、淨化、Mega 及 Max 分開評估。",
   "decision": "KEEP",
-  "assessmentDisposition": "CLEAR_USE",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
+  "missingDataSummaryZhTw": "用途有限或需特定版本／進化／招式；只保留符合條件的少量候選。",
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #172；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；UL（高級聯盟） Overall #108；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；ML（大師聯盟） Overall #76；招式 THUNDER_SHOCK／AURA_SPHERE／WILD_CHARGE",
-  "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；Max Battle 版本需與普通／暗影分開保留",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #172；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；UL（高級聯盟） Overall #115；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；ML（大師聯盟） Overall #76；招式 THUNDER_SHOCK／AURA_SPHERE／WILD_CHARGE",
+  "pveSummaryZhTw": "可用／預算型。本版本有直接 PvE 證據",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
@@ -466,7 +466,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
@@ -492,7 +492,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     },
@@ -511,7 +511,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
@@ -537,7 +537,7 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     },
@@ -545,7 +545,7 @@
       "category": "PVE",
       "status": "PARTIALLY_VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "核心投資。本版本有直接 PvE 證據；Max Battle 版本需與普通／暗影分開保留",
+      "summaryZhTw": "可用／預算型。本版本有直接 PvE 證據",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -555,8 +555,8 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "CORE_INVESTMENT",
-      "assessmentDisposition": "CLEAR_USE",
+      "pveUseLevel": "USABLE_OR_BUDGET",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
@@ -571,7 +571,7 @@
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #172；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；UL（高級聯盟） Overall #108；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；ML（大師聯盟） Overall #76；招式 THUNDER_SHOCK／AURA_SPHERE／WILD_CHARGE",
+      "summaryZhTw": "GL（超級聯盟） Overall #172；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；UL（高級聯盟） Overall #115；招式 THUNDER_SHOCK／WILD_CHARGE／AURA_SPHERE；ML（大師聯盟） Overall #76；招式 THUNDER_SHOCK／AURA_SPHERE／WILD_CHARGE",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
@@ -582,25 +582,25 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ml-20260715",
+          "id": "pvpoke-ml-20260901",
           "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -620,40 +620,12 @@
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
-      "assessmentDisposition": "CLEAR_USE",
+      "assessmentDisposition": "LIMITED_USE",
       "checkedAt": "2026-08-08T10:00:00.000Z",
       "sources": []
     }
   ],
   "raw": [
-    {
-      "id": "raw-r20-243-johto-normal-pve",
-      "category": "PVE",
-      "status": "PARTIALLY_VERIFIED",
-      "league": "NOT_APPLICABLE",
-      "cup": null,
-      "pvpCategory": null,
-      "speciesKey": "raikou",
-      "formKey": "243-johto",
-      "variantKey": "NORMAL",
-      "rank": null,
-      "rating": "A",
-      "score": null,
-      "tier": "A",
-      "recommendedMoves": [],
-      "rawNotes": "本批 PvE 類別用途層級由研究表與 GO Hub Johto 版本狀態核對；不虛構 IV 硬門檻。",
-      "seasonOrVersion": "GO Hub accessed 2026-08-08",
-      "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
-      "reproducible": false,
-      "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
-      "source": {
-        "id": "PVE-GEN2-20260808",
-        "name": "GO Hub 城都圖鑑／PvE／Mega",
-        "title": "Johto Pokédex and Pokémon GO PvE rankings",
-        "url": "https://db.pokemongohub.net/pokedex/johto"
-      }
-    },
     {
       "id": "raw-r20-243-johto-normal-great",
       "category": "PVP",
@@ -674,16 +646,16 @@
         "AURA_SPHERE"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     },
     {
@@ -697,7 +669,7 @@
       "formKey": "243-johto",
       "variantKey": "NORMAL",
       "rank": 76,
-      "rating": "679",
+      "rating": "677",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -706,16 +678,16 @@
         "WILD_CHARGE"
       ],
       "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ml-20260715",
+        "id": "pvpoke-ml-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
       }
     },
     {
@@ -728,8 +700,8 @@
       "speciesKey": "raikou",
       "formKey": "243-johto",
       "variantKey": "NORMAL",
-      "rank": 108,
-      "rating": "637",
+      "rank": 115,
+      "rating": "638",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -738,16 +710,44 @@
         "AURA_SPHERE"
       ],
       "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列索引加一，可穩定重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "checkedAt": "2026-08-31T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ul-20260715",
+        "id": "pvpoke-ul-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    },
+    {
+      "id": "raw-r20-243-johto-normal-pve",
+      "category": "PVE",
+      "status": "PARTIALLY_VERIFIED",
+      "league": "NOT_APPLICABLE",
+      "cup": null,
+      "pvpCategory": null,
+      "speciesKey": "raikou",
+      "formKey": "243-johto",
+      "variantKey": "NORMAL",
+      "rank": null,
+      "rating": "B",
+      "score": null,
+      "tier": "B",
+      "recommendedMoves": [],
+      "rawNotes": "本批 PvE 類別用途層級由研究表與 GO Hub Johto 版本狀態核對；不虛構 IV 硬門檻。",
+      "seasonOrVersion": "GO Hub accessed 2026-08-08",
+      "extractionMethod": "研究表中的用途層級與來源頁面發布狀態",
+      "reproducible": false,
+      "migrationNote": null,
+      "checkedAt": "2026-08-08T10:00:00.000Z",
+      "source": {
+        "id": "PVE-GEN2-20260808",
+        "name": "GO Hub 城都圖鑑／PvE／Mega",
+        "title": "Johto Pokédex and Pokémon GO PvE rankings",
+        "url": "https://db.pokemongohub.net/pokedex/johto"
       }
     }
   ],
@@ -780,30 +780,30 @@
       "usageZhTw": "官方或研究來源確認此精確型態、進化或用途邊界。"
     },
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ml-20260715",
+      "id": "pvpoke-ml-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-10000.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-08-31T16:00:00.000Z",
       "usageZhTw": "Open League／Overall 名次與推薦招式。"
     }
   ],

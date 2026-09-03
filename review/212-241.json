@@ -166,8 +166,8 @@
     },
     {
       "familyId": "JOHTO_FAMILY_215:215-johto",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留可進化為瑪狃拉的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留狃拉（極巨候選）；保留可進化為瑪狃拉的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -214,8 +214,8 @@
     },
     {
       "familyId": "JOHTO_FAMILY_227:227-johto",
-      "strategy": "KEEP_TARGETS",
-      "conclusion": "保留盔甲鳥（PvE 實戰候選、Mega 候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留盔甲鳥（PvE 實戰候選、Mega 候選）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {

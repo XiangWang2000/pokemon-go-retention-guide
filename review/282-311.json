@@ -11,8 +11,8 @@
     "families": 16,
     "strategyCounts": {
       "KEEP_TARGETS": 7,
-      "SELECTIVE_KEEP": 2,
-      "MOSTLY_TRANSFER": 7,
+      "SELECTIVE_KEEP": 3,
+      "MOSTLY_TRANSFER": 6,
       "HOLD_FOR_NOW": 0
     },
     "openIssues": 0,
@@ -114,7 +114,7 @@
     {
       "familyId": "HOENN_FAMILY_280:280-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留沙奈朵（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、有用途的暗影版），以及艾路雷朵（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、Mega 候選）；保留可進化為艾路雷朵的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留拉魯拉絲（極巨候選），以及奇魯莉安（極巨候選），以及沙奈朵（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、極巨候選、有用途的暗影版），以及艾路雷朵（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、Mega 候選）；保留可進化為艾路雷朵的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -125,8 +125,8 @@
     },
     {
       "familyId": "HOENN_FAMILY_285:285-hoenn",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留斗笠菇（PvE 實戰候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -186,7 +186,7 @@
     {
       "familyId": "HOENN_FAMILY_307:307-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留恰雷姆（PvP（GL Rank≤100）、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留恰雷姆（PvP（GL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {

@@ -25,7 +25,7 @@
   "variantKey": "SHADOW",
   "isReleased": false,
   "releaseStatus": "UNRELEASED",
-  "releaseVerifiedAt": "2026-08-08T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "暗影個體獨立評估；暗影標準較寬，不因低總 IV 自動淨化。",
   "decision": "TRANSFER_CANDIDATE",
   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
@@ -38,7 +38,7 @@
   "reviewed": true,
   "updatedAt": "2026-09-01T16:00:00.000Z",
   "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
-  "pveSummaryZhTw": "核心投資。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
+  "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "火箭隊沒有統一排名；沒有這項資料不單獨觸發暫時保留。",
   "gymSummaryZhTw": "未列為主要道館保留用途；次要欄位缺資料不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
@@ -468,7 +468,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -487,7 +487,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -506,7 +506,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -525,14 +525,14 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "PVE",
       "status": "UNRELEASED",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "核心投資。本版本有直接 PvE 證據；暗影標準較寬；不設攻擊或總 IV 硬性最低門檻",
+      "summaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -542,17 +542,10 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "CORE_INVESTMENT",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
-      "sources": [
-        {
-          "id": "PVE-HOENN-20260809",
-          "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-          "url": "https://db.pokemongohub.net/pokedex/hoenn",
-          "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
-        }
-      ]
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "sources": []
     },
     {
       "category": "PVP",
@@ -570,7 +563,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -589,22 +582,12 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
-      "checkedAt": "2026-08-08T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     }
   ],
   "raw": [],
-  "sources": [
-    {
-      "id": "PVE-HOENN-20260809",
-      "name": "GO Hub Hoenn PVE data",
-      "title": "Hoenn Pokedex and Pokemon GO PVE rankings",
-      "url": "https://db.pokemongohub.net/pokedex/hoenn",
-      "type": "PVE",
-      "accessedAt": "2026-08-08T16:00:00.000Z",
-      "usageZhTw": "第三世代批次來源確認精確型態、進化或用途邊界。"
-    }
-  ],
+  "sources": [],
   "traces": [
     {
       "ruleKey": "UNRELEASED_VARIANT",
