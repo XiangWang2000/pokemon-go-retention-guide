@@ -1,32 +1,31 @@
 {
   "batch": "477-493",
-  "checkedAt": "2026-08-16",
+  "checkedAt": "2026-09-03",
   "sources": [
     {
-      "id": "PVE-SINNOH-487-20260816",
+      "id": "PVE-SINNOH-477-493-RAID-20260903",
       "sourceName": "Pokémon GO Hub PvE reference",
       "sourceType": "PVE",
-      "sourceTitleOriginal": "Giratina PvE reference",
+      "sourceTitleOriginal": "Best Raid Attackers",
       "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/487",
-      "accessedAt": "2026-08-16",
+      "sourceUrl": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false",
+      "accessedAt": "2026-09-03",
       "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
+      "sourceSummaryZhTw": "2026-09-03 團體戰攻擊手榜，用於本批普通／暗影 BattleVariant 的 PvE 投資分級。",
       "supports": [
-        "487-origin-normal"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-492-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Shaymin PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/492",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
+        "483-origin-normal",
+        "483-sinnoh-shadow",
+        "484-origin-normal",
+        "484-sinnoh-shadow",
+        "485-sinnoh-normal",
+        "485-sinnoh-shadow",
+        "486-sinnoh-normal",
+        "486-sinnoh-shadow",
+        "487-altered-shadow",
+        "487-origin-normal",
+        "491-sinnoh-normal",
+        "491-sinnoh-shadow",
+        "492-land-normal",
         "492-sky-normal"
       ]
     }
