@@ -2,9 +2,6 @@ name: Prepare Release Snapshot
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - audit-gen4-sinnoh
 
 permissions:
   contents: write
