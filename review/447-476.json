@@ -10,8 +10,8 @@
     "battleVariants": 123,
     "families": 23,
     "strategyCounts": {
-      "KEEP_TARGETS": 17,
-      "SELECTIVE_KEEP": 5,
+      "KEEP_TARGETS": 15,
+      "SELECTIVE_KEEP": 7,
       "MOSTLY_TRANSFER": 1,
       "HOLD_FOR_NOW": 0
     },
@@ -84,7 +84,7 @@
     {
       "familyId": "KANTO_FAMILY_081:081-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留自爆磁怪（PvP（UL Rank≤100）、ML 高 IV 投資候選）；保留可進化為自爆磁怪的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留自爆磁怪（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；保留可進化為自爆磁怪的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
@@ -96,7 +96,7 @@
     {
       "familyId": "KANTO_FAMILY_111:111-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留超甲狂犀（ML 高 IV 投資候選、PvE 實戰候選）；保留可進化為超甲狂犀的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留超甲狂犀（ML 高 IV 投資候選、PvE 實戰候選、極巨候選、有用途的暗影版）；保留可進化為超甲狂犀的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
@@ -108,25 +108,25 @@
     {
       "familyId": "KANTO_FAMILY_125:125-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留電擊魔獸（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選）；保留可進化為電擊魔獸的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留電擊魔獸（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、極巨候選、有用途的暗影版）；保留可進化為電擊魔獸的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "KANTO_FAMILY_126:126-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留鴨嘴炎獸（PvE 實戰候選）；保留可進化為鴨嘴炎獸的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留鴨嘴炎獸（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；保留可進化為鴨嘴炎獸的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "KANTO_FAMILY_133:133-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留伊布（極巨候選），以及水伊布（ML 高 IV 投資候選、極巨候選），以及雷伊布（極巨候選），以及火伊布（極巨候選），以及太陽伊布（極巨候選），以及月亮伊布（PvP（GL Rank≤100、UL Rank≤100））；保留可進化為太陽伊布、月亮伊布、葉伊布、冰伊布、仙子伊布的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留伊布（極巨候選），以及水伊布（ML 高 IV 投資候選、極巨候選），以及雷伊布（極巨候選），以及火伊布（極巨候選），以及太陽伊布（極巨候選），以及月亮伊布（PvP（GL Rank≤100、UL Rank≤100）），以及冰伊布（極巨候選）；保留可進化為太陽伊布、月亮伊布、葉伊布、冰伊布、仙子伊布的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "KANTO_FAMILY_137:137-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留可進化為多邊獸Ⅱ、多邊獸Ｚ的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留多邊獸Ｚ（PvE 實戰候選、有用途的暗影版）；保留可進化為多邊獸Ⅱ、多邊獸Ｚ的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
@@ -137,8 +137,8 @@
     },
     {
       "familyId": "JOHTO_FAMILY_193:193-johto",
-      "strategy": "KEEP_TARGETS",
-      "conclusion": "保留遠古巨蜓（PvE 實戰候選）；保留可進化為遠古巨蜓的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留可進化為遠古巨蜓的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
@@ -150,13 +150,13 @@
     {
       "familyId": "JOHTO_FAMILY_215:215-johto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留狃拉（極巨候選）；保留可進化為瑪狃拉的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留狃拉（極巨候選），以及瑪狃拉（PvE 實戰候選、極巨候選、有用途的暗影版）；保留可進化為瑪狃拉的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "JOHTO_FAMILY_220:220-johto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留象牙豬（ML 高 IV 投資候選、PvE 實戰候選）；保留可進化為象牙豬的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留象牙豬（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；保留可進化為象牙豬的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
@@ -168,7 +168,7 @@
     {
       "familyId": "HOENN_FAMILY_280:280-hoenn",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留拉魯拉絲（極巨候選），以及奇魯莉安（極巨候選），以及沙奈朵（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、極巨候選、有用途的暗影版），以及艾路雷朵（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、Mega 候選）；保留可進化為艾路雷朵的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留拉魯拉絲（極巨候選），以及奇魯莉安（極巨候選），以及沙奈朵（ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、極巨候選、有用途的暗影版），以及艾路雷朵（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、Mega 候選、極巨候選、有用途的暗影版）；保留可進化為艾路雷朵的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
@@ -191,8 +191,8 @@
     },
     {
       "familyId": "SINNOH_FAMILY_451:451-sinnoh",
-      "strategy": "KEEP_TARGETS",
-      "conclusion": "保留龍王蠍（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留龍王蠍（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
@@ -216,7 +216,7 @@
     {
       "familyId": "SINNOH_FAMILY_459:459-sinnoh",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留暴雪王（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、Mega 候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留暴雪王（PvP（GL Rank≤100、UL Rank≤100）、PvE 實戰候選、Mega 候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     }
   ]

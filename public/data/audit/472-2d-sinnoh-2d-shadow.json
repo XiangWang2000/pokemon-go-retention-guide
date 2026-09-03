@@ -26,30 +26,30 @@
   ],
   "evolutionNames": [],
   "variantKey": "SHADOW",
-  "isReleased": false,
-  "releaseStatus": "UNRELEASED",
-  "releaseVerifiedAt": "2026-08-15T16:00:00.000Z",
+  "isReleased": true,
+  "releaseStatus": "RELEASED",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "暗影個體獨立評估；普通版本仍保留為獨立基礎身份。",
-  "decision": "TRANSFER_CANDIDATE",
-  "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+  "decision": "CONDITIONAL_KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "HIGH",
-  "dataStatus": "VERIFIED",
+  "dataStatus": "DATA_UNAVAILABLE",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "此版本目前尚未推出，發布狀態仍按資料標示。",
+  "missingDataSummaryZhTw": "目前沒有未解決的資料依賴。",
   "reviewed": true,
-  "updatedAt": "2026-08-15T16:00:00.000Z",
-  "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
-  "pveSummaryZhTw": "本批版本級 PvE 證據：472-sinnoh-shadow。",
+  "updatedAt": "2026-09-02T16:00:00.000Z",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #289；招式 WING_ATTACK／SAND_TOMB／ACROBATICS；UL（高級聯盟） Overall #217；招式 WING_ATTACK／SAND_TOMB／ACROBATICS；ML（大師聯盟） Overall #285；招式 SAND_ATTACK／NIGHT_SLASH／ACROBATICS",
+  "pveSummaryZhTw": "目前沒有記錄正向版本級 PvE 證據；不因 100% IV 自動升格為實戰必留。",
   "rocketSummaryZhTw": "本批沒有逐物種火箭隊證據；資料缺口不單獨覆蓋其他結論。",
   "gymSummaryZhTw": "本批沒有逐物種道館證據；資料缺口不單獨覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "此版本沒有獨立 Mega 型態。",
   "maxBattleSummaryZhTw": "此版本沒有獨立 Max 型態。",
   "evolutionSummaryZhTw": "擁有該型態的第四世代批次提供正式進化身份與路徑。",
-  "requiredMovesSummaryZhTw": "目前沒有記錄需要特別保留的招式結論。",
-  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+  "requiredMovesSummaryZhTw": "請先核對固定 PvPoke 招式證據，再決定是否投入。",
+  "recommendedIvStrategyZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -442,7 +442,7 @@
       "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "reasonZhTw": "此戰鬥版本目前尚未在 Pokémon GO 推出。",
+  "reasonZhTw": "有限的 PvP 或 PvE 證據支持有條件保留。",
   "evaluationId": "gen4-447-476-eval-472-sinnoh-shadow",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "由固定研究 manifest 的第四世代 447-476 通用匯入器 產生。",
@@ -471,13 +471,13 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "GYM",
-      "status": "UNRELEASED",
-      "provenance": "MANUAL_CURATED",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
       "summaryZhTw": "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。",
       "materialToDecision": false,
       "rocketRating": null,
@@ -490,14 +490,14 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "MAX_BATTLE",
-      "status": "UNRELEASED",
+      "status": "NOT_APPLICABLE",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
+      "summaryZhTw": "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -509,7 +509,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -528,14 +528,14 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "PVE",
-      "status": "UNRELEASED",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
+      "summaryZhTw": "目前沒有記錄正向 PvE 證據；不以資料空白虛構 IV 淘汰線。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -545,24 +545,17 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "USABLE_OR_BUDGET",
+      "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
-      "sources": [
-        {
-          "id": "PVE-SINNOH-472-SHADOW-20260816",
-          "title": "Gliscor PvE reference",
-          "url": "https://db.pokemongohub.net/pokemon/472-Shadow",
-          "usageZhTw": "日期化的版本級 PvE 證據。"
-        }
-      ]
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "sources": []
     },
     {
       "category": "PVP",
-      "status": "UNRELEASED",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
-      "materialToDecision": false,
+      "status": "VERIFIED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "GL（超級聯盟） Overall #289；招式 WING_ATTACK／SAND_TOMB／ACROBATICS；UL（高級聯盟） Overall #217；招式 WING_ATTACK／SAND_TOMB／ACROBATICS；ML（大師聯盟） Overall #285；招式 SAND_ATTACK／NIGHT_SLASH／ACROBATICS",
+      "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
@@ -573,13 +566,32 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
-      "sources": []
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "sources": [
+        {
+          "id": "pvpoke-gl-20260901",
+          "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
+          "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
+        },
+        {
+          "id": "pvpoke-ml-20260901",
+          "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
+          "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
+        },
+        {
+          "id": "pvpoke-ul-20260901",
+          "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
+          "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
+        }
+      ]
     },
     {
       "category": "ROCKET",
-      "status": "UNRELEASED",
-      "provenance": "MANUAL_CURATED",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
       "summaryZhTw": "火箭隊沒有統一逐物種排名；此欄缺來源不單獨觸發暫時保留。",
       "materialToDecision": false,
       "rocketRating": "DATA_UNAVAILABLE",
@@ -592,28 +604,143 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     }
   ],
-  "raw": [],
+  "raw": [
+    {
+      "id": "raw-gen4-447-476-472-sinnoh-shadow-great",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "GREAT",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "gliscor_shadow",
+      "formKey": "472-sinnoh",
+      "variantKey": "SHADOW",
+      "rank": 289,
+      "rating": "677",
+      "score": null,
+      "tier": null,
+      "recommendedMoves": [
+        "WING_ATTACK",
+        "SAND_TOMB",
+        "ACROBATICS"
+      ],
+      "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列 index + 1 可重現。",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-gl-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
+      }
+    },
+    {
+      "id": "raw-gen4-447-476-472-sinnoh-shadow-master",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "MASTER",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "gliscor_shadow",
+      "formKey": "472-sinnoh",
+      "variantKey": "SHADOW",
+      "rank": 285,
+      "rating": "557",
+      "score": null,
+      "tier": null,
+      "recommendedMoves": [
+        "SAND_ATTACK",
+        "NIGHT_SLASH",
+        "ACROBATICS"
+      ],
+      "rawNotes": "ML（大師聯盟） Open／Overall；固定 JSON 陣列 index + 1 可重現。",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-ml-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
+      }
+    },
+    {
+      "id": "raw-gen4-447-476-472-sinnoh-shadow-ultra",
+      "category": "PVP",
+      "status": "VERIFIED",
+      "league": "ULTRA",
+      "cup": "OPEN",
+      "pvpCategory": "OVERALL",
+      "speciesKey": "gliscor_shadow",
+      "formKey": "472-sinnoh",
+      "variantKey": "SHADOW",
+      "rank": 217,
+      "rating": "641",
+      "score": null,
+      "tier": null,
+      "recommendedMoves": [
+        "WING_ATTACK",
+        "SAND_TOMB",
+        "ACROBATICS"
+      ],
+      "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列 index + 1 可重現。",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
+      "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
+      "reproducible": true,
+      "migrationNote": null,
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "source": {
+        "id": "pvpoke-ul-20260901",
+        "name": "PvPoke",
+        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
+      }
+    }
+  ],
   "sources": [
     {
-      "id": "PVE-SINNOH-472-SHADOW-20260816",
-      "name": "Pokémon GO Hub PvE reference",
-      "title": "Gliscor PvE reference",
-      "url": "https://db.pokemongohub.net/pokemon/472-Shadow",
-      "type": "PVE",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
-      "usageZhTw": "日期化的版本級 PvE 證據。"
+      "id": "pvpoke-gl-20260901",
+      "name": "PvPoke",
+      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
+      "type": "PVP",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
+    },
+    {
+      "id": "pvpoke-ml-20260901",
+      "name": "PvPoke",
+      "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
+      "type": "PVP",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
+    },
+    {
+      "id": "pvpoke-ul-20260901",
+      "name": "PvPoke",
+      "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
+      "type": "PVP",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
     }
   ],
   "traces": [
     {
-      "ruleKey": "UNRELEASED_VARIANT",
-      "priority": 950,
+      "ruleKey": "CONDITIONAL_USE",
+      "priority": 700,
       "matched": true,
-      "resultDecision": "TRANSFER_CANDIDATE",
+      "resultDecision": "CONDITIONAL_KEEP",
       "explanationZhTw": "決定性的第四世代匯入計畫提供此初步評估結論。"
     }
   ],

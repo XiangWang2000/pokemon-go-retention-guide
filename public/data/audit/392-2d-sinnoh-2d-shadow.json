@@ -25,20 +25,20 @@
   "variantKey": "SHADOW",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-15T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "暗影個體獨立評估；暗影標準較寬，不因低總 IV 自動淨化。",
-  "decision": "TRANSFER_CANDIDATE",
-  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+  "decision": "CONDITIONAL_KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "HIGH",
-  "dataStatus": "DATA_UNAVAILABLE",
+  "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著主要用途；一般重複個體通常可傳送。",
+  "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
   "reviewed": true,
-  "updatedAt": "2026-08-15T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #949；招式 FIRE_SPIN／CLOSE_COMBAT／BLAST_BURN；UL（高級聯盟） Overall #643；招式 FIRE_SPIN／CLOSE_COMBAT／BLAST_BURN",
-  "pveSummaryZhTw": "目前沒有記錄正向 PvE 證據；不因 100% IV 自動升格為實戰必留。",
+  "updatedAt": "2026-09-02T16:00:00.000Z",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #948；招式 FIRE_SPIN／CLOSE_COMBAT／BLAST_BURN；UL（高級聯盟） Overall #645；招式 FIRE_SPIN／CLOSE_COMBAT／BLAST_BURN",
+  "pveSummaryZhTw": "暗影烈焰猴屬可用的團體戰補位；保留實際會投入的少量候選即可。",
   "rocketSummaryZhTw": "火箭隊沒有統一逐物種排名；缺少此欄不單獨覆蓋其他結論。",
   "gymSummaryZhTw": "未列為主要道館保留用途；缺少次要欄位來源不覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
@@ -46,7 +46,7 @@
   "maxBattleSummaryZhTw": "普通、暗影或淨化個體不能替代 Dynamax 個體。",
   "evolutionSummaryZhTw": "第四世代 #387～#416 進化圖已結構化；前階是否保留由後續目標用途決定。",
   "requiredMovesSummaryZhTw": "沒有招式足以把低用途版本自動升格為必留；活動招式只作投入前條件。",
-  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+  "recommendedIvStrategyZhTw": "暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -439,7 +439,7 @@
       "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "reasonZhTw": "目前缺乏主要 PvP、PvE、道館、Mega、Max 或後續進化理由，一般重複個體大多可傳。",
+  "reasonZhTw": "用途有限或需特定招式／版本；只留少量符合條件的個體。",
   "evaluationId": "gen4-387-416-eval-392-sinnoh-shadow",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已核對神奧型態、跨世代進化、普通／暗影／淨化／Dynamax 邊界、固定 PvPoke 快照與 variant-level PvE evidence。",
@@ -468,7 +468,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -487,14 +487,14 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "MAX_BATTLE",
       "status": "NOT_APPLICABLE",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "普通、暗影或淨化個體不能替代 Dynamax 個體。",
+      "summaryZhTw": "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -506,7 +506,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -525,15 +525,15 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "PVE",
-      "status": "DATA_UNAVAILABLE",
-      "provenance": "DATA_UNAVAILABLE",
-      "summaryZhTw": "目前沒有記錄正向 PvE 證據；不以資料空白虛構 IV 淘汰線。",
-      "materialToDecision": false,
+      "status": "PARTIALLY_VERIFIED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "暗影烈焰猴屬可用的團體戰補位；保留實際會投入的少量候選即可。",
+      "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
@@ -542,16 +542,23 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "pveUseLevel": "USABLE_OR_BUDGET",
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
-      "sources": []
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "sources": [
+        {
+          "id": "PVE-ATTACKERS-HOENN-20260903",
+          "title": "Best Raid Attackers",
+          "url": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false",
+          "usageZhTw": "2026-09-03 精確 BattleVariant PvE 用途證據。"
+        }
+      ]
     },
     {
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #949；招式 FIRE_SPIN／CLOSE_COMBAT／BLAST_BURN；UL（高級聯盟） Overall #643；招式 FIRE_SPIN／CLOSE_COMBAT／BLAST_BURN",
+      "summaryZhTw": "GL（超級聯盟） Overall #948；招式 FIRE_SPIN／CLOSE_COMBAT／BLAST_BURN；UL（高級聯盟） Overall #645；招式 FIRE_SPIN／CLOSE_COMBAT／BLAST_BURN",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -563,18 +570,18 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -595,11 +602,39 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     }
   ],
   "raw": [
+    {
+      "id": "raw-gen4-387-416-392-sinnoh-shadow-pve",
+      "category": "PVE",
+      "status": "PARTIALLY_VERIFIED",
+      "league": "NOT_APPLICABLE",
+      "cup": null,
+      "pvpCategory": null,
+      "speciesKey": null,
+      "formKey": "392-sinnoh",
+      "variantKey": "SHADOW",
+      "rank": null,
+      "rating": "Current raid tier B+",
+      "score": null,
+      "tier": "USABLE_OR_BUDGET",
+      "recommendedMoves": [],
+      "rawNotes": "暗影烈焰猴屬可用的團體戰補位；保留實際會投入的少量候選即可。",
+      "seasonOrVersion": "GO Hub accessed 2026-09-03",
+      "extractionMethod": "日期化的版本級 PvE 研究證據。",
+      "reproducible": false,
+      "migrationNote": null,
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "source": {
+        "id": "PVE-ATTACKERS-HOENN-20260903",
+        "name": "Pokémon GO Hub PvE reference",
+        "title": "Best Raid Attackers",
+        "url": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false"
+      }
+    },
     {
       "id": "raw-gen4-387-416-392-sinnoh-shadow-great",
       "category": "PVP",
@@ -610,7 +645,7 @@
       "speciesKey": "infernape_shadow",
       "formKey": "392-sinnoh",
       "variantKey": "SHADOW",
-      "rank": 949,
+      "rank": 948,
       "rating": "457",
       "score": null,
       "tier": null,
@@ -620,16 +655,16 @@
         "BLAST_BURN"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列 index + 1 可重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     },
     {
@@ -642,8 +677,8 @@
       "speciesKey": "infernape_shadow",
       "formKey": "392-sinnoh",
       "variantKey": "SHADOW",
-      "rank": 643,
-      "rating": "443",
+      "rank": 645,
+      "rating": "442",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -652,45 +687,54 @@
         "BLAST_BURN"
       ],
       "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列 index + 1 可重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ul-20260715",
+        "id": "pvpoke-ul-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
       }
     }
   ],
   "sources": [
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "PVE-ATTACKERS-HOENN-20260903",
+      "name": "Pokémon GO Hub PvE reference",
+      "title": "Best Raid Attackers",
+      "url": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false",
+      "type": "PVE",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "usageZhTw": "2026-09-03 精確 BattleVariant PvE 用途證據。"
+    },
+    {
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
     }
   ],
   "traces": [
     {
-      "ruleKey": "LOW_GENERAL_VALUE",
-      "priority": 100,
+      "ruleKey": "CONDITIONAL_USE",
+      "priority": 700,
       "matched": true,
-      "resultDecision": "TRANSFER_CANDIDATE",
+      "resultDecision": "CONDITIONAL_KEEP",
       "explanationZhTw": "第四世代匯入初步評估；後續仍由共用重算與 review 流程確認。"
     }
   ],

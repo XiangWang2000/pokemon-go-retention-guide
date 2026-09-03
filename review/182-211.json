@@ -10,8 +10,8 @@
     "battleVariants": 125,
     "families": 23,
     "strategyCounts": {
-      "KEEP_TARGETS": 8,
-      "SELECTIVE_KEEP": 9,
+      "KEEP_TARGETS": 7,
+      "SELECTIVE_KEEP": 10,
       "MOSTLY_TRANSFER": 6,
       "HOLD_FOR_NOW": 0
     },
@@ -128,7 +128,7 @@
     {
       "familyId": "KANTO_FAMILY_133:133-kanto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留伊布（極巨候選），以及水伊布（ML 高 IV 投資候選、極巨候選），以及雷伊布（極巨候選），以及火伊布（極巨候選），以及太陽伊布（極巨候選），以及月亮伊布（PvP（GL Rank≤100、UL Rank≤100））；保留可進化為太陽伊布、月亮伊布、葉伊布、冰伊布、仙子伊布的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留伊布（極巨候選），以及水伊布（ML 高 IV 投資候選、極巨候選），以及雷伊布（極巨候選），以及火伊布（極巨候選），以及太陽伊布（極巨候選），以及月亮伊布（PvP（GL Rank≤100、UL Rank≤100）），以及冰伊布（極巨候選）；保留可進化為太陽伊布、月亮伊布、葉伊布、冰伊布、仙子伊布的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -163,8 +163,8 @@
     },
     {
       "familyId": "JOHTO_FAMILY_193:193-johto",
-      "strategy": "KEEP_TARGETS",
-      "conclusion": "保留遠古巨蜓（PvE 實戰候選）；保留可進化為遠古巨蜓的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留可進化為遠古巨蜓的優質普通候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
@@ -176,7 +176,7 @@
     {
       "familyId": "JOHTO_FAMILY_198:198-johto",
       "strategy": "KEEP_TARGETS",
-      "conclusion": "保留黑暗鴉（PvP（GL Rank≤100））；保留可進化為烏鴉頭頭的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
+      "conclusion": "保留黑暗鴉（PvP（GL Rank≤100）），以及烏鴉頭頭（PvE 實戰候選、有用途的暗影版）；保留可進化為烏鴉頭頭的優質普通候選；暗影版本另按暗影用途判斷，不與普通進化候選混用；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "Review individual IV and use conditions before transferring."
     },
     {
