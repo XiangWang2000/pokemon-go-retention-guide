@@ -98,8 +98,8 @@ describe("static 唯讀 snapshot", () => {
       pokemonSpecies: 502,
       pokemonForms: 579,
       battleVariants: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
-      rawEvaluationData: 1482,
-      sourceReferences: 252,
+      rawEvaluationData: 1545,
+      sourceReferences: 229,
       retentionEvaluations: 2513,
       categoryEvaluations: 16436,
       ivRecommendations: CURRENT_RELEASE_CONTRACT.expectedCounts.ivRecommendations,
@@ -213,12 +213,10 @@ describe("static 唯讀 snapshot", () => {
     const protectedIds = [
       "398-sinnoh-normal",
       "398-sinnoh-shadow",
-      "405-sinnoh-normal",
       "405-sinnoh-shadow",
       "409-sinnoh-normal",
       "409-sinnoh-shadow",
-      "467-sinnoh-normal",
-      "469-sinnoh-normal",
+      "467-sinnoh-shadow",
       "492-sky-normal",
     ];
     for (const id of protectedIds) {

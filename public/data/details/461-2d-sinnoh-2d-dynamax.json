@@ -11,16 +11,16 @@
       "evolutionMethodZhTw": "Pokémon GO 正式進化路徑；擁有批次提供型態身份。",
       "availabilityNotesZhTw": "由第四世代 447-476 研究 manifest 建立；型態身份由擁有批次提供。",
       "requiresEvent": false,
-      "verifiedAt": "2026-08-15T16:00:00.000Z"
+      "verifiedAt": "2026-09-02T16:00:00.000Z"
     }
   ],
   "conflicts": [],
   "changeLogs": [
     {
-      "id": "change-gen4-447-476-eval-461-sinnoh-dynamax-iv-86ef55242e2a5049",
+      "id": "change-gen4-447-476-eval-461-sinnoh-dynamax-iv-3f7797036d4be3a5",
       "fieldName": "recommendedIvStrategyZhTw",
       "previousValue": "依目前版本的 IV 規則評估。",
-      "newValue": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+      "newValue": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
       "changeReasonZhTw": "PvE與Mega新增可執行的資源分配線：91%以上可投入，96%以上且15攻優先長期／XL投資；低於91%仍保留急用、唯一候選、既有投入與斷點例外，不作自動傳送線。",
       "changedAt": "2026-09-02T04:00:00.000Z",
       "rulesVersion": "2026.09.02-v3",

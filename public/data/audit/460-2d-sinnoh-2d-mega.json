@@ -28,20 +28,20 @@
   "variantKey": "MEGA",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-15T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "Mega 版本與普通、暗影及淨化分開評估。",
-  "decision": "KEEP",
-  "assessmentDisposition": "CLEAR_USE",
+  "decision": "CONDITIONAL_KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "HIGH",
-  "dataStatus": "DATA_UNAVAILABLE",
+  "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
   "missingDataSummaryZhTw": "目前沒有未解決的資料依賴。",
   "reviewed": true,
-  "updatedAt": "2026-08-15T16:00:00.000Z",
+  "updatedAt": "2026-09-02T16:00:00.000Z",
   "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
-  "pveSummaryZhTw": "目前沒有記錄正向版本級 PvE 證據；不因 100% IV 自動升格為實戰必留。",
+  "pveSummaryZhTw": "Mega 暴雪王整體團戰定位較窄，但冰系仍有可用屬性用途；只需少量 Mega 候選。",
   "rocketSummaryZhTw": "本批沒有逐物種火箭隊證據；資料缺口不單獨覆蓋其他結論。",
   "gymSummaryZhTw": "本批沒有逐物種道館證據；資料缺口不單獨覆蓋其他結論。",
   "gymRating": "NOT_APPLICABLE",
@@ -49,7 +49,7 @@
   "maxBattleSummaryZhTw": "此版本沒有獨立 Max 型態。",
   "evolutionSummaryZhTw": "擁有該型態的第四世代批次提供正式進化身份與路徑。",
   "requiredMovesSummaryZhTw": "目前沒有記錄需要特別保留的招式結論。",
-  "recommendedIvStrategyZhTw": "目前沒有會改變保留結論的通用IV門檻。",
+  "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -442,7 +442,7 @@
       "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "reasonZhTw": "固定證據確認 PvP、PvE、Mega 或 Max 用途，支持保留此版本。",
+  "reasonZhTw": "有限的 PvP 或 PvE 證據支持有條件保留。",
   "evaluationId": "gen4-447-476-eval-460-sinnoh-mega",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "由固定研究 manifest 的第四世代 447-476 通用匯入器 產生。",
@@ -471,7 +471,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -490,14 +490,14 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "MAX_BATTLE",
       "status": "NOT_APPLICABLE",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
+      "summaryZhTw": "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -509,7 +509,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -528,7 +528,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
           "id": "MEGA-SINNOH-RELEASE-20260816",
@@ -540,10 +540,10 @@
     },
     {
       "category": "PVE",
-      "status": "NOT_APPLICABLE",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "此欄位不適用，不影響可執行的保留或傳送建議。",
-      "materialToDecision": false,
+      "status": "PARTIALLY_VERIFIED",
+      "provenance": "SOURCE_VERIFIED",
+      "summaryZhTw": "Mega 暴雪王整體團戰定位較窄，但冰系仍有可用屬性用途；只需少量 Mega 候選。",
+      "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
@@ -552,10 +552,17 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "pveUseLevel": "SPECIAL_USE",
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
-      "sources": []
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "sources": [
+        {
+          "id": "PVE-MEGA-HOENN-20260903",
+          "title": "Best Raid Attackers including Mega",
+          "url": "https://db.pokemongohub.net/best/raid-attackers",
+          "usageZhTw": "2026-09-03 精確 BattleVariant PvE 用途證據。"
+        }
+      ]
     },
     {
       "category": "PVP",
@@ -573,7 +580,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -592,11 +599,40 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     }
   ],
-  "raw": [],
+  "raw": [
+    {
+      "id": "raw-gen4-447-476-460-sinnoh-mega-pve",
+      "category": "PVE",
+      "status": "PARTIALLY_VERIFIED",
+      "league": "NOT_APPLICABLE",
+      "cup": null,
+      "pvpCategory": null,
+      "speciesKey": null,
+      "formKey": "460-sinnoh",
+      "variantKey": "MEGA",
+      "rank": null,
+      "rating": "Mega raid tier C overall；Ice A+",
+      "score": null,
+      "tier": "SPECIAL_USE",
+      "recommendedMoves": [],
+      "rawNotes": "Mega 暴雪王整體團戰定位較窄，但冰系仍有可用屬性用途；只需少量 Mega 候選。",
+      "seasonOrVersion": "GO Hub accessed 2026-09-03",
+      "extractionMethod": "日期化的版本級 PvE 研究證據。",
+      "reproducible": false,
+      "migrationNote": null,
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "source": {
+        "id": "PVE-MEGA-HOENN-20260903",
+        "name": "Pokémon GO Hub PvE reference",
+        "title": "Best Raid Attackers including Mega",
+        "url": "https://db.pokemongohub.net/best/raid-attackers"
+      }
+    }
+  ],
   "sources": [
     {
       "id": "MEGA-SINNOH-RELEASE-20260816",
@@ -606,14 +642,23 @@
       "type": "SECONDARY",
       "accessedAt": "2026-08-15T16:00:00.000Z",
       "usageZhTw": "已推出 Mega 版本的發布狀態來源。"
+    },
+    {
+      "id": "PVE-MEGA-HOENN-20260903",
+      "name": "Pokémon GO Hub PvE reference",
+      "title": "Best Raid Attackers including Mega",
+      "url": "https://db.pokemongohub.net/best/raid-attackers",
+      "type": "PVE",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "usageZhTw": "2026-09-03 精確 BattleVariant PvE 用途證據。"
     }
   ],
   "traces": [
     {
-      "ruleKey": "MAJOR_BATTLE_VALUE",
-      "priority": 900,
+      "ruleKey": "CONDITIONAL_USE",
+      "priority": 700,
       "matched": true,
-      "resultDecision": "KEEP",
+      "resultDecision": "CONDITIONAL_KEEP",
       "explanationZhTw": "決定性的第四世代匯入計畫提供此初步評估結論。"
     }
   ],

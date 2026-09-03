@@ -1,47 +1,36 @@
 {
   "batch": "417-446",
-  "checkedAt": "2026-08-16",
+  "checkedAt": "2026-09-03",
   "sources": [
     {
-      "id": "PVE-SINNOH-445-20260816",
+      "id": "PVE-ATTACKERS-HOENN-20260903",
       "sourceName": "Pokémon GO Hub PvE reference",
       "sourceType": "PVE",
-      "sourceTitleOriginal": "Garchomp PvE reference",
+      "sourceTitleOriginal": "Best Raid Attackers",
       "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/445",
-      "accessedAt": "2026-08-16",
+      "sourceUrl": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false",
+      "accessedAt": "2026-09-03",
       "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
+      "sourceSummaryZhTw": "2026-09-03 團體戰攻擊手榜，用於本批普通／暗影 BattleVariant 的 PvE 投資分級。",
       "supports": [
-        "445-sinnoh-normal"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-445-SHADOW-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Garchomp PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/445-Shadow",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
+        "430-sinnoh-shadow",
+        "445-sinnoh-normal",
         "445-sinnoh-shadow"
       ]
     },
     {
-      "id": "PVE-SINNOH-443-SHADOW-20260816",
+      "id": "PVE-MEGA-HOENN-20260903",
       "sourceName": "Pokémon GO Hub PvE reference",
       "sourceType": "PVE",
-      "sourceTitleOriginal": "Gible PvE reference",
+      "sourceTitleOriginal": "Best Raid Attackers including Mega",
       "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/443-Shadow",
-      "accessedAt": "2026-08-16",
+      "sourceUrl": "https://db.pokemongohub.net/best/raid-attackers",
+      "accessedAt": "2026-09-03",
       "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
+      "sourceSummaryZhTw": "2026-09-03 含 Mega 的團體戰攻擊手榜，用於本批已推出 Mega BattleVariant 的實戰價值。",
       "supports": [
-        "443-sinnoh-shadow"
+        "428-sinnoh-mega",
+        "445-sinnoh-mega"
       ]
     }
   ]

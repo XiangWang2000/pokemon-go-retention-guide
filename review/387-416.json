@@ -10,9 +10,9 @@
     "battleVariants": 136,
     "families": 12,
     "strategyCounts": {
-      "KEEP_TARGETS": 6,
-      "SELECTIVE_KEEP": 3,
-      "MOSTLY_TRANSFER": 3,
+      "KEEP_TARGETS": 5,
+      "SELECTIVE_KEEP": 5,
+      "MOSTLY_TRANSFER": 2,
       "HOLD_FOR_NOW": 0
     },
     "openIssues": 0,
@@ -99,8 +99,8 @@
     },
     {
       "familyId": "SINNOH_FAMILY_390:390-sinnoh",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留烈焰猴（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
@@ -129,7 +129,7 @@
     },
     {
       "familyId": "SINNOH_FAMILY_403:403-sinnoh",
-      "strategy": "KEEP_TARGETS",
+      "strategy": "SELECTIVE_KEEP",
       "conclusion": "保留倫琴貓（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },

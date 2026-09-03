@@ -10,9 +10,9 @@
     "battleVariants": 175,
     "families": 43,
     "strategyCounts": {
-      "KEEP_TARGETS": 3,
-      "SELECTIVE_KEEP": 11,
-      "MOSTLY_TRANSFER": 29,
+      "KEEP_TARGETS": 11,
+      "SELECTIVE_KEEP": 4,
+      "MOSTLY_TRANSFER": 28,
       "HOLD_FOR_NOW": 0
     },
     "openIssues": 0,
@@ -162,44 +162,44 @@
     },
     {
       "familyId": "SINNOH_FAMILY_483:483-origin",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留帝牙盧卡（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留帝牙盧卡（ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "SINNOH_FAMILY_483:483-sinnoh",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留帝牙盧卡（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留帝牙盧卡（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "SINNOH_FAMILY_484:484-origin",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留帕路奇亞（PvP（UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留帕路奇亞（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "SINNOH_FAMILY_484:484-sinnoh",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留帕路奇亞（PvP（UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留帕路奇亞（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "SINNOH_FAMILY_485:485-sinnoh",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留席多藍恩（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留席多藍恩（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "SINNOH_FAMILY_486:486-sinnoh",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留雷吉奇卡斯（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留雷吉奇卡斯（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "SINNOH_FAMILY_487:487-altered",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留騎拉帝納（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留騎拉帝納（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
@@ -228,14 +228,14 @@
     },
     {
       "familyId": "SINNOH_FAMILY_491:491-sinnoh",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留達克萊伊（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留達克萊伊（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {
       "familyId": "SINNOH_FAMILY_492:492-land",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留謝米（PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。",
       "transferLine": "傳送前請個別核對 IV 與用途條件。"
     },
     {

@@ -18,12 +18,12 @@ const research = JSON.parse(
 describe("Gen 4 #387-#416 variant-level PvE evidence", () => {
   it("does not leak Shadow Torterra's PvE value into normal Torterra", () => {
     expect(pveEvidenceForVariant387416("389-sinnoh-normal")).toBeNull();
-    expect(pveEvidenceForVariant387416("389-sinnoh-shadow")?.level).toBe("USABLE_OR_BUDGET");
+    expect(pveEvidenceForVariant387416("389-sinnoh-shadow")?.level).toBe("CORE_INVESTMENT");
   });
 
-  it("can distinguish normal and Shadow investment levels on the same form", () => {
-    expect(pveEvidenceForVariant387416("395-sinnoh-normal")?.level).toBe("USABLE_OR_BUDGET");
-    expect(pveEvidenceForVariant387416("395-sinnoh-shadow")?.level).toBe("CORE_INVESTMENT");
+  it("can remove stale normal-form value while retaining the exact Shadow classification", () => {
+    expect(pveEvidenceForVariant387416("395-sinnoh-normal")).toBeNull();
+    expect(pveEvidenceForVariant387416("395-sinnoh-shadow")?.level).toBe("USABLE_OR_BUDGET");
     expect(pveEvidenceForVariant387416("409-sinnoh-normal")?.level).toBe("CORE_INVESTMENT");
     expect(pveEvidenceForVariant387416("409-sinnoh-shadow")?.level).toBe("CORE_INVESTMENT");
   });
@@ -39,13 +39,13 @@ describe("Gen 4 #387-#416 variant-level PvE evidence", () => {
   });
 
   it("keeps every positive classification linked to the dated research manifest", () => {
-    expect(research.checkedAt).toBe("2026-08-13");
+    expect(research.checkedAt).toBe("2026-09-03");
     const supported = new Set(research.sources.flatMap((source) => source.supports));
     const sourceUrls = new Set(research.sources.map((source) => source.sourceUrl));
     for (const [variantId, evidence] of Object.entries(pveEvidence387416)) {
       expect(supported.has(variantId)).toBe(true);
       expect(sourceUrls.has(evidence.sourceUrl)).toBe(true);
-      expect(evidence.checkedAt).toBe("2026-08-13");
+      expect(evidence.checkedAt).toBe("2026-09-03");
     }
   });
 });

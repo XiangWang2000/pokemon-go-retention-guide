@@ -36,6 +36,8 @@ export type Gen4PveEvidence = {
   summaryZhTw: string;
 };
 
+export type Gen4MaxEvidence = Gen4PveEvidence;
+
 export type Gen4VariantKey = "NORMAL" | "SHADOW" | "PURIFIED" | "MEGA" | "DYNAMAX" | "GIGANTAMAX";
 
 export type Gen4SpecialVariant = {
@@ -68,5 +70,6 @@ export type Gen4BatchDefinition = {
   specialVariants: readonly Gen4SpecialVariant[];
   pvpokeSpeciesId: (form: Gen4BatchForm, shadow: boolean) => string;
   pveEvidenceForVariant: (variantId: string) => Gen4PveEvidence | null;
+  maxEvidenceForVariant: (variantId: string) => Gen4MaxEvidence | null;
   evidenceAdapter: Gen4EvidenceAdapter;
 };

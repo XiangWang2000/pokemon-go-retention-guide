@@ -27,7 +27,7 @@
   "variantKey": "DYNAMAX",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-15T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "此 Max 版本已推出；與普通、暗影及其他戰鬥版本分開評估。",
   "decision": "KEEP",
   "assessmentDisposition": "CLEAR_USE",
@@ -38,7 +38,7 @@
   "reviewIssues": [],
   "missingDataSummaryZhTw": "目前沒有未解決的資料依賴。",
   "reviewed": true,
-  "updatedAt": "2026-08-15T16:00:00.000Z",
+  "updatedAt": "2026-09-02T16:00:00.000Z",
   "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
   "pveSummaryZhTw": "目前沒有記錄正向版本級 PvE 證據；不因 100% IV 自動升格為實戰必留。",
   "rocketSummaryZhTw": "本批沒有逐物種火箭隊證據；資料缺口不單獨覆蓋其他結論。",
@@ -48,7 +48,7 @@
   "maxBattleSummaryZhTw": "Max 版本發布狀態與用途獨立核對。",
   "evolutionSummaryZhTw": "擁有該型態的第四世代批次提供正式進化身份與路徑。",
   "requiredMovesSummaryZhTw": "目前沒有記錄需要特別保留的招式結論。",
-  "recommendedIvStrategyZhTw": "目前沒有會改變保留結論的通用IV門檻。",
+  "recommendedIvStrategyZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -470,7 +470,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -489,32 +489,38 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "MAX_BATTLE",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "已推出的 Max 版本。",
+      "summaryZhTw": "極巨冰伊布目前是高階冰系 Max 攻擊手，屬核心 Max Battle 投資候選。",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
-      "maxTypeTier": null,
+      "maxTypeTier": "Ice Max attacker A+ tier",
       "maxTypeKey": null,
-      "maxOverallRating": null,
-      "maxInvestmentRating": null,
-      "maxUseCaseBreadth": null,
+      "maxOverallRating": "HIGH",
+      "maxInvestmentRating": "HIGH",
+      "maxUseCaseBreadth": "BROAD",
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
-          "id": "MAX-SINNOH-20260816",
-          "title": "Max Battle availability for Sinnoh forms",
-          "url": "https://db.pokemongohub.net/pokedex/sinnoh#dynamax",
+          "id": "MAX-ATTACKERS-GEN3-20260903",
+          "title": "Max Attackers Tier List",
+          "url": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
           "usageZhTw": "已推出 Max 版本的發布狀態來源。"
+        },
+        {
+          "id": "MAX-SINNOH-GLACEON-20260903",
+          "title": "Dynamax Glaceon",
+          "url": "https://db.pokemongohub.net/pokemon/471-Dynamax",
+          "usageZhTw": "2026-09-03 精確 Max BattleVariant 角色／投資證據。"
         }
       ]
     },
@@ -534,7 +540,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -553,7 +559,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -572,7 +578,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -591,20 +597,58 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     }
   ],
-  "raw": [],
+  "raw": [
+    {
+      "id": "raw-gen4-447-476-471-sinnoh-dynamax-max",
+      "category": "MAX_BATTLE",
+      "status": "PARTIALLY_VERIFIED",
+      "league": "NOT_APPLICABLE",
+      "cup": null,
+      "pvpCategory": null,
+      "speciesKey": null,
+      "formKey": "471-sinnoh",
+      "variantKey": "DYNAMAX",
+      "rank": null,
+      "rating": "Ice Max attacker A+ tier",
+      "score": null,
+      "tier": "CORE_INVESTMENT",
+      "recommendedMoves": [],
+      "rawNotes": "極巨冰伊布目前是高階冰系 Max 攻擊手，屬核心 Max Battle 投資候選。",
+      "seasonOrVersion": "GO Hub accessed 2026-09-03",
+      "extractionMethod": "日期化的版本級 Max Battle 研究證據。",
+      "reproducible": false,
+      "migrationNote": null,
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "source": {
+        "id": "MAX-SINNOH-GLACEON-20260903",
+        "name": "Pokémon GO Hub database",
+        "title": "Dynamax Glaceon",
+        "url": "https://db.pokemongohub.net/pokemon/471-Dynamax"
+      }
+    }
+  ],
   "sources": [
     {
-      "id": "MAX-SINNOH-20260816",
-      "name": "Pokémon GO Max Battle release reference",
-      "title": "Max Battle availability for Sinnoh forms",
-      "url": "https://db.pokemongohub.net/pokedex/sinnoh#dynamax",
+      "id": "MAX-ATTACKERS-GEN3-20260903",
+      "name": "Pokémon GO Hub Max Battle reference",
+      "title": "Max Attackers Tier List",
+      "url": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
       "type": "MAX_BATTLE",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
       "usageZhTw": "已推出 Max 版本的發布狀態來源。"
+    },
+    {
+      "id": "MAX-SINNOH-GLACEON-20260903",
+      "name": "Pokémon GO Hub database",
+      "title": "Dynamax Glaceon",
+      "url": "https://db.pokemongohub.net/pokemon/471-Dynamax",
+      "type": "MAX_BATTLE",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "usageZhTw": "2026-09-03 精確 Max BattleVariant 角色／投資證據。"
     }
   ],
   "traces": [

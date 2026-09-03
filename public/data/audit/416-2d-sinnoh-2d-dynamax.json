@@ -25,10 +25,10 @@
   "variantKey": "DYNAMAX",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-15T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "此 Dynamax 版本已推出；普通個體不能替代 Max 個體。",
-  "decision": "KEEP",
-  "assessmentDisposition": "CLEAR_USE",
+  "decision": "CONDITIONAL_KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
   "confidence": "HIGH",
   "dataStatus": "DATA_UNAVAILABLE",
@@ -36,7 +36,7 @@
   "reviewIssues": [],
   "missingDataSummaryZhTw": "已有明確用途；次要欄位缺資料不覆蓋目前保留結論。",
   "reviewed": true,
-  "updatedAt": "2026-08-15T16:00:00.000Z",
+  "updatedAt": "2026-09-02T16:00:00.000Z",
   "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未列入可重現名次。",
   "pveSummaryZhTw": "目前沒有記錄正向 PvE 證據；不因 100% IV 自動升格為實戰必留。",
   "rocketSummaryZhTw": "火箭隊沒有統一逐物種排名；缺少此欄不單獨覆蓋其他結論。",
@@ -439,7 +439,7 @@
       "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "reasonZhTw": "目前已有明確 PvP、PvE 或 Max Battle 核心用途；保留符合版本與用途的候選。",
+  "reasonZhTw": "用途有限或需特定招式／版本；只留少量符合條件的個體。",
   "evaluationId": "gen4-387-416-eval-416-sinnoh-dynamax",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "已核對神奧型態、跨世代進化、普通／暗影／淨化／Dynamax 邊界、固定 PvPoke 快照與 variant-level PvE evidence。",
@@ -468,7 +468,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -487,27 +487,33 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "MAX_BATTLE",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "此 Dynamax 版本已推出；與普通／暗影版本分開保留。",
+      "summaryZhTw": "極巨蜂女王的直接輸出不突出，但防守端仍有較窄的 Max Battle 用途；只作特殊用途候選，不因已推出就升格為核心投資。",
       "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
-      "maxTypeTier": null,
+      "maxTypeTier": "Max defender niche",
       "maxTypeKey": null,
-      "maxOverallRating": null,
-      "maxInvestmentRating": null,
-      "maxUseCaseBreadth": null,
+      "maxOverallRating": "LOW",
+      "maxInvestmentRating": "LOW",
+      "maxUseCaseBreadth": "NARROW",
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
+        {
+          "id": "MAX-DEFENDERS-GEN3-20260903",
+          "title": "Max Defenders Tier List",
+          "url": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+          "usageZhTw": "2026-09-03 精確 Max BattleVariant 角色／投資證據。"
+        },
         {
           "id": "MAX-SINNOH-20260813",
           "title": "Max Battles & Power Spots",
@@ -532,7 +538,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -551,7 +557,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -570,7 +576,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -589,12 +595,50 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     }
   ],
-  "raw": [],
+  "raw": [
+    {
+      "id": "raw-gen4-387-416-416-sinnoh-dynamax-max",
+      "category": "MAX_BATTLE",
+      "status": "PARTIALLY_VERIFIED",
+      "league": "NOT_APPLICABLE",
+      "cup": null,
+      "pvpCategory": null,
+      "speciesKey": null,
+      "formKey": "416-sinnoh",
+      "variantKey": "DYNAMAX",
+      "rank": null,
+      "rating": "Max defender niche",
+      "score": null,
+      "tier": "SPECIAL_USE",
+      "recommendedMoves": [],
+      "rawNotes": "極巨蜂女王的直接輸出不突出，但防守端仍有較窄的 Max Battle 用途；只作特殊用途候選，不因已推出就升格為核心投資。",
+      "seasonOrVersion": "GO Hub accessed 2026-09-03",
+      "extractionMethod": "日期化的版本級 Max Battle 研究證據。",
+      "reproducible": false,
+      "migrationNote": null,
+      "checkedAt": "2026-09-02T16:00:00.000Z",
+      "source": {
+        "id": "MAX-DEFENDERS-GEN3-20260903",
+        "name": "Pokémon GO Hub Max Battle reference",
+        "title": "Max Defenders Tier List",
+        "url": "https://pokemongohub.net/post/guide/max-defenders-tier-list/"
+      }
+    }
+  ],
   "sources": [
+    {
+      "id": "MAX-DEFENDERS-GEN3-20260903",
+      "name": "Pokémon GO Hub Max Battle reference",
+      "title": "Max Defenders Tier List",
+      "url": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+      "type": "MAX_BATTLE",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "usageZhTw": "2026-09-03 精確 Max BattleVariant 角色／投資證據。"
+    },
     {
       "id": "MAX-SINNOH-20260813",
       "name": "Serebii",
@@ -607,10 +651,10 @@
   ],
   "traces": [
     {
-      "ruleKey": "MAJOR_BATTLE_VALUE",
-      "priority": 900,
+      "ruleKey": "CONDITIONAL_USE",
+      "priority": 700,
       "matched": true,
-      "resultDecision": "KEEP",
+      "resultDecision": "CONDITIONAL_KEEP",
       "explanationZhTw": "第四世代匯入初步評估；後續仍由共用重算與 review 流程確認。"
     }
   ],

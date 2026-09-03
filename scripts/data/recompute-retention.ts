@@ -323,10 +323,7 @@ function directAssessment(variant: VariantRecord): DirectAssessment {
     (variant.variantKey === "NORMAL" && normalMegaCandidateForms.has(variant.pokemonFormId)),
   );
   const isMaxVariant = variant.variantKey === "DYNAMAX" || variant.variantKey === "GIGANTAMAX";
-  const hasMaxValue = Boolean(
-    isMaxVariant &&
-    (max?.materialToDecision || variant.releaseStatus === "RELEASED"),
-  );
+  const hasMaxValue = Boolean(isMaxVariant && max?.materialToDecision);
   const rawGym = variant.rawEvaluationData.filter((item) => item.category === "GYM");
   const rawGymRating = rawGym.some((item) => item.rating === "HIGH" || item.tier === "A")
     ? "HIGH"

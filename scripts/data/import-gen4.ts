@@ -16,8 +16,9 @@ import { assertEvolutionPathEndpoints, upsertEvolutionPath } from "../../src/dat
 import { assertDisposableDatabase, getDatabaseUrl } from "../../src/lib/database";
 import { RULES_VERSION } from "../../src/rules/rules";
 
-const checkedAt = new Date("2026-08-16T00:00:00+08:00");
-const pvpokeCommit = "86847e535b7e0a0f4e91f9628b3fc713ae6adca7";
+const checkedAt = new Date("2026-09-03T00:00:00+08:00");
+const pvpokeCommit = "7b96d91fb553780653190ad32de001b5d9086a7f";
+const pvpokeSnapshotRoot = "data/sources/pvpoke/2026-09-01";
 const categories = [
   "PVP",
   "PVE",
@@ -28,9 +29,9 @@ const categories = [
   "EVOLUTION_VALUE",
 ] as const;
 const leagueMeta: Record<Gen4PlanLeague, { cp: number; sourceId: string; label: string }> = {
-  GREAT: { cp: 1500, sourceId: "pvpoke-gl-20260715", label: "Great League" },
-  ULTRA: { cp: 2500, sourceId: "pvpoke-ul-20260715", label: "Ultra League" },
-  MASTER: { cp: 10000, sourceId: "pvpoke-ml-20260715", label: "Master League" },
+  GREAT: { cp: 1500, sourceId: "pvpoke-gl-20260901", label: "Great League" },
+  ULTRA: { cp: 2500, sourceId: "pvpoke-ul-20260901", label: "Ultra League" },
+  MASTER: { cp: 10000, sourceId: "pvpoke-ml-20260901", label: "Master League" },
 };
 const legacyLeagueLabels: Record<Gen4PlanLeague, string> = {
   GREAT: "GL（超級聯盟）",
@@ -83,7 +84,7 @@ async function readRankings(): Promise<Gen4RankingSnapshots> {
   for (const league of Object.keys(leagueMeta) as Gen4PlanLeague[]) {
     const { cp } = leagueMeta[league];
     const json = await new Promise<string>((resolve, reject) =>
-      readFile(`data/sources/pvpoke/rankings-${cp}.json`, "utf8", (error, data) =>
+      readFile(`${pvpokeSnapshotRoot}/rankings-${cp}.json`, "utf8", (error, data) =>
         error ? reject(error) : resolve(data),
       ),
     );
@@ -122,7 +123,7 @@ async function upsertSource(
 async function upsertPvPokeSources(prisma: PrismaClient) {
   for (const league of Object.keys(leagueMeta) as Gen4PlanLeague[]) {
     const { cp, sourceId, label } = leagueMeta[league];
-    const bytes = readFileSync(`data/sources/pvpoke/rankings-${cp}.json`);
+    const bytes = readFileSync(`${pvpokeSnapshotRoot}/rankings-${cp}.json`);
     const sha256 = createHash("sha256").update(bytes).digest("hex");
     const data = {
       sourceName: "PvPoke fixed ranking snapshot",
@@ -530,7 +531,7 @@ async function writeEvidence(
   const maxSourceId = releaseResearch.sources.find((source) => source.id.startsWith("MAX-"))?.id;
   const legacy = usesLegacyEvidenceAdapter(definition);
   const rawRows = plan.flatMap((row) => {
-    const pvpRows = row.ranks.map((rank) => ({
+    const rows: Array<Record<string, unknown>> = row.ranks.map((rank) => ({
       id: `raw-gen4-${definition.batch}-${row.id}-${rank.league.toLowerCase()}`,
       battleVariantId: row.id,
       category: "PVP" as const,
@@ -544,24 +545,19 @@ async function writeEvidence(
       rank: rank.rank,
       rating: rank.rating === null ? null : String(rank.rating),
       recommendedMoves: JSON.stringify(rank.moves),
-      rawNotes: usesLegacyEvidenceAdapter(definition)
-        ? `${legacyLeagueLabels[rank.league]} Open／Overall；固定 JSON 陣列 index + 1 可重現。`
-        : `${legacyLeagueLabels[rank.league]} Open／Overall；固定 JSON 陣列 index + 1 可重現。`,
+      rawNotes: `${legacyLeagueLabels[rank.league]} Open／Overall；固定 JSON 陣列 index + 1 可重現。`,
       seasonOrVersion: `PvPoke commit ${pvpokeCommit}`,
-      extractionMethod: usesLegacyEvidenceAdapter(definition)
-        ? "固定 commit 的完整 rankings JSON 陣列索引（index + 1）"
-        : "固定 rankings JSON 陣列索引加一。",
+      extractionMethod: "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       reproducible: true,
       sourceId: leagueMeta[rank.league].sourceId,
       checkedAt,
     }));
-    if (!row.pveEvidence) return pvpRows;
-    const sourceId = pveSourceByUrl.get(row.pveEvidence.sourceUrl);
-    if (!sourceId)
-      throw new Error(`Missing PvE source for ${row.id}: ${row.pveEvidence.sourceUrl}`);
-    return [
-      ...pvpRows,
-      {
+
+    if (row.pveEvidence) {
+      const sourceId = pveSourceByUrl.get(row.pveEvidence.sourceUrl);
+      if (!sourceId)
+        throw new Error(`Missing PvE source for ${row.id}: ${row.pveEvidence.sourceUrl}`);
+      rows.push({
         id: `raw-gen4-${definition.batch}-${row.id}-pve`,
         battleVariantId: row.id,
         category: "PVE" as const,
@@ -573,21 +569,46 @@ async function writeEvidence(
         formKey: row.formId,
         variantKey: row.variantKey,
         rank: null,
-        rating: row.pveEvidence.roles.join(usesLegacyEvidenceAdapter(definition) ? "；" : ", "),
+        rating: row.pveEvidence.roles.join("；"),
         recommendedMoves: JSON.stringify([]),
         tier: row.pveEvidence.level,
         rawNotes: row.pveEvidence.summaryZhTw,
-        seasonOrVersion: usesLegacyEvidenceAdapter(definition)
-          ? "GO Hub accessed 2026-08-13"
-          : `GO Hub accessed ${row.pveEvidence.checkedAt}`,
-        extractionMethod: usesLegacyEvidenceAdapter(definition)
-          ? "dated variant-level PvE research evidence"
-          : "日期化的版本級 PvE 研究證據。",
+        seasonOrVersion: `GO Hub accessed ${row.pveEvidence.checkedAt}`,
+        extractionMethod: "日期化的版本級 PvE 研究證據。",
         reproducible: false,
         sourceId,
         checkedAt,
-      },
-    ];
+      });
+    }
+
+    if (row.maxEvidence) {
+      const sourceId = pveSourceByUrl.get(row.maxEvidence.sourceUrl);
+      if (!sourceId)
+        throw new Error(`Missing Max source for ${row.id}: ${row.maxEvidence.sourceUrl}`);
+      rows.push({
+        id: `raw-gen4-${definition.batch}-${row.id}-max`,
+        battleVariantId: row.id,
+        category: "MAX_BATTLE" as const,
+        status: "PARTIALLY_VERIFIED" as const,
+        league: "NOT_APPLICABLE" as const,
+        cup: null,
+        pvpCategory: null,
+        speciesKey: null,
+        formKey: row.formId,
+        variantKey: row.variantKey,
+        rank: null,
+        rating: row.maxEvidence.roles.join("；"),
+        recommendedMoves: JSON.stringify([]),
+        tier: row.maxEvidence.level,
+        rawNotes: row.maxEvidence.summaryZhTw,
+        seasonOrVersion: `GO Hub accessed ${row.maxEvidence.checkedAt}`,
+        extractionMethod: "日期化的版本級 Max Battle 研究證據。",
+        reproducible: false,
+        sourceId,
+        checkedAt,
+      });
+    }
+    return rows;
   });
   if (rawRows.length) await prisma.rawEvaluationData.createMany({ data: rawRows as never[] });
 
@@ -623,7 +644,7 @@ async function writeEvidence(
           !row.released ||
           (legacy
             ? row.variantKey === "DYNAMAX"
-            : ["DYNAMAX", "GIGANTAMAX", "MEGA"].includes(row.variantKey))
+            : ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey))
         ) {
           status = row.released ? "NOT_APPLICABLE" : "UNRELEASED";
         } else if (row.pveEvidence) {
@@ -656,23 +677,19 @@ async function writeEvidence(
             : "已建模但目前尚未推出的 Mega 版本。";
         }
       } else if (category === "MAX_BATTLE") {
-        const isMaxVariant = legacy
-          ? row.variantKey === "DYNAMAX"
-          : ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey);
+        const isMaxVariant = row.variantKey === "DYNAMAX" || row.variantKey === "GIGANTAMAX";
         if (isMaxVariant) {
           status = row.released ? "VERIFIED" : "UNRELEASED";
-          provenance = row.released ? "SOURCE_VERIFIED" : "MANUAL_CURATED";
-          materialToDecision = row.released;
-          summaryZhTw = legacy
-            ? row.released
-              ? "此 Dynamax 版本已推出；與普通／暗影版本分開保留。"
-              : "此 Dynamax 版本尚未推出。"
-            : row.released
-              ? "已推出的 Max 版本。"
-              : "已建模但目前尚未推出的 Max 版本。";
+          provenance =
+            row.released && row.maxEvidence ? "SOURCE_VERIFIED" : "MANUAL_CURATED";
+          materialToDecision = row.released && Boolean(row.maxEvidence);
+          summaryZhTw = !row.released
+            ? "此 Max 版本尚未推出。"
+            : row.maxEvidence?.summaryZhTw ??
+              "此 Max 版本已推出，但目前沒有足以形成主要保留理由的 Max Battle 投資證據。";
         } else {
           status = row.released ? "NOT_APPLICABLE" : "UNRELEASED";
-          if (legacy) summaryZhTw = "普通、暗影或淨化個體不能替代 Dynamax 個體。";
+          summaryZhTw = "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。";
         }
       } else if (category === "EVOLUTION_VALUE") {
         const form = definition.forms.find((candidate) => candidate.id === row.formId);
@@ -707,11 +724,32 @@ async function writeEvidence(
         rocketRating: category === "ROCKET" ? ("DATA_UNAVAILABLE" as const) : null,
         rocketRoles: "[]",
         maxTypeRank: null,
-        maxTypeTier: null,
+        maxTypeTier: category === "MAX_BATTLE" ? (row.maxEvidence?.roles.join("；") ?? null) : null,
         maxTypeKey: null,
-        maxOverallRating: null,
-        maxInvestmentRating: null,
-        maxUseCaseBreadth: null,
+        maxOverallRating:
+          category === "MAX_BATTLE" && row.maxEvidence
+            ? row.maxEvidence.level === "CORE_INVESTMENT"
+              ? "HIGH"
+              : row.maxEvidence.level === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "LOW"
+            : null,
+        maxInvestmentRating:
+          category === "MAX_BATTLE" && row.maxEvidence
+            ? row.maxEvidence.level === "CORE_INVESTMENT"
+              ? "HIGH"
+              : row.maxEvidence.level === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "LOW"
+            : null,
+        maxUseCaseBreadth:
+          category === "MAX_BATTLE" && row.maxEvidence
+            ? row.maxEvidence.level === "CORE_INVESTMENT"
+              ? "BROAD"
+              : row.maxEvidence.level === "USABLE_OR_BUDGET"
+                ? "MEDIUM"
+                : "NARROW"
+            : null,
         pveUseLevel,
         assessmentDisposition: null,
         checkedAt,
@@ -759,11 +797,23 @@ async function writeEvidence(
     }
     if (row.pveEvidence) {
       const sourceId = pveSourceByUrl.get(row.pveEvidence.sourceUrl)!;
-      const usage = legacy
-        ? "2026-08-13 版本級 PvE 用途與屬性榜證據。"
-        : "日期化的版本級 PvE 證據。";
+      const usage = "2026-09-03 精確 BattleVariant PvE 用途證據。";
       addCategorySource({
         categoryEvaluationId: `category-${row.id}-pve`,
+        sourceId,
+        usageZhTw: usage,
+      });
+      addEvaluationSource({
+        evaluationId: `gen4-${definition.batch}-eval-${row.id}`,
+        sourceId,
+        usageZhTw: usage,
+      });
+    }
+    if (row.maxEvidence) {
+      const sourceId = pveSourceByUrl.get(row.maxEvidence.sourceUrl)!;
+      const usage = "2026-09-03 精確 Max BattleVariant 角色／投資證據。";
+      addCategorySource({
+        categoryEvaluationId: `category-${row.id}-max_battle`,
         sourceId,
         usageZhTw: usage,
       });
@@ -901,7 +951,7 @@ export async function runImportGen4(batch: string, databaseUrl = getDatabaseUrl(
     const releaseResearch = readManifest(`research_notes/sources/official-${batch}.json`);
     const pveResearch = readManifest(`research_notes/sources/pve-${batch}.json`);
     for (const source of [...releaseResearch.sources, ...pveResearch.sources]) {
-      await upsertSource(prisma, source, releaseResearch.checkedAt ?? "2026-08-16");
+      await upsertSource(prisma, source, releaseResearch.checkedAt ?? "2026-09-03");
     }
     await upsertPvPokeSources(prisma);
     await upsertSpeciesAndForms(prisma, definition, entry);

@@ -18,7 +18,7 @@
       "fromFormId": "388-sinnoh",
       "toFormId": "389-sinnoh",
       "requiresEvent": false,
-      "verifiedAt": "2026-08-15T16:00:00.000Z",
+      "verifiedAt": "2026-09-02T16:00:00.000Z",
       "isEvolutionStub": false,
       "targetUseLevel": null,
       "targetNameEn": "torterra",
@@ -39,7 +39,7 @@
   "variantKey": "SHADOW",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-08-15T16:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-02T16:00:00.000Z",
   "notesZhTw": "暗影個體獨立評估；暗影標準較寬，不因低總 IV 自動淨化。",
   "decision": "TRANSFER_CANDIDATE",
   "assessmentDisposition": "NO_SIGNIFICANT_USE",
@@ -50,8 +50,8 @@
   "reviewIssues": [],
   "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著主要用途；一般重複個體通常可傳送。",
   "reviewed": true,
-  "updatedAt": "2026-08-15T16:00:00.000Z",
-  "pvpSummaryZhTw": "GL（超級聯盟） Overall #771；招式 RAZOR_LEAF／ENERGY_BALL／BODY_SLAM；UL（高級聯盟） Overall #821；招式 RAZOR_LEAF／ENERGY_BALL／BODY_SLAM",
+  "updatedAt": "2026-09-02T16:00:00.000Z",
+  "pvpSummaryZhTw": "GL（超級聯盟） Overall #776；招式 RAZOR_LEAF／ENERGY_BALL／BODY_SLAM；UL（高級聯盟） Overall #823；招式 RAZOR_LEAF／ENERGY_BALL／BODY_SLAM",
   "pveSummaryZhTw": "目前沒有記錄正向 PvE 證據；不因 100% IV 自動升格為實戰必留。",
   "rocketSummaryZhTw": "火箭隊沒有統一逐物種排名；缺少此欄不單獨覆蓋其他結論。",
   "gymSummaryZhTw": "未列為主要道館保留用途；缺少次要欄位來源不覆蓋其他結論。",
@@ -482,7 +482,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -501,14 +501,14 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "MAX_BATTLE",
       "status": "NOT_APPLICABLE",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "普通、暗影或淨化個體不能替代 Dynamax 個體。",
+      "summaryZhTw": "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -520,7 +520,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -539,7 +539,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
@@ -558,14 +558,14 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "NO_SIGNIFICANT_USE",
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     },
     {
       "category": "PVP",
       "status": "VERIFIED",
       "provenance": "SOURCE_VERIFIED",
-      "summaryZhTw": "GL（超級聯盟） Overall #771；招式 RAZOR_LEAF／ENERGY_BALL／BODY_SLAM；UL（高級聯盟） Overall #821；招式 RAZOR_LEAF／ENERGY_BALL／BODY_SLAM",
+      "summaryZhTw": "GL（超級聯盟） Overall #776；招式 RAZOR_LEAF／ENERGY_BALL／BODY_SLAM；UL（高級聯盟） Overall #823；招式 RAZOR_LEAF／ENERGY_BALL／BODY_SLAM",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -577,18 +577,18 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": [
         {
-          "id": "pvpoke-gl-20260715",
+          "id": "pvpoke-gl-20260901",
           "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
-          "id": "pvpoke-ul-20260715",
+          "id": "pvpoke-ul-20260901",
           "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -609,7 +609,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "sources": []
     }
   ],
@@ -624,7 +624,7 @@
       "speciesKey": "grotle_shadow",
       "formKey": "388-sinnoh",
       "variantKey": "SHADOW",
-      "rank": 771,
+      "rank": 776,
       "rating": "515",
       "score": null,
       "tier": null,
@@ -634,16 +634,16 @@
         "BODY_SLAM"
       ],
       "rawNotes": "GL（超級聯盟） Open／Overall；固定 JSON 陣列 index + 1 可重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-gl-20260715",
+        "id": "pvpoke-gl-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json"
       }
     },
     {
@@ -656,8 +656,8 @@
       "speciesKey": "grotle_shadow",
       "formKey": "388-sinnoh",
       "variantKey": "SHADOW",
-      "rank": 821,
-      "rating": "400",
+      "rank": 823,
+      "rating": "402",
       "score": null,
       "tier": null,
       "recommendedMoves": [
@@ -666,36 +666,36 @@
         "BODY_SLAM"
       ],
       "rawNotes": "UL（高級聯盟） Open／Overall；固定 JSON 陣列 index + 1 可重現。",
-      "seasonOrVersion": "PvPoke commit 86847e535b7e0a0f4e91f9628b3fc713ae6adca7",
+      "seasonOrVersion": "PvPoke commit 7b96d91fb553780653190ad32de001b5d9086a7f",
       "extractionMethod": "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-08-15T16:00:00.000Z",
+      "checkedAt": "2026-09-02T16:00:00.000Z",
       "source": {
-        "id": "pvpoke-ul-20260715",
+        "id": "pvpoke-ul-20260901",
         "name": "PvPoke",
         "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json"
+        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
       }
     }
   ],
   "sources": [
     {
-      "id": "pvpoke-gl-20260715",
+      "id": "pvpoke-gl-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-1500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
     },
     {
-      "id": "pvpoke-ul-20260715",
+      "id": "pvpoke-ul-20260901",
       "name": "PvPoke",
       "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/86847e535b7e0a0f4e91f9628b3fc713ae6adca7/src/data/rankings/all/overall/rankings-2500.json",
+      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
       "type": "PVP",
-      "accessedAt": "2026-08-15T16:00:00.000Z",
+      "accessedAt": "2026-09-02T16:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
     }
   ],

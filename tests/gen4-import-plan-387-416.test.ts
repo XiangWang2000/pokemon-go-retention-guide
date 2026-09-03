@@ -9,7 +9,7 @@ import {
 
 function readRankings(cp: number) {
   return JSON.parse(
-    readFileSync(`data/sources/pvpoke/rankings-${cp}.json`, "utf8").replace(/^\uFEFF/, ""),
+    readFileSync(`data/sources/pvpoke/2026-09-01/rankings-${cp}.json`, "utf8").replace(/^\uFEFF/, ""),
   ) as Gen4PvpRankingRow[];
 }
 
@@ -61,9 +61,9 @@ describe("Gen 4 #387-#416 pure import plan", () => {
 
   it("keeps PvE evidence variant-specific instead of leaking Shadow value into normal forms", () => {
     expect(byId("389-sinnoh-normal").pveEvidence).toBeNull();
-    expect(byId("389-sinnoh-shadow").pveEvidence?.level).toBe("USABLE_OR_BUDGET");
-    expect(byId("395-sinnoh-normal").pveEvidence?.level).toBe("USABLE_OR_BUDGET");
-    expect(byId("395-sinnoh-shadow").pveEvidence?.level).toBe("CORE_INVESTMENT");
+    expect(byId("389-sinnoh-shadow").pveEvidence?.level).toBe("CORE_INVESTMENT");
+    expect(byId("395-sinnoh-normal").pveEvidence).toBeNull();
+    expect(byId("395-sinnoh-shadow").pveEvidence?.level).toBe("USABLE_OR_BUDGET");
     expect(byId("409-sinnoh-normal").pveEvidence?.level).toBe("CORE_INVESTMENT");
     expect(byId("409-sinnoh-shadow").pveEvidence?.level).toBe("CORE_INVESTMENT");
   });
@@ -77,12 +77,18 @@ describe("Gen 4 #387-#416 pure import plan", () => {
       }
 
       const hasCorePve = row.pveEvidence?.level === "CORE_INVESTMENT";
+      const hasCoreMax = row.maxEvidence?.level === "CORE_INVESTMENT";
       const top100Pvp = row.bestPvpRank !== null && row.bestPvpRank <= 100;
       const top250Pvp = row.bestPvpRank !== null && row.bestPvpRank <= 250;
-      if (row.variantKey === "DYNAMAX" || hasCorePve || top100Pvp) {
+      if (hasCorePve || hasCoreMax || top100Pvp) {
         expect(row.initialDecision).toBe("KEEP");
         expect(row.initialDisposition).toBe("CLEAR_USE");
-      } else if (row.pveEvidence !== null || top250Pvp) {
+      } else if (
+        row.pveEvidence !== null ||
+        row.maxEvidence !== null ||
+        top250Pvp ||
+        row.variantKey === "MEGA"
+      ) {
         expect(row.initialDecision).toBe("CONDITIONAL_KEEP");
         expect(row.initialDisposition).toBe("LIMITED_USE");
       } else {
@@ -92,9 +98,15 @@ describe("Gen 4 #387-#416 pure import plan", () => {
     }
   });
 
-  it("treats the released Dynamax Combee family as distinct Max candidates", () => {
-    expect(byId("415-sinnoh-dynamax").initialDecision).toBe("KEEP");
-    expect(byId("416-sinnoh-dynamax").initialDecision).toBe("KEEP");
+  it("does not equate a released Dynamax form with confirmed Max Battle value", () => {
+    expect(byId("415-sinnoh-dynamax").releaseStatus).toBe("RELEASED");
+    expect(byId("415-sinnoh-dynamax").maxEvidence).toBeNull();
+    expect(byId("415-sinnoh-dynamax").initialDecision).toBe("TRANSFER_CANDIDATE");
+
+    expect(byId("416-sinnoh-dynamax").releaseStatus).toBe("RELEASED");
+    expect(byId("416-sinnoh-dynamax").maxEvidence?.level).toBe("SPECIAL_USE");
+    expect(byId("416-sinnoh-dynamax").initialDecision).toBe("CONDITIONAL_KEEP");
+
     expect(byId("414-sinnoh-dynamax").releaseStatus).toBe("UNRELEASED");
   });
 });
