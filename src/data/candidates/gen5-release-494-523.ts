@@ -116,9 +116,9 @@ function normalEvidence(formId: string): CandidateReleaseEvidence {
   if (launchDerivedNormal.has(formId)) {
     return {
       status: "RELEASED",
-      sourceIds: ["OFFICIAL-UNOVA-LAUNCH-2019", "POKEAPI-CANONICAL-UNOVA-494-523"],
-      evidenceMode: "EVOLUTION_DERIVED",
-      notesZhTw: "由官方已推出基本型態與本批 canonical 進化路徑推導已可取得此進化型態。",
+      sourceIds: ["SECONDARY-GOHUB-UNOVA-ROSTER-20260904"],
+      evidenceMode: "CURRENT_ROSTER",
+      notesZhTw: "GO Hub 當前合眾 Pokédex 對此普通進化型態明確標示 Released: Yes；不由主系列進化路徑自行推論 Pokémon GO 可取得性。",
     };
   }
   throw new Error(`Missing NORMAL release evidence for ${formId}.`);
