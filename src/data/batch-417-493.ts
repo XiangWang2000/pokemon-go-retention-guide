@@ -6,6 +6,15 @@ import type {
   Gen4SpecialVariant,
 } from "./batch-gen4-types";
 import { deriveShadowReleaseEvidence } from "./evolution-release";
+import { releasedShadowForms061090 } from "./batch-061-090";
+import { releasedShadowForms091120 } from "./batch-091-120";
+import { releasedShadowForms121151 } from "./batch-121-151";
+import { releasedShadowForms152181 } from "./batch-152-181";
+import { releasedShadowForms182211 } from "./batch-182-211";
+import { releasedShadowForms212241 } from "./batch-212-241";
+import { releasedShadowForms252281 } from "./batch-252-281";
+import { releasedShadowForms282311 } from "./batch-282-311";
+import { releasedShadowForms342371 } from "./batch-342-371";
 
 const note = "神奧 正式 身份與第四世代批次擁有的型態。";
 
@@ -1888,6 +1897,7 @@ export const directShadowEncounterForms417493 = new Set<string>([
 ]);
 export const releasedDynamaxForms417493 = new Set<string>([
   "466-sinnoh",
+  "467-sinnoh",
   "470-sinnoh",
   "471-sinnoh",
   "475-sinnoh",
@@ -1899,8 +1909,26 @@ export const releasedMegaForms417493 = new Set<string>([
   "460-sinnoh",
   "475-sinnoh",
 ]);
+const upstreamReleasedShadowForms417493 = new Set<string>([
+  ...releasedShadowForms061090,
+  ...releasedShadowForms091120,
+  ...releasedShadowForms121151,
+  ...releasedShadowForms152181,
+  ...releasedShadowForms182211,
+  ...releasedShadowForms212241,
+  ...releasedShadowForms252281,
+  ...releasedShadowForms282311,
+  ...releasedShadowForms342371,
+]);
+const inheritedShadowTargets417493 = evolutionPairs417493
+  .filter(
+    ([fromFormId, toFormId]) =>
+      upstreamReleasedShadowForms417493.has(fromFormId) &&
+      forms417493.some((form) => form.id === toFormId),
+  )
+  .map(([, toFormId]) => toFormId);
 const shadowReleaseEvidence417493 = deriveShadowReleaseEvidence(
-  directShadowEncounterForms417493,
+  new Set([...directShadowEncounterForms417493, ...inheritedShadowTargets417493]),
   evolutionPairs417493,
 );
 export const releasedShadowForms417493 = new Set<string>(
