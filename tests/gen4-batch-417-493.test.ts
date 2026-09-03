@@ -169,7 +169,7 @@ describe("Gen 4 canonical source #417-#493", () => {
     }
   });
 
-  it("derives released Shadow forms from a dated direct roster and formal edges", () => {
+  it("derives released Shadow forms from direct encounters plus audited cross-generation evolution edges", () => {
     expect([...directShadowEncounterForms417493].sort()).toEqual([
       "425-sinnoh",
       "431-sinnoh",
@@ -189,8 +189,11 @@ describe("Gen 4 canonical source #417-#493", () => {
       "491-sinnoh",
     ]);
     expect([...releasedShadowForms417493].sort()).toEqual([
+      "424-sinnoh",
       "425-sinnoh",
       "426-sinnoh",
+      "429-sinnoh",
+      "430-sinnoh",
       "431-sinnoh",
       "432-sinnoh",
       "434-sinnoh",
@@ -206,6 +209,19 @@ describe("Gen 4 canonical source #417-#493", () => {
       "454-sinnoh",
       "459-sinnoh",
       "460-sinnoh",
+      "461-sinnoh",
+      "462-sinnoh",
+      "464-sinnoh",
+      "465-sinnoh",
+      "466-sinnoh",
+      "467-sinnoh",
+      "472-sinnoh",
+      "473-sinnoh",
+      "474-sinnoh",
+      "475-sinnoh",
+      "476-sinnoh",
+      "477-sinnoh",
+      "478-sinnoh",
       "483-sinnoh",
       "484-sinnoh",
       "485-sinnoh",
