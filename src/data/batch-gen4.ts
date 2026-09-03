@@ -1,3 +1,4 @@
+import { maxEvidenceForVariantGen4 } from "./batch-gen4-max";
 import { evolutionPairs387416, forms387416, species387416 } from "./batch-387-416";
 import { pveEvidenceForVariant387416 } from "./batch-387-416-pve";
 import { pvpokeSpeciesId387416 } from "./batch-387-416-pvpoke";
@@ -68,6 +69,7 @@ const definitions: Record<string, Gen4BatchDefinition> = {
     specialVariants: [],
     pvpokeSpeciesId: pvpokeSpeciesId387416,
     pveEvidenceForVariant: pveEvidenceForVariant387416,
+    maxEvidenceForVariant: maxEvidenceForVariantGen4,
     evidenceAdapter: "legacy-387-416",
   }),
   "417-446": definition("417-446", {
@@ -83,6 +85,7 @@ const definitions: Record<string, Gen4BatchDefinition> = {
     specialVariants: specialVariants417446,
     pvpokeSpeciesId: pvpokeSpeciesId417493,
     pveEvidenceForVariant: pveEvidenceForVariant417493,
+    maxEvidenceForVariant: maxEvidenceForVariantGen4,
     evidenceAdapter: "generic",
   }),
   "447-476": definition("447-476", {
@@ -98,6 +101,7 @@ const definitions: Record<string, Gen4BatchDefinition> = {
     specialVariants: specialVariants447476,
     pvpokeSpeciesId: pvpokeSpeciesId417493,
     pveEvidenceForVariant: pveEvidenceForVariant417493,
+    maxEvidenceForVariant: maxEvidenceForVariantGen4,
     evidenceAdapter: "generic",
   }),
   "477-493": definition("477-493", {
@@ -113,6 +117,7 @@ const definitions: Record<string, Gen4BatchDefinition> = {
     specialVariants: specialVariants477493,
     pvpokeSpeciesId: pvpokeSpeciesId417493,
     pveEvidenceForVariant: pveEvidenceForVariant417493,
+    maxEvidenceForVariant: maxEvidenceForVariantGen4,
     evidenceAdapter: "generic",
   }),
 };
