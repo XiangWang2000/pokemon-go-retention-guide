@@ -1896,8 +1896,9 @@ export const directShadowEncounterForms417493 = new Set<string>([
   "491-sinnoh",
 ]);
 export const releasedDynamaxForms417493 = new Set<string>([
+  "461-sinnoh",
+  "464-sinnoh",
   "466-sinnoh",
-  "467-sinnoh",
   "470-sinnoh",
   "471-sinnoh",
   "475-sinnoh",
