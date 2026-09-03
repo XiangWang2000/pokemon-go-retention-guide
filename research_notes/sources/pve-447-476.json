@@ -1,187 +1,76 @@
 {
   "batch": "447-476",
-  "checkedAt": "2026-08-16",
+  "checkedAt": "2026-09-03",
   "sources": [
     {
-      "id": "PVE-SINNOH-464-20260816",
+      "id": "PVE-SINNOH-447-476-RAID-20260903",
       "sourceName": "Pokémon GO Hub PvE reference",
       "sourceType": "PVE",
-      "sourceTitleOriginal": "Rhyperior PvE reference",
+      "sourceTitleOriginal": "Best Raid Attackers",
       "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/464",
-      "accessedAt": "2026-08-16",
+      "sourceUrl": "https://db.pokemongohub.net/best/raid-attackers?includeMegas=false",
+      "accessedAt": "2026-09-03",
       "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
+      "sourceSummaryZhTw": "2026-09-03 團體戰攻擊手榜，用於本批普通／暗影 BattleVariant 的 PvE 投資分級。",
       "supports": [
-        "464-sinnoh-normal"
+        "448-sinnoh-normal",
+        "461-sinnoh-shadow",
+        "462-sinnoh-shadow",
+        "464-sinnoh-normal",
+        "464-sinnoh-shadow",
+        "466-sinnoh-normal",
+        "466-sinnoh-shadow",
+        "467-sinnoh-shadow",
+        "473-sinnoh-normal",
+        "473-sinnoh-shadow",
+        "474-sinnoh-shadow",
+        "475-sinnoh-shadow"
       ]
     },
     {
-      "id": "PVE-SINNOH-464-SHADOW-20260816",
+      "id": "PVE-SINNOH-447-476-MEGA-20260903",
       "sourceName": "Pokémon GO Hub PvE reference",
       "sourceType": "PVE",
-      "sourceTitleOriginal": "Rhyperior PvE reference",
+      "sourceTitleOriginal": "Best Raid Attackers including Mega",
       "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/464-Shadow",
-      "accessedAt": "2026-08-16",
+      "sourceUrl": "https://db.pokemongohub.net/best/raid-attackers",
+      "accessedAt": "2026-09-03",
       "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
+      "sourceSummaryZhTw": "2026-09-03 含 Mega 的團體戰攻擊手榜，用於本批已推出 Mega BattleVariant 的實戰價值。",
       "supports": [
-        "464-sinnoh-shadow"
+        "448-sinnoh-mega",
+        "460-sinnoh-mega",
+        "475-sinnoh-mega"
       ]
     },
     {
-      "id": "PVE-SINNOH-473-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Mamoswine PvE reference",
+      "id": "MAX-SINNOH-447-476-ATTACK-20260903",
+      "sourceName": "Pokémon GO Hub Max Battle reference",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Max Attackers Tier List",
       "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/473",
-      "accessedAt": "2026-08-16",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
+      "accessedAt": "2026-09-03",
       "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
+      "sourceSummaryZhTw": "2026-09-03 Max 攻擊手分級，用於極巨電擊魔獸、鴨嘴炎獸與冰伊布的 Max 投資判斷。",
       "supports": [
-        "473-sinnoh-normal"
+        "466-sinnoh-dynamax",
+        "467-sinnoh-dynamax",
+        "471-sinnoh-dynamax"
       ]
     },
     {
-      "id": "PVE-SINNOH-473-SHADOW-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Mamoswine PvE reference",
+      "id": "MAX-SINNOH-447-476-DEFENSE-20260903",
+      "sourceName": "Pokémon GO Hub Max Battle reference",
+      "sourceType": "MAX_BATTLE",
+      "sourceTitleOriginal": "Max Defenders Tier List",
       "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/473-Shadow",
-      "accessedAt": "2026-08-16",
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+      "accessedAt": "2026-09-03",
       "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
+      "sourceSummaryZhTw": "2026-09-03 Max 防守用途分級，用於極巨艾路雷朵的 Max 投資判斷。",
       "supports": [
-        "473-sinnoh-shadow"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-460-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Abomasnow PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/460",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
-        "460-sinnoh-normal"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-460-SHADOW-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Abomasnow PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/460-Shadow",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
-        "460-sinnoh-shadow"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-448-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Lucario PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/448",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
-        "448-sinnoh-normal"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-448-SHADOW-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Lucario PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/448-Shadow",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
-        "448-sinnoh-shadow"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-452-SHADOW-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Drapion PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/452-Shadow",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
-        "452-sinnoh-shadow"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-466-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Electivire PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/466",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
-        "466-sinnoh-normal"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-467-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Magmortar PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/467",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
-        "467-sinnoh-normal"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-469-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Yanmega PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/469",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
-        "469-sinnoh-normal"
-      ]
-    },
-    {
-      "id": "PVE-SINNOH-472-SHADOW-20260816",
-      "sourceName": "Pokémon GO Hub PvE reference",
-      "sourceType": "PVE",
-      "sourceTitleOriginal": "Gliscor PvE reference",
-      "sourceLanguage": "en",
-      "sourceUrl": "https://db.pokemongohub.net/pokemon/472-Shadow",
-      "accessedAt": "2026-08-16",
-      "publishedAt": null,
-      "sourceSummaryZhTw": "本批版本級 PvE 證據，供決定性匯入計畫使用。",
-      "supports": [
-        "472-sinnoh-shadow"
+        "475-sinnoh-dynamax"
       ]
     }
   ]
