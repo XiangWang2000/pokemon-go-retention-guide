@@ -95,7 +95,7 @@ describe("Gen 1-9 audit coverage", () => {
       const item = rows(markdown).find((row) => row.dex === dex);
       expect(item?.recommendation).toContain("🟡");
       expect(item?.reason).toContain("型態");
-      expect(item?.reason).toContain("不能");
+      expect(item?.reason).toContain("回灌");
     }
   });
 
