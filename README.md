@@ -19,6 +19,7 @@ GitHub Pages 採 Next.js static export，production 不依賴 runtime Prisma／S
 不要在文件中另外維護一份容易過期的圖鑑範圍或版本號；目前正式資料請直接以以下檔案為準：
 
 - `src/config/data-scope.ts`：目前公開圖鑑上限與資料範圍。
+- `docs/data-coverage.md`：正式 runtime 覆蓋範圍與 Gen5～Gen9 research audit 的差異、總驗收條件。
 - `src/config/release.ts`：目前資料版本與更新日期。
 - `src/config/batch-registry.ts`：已發布批次的順序、匯入 phase／adapter 與 review 輸出。
 - `src/config/release-contract.ts`：目前 release 的共用驗證契約與 generated-path allowlist。
