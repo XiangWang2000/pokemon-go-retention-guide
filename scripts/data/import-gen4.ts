@@ -531,7 +531,7 @@ async function writeEvidence(
   const maxSourceId = releaseResearch.sources.find((source) => source.id.startsWith("MAX-"))?.id;
   const legacy = usesLegacyEvidenceAdapter(definition);
   const rawRows = plan.flatMap((row) => {
-    const pvpRows = row.ranks.map((rank) => ({
+    const rows: Array<Record<string, unknown>> = row.ranks.map((rank) => ({
       id: `raw-gen4-${definition.batch}-${row.id}-${rank.league.toLowerCase()}`,
       battleVariantId: row.id,
       category: "PVP" as const,
@@ -545,24 +545,19 @@ async function writeEvidence(
       rank: rank.rank,
       rating: rank.rating === null ? null : String(rank.rating),
       recommendedMoves: JSON.stringify(rank.moves),
-      rawNotes: usesLegacyEvidenceAdapter(definition)
-        ? `${legacyLeagueLabels[rank.league]} Open／Overall；固定 JSON 陣列 index + 1 可重現。`
-        : `${legacyLeagueLabels[rank.league]} Open／Overall；固定 JSON 陣列 index + 1 可重現。`,
+      rawNotes: `${legacyLeagueLabels[rank.league]} Open／Overall；固定 JSON 陣列 index + 1 可重現。`,
       seasonOrVersion: `PvPoke commit ${pvpokeCommit}`,
-      extractionMethod: usesLegacyEvidenceAdapter(definition)
-        ? "固定 commit 的完整 rankings JSON 陣列索引（index + 1）"
-        : "固定 rankings JSON 陣列索引加一。",
+      extractionMethod: "固定 commit 的完整 rankings JSON 陣列索引（index + 1）",
       reproducible: true,
       sourceId: leagueMeta[rank.league].sourceId,
       checkedAt,
     }));
-    if (!row.pveEvidence) return pvpRows;
-    const sourceId = pveSourceByUrl.get(row.pveEvidence.sourceUrl);
-    if (!sourceId)
-      throw new Error(`Missing PvE source for ${row.id}: ${row.pveEvidence.sourceUrl}`);
-    return [
-      ...pvpRows,
-      {
+
+    if (row.pveEvidence) {
+      const sourceId = pveSourceByUrl.get(row.pveEvidence.sourceUrl);
+      if (!sourceId)
+        throw new Error(`Missing PvE source for ${row.id}: ${row.pveEvidence.sourceUrl}`);
+      rows.push({
         id: `raw-gen4-${definition.batch}-${row.id}-pve`,
         battleVariantId: row.id,
         category: "PVE" as const,
@@ -574,21 +569,46 @@ async function writeEvidence(
         formKey: row.formId,
         variantKey: row.variantKey,
         rank: null,
-        rating: row.pveEvidence.roles.join(usesLegacyEvidenceAdapter(definition) ? "；" : ", "),
+        rating: row.pveEvidence.roles.join("；"),
         recommendedMoves: JSON.stringify([]),
         tier: row.pveEvidence.level,
         rawNotes: row.pveEvidence.summaryZhTw,
-        seasonOrVersion: usesLegacyEvidenceAdapter(definition)
-          ? "GO Hub accessed 2026-08-13"
-          : `GO Hub accessed ${row.pveEvidence.checkedAt}`,
-        extractionMethod: usesLegacyEvidenceAdapter(definition)
-          ? "dated variant-level PvE research evidence"
-          : "日期化的版本級 PvE 研究證據。",
+        seasonOrVersion: `GO Hub accessed ${row.pveEvidence.checkedAt}`,
+        extractionMethod: "日期化的版本級 PvE 研究證據。",
         reproducible: false,
         sourceId,
         checkedAt,
-      },
-    ];
+      });
+    }
+
+    if (row.maxEvidence) {
+      const sourceId = pveSourceByUrl.get(row.maxEvidence.sourceUrl);
+      if (!sourceId)
+        throw new Error(`Missing Max source for ${row.id}: ${row.maxEvidence.sourceUrl}`);
+      rows.push({
+        id: `raw-gen4-${definition.batch}-${row.id}-max`,
+        battleVariantId: row.id,
+        category: "MAX_BATTLE" as const,
+        status: "PARTIALLY_VERIFIED" as const,
+        league: "NOT_APPLICABLE" as const,
+        cup: null,
+        pvpCategory: null,
+        speciesKey: null,
+        formKey: row.formId,
+        variantKey: row.variantKey,
+        rank: null,
+        rating: row.maxEvidence.roles.join("；"),
+        recommendedMoves: JSON.stringify([]),
+        tier: row.maxEvidence.level,
+        rawNotes: row.maxEvidence.summaryZhTw,
+        seasonOrVersion: `GO Hub accessed ${row.maxEvidence.checkedAt}`,
+        extractionMethod: "日期化的版本級 Max Battle 研究證據。",
+        reproducible: false,
+        sourceId,
+        checkedAt,
+      });
+    }
+    return rows;
   });
   if (rawRows.length) await prisma.rawEvaluationData.createMany({ data: rawRows as never[] });
 
@@ -777,11 +797,23 @@ async function writeEvidence(
     }
     if (row.pveEvidence) {
       const sourceId = pveSourceByUrl.get(row.pveEvidence.sourceUrl)!;
-      const usage = legacy
-        ? "2026-08-13 版本級 PvE 用途與屬性榜證據。"
-        : "日期化的版本級 PvE 證據。";
+      const usage = "2026-09-03 精確 BattleVariant PvE 用途證據。";
       addCategorySource({
         categoryEvaluationId: `category-${row.id}-pve`,
+        sourceId,
+        usageZhTw: usage,
+      });
+      addEvaluationSource({
+        evaluationId: `gen4-${definition.batch}-eval-${row.id}`,
+        sourceId,
+        usageZhTw: usage,
+      });
+    }
+    if (row.maxEvidence) {
+      const sourceId = pveSourceByUrl.get(row.maxEvidence.sourceUrl)!;
+      const usage = "2026-09-03 精確 Max BattleVariant 角色／投資證據。";
+      addCategorySource({
+        categoryEvaluationId: `category-${row.id}-max_battle`,
         sourceId,
         usageZhTw: usage,
       });
