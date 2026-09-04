@@ -1,0 +1,76 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "614-643",
+  "generation": 5,
+  "status": "CANDIDATE_IDENTITY_ONLY",
+  "sources": [
+    {
+      "id": "POKEAPI-CANONICAL-UNOVA-614-643",
+      "sourceName": "PokeAPI canonical dataset",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PokeAPI data/v2 CSV canonical Pokémon dataset",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "用於核對第五世代 #614～#643 的圖鑑編號、名稱、基礎屬性與家族身份；Pokémon GO 地區／特殊 form 與跨世代進化規則另由 GO 專屬來源核對。"
+    },
+    {
+      "id": "GOHUB-POKEMONGO-FORMS-614-643-20260904",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Unova PokéDex (Gen 5)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokedex/unova",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "當前 Pokémon GO 合眾 Pokédex 明列普通／伽勒爾泥巴魚、普通／洗翠勇士雄鷹，以及龍捲雲與雷電雲的化身／靈獸形態，供 34 個 exact form identity 邊界使用。"
+    },
+    {
+      "id": "GOHUB-HISUIAN-BRAVIARY-NO-EVOLUTION-20260609",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Hisuian Braviary Raid Guide",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongohub.net/post/guide/hisuian-braviary-raid-guide/",
+      "accessedAt": "2026-09-04",
+      "publishedAt": "2026-06-09",
+      "sourceSummaryZhTw": "明確指出目前 Pokémon GO 無法把 Rufflet 進化成 Hisuian Braviary，只能透過團體戰取得，因此 #627 只連普通 #628，洗翠型態不得繼承 Rufflet 的進化邊。"
+    },
+    {
+      "id": "BULBAPEDIA-GO-FORCES-NONINTERCHANGEABLE-20260904",
+      "sourceName": "Bulbapedia",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "List of Pokémon with form differences in Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_with_form_differences_in_Pok%C3%A9mon_GO",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "Pokémon GO 專屬 form differences 明確記載 Tornadus 與 Thundurus 的 Incarnate／Therian forms 均為 non-interchangeable，因此必須建立獨立 exact form identity，不能套用主系列遊戲的 Reveal Glass 切換規則。"
+    },
+    {
+      "id": "GOHUB-BISHARP-KINGAMBIT-EVOLUTION-20260904",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Bisharp: Best Moveset, Counters & Max CP",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/625",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "目前 Pokémon GO 進化表明確列出 Bisharp 可用 100 Candy 並完成擊敗 15 隻惡／鋼系團體戰頭目條件進化為 #983 Kingambit；在 Gen9 endpoint 尚未進 candidate 前保持跨世代 deferred。"
+    }
+  ],
+  "expected": {
+    "dexCount": 30,
+    "formCount": 34,
+    "multiFormDex": {
+      "618": ["618-unova", "618-galar"],
+      "628": ["628-unova", "628-hisui"],
+      "641": ["641-incarnate", "641-therian"],
+      "642": ["642-incarnate", "642-therian"]
+    },
+    "materializedIncomingEvolutionTargets": [
+      { "fromFormId": "613-unova", "toFormId": "614-unova" }
+    ],
+    "deferredEvolutionTargets": [
+      { "fromFormId": "625-unova", "targetDexNumber": 983, "targetFormKey": "PALDEA" }
+    ]
+  },
+  "boundary": "#613 Cubchoo -> #614 Beartic is materialized as the incoming cross-batch edge. Unova and Galarian Stunfisk are independent regional forms. Rufflet evolves only to ordinary Braviary; Hisuian Braviary is a separate raid-obtained form and has no Rufflet evolution edge. Tornadus and Thundurus Incarnate/Therian forms are non-interchangeable in Pokémon GO and remain separate identities. Bisharp -> #983 Kingambit is a real current Pokémon GO evolution but remains deferred until the Gen9 candidate owns the endpoint."
+}
