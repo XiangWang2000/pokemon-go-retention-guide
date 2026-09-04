@@ -99,12 +99,16 @@ describe("Gen 1-9 audit coverage", () => {
     expect(tornadus?.reason).toContain("化身形態");
     expect(tornadus?.reason).toMatch(/回灌/);
 
-    for (const dex of [642, 645]) {
-      const item = rows(markdown).find((row) => row.dex === dex);
-      expect(item?.recommendation).toContain("🟡");
-      expect(item?.reason).toContain("型態");
-      expect(item?.reason).toMatch(/回灌|不能直接套用/);
-    }
+    const thundurus = rows(markdown).find((row) => row.dex === 642);
+    expect(thundurus?.recommendation).toContain("🟡");
+    expect(thundurus?.reason).toContain("化身形態");
+    expect(thundurus?.reason).toMatch(/回灌|不能直接套用/);
+
+    const landorus = rows(markdown).find((row) => row.dex === 645);
+    expect(landorus?.recommendation).toContain("🔴");
+    expect(landorus?.ranks).toBe("GL#712 / UL#522 / ML#98");
+    expect(landorus?.reason).toContain("化身形態");
+    expect(landorus?.reason).toMatch(/回灌|不能直接套用/);
   });
 
   it("does not use Gigantamax value as an automatic ordinary Gen8 keep reason", () => {
