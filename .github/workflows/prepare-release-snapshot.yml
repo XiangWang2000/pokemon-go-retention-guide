@@ -30,7 +30,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Apply canonical SourceReference reuse fix
+      - name: Apply canonical SourceReference reuse fixes
         shell: bash
         run: |
           set -euo pipefail
@@ -38,6 +38,7 @@ jobs:
           from pathlib import Path
           path = Path("scripts/data/import-gen5.ts")
           text = path.read_text(encoding="utf-8")
+
           needle = '  await prisma.sourceReference.upsert({ where: { id }, create: { id, ...data }, update: data });'
           replacement = '\n'.join([
               '  const canonical = await prisma.sourceReference.findFirst({',
@@ -52,7 +53,26 @@ jobs:
           ])
           if needle not in text:
               raise SystemExit("Gen5 source-upsert patch anchor not found")
-          path.write_text(text.replace(needle, replacement, 1), encoding="utf-8")
+          text = text.replace(needle, replacement, 1)
+
+          old_change_log = '\n'.join([
+              '    const sourceId = identity.sources[0]?.id ?? release.sources[0]?.id;',
+              '    if (!sourceId) throw new Error(`Missing identity/release source for ${batch}.`);',
+          ])
+          new_change_log = '\n'.join([
+              '    const changeLogSourceUrl = identity.sources[0]?.sourceUrl ?? release.sources[0]?.sourceUrl;',
+              '    if (!changeLogSourceUrl) throw new Error(`Missing identity/release source for ${batch}.`);',
+              '    const changeLogSource = await prisma.sourceReference.findFirst({',
+              '      where: { sourceUrl: changeLogSourceUrl },',
+              '      select: { id: true },',
+              '    });',
+              '    const sourceId = changeLogSource?.id;',
+              '    if (!sourceId) throw new Error(`Canonical identity/release source was not persisted for ${batch}.`);',
+          ])
+          if old_change_log not in text:
+              raise SystemExit("Gen5 changelog source patch anchor not found")
+          text = text.replace(old_change_log, new_change_log, 1)
+          path.write_text(text, encoding="utf-8")
           PY
 
       - name: Setup Node.js
