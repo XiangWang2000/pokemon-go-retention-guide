@@ -26,7 +26,7 @@ describe("Gen5 #644-#649 publication candidate", () => {
       minDex: 644,
       maxDex: 649,
       generation: 5,
-      stage: "IDENTITY",
+      stage: "EVIDENCE",
       definitionModule: "src/data/candidates/gen5-644-649.ts",
     });
   });
