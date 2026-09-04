@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "494-523",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVE_MAX",
+  "sources": [
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/494",
+      "supports": ["494-unova-normal"],
+      "sourceSummaryZhTw": "比克提尼頁面明確描述其火／超能力系團體戰用途，其中 V-create 火系表現較佳；本專案只列特殊用途，不把幻之寶可夢身分本身當成核心 PvE 投資證據。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/497-Shadow",
+      "supports": ["497-unova-shadow"],
+      "sourceSummaryZhTw": "暗影君主蛇頁面將其草系團體戰表現列為 B Tier 約 #32，且用途有限；因此只給特定用途正面證據。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/500-Shadow",
+      "supports": ["500-unova-shadow"],
+      "sourceSummaryZhTw": "暗影炎武王搭配爆炸烈焰列為火系 A+ Tier 約 #16，支持暗影版本的高價值 PvE 分類；普通炎武王不繼承。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/503",
+      "supports": ["503-unova-normal"],
+      "sourceSummaryZhTw": "普通大劍鬼搭配水炮加農列為水系 A Tier 約 #24，屬可用但非最高階的水系團體戰選擇。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/503-Shadow",
+      "supports": ["503-unova-shadow"],
+      "sourceSummaryZhTw": "暗影大劍鬼搭配水炮加農列為水系 A+ Tier 約 #12，支持比普通版更高的暗影 PvE 投資優先度。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/521",
+      "supports": ["521-unova-normal"],
+      "sourceSummaryZhTw": "普通高傲雉雞被描述為預算型飛行團體戰攻擊手，飛行系約 C Tier #46；只適合缺乏更佳選項時使用。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/521-Shadow",
+      "supports": ["521-unova-shadow"],
+      "sourceSummaryZhTw": "暗影高傲雉雞飛行系約 B Tier #31，較普通版提升但仍屬有限用途，不列核心投資。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/521-Dynamax",
+      "supports": ["521-unova-dynamax"],
+      "sourceSummaryZhTw": "極巨高傲雉雞目前列為 Flying Max attacker #2，但整體僅 B Tier；因此只列可用／預算型 Max 投資，並與推出狀態分開。"
+    }
+  ],
+  "boundary": "Positive PvE and Max evidence is exact-variant scoped. Missing evidence is not a permanent NO_SIGNIFICANT_USE verdict. Shadow value never propagates to normal, Max value never propagates to normal or Shadow, and a released Dynamax form does not automatically receive a positive Max investment classification. Legacy-move-dependent classifications are explicitly described in the evidence summary."
+}
