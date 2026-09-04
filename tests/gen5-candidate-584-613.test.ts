@@ -83,7 +83,7 @@ describe("Gen5 #584-#613 publication candidate", () => {
   it("keeps every materialized evolution edge family-consistent across the batch boundary", () => {
     const allForms = [...forms554583, ...forms584613];
     const formById = new Map(allForms.map((form) => [form.id, form]));
-    const familyByDex = new Map(
+    const familyByDex = new Map<number, string>(
       [...species554583, ...species584613].map((species) => [species.dexNumber, species.familyKey]),
     );
 
