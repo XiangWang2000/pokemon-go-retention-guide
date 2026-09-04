@@ -160,15 +160,7 @@ export const evolutionPairs584613 = forms584613
   .filter((form) => form.evolvesFromFormId !== null)
   .map((form) => [form.evolvesFromFormId!, form.id] as const);
 
-export const deferredEvolutionTargets584613 = [
-  {
-    fromFormId: "613-unova",
-    targetDexNumber: 614,
-    targetFormKey: "UNOVA",
-    reasonZhTw:
-      "噴嚏熊可進化為下一候選批次的 #614 凍原熊；等 #614 endpoint 由下一批擁有後再 materialize。",
-  },
-] as const;
+export const deferredEvolutionTargets584613 = [] as const;
 
 export const gen5Candidate584613 = {
   key: "584-613",

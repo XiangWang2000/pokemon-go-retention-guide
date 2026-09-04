@@ -37,9 +37,10 @@
     "materializedIncomingEvolutionTargets": [
       { "fromFormId": "583-unova", "toFormId": "584-unova" }
     ],
-    "deferredEvolutionTargets": [
-      { "fromFormId": "613-unova", "targetDexNumber": 614, "targetFormKey": "UNOVA" }
+    "deferredEvolutionTargets": [],
+    "resolvedByNextBatch": [
+      { "fromFormId": "613-unova", "toFormId": "614-unova", "owningBatch": "614-643" }
     ]
   },
-  "boundary": "#583 Vanillish -> #584 Vanilluxe is now materialized as a cross-batch incoming edge. Deerling evolves only to the matching-season Sawsbuck form; season value must not cross forms. Frillish and Jellicent male/female appearances are distinct Pokémon GO form identities here, and evolution remains gender-matched. #613 Cubchoo -> #614 Beartic remains deferred until the next candidate batch owns the endpoint."
+  "boundary": "#583 Vanillish -> #584 Vanilluxe remains materialized as a cross-batch incoming edge. Deerling evolves only to the matching-season Sawsbuck form; season value must not cross forms. Frillish and Jellicent male/female appearances are distinct Pokémon GO form identities here, and evolution remains gender-matched. #613 Cubchoo -> #614 Beartic is now materialized by the 614-643 candidate batch."
 }

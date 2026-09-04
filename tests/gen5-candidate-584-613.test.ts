@@ -139,15 +139,8 @@ describe("Gen5 #584-#613 publication candidate", () => {
     }
   });
 
-  it("defers Cubchoo -> Beartic until the next candidate batch owns #614", () => {
-    expect(deferredEvolutionTargets584613).toEqual([
-      {
-        fromFormId: "613-unova",
-        targetDexNumber: 614,
-        targetFormKey: "UNOVA",
-        reasonZhTw: expect.stringContaining("下一候選批次"),
-      },
-    ]);
+  it("has no active deferred Cubchoo target after the #614 endpoint is owned", () => {
+    expect(deferredEvolutionTargets584613).toEqual([]);
     expect(forms584613.some((form) => form.dexNumber === 614)).toBe(false);
   });
 
@@ -163,6 +156,11 @@ describe("Gen5 #584-#613 publication candidate", () => {
         multiFormDex: Record<string, string[]>;
         materializedIncomingEvolutionTargets: Array<{ fromFormId: string; toFormId: string }>;
         deferredEvolutionTargets: Array<{ fromFormId: string; targetDexNumber: number }>;
+        resolvedByNextBatch: Array<{
+          fromFormId: string;
+          toFormId: string;
+          owningBatch: string;
+        }>;
       };
       boundary: string;
     };
@@ -177,9 +175,13 @@ describe("Gen5 #584-#613 publication candidate", () => {
     expect(manifest.expected.materializedIncomingEvolutionTargets).toEqual([
       { fromFormId: "583-unova", toFormId: "584-unova" },
     ]);
-    expect(manifest.expected.deferredEvolutionTargets).toHaveLength(1);
+    expect(manifest.expected.deferredEvolutionTargets).toEqual([]);
+    expect(manifest.expected.resolvedByNextBatch).toEqual([
+      { fromFormId: "613-unova", toFormId: "614-unova", owningBatch: "614-643" },
+    ]);
     expect(manifest.boundary).toContain("matching-season Sawsbuck");
     expect(manifest.boundary).toContain("gender-matched");
+    expect(manifest.boundary).toContain("materialized by the 614-643 candidate batch");
     expect(
       manifest.sources.every((source) => /[\u3400-\u9fff]/u.test(source.sourceSummaryZhTw)),
     ).toBe(true);
@@ -240,9 +242,11 @@ describe("Gen5 #584-#613 publication candidate", () => {
       "611-unova",
       "612-unova",
     ];
-    expect(pvpokeMappings584613.filter((mapping) => mapping.shadow !== null).map((mapping) => mapping.formId)).toEqual(
-      expectedShadowFormIds,
-    );
+    expect(
+      pvpokeMappings584613
+        .filter((mapping) => mapping.shadow !== null)
+        .map((mapping) => mapping.formId),
+    ).toEqual(expectedShadowFormIds);
     for (const formId of [
       "584-unova",
       "585-spring",
