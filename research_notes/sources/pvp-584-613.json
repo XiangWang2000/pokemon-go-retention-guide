@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "584-613",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVP",
+  "snapshot": {
+    "source": "PvPoke",
+    "date": "2026-09-01",
+    "commit": "7b96d91fb553780653190ad32de001b5d9086a7f",
+    "gamemasterBlobSha": "05abdcd6df42ee397367bf15e72bb5864c90a2b8",
+    "leagues": ["GL", "UL", "ML"]
+  },
+  "mappingSummary": {
+    "formCount": 38,
+    "exactFormMappings": 26,
+    "sharedUndifferentiatedMappings": 12,
+    "pinnedShadowMappings": 14
+  },
+  "sharedGroups": {
+    "deerling": ["585-spring", "585-summer", "585-autumn", "585-winter"],
+    "sawsbuck": ["586-spring", "586-summer", "586-autumn", "586-winter"],
+    "frillish": ["592-male", "592-female"],
+    "jellicent": ["593-male", "593-female"]
+  },
+  "pinnedShadowFormIds": [
+    "588-unova",
+    "589-unova",
+    "590-unova",
+    "591-unova",
+    "595-unova",
+    "596-unova",
+    "597-unova",
+    "598-unova",
+    "607-unova",
+    "608-unova",
+    "609-unova",
+    "610-unova",
+    "611-unova",
+    "612-unova"
+  ],
+  "sources": [
+    {
+      "id": "PVP-POKE-GAMEMASTER-20260901-584-613",
+      "sourceName": "PvPoke",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PvPoke gamemaster and Open Overall ranking snapshots",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/pvpoke/pvpoke/tree/7b96d91fb553780653190ad32de001b5d9086a7f",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "固定快照用於 #584～#613 的 Open GL／UL／ML 物種排名與 speciesId 對應；季節型四季鹿／萌芽鹿及性別外觀輕飄飄／胖嘟嘟在 PvPoke 僅有 generic speciesId，因此明確標為共享、不可冒充 exact form 排名。"
+    }
+  ],
+  "boundary": "PvPoke battle presence is never Pokémon GO release evidence. Seasonal Deerling/Sawsbuck and male/female Frillish/Jellicent retain exact Pokémon GO identities, but pinned PvPoke collapses them into shared generic battle identities; shared ranks therefore must not be described as exact form ranks. Shadow IDs are recorded only when the pinned gamemaster contains the concrete speciesId; no `_shadow` ID is synthesized from naming convention."
+}
