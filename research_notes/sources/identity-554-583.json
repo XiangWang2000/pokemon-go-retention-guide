@@ -36,9 +36,11 @@
       "571": ["571-unova", "571-hisui"]
     },
     "deferredEvolutionTargets": [
-      { "fromFormId": "562-galar", "targetDexNumber": 867, "targetFormKey": "GALAR" },
-      { "fromFormId": "583-unova", "targetDexNumber": 584, "targetFormKey": "UNOVA" }
+      { "fromFormId": "562-galar", "targetDexNumber": 867, "targetFormKey": "GALAR" }
+    ],
+    "resolvedByNextBatch": [
+      { "fromFormId": "583-unova", "toFormId": "584-unova", "owningBatch": "584-613" }
     ]
   },
-  "boundary": "Darumaka evolves only to the corresponding Standard Mode Darmanitan in this candidate graph; Zen Mode forms are independent identities here. Galarian Yamask -> #867 and Vanillish -> #584 are deferred until their owning candidate batches provide the exact endpoints. Hisuian Zorua and Zoroark form a separate regional evolution pair."
+  "boundary": "Darumaka evolves only to the corresponding Standard Mode Darmanitan in this candidate graph; Zen Mode forms are independent identities here. Galarian Yamask -> #867 remains deferred until its Gen8 endpoint exists. Vanillish -> #584 is now materialized by the 584-613 candidate batch. Hisuian Zorua and Zoroark form a separate regional evolution pair."
 }

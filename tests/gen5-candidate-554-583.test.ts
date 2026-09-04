@@ -129,7 +129,7 @@ describe("Gen5 #554-#583 publication candidate", () => {
     }
   });
 
-  it("defers cross-batch and cross-generation endpoints instead of inventing stubs", () => {
+  it("defers only the still-unowned cross-generation endpoint", () => {
     expect(deferredEvolutionTargets554583).toEqual([
       {
         fromFormId: "562-galar",
@@ -137,18 +137,12 @@ describe("Gen5 #554-#583 publication candidate", () => {
         targetFormKey: "GALAR",
         reasonZhTw: expect.stringContaining("Gen8"),
       },
-      {
-        fromFormId: "583-unova",
-        targetDexNumber: 584,
-        targetFormKey: "UNOVA",
-        reasonZhTw: expect.stringContaining("下一候選批次"),
-      },
     ]);
     expect(forms554583.some((form) => form.dexNumber === 867)).toBe(false);
     expect(forms554583.some((form) => form.dexNumber === 584)).toBe(false);
   });
 
-  it("records exact identity provenance and no-leak boundaries", () => {
+  it("records exact identity provenance and the resolved next-batch handoff", () => {
     const manifest = JSON.parse(
       readFileSync("research_notes/sources/identity-554-583.json", "utf8"),
     ) as {
@@ -159,6 +153,7 @@ describe("Gen5 #554-#583 publication candidate", () => {
         formCount: number;
         multiFormDex: Record<string, string[]>;
         deferredEvolutionTargets: Array<{ fromFormId: string; targetDexNumber: number }>;
+        resolvedByNextBatch: Array<{ fromFormId: string; toFormId: string; owningBatch: string }>;
       };
       boundary: string;
     };
@@ -166,8 +161,14 @@ describe("Gen5 #554-#583 publication candidate", () => {
     expect(manifest.expected.dexCount).toBe(30);
     expect(manifest.expected.formCount).toBe(37);
     expect(manifest.expected.multiFormDex["555"]).toHaveLength(4);
-    expect(manifest.expected.deferredEvolutionTargets).toHaveLength(2);
+    expect(manifest.expected.deferredEvolutionTargets).toHaveLength(1);
+    expect(manifest.expected.resolvedByNextBatch).toContainEqual({
+      fromFormId: "583-unova",
+      toFormId: "584-unova",
+      owningBatch: "584-613",
+    });
     expect(manifest.boundary).toContain("Zen Mode forms are independent identities");
+    expect(manifest.boundary).toContain("Vanillish -> #584 is now materialized");
     expect(manifest.boundary).toContain("Hisuian Zorua and Zoroark");
     expect(
       manifest.sources.every((source) => /[\u3400-\u9fff]/u.test(source.sourceSummaryZhTw)),
