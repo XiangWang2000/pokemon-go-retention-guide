@@ -1,0 +1,39 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "584-613",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVE_MAX",
+  "sources": [
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/589",
+      "supports": ["589-unova-normal"],
+      "sourceSummaryZhTw": "普通騎士蝸牛目前列為蟲系 A Tier 約 #26；因蟲系團戰需求較窄，只列可用／預算型。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/589-Shadow",
+      "supports": ["589-unova-shadow"],
+      "sourceSummaryZhTw": "暗影騎士蝸牛目前列為蟲系 S Tier 約 #9；仍因蟲系用途較窄而保守列為可用型暗影候選。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/609",
+      "supports": ["609-unova-normal"],
+      "sourceSummaryZhTw": "普通水晶燈火靈目前列為幽靈 A+ #20、火 A #29，來源並明確評價為值得投資，支持核心普通 PvE 分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/609-Shadow",
+      "supports": ["609-unova-shadow"],
+      "sourceSummaryZhTw": "暗影水晶燈火靈目前列為幽靈 S #6、火 S #7，來源明確描述非常值得強化，支持核心暗影分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/612",
+      "supports": ["612-unova-normal"],
+      "sourceSummaryZhTw": "普通雙斧戰龍搭配廣域破壞目前列為龍系 A Tier 約 #24；具實用高 DPS，但考量更高階龍系選項列為可用型。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/612-Shadow",
+      "supports": ["612-unova-shadow"],
+      "sourceSummaryZhTw": "暗影雙斧戰龍搭配廣域破壞目前列為龍系 S Tier #9、整體團戰 A Tier 約 #69，支持核心暗影 PvE 分類。"
+    }
+  ],
+  "boundary": "Positive PvE evidence is exact-variant scoped. Breaking Swipe-dependent Haxorus evidence names the legacy move explicitly. Shadow value never propagates to normal or unreleased Mega versions. Mega Chandelure and Mega Eelektross remain explicitly UNRELEASED and receive no investment evidence even if simulation pages exist. This slice has no confirmed Dynamax or Gigantamax release states in the candidate release contract, so the positive Max investment set is intentionally empty rather than inferred from other ranges or current simulation availability elsewhere."
+}
