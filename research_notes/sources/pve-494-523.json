@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "494-523",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVE_MAX",
+  "sources": [
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/500-Shadow",
+      "sourceName": "Pokémon GO Hub Database",
+      "supports": ["500-unova-shadow"],
+      "sourceSummaryZhTw": "暗影炎武王目前為 A+ 級火系攻擊手、火系排名約 #16；此價值只屬 Shadow variant。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/503",
+      "sourceName": "Pokémon GO Hub Database",
+      "supports": ["503-unova-normal"],
+      "sourceSummaryZhTw": "普通大劍鬼以攀瀑／加農水炮仍是可用的 A 級水系攻擊手，但不是頂級核心。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/503-Shadow",
+      "sourceName": "Pokémon GO Hub Database",
+      "supports": ["503-unova-shadow"],
+      "sourceSummaryZhTw": "暗影大劍鬼目前為 A+ 級水系攻擊手、屬高價值 Shadow PvE 候選。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/521",
+      "sourceName": "Pokémon GO Hub Database",
+      "supports": ["521-unova-normal"],
+      "sourceSummaryZhTw": "普通高傲雉雞目前為 C 級飛行系攻擊手，適合作為缺乏更高階選擇時的預算補位。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/521-Shadow",
+      "sourceName": "Pokémon GO Hub Database",
+      "supports": ["521-unova-shadow"],
+      "sourceSummaryZhTw": "暗影高傲雉雞目前為 B 級飛行系攻擊手，但仍屬有限用途而非核心頂級輸出。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/497-Shadow",
+      "sourceName": "Pokémon GO Hub Database",
+      "supports": [],
+      "sourceSummaryZhTw": "暗影君主蛇雖在草系細分榜顯示 B 級，但頁面 PvE 分析明確指出低攻擊使其不適合 PvE，因此不建立正向保留 evidence。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/500",
+      "sourceName": "Pokémon GO Hub Database",
+      "supports": [],
+      "sourceSummaryZhTw": "普通炎武王目前僅為 C 級火系攻擊手；本批不把暗影版的高階輸出回灌普通個體。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/523-Shadow",
+      "sourceName": "Pokémon GO Hub Database",
+      "supports": [],
+      "sourceSummaryZhTw": "暗影雷電斑馬目前僅為 D 級電系攻擊手，不建立正向 PvE 投資 evidence。"
+    },
+    {
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-attackers-tier-list/",
+      "sourceName": "Pokémon GO Hub",
+      "supports": [],
+      "sourceSummaryZhTw": "2026-08-27 更新的 Max 攻擊手榜將 Dynamax Unfezant 列為 D Tier，並明確說明此級別不推薦投資，因此 Pidove 家族雖已推出 Dynamax，本批沒有正向 Max 投資 evidence。"
+    },
+    {
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-defenders-tier-list/",
+      "sourceName": "Pokémon GO Hub",
+      "supports": [],
+      "sourceSummaryZhTw": "2026-08-27 Max 防守榜將 Unfezant 列為 F Tier，沒有 0.5 秒小招可作有效充能防守者。"
+    },
+    {
+      "sourceUrl": "https://pokemongohub.net/post/guide/max-healers-tier-list-june-2025/",
+      "sourceName": "Pokémon GO Hub",
+      "supports": [],
+      "sourceSummaryZhTw": "2026-08-27 Max 治療榜將 Unfezant 列為 C Tier、屬被更好選項取代的層級；不足以單獨建立正向 Max 投資理由。"
+    }
+  ],
+  "auditedNoPositive": {
+    "pve": [
+      "497-unova-shadow",
+      "500-unova-normal",
+      "523-unova-shadow"
+    ],
+    "max": [
+      "519-unova-dynamax",
+      "520-unova-dynamax",
+      "521-unova-dynamax"
+    ]
+  },
+  "boundary": "Positive PvE evidence is exact BattleVariant scoped. Shadow Emboar and Shadow Samurott never promote their ordinary forms. A displayed type-tier badge alone is not enough when the source's PvE analysis explicitly rejects the Pokémon, as with Shadow Serperior. Released Dynamax status is also independent from Max investment value: Pidove, Tranquill, and Unfezant are released Dynamax forms, but this audit assigns no positive Max evidence because current Unfezant Max attacker/defender/healer roles are D/F/C tier and do not justify a standalone investment recommendation. Absence from the positive map means no current standalone positive evidence, not proof that a variant can never become useful later."
+}
