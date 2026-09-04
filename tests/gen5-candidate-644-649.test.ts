@@ -20,15 +20,9 @@ import {
 describe("Gen5 #644-#649 publication candidate", () => {
   it("registers the final contiguous Gen5 candidate slice without publishing it", () => {
     expect(() => assertCandidateBatchRegistry()).not.toThrow();
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
-    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);
-    expect(CANDIDATE_BATCH_REGISTRY.find((entry) => entry.key === "644-649")).toMatchObject({
-      minDex: 644,
-      maxDex: 649,
-      generation: 5,
-      stage: "EVIDENCE",
-      definitionModule: "src/data/candidates/gen5-644-649.ts",
-    });
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
+    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
+    expect(CANDIDATE_BATCH_REGISTRY).toHaveLength(0);
   });
 
   it("covers six National Dex identities as fifteen exact Pokémon GO forms", () => {

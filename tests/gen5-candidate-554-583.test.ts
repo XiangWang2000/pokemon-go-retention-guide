@@ -57,14 +57,9 @@ function guideRows() {
 describe("Gen5 #554-#583 publication candidate", () => {
   it("registers a contiguous third candidate slice without publishing it", () => {
     expect(() => assertCandidateBatchRegistry()).not.toThrow();
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
-    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);
-    expect(CANDIDATE_BATCH_REGISTRY.find((entry) => entry.key === "554-583")).toMatchObject({
-      minDex: 554,
-      maxDex: 583,
-      generation: 5,
-      stage: "EVIDENCE",
-    });
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
+    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
+    expect(CANDIDATE_BATCH_REGISTRY).toHaveLength(0);
   });
 
   it("covers 30 National Dex identities as 37 exact forms", () => {

@@ -63,6 +63,14 @@ async function upsertSource(prisma: PrismaClient, source: ResearchSource, fallba
     dataVersion: `accessed-${source.accessedAt ?? fallbackCheckedAt}`,
     notes: "Imported from dated Gen5 candidate evidence during formal publication.",
   };
+  const canonical = await prisma.sourceReference.findFirst({
+    where: { sourceUrl: source.sourceUrl, accessedAt },
+    select: { id: true },
+  });
+  if (canonical) {
+    await prisma.sourceReference.update({ where: { id: canonical.id }, data });
+    return canonical.id;
+  }
   await prisma.sourceReference.upsert({ where: { id }, create: { id, ...data }, update: data });
   return id;
 }
@@ -293,8 +301,14 @@ export async function runImportGen5(batch: string, databaseUrl = getDatabaseUrl(
     const plan = buildGen5ImportPlan(definition, await readRankings());
     await writeBattleVariants(prisma, plan);
     await writeEvidence(prisma, definition, pveSourceByUrl, plan, knownSources);
-    const sourceId = identity.sources[0]?.id ?? release.sources[0]?.id;
-    if (!sourceId) throw new Error(`Missing identity/release source for ${batch}.`);
+    const changeLogSourceUrl = identity.sources[0]?.sourceUrl ?? release.sources[0]?.sourceUrl;
+    if (!changeLogSourceUrl) throw new Error(`Missing identity/release source for ${batch}.`);
+    const changeLogSource = await prisma.sourceReference.findFirst({
+      where: { sourceUrl: changeLogSourceUrl },
+      select: { id: true },
+    });
+    const sourceId = changeLogSource?.id;
+    if (!sourceId) throw new Error(`Canonical identity/release source was not persisted for ${batch}.`);
     await prisma.changeLog.upsert({
       where: { id: `gen5-${batch}-batch` },
       create: { id: `gen5-${batch}-batch`, entityType: "Batch", entityId: batch, fieldName: "status", previousValue: null, newValue: "PUBLISHED", sourceId, changeReasonZhTw: `將第五世代 ${batch} candidate evidence 接入正式 BattleVariant importer。`, changedAt: checkedAt, rulesVersion: RULES_VERSION },

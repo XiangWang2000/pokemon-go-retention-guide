@@ -36,11 +36,9 @@ const rosterNormalForms = ["647-ordinary", "647-resolute", "648-aria"];
 
 describe("Gen5 #644-#649 candidate release evidence", () => {
   it("keeps the final Gen5 candidate in evidence stage without expanding production", () => {
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
-    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);
-    expect(CANDIDATE_BATCH_REGISTRY.find((entry) => entry.key === "644-649")).toMatchObject({
-      stage: "EVIDENCE",
-    });
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
+    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
+    expect(CANDIDATE_BATCH_REGISTRY).toHaveLength(0);
   });
 
   it("resolves fourteen exact normal/special forms as released and Pirouette Meloetta as explicitly unreleased", () => {
