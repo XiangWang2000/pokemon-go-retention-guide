@@ -1,0 +1,100 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "644-649",
+  "generation": 5,
+  "status": "CANDIDATE_IDENTITY_ONLY",
+  "sources": [
+    {
+      "id": "POKEAPI-CANONICAL-UNOVA-644-649",
+      "sourceName": "PokeAPI canonical dataset",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PokeAPI data/v2 CSV canonical Pokémon dataset",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "用於核對第五世代 #644～#649 的圖鑑編號、名稱、基礎屬性與家族身份；Pokémon GO 特殊 form、合體與型態切換機制另由 GO 專屬來源核對。"
+    },
+    {
+      "id": "GOHUB-POKEMONGO-FORMS-644-649-20260904",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Unova PokéDex (Gen 5)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokedex/unova",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "當前 Pokémon GO 合眾 Pokédex 明列 #644 捷克羅姆、#645 土地雲兩型態、#646 酋雷姆三型態、#647 凱路迪歐兩型態、#648 美洛耶塔兩型態與 #649 蓋諾賽克特五種卡帶／無卡帶 identity，合計 15 個 exact forms。"
+    },
+    {
+      "id": "BULBAPEDIA-GO-FORM-DIFFERENCES-644-649-20260904",
+      "sourceName": "Bulbapedia",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "List of Pokémon with form differences in Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://bulbapedia.bulbagarden.net/wiki/List_of_Pok%C3%A9mon_with_form_differences_in_Pok%C3%A9mon_GO",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "Pokémon GO form differences 明確記載土地雲化身／靈獸型態不可互換、凱路迪歐平常／覺悟型態可透過 Change Form 可逆切換，以及蓋諾賽克特五種 Drive 型態不可互換；因此三組機制不可共用同一種 transition 假設。"
+    },
+    {
+      "id": "OFFICIAL-POKEMON-GO-FUSION-MECHANIC-20260904",
+      "sourceName": "Pokémon GO Help Center",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "什麼是寶可夢合體？",
+      "sourceLanguage": "zh-Hant",
+      "sourceUrl": "https://niantic.helpshift.com/hc/zh-hant/6-pokemon-go/faq/4736-what-is-pokemon-fusion/",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "官方說明合體是由基礎寶可夢與特定寶可夢融合成新形態的可分離機制，合體後可再分離，且與一般進化不同。"
+    },
+    {
+      "id": "OFFICIAL-KYUREM-FUSION-RAID-DAY-20260110",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "為了真實及理想，挑戰在「酋雷姆合體團體戰日」登場的2隻寶可夢英雄！",
+      "sourceLanguage": "zh-Hant",
+      "sourceUrl": "https://pokemongo.com/zh-Hant/news/kyurem-fusion-raid-day-2026",
+      "accessedAt": "2026-09-04",
+      "publishedAt": "2025-12-22",
+      "sourceSummaryZhTw": "官方明確說明酋雷姆可與捷克羅姆合體成闇黑酋雷姆、與萊希拉姆合體成焰白酋雷姆，且可無糖果／能量成本分離；因此 Black／White Kyurem 是 Fusion output，不建立進化邊。"
+    },
+    {
+      "id": "OFFICIAL-KELDEO-RESOLUTE-20251125",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "「決戰之際」活動將迎來首度登場的「凱路迪歐（覺悟的樣子）」與異色「凱路迪歐」，為「千變萬化的故事」劃下句點！",
+      "sourceLanguage": "zh-Hant",
+      "sourceUrl": "https://pokemongo.com/zh-Hant/news/final-justice-2025",
+      "accessedAt": "2026-09-04",
+      "publishedAt": "2025-11-11",
+      "sourceSummaryZhTw": "官方確認凱路迪歐（覺悟的樣子）在 2025-11 首度登場，並允許玩家使用凱路迪歐糖果改變手上凱路迪歐的樣子；當前 form-differences 資料再補充實際 Change Form 成本與可逆性。"
+    }
+  ],
+  "expected": {
+    "dexCount": 6,
+    "formCount": 15,
+    "multiFormDex": {
+      "645": ["645-incarnate", "645-therian"],
+      "646": ["646-unova", "646-black", "646-white"],
+      "647": ["647-ordinary", "647-resolute"],
+      "648": ["648-aria", "648-pirouette"],
+      "649": ["649-unova", "649-shock", "649-burn", "649-chill", "649-douse"]
+    },
+    "evolutionPairs": [],
+    "keldeoFormTransitions": [
+      {
+        "fromFormId": "647-ordinary",
+        "toFormId": "647-resolute",
+        "reversible": true,
+        "candyCost": 50,
+        "stardustCost": 10000
+      }
+    ],
+    "kyuremFusionRelationships": [
+      { "baseFormId": "646-unova", "partnerFormId": "644-unova", "resultFormId": "646-black" },
+      { "baseFormId": "646-unova", "partnerFormId": "643-unova", "resultFormId": "646-white" }
+    ],
+    "nonInterchangeableFormGroups": [
+      ["645-incarnate", "645-therian"],
+      ["649-unova", "649-shock", "649-burn", "649-chill", "649-douse"]
+    ]
+  },
+  "boundary": "This final Gen5 slice has 15 exact Pokémon GO form identities across six National Dex numbers. None is an evolution of another. Landorus Incarnate/Therian and all five Genesect Drive identities are non-interchangeable in Pokémon GO. Keldeo Ordinary/Resolute are exact identities but are explicitly connected by reversible Change Form, not evolution. Black and White Kyurem are reversible Fusion outputs whose base individual is Kyurem and whose partners are Zekrom and Reshiram respectively; they must never be modeled as evolution targets. Meloetta Aria and Pirouette remain distinct identities and have no automatic transition edge in this candidate model. Release state is deliberately deferred to the release-evidence stage."
+}
