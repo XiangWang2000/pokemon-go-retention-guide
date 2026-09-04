@@ -2,6 +2,11 @@ name: Prepare Release Snapshot
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - data/gen5-formal-publication
+    paths:
+      - .github/workflows/prepare-release-snapshot.yml
 
 permissions:
   contents: write
