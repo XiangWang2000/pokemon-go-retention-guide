@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "614-643",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVP",
+  "snapshot": {
+    "source": "PvPoke",
+    "date": "2026-09-01",
+    "commit": "7b96d91fb553780653190ad32de001b5d9086a7f",
+    "gamemasterBlobSha": "05abdcd6df42ee397367bf15e72bb5864c90a2b8",
+    "leagues": ["GL", "UL", "ML"]
+  },
+  "mappingSummary": {
+    "formCount": 34,
+    "exactFormMappings": 34,
+    "sharedUndifferentiatedMappings": 0,
+    "pinnedShadowMappings": 10
+  },
+  "exactSpecialFormMappings": {
+    "618-unova": "stunfisk",
+    "618-galar": "stunfisk_galarian",
+    "628-unova": "braviary",
+    "628-hisui": "braviary_hisuian",
+    "641-incarnate": "tornadus_incarnate",
+    "641-therian": "tornadus_therian",
+    "642-incarnate": "thundurus_incarnate",
+    "642-therian": "thundurus_therian"
+  },
+  "pinnedShadowFormIds": [
+    "616-unova",
+    "617-unova",
+    "622-unova",
+    "623-unova",
+    "633-unova",
+    "634-unova",
+    "635-unova",
+    "641-incarnate",
+    "642-incarnate",
+    "643-unova"
+  ],
+  "sources": [
+    {
+      "id": "PVP-POKE-GAMEMASTER-20260901-614-643",
+      "sourceName": "PvPoke",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PvPoke gamemaster and Open Overall ranking snapshots",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/pvpoke/pvpoke/tree/7b96d91fb553780653190ad32de001b5d9086a7f",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "固定 2026-09-01 PvPoke 快照用於 #614～#643 的 exact speciesId 與 Open GL／UL／ML 物種排名。普通／伽勒爾泥巴魚、普通／洗翠勇士雄鷹、龍捲雲與雷電雲的化身／靈獸形態都有獨立 battle identity，不需要共享 generic mapping。"
+    }
+  ],
+  "boundary": "All 34 candidate forms have independent pinned PvPoke battle identities. Form-specific ranks must remain isolated: ordinary/Galarian Stunfisk, ordinary/Hisuian Braviary, and Incarnate/Therian Tornadus/Thundurus never borrow one another's ranks. Shadow IDs are recorded only when the pinned gamemaster contains the concrete speciesId; no `_shadow` ID is synthesized. PvPoke battle presence, including Tornadus/Thundurus Incarnate Shadow and Shadow Reshiram identities, is never Pokémon GO release evidence."
+}
