@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-09-05",
+  "batch": "614-643",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVE_MAX",
+  "sources": [
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/623",
+      "supports": ["623-unova-normal"],
+      "sourceSummaryZhTw": "普通泥偶巨人目前為地面系 A Tier #27，來源明確指出仍可作地面團體戰補位，因此只列可用／預算型。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/623-Shadow",
+      "supports": ["623-unova-shadow"],
+      "sourceSummaryZhTw": "暗影泥偶巨人目前為地面系 A+ Tier #14；價值只屬 Shadow exact variant，不回灌普通或未推出 Mega。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/635",
+      "supports": ["635-unova-normal"],
+      "sourceSummaryZhTw": "普通三首惡龍搭配 Brutal Swing 目前為惡系 A+ Tier #15，來源明確稱其為頂尖惡系之一，支持核心普通 PvE 分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/635-Shadow",
+      "supports": ["635-unova-shadow"],
+      "sourceSummaryZhTw": "暗影三首惡龍搭配 Brutal Swing 目前為惡系 S Tier #6，來源明確指出 Elite Charged TM 值得投入，支持核心暗影分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/635-Dynamax",
+      "supports": ["635-unova-dynamax"],
+      "sourceSummaryZhTw": "極巨三首惡龍搭配 Bite／Max Darkness 為惡系 Max 攻擊手 #2、B Tier；排名高但整體層級仍只支持可用／預算型 Max 投資。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/637",
+      "supports": ["637-unova-normal"],
+      "sourceSummaryZhTw": "火神蛾目前為蟲系 S Tier #8、火系 A Tier #27，來源明確表示 400 糖果成本仍值得並可兼任雙屬性團戰輸出。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/639",
+      "supports": ["639-unova-normal"],
+      "sourceSummaryZhTw": "代拉基翁目前為格鬥 A+ Tier #12、岩石 A+ Tier #15；Sacred Sword 依賴被明確保留，支持核心雙屬性 PvE 分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/641-Therian",
+      "supports": ["641-therian-normal"],
+      "sourceSummaryZhTw": "靈獸形態龍捲雲搭配 Bleakwind Storm 為飛行 A Tier #22；來源稱值得使用但也明確指出被多個飛行輸出手超越，因此只列可用型。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/642-Therian",
+      "supports": ["642-therian-normal"],
+      "sourceSummaryZhTw": "靈獸形態雷電雲搭配 Wildbolt Storm 為電系 A+ Tier #12，來源明確描述為頂級電系 DPS 選擇，支持核心 PvE 分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/643",
+      "supports": ["643-unova-normal"],
+      "sourceSummaryZhTw": "普通萊希拉姆搭配 Fusion Flare 目前為火系 S Tier #9；來源明確指出該限定招對最佳表現屬必要，支持核心普通火系分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/643-Shadow",
+      "supports": ["643-unova-shadow"],
+      "sourceSummaryZhTw": "暗影萊希拉姆搭配 Fusion Flare 目前為火系 S Tier #4，來源明確列為頂尖火系暗影並建議投資，支持核心暗影分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/615-Dynamax",
+      "supports": [],
+      "sourceSummaryZhTw": "極巨幾何雪花目前為冰系 Max 攻擊手 #5、C Tier，且來源尚無正向 PvE 分析；已推出狀態本身不足以建立正向 Max 投資理由。"
+    }
+  ],
+  "boundary": "Positive PvE and Max evidence is exact-variant scoped. Shadow value never propagates to normal, Mega, or another form. Incarnate and Therian Tornadus/Thundurus remain independent: positive Therian PvE evidence never promotes the released Incarnate Shadow variants. Brutal Swing, Sacred Sword, Bleakwind Storm, Wildbolt Storm, and Fusion Flare dependencies are named explicitly. Mega Golurk remains explicitly UNRELEASED and receives no investment evidence. Released Dynamax Cryogonal, Deino, and Zweilous do not automatically receive positive Max investment value; only Dynamax Hydreigon has current positive evidence in this slice, and its B Tier #2 ranking is deliberately classified as USABLE_OR_BUDGET rather than core. Absence from the positive evidence maps means no current standalone positive reason, not a permanent negative assertion."
+}
