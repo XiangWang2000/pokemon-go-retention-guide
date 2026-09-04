@@ -85,7 +85,9 @@ describe("Gen 1-9 audit coverage", () => {
     expect(rufflet?.reason).toContain("洗翠勇士雄鷹為獨立地區型態");
     expect(rufflet?.reason).not.toContain("可進化為勇士雄鷹／洗翠勇士雄鷹");
     const petilil = rows(markdown).find((row) => row.dex === 548);
-    expect(petilil?.reason).toContain("洗翠裙兒小姐為獨立地區型態");
+    expect(petilil?.reason).toContain("洗翠裙兒小姐");
+    expect(petilil?.reason).toMatch(/獨立(?:地區)?型態/);
+    expect(petilil?.reason).toMatch(/不能.*(?:進化理由|回灌)/);
     expect(petilil?.reason).not.toContain("可進化為裙兒小姐／洗翠裙兒小姐");
   });
 
