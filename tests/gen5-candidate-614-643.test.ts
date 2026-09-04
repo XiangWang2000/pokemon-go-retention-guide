@@ -103,7 +103,7 @@ describe("Gen5 #614-#643 publication candidate", () => {
       [...species584613, ...species614643].map((species) => [species.dexNumber, species.familyKey]),
     );
 
-    expect(evolutionPairs614643).toHaveLength(9);
+    expect(evolutionPairs614643).toHaveLength(10);
     for (const [fromFormId, toFormId] of evolutionPairs614643) {
       const from = formById.get(fromFormId);
       const to = formById.get(toFormId);
