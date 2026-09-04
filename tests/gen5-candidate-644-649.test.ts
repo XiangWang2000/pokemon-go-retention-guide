@@ -110,7 +110,7 @@ describe("Gen5 #644-#649 publication candidate", () => {
     for (const formId of ["648-aria", "648-pirouette"]) {
       expect(forms644649.find((form) => form.id === formId)?.evolvesFromFormId).toBeNull();
     }
-    expect(evolutionPairs644649.some(([from, to]) => from.startsWith("648-") || to.startsWith("648-"))).toBe(false);
+    expect(evolutionPairs644649).toEqual([]);
   });
 
   it("keeps all five Genesect Drive identities non-interchangeable", () => {
