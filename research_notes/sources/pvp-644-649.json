@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "644-649",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVP",
+  "snapshot": {
+    "source": "PvPoke",
+    "date": "2026-09-01",
+    "commit": "7b96d91fb553780653190ad32de001b5d9086a7f",
+    "pokemonBlobSha": "9cd03d6495f4f7c4611267cd316234c191572935",
+    "leagues": ["GL", "UL", "ML"]
+  },
+  "mappingSummary": {
+    "formCount": 15,
+    "exactFormMappings": 15,
+    "sharedUndifferentiatedMappings": 0,
+    "pinnedShadowMappings": 1
+  },
+  "exactSpecialFormMappings": {
+    "645-incarnate": "landorus_incarnate",
+    "645-therian": "landorus_therian",
+    "646-unova": "kyurem",
+    "646-black": "kyurem_black",
+    "646-white": "kyurem_white",
+    "647-ordinary": "keldeo_ordinary",
+    "647-resolute": "keldeo_resolute",
+    "648-aria": "meloetta_aria",
+    "648-pirouette": "meloetta_pirouette",
+    "649-unova": "genesect",
+    "649-shock": "genesect_shock",
+    "649-burn": "genesect_burn",
+    "649-chill": "genesect_chill",
+    "649-douse": "genesect_douse"
+  },
+  "pinnedShadowFormIds": ["645-incarnate"],
+  "sources": [
+    {
+      "id": "PVP-POKE-GAMEMASTER-20260901-644-649",
+      "sourceName": "PvPoke",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PvPoke gamemaster and Open Overall ranking snapshots",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/pvpoke/pvpoke/tree/7b96d91fb553780653190ad32de001b5d9086a7f",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "固定 2026-09-01 PvPoke 快照對 #644～#649 的 15 個 Pokémon GO exact forms 都提供獨立 battle speciesId；土地雲化身／靈獸、酋雷姆三型態、凱路迪歐兩型態、美洛耶塔兩型態與蓋諾賽克特五種卡帶／無卡帶皆不得互借排名。固定 gamemaster 只對土地雲化身形態提供 Shadow battle identity。"
+    }
+  ],
+  "boundary": "All 15 candidate forms have independent pinned PvPoke battle identities. Landorus Incarnate/Therian, ordinary/Black/White Kyurem, Keldeo Ordinary/Resolute, Meloetta Aria/Pirouette, and all five Genesect Drive/no-drive identities keep separate ranks. Keldeo Change Form and Kyurem Fusion mechanics do not collapse their PvPoke identities. Shadow is recorded only for the concrete Landorus Incarnate Shadow speciesId; no other `_shadow` ID is synthesized. PvPoke battle presence or its internal released flag is never Pokémon GO release evidence, including Meloetta Pirouette or base Genesect."
+}
