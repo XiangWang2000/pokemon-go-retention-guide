@@ -1,0 +1,91 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "524-553",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_RELEASE",
+  "sources": [
+    {
+      "id": "SECONDARY-GOHUB-UNOVA-ROSTER-20260904",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Unova PokéDex (Gen 5)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokedex/unova",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "當前合眾 Pokédex 逐 exact form 標示 Released 狀態。本批用其確認 #524～#553 的 33 個普通／地區／條紋 form、7 個 Dynamax form 與 Mega Audino 已推出，並只在明確顯示 No 時記錄 Mega Excadrill、Mega Scolipede 未推出。"
+    },
+    {
+      "id": "SECONDARY-SEREBII-SHADOW-ROSTER-20260904",
+      "sourceName": "Serebii",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Pokémon GO - Shadow Pokémon",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "目前 Shadow Pokémon 名單明列本批可確認的 Shadow form；僅把正面列名視為 RELEASED，未列項目保持 UNKNOWN。"
+    },
+    {
+      "id": "SECONDARY-SEREBII-GALAR-EXPEDITION-TAKEN-OVER-2024",
+      "sourceName": "Serebii",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Galarian Expedition: Taken Over",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/events/galarianexpedition%3Atakenover.shtml",
+      "accessedAt": "2026-09-04",
+      "publishedAt": "2024-10-08",
+      "sourceSummaryZhTw": "2024 年活動頁的新 Shadow 清單明列 Roggenrola、Boldore、Gigalith，補強目前 Shadow 名單對 #526 Shadow Gigalith 的正面推出證據。"
+    },
+    {
+      "id": "OFFICIAL-SHADOW-PURIFICATION-MECHANIC",
+      "sourceName": "Pokémon GO Help Center",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Shadow Pokémon & Purified Pokémon",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "官方說明 Shadow Pokémon 可以消耗星塵與糖果進行淨化；因此 Purified 只從同 exact form 已確認的 Shadow 推導。"
+    },
+    {
+      "id": "OFFICIAL-MEGA-AUDINO-RAID-DAY-2025",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Mega Audino makes its Pokémon GO debut in a Raid Day!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/news/mega-audino-raid-day-2025",
+      "accessedAt": "2026-09-04",
+      "publishedAt": "2025-03-20",
+      "sourceSummaryZhTw": "官方公告確認 Mega Audino 將於 2025 年 4 月 5 日的 Mega Raid Day 在 Pokémon GO 首度登場。"
+    }
+  ],
+  "confirmed": {
+    "normalReleasedCount": 33,
+    "shadowReleased": [
+      "524-unova",
+      "525-unova",
+      "526-unova",
+      "529-unova",
+      "530-unova",
+      "532-unova",
+      "533-unova",
+      "534-unova",
+      "538-unova",
+      "539-unova",
+      "543-unova",
+      "544-unova",
+      "545-unova"
+    ],
+    "purifiedReleasedCount": 13,
+    "dynamaxReleased": [
+      "524-unova",
+      "525-unova",
+      "526-unova",
+      "527-unova",
+      "528-unova",
+      "529-unova",
+      "530-unova"
+    ],
+    "megaReleased": ["531-unova"],
+    "megaExplicitUnreleased": ["530-unova", "545-unova"]
+  },
+  "boundary": "Roster absence never becomes UNRELEASED. NORMAL, SHADOW, PURIFIED, DYNAMAX, MEGA and GIGANTAMAX are separate release identities. Regional or stripe form release never propagates to another form. Purified is derived only from confirmed same-form Shadow evidence."
+}
