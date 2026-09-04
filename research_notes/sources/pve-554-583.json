@@ -1,0 +1,34 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "554-583",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVE_MAX",
+  "sources": [
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/555",
+      "supports": ["555-unova-standard-normal"],
+      "sourceSummaryZhTw": "合眾普通模式達摩狒狒目前列為火系 B Tier 約 #32，仍有預算型團戰用途，但不列核心長期投資。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/555-Shadow",
+      "supports": ["555-unova-standard-shadow"],
+      "sourceSummaryZhTw": "暗影合眾普通模式達摩狒狒目前列為火系 A+ Tier 約 #19，支持較寬鬆的暗影核心保留與投資分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/555-Galarian",
+      "supports": ["555-galar-standard-normal"],
+      "sourceSummaryZhTw": "伽勒爾普通模式達摩狒狒目前列為冰系 A+ Tier 約 #17，支持高實用但非不可取代的 PvE 分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/555-Dynamax",
+      "supports": ["555-unova-standard-dynamax"],
+      "sourceSummaryZhTw": "極巨合眾普通模式達摩狒狒目前列為火系 Max Battle B Tier #3，因此只列可用／預算型 Max 投資。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/569-Gigantamax",
+      "supports": ["569-unova-gigantamax"],
+      "sourceSummaryZhTw": "超極巨灰塵山目前列為毒系 Max Battle S Tier #1，支持核心 Gigantamax 投資分類。"
+    }
+  ],
+  "boundary": "Positive PvE and Max evidence is exact-variant scoped. Unova Standard, Galarian Standard, Zen Mode, Shadow, Dynamax, and Gigantamax identities never borrow one another's value. Both Zen Mode forms are explicitly UNRELEASED and receive no positive PvE evidence. Galarian Standard Shadow remains without positive evidence because the matching Shadow release state is not confirmed. Released Dynamax Darumaka, Trubbish, and Garbodor do not automatically receive positive Max investment classifications. Gigantamax Garbodor value does not propagate to ordinary or Dynamax Garbodor. Mega Scrafty remains explicitly UNRELEASED and receives no investment evidence."
+}
