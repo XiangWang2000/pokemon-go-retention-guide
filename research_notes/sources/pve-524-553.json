@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "524-553",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVE_MAX",
+  "sources": [
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/526",
+      "supports": ["526-unova-normal"],
+      "sourceSummaryZhTw": "普通龐岩怪搭配流星光束列為岩石系 A+ Tier 約 #13，來源亦直接描述為優秀預算選項。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/526-Shadow",
+      "supports": ["526-unova-shadow"],
+      "sourceSummaryZhTw": "暗影龐岩怪搭配流星光束列為岩石系 S Tier 約 #5，並明確描述值得投入資源。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/530",
+      "supports": ["530-unova-normal"],
+      "sourceSummaryZhTw": "普通龍頭地鼠同時具地面 A+ 約 #15 與鋼 A 約 #24 的團戰定位，來源明確指出其高實用性與投資價值。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/530-Shadow",
+      "supports": ["530-unova-shadow"],
+      "sourceSummaryZhTw": "暗影龍頭地鼠列為地面 S #7、鋼 S #10，屬高階雙屬性團戰輸出；不因頁面比較到 Mega 就把未推出 Mega 當成可投資版本。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/534",
+      "supports": ["534-unova-normal"],
+      "sourceSummaryZhTw": "普通修建老匠目前約為 A Tier #22 格鬥系攻擊手，仍有可靠團戰價值但不是最高階替代不可的選項。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/534-Shadow",
+      "supports": ["534-unova-shadow"],
+      "sourceSummaryZhTw": "暗影修建老匠列為格鬥系 S Tier #8、整體團戰 A Tier 約 #90，支持核心暗影投資分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/526-Dynamax",
+      "supports": ["526-unova-dynamax"],
+      "sourceSummaryZhTw": "極巨龐岩怪目前列為岩石系 Max Battle A Tier #2，支持核心 Max 投資分類。"
+    },
+    {
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/530-Dynamax",
+      "supports": ["530-unova-dynamax"],
+      "sourceSummaryZhTw": "極巨龍頭地鼠目前列為地面系 Max Battle S Tier #1，支持核心 Max 投資分類。"
+    }
+  ],
+  "boundary": "Positive PvE and Max evidence is exact-variant scoped. Meteor Beam-dependent Gigalith evidence does not propagate to versions without the move. Shadow value never propagates to normal, Mega, or Dynamax. Mega Excadrill remains ineligible for positive investment evidence while its release state is explicitly UNRELEASED, even if simulation pages contain Mega performance data. Released Dynamax Roggenrola, Boldore, Woobat, Swoobat, and Drilbur do not automatically receive positive Max investment classifications."
+}
