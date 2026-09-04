@@ -1,0 +1,37 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "524-553",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVP",
+  "snapshot": {
+    "provider": "PvPoke",
+    "commit": "7b96d91fb553780653190ad32de001b5d9086a7f",
+    "gamemasterBlobSha": "05abdcd6df42ee397367bf15e72bb5864c90a2b8",
+    "root": "data/sources/pvpoke/2026-09-01",
+    "leagues": {
+      "GREAT": {
+        "cp": 1500,
+        "blobSha": "11427d49e8020bbb2d022cf6a5072e81a0e3b945"
+      },
+      "ULTRA": {
+        "cp": 2500,
+        "blobSha": "399f2c7708c85bfbb8ea8eaaf56d72bc8c1f48aa"
+      },
+      "MASTER": {
+        "cp": 10000,
+        "blobSha": "5b42677886dad78c8c805973eda7f10ba4880e58"
+      }
+    }
+  },
+  "exactFormMappings": {
+    "549-unova": "lilligant",
+    "549-hisui": "lilligant_hisuian"
+  },
+  "sharedUndifferentiatedMappings": {
+    "550-red-striped": "basculin",
+    "550-blue-striped": "basculin",
+    "550-white-striped": "basculin"
+  },
+  "notesZhTw": "固定 PvPoke gamemaster 對普通／洗翠裙兒小姐提供獨立 speciesId；對野蠻鱸魚只有 generic basculin，因此三條紋不得被假裝成各自可重現的獨立 PvP 排名。",
+  "boundary": "PvPoke ranking presence is battle evidence only and never release evidence. SHARED_UNDIFFERENTIATED mappings are not exact per-form rankings and must stay visibly marked as shared evidence."
+}
