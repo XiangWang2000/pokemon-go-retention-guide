@@ -22,7 +22,7 @@ export const CURRENT_RELEASE_CONTRACT = {
   dataAsOf: DATA_VERSION_DATE_ISO,
   expectedCounts: {
     battleVariants: 3105,
-    families: 384,
+    families: 409,
     ivRecommendations: 13,
     trueDataPending: 0,
   },
