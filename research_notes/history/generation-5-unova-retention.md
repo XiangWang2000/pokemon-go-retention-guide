@@ -174,22 +174,22 @@
 | #642 | 雷電雲 | 🟡 選擇性保留 | GL#473 / UL#488 / ML#187 | 此列以化身形態為基準；化身形態本身 ML#187 構成選擇性保留理由，靈獸型態的電系價值不得回灌。 |
 | #643 | 萊希拉姆 | 🔴 優先保留 | UL#201 / ML#8 | PvPoke ML 物種榜 #8；火／龍系傳說級團戰核心 |
 | #644 | 捷克羅姆 | 🔴 優先保留 | UL#390 / ML#12 | PvPoke ML 物種榜 #12；電／龍系傳說級團戰核心 |
-| #645 | 土地雲 | 🟡 選擇性保留 | GL#663 / UL#398 / ML#57 | 化身／靈獸型態需分開判斷；靈獸型態的地面／ML 價值不能直接套用到其他型態 |
-| #646 | 酋雷姆 | 🔴 優先保留 | UL#113 / ML#4 | PvPoke ML 物種榜 #4；酋雷姆及融合型態具高階團戰／ML 價值 |
-| #647 | 凱路迪歐 | 🔴 優先保留 | UL#332 / ML#39 | PvPoke ML 物種榜 #39；格鬥系高階團戰用途 |
-| #648 | 美洛耶塔 | 🔴 優先保留 | UL#384 / ML#26 | PvPoke ML 物種榜 #26 |
-| #649 | 蓋諾賽克特 | 🔴 優先保留 | GL#461 / UL#161 / ML#99 | PvPoke ML 物種榜 #99 |
+| #645 | 土地雲 | 🔴 優先保留 | GL#712 / UL#522 / ML#98 | 此列以化身形態為基準；化身形態本身 ML#98 構成優先保留理由，靈獸型態的地面／ML 價值不得回灌。 |
+| #646 | 酋雷姆 | 🔴 優先保留 | UL#113 / ML#48 | 此列以普通酋雷姆為基準，PvPoke ML#48；闇黑／焰白酋雷姆是 Fusion 產生的獨立 battle identity，其排名不得回灌普通酋雷姆。 |
+| #647 | 凱路迪歐 | 🔴 優先保留 | UL#646 / ML#54 | 此列以平常的樣子為基準，PvPoke ML#54；同一凱路迪歐雖可 Change Form 為覺悟的樣子，但兩種型態仍是獨立 battle identity，排名分開顯示。 |
+| #648 | 美洛耶塔 | 🔴 優先保留 | UL#384 / ML#26 | 此列以歌聲形態為基準，PvPoke ML#26；舞步形態為獨立 battle identity，不把其排名回灌歌聲形態。 |
+| #649 | 蓋諾賽克特 | 🟡 選擇性保留 | GL#461 / UL#339 / ML#131 | 此列以無卡帶個體為基準，PvPoke ML#131；Shock／Burn／Chill／Douse Drive 為不可互換的獨立 battle identities，其排名不得回灌無卡帶個體。 |
 
 ## 2026-09-03 審查結果
 
-- PvP 排名：#494–#643 已由 candidate mapping gate 對齊專案固定 2026-09-01 PvPoke 快照；其中四季鹿／萌芽鹿的季節 form 與輕飄飄／胖嘟嘟的性別 form 因 PvPoke 僅提供 generic speciesId，明確標為 shared battle evidence，不宣稱為 exact form rank。#644–#649 尚待最後候選批次逐 form 重驗。
-- 留／傳規則：已統一為前 100 優先保留、101–250 選擇性保留；#641 龍捲雲以化身形態為 species-level 預設，修正後三聯盟皆在 250 名外，因此不再借用靈獸型態價值維持保留理由。
+- PvP 排名：#494–#649 已由 candidate mapping gate 對齊專案固定 2026-09-01 PvPoke 快照；四季鹿／萌芽鹿的季節 form 與輕飄飄／胖嘟嘟的性別 form 因 PvPoke 僅提供 generic speciesId，明確標為 shared battle evidence，其餘已建模的特殊型態維持 exact battle identity。
+- 留／傳規則：已統一為前 100 優先保留、101–250 選擇性保留；#645 土地雲以化身形態 ML#98 自身成立優先保留，#649 無卡帶蓋諾賽克特則以 ML#131 調整為選擇性保留，兩者都不借用其他型態名次。
 - 非 PvP 理由（團戰、Max、跨世代進化、特殊型態）仍維持獨立理由，不因 PvP 名次落在 250 名外就自動取消。
 - 表內是物種層級清包指引，不取代異色、特殊造型、活動背卡、限定招式與個人收藏判斷。
 
 ## 來源與驗證邊界
 
 - 名稱、世代與進化鏈：PokeAPI canonical CSV（繁中 language id 4）。
-- PvP：專案固定的 PvPoke 2026-09-01 Open／Overall 快照，commit `7b96d91fb553780653190ad32de001b5d9086a7f`。#494–#643 已由 candidate mapping 與 regression gate 重算；PvPoke 無法區分的季節／性別 form 保留 shared-undifferentiated 標記，#644–#649 會由最後候選批次驗證。
+- PvP：專案固定的 PvPoke 2026-09-01 Open／Overall 快照，commit `7b96d91fb553780653190ad32de001b5d9086a7f`。#494–#649 已由 candidate mapping 與 regression gate 重算；PvPoke 無法區分的季節／性別 form 保留 shared-undifferentiated 標記，其餘 multi-form identity 依 exact speciesId 隔離。
 - PvE／Max：以專案既有評估原則加上 2026-09 GO Hub raid／Max tier 資料做保留級別校正；不把 PvPoke 排名當成 PvE 證據。
 - 本表是**清包 presentation layer**，不宣稱每一列都是 Pokémon GO 的推出狀態證據；尚未推出或你尚未取得的型態自然不涉及傳送。
