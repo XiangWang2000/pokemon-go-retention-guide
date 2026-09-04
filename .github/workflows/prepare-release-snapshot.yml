@@ -30,6 +30,33 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Apply canonical SourceReference reuse fix
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("scripts/data/import-gen5.ts")
+          text = path.read_text(encoding="utf-8")
+          old = '''  await prisma.sourceReference.upsert({ where: { id }, create: { id, ...data }, update: data });
+          return id;
+          '''
+          new = '''  const canonical = await prisma.sourceReference.findFirst({
+            where: { sourceUrl: source.sourceUrl, accessedAt },
+            select: { id: true },
+          });
+          if (canonical) {
+            await prisma.sourceReference.update({ where: { id: canonical.id }, data });
+            return canonical.id;
+          }
+          await prisma.sourceReference.upsert({ where: { id }, create: { id, ...data }, update: data });
+          return id;
+          '''
+          if old not in text:
+              raise SystemExit("Gen5 source-upsert patch anchor not found")
+          path.write_text(text.replace(old, new, 1), encoding="utf-8")
+          PY
+
       - name: Setup Node.js
         uses: actions/setup-node@v7
         with:
