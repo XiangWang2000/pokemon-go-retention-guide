@@ -1,0 +1,93 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "554-583",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_RELEASE",
+  "sources": [
+    {
+      "id": "SECONDARY-GOHUB-UNOVA-ROSTER-20260904",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Unova PokéDex (Gen 5)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokedex/unova",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "當前合眾 Pokédex 逐 exact form 標示 Released Yes/No：本批可確認普通與地區型態多數已推出、兩種 Zen Mode 明確未推出、Dynamax Darumaka/Darmanitan/Trubbish/Garbodor 與 Gigantamax Garbodor 已推出，Mega Scrafty 明確未推出。"
+    },
+    {
+      "id": "SECONDARY-SEREBII-SHADOW-ROSTER-20260904",
+      "sourceName": "Serebii",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Pokémon GO - Shadow Pokémon",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "目前 Shadow Pokémon 名單正面列出本批 18 個 ordinary exact forms／同型態進化鏈；只把明列項目視為 RELEASED，缺席項目保持 UNKNOWN。"
+    },
+    {
+      "id": "OFFICIAL-SHADOW-PURIFICATION-MECHANIC",
+      "sourceName": "Pokémon GO Help Center",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Shadow Pokémon & Purified Pokémon",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "官方說明 Shadow Pokémon 可使用星塵與糖果進行淨化；因此 Purified 只由同 exact form 已確認的 Shadow 狀態推導。"
+    },
+    {
+      "id": "OFFICIAL-MAX-FINALE-2025-DARUMAKA",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Pokémon GO Fest 2025: Max Finale",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/gofestmaxfinale",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "官方 Max Finale 活動頁直接列出 Dynamax Darumaka，提供本批極巨化火紅不倒翁的直接推出證據。"
+    },
+    {
+      "id": "OFFICIAL-GIGANTAMAX-GARBODOR-2025",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Find trash and treasure during Gigantamax Garbodor Max Battle Day!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/news/gigantamax-garbodor-max-battle-day",
+      "accessedAt": "2026-09-04",
+      "publishedAt": "2025-10-08",
+      "sourceSummaryZhTw": "官方公告確認 Gigantamax Garbodor 於 2025-11-01 的六星極巨對戰中首度登場，作為超極巨化灰塵山的直接推出證據。"
+    }
+  ],
+  "confirmed": {
+    "normalReleasedCount": 35,
+    "normalExplicitUnreleased": ["555-unova-zen", "555-galar-zen"],
+    "shadowReleased": [
+      "554-unova",
+      "555-unova-standard",
+      "557-unova",
+      "558-unova",
+      "564-unova",
+      "565-unova",
+      "566-unova",
+      "567-unova",
+      "568-unova",
+      "569-unova",
+      "574-unova",
+      "575-unova",
+      "576-unova",
+      "577-unova",
+      "578-unova",
+      "579-unova",
+      "580-unova",
+      "581-unova"
+    ],
+    "purifiedReleasedCount": 18,
+    "dynamaxReleased": [
+      "554-unova",
+      "555-unova-standard",
+      "568-unova",
+      "569-unova"
+    ],
+    "gigantamaxReleased": ["569-unova"],
+    "megaExplicitUnreleased": ["560-unova"]
+  },
+  "boundary": "Every release state is exact-form scoped. PvPoke presence never implies release. Shadow roster absence stays UNKNOWN. Zen Mode Released: No does not affect Standard Mode. Ordinary or Dynamax release never propagates to Gigantamax, regional forms, or Mega. Purified is derived only from a confirmed same-form Shadow plus the official purification mechanic."
+}
