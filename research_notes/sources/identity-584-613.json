@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "584-613",
+  "generation": 5,
+  "status": "CANDIDATE_IDENTITY_ONLY",
+  "sources": [
+    {
+      "id": "POKEAPI-CANONICAL-UNOVA-584-613",
+      "sourceName": "PokeAPI canonical dataset",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PokeAPI data/v2 CSV canonical Pokémon dataset",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "用於核對第五世代 #584～#613 的圖鑑編號、名稱、基礎屬性與進化家族；Pokémon GO 專屬的季節／性別 form 邊界另由 Pokémon GO 當前資料核對。"
+    },
+    {
+      "id": "GOHUB-POKEMONGO-FORMS-584-613-20260904",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Unova PokéDex (Gen 5) and exact form pages",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokedex/unova",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "當前 Pokémon GO 合眾 Pokédex 明列四季鹿／萌芽鹿各四種季節 form，以及輕飄飄／胖嘟嘟的普通（雄性）與 Female form；個別頁面確認同季節 Deerling 進化為同季節 Sawsbuck、Female Frillish 進化為 Female Jellicent。"
+    }
+  ],
+  "expected": {
+    "dexCount": 30,
+    "formCount": 38,
+    "multiFormDex": {
+      "585": ["585-spring", "585-summer", "585-autumn", "585-winter"],
+      "586": ["586-spring", "586-summer", "586-autumn", "586-winter"],
+      "592": ["592-male", "592-female"],
+      "593": ["593-male", "593-female"]
+    },
+    "materializedIncomingEvolutionTargets": [
+      { "fromFormId": "583-unova", "toFormId": "584-unova" }
+    ],
+    "deferredEvolutionTargets": [
+      { "fromFormId": "613-unova", "targetDexNumber": 614, "targetFormKey": "UNOVA" }
+    ]
+  },
+  "boundary": "#583 Vanillish -> #584 Vanilluxe is now materialized as a cross-batch incoming edge. Deerling evolves only to the matching-season Sawsbuck form; season value must not cross forms. Frillish and Jellicent male/female appearances are distinct Pokémon GO form identities here, and evolution remains gender-matched. #613 Cubchoo -> #614 Beartic remains deferred until the next candidate batch owns the endpoint."
+}
