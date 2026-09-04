@@ -200,13 +200,6 @@ export const deferredEvolutionTargets554583 = [
     reasonZhTw:
       "伽勒爾哭哭面具可進化為 #867 死神板；等 Gen8 candidate 擁有 endpoint 後再正式 materialize。",
   },
-  {
-    fromFormId: "583-unova",
-    targetDexNumber: 584,
-    targetFormKey: "UNOVA",
-    reasonZhTw:
-      "多多冰的下一階 #584 雙倍多多冰屬於下一候選批次；等 #584 endpoint 由下一批擁有後再 materialize。",
-  },
 ] as const;
 
 export const gen5Candidate554583 = {
