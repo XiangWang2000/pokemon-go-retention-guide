@@ -2,6 +2,7 @@ name: Prepare Release Snapshot
 
 on:
   workflow_dispatch:
+  # Temporary one-shot trigger for Gen5 formal publication; removed before merge.
   push:
     branches:
       - data/gen5-formal-publication
