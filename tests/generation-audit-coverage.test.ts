@@ -91,9 +91,15 @@ describe("Gen 1-9 audit coverage", () => {
     expect(petilil?.reason).not.toContain("可進化為裙兒小姐／洗翠裙兒小姐");
   });
 
-  it("does not promote Forces of Nature rows by leaking Therian value across formes", () => {
+  it("does not promote Forces of Nature rows by leaking alternate-form value", () => {
     const markdown = readFileSync("research_notes/history/generation-5-unova-retention.md", "utf8");
-    for (const dex of [641, 642, 645]) {
+    const tornadus = rows(markdown).find((row) => row.dex === 641);
+    expect(tornadus?.recommendation).toContain("⚪");
+    expect(tornadus?.ranks).toBe("GL#1132 / UL#832 / ML#400");
+    expect(tornadus?.reason).toContain("化身形態");
+    expect(tornadus?.reason).toMatch(/回灌/);
+
+    for (const dex of [642, 645]) {
       const item = rows(markdown).find((row) => row.dex === dex);
       expect(item?.recommendation).toContain("🟡");
       expect(item?.reason).toContain("型態");
