@@ -14,6 +14,46 @@ import {
   gen5Candidate614643,
   species614643,
 } from "@/data/candidates/gen5-614-643";
+import {
+  candidatePvpokeMapping614643,
+  defaultGuideFormId614643,
+  pvpokeMappings614643,
+} from "@/data/candidates/gen5-pvp-614-643";
+
+type RankingRow = { speciesId: string };
+
+const snapshotPaths = {
+  GL: "data/sources/pvpoke/2026-09-01/rankings-1500.json",
+  UL: "data/sources/pvpoke/2026-09-01/rankings-2500.json",
+  ML: "data/sources/pvpoke/2026-09-01/rankings-10000.json",
+} as const;
+
+function rankings(path: string) {
+  return JSON.parse(readFileSync(path, "utf8").replace(/^\uFEFF/, "")) as RankingRow[];
+}
+
+function rankOf(rows: readonly RankingRow[], speciesId: string) {
+  const index = rows.findIndex((row) => row.speciesId === speciesId);
+  return index < 0 ? null : index + 1;
+}
+
+function guideRows() {
+  const markdown = readFileSync(
+    "research_notes/history/generation-5-unova-retention.md",
+    "utf8",
+  );
+  return [
+    ...markdown.matchAll(
+      /^\|\s*#(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*([^|]+?)\s*\|\s*(.*?)\s*\|$/gm,
+    ),
+  ].map((match) => ({
+    dexNumber: Number(match[1]),
+    name: match[2].trim(),
+    recommendation: match[3].trim(),
+    ranks: match[4].trim(),
+    reason: match[5].trim(),
+  }));
+}
 
 describe("Gen5 #614-#643 publication candidate", () => {
   it("registers a contiguous fifth candidate slice without publishing it", () => {
@@ -24,7 +64,7 @@ describe("Gen5 #614-#643 publication candidate", () => {
       minDex: 614,
       maxDex: 643,
       generation: 5,
-      stage: "IDENTITY",
+      stage: "EVIDENCE",
     });
   });
 
@@ -165,6 +205,152 @@ describe("Gen5 #614-#643 publication candidate", () => {
     expect(manifest.boundary).toContain("Rufflet evolves only to ordinary Braviary");
     expect(manifest.boundary).toContain("non-interchangeable in Pokémon GO");
     expect(manifest.boundary).toContain("Bisharp -> #983 Kingambit");
+    expect(
+      manifest.sources.every((source) => /[\u3400-\u9fff]/u.test(source.sourceSummaryZhTw)),
+    ).toBe(true);
+  });
+
+  it("maps all 34 exact Pokémon GO forms to independent pinned PvPoke identities", () => {
+    expect(pvpokeMappings614643).toHaveLength(34);
+    expect(new Set(pvpokeMappings614643.map((mapping) => mapping.formId)).size).toBe(34);
+    expect(new Set(pvpokeMappings614643.map((mapping) => mapping.normal)).size).toBe(34);
+    for (const form of forms614643) {
+      expect(candidatePvpokeMapping614643(form), form.id).toMatchObject({ mode: "EXACT" });
+      expect(candidatePvpokeMapping614643(form).normal.length, form.id).toBeGreaterThan(0);
+    }
+
+    expect(candidatePvpokeMapping614643({ id: "618-unova" }).normal).toBe("stunfisk");
+    expect(candidatePvpokeMapping614643({ id: "618-galar" }).normal).toBe("stunfisk_galarian");
+    expect(candidatePvpokeMapping614643({ id: "628-unova" }).normal).toBe("braviary");
+    expect(candidatePvpokeMapping614643({ id: "628-hisui" }).normal).toBe("braviary_hisuian");
+    expect(candidatePvpokeMapping614643({ id: "641-incarnate" }).normal).toBe(
+      "tornadus_incarnate",
+    );
+    expect(candidatePvpokeMapping614643({ id: "641-therian" }).normal).toBe(
+      "tornadus_therian",
+    );
+    expect(candidatePvpokeMapping614643({ id: "642-incarnate" }).normal).toBe(
+      "thundurus_incarnate",
+    );
+    expect(candidatePvpokeMapping614643({ id: "642-therian" }).normal).toBe(
+      "thundurus_therian",
+    );
+  });
+
+  it("records only the ten concrete Shadow IDs present in the pinned gamemaster", () => {
+    const expectedShadowFormIds = [
+      "616-unova",
+      "617-unova",
+      "622-unova",
+      "623-unova",
+      "633-unova",
+      "634-unova",
+      "635-unova",
+      "641-incarnate",
+      "642-incarnate",
+      "643-unova",
+    ];
+    expect(
+      pvpokeMappings614643
+        .filter((mapping) => mapping.shadow !== null)
+        .map((mapping) => mapping.formId),
+    ).toEqual(expectedShadowFormIds);
+
+    for (const formId of [
+      "618-unova",
+      "618-galar",
+      "628-unova",
+      "628-hisui",
+      "638-unova",
+      "639-unova",
+      "640-unova",
+      "641-therian",
+      "642-therian",
+    ]) {
+      expect(candidatePvpokeMapping614643({ id: formId }).shadow, formId).toBeNull();
+    }
+    expect(candidatePvpokeMapping614643({ id: "641-incarnate" }).shadow).toBe(
+      "tornadus_incarnate_shadow",
+    );
+    expect(candidatePvpokeMapping614643({ id: "642-incarnate" }).shadow).toBe(
+      "thundurus_incarnate_shadow",
+    );
+    expect(candidatePvpokeMapping614643({ id: "643-unova" }).shadow).toBe("reshiram_shadow");
+  });
+
+  it("keeps the species-level guide aligned to the designated ordinary/Incarnate PvPoke identity", () => {
+    const snapshots = {
+      GL: rankings(snapshotPaths.GL),
+      UL: rankings(snapshotPaths.UL),
+      ML: rankings(snapshotPaths.ML),
+    };
+    const guide = guideRows().filter((row) => row.dexNumber >= 614 && row.dexNumber <= 643);
+    const mismatches: Array<{
+      dexNumber: number;
+      name: string;
+      formId: string;
+      displayed: Record<string, number | null>;
+      expected: Record<string, number | null>;
+    }> = [];
+
+    expect(guide).toHaveLength(30);
+    for (const row of guide) {
+      const formId = defaultGuideFormId614643[row.dexNumber];
+      const mapping = candidatePvpokeMapping614643({ id: formId });
+      const expected = {
+        GL: rankOf(snapshots.GL, mapping.normal),
+        UL: rankOf(snapshots.UL, mapping.normal),
+        ML: rankOf(snapshots.ML, mapping.normal),
+      };
+      const displayed = { GL: null, UL: null, ML: null } as Record<string, number | null>;
+      for (const match of row.ranks.matchAll(/(GL|UL|ML)#(\d+)/g)) {
+        displayed[match[1]] = Number(match[2]);
+      }
+      if (JSON.stringify(displayed) !== JSON.stringify(expected)) {
+        mismatches.push({ dexNumber: row.dexNumber, name: row.name, formId, displayed, expected });
+      }
+    }
+
+    expect(mismatches).toEqual([]);
+  });
+
+  it("records pinned PvP provenance and exact-form boundaries", () => {
+    const manifest = JSON.parse(
+      readFileSync("research_notes/sources/pvp-614-643.json", "utf8"),
+    ) as {
+      status: string;
+      snapshot: { commit: string; gamemasterBlobSha: string };
+      mappingSummary: {
+        formCount: number;
+        exactFormMappings: number;
+        sharedUndifferentiatedMappings: number;
+        pinnedShadowMappings: number;
+      };
+      exactSpecialFormMappings: Record<string, string>;
+      pinnedShadowFormIds: string[];
+      sources: Array<{ sourceSummaryZhTw: string }>;
+      boundary: string;
+    };
+
+    expect(manifest.status).toBe("PARTIAL_EVIDENCE_PVP");
+    expect(manifest.snapshot.commit).toBe("7b96d91fb553780653190ad32de001b5d9086a7f");
+    expect(manifest.snapshot.gamemasterBlobSha).toBe(
+      "05abdcd6df42ee397367bf15e72bb5864c90a2b8",
+    );
+    expect(manifest.mappingSummary).toEqual({
+      formCount: 34,
+      exactFormMappings: 34,
+      sharedUndifferentiatedMappings: 0,
+      pinnedShadowMappings: 10,
+    });
+    expect(manifest.exactSpecialFormMappings["618-galar"]).toBe("stunfisk_galarian");
+    expect(manifest.exactSpecialFormMappings["628-hisui"]).toBe("braviary_hisuian");
+    expect(manifest.exactSpecialFormMappings["641-therian"]).toBe("tornadus_therian");
+    expect(manifest.exactSpecialFormMappings["642-therian"]).toBe("thundurus_therian");
+    expect(manifest.pinnedShadowFormIds).toHaveLength(10);
+    expect(manifest.boundary).toContain("All 34 candidate forms have independent pinned PvPoke");
+    expect(manifest.boundary).toContain("no `_shadow` ID is synthesized");
+    expect(manifest.boundary).toContain("never Pokémon GO release evidence");
     expect(
       manifest.sources.every((source) => /[\u3400-\u9fff]/u.test(source.sourceSummaryZhTw)),
     ).toBe(true);
