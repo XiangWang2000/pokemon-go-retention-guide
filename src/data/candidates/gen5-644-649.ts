@@ -131,18 +131,18 @@ export const forms644649 = [
     647,
     "ORDINARY",
     "Ordinary Forme",
-    "普通形態",
+    "平常的樣子",
     ["WATER", "FIGHTING"],
-    ["Keldeo Ordinary", "Ordinary Forme Keldeo", "凱路迪歐 普通形態", "普通形態"],
+    ["Keldeo Ordinary", "Ordinary Forme Keldeo", "凱路迪歐 平常的樣子", "平常的樣子"],
   ),
   form(
     "647-resolute",
     647,
     "RESOLUTE",
     "Resolute Forme",
-    "覺悟形態",
+    "覺悟的樣子",
     ["WATER", "FIGHTING"],
-    ["Keldeo Resolute", "Resolute Forme Keldeo", "凱路迪歐 覺悟形態", "覺悟形態"],
+    ["Keldeo Resolute", "Resolute Forme Keldeo", "凱路迪歐 覺悟的樣子", "覺悟的樣子"],
   ),
   form(
     "648-aria",
@@ -220,7 +220,7 @@ export const keldeoFormTransitions644649 = [
     stardustCost: 10_000,
     mechanic: "FORM_CHANGE",
     reasonZhTw:
-      "Pokémon GO 在完成 Tales of Transformation 特殊調查第六步後，可用 50 顆凱路迪歐糖果與 10,000 星塵在普通形態／覺悟形態間切換；這是 form change，不是進化。",
+      "Pokémon GO 在完成 Tales of Transformation 特殊調查對應進度後，可用 50 顆凱路迪歐糖果與 10,000 星塵在平常的樣子／覺悟的樣子間切換；這是 form change，不是進化。",
   },
 ] as const;
 
@@ -231,7 +231,7 @@ export const kyuremFusionRelationships644649 = [
     resultFormId: "646-black",
     mechanic: "FUSION",
     reasonZhTw:
-      "Pokémon GO 以酋雷姆為合體基礎，與捷克羅姆及 Volt Fusion Energy 合體成闇黑酋雷姆；這是可分離的 Fusion，不是進化。",
+      "Pokémon GO 以酋雷姆為合體基礎，與捷克羅姆及電壓能量合體成闇黑酋雷姆；這是可分離的 Fusion，不是進化。",
   },
   {
     baseFormId: "646-unova",
@@ -239,7 +239,7 @@ export const kyuremFusionRelationships644649 = [
     resultFormId: "646-white",
     mechanic: "FUSION",
     reasonZhTw:
-      "Pokémon GO 以酋雷姆為合體基礎，與萊希拉姆及 Blaze Fusion Energy 合體成焰白酋雷姆；這是可分離的 Fusion，不是進化。",
+      "Pokémon GO 以酋雷姆為合體基礎，與萊希拉姆及火焰能量合體成焰白酋雷姆；這是可分離的 Fusion，不是進化。",
   },
 ] as const;
 
@@ -259,6 +259,7 @@ export const gen5Candidate644649 = {
     "GOHUB-POKEMONGO-FORMS-644-649-20260904",
     "BULBAPEDIA-GO-FORM-DIFFERENCES-644-649-20260904",
     "OFFICIAL-POKEMON-GO-FUSION-MECHANIC-20260904",
-    "GOHUB-KYUREM-FUSION-20260904",
+    "OFFICIAL-KYUREM-FUSION-RAID-DAY-20260110",
+    "OFFICIAL-KELDEO-RESOLUTE-20251125",
   ],
 } as const satisfies CandidateBatchDefinition;
