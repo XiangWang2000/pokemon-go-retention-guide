@@ -42,7 +42,7 @@ export const CANDIDATE_BATCH_REGISTRY = [
     minDex: 584,
     maxDex: 613,
     generation: 5,
-    stage: "IDENTITY",
+    stage: "EVIDENCE",
     definitionModule: "src/data/candidates/gen5-584-613.ts",
   },
 ] as const satisfies readonly CandidateBatchRegistryEntry[];
