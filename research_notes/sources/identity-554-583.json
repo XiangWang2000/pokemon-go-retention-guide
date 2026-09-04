@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "554-583",
+  "generation": 5,
+  "status": "CANDIDATE_IDENTITY_ONLY",
+  "sources": [
+    {
+      "id": "POKEAPI-CANONICAL-UNOVA-554-583",
+      "sourceName": "PokeAPI canonical dataset",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PokeAPI data/v2 CSV canonical Pokémon dataset",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "用於核對第五世代 #554～#583 的圖鑑編號、名稱、基礎屬性與家族身份；不單獨用來推論 Pokémon GO 地區型態、Zen Mode 或跨世代進化可取得性。"
+    },
+    {
+      "id": "GOHUB-POKEMONGO-FORMS-554-583-20260904",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Unova PokéDex (Gen 5)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokedex/unova",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "當前 Pokémon GO 合眾 Pokédex 明列 Darumaka／Darmanitan 的合眾與伽勒爾 form、兩種 Zen Mode、普通／伽勒爾 Yamask，以及普通／洗翠 Zorua 與 Zoroark，供 exact form identity 邊界使用。"
+    }
+  ],
+  "expected": {
+    "dexCount": 30,
+    "formCount": 37,
+    "multiFormDex": {
+      "554": ["554-unova", "554-galar"],
+      "555": ["555-unova-standard", "555-unova-zen", "555-galar-standard", "555-galar-zen"],
+      "562": ["562-unova", "562-galar"],
+      "570": ["570-unova", "570-hisui"],
+      "571": ["571-unova", "571-hisui"]
+    },
+    "deferredEvolutionTargets": [
+      { "fromFormId": "562-galar", "targetDexNumber": 867, "targetFormKey": "GALAR" },
+      { "fromFormId": "583-unova", "targetDexNumber": 584, "targetFormKey": "UNOVA" }
+    ]
+  },
+  "boundary": "Darumaka evolves only to the corresponding Standard Mode Darmanitan in this candidate graph; Zen Mode forms are independent identities here. Galarian Yamask -> #867 and Vanillish -> #584 are deferred until their owning candidate batches provide the exact endpoints. Hisuian Zorua and Zoroark form a separate regional evolution pair."
+}

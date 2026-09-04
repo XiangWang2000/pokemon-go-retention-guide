@@ -1,0 +1,223 @@
+import type {
+  CandidateBatchDefinition,
+  CandidateForm,
+  CandidateSpecies,
+} from "./types";
+
+export const species554583 = [
+  { dexNumber: 554, nameEn: "Darumaka", nameZhTw: "火紅不倒翁", types: ["FIRE"], familyKey: "UNOVA_FAMILY_554" },
+  { dexNumber: 555, nameEn: "Darmanitan", nameZhTw: "達摩狒狒", types: ["FIRE"], familyKey: "UNOVA_FAMILY_554" },
+  { dexNumber: 556, nameEn: "Maractus", nameZhTw: "沙鈴仙人掌", types: ["GRASS"], familyKey: "UNOVA_FAMILY_556" },
+  { dexNumber: 557, nameEn: "Dwebble", nameZhTw: "石居蟹", types: ["BUG", "ROCK"], familyKey: "UNOVA_FAMILY_557" },
+  { dexNumber: 558, nameEn: "Crustle", nameZhTw: "岩殿居蟹", types: ["BUG", "ROCK"], familyKey: "UNOVA_FAMILY_557" },
+  { dexNumber: 559, nameEn: "Scraggy", nameZhTw: "滑滑小子", types: ["DARK", "FIGHTING"], familyKey: "UNOVA_FAMILY_559" },
+  { dexNumber: 560, nameEn: "Scrafty", nameZhTw: "頭巾混混", types: ["DARK", "FIGHTING"], familyKey: "UNOVA_FAMILY_559" },
+  { dexNumber: 561, nameEn: "Sigilyph", nameZhTw: "象徵鳥", types: ["PSYCHIC", "FLYING"], familyKey: "UNOVA_FAMILY_561" },
+  { dexNumber: 562, nameEn: "Yamask", nameZhTw: "哭哭面具", types: ["GHOST"], familyKey: "UNOVA_FAMILY_562" },
+  { dexNumber: 563, nameEn: "Cofagrigus", nameZhTw: "死神棺", types: ["GHOST"], familyKey: "UNOVA_FAMILY_562" },
+  { dexNumber: 564, nameEn: "Tirtouga", nameZhTw: "原蓋海龜", types: ["WATER", "ROCK"], familyKey: "UNOVA_FAMILY_564" },
+  { dexNumber: 565, nameEn: "Carracosta", nameZhTw: "肋骨海龜", types: ["WATER", "ROCK"], familyKey: "UNOVA_FAMILY_564" },
+  { dexNumber: 566, nameEn: "Archen", nameZhTw: "始祖小鳥", types: ["ROCK", "FLYING"], familyKey: "UNOVA_FAMILY_566" },
+  { dexNumber: 567, nameEn: "Archeops", nameZhTw: "始祖大鳥", types: ["ROCK", "FLYING"], familyKey: "UNOVA_FAMILY_566" },
+  { dexNumber: 568, nameEn: "Trubbish", nameZhTw: "破破袋", types: ["POISON"], familyKey: "UNOVA_FAMILY_568" },
+  { dexNumber: 569, nameEn: "Garbodor", nameZhTw: "灰塵山", types: ["POISON"], familyKey: "UNOVA_FAMILY_568" },
+  { dexNumber: 570, nameEn: "Zorua", nameZhTw: "索羅亞", types: ["DARK"], familyKey: "UNOVA_FAMILY_570" },
+  { dexNumber: 571, nameEn: "Zoroark", nameZhTw: "索羅亞克", types: ["DARK"], familyKey: "UNOVA_FAMILY_570" },
+  { dexNumber: 572, nameEn: "Minccino", nameZhTw: "泡沫栗鼠", types: ["NORMAL"], familyKey: "UNOVA_FAMILY_572" },
+  { dexNumber: 573, nameEn: "Cinccino", nameZhTw: "奇諾栗鼠", types: ["NORMAL"], familyKey: "UNOVA_FAMILY_572" },
+  { dexNumber: 574, nameEn: "Gothita", nameZhTw: "哥德寶寶", types: ["PSYCHIC"], familyKey: "UNOVA_FAMILY_574" },
+  { dexNumber: 575, nameEn: "Gothorita", nameZhTw: "哥德小童", types: ["PSYCHIC"], familyKey: "UNOVA_FAMILY_574" },
+  { dexNumber: 576, nameEn: "Gothitelle", nameZhTw: "哥德小姐", types: ["PSYCHIC"], familyKey: "UNOVA_FAMILY_574" },
+  { dexNumber: 577, nameEn: "Solosis", nameZhTw: "單卵細胞球", types: ["PSYCHIC"], familyKey: "UNOVA_FAMILY_577" },
+  { dexNumber: 578, nameEn: "Duosion", nameZhTw: "雙卵細胞球", types: ["PSYCHIC"], familyKey: "UNOVA_FAMILY_577" },
+  { dexNumber: 579, nameEn: "Reuniclus", nameZhTw: "人造細胞卵", types: ["PSYCHIC"], familyKey: "UNOVA_FAMILY_577" },
+  { dexNumber: 580, nameEn: "Ducklett", nameZhTw: "鴨寶寶", types: ["WATER", "FLYING"], familyKey: "UNOVA_FAMILY_580" },
+  { dexNumber: 581, nameEn: "Swanna", nameZhTw: "舞天鵝", types: ["WATER", "FLYING"], familyKey: "UNOVA_FAMILY_580" },
+  { dexNumber: 582, nameEn: "Vanillite", nameZhTw: "迷你冰", types: ["ICE"], familyKey: "UNOVA_FAMILY_582" },
+  { dexNumber: 583, nameEn: "Vanillish", nameZhTw: "多多冰", types: ["ICE"], familyKey: "UNOVA_FAMILY_582" },
+] as const satisfies readonly CandidateSpecies[];
+
+const speciesByDex = new Map<number, CandidateSpecies>(
+  species554583.map((species) => [species.dexNumber, species]),
+);
+
+function standardForm(dexNumber: number, evolvesFromDex: number | null): CandidateForm {
+  const species = speciesByDex.get(dexNumber);
+  if (!species) throw new Error(`Missing Gen5 candidate species #${dexNumber}.`);
+  return {
+    id: `${String(dexNumber).padStart(3, "0")}-unova`,
+    dexNumber,
+    formKey: "UNOVA",
+    formNameEn: "Unova",
+    formNameZhTw: "合眾",
+    regionKey: "UNOVA",
+    types: species.types,
+    aliases: [species.nameEn, species.nameEn.toLowerCase(), species.nameZhTw, "Unova", "合眾"],
+    evolvesFromFormId:
+      evolvesFromDex === null ? null : `${String(evolvesFromDex).padStart(3, "0")}-unova`,
+  };
+}
+
+export const forms554583 = [
+  {
+    id: "554-unova",
+    dexNumber: 554,
+    formKey: "UNOVA",
+    formNameEn: "Unova",
+    formNameZhTw: "合眾",
+    regionKey: "UNOVA",
+    types: ["FIRE"],
+    aliases: ["Darumaka", "darumaka", "火紅不倒翁", "Unova", "合眾"],
+    evolvesFromFormId: null,
+  },
+  {
+    id: "554-galar",
+    dexNumber: 554,
+    formKey: "GALAR",
+    formNameEn: "Galarian",
+    formNameZhTw: "伽勒爾",
+    regionKey: "GALAR",
+    types: ["ICE"],
+    aliases: ["Galarian Darumaka", "Darumaka Galarian", "伽勒爾火紅不倒翁", "伽勒爾"],
+    evolvesFromFormId: null,
+  },
+  {
+    id: "555-unova-standard",
+    dexNumber: 555,
+    formKey: "UNOVA_STANDARD",
+    formNameEn: "Standard Mode",
+    formNameZhTw: "普通模式",
+    regionKey: "UNOVA",
+    types: ["FIRE"],
+    aliases: ["Darmanitan", "Darmanitan Standard", "達摩狒狒", "普通模式"],
+    evolvesFromFormId: "554-unova",
+  },
+  {
+    id: "555-unova-zen",
+    dexNumber: 555,
+    formKey: "UNOVA_ZEN",
+    formNameEn: "Zen Mode",
+    formNameZhTw: "達摩模式",
+    regionKey: "UNOVA",
+    types: ["FIRE", "PSYCHIC"],
+    aliases: ["Darmanitan Zen", "Zen Mode Darmanitan", "達摩狒狒 達摩模式"],
+    evolvesFromFormId: null,
+  },
+  {
+    id: "555-galar-standard",
+    dexNumber: 555,
+    formKey: "GALAR_STANDARD",
+    formNameEn: "Galarian Standard Mode",
+    formNameZhTw: "伽勒爾的樣子／普通模式",
+    regionKey: "GALAR",
+    types: ["ICE"],
+    aliases: ["Galarian Darmanitan", "Galarian Standard Darmanitan", "伽勒爾達摩狒狒"],
+    evolvesFromFormId: "554-galar",
+  },
+  {
+    id: "555-galar-zen",
+    dexNumber: 555,
+    formKey: "GALAR_ZEN",
+    formNameEn: "Galarian Zen Mode",
+    formNameZhTw: "伽勒爾的樣子／達摩模式",
+    regionKey: "GALAR",
+    types: ["ICE", "FIRE"],
+    aliases: ["Galarian Darmanitan Zen", "Galarian Zen Mode Darmanitan", "伽勒爾達摩狒狒 達摩模式"],
+    evolvesFromFormId: null,
+  },
+  standardForm(556, null),
+  standardForm(557, null),
+  standardForm(558, 557),
+  standardForm(559, null),
+  standardForm(560, 559),
+  standardForm(561, null),
+  standardForm(562, null),
+  {
+    id: "562-galar",
+    dexNumber: 562,
+    formKey: "GALAR",
+    formNameEn: "Galarian",
+    formNameZhTw: "伽勒爾",
+    regionKey: "GALAR",
+    types: ["GROUND", "GHOST"],
+    aliases: ["Galarian Yamask", "Yamask Galarian", "伽勒爾哭哭面具", "伽勒爾"],
+    evolvesFromFormId: null,
+  },
+  standardForm(563, 562),
+  standardForm(564, null),
+  standardForm(565, 564),
+  standardForm(566, null),
+  standardForm(567, 566),
+  standardForm(568, null),
+  standardForm(569, 568),
+  standardForm(570, null),
+  {
+    id: "570-hisui",
+    dexNumber: 570,
+    formKey: "HISUI",
+    formNameEn: "Hisuian",
+    formNameZhTw: "洗翠",
+    regionKey: "HISUI",
+    types: ["NORMAL", "GHOST"],
+    aliases: ["Hisuian Zorua", "Zorua Hisuian", "洗翠索羅亞", "洗翠"],
+    evolvesFromFormId: null,
+  },
+  standardForm(571, 570),
+  {
+    id: "571-hisui",
+    dexNumber: 571,
+    formKey: "HISUI",
+    formNameEn: "Hisuian",
+    formNameZhTw: "洗翠",
+    regionKey: "HISUI",
+    types: ["NORMAL", "GHOST"],
+    aliases: ["Hisuian Zoroark", "Zoroark Hisuian", "洗翠索羅亞克", "洗翠"],
+    evolvesFromFormId: "570-hisui",
+  },
+  standardForm(572, null),
+  standardForm(573, 572),
+  standardForm(574, null),
+  standardForm(575, 574),
+  standardForm(576, 575),
+  standardForm(577, null),
+  standardForm(578, 577),
+  standardForm(579, 578),
+  standardForm(580, null),
+  standardForm(581, 580),
+  standardForm(582, null),
+  standardForm(583, 582),
+] as const satisfies readonly CandidateForm[];
+
+export const evolutionPairs554583 = forms554583
+  .filter((form) => form.evolvesFromFormId !== null)
+  .map((form) => [form.evolvesFromFormId!, form.id] as const);
+
+export const deferredEvolutionTargets554583 = [
+  {
+    fromFormId: "562-galar",
+    targetDexNumber: 867,
+    targetFormKey: "GALAR",
+    reasonZhTw:
+      "伽勒爾哭哭面具可進化為 #867 死神板；等 Gen8 candidate 擁有 endpoint 後再正式 materialize。",
+  },
+  {
+    fromFormId: "583-unova",
+    targetDexNumber: 584,
+    targetFormKey: "UNOVA",
+    reasonZhTw:
+      "多多冰的下一階 #584 雙倍多多冰屬於下一候選批次；等 #584 endpoint 由下一批擁有後再 materialize。",
+  },
+] as const;
+
+export const gen5Candidate554583 = {
+  key: "554-583",
+  generation: 5,
+  species: species554583,
+  forms: forms554583,
+  evolutionPairs: evolutionPairs554583,
+  deferredEvolutionTargets: deferredEvolutionTargets554583,
+  identitySourceIds: [
+    "POKEAPI-CANONICAL-UNOVA-554-583",
+    "GOHUB-POKEMONGO-FORMS-554-583-20260904",
+  ],
+} as const satisfies CandidateBatchDefinition;
