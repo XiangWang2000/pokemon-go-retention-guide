@@ -45,6 +45,14 @@ export const CANDIDATE_BATCH_REGISTRY = [
     stage: "EVIDENCE",
     definitionModule: "src/data/candidates/gen5-584-613.ts",
   },
+  {
+    key: "614-643",
+    minDex: 614,
+    maxDex: 643,
+    generation: 5,
+    stage: "IDENTITY",
+    definitionModule: "src/data/candidates/gen5-614-643.ts",
+  },
 ] as const satisfies readonly CandidateBatchRegistryEntry[];
 
 export function assertCandidateBatchRegistry(
