@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "554-583",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_PVP",
+  "snapshot": {
+    "provider": "PvPoke",
+    "commit": "7b96d91fb553780653190ad32de001b5d9086a7f",
+    "gamemasterBlobSha": "05abdcd6df42ee397367bf15e72bb5864c90a2b8",
+    "root": "data/sources/pvpoke/2026-09-01",
+    "leagues": {
+      "GREAT": { "cp": 1500, "blobSha": "11427d49e8020bbb2d022cf6a5072e81a0e3b945" },
+      "ULTRA": { "cp": 2500, "blobSha": "399f2c7708c85bfbb8ea8eaaf56d72bc8c1f48aa" },
+      "MASTER": { "cp": 10000, "blobSha": "5b42677886dad78c8c805973eda7f10ba4880e58" }
+    }
+  },
+  "exactSpecialFormMappings": {
+    "554-galar": "darumaka_galarian",
+    "555-unova-standard": "darmanitan_standard",
+    "555-unova-zen": "darmanitan_zen",
+    "555-galar-standard": "darmanitan_galarian_standard",
+    "555-galar-zen": "darmanitan_galarian_zen",
+    "562-galar": "yamask_galarian",
+    "570-hisui": "zorua_hisuian",
+    "571-hisui": "zoroark_hisuian"
+  },
+  "shadowBoundary": {
+    "rule": "Shadow speciesId is recorded only when the pinned PvPoke data supports an exact Shadow identity; regional/Zen forms never synthesize a _shadow ID by naming convention.",
+    "examplesWithoutShadowMapping": [
+      "554-galar",
+      "555-unova-zen",
+      "555-galar-standard",
+      "555-galar-zen",
+      "562-galar",
+      "570-hisui",
+      "571-hisui"
+    ]
+  },
+  "notesZhTw": "第三批 PvP evidence 以固定 2026-09-01 PvPoke snapshot 與同 commit gamemaster 的 exact speciesId 為準。達摩狒狒普通模式、達摩模式、伽勒爾普通模式、伽勒爾達摩模式，以及伽勒爾哭哭面具、洗翠索羅亞／索羅亞克都分開映射；沒有 pinned Shadow identity 的 form 保持 null，不自行拼接名稱。",
+  "boundary": "PvPoke presence is battle evidence only and never release evidence. The species-level guide must display ranks for the designated ordinary/default form and may mention special-form ranks only as explicitly isolated context."
+}
