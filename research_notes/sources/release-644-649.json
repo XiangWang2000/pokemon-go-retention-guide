@@ -1,0 +1,87 @@
+{
+  "checkedAt": "2026-09-04",
+  "batch": "644-649",
+  "generation": 5,
+  "status": "PARTIAL_EVIDENCE_RELEASE",
+  "sources": [
+    {
+      "id": "SECONDARY-GOHUB-UNOVA-ROSTER-20260904",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Unova PokéDex (Gen 5)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokedex/unova",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "當前合眾 Pokédex 對 #644～#649 共 15 個 ordinary／special exact forms 中 14 個明確標示 Released: Yes；唯一明確 Released: No 為 Pirouette Forme Meloetta。"
+    },
+    {
+      "id": "OFFICIAL-KYUREM-FUSION-RAID-DAY-2026",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Battle with the twin heroes for truth or ideals during Kyurem Fusion Raid Day!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/news/kyurem-fusion-raid-day-2026?hl=en",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "官方 2026 酋雷姆合體團體戰日直接列出捷克羅姆、酋雷姆、闇黑酋雷姆與焰白酋雷姆，並明確說明酋雷姆吸收捷克羅姆／萊希拉姆的可逆合體機制，因此 Black／White Kyurem 是 Fusion form 而非進化。"
+    },
+    {
+      "id": "OFFICIAL-GOFEST-2026-GLOBAL-SUNDAY-UPDATE",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Pokémon GO Fest 2026: Global - Sunday Raid Battles update",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/news/gofest2026-global-update",
+      "accessedAt": "2026-09-04",
+      "publishedAt": "2026-07-17",
+      "sourceSummaryZhTw": "官方 GO Fest 2026 Global Sunday 團體戰更新直接列出土地雲化身／靈獸形態，以及無卡帶、Burn、Chill、Douse、Shock Drive 五種蓋諾賽克特，提供 exact-form 正面推出證據。"
+    },
+    {
+      "id": "OFFICIAL-STEELED-RESOLVE-TAKEN-OVER-2026",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Rescue Shadow Incarnate Forme Landorus and more during Steeled Resolve: Taken Over!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/en/news/steeled-resolve-taken-over-2026",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "官方活動明確要求追擊 Giovanni 並救出 Shadow Incarnate Forme Landorus，因此只確認 #645 化身形態 Shadow 已推出，不推及靈獸形態。"
+    },
+    {
+      "id": "OFFICIAL-SHADOW-PURIFICATION-MECHANIC",
+      "sourceName": "Pokémon GO Help Center",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Shadow Pokémon & Purified Pokémon",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+      "accessedAt": "2026-09-04",
+      "sourceSummaryZhTw": "官方說明 Shadow Pokémon 可使用星塵與糖果進行淨化；因此 Purified 只從同 exact form 已確認的 Shadow 狀態推導。"
+    }
+  ],
+  "confirmed": {
+    "normalReleasedCount": 14,
+    "normalExplicitUnreleased": ["648-pirouette"],
+    "directNormalReleased": [
+      "644-unova",
+      "645-incarnate",
+      "645-therian",
+      "646-unova",
+      "646-black",
+      "646-white",
+      "649-unova",
+      "649-shock",
+      "649-burn",
+      "649-chill",
+      "649-douse"
+    ],
+    "currentRosterNormalReleased": [
+      "647-ordinary",
+      "647-resolute",
+      "648-aria"
+    ],
+    "shadowDirectEventReleased": ["645-incarnate"],
+    "shadowReleasedCount": 1,
+    "purifiedReleasedCount": 1,
+    "dynamaxReleased": [],
+    "gigantamaxReleased": []
+  },
+  "boundary": "Every release state is exact-form scoped. Fourteen ordinary/special forms are RELEASED and Pirouette Meloetta is explicitly UNRELEASED. Black and White Kyurem are released Fusion outputs, not evolution targets. Landorus Incarnate and Therian ordinary forms are both released, but only Shadow Incarnate Landorus has direct release evidence; Therian Shadow remains UNKNOWN. All five Genesect identities are separately released and never borrow one another's state. Purified derives only from the same confirmed Shadow Incarnate Landorus. Dynamax, Gigantamax, and Mega remain UNKNOWN without positive exact-form evidence. PvPoke presence never implies release: Meloetta Pirouette has a pinned battle identity while Pokémon GO release evidence remains explicitly UNRELEASED."
+}
