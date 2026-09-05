@@ -61,7 +61,7 @@ jobs:
           '''
           updated, count = re.subn(
               r"function rankings\(\): Gen6RankingSnapshots \{.*?\n\}\n\nfunction allRows\(\)",
-              replacement + "\nfunction allRows()",
+              lambda _: replacement + "\nfunction allRows()",
               text,
               count=1,
               flags=re.S,
