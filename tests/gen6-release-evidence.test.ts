@@ -49,9 +49,9 @@ describe("Gen6 exact-form release evidence", () => {
   });
 
   it("records #650-#679 ordinary forms as released while limiting Shadow/Purified and Mega to positive evidence", () => {
-    expect(releasedNormalForms650679).toHaveLength(106);
-    expect(releasedShadowForms650679).toHaveLength(14);
-    expect(releasedPurifiedForms650679).toHaveLength(14);
+    expect(releasedNormalForms650679.size).toBe(106);
+    expect(releasedShadowForms650679.size).toBe(14);
+    expect(releasedPurifiedForms650679.size).toBe(14);
     expect(releasedMegaForms650679).toEqual(new Set(["652-kalos", "655-kalos", "658-kalos"]));
     expect(candidateReleaseEvidence650679("664-ocean", "NORMAL").status).toBe("RELEASED");
     expect(candidateReleaseEvidence650679("676-heart", "NORMAL").status).toBe("RELEASED");
@@ -61,7 +61,7 @@ describe("Gen6 exact-form release evidence", () => {
   });
 
   it("keeps Aegislash and Hisuian Sliggoo/Goodra release states exact in #680-#709", () => {
-    expect(releasedNormalForms680709).toHaveLength(31);
+    expect(releasedNormalForms680709.size).toBe(31);
     expect(explicitlyUnreleasedNormalForms680709).toEqual(new Set(["706-hisui"]));
     expect(unknownNormalForms680709).toEqual(new Set(["705-hisui"]));
     expect(candidateReleaseEvidence680709("681-shield", "NORMAL").status).toBe("RELEASED");
@@ -72,8 +72,8 @@ describe("Gen6 exact-form release evidence", () => {
   });
 
   it("records only positive Shadow/Max evidence and explicit exact-compatible Mega negatives in #680-#709", () => {
-    expect(releasedShadowForms680709).toHaveLength(8);
-    expect(releasedPurifiedForms680709).toHaveLength(8);
+    expect(releasedShadowForms680709.size).toBe(8);
+    expect(releasedPurifiedForms680709.size).toBe(8);
     expect(releasedMegaForms680709).toEqual(new Set(["687-kalos"]));
     expect(explicitlyUnreleasedMegaForms680709).toEqual(new Set(["689-kalos", "691-kalos", "701-kalos"]));
     expect(releasedDynamaxForms680709).toEqual(new Set(["686-kalos", "687-kalos", "700-kalos"]));
@@ -84,7 +84,7 @@ describe("Gen6 exact-form release evidence", () => {
   });
 
   it("keeps all #710-#721 normal forms released without cross-form Zygarde/Hoopa/size borrowing", () => {
-    expect(releasedNormalForms710721).toHaveLength(22);
+    expect(releasedNormalForms710721.size).toBe(22);
     for (const formId of [
       "710-small", "710-average", "710-large", "710-super",
       "711-small", "711-average", "711-large", "711-super",
