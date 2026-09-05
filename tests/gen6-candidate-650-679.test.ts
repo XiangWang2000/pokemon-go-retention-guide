@@ -104,14 +104,8 @@ describe("Gen6 #650-#679 identity candidate", () => {
     }
   });
 
-  it("defers only Honedge -> Doublade to the next owning slice", () => {
-    expect(deferredEvolutionTargets650679).toEqual([
-      expect.objectContaining({
-        fromFormId: "679-kalos",
-        targetDexNumber: 680,
-        targetFormKey: "KALOS",
-      }),
-    ]);
+  it("clears the Honedge handoff once #680 is owned by the next slice", () => {
+    expect(deferredEvolutionTargets650679).toEqual([]);
   });
 
   it("records identity provenance without promoting identity into release or battle value", () => {

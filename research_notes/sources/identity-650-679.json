@@ -62,13 +62,11 @@
     "flowerColorCount": 5,
     "furfrouFormCount": 10,
     "materializedEvolutionCount": 61,
-    "deferredEvolutionTargets": [
-      {
-        "fromFormId": "679-kalos",
-        "targetDexNumber": 680,
-        "targetFormKey": "KALOS"
-      }
+    "deferredEvolutionTargets": [],
+    "resolvedHandoff": [
+      "679-kalos",
+      "680-kalos"
     ]
   },
-  "boundary": "IDENTITY ONLY: this manifest does not assert PvP rank, Pokémon GO release state, Shadow/Purified/Mega/Max availability, or PvE value. Vivillon evolves only within the matching 18-pattern lineage; Flabébé/Floette/Florges evolve only within matching flower color; Litleo/Pyroar and Espurr/Meowstic remain gender-matched; Furfrou Form Change is never an evolution edge."
+  "boundary": "IDENTITY ONLY: this manifest does not assert PvP rank, Pokémon GO release state, Shadow/Purified/Mega/Max availability, or PvE value. Vivillon evolves only within the matching 18-pattern lineage; Flabébé/Floette/Florges evolve only within matching flower color; Litleo/Pyroar and Espurr/Meowstic remain gender-matched; Furfrou Form Change is never an evolution edge. The former #679 Honedge -> #680 Doublade deferred handoff is now materialized by the #680-#709 slice."
 }

@@ -1,6 +1,5 @@
 import type {
   CandidateBatchDefinition,
-  CandidateDeferredEvolutionTarget,
   CandidateForm,
   CandidateSpecies,
 } from "./types";
@@ -241,14 +240,7 @@ export const evolutionPairs650679 = forms650679
   .filter((form) => form.evolvesFromFormId !== null)
   .map((form) => [form.evolvesFromFormId!, form.id] as const);
 
-export const deferredEvolutionTargets650679 = [
-  {
-    fromFormId: "679-kalos",
-    targetDexNumber: 680,
-    targetFormKey: "KALOS",
-    reasonZhTw: "#679 獨劍鞘會進化為 #680 雙劍鞘；終點由下一個 Gen6 candidate slice 擁有，在該批建立前只保留 deferred edge。",
-  },
-] as const satisfies readonly CandidateDeferredEvolutionTarget[];
+export const deferredEvolutionTargets650679 = [] as const;
 
 export const furfrouFormTransitions650679 = furfrouTrims650679
   .filter((trim) => trim.slug !== "natural")
