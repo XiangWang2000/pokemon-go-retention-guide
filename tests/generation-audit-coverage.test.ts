@@ -64,10 +64,10 @@ function tableCount(items: ReturnType<typeof rows>, marker: string) {
 }
 
 describe("Gen 1-9 audit coverage", () => {
-  it("keeps formal publication scope distinct from research-only Gen 5-9 audit notes", () => {
-    // This is intentionally a QA assertion, not a success criterion for all-nine-generation
-    // publication.  It prevents presentation-only notes from being mistaken for runtime data.
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
+  it("keeps Gen6-9 research notes distinct after Gen5 publication", () => {
+    // Gen5 is now formally published through #649; later-generation audit notes remain
+    // research-only and must not be mistaken for additional runtime publication.
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
   });
 
   it("keeps Gen5-9 species-level notes explicit about variant isolation", () => {

@@ -8,8 +8,8 @@ import { candidateReleaseEvidence644649 } from "@/data/candidates/gen5-release-6
 
 describe("Gen5 #644-#649 exact-variant PvE / Max evidence", () => {
   it("keeps production scope unchanged", () => {
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
-    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
+    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
   });
 
   it("locks positive raid value for each exact form", () => {

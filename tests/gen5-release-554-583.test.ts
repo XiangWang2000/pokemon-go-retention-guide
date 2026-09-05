@@ -16,9 +16,9 @@ import {
 } from "@/data/candidates/gen5-release-554-583";
 
 describe("Gen5 #554-#583 candidate release evidence", () => {
-  it("does not expand the formal published release", () => {
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
-    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);
+  it("matches the formal published release scope", () => {
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
+    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
   });
 
   it("resolves 35 released NORMAL forms and the two explicit Zen Mode negatives", () => {

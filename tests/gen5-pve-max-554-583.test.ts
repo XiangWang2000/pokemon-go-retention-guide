@@ -8,8 +8,8 @@ import { candidateReleaseEvidence554583 } from "@/data/candidates/gen5-release-5
 
 describe("Gen5 #554-#583 exact-variant PvE / Max evidence", () => {
   it("keeps production scope unchanged", () => {
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
-    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
+    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
   });
 
   it("keeps Darmanitan forms and versions independent", () => {
