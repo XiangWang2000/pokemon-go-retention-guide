@@ -1,7 +1,7 @@
 import { CURRENT_DATA_MAX_DEX } from "./data-scope";
 
-export type BatchGeneration = 1 | 2 | 3 | 4 | 5;
-export type BatchImportAdapter = "seed" | "legacy" | "gen3" | "gen4" | "gen5";
+export type BatchGeneration = 1 | 2 | 3 | 4 | 5 | 6;
+export type BatchImportAdapter = "seed" | "legacy" | "gen3" | "gen4" | "gen5" | "gen6";
 export type BatchImportPhase = "seed" | "pre-recompute" | "post-recompute";
 
 type BatchImportSpec =
@@ -79,6 +79,18 @@ export function getBatchByKey(batch: string): BatchRegistryEntry {
 }
 
 function defaultFormId(generation: BatchGeneration, dexNumber: number) {
+  if (generation === 6) {
+    const exceptions: Readonly<Record<number, string>> = {
+      664: "664-continental", 665: "665-continental", 666: "666-continental",
+      667: "667-male", 668: "668-male", 669: "669-red-flower",
+      670: "670-red-flower", 671: "671-red-flower", 676: "676-natural",
+      677: "677-male", 678: "678-male", 681: "681-shield",
+      705: "705-kalos", 706: "706-kalos", 710: "710-average",
+      711: "711-average", 713: "713-kalos", 718: "718-50-percent",
+      720: "720-confined",
+    };
+    return exceptions[dexNumber] ?? `${String(dexNumber).padStart(3, "0")}-kalos`;
+  }
   if (generation !== 5) {
     const region = { 1: "kanto", 2: "johto", 3: "hoenn", 4: "sinnoh" }[generation as 1 | 2 | 3 | 4];
     return `${String(dexNumber).padStart(3, "0")}-${region}`;
