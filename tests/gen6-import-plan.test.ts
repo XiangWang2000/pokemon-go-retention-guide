@@ -10,9 +10,14 @@ import {
 import { GEN6_LOCAL_RANKING_PATHS } from "@/data/candidates/gen6-pvp";
 
 function rankings(): Gen6RankingSnapshots {
+  const paths: Record<Gen6PlanLeague, string> = {
+    GREAT: GEN6_LOCAL_RANKING_PATHS.GL,
+    ULTRA: GEN6_LOCAL_RANKING_PATHS.UL,
+    MASTER: GEN6_LOCAL_RANKING_PATHS.ML,
+  };
   const result = {} as Record<Gen6PlanLeague, Gen6PvpRankingRow[]>;
-  for (const [league, path] of Object.entries(GEN6_LOCAL_RANKING_PATHS) as Array<[Gen6PlanLeague, string]>) {
-    result[league] = JSON.parse(readFileSync(path, "utf8").replace(/^\uFEFF/, "")) as Gen6PvpRankingRow[];
+  for (const [league, sourcePath] of Object.entries(paths) as Array<[Gen6PlanLeague, string]>) {
+    result[league] = JSON.parse(readFileSync(sourcePath, "utf8").replace(/^\uFEFF/, "")) as Gen6PvpRankingRow[];
   }
   return result;
 }
