@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-09-05",
+  "generation": 6,
+  "scope": "650-721",
+  "status": "CANDIDATE_PVP_EVIDENCE",
+  "pvpokeCommit": "7b96d91fb553780653190ad32de001b5d9086a7f",
+  "sources": [
+    {
+      "id": "PVPOKE-GAMEMASTER-GEN6-20260901",
+      "sourceName": "PvPoke",
+      "sourceType": "SECONDARY",
+      "sourceUrl": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/gamemaster.json",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "固定 commit 的 gamemaster 用於判定 exact battle speciesId、Shadow battle identity 與 form differentiation；PvPoke 的 released 欄位不作為 Pokémon GO release 證據。"
+    },
+    {
+      "id": "PVPOKE-OPEN-RANKINGS-GEN6-20260901",
+      "sourceName": "PvPoke",
+      "sourceType": "SECONDARY",
+      "sourceUrl": "https://github.com/pvpoke/pvpoke/tree/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/overall",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "專案固定的 2026-09-01 GL/UL/ML Open ranking snapshot；species-level presentation 只讀指定 default form 的 battle identity，不取同圖鑑其他型態或 Shadow 的最佳名次。"
+    }
+  ],
+  "expected": {
+    "dexCount": 72,
+    "formCount": 161,
+    "exactMappingCount": 74,
+    "sharedUndifferentiatedCount": 85,
+    "noPinnedIdCount": 2,
+    "shadowBattleIdentityCount": 26,
+    "sharedFamilies": ["Vivillon pattern lineages", "Litleo/Pyroar gender", "Flabebe flower colors", "Furfrou trims", "Espurr gender"],
+    "noPinnedIds": ["705-hisui", "706-hisui"]
+  },
+  "specialBoundaries": {
+    "meowstic": "speciesId meowstic is explicitly Meowstic (Male); meowstic_female is exact Female.",
+    "aegislash": "Blade and Shield are separate pinned battle identities; Shield is the released/searchable presentation form, Blade is a battle stance and never an evolution target.",
+    "zygarde": "zygarde_10 = 10% Forme; zygarde = 50% Forme; zygarde_complete = Complete Forme.",
+    "hoopa": "speciesId hoopa is the released Psychic/Ghost battle row used for Confined presentation; hoopa_confined is a duplicate legacy released=false row; hoopa_unbound is exact Unbound."
+  },
+  "boundary": "PvPoke battle presence, rankings, Shadow IDs, Mega IDs and its internal released flag are battle evidence only. They never imply Pokémon GO release state, obtainable form state, PvE value, Mega release, Shadow release or keep recommendation by themselves."
+}

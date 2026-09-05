@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-09-05",
+  "batch": "650-679",
+  "generation": 6,
+  "status": "PARTIAL_EVIDENCE_PVE_MAX",
+  "sources": [
+    {"sourceUrl":"https://db.pokemongohub.net/pokemon/652","supports":["652-kalos-normal"],"sourceSummaryZhTw":"普通布里卡隆為草系 A Tier #25；Frenzy Plant 為主要團戰價值來源。"},
+    {"sourceUrl":"https://db.pokemongohub.net/pokemon/652-Shadow","supports":["652-kalos-shadow"],"sourceSummaryZhTw":"暗影布里卡隆為草系 S Tier #5；暗影價值只屬此 exact variant。"},
+    {"sourceUrl":"https://db.pokemongohub.net/pokemon/652-Mega","supports":["652-kalos-mega"],"sourceSummaryZhTw":"Mega 布里卡隆為草系 S Tier #1，支持核心 Mega 投資。"},
+    {"sourceUrl":"https://db.pokemongohub.net/pokemon/655","supports":["655-kalos-normal"],"sourceSummaryZhTw":"普通妖火紅狐為火系 B Tier #35；Blast Burn 依賴保留但只列可用型。"},
+    {"sourceUrl":"https://db.pokemongohub.net/pokemon/655-Shadow","supports":["655-kalos-shadow"],"sourceSummaryZhTw":"暗影妖火紅狐為火系 A+ Tier #13，但來源明確不建議最大化投入，故列可用型。"},
+    {"sourceUrl":"https://db.pokemongohub.net/pokemon/655-Mega","supports":["655-kalos-mega"],"sourceSummaryZhTw":"Mega 妖火紅狐為火系 S Tier #1、超能力 S Tier #9，支持核心投資。"},
+    {"sourceUrl":"https://db.pokemongohub.net/pokemon/658","supports":["658-kalos-normal"],"sourceSummaryZhTw":"普通甲賀忍蛙為水系 A+ Tier #20，Hydro Cannon 為關鍵限定招。"},
+    {"sourceUrl":"https://db.pokemongohub.net/pokemon/658-Shadow","supports":["658-kalos-shadow"],"sourceSummaryZhTw":"暗影甲賀忍蛙為水系 A+ Tier #13，但非常脆且已存在更高上限 Mega，因此列可用型。"},
+    {"sourceUrl":"https://db.pokemongohub.net/pokemon/658-Mega","supports":["658-kalos-mega"],"sourceSummaryZhTw":"Mega 甲賀忍蛙為水系 S Tier #2、惡系 A+ Tier #16，支持核心投資。"}
+  ],
+  "boundary": "Positive PvE evidence is exact-variant scoped. Normal, Shadow and Mega starter values never propagate across variants. Frenzy Plant, Blast Burn and Hydro Cannon dependencies are explicit. This slice has no confirmed positive Dynamax/Gigantamax investment set, so Max evidence is intentionally empty. Absence means no current standalone positive investment reason, not a permanent negative assertion."
+}
