@@ -31,7 +31,6 @@ jobs:
           from pathlib import Path
           import re
 
-          # Formal importer: keep Gen5's already-hardened data model and change only generation ownership.
           gen5 = Path("scripts/data/import-gen5.ts").read_text(encoding="utf-8")
           gen6 = gen5.replace("Gen5", "Gen6").replace("gen5", "gen6").replace("第五世代", "第六世代")
           gen6 = gen6.replace("generation: 5, familyKey", "generation: 6, familyKey")
@@ -106,38 +105,48 @@ jobs:
           candidate_path.write_text(candidate, encoding="utf-8")
 
           scope_path = Path("src/config/data-scope.ts")
-          scope = scope_path.read_text(encoding="utf-8").replace("CURRENT_DATA_MAX_DEX = 649", "CURRENT_DATA_MAX_DEX = 721")
-          scope_path.write_text(scope, encoding="utf-8")
+          scope_path.write_text(scope_path.read_text(encoding="utf-8").replace("CURRENT_DATA_MAX_DEX = 649", "CURRENT_DATA_MAX_DEX = 721"), encoding="utf-8")
 
           release_path = Path("src/config/release.ts")
-          release = release_path.read_text(encoding="utf-8").replace('DATA_VERSION = "2026.09.05-r32"', 'DATA_VERSION = "2026.09.05-r33"')
-          release_path.write_text(release, encoding="utf-8")
+          release_path.write_text(release_path.read_text(encoding="utf-8").replace('DATA_VERSION = "2026.09.05-r32"', 'DATA_VERSION = "2026.09.05-r33"'), encoding="utf-8")
 
           contract_path = Path("src/config/release-contract.ts")
           contract = contract_path.read_text(encoding="utf-8")
           contract = re.sub(r'battleVariants: \d+,', 'battleVariants: 3757,', contract, count=1)
           contract = re.sub(r'families: \d+,', 'families: 0,', contract, count=1)
-          # IV rules are cross-generation/global until the rebuild proves otherwise.
           contract = re.sub(r'ivRecommendations: \d+,', 'ivRecommendations: 13,', contract, count=1)
           contract_path.write_text(contract, encoding="utf-8")
 
-          # Publication changes the global boundary. Patch only tests that explicitly assert the current boundary.
           for path in Path("tests").glob("*.test.ts"):
             text = path.read_text(encoding="utf-8")
             text = text.replace("expect(CURRENT_DATA_MAX_DEX).toBe(649);", "expect(CURRENT_DATA_MAX_DEX).toBe(721);")
             text = text.replace("expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);", "expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(721);")
+            text = text.replace("expect(CANDIDATE_BATCH_REGISTRY.map((entry) => entry.generation)).not.toContain(5);", "expect(CANDIDATE_BATCH_REGISTRY).toEqual([]);")
+            text = text.replace("expect(CANDIDATE_BATCH_REGISTRY.map((entry) => entry.generation)).not.toContain(6);", "expect(CANDIDATE_BATCH_REGISTRY).toEqual([]);")
             path.write_text(text, encoding="utf-8")
 
-          # Gen6 candidate tests now protect the published handoff instead of requiring a candidate entry.
           for path in Path("tests").glob("gen6-*.test.ts"):
             text = path.read_text(encoding="utf-8")
             text = re.sub(
               r'expect\(CANDIDATE_BATCH_REGISTRY\.find\(.*?\)\)\.toMatchObject\(\{.*?\}\);',
-              'expect(CANDIDATE_BATCH_REGISTRY.map((entry) => entry.generation)).not.toContain(6);',
+              'expect(CANDIDATE_BATCH_REGISTRY).toEqual([]);',
               text,
               flags=re.S,
             )
             path.write_text(text, encoding="utf-8")
+
+          pvp_test = Path("tests/gen6-pvp-evidence.test.ts")
+          pvp = pvp_test.read_text(encoding="utf-8")
+          pvp, count = re.subn(
+            r'  it\("advances all Gen6 candidate slices to evidence while production is still #649", \(\) => \{.*?\n  \}\);',
+            '  it("removes Gen6 from candidate staging after formal publication", () => {\n    expect(CANDIDATE_BATCH_REGISTRY).toEqual([]);\n  });',
+            pvp,
+            count=1,
+            flags=re.S,
+          )
+          if count != 1:
+            raise SystemExit("failed to replace Gen6 PvP candidate-stage assertion")
+          pvp_test.write_text(pvp, encoding="utf-8")
 
           audit = Path("tests/generation-audit-coverage.test.ts")
           text = audit.read_text(encoding="utf-8")
@@ -161,7 +170,7 @@ jobs:
         run: |
           npm run lint
           npm run typecheck
-          npx vitest run tests/gen6-*.test.ts tests/batch-registry.test.ts tests/generation-audit-coverage.test.ts
+          npx vitest run tests/gen6-*.test.ts tests/generation-audit-coverage.test.ts
 
       - name: Measure clean Gen6 rebuild invariants
         shell: bash
