@@ -82,8 +82,9 @@ describe("Gen6 pinned PvP exact-form evidence", () => {
   });
 
   it("pins the same source commit used by the repository ranking snapshot", () => {
-    const source = JSON.parse(readFileSync("data/sources/pvpoke/2026-09-01/source-version.json", "utf8")) as { commit: string };
-    expect(GEN6_PVPOKE_COMMIT).toBe(source.commit);
+    const source = JSON.parse(readFileSync("data/sources/pvpoke/2026-09-01/source-version.json", "utf8")) as Array<{ sha: string }>;
+    expect(source).toHaveLength(1);
+    expect(GEN6_PVPOKE_COMMIT).toBe(source[0]?.sha);
   });
 
   it("keeps species-level guide ranks tied to designated ordinary/default forms, never best alternate or Shadow", () => {
