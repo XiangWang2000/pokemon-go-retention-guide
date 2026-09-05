@@ -11,10 +11,7 @@ export type CandidateBatchRegistryEntry = {
   definitionModule: string;
 };
 
-/**
- * Candidate batches must begin immediately after the published registry.
- * Gen5 is formally published through #649, so Gen6 staging begins at #650.
- */
+/** Candidate batches must begin immediately after the published registry. */
 export const CANDIDATE_BATCH_REGISTRY = [
   {
     key: "650-679",
@@ -24,11 +21,17 @@ export const CANDIDATE_BATCH_REGISTRY = [
     stage: "IDENTITY",
     definitionModule: "src/data/candidates/gen6-650-679.ts",
   },
+  {
+    key: "680-709",
+    minDex: 680,
+    maxDex: 709,
+    generation: 6,
+    stage: "IDENTITY",
+    definitionModule: "src/data/candidates/gen6-680-709.ts",
+  },
 ] as const satisfies readonly CandidateBatchRegistryEntry[];
 
-export function assertCandidateBatchRegistry(
-  entries: readonly CandidateBatchRegistryEntry[] = CANDIDATE_BATCH_REGISTRY,
-) {
+export function assertCandidateBatchRegistry(entries: readonly CandidateBatchRegistryEntry[] = CANDIDATE_BATCH_REGISTRY) {
   const publishedMaxDex = BATCH_REGISTRY.at(-1)?.maxDex ?? 0;
   const keys = new Set<string>();
   let expectedStart = publishedMaxDex + 1;

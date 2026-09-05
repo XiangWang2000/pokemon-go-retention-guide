@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-09-05",
+  "batch": "680-709",
+  "generation": 6,
+  "status": "CANDIDATE_IDENTITY_ONLY",
+  "sources": [
+    {
+      "id": "POKEAPI-CANONICAL-KALOS-680-709",
+      "sourceName": "PokeAPI canonical dataset",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PokeAPI data/v2 CSV canonical Pokémon dataset",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "核對 #680～#709 圖鑑編號、名稱、屬性、家族與基礎進化關係；Pokémon GO 特殊型態邊界另以 GO 專屬資料核對。"
+    },
+    {
+      "id": "SEREBII-GO-AEGISLASH-FORMES-20260905",
+      "sourceName": "Serebii.net",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Aegislash - #0681 - Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/pokemon/681.shtml",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "Pokémon GO 資料將堅盾劍怪的 Blade Forme 與 Shield Forme 分開，且姿態切換由戰鬥動作觸發；兩者不得建成進化關係或互借型態數值。"
+    },
+    {
+      "id": "SEREBII-GO-SLIGGOO-GOODRA-FORMES-20260905",
+      "sourceName": "Serebii.net",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Sliggoo / Goodra - Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/pokemon/705.shtml",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "Pokémon GO 資料分列一般與洗翠黏美兒／黏美龍；本模型維持 Kalos 與 Hisui exact form，普通黏黏寶只接普通黏美兒，洗翠支線不得由普通支線回灌。"
+    },
+    {
+      "id": "PUBLISHED-EEVEE-FAMILY-SYLVEON-HANDOFF-20260905",
+      "sourceName": "pokemon-go-retention-guide",
+      "sourceType": "PROJECT_CANONICAL",
+      "sourceTitleOriginal": "Published Eevee family #133",
+      "sourceLanguage": "en",
+      "sourceUrl": "src/data/batch-121-151.ts",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "沿用已發布 #133 伊布的 KANTO_FAMILY_133，讓 #700 仙子伊布成為跨世代 endpoint，而不是另建一個錯誤的 Kalos 家族。"
+    }
+  ],
+  "expected": {
+    "dexCount": 30,
+    "formCount": 33,
+    "materializedEvolutionCount": 16,
+    "aegislashFormCount": 2,
+    "sliggooFormCount": 2,
+    "goodraFormCount": 2,
+    "incomingCrossBatchEdge": ["679-kalos", "680-kalos"],
+    "incomingCrossGenerationEdge": ["133-kanto", "700-kalos"]
+  },
+  "boundary": "IDENTITY ONLY: no PvP/release/PvE/Shadow/Mega/Max claim. Aegislash Blade/Shield are battle stances, not evolution. Kalos and Hisui Sliggoo/Goodra remain isolated. Sylveon remains in the already-published Eevee family."
+}
