@@ -10,6 +10,7 @@ on:
 permissions:
   contents: write
 
+# One-shot verifier for the Gen6 candidate publication branch.
 jobs:
   align:
     runs-on: ubuntu-latest
