@@ -26,7 +26,7 @@ describe("Gen6 #650-#679 identity candidate", () => {
       minDex: 650,
       maxDex: 679,
       generation: 6,
-      stage: "IDENTITY",
+      stage: "EVIDENCE",
     });
     expect(() => assertCandidateBatchRegistry()).not.toThrow();
   });
@@ -95,7 +95,8 @@ describe("Gen6 #650-#679 identity candidate", () => {
   it("keeps every materialized evolution edge within one family", () => {
     expect(evolutionPairs650679).toHaveLength(61);
     const formById = new Map(forms650679.map((form) => [form.id, form]));
-    const speciesByDex = new Map(species650679.map((species) => [species.dexNumber, species]));
+    const speciesByDex = new Map<number, (typeof species650679)[number]>();
+    for (const species of species650679) speciesByDex.set(species.dexNumber, species);
     for (const [fromFormId, toFormId] of evolutionPairs650679) {
       const from = formById.get(fromFormId)!;
       const to = formById.get(toFormId)!;

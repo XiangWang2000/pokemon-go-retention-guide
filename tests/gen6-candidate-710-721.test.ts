@@ -22,7 +22,7 @@ describe("Gen6 #710-#721 identity candidate", () => {
       minDex: 710,
       maxDex: 721,
       generation: 6,
-      stage: "IDENTITY",
+      stage: "EVIDENCE",
     });
   });
 

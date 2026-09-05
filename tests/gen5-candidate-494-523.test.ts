@@ -66,7 +66,7 @@ describe("Gen5 #494-#523 publication candidate", () => {
   it("does not change the formal published scope", () => {
     expect(CURRENT_DATA_MAX_DEX).toBe(649);
     expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
-    expect(CANDIDATE_BATCH_REGISTRY.every((entry) => entry.generation !== 5)).toBe(true);
+    expect(CANDIDATE_BATCH_REGISTRY.map((entry) => entry.generation)).not.toContain(5);
     expect(() => assertCandidateBatchRegistry()).not.toThrow();
   });
 

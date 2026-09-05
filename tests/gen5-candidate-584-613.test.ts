@@ -60,7 +60,7 @@ describe("Gen5 #584-#613 publication candidate", () => {
     expect(() => assertCandidateBatchRegistry()).not.toThrow();
     expect(CURRENT_DATA_MAX_DEX).toBe(649);
     expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
-    expect(CANDIDATE_BATCH_REGISTRY.every((entry) => entry.generation !== 5)).toBe(true);
+    expect(CANDIDATE_BATCH_REGISTRY.map((entry) => entry.generation)).not.toContain(5);
   });
 
   it("covers 30 National Dex identities as 38 exact Pokémon GO forms", () => {

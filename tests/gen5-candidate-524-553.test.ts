@@ -46,7 +46,7 @@ function guideRows() {
 describe("Gen5 #524-#553 publication candidate", () => {
   it("keeps its registry entry valid as later candidate slices are appended", () => {
     expect(() => assertCandidateBatchRegistry()).not.toThrow();
-    expect(CANDIDATE_BATCH_REGISTRY.every((entry) => entry.generation !== 5)).toBe(true);
+    expect(CANDIDATE_BATCH_REGISTRY.map((entry) => entry.generation)).not.toContain(5);
   });
 
   it("covers 30 dex identities as 33 exact forms", () => {
