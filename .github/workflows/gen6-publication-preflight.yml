@@ -51,6 +51,15 @@ jobs:
           npm run typecheck
           npx vitest run tests/gen6-candidate-650-679.test.ts tests/gen6-candidate-680-709.test.ts tests/gen6-candidate-710-721.test.ts tests/gen6-import-plan.test.ts tests/gen6-pvp-evidence.test.ts tests/gen6-release-evidence.test.ts tests/gen6-pve-max-evidence.test.ts tests/generation-audit-coverage.test.ts
 
+      - name: Establish validated source baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add docs/data-coverage.md src/config/batch-registry.ts src/config/candidate-batch-registry.ts src/config/data-scope.ts src/config/release-contract.ts src/config/release.ts tests/gen6-candidate-650-679.test.ts tests/gen6-candidate-680-709.test.ts tests/gen6-candidate-710-721.test.ts tests/gen6-pve-max-evidence.test.ts tests/gen6-pvp-evidence.test.ts tests/generation-audit-coverage.test.ts tests/static-snapshot.test.ts
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: stage Gen6 formal publication source"
+
       - name: Clean-room rebuild through formal Gen6
         shell: bash
         run: |
@@ -118,13 +127,13 @@ jobs:
           set -euo pipefail
           git add -A
           if git diff --cached --quiet; then
-            echo "No publication changes to commit."
+            echo "No generated publication changes to commit."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -m "data: preflight Gen6 formal release through #721"
-            git push origin "HEAD:refs/heads/${GITHUB_REF_NAME}"
           fi
+          git push origin "HEAD:refs/heads/${GITHUB_REF_NAME}"
 
       - name: Promote validated tree to PR branch
         shell: bash
