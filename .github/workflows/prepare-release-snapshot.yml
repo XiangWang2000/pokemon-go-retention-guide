@@ -2,12 +2,6 @@ name: Prepare Release Snapshot
 
 on:
   workflow_dispatch:
-  # Temporary one-shot trigger for Gen5 formal publication; removed before merge.
-  push:
-    branches:
-      - data/gen5-formal-publication
-    paths:
-      - .github/workflows/prepare-release-snapshot.yml
 
 permissions:
   contents: write
@@ -30,97 +24,6 @@ jobs:
         uses: actions/checkout@v7
         with:
           fetch-depth: 0
-
-      - name: Persist Gen5 publication fixes
-        shell: bash
-        run: |
-          set -euo pipefail
-          python - <<'PY'
-          from pathlib import Path
-          import re
-
-          importer = Path("scripts/data/import-gen5.ts")
-          text = importer.read_text(encoding="utf-8")
-
-          needle = '  await prisma.sourceReference.upsert({ where: { id }, create: { id, ...data }, update: data });'
-          replacement = '\n'.join([
-              '  const canonical = await prisma.sourceReference.findFirst({',
-              '    where: { sourceUrl: source.sourceUrl, accessedAt },',
-              '    select: { id: true },',
-              '  });',
-              '  if (canonical) {',
-              '    await prisma.sourceReference.update({ where: { id: canonical.id }, data });',
-              '    return canonical.id;',
-              '  }',
-              needle,
-          ])
-          if needle not in text:
-              raise SystemExit("Gen5 source-upsert patch anchor not found")
-          text = text.replace(needle, replacement, 1)
-
-          old_change_log = '\n'.join([
-              '    const sourceId = identity.sources[0]?.id ?? release.sources[0]?.id;',
-              '    if (!sourceId) throw new Error(`Missing identity/release source for ${batch}.`);',
-          ])
-          new_change_log = '\n'.join([
-              '    const changeLogSourceUrl = identity.sources[0]?.sourceUrl ?? release.sources[0]?.sourceUrl;',
-              '    if (!changeLogSourceUrl) throw new Error(`Missing identity/release source for ${batch}.`);',
-              '    const changeLogSource = await prisma.sourceReference.findFirst({',
-              '      where: { sourceUrl: changeLogSourceUrl },',
-              '      select: { id: true },',
-              '    });',
-              '    const sourceId = changeLogSource?.id;',
-              '    if (!sourceId) throw new Error(`Canonical identity/release source was not persisted for ${batch}.`);',
-          ])
-          if old_change_log not in text:
-              raise SystemExit("Gen5 changelog source patch anchor not found")
-          text = text.replace(old_change_log, new_change_log, 1)
-          importer.write_text(text, encoding="utf-8")
-
-          test_files = [
-              "tests/gen5-candidate-494-523.test.ts",
-              "tests/gen5-candidate-524-553.test.ts",
-              "tests/gen5-candidate-554-583.test.ts",
-              "tests/gen5-candidate-584-613.test.ts",
-              "tests/gen5-candidate-614-643.test.ts",
-              "tests/gen5-candidate-644-649.test.ts",
-              "tests/gen5-pvp-644-649.test.ts",
-              "tests/gen5-release-584-613.test.ts",
-              "tests/gen5-release-614-643.test.ts",
-              "tests/gen5-release-644-649.test.ts",
-          ]
-          registry_pattern = re.compile(
-              r'    expect\(CANDIDATE_BATCH_REGISTRY\.find\(\(entry\) => entry\.key === "[^"]+"\)\)\.toMatchObject\(\{\n(?:      .*\n)+?    \}\);'
-          )
-          for file_name in test_files:
-              path = Path(file_name)
-              source = path.read_text(encoding="utf-8")
-              source = source.replace("expect(CURRENT_DATA_MAX_DEX).toBe(493);", "expect(CURRENT_DATA_MAX_DEX).toBe(649);")
-              source = source.replace("expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);", "expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);")
-              source, replaced = registry_pattern.subn(
-                  "    expect(CANDIDATE_BATCH_REGISTRY).toHaveLength(0);",
-                  source,
-                  count=1,
-              )
-              if replaced != 1:
-                  raise SystemExit(f"Candidate publication assertion patch anchor not found exactly once: {file_name}")
-              path.write_text(source, encoding="utf-8")
-          PY
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add scripts/data/import-gen5.ts \
-            tests/gen5-candidate-494-523.test.ts \
-            tests/gen5-candidate-524-553.test.ts \
-            tests/gen5-candidate-554-583.test.ts \
-            tests/gen5-candidate-584-613.test.ts \
-            tests/gen5-candidate-614-643.test.ts \
-            tests/gen5-candidate-644-649.test.ts \
-            tests/gen5-pvp-644-649.test.ts \
-            tests/gen5-release-584-613.test.ts \
-            tests/gen5-release-614-643.test.ts \
-            tests/gen5-release-644-649.test.ts
-          git commit -m "fix: align Gen5 publication contracts"
-          git push origin "HEAD:refs/heads/${GITHUB_REF_NAME}"
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
