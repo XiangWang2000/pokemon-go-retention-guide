@@ -1,0 +1,205 @@
+name: Gen6 Publication Preflight
+
+on:
+  push:
+    branches:
+      - preflight/gen6-publication
+
+permissions:
+  contents: write
+
+concurrency:
+  group: gen6-publication-preflight
+  cancel-in-progress: true
+
+jobs:
+  preflight:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      DATABASE_URL: file:./gen6-preflight.db
+      ALLOW_DESTRUCTIVE_REBUILD: "1"
+    steps:
+      - name: Checkout preflight branch
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Generate Prisma client
+        run: npm run db:generate
+
+      - name: Generate Gen6 publication scaffold
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          def transform(source: str, target: str):
+              text = Path(source).read_text(encoding="utf-8")
+              text = text.replace("Gen5", "Gen6").replace("gen5", "gen6")
+              text = text.replace("第五世代", "第六世代")
+              text = text.replace("generation: 5,", "generation: 6,")
+              Path(target).write_text(text, encoding="utf-8")
+
+          transform("scripts/data/import-gen5.ts", "scripts/data/import-gen6.ts")
+          transform("scripts/review/generate-review-gen5.ts", "scripts/review/generate-review-gen6.ts")
+
+          registry_path = Path("src/config/batch-registry.ts")
+          registry = registry_path.read_text(encoding="utf-8")
+          registry = registry.replace(
+              "export type BatchGeneration = 1 | 2 | 3 | 4 | 5;",
+              "export type BatchGeneration = 1 | 2 | 3 | 4 | 5 | 6;",
+          )
+          registry = registry.replace(
+              'export type BatchImportAdapter = "seed" | "legacy" | "gen3" | "gen4" | "gen5";',
+              'export type BatchImportAdapter = "seed" | "legacy" | "gen3" | "gen4" | "gen5" | "gen6";',
+          )
+          marker = "function defaultFormId(generation: BatchGeneration, dexNumber: number) {\n"
+          gen6_block = '''function defaultFormId(generation: BatchGeneration, dexNumber: number) {\n  if (generation === 6) {\n    const exceptions: Readonly<Record<number, string>> = {\n      664: \"664-continental\", 665: \"665-continental\", 666: \"666-continental\",\n      667: \"667-male\", 668: \"668-male\", 669: \"669-red-flower\",\n      670: \"670-red-flower\", 671: \"671-red-flower\", 676: \"676-natural\",\n      677: \"677-male\", 678: \"678-male\", 681: \"681-shield\",\n      705: \"705-kalos\", 706: \"706-kalos\", 710: \"710-average\",\n      711: \"711-average\", 713: \"713-kalos\", 718: \"718-50-percent\",\n      720: \"720-confined\",\n    };\n    return exceptions[dexNumber] ?? `${String(dexNumber).padStart(3, \"0\")}-kalos`;\n  }\n'''
+          if marker not in registry:
+              raise SystemExit("batch-registry defaultFormId marker not found")
+          registry = registry.replace(marker, gen6_block, 1)
+          registry_path.write_text(registry, encoding="utf-8")
+          PY
+
+      - name: Preserve scaffold-only state
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp src/config/batch-registry.ts /tmp/batch-registry.scaffold.ts
+          cp src/config/data-scope.ts /tmp/data-scope.original.ts
+          cp src/config/candidate-batch-registry.ts /tmp/candidate-registry.original.ts
+
+      - name: Stage temporary Gen6 publication wiring for clean-room import
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+
+          registry_path = Path("src/config/batch-registry.ts")
+          registry = registry_path.read_text(encoding="utf-8")
+          anchor = '  published("644-649", 5, "gen5", "post-recompute", "scripts/data/import-gen5.ts", "scripts/review/generate-review-gen5.ts"),\n'
+          addition = anchor + (
+              '  published("650-679", 6, "gen6", "post-recompute", "scripts/data/import-gen6.ts", "scripts/review/generate-review-gen6.ts"),\n'
+              '  published("680-709", 6, "gen6", "post-recompute", "scripts/data/import-gen6.ts", "scripts/review/generate-review-gen6.ts"),\n'
+              '  published("710-721", 6, "gen6", "post-recompute", "scripts/data/import-gen6.ts", "scripts/review/generate-review-gen6.ts"),\n'
+          )
+          if anchor not in registry:
+              raise SystemExit("Gen5 registry tail anchor not found")
+          registry_path.write_text(registry.replace(anchor, addition, 1), encoding="utf-8")
+
+          scope_path = Path("src/config/data-scope.ts")
+          scope = scope_path.read_text(encoding="utf-8")
+          if "649" not in scope:
+              raise SystemExit("CURRENT_DATA_MAX_DEX=649 marker not found")
+          scope_path.write_text(scope.replace("649", "721"), encoding="utf-8")
+
+          candidate_path = Path("src/config/candidate-batch-registry.ts")
+          candidate = candidate_path.read_text(encoding="utf-8")
+          start = candidate.index("export const CANDIDATE_BATCH_REGISTRY = [")
+          end_marker = "] as const satisfies readonly CandidateBatchRegistryEntry[];"
+          end = candidate.index(end_marker, start) + len(end_marker)
+          replacement = "export const CANDIDATE_BATCH_REGISTRY = [] as const satisfies readonly CandidateBatchRegistryEntry[];"
+          candidate_path.write_text(candidate[:start] + replacement + candidate[end:], encoding="utf-8")
+          PY
+
+      - name: Clean-room rebuild through Gen6
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f gen6-preflight.db gen6-preflight.db-journal gen6-preflight.db-shm gen6-preflight.db-wal
+          npx prisma db push
+          npx tsx scripts/data/import-batch.ts 001-030
+          npm run data:remediate
+          for batch in 031-060 061-090 091-120 121-151 152-181 182-211 212-241 242-251 252-281 282-311 312-341 342-371 372-386; do
+            npx tsx scripts/data/import-batch.ts "$batch"
+          done
+          npx tsx scripts/data/recompute-retention.ts --max 386
+          for batch in 387-416 417-446 447-476 477-493 494-523 524-553 554-583 584-613 614-643 644-649 650-679 680-709 710-721; do
+            npx tsx scripts/data/import-batch.ts "$batch"
+          done
+          npm run data:materialize-iv
+          npm run data:validate
+
+      - name: Generate Gen6 review checkpoints against preflight database
+        shell: bash
+        run: |
+          set -euo pipefail
+          for batch in 650-679 680-709 710-721; do
+            npx tsx scripts/review/generate-review-gen6.ts "$batch"
+          done
+
+      - name: Record clean-room invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          npx tsx -e '
+            import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+            import { PrismaClient } from "./generated/prisma/client";
+            import { getDashboardRows } from "./src/lib/data-prisma";
+            import { buildFormOverviews } from "./src/presentation/form-overview";
+            import { buildFamilyOverviews } from "./src/presentation/family-overview";
+            const prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL! }) });
+            const rows = await getDashboardRows();
+            const result = {
+              pokemonSpecies: await prisma.pokemonSpecies.count(),
+              pokemonForms: await prisma.pokemonForm.count(),
+              battleVariants: await prisma.battleVariant.count(),
+              sourceReferences: await prisma.sourceReference.count(),
+              rawEvaluationData: await prisma.rawEvaluationData.count(),
+              retentionEvaluations: await prisma.retentionEvaluation.count(),
+              categoryEvaluations: await prisma.categoryEvaluation.count(),
+              ivRecommendations: await prisma.ivRecommendation.count(),
+              dashboardRows: rows.length,
+              families: buildFamilyOverviews(buildFormOverviews(rows)).length,
+              trueDataPending: rows.filter((row) => row.assessmentDisposition === "TRUE_DATA_PENDING").length,
+              outOfScope: rows.filter((row) => row.dexNumber < 1 || row.dexNumber > 721).length,
+            };
+            console.log("GEN6_PREFLIGHT_COUNTS=" + JSON.stringify(result));
+            await prisma.$disconnect();
+          '
+
+      - name: Restore production scope before repository tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp /tmp/batch-registry.scaffold.ts src/config/batch-registry.ts
+          cp /tmp/data-scope.original.ts src/config/data-scope.ts
+          cp /tmp/candidate-registry.original.ts src/config/candidate-batch-registry.ts
+          rm -f review/650-679.json review/650-679.md review/680-709.json review/680-709.md review/710-721.json review/710-721.md
+          rm -f gen6-preflight.db gen6-preflight.db-journal gen6-preflight.db-shm gen6-preflight.db-wal
+
+      - name: Validate scaffold in current #649 production state
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run lint
+          npm run typecheck
+          npx vitest run tests/gen6-import-plan.test.ts tests/gen6-pve-max-evidence.test.ts tests/gen6-release-evidence.test.ts tests/gen6-pvp-evidence.test.ts tests/gen6-candidate-650-679.test.ts tests/gen6-candidate-680-709.test.ts tests/gen6-candidate-710-721.test.ts
+          npm test
+
+      - name: Commit validated scaffold only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add scripts/data/import-gen6.ts scripts/review/generate-review-gen6.ts src/config/batch-registry.ts
+          if git diff --cached --quiet; then
+            echo "No scaffold changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: add preflighted Gen6 publication adapters"
+          git push origin "HEAD:refs/heads/${GITHUB_REF_NAME}"
