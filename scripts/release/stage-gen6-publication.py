@@ -59,6 +59,16 @@ replace_once(
     '''  it("completes formal Gen6 publication through #721", () => {\n    expect(CURRENT_DATA_MAX_DEX).toBe(721);\n    expect(() => assertCandidateBatchRegistry()).not.toThrow();\n    expect(CANDIDATE_BATCH_REGISTRY.some((entry) => entry.generation === 6)).toBe(false);\n  });''',
 )
 replace_once(
+    "tests/gen6-pve-max-evidence.test.ts",
+    '''  it("keeps production scope at published Gen5 while Gen6 is still candidate evidence", () => {\n    expect(CURRENT_DATA_MAX_DEX).toBe(649);\n    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);\n  });''',
+    '''  it("keeps PvE and Max evidence aligned with the formal Gen6 publication scope", () => {\n    expect(CURRENT_DATA_MAX_DEX).toBe(721);\n    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(721);\n  });''',
+)
+replace_once(
+    "tests/gen6-pvp-evidence.test.ts",
+    '''  it("advances all Gen6 candidate slices to evidence while production is still #649", () => {\n    expect(CANDIDATE_BATCH_REGISTRY.filter((entry) => entry.generation === 6)).toHaveLength(3);\n    expect(CANDIDATE_BATCH_REGISTRY.filter((entry) => entry.generation === 6).every((entry) => entry.stage === "EVIDENCE")).toBe(true);\n  });''',
+    '''  it("retains pinned Gen6 PvP evidence after the candidate registry is cleared for publication", () => {\n    expect(CANDIDATE_BATCH_REGISTRY.filter((entry) => entry.generation === 6)).toHaveLength(0);\n  });''',
+)
+replace_once(
     "tests/generation-audit-coverage.test.ts",
     '''  it("keeps Gen6-9 research notes distinct after Gen5 publication", () => {\n    // Gen5 is now formally published through #649; later-generation audit notes remain\n    // research-only and must not be mistaken for additional runtime publication.\n    expect(CURRENT_DATA_MAX_DEX).toBe(649);\n  });''',
     '''  it("keeps Gen7-9 research notes distinct after Gen6 publication", () => {\n    // Gen5 and Gen6 are formally published through #721; later-generation audit notes remain\n    // research-only and must not be mistaken for additional runtime publication.\n    expect(CURRENT_DATA_MAX_DEX).toBe(721);\n  });''',
