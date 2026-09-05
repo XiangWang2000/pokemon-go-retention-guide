@@ -14,9 +14,9 @@ import {
 } from "@/data/candidates/gen5-release-524-553";
 
 describe("Gen5 #524-#553 candidate release evidence", () => {
-  it("does not expand the formal published release", () => {
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
-    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);
+  it("matches the formal published release scope", () => {
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
+    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
   });
 
   it("resolves all 33 exact NORMAL forms from explicit current roster entries", () => {

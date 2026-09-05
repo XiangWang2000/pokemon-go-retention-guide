@@ -10,6 +10,8 @@ on:
       - "scripts/review/**"
       - "src/data/**"
       - "src/config/batch-registry.ts"
+      # Candidate-to-published transitions change rebuild composition too.
+      - "src/config/candidate-batch-registry.ts"
       - "src/config/data-scope.ts"
       - "src/config/release.ts"
       - "src/config/release-contract.ts"

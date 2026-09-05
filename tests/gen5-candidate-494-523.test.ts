@@ -64,13 +64,9 @@ function guideRows() {
 
 describe("Gen5 #494-#523 publication candidate", () => {
   it("does not change the formal published scope", () => {
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
-    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);
-    expect(CANDIDATE_BATCH_REGISTRY.find((entry) => entry.key === "494-523")).toMatchObject({
-      key: "494-523",
-      stage: "EVIDENCE",
-      generation: 5,
-    });
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
+    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
+    expect(CANDIDATE_BATCH_REGISTRY).toHaveLength(0);
     expect(() => assertCandidateBatchRegistry()).not.toThrow();
   });
 

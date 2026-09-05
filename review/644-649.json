@@ -1,0 +1,134 @@
+{
+  "batch": "644-649",
+  "updatedAt": "2026-09-05",
+  "dataVersion": "2026.09.05-r32",
+  "rulesVersion": "2026.08.06-v7",
+  "status": "ACCEPTED",
+  "counts": {
+    "species": 6,
+    "forms": 15,
+    "battleVariants": 60,
+    "families": 15,
+    "releasedVariants": 16,
+    "unknownReleaseVariants": 43,
+    "openIssues": 0,
+    "safetyAffectingIssues": 0,
+    "trueDataPending": 0
+  },
+  "exactForms": [
+    "644-unova",
+    "645-incarnate",
+    "645-therian",
+    "646-black",
+    "646-unova",
+    "646-white",
+    "647-ordinary",
+    "647-resolute",
+    "648-aria",
+    "648-pirouette",
+    "649-burn",
+    "649-chill",
+    "649-douse",
+    "649-shock",
+    "649-unova"
+  ],
+  "checks": [
+    {
+      "name": "Gen5 exact form identity",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 batch boundary counts",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 exact release-state preservation",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 no TRUE_DATA_PENDING",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 owning-family coverage",
+      "result": "PASS"
+    }
+  ],
+  "immediateHandling": [
+    {
+      "familyId": "UNOVA_FAMILY_644:644-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留捷克羅姆（ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_645:645-incarnate",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留土地雲（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_645:645-therian",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留土地雲（ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_646:646-black",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留酋雷姆（ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_646:646-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留酋雷姆（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_646:646-white",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留酋雷姆（ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_647:647-ordinary",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留凱路迪歐（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_647:647-resolute",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留凱路迪歐（ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_648:648-aria",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留美洛耶塔（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_648:648-pirouette",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_649:649-burn",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留蓋諾賽克特（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_649:649-chill",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留蓋諾賽克特（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_649:649-douse",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留蓋諾賽克特（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_649:649-shock",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留蓋諾賽克特（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_649:649-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留蓋諾賽克特（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。"
+    }
+  ]
+}

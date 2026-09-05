@@ -58,14 +58,9 @@ function guideRows() {
 describe("Gen5 #584-#613 publication candidate", () => {
   it("registers a contiguous fourth candidate slice without publishing it", () => {
     expect(() => assertCandidateBatchRegistry()).not.toThrow();
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
-    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);
-    expect(CANDIDATE_BATCH_REGISTRY.find((entry) => entry.key === "584-613")).toMatchObject({
-      minDex: 584,
-      maxDex: 613,
-      generation: 5,
-      stage: "EVIDENCE",
-    });
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
+    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
+    expect(CANDIDATE_BATCH_REGISTRY).toHaveLength(0);
   });
 
   it("covers 30 National Dex identities as 38 exact Pokémon GO forms", () => {

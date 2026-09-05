@@ -583,14 +583,14 @@
       "sources": [
         {
           "id": "pvpoke-ml-20260901",
-          "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
+          "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
+          "url": "https://pvpoke.com/rankings/all/10000/overall/",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         },
         {
           "id": "pvpoke-ul-20260901",
-          "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
+          "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
+          "url": "https://pvpoke.com/rankings/all/2500/overall/",
           "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
         }
       ]
@@ -643,9 +643,9 @@
       "checkedAt": "2026-09-02T16:00:00.000Z",
       "source": {
         "id": "pvpoke-ml-20260901",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json"
+        "name": "PvPoke fixed ranking snapshot",
+        "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
+        "url": "https://pvpoke.com/rankings/all/10000/overall/"
       }
     },
     {
@@ -675,9 +675,9 @@
       "checkedAt": "2026-09-02T16:00:00.000Z",
       "source": {
         "id": "pvpoke-ul-20260901",
-        "name": "PvPoke",
-        "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-        "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json"
+        "name": "PvPoke fixed ranking snapshot",
+        "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
+        "url": "https://pvpoke.com/rankings/all/2500/overall/"
       }
     }
   ],
@@ -702,20 +702,20 @@
     },
     {
       "id": "pvpoke-ml-20260901",
-      "name": "PvPoke",
-      "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
+      "name": "PvPoke fixed ranking snapshot",
+      "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
+      "url": "https://pvpoke.com/rankings/all/10000/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "accessedAt": "2026-09-04T15:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
     },
     {
       "id": "pvpoke-ul-20260901",
-      "name": "PvPoke",
-      "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
+      "name": "PvPoke fixed ranking snapshot",
+      "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
+      "url": "https://pvpoke.com/rankings/all/2500/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "accessedAt": "2026-09-04T15:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open League／Overall JSON 的可重現名次與招式。"
     }
   ],

@@ -17,22 +17,12 @@
   "conflicts": [],
   "changeLogs": [
     {
-      "id": "change-gen3-252-281-eval-270-hoenn-normal-iv-c0338bae8aa637e4",
-      "fieldName": "recommendedIvStrategyZhTw",
-      "previousValue": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
-      "newValue": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
-      "changeReasonZhTw": "PvE與Mega新增可執行的資源分配線：91%以上可投入，96%以上且15攻優先長期／XL投資；低於91%仍保留急用、唯一候選、既有投入與斷點例外，不作自動傳送線。",
-      "changedAt": "2026-09-02T04:00:00.000Z",
-      "rulesVersion": "2026.09.02-v3",
-      "source": null
-    },
-    {
       "id": "recalibrate-20260809-decision-270-hoenn-normal",
       "fieldName": "decision",
       "previousValue": "TRANSFER_CANDIDATE",
       "newValue": "CONDITIONAL_KEEP",
       "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-      "changedAt": "2026-09-01T16:00:00.000Z",
+      "changedAt": "2026-09-04T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": null
     },
@@ -42,8 +32,18 @@
       "previousValue": "NO_SIGNIFICANT_USE",
       "newValue": "LIMITED_USE",
       "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-09-01T16:00:00.000Z",
+      "changedAt": "2026-09-04T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
+      "source": null
+    },
+    {
+      "id": "change-gen3-252-281-eval-270-hoenn-normal-iv-c0338bae8aa637e4",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "依實際用途分開篩選；PvP 看個體 Rank，PvE／道館先看招式、等級／CP與既有投入；15攻優先，14攻高整體IV亦可留。沒有可靠斷點時，不宣稱15/10/10一定優於14/15/15。",
+      "newValue": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
+      "changeReasonZhTw": "PvE與Mega新增可執行的資源分配線：91%以上可投入，96%以上且15攻優先長期／XL投資；低於91%仍保留急用、唯一候選、既有投入與斷點例外，不作自動傳送線。",
+      "changedAt": "2026-09-02T04:00:00.000Z",
+      "rulesVersion": "2026.09.02-v3",
       "source": null
     }
   ]

@@ -47,14 +47,9 @@ function guideRows() {
 
 describe("Gen5 #644-#649 candidate PvP evidence", () => {
   it("keeps the final Gen5 candidate at evidence stage without expanding production", () => {
-    expect(CURRENT_DATA_MAX_DEX).toBe(493);
-    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(493);
-    expect(CANDIDATE_BATCH_REGISTRY.find((entry) => entry.key === "644-649")).toMatchObject({
-      stage: "EVIDENCE",
-      minDex: 644,
-      maxDex: 649,
-      generation: 5,
-    });
+    expect(CURRENT_DATA_MAX_DEX).toBe(649);
+    expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
+    expect(CANDIDATE_BATCH_REGISTRY).toHaveLength(0);
   });
 
   it("maps all fifteen exact Pokémon GO forms to independent pinned PvPoke identities", () => {
