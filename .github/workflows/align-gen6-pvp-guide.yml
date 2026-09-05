@@ -1,0 +1,134 @@
+name: Align Gen6 PvP Guide
+
+on:
+  push:
+    branches:
+      - data/gen6-formal-publication
+    paths:
+      - .github/workflows/align-gen6-pvp-guide.yml
+
+permissions:
+  contents: write
+
+jobs:
+  align:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Recalculate Gen6 guide ranks from pinned default battle identities
+        shell: python
+        run: |
+          import json
+          import re
+          import unicodedata
+          from pathlib import Path
+
+          species = {}
+          for file in [
+              Path("src/data/candidates/gen6-650-679.ts"),
+              Path("src/data/candidates/gen6-680-709.ts"),
+              Path("src/data/candidates/gen6-710-721.ts"),
+          ]:
+              text = file.read_text(encoding="utf-8")
+              for dex, name in re.findall(r'dexNumber:\s*(\d+),\s*nameEn:\s*"([^"]+)"', text):
+                  species[int(dex)] = name
+          if sorted(species) != list(range(650, 722)):
+              raise SystemExit(f"unexpected Gen6 species coverage: {sorted(species)}")
+
+          def slug(name):
+              name = unicodedata.normalize("NFD", name)
+              name = "".join(ch for ch in name if unicodedata.category(ch) != "Mn")
+              return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")
+
+          presentation = {dex: slug(name) for dex, name in species.items()}
+          presentation.update({
+              678: "meowstic",
+              681: "aegislash_shield",
+              705: "sliggoo",
+              706: "goodra",
+              710: "pumpkaboo_average",
+              711: "gourgeist_average",
+              713: "avalugg",
+              718: "zygarde",
+              720: "hoopa",
+          })
+
+          paths = {
+              "GL": Path("data/sources/pvpoke/2026-09-01/rankings-1500.json"),
+              "UL": Path("data/sources/pvpoke/2026-09-01/rankings-2500.json"),
+              "ML": Path("data/sources/pvpoke/2026-09-01/rankings-10000.json"),
+          }
+          indexes = {}
+          for league, path in paths.items():
+              rows = json.loads(path.read_text(encoding="utf-8-sig"))
+              indexes[league] = {row["speciesId"]: i + 1 for i, row in enumerate(rows)}
+
+          expected = {}
+          for dex, sid in presentation.items():
+              parts = []
+              for league in ["GL", "UL", "ML"]:
+                  rank = indexes[league].get(sid)
+                  if rank:
+                      parts.append(f"{league}#{rank}")
+              expected[dex] = " / ".join(parts) if parts else "—"
+
+          guide = Path("research_notes/history/generation-6-kalos-retention.md")
+          lines = guide.read_text(encoding="utf-8").splitlines()
+          changed = []
+          output = []
+          row_re = re.compile(r'^(\|\s*#(\d+)\s*\|[^|]+\|[^|]+\|\s*)([^|]+?)(\s*\|.*)$')
+          for line in lines:
+              match = row_re.match(line)
+              if not match:
+                  output.append(line)
+                  continue
+              dex = int(match.group(2))
+              if dex not in expected:
+                  output.append(line)
+                  continue
+              old = match.group(3).strip()
+              new = expected[dex]
+              if old != new:
+                  changed.append(f"#{dex}: {old} -> {new} ({presentation[dex]})")
+              output.append(f"{match.group(1)}{new}{match.group(4)}")
+          guide.write_text("\n".join(output) + "\n", encoding="utf-8")
+          print("GEN6 GUIDE RANK CHANGES")
+          print("\n".join(changed) if changed else "none")
+
+          for path in Path("tests").glob("gen6-candidate-*.test.ts"):
+              text = path.read_text(encoding="utf-8")
+              text = text.replace('stage: "IDENTITY",', 'stage: "EVIDENCE",')
+              path.write_text(text, encoding="utf-8")
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Generate Prisma client
+        run: npm run db:generate
+
+      - name: Run Gen6 identity and PvP regression
+        run: npx vitest run tests/gen6-candidate-*.test.ts tests/gen6-pvp-evidence.test.ts
+
+      - name: Typecheck candidate model
+        run: npm run typecheck
+
+      - name: Commit verified PvP alignment
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add research_notes/history/generation-6-kalos-retention.md tests/gen6-candidate-*.test.ts
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: align Gen6 guide to exact PvP defaults"
+          git push origin "HEAD:refs/heads/${GITHUB_REF_NAME}"
