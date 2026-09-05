@@ -31,7 +31,7 @@ candidate = candidate_path.read_text(encoding="utf-8")
 start = candidate.index("export const CANDIDATE_BATCH_REGISTRY = [")
 end_marker = "] as const satisfies readonly CandidateBatchRegistryEntry[];"
 end = candidate.index(end_marker, start) + len(end_marker)
-replacement = "export const CANDIDATE_BATCH_REGISTRY = [] as const satisfies readonly CandidateBatchRegistryEntry[];"
+replacement = "export const CANDIDATE_BATCH_REGISTRY: readonly CandidateBatchRegistryEntry[] = [];"
 candidate_path.write_text(candidate[:start] + replacement + candidate[end:], encoding="utf-8")
 
 Path("src/config/release.ts").write_text(
