@@ -17,6 +17,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+
+      - name: Fetch pinned PvPoke gamemaster
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error \
+            https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/gamemaster.json \
+            --output /tmp/pvpoke-gamemaster.json
+
       - name: Print pinned Gen6 species IDs and ranks
         shell: python
         run: |
@@ -45,12 +54,13 @@ jobs:
           for league, path in paths.items():
             rows = json.loads(path.read_text(encoding="utf-8-sig"))
             tables[league] = {row["speciesId"]: i + 1 for i, row in enumerate(rows)}
-          ids = sorted(set().union(*(table.keys() for table in tables.values())))
-          relevant = [
-            sid for sid in ids
-            if any(sid == root or sid.startswith(root + "_") for root in roots)
-          ]
-          print("GEN6_PVPOKE_IDS_BEGIN")
+
+          gm = json.loads(Path("/tmp/pvpoke-gamemaster.json").read_text(encoding="utf-8-sig"))
+          species = gm["pokemon"] if isinstance(gm, dict) and "pokemon" in gm else gm
+          gm_ids = sorted({row["speciesId"] for row in species if isinstance(row, dict) and "speciesId" in row})
+          relevant = [sid for sid in gm_ids if any(sid == root or sid.startswith(root + "_") for root in roots)]
+
+          print("GEN6_GAMEMASTER_IDS_BEGIN")
           for sid in relevant:
             print(json.dumps({
               "speciesId": sid,
@@ -58,5 +68,5 @@ jobs:
               "UL": tables["UL"].get(sid),
               "ML": tables["ML"].get(sid),
             }, separators=(",", ":")))
-          print("GEN6_PVPOKE_IDS_END")
+          print("GEN6_GAMEMASTER_IDS_END")
           print("COUNT", len(relevant))
