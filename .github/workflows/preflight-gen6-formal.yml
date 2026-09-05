@@ -1,0 +1,254 @@
+name: Preflight Gen6 Formal Publication
+
+on:
+  push:
+    branches:
+      - preflight/gen6-formal-publication
+    paths:
+      - .github/workflows/preflight-gen6-formal.yml
+
+permissions:
+  contents: write
+
+jobs:
+  publish-preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      DATABASE_URL: file:./rebuild-ci.db
+      ALLOW_DESTRUCTIVE_REBUILD: "1"
+      NEXT_PUBLIC_BASE_PATH: /pokemon-go-retention-guide
+      NEXT_PUBLIC_SITE_URL: https://xiangwang2000.github.io/pokemon-go-retention-guide/
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Materialize Gen6 formal publication candidate
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          # Formal importer: keep Gen5's already-hardened data model and change only generation ownership.
+          gen5 = Path("scripts/data/import-gen5.ts").read_text(encoding="utf-8")
+          gen6 = gen5.replace("Gen5", "Gen6").replace("gen5", "gen6").replace("第五世代", "第六世代")
+          gen6 = gen6.replace("generation: 5, familyKey", "generation: 6, familyKey")
+          Path("scripts/data/import-gen6.ts").write_text(gen6, encoding="utf-8")
+
+          review5 = Path("scripts/review/generate-review-gen5.ts").read_text(encoding="utf-8")
+          review6 = review5.replace("Gen5", "Gen6").replace("gen5", "gen6").replace("第五世代", "第六世代")
+          Path("scripts/review/generate-review-gen6.ts").write_text(review6, encoding="utf-8")
+
+          registry_path = Path("src/config/batch-registry.ts")
+          registry = registry_path.read_text(encoding="utf-8")
+          registry = registry.replace("export type BatchGeneration = 1 | 2 | 3 | 4 | 5;", "export type BatchGeneration = 1 | 2 | 3 | 4 | 5 | 6;")
+          registry = registry.replace('export type BatchImportAdapter = "seed" | "legacy" | "gen3" | "gen4" | "gen5";', 'export type BatchImportAdapter = "seed" | "legacy" | "gen3" | "gen4" | "gen5" | "gen6";')
+          anchor = '  published("644-649", 5, "gen5", "post-recompute", "scripts/data/import-gen5.ts", "scripts/review/generate-review-gen5.ts"),'
+          additions = anchor + '\n' + '\n'.join([
+            '  published("650-679", 6, "gen6", "post-recompute", "scripts/data/import-gen6.ts", "scripts/review/generate-review-gen6.ts"),',
+            '  published("680-709", 6, "gen6", "post-recompute", "scripts/data/import-gen6.ts", "scripts/review/generate-review-gen6.ts"),',
+            '  published("710-721", 6, "gen6", "post-recompute", "scripts/data/import-gen6.ts", "scripts/review/generate-review-gen6.ts"),',
+          ])
+          if 'published("650-679", 6, "gen6"' not in registry:
+            if anchor not in registry:
+              raise SystemExit("missing Gen5 registry anchor")
+            registry = registry.replace(anchor, additions)
+
+          default_fn = '''function defaultFormId(generation: BatchGeneration, dexNumber: number) {
+            const padded = String(dexNumber).padStart(3, "0");
+            if (generation <= 4) {
+              const region = { 1: "kanto", 2: "johto", 3: "hoenn", 4: "sinnoh" }[generation as 1 | 2 | 3 | 4];
+              return `${padded}-${region}`;
+            }
+            if (generation === 5) {
+              const exceptions: Readonly<Record<number, string>> = {
+                550: "550-red-striped", 555: "555-unova-standard", 585: "585-spring", 586: "586-spring",
+                592: "592-male", 593: "593-male", 641: "641-incarnate", 642: "642-incarnate",
+                645: "645-incarnate", 647: "647-ordinary", 648: "648-aria",
+              };
+              return exceptions[dexNumber] ?? `${padded}-unova`;
+            }
+            const exceptions: Readonly<Record<number, string>> = {
+              664: "664-continental", 665: "665-continental", 666: "666-continental",
+              667: "667-male", 668: "668-male",
+              669: "669-red-flower", 670: "670-red-flower", 671: "671-red-flower",
+              676: "676-natural", 677: "677-male", 678: "678-male",
+              681: "681-shield", 705: "705-kalos", 706: "706-kalos",
+              710: "710-average", 711: "711-average", 713: "713-kalos",
+              718: "718-50-percent", 720: "720-confined",
+            };
+            return exceptions[dexNumber] ?? `${padded}-kalos`;
+          }'''
+          registry, count = re.subn(
+            r'function defaultFormId\(generation: BatchGeneration, dexNumber: number\) \{.*?\n\}',
+            lambda _: default_fn,
+            registry,
+            count=1,
+            flags=re.S,
+          )
+          if count != 1:
+            raise SystemExit("failed to replace defaultFormId")
+          registry_path.write_text(registry, encoding="utf-8")
+
+          candidate_path = Path("src/config/candidate-batch-registry.ts")
+          candidate = candidate_path.read_text(encoding="utf-8")
+          candidate, count = re.subn(
+            r'export const CANDIDATE_BATCH_REGISTRY = \[.*?\] as const satisfies readonly CandidateBatchRegistryEntry\[\];',
+            'export const CANDIDATE_BATCH_REGISTRY = [] as const satisfies readonly CandidateBatchRegistryEntry[];',
+            candidate,
+            count=1,
+            flags=re.S,
+          )
+          if count != 1:
+            raise SystemExit("failed to empty candidate registry")
+          candidate_path.write_text(candidate, encoding="utf-8")
+
+          scope_path = Path("src/config/data-scope.ts")
+          scope = scope_path.read_text(encoding="utf-8").replace("CURRENT_DATA_MAX_DEX = 649", "CURRENT_DATA_MAX_DEX = 721")
+          scope_path.write_text(scope, encoding="utf-8")
+
+          release_path = Path("src/config/release.ts")
+          release = release_path.read_text(encoding="utf-8").replace('DATA_VERSION = "2026.09.05-r32"', 'DATA_VERSION = "2026.09.05-r33"')
+          release_path.write_text(release, encoding="utf-8")
+
+          contract_path = Path("src/config/release-contract.ts")
+          contract = contract_path.read_text(encoding="utf-8")
+          contract = re.sub(r'battleVariants: \d+,', 'battleVariants: 3757,', contract, count=1)
+          contract = re.sub(r'families: \d+,', 'families: 0,', contract, count=1)
+          # IV rules are cross-generation/global until the rebuild proves otherwise.
+          contract = re.sub(r'ivRecommendations: \d+,', 'ivRecommendations: 13,', contract, count=1)
+          contract_path.write_text(contract, encoding="utf-8")
+
+          # Publication changes the global boundary. Patch only tests that explicitly assert the current boundary.
+          for path in Path("tests").glob("*.test.ts"):
+            text = path.read_text(encoding="utf-8")
+            text = text.replace("expect(CURRENT_DATA_MAX_DEX).toBe(649);", "expect(CURRENT_DATA_MAX_DEX).toBe(721);")
+            text = text.replace("expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);", "expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(721);")
+            path.write_text(text, encoding="utf-8")
+
+          # Gen6 candidate tests now protect the published handoff instead of requiring a candidate entry.
+          for path in Path("tests").glob("gen6-*.test.ts"):
+            text = path.read_text(encoding="utf-8")
+            text = re.sub(
+              r'expect\(CANDIDATE_BATCH_REGISTRY\.find\(.*?\)\)\.toMatchObject\(\{.*?\}\);',
+              'expect(CANDIDATE_BATCH_REGISTRY.map((entry) => entry.generation)).not.toContain(6);',
+              text,
+              flags=re.S,
+            )
+            path.write_text(text, encoding="utf-8")
+
+          audit = Path("tests/generation-audit-coverage.test.ts")
+          text = audit.read_text(encoding="utf-8")
+          text = text.replace("keeps Gen6-9 research notes distinct after Gen5 publication", "keeps Gen7-9 research notes distinct after Gen6 publication")
+          text = text.replace("Gen5 is now formally published through #649; later-generation audit notes remain", "Gen6 is now formally published through #721; Gen7-9 audit notes remain")
+          audit.write_text(text, encoding="utf-8")
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+
+      - name: Generate Prisma client
+        run: npm run db:generate
+
+      - name: Publication type and targeted test precheck
+        run: |
+          npm run lint
+          npm run typecheck
+          npx vitest run tests/gen6-*.test.ts tests/batch-registry.test.ts tests/generation-audit-coverage.test.ts
+
+      - name: Measure clean Gen6 rebuild invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f rebuild-ci.db
+          set +e
+          npx tsx scripts/data/verify-research-rebuild.ts > rebuild-first.log 2>&1
+          code=$?
+          set -e
+          if [ "$code" -eq 0 ]; then
+            echo "Initial rebuild already matched the provisional contract."
+            exit 0
+          fi
+          if ! grep -q "Unexpected current-release invariants: families=" rebuild-first.log; then
+            echo "Initial Gen6 rebuild failed before invariant measurement."
+            tail -n 160 rebuild-first.log
+            exit 1
+          fi
+          tail -n 40 rebuild-first.log
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          log = Path("rebuild-first.log").read_text(encoding="utf-8")
+          match = re.search(r"Unexpected current-release invariants: families=(\d+), ivRecommendations=(\d+)\.", log)
+          if not match:
+              raise SystemExit("could not parse measured release invariants")
+          families, iv = match.groups()
+          path = Path("src/config/release-contract.ts")
+          text = path.read_text(encoding="utf-8")
+          text = re.sub(r"families: \d+,", f"families: {families},", text, count=1)
+          text = re.sub(r"ivRecommendations: \d+,", f"ivRecommendations: {iv},", text, count=1)
+          path.write_text(text, encoding="utf-8")
+          print(f"Measured Gen6 contract: families={families}, ivRecommendations={iv}")
+          PY
+
+      - name: Verify clean Gen6 rebuild with measured contract
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f rebuild-ci.db
+          npx tsx scripts/data/verify-research-rebuild.ts
+          npm run data:verify:published-integrity
+
+      - name: Generate formal reviews and current recalibration
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm run review:generate
+          npx tsx scripts/review/generate-current-recalibration-report.ts
+          rm -f review/001-649-recalibration.json review/001-649-recalibration.md
+          npm run review:validate
+
+      - name: Generate and verify canonical release snapshot
+        run: |
+          npm run release:snapshot
+          npm run release:verify
+
+      - name: Align snapshot contract tests from canonical manifest
+        shell: python
+        run: |
+          from pathlib import Path
+          import json, re
+          manifest = json.loads(Path("site-data/manifest.json").read_text(encoding="utf-8"))
+          counts = manifest["counts"]
+          path = Path("tests/static-snapshot.test.ts")
+          text = path.read_text(encoding="utf-8")
+          for key in ["pokemonSpecies", "pokemonForms", "rawEvaluationData", "sourceReferences", "retentionEvaluations", "categoryEvaluations", "openReviewIssues"]:
+            value = counts[key]
+            text = re.sub(rf"{key}: \d+,", f"{key}: {value},", text, count=1)
+          path.write_text(text, encoding="utf-8")
+
+      - name: Final full gate
+        run: |
+          npm run lint
+          npm run typecheck
+          npm test
+          npm run build
+          npm run pages:verify
+
+      - name: Commit fully verified Gen6 publication tree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -A
+          git reset .github/workflows/preflight-gen6-formal.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "data: formally publish Gen6 through #721"
+          git push origin "HEAD:refs/heads/${GITHUB_REF_NAME}"
