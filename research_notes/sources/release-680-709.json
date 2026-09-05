@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-09-05",
+  "batch": "680-709",
+  "generation": 6,
+  "status": "PARTIAL_EVIDENCE_RELEASE",
+  "sources": [
+    {
+      "id": "SECONDARY-GOHUB-KALOS-ROSTER-20260905",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Kalos PokéDex (Gen 6)",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokedex/kalos",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "當前 Kalos Pokédex 對 #680～#709 ordinary forms、Aegislash Shield/Sword、Dynamax Inkay/Malamar/Sylveon、Mega Malamar 與若干明確未推出 Mega 提供 Released Yes/No。"
+    },
+    {
+      "id": "SECONDARY-GOHUB-HISUIAN-GOODRA-UNRELEASED-20260905",
+      "sourceName": "Pokémon GO Hub",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Pokémon not available yet - Hisuian Goodra",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://db.pokemongohub.net/pokemon/706-Hisuian",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "Hisuian Goodra exact page 明確顯示 Pokémon not available yet；此明確否定只套用 #706 Hisuian Goodra，不反向推定 #705 Hisuian Sliggoo。"
+    },
+    {
+      "id": "SECONDARY-SEREBII-SHADOW-ROSTER-20260905",
+      "sourceName": "Serebii.net",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Pokémon GO - Shadow Pokémon",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/shadowpokemon.shtml",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "Available Shadow Pokémon roster 正面列出 Inkay/Malamar、Helioptile/Heliolisk、Tyrunt/Tyrantrum、Amaura/Aurorus，共本批 8 個 ordinary exact forms。"
+    },
+    {
+      "id": "SECONDARY-SEREBII-GOTOUR-KALOS-2026",
+      "sourceName": "Serebii.net",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "GO Tour Kalos Global",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/events/gotourkalosglobal.shtml",
+      "accessedAt": "2026-09-05",
+      "publishedAt": "2026-03-01",
+      "sourceSummaryZhTw": "GO Tour: Kalos Global 記錄 Mega Malamar 作為活動新 Pokémon，並確認 Honedge/Doublade/Aegislash 已在 2026 活動週期實際出現。"
+    },
+    {
+      "id": "OFFICIAL-SHADOW-PURIFICATION-MECHANIC",
+      "sourceName": "Pokémon GO Help Center",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Shadow Pokémon & Purified Pokémon",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://niantic.helpshift.com/hc/en/6-pokemon-go/faq/2396-shadow-pokemon-purified-pokemon/",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "Purified 僅從同 exact form 已確認 Shadow 加官方淨化機制推導。"
+    }
+  ],
+  "confirmed": {
+    "formCount": 33,
+    "normalReleasedCount": 31,
+    "normalExplicitUnreleased": ["706-hisui"],
+    "normalUnknown": ["705-hisui"],
+    "shadowReleasedCount": 8,
+    "purifiedReleasedCount": 8,
+    "megaReleased": ["687-kalos"],
+    "megaExplicitUnreleased": ["689-kalos", "691-kalos", "701-kalos"],
+    "dynamaxReleased": ["686-kalos", "687-kalos", "700-kalos"],
+    "gigantamaxReleased": []
+  },
+  "boundary": "Aegislash Shield and Blade/Sword are independently positive in the current Kalos roster. Hisuian form identity or battle stats do not imply release: Hisuian Goodra has an explicit not-available page, while Hisuian Sliggoo stays UNKNOWN because no equally strong exact release conclusion was found. Shadow/Purified are positive only for eight current-roster ordinary forms. Mega Malamar and the three Dynamax identities are positive; Mega Barbaracle, Dragalge and Hawlucha are explicit negative roster rows. No other special state is inferred from absence."
+}
