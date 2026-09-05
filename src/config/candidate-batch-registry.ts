@@ -13,9 +13,18 @@ export type CandidateBatchRegistryEntry = {
 
 /**
  * Candidate batches must begin immediately after the published registry.
- * Gen5 #494-#649 is now formally published, so no Gen5 candidate batch remains.
+ * Gen5 is formally published through #649, so Gen6 staging begins at #650.
  */
-export const CANDIDATE_BATCH_REGISTRY = [] as const satisfies readonly CandidateBatchRegistryEntry[];
+export const CANDIDATE_BATCH_REGISTRY = [
+  {
+    key: "650-679",
+    minDex: 650,
+    maxDex: 679,
+    generation: 6,
+    stage: "IDENTITY",
+    definitionModule: "src/data/candidates/gen6-650-679.ts",
+  },
+] as const satisfies readonly CandidateBatchRegistryEntry[];
 
 export function assertCandidateBatchRegistry(
   entries: readonly CandidateBatchRegistryEntry[] = CANDIDATE_BATCH_REGISTRY,

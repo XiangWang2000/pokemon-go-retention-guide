@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-09-05",
+  "batch": "650-679",
+  "generation": 6,
+  "status": "CANDIDATE_IDENTITY_ONLY",
+  "sources": [
+    {
+      "id": "POKEAPI-CANONICAL-KALOS-650-679",
+      "sourceName": "PokeAPI canonical dataset",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PokeAPI data/v2 CSV canonical Pokémon dataset",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "用於核對第六世代 #650～#679 的圖鑑編號、英文名稱、基礎屬性與進化家族；Pokémon GO 專屬 form／譜系邊界另由 Pokémon GO 官方與當前 GO 資料核對。"
+    },
+    {
+      "id": "OFFICIAL-VIVILLON-POSTCARD-FORMS-20221215",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "粉蝶蟲、粉蝶蛹和彩粉蝶在Pokémon GO現蹤！",
+      "sourceLanguage": "zh-Hant",
+      "sourceUrl": "https://pokemongo.com/news/vivillon-launch-postcard-feature?hl=zh_Hant",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "官方說明 Pokémon GO 當時可發現 18 種彩粉蝶花紋，且不同地區取得的粉蝶蟲會進化成不同型態的粉蝶蛹，再進化成不同花紋的彩粉蝶。因此以 18 個相互隔離的 pattern lineage 建模，禁止跨花紋進化或價值回灌。"
+    },
+    {
+      "id": "OFFICIAL-FLABEBE-FIVE-FLOWERS-20220210",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "2022年Pokémon GO情人節：花蓓蓓首次亮相！",
+      "sourceLanguage": "zh-Hant",
+      "sourceUrl": "https://pokemongo.com/zh_hant/post/valentines-day-event-2022",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "官方活動資訊列出紅花、黃花、橙花、藍花、白花五種花色，並涵蓋花蓓蓓、花葉蒂、花潔夫人進化線；本模型只允許同花色沿線進化。"
+    },
+    {
+      "id": "OFFICIAL-FURFROU-FORM-CHANGE-20210921",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "「時裝週」：多麗米亞和其他扮裝的寶可夢將登上《Pokémon GO》！",
+      "sourceLanguage": "zh-Hant",
+      "sourceUrl": "https://pokemongo.com/post/fashion-week-2021/?hl=zh_hant",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "官方以 Form Change 機制介紹多麗米亞的野生樣子與多種造型；目前模型保留 Natural 加九種 Trim 的 exact identity，造型轉換永遠不建成 evolution edge。"
+    },
+    {
+      "id": "SECONDARY-GO-GENDER-FORMS-667-678-20260905",
+      "sourceName": "Serebii.net",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Pyroar / Meowstic - Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/pokemon/678.shtml",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "Pokémon GO 中 Pyroar 與 Meowstic 的雄性／雌性型態需分開看待；來源個體的性別決定其進化分支，因此 Litleo／Espurr 以 gender lineage 保留對應關係，避免交叉演化或戰鬥價值污染。"
+    }
+  ],
+  "expected": {
+    "dexCount": 30,
+    "formCount": 106,
+    "vivillonPatternCount": 18,
+    "flowerColorCount": 5,
+    "furfrouFormCount": 10,
+    "materializedEvolutionCount": 61,
+    "deferredEvolutionTargets": [
+      {
+        "fromFormId": "679-kalos",
+        "targetDexNumber": 680,
+        "targetFormKey": "KALOS"
+      }
+    ]
+  },
+  "boundary": "IDENTITY ONLY: this manifest does not assert PvP rank, Pokémon GO release state, Shadow/Purified/Mega/Max availability, or PvE value. Vivillon evolves only within the matching 18-pattern lineage; Flabébé/Floette/Florges evolve only within matching flower color; Litleo/Pyroar and Espurr/Meowstic remain gender-matched; Furfrou Form Change is never an evolution edge."
+}
