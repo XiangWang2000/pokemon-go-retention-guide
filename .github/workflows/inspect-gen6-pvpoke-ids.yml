@@ -1,0 +1,62 @@
+name: Inspect Gen6 PvPoke IDs
+
+on:
+  push:
+    branches:
+      - data/gen6-formal-publication
+    paths:
+      - .github/workflows/inspect-gen6-pvpoke-ids.yml
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+      - name: Print pinned Gen6 species IDs and ranks
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+
+          roots = [
+            "chespin","quilladin","chesnaught","fennekin","braixen","delphox",
+            "froakie","frogadier","greninja","bunnelby","diggersby","fletchling",
+            "fletchinder","talonflame","scatterbug","spewpa","vivillon","litleo",
+            "pyroar","flabebe","floette","florges","skiddo","gogoat","pancham",
+            "pangoro","furfrou","espurr","meowstic","honedge","doublade","aegislash",
+            "spritzee","aromatisse","swirlix","slurpuff","inkay","malamar","binacle",
+            "barbaracle","skrelp","dragalge","clauncher","clawitzer","helioptile",
+            "heliolisk","tyrunt","tyrantrum","amaura","aurorus","sylveon","hawlucha",
+            "dedenne","carbink","goomy","sliggoo","goodra","klefki","phantump",
+            "trevenant","pumpkaboo","gourgeist","bergmite","avalugg","noibat","noivern",
+            "xerneas","yveltal","zygarde","diancie","hoopa","volcanion"
+          ]
+          paths = {
+            "GL": Path("data/sources/pvpoke/2026-09-01/rankings-1500.json"),
+            "UL": Path("data/sources/pvpoke/2026-09-01/rankings-2500.json"),
+            "ML": Path("data/sources/pvpoke/2026-09-01/rankings-10000.json"),
+          }
+          tables = {}
+          for league, path in paths.items():
+            rows = json.loads(path.read_text(encoding="utf-8-sig"))
+            tables[league] = {row["speciesId"]: i + 1 for i, row in enumerate(rows)}
+          ids = sorted(set().union(*(table.keys() for table in tables.values())))
+          relevant = [
+            sid for sid in ids
+            if any(sid == root or sid.startswith(root + "_") for root in roots)
+          ]
+          print("GEN6_PVPOKE_IDS_BEGIN")
+          for sid in relevant:
+            print(json.dumps({
+              "speciesId": sid,
+              "GL": tables["GL"].get(sid),
+              "UL": tables["UL"].get(sid),
+              "ML": tables["ML"].get(sid),
+            }, separators=(",", ":")))
+          print("GEN6_PVPOKE_IDS_END")
+          print("COUNT", len(relevant))
