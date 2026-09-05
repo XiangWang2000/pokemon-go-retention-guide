@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      DATABASE_URL: file:./gen6-preflight.db
+      DATABASE_URL: file:./rebuild-ci.db
       ALLOW_DESTRUCTIVE_REBUILD: "1"
     steps:
       - name: Checkout preflight branch
@@ -119,7 +119,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          rm -f gen6-preflight.db gen6-preflight.db-journal gen6-preflight.db-shm gen6-preflight.db-wal
+          rm -f rebuild-ci.db rebuild-ci.db-journal rebuild-ci.db-shm rebuild-ci.db-wal
           npx prisma db push
           npx tsx scripts/data/import-batch.ts 001-030
           npm run data:remediate
@@ -179,7 +179,7 @@ jobs:
           cp /tmp/data-scope.original.ts src/config/data-scope.ts
           cp /tmp/candidate-registry.original.ts src/config/candidate-batch-registry.ts
           rm -f review/650-679.json review/650-679.md review/680-709.json review/680-709.md review/710-721.json review/710-721.md
-          rm -f gen6-preflight.db gen6-preflight.db-journal gen6-preflight.db-shm gen6-preflight.db-wal
+          rm -f rebuild-ci.db rebuild-ci.db-journal rebuild-ci.db-shm rebuild-ci.db-wal
 
       - name: Validate scaffold in current #649 production state
         shell: bash
