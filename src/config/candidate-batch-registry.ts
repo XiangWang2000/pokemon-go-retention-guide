@@ -13,9 +13,9 @@ export type CandidateBatchRegistryEntry = {
 
 /** Candidate batches must begin immediately after the published registry. */
 export const CANDIDATE_BATCH_REGISTRY = [
-  { key: "650-679", minDex: 650, maxDex: 679, generation: 6, stage: "IDENTITY", definitionModule: "src/data/candidates/gen6-650-679.ts" },
-  { key: "680-709", minDex: 680, maxDex: 709, generation: 6, stage: "IDENTITY", definitionModule: "src/data/candidates/gen6-680-709.ts" },
-  { key: "710-721", minDex: 710, maxDex: 721, generation: 6, stage: "IDENTITY", definitionModule: "src/data/candidates/gen6-710-721.ts" },
+  { key: "650-679", minDex: 650, maxDex: 679, generation: 6, stage: "EVIDENCE", definitionModule: "src/data/candidates/gen6-650-679.ts" },
+  { key: "680-709", minDex: 680, maxDex: 709, generation: 6, stage: "EVIDENCE", definitionModule: "src/data/candidates/gen6-680-709.ts" },
+  { key: "710-721", minDex: 710, maxDex: 721, generation: 6, stage: "EVIDENCE", definitionModule: "src/data/candidates/gen6-710-721.ts" },
 ] as const satisfies readonly CandidateBatchRegistryEntry[];
 
 export function assertCandidateBatchRegistry(entries: readonly CandidateBatchRegistryEntry[] = CANDIDATE_BATCH_REGISTRY) {
