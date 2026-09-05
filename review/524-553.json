@@ -1,0 +1,162 @@
+{
+  "batch": "524-553",
+  "updatedAt": "2026-09-05",
+  "dataVersion": "2026.09.05-r32",
+  "rulesVersion": "2026.08.06-v7",
+  "status": "ACCEPTED",
+  "counts": {
+    "species": 30,
+    "forms": 33,
+    "battleVariants": 135,
+    "families": 17,
+    "releasedVariants": 67,
+    "unknownReleaseVariants": 66,
+    "openIssues": 0,
+    "safetyAffectingIssues": 0,
+    "trueDataPending": 0
+  },
+  "exactForms": [
+    "524-unova",
+    "525-unova",
+    "526-unova",
+    "527-unova",
+    "528-unova",
+    "529-unova",
+    "530-unova",
+    "531-unova",
+    "532-unova",
+    "533-unova",
+    "534-unova",
+    "535-unova",
+    "536-unova",
+    "537-unova",
+    "538-unova",
+    "539-unova",
+    "540-unova",
+    "541-unova",
+    "542-unova",
+    "543-unova",
+    "544-unova",
+    "545-unova",
+    "546-unova",
+    "547-unova",
+    "548-unova",
+    "549-hisui",
+    "549-unova",
+    "550-blue-striped",
+    "550-red-striped",
+    "550-white-striped",
+    "551-unova",
+    "552-unova",
+    "553-unova"
+  ],
+  "checks": [
+    {
+      "name": "Gen5 exact form identity",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 batch boundary counts",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 exact release-state preservation",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 no TRUE_DATA_PENDING",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 owning-family coverage",
+      "result": "PASS"
+    }
+  ],
+  "immediateHandling": [
+    {
+      "familyId": "UNOVA_FAMILY_524:524-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留龐岩怪（ML 高 IV 投資候選、PvE 實戰候選、極巨候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_527:527-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_529:529-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留龍頭地鼠（ML 高 IV 投資候選、PvE 實戰候選、極巨候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_531:531-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_532:532-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留修建老匠（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_535:535-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留蟾蜍王（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_538:538-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留投摔鬼（PvP（GL Rank≤100、UL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_539:539-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_540:540-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_543:543-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_546:546-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_548:548-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_548:549-hisui",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_550:550-blue-striped",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_550:550-red-striped",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_550:550-white-striped",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_551:551-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留流氓鱷（ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "batch": "584-613",
+  "updatedAt": "2026-09-05",
+  "dataVersion": "2026.09.05-r32",
+  "rulesVersion": "2026.08.06-v7",
+  "status": "ACCEPTED",
+  "counts": {
+    "species": 30,
+    "forms": 38,
+    "battleVariants": 154,
+    "families": 19,
+    "releasedVariants": 66,
+    "unknownReleaseVariants": 86,
+    "openIssues": 0,
+    "safetyAffectingIssues": 0,
+    "trueDataPending": 0
+  },
+  "exactForms": [
+    "584-unova",
+    "585-autumn",
+    "585-spring",
+    "585-summer",
+    "585-winter",
+    "586-autumn",
+    "586-spring",
+    "586-summer",
+    "586-winter",
+    "587-unova",
+    "588-unova",
+    "589-unova",
+    "590-unova",
+    "591-unova",
+    "592-female",
+    "592-male",
+    "593-female",
+    "593-male",
+    "594-unova",
+    "595-unova",
+    "596-unova",
+    "597-unova",
+    "598-unova",
+    "599-unova",
+    "600-unova",
+    "601-unova",
+    "602-unova",
+    "603-unova",
+    "604-unova",
+    "605-unova",
+    "606-unova",
+    "607-unova",
+    "608-unova",
+    "609-unova",
+    "610-unova",
+    "611-unova",
+    "612-unova",
+    "613-unova"
+  ],
+  "checks": [
+    {
+      "name": "Gen5 exact form identity",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 batch boundary counts",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 exact release-state preservation",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 no TRUE_DATA_PENDING",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 owning-family coverage",
+      "result": "PASS"
+    }
+  ],
+  "immediateHandling": [
+    {
+      "familyId": "UNOVA_FAMILY_582:582-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_585:585-autumn",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_585:585-spring",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_585:585-summer",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_585:585-winter",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_587:587-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留電飛鼠（PvP（GL Rank≤100））；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_588:588-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留騎士蝸牛（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_590:590-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留敗露球菇（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_592:592-female",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留胖嘟嘟（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_592:592-male",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留胖嘟嘟（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_594:594-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_595:595-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_597:597-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留堅果啞鈴（PvP（UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_599:599-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留齒輪組（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_602:602-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_605:605-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_607:607-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留水晶燈火靈（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_610:610-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留雙斧戰龍（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_613:613-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留凍原熊（ML 高 IV 投資候選）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    }
+  ]
+}

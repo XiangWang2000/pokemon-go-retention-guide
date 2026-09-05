@@ -17,6 +17,16 @@
   "conflicts": [],
   "changeLogs": [
     {
+      "id": "recalibrate-20260809-disposition-059-kanto-dynamax",
+      "fieldName": "assessmentDisposition",
+      "previousValue": "TRUE_DATA_PENDING",
+      "newValue": "NOT_APPLICABLE_OR_UNRELEASED",
+      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+      "changedAt": "2026-09-04T16:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": null
+    },
+    {
       "id": "change-r8-eval-059-kanto-dynamax-iv-40bb9db086316041",
       "fieldName": "recommendedIvStrategyZhTw",
       "previousValue": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
@@ -24,16 +34,6 @@
       "changeReasonZhTw": "PvE與Mega新增可執行的資源分配線：91%以上可投入，96%以上且15攻優先長期／XL投資；低於91%仍保留急用、唯一候選、既有投入與斷點例外，不作自動傳送線。",
       "changedAt": "2026-09-02T04:00:00.000Z",
       "rulesVersion": "2026.09.02-v3",
-      "source": null
-    },
-    {
-      "id": "recalibrate-20260809-disposition-059-kanto-dynamax",
-      "fieldName": "assessmentDisposition",
-      "previousValue": "TRUE_DATA_PENDING",
-      "newValue": "NOT_APPLICABLE_OR_UNRELEASED",
-      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-09-01T16:00:00.000Z",
-      "rulesVersion": "2026.08.06-v7",
       "source": null
     }
   ]

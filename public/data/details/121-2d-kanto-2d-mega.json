@@ -17,6 +17,16 @@
   "conflicts": [],
   "changeLogs": [
     {
+      "id": "recalibrate-20260809-disposition-121-kanto-mega",
+      "fieldName": "assessmentDisposition",
+      "previousValue": "TRUE_DATA_PENDING",
+      "newValue": "LIMITED_USE",
+      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
+      "changedAt": "2026-09-04T16:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": null
+    },
+    {
       "id": "change-r13-eval-121-kanto-mega-iv-9e595160c3299a15",
       "fieldName": "recommendedIvStrategyZhTw",
       "previousValue": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
@@ -38,16 +48,6 @@
         "title": "Starmie Super Mega Raid Day 2026",
         "url": "https://pokemongo.com/en/news/starmie-super-mega-raid-day-2026"
       }
-    },
-    {
-      "id": "recalibrate-20260809-disposition-121-kanto-mega",
-      "fieldName": "assessmentDisposition",
-      "previousValue": "TRUE_DATA_PENDING",
-      "newValue": "LIMITED_USE",
-      "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-09-01T16:00:00.000Z",
-      "rulesVersion": "2026.08.06-v7",
-      "source": null
     }
   ]
 }

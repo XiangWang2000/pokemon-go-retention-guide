@@ -55,12 +55,12 @@
       "affectsFinalDecision": false,
       "provisionalDecision": "TRANSFER_CANDIDATE",
       "suggestedResearchActionZhTw": "此欄位待補，但不影響SHADOW 版本結論。缺口：次要用途或來源欄位；不會因此把整個家族改判為暫時保留，後續只需針對該版本補查並重算。",
-      "lastResearchedAt": "2026-09-01T16:00:00.000Z"
+      "lastResearchedAt": "2026-09-04T16:00:00.000Z"
     }
   ],
   "missingDataSummaryZhTw": "已有足夠資料判定目前無顯著用途；一般重複個體通常可傳送。",
   "reviewed": true,
-  "updatedAt": "2026-09-01T16:00:00.000Z",
+  "updatedAt": "2026-09-04T16:00:00.000Z",
   "pvpSummaryZhTw": "已檢查完整 PvPoke Open League／Overall 榜單，未進入可用排名；這不是缺少資料。",
   "pveSummaryZhTw": "無顯著用途。目前沒有足以支持 PvE 投資的直接用途。",
   "rocketSummaryZhTw": "目前沒有可靠、逐物種、當季且完整可重現的火箭隊全物種排名；只保存定性角色，未以 PvP／PvE 名次替代。",
@@ -604,20 +604,20 @@
       "sources": [
         {
           "id": "pvpoke-gl-20260901",
-          "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
+          "title": "PvPoke GL（超級聯盟） Open League Overall Rankings",
+          "url": "https://pvpoke.com/rankings/all/1500/overall/",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         },
         {
           "id": "pvpoke-ml-20260901",
-          "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
+          "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
+          "url": "https://pvpoke.com/rankings/all/10000/overall/",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         },
         {
           "id": "pvpoke-ul-20260901",
-          "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-          "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
+          "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
+          "url": "https://pvpoke.com/rankings/all/2500/overall/",
           "usageZhTw": "PVP 類別資料狀態與摘要的依據。"
         }
       ]
@@ -680,29 +680,29 @@
     },
     {
       "id": "pvpoke-gl-20260901",
-      "name": "PvPoke",
-      "title": "PvPoke Open League Overall Rankings (1500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-1500.json",
+      "name": "PvPoke fixed ranking snapshot",
+      "title": "PvPoke GL（超級聯盟） Open League Overall Rankings",
+      "url": "https://pvpoke.com/rankings/all/1500/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "accessedAt": "2026-09-04T15:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     },
     {
       "id": "pvpoke-ml-20260901",
-      "name": "PvPoke",
-      "title": "PvPoke Open League Overall Rankings (10000 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-10000.json",
+      "name": "PvPoke fixed ranking snapshot",
+      "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
+      "url": "https://pvpoke.com/rankings/all/10000/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "accessedAt": "2026-09-04T15:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     },
     {
       "id": "pvpoke-ul-20260901",
-      "name": "PvPoke",
-      "title": "PvPoke Open League Overall Rankings (2500 CP JSON)",
-      "url": "https://raw.githubusercontent.com/pvpoke/pvpoke/7b96d91fb553780653190ad32de001b5d9086a7f/src/data/rankings/all/overall/rankings-2500.json",
+      "name": "PvPoke fixed ranking snapshot",
+      "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
+      "url": "https://pvpoke.com/rankings/all/2500/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-02T16:00:00.000Z",
+      "accessedAt": "2026-09-04T15:00:00.000Z",
       "usageZhTw": "支援類別資料狀態、推出狀態或最終保留結論。"
     }
   ],

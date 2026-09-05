@@ -30,22 +30,12 @@
   "conflicts": [],
   "changeLogs": [
     {
-      "id": "change-r8-eval-042-kanto-normal-iv-28ae41172f843b87",
-      "fieldName": "recommendedIvStrategyZhTw",
-      "previousValue": "沒有主要用途時，不因 100% 自動產生保留理由。",
-      "newValue": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-      "changeReasonZhTw": "PvE與Mega新增可執行的資源分配線：91%以上可投入，96%以上且15攻優先長期／XL投資；低於91%仍保留急用、唯一候選、既有投入與斷點例外，不作自動傳送線。",
-      "changedAt": "2026-09-02T04:00:00.000Z",
-      "rulesVersion": "2026.09.02-v3",
-      "source": null
-    },
-    {
       "id": "recalibrate-20260809-decision-042-kanto-normal",
       "fieldName": "decision",
       "previousValue": "HOLD_FOR_NOW",
       "newValue": "TRANSFER_CANDIDATE",
       "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-      "changedAt": "2026-09-01T16:00:00.000Z",
+      "changedAt": "2026-09-04T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
       "source": null
     },
@@ -55,8 +45,18 @@
       "previousValue": "TRUE_DATA_PENDING",
       "newValue": "NO_SIGNIFICANT_USE",
       "changeReasonZhTw": "將用途明確性與資料缺口拆成逐版本狀態，不再由單一欄位外推整個家族。",
-      "changedAt": "2026-09-01T16:00:00.000Z",
+      "changedAt": "2026-09-04T16:00:00.000Z",
       "rulesVersion": "2026.08.06-v7",
+      "source": null
+    },
+    {
+      "id": "change-r8-eval-042-kanto-normal-iv-28ae41172f843b87",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "沒有主要用途時，不因 100% 自動產生保留理由。",
+      "newValue": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+      "changeReasonZhTw": "PvE與Mega新增可執行的資源分配線：91%以上可投入，96%以上且15攻優先長期／XL投資；低於91%仍保留急用、唯一候選、既有投入與斷點例外，不作自動傳送線。",
+      "changedAt": "2026-09-02T04:00:00.000Z",
+      "rulesVersion": "2026.09.02-v3",
       "source": null
     }
   ]

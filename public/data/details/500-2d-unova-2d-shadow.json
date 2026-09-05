@@ -1,0 +1,30 @@
+{
+  "paths": [
+    {
+      "id": "evolution-gen5-494-523-499-unova-500-unova",
+      "fromFormId": "499-unova",
+      "fromNameZhTw": "炒炒豬",
+      "fromFormNameZhTw": "合眾",
+      "toFormId": "500-unova",
+      "toNameZhTw": "炎武王",
+      "toFormNameZhTw": "合眾",
+      "evolutionMethodZhTw": "Pokémon GO 正式進化路徑；型態切換、Fusion 與不可互換 form 不建立進化邊。",
+      "availabilityNotesZhTw": "第五世代 494-523 identity evidence 已核對此正式進化 endpoint。",
+      "requiresEvent": false,
+      "verifiedAt": "2026-09-04T15:00:00.000Z"
+    }
+  ],
+  "conflicts": [],
+  "changeLogs": [
+    {
+      "id": "change-gen5-494-523-eval-500-unova-shadow-iv-4600ce9fc59d07bb",
+      "fieldName": "recommendedIvStrategyZhTw",
+      "previousValue": "暗影標準較寬；15攻優先但不是硬門檻，並結合招式、等級與耐久斷點。",
+      "newValue": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
+      "changeReasonZhTw": "PvE與Mega新增可執行的資源分配線：91%以上可投入，96%以上且15攻優先長期／XL投資；低於91%仍保留急用、唯一候選、既有投入與斷點例外，不作自動傳送線。",
+      "changedAt": "2026-09-02T04:00:00.000Z",
+      "rulesVersion": "2026.09.02-v3",
+      "source": null
+    }
+  ]
+}

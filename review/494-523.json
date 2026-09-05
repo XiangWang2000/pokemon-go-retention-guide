@@ -1,0 +1,139 @@
+{
+  "batch": "494-523",
+  "updatedAt": "2026-09-05",
+  "dataVersion": "2026.09.05-r32",
+  "rulesVersion": "2026.08.06-v7",
+  "status": "ACCEPTED",
+  "counts": {
+    "species": 30,
+    "forms": 30,
+    "battleVariants": 121,
+    "families": 13,
+    "releasedVariants": 69,
+    "unknownReleaseVariants": 51,
+    "openIssues": 0,
+    "safetyAffectingIssues": 0,
+    "trueDataPending": 0
+  },
+  "exactForms": [
+    "494-unova",
+    "495-unova",
+    "496-unova",
+    "497-unova",
+    "498-unova",
+    "499-unova",
+    "500-unova",
+    "501-unova",
+    "502-unova",
+    "503-unova",
+    "504-unova",
+    "505-unova",
+    "506-unova",
+    "507-unova",
+    "508-unova",
+    "509-unova",
+    "510-unova",
+    "511-unova",
+    "512-unova",
+    "513-unova",
+    "514-unova",
+    "515-unova",
+    "516-unova",
+    "517-unova",
+    "518-unova",
+    "519-unova",
+    "520-unova",
+    "521-unova",
+    "522-unova",
+    "523-unova"
+  ],
+  "checks": [
+    {
+      "name": "Gen5 exact form identity",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 batch boundary counts",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 exact release-state preservation",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 no TRUE_DATA_PENDING",
+      "result": "PASS"
+    },
+    {
+      "name": "Gen5 owning-family coverage",
+      "result": "PASS"
+    }
+  ],
+  "immediateHandling": [
+    {
+      "familyId": "UNOVA_FAMILY_494:494-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留比克提尼（PvP（UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選）；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_495:495-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留君主蛇（PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_498:498-unova",
+      "strategy": "SELECTIVE_KEEP",
+      "conclusion": "保留炎武王（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_501:501-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留雙刃丸（PvP（GL Rank≤100）），以及大劍鬼（PvP（GL Rank≤100、UL Rank≤100）、ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_504:504-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_506:506-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_509:509-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_511:511-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_513:513-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_515:515-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_517:517-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_519:519-unova",
+      "strategy": "KEEP_TARGETS",
+      "conclusion": "保留高傲雉雞（PvE 實戰候選、極巨候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_522:522-unova",
+      "strategy": "MOSTLY_TRANSFER",
+      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+    }
+  ]
+}

@@ -17,6 +17,16 @@
   "conflicts": [],
   "changeLogs": [
     {
+      "id": "recalibrate-20260809-decision-334-hoenn-mega",
+      "fieldName": "decision",
+      "previousValue": "CONDITIONAL_KEEP",
+      "newValue": "KEEP",
+      "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
+      "changedAt": "2026-09-04T16:00:00.000Z",
+      "rulesVersion": "2026.08.06-v7",
+      "source": null
+    },
+    {
       "id": "change-gen3-312-341-eval-334-hoenn-mega-iv-7f8991ca9d8c6f6b",
       "fieldName": "recommendedIvStrategyZhTw",
       "previousValue": "先確認版本、招式與投入；15攻優先；14攻高整體IV亦可留。",
@@ -24,16 +34,6 @@
       "changeReasonZhTw": "PvE與Mega新增可執行的資源分配線：91%以上可投入，96%以上且15攻優先長期／XL投資；低於91%仍保留急用、唯一候選、既有投入與斷點例外，不作自動傳送線。",
       "changedAt": "2026-09-02T04:00:00.000Z",
       "rulesVersion": "2026.09.02-v3",
-      "source": null
-    },
-    {
-      "id": "recalibrate-20260809-decision-334-hoenn-mega",
-      "fieldName": "decision",
-      "previousValue": "CONDITIONAL_KEEP",
-      "newValue": "KEEP",
-      "changeReasonZhTw": "重新套用 PvE 四級用途與逐版本資料處置規則。",
-      "changedAt": "2026-09-01T16:00:00.000Z",
-      "rulesVersion": "2026.08.06-v7",
       "source": null
     }
   ]
