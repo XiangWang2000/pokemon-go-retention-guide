@@ -151,24 +151,30 @@ jobs:
             import { getDashboardRows } from "./src/lib/data-prisma";
             import { buildFormOverviews } from "./src/presentation/form-overview";
             import { buildFamilyOverviews } from "./src/presentation/family-overview";
-            const prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL! }) });
-            const rows = await getDashboardRows();
-            const result = {
-              pokemonSpecies: await prisma.pokemonSpecies.count(),
-              pokemonForms: await prisma.pokemonForm.count(),
-              battleVariants: await prisma.battleVariant.count(),
-              sourceReferences: await prisma.sourceReference.count(),
-              rawEvaluationData: await prisma.rawEvaluationData.count(),
-              retentionEvaluations: await prisma.retentionEvaluation.count(),
-              categoryEvaluations: await prisma.categoryEvaluation.count(),
-              ivRecommendations: await prisma.ivRecommendation.count(),
-              dashboardRows: rows.length,
-              families: buildFamilyOverviews(buildFormOverviews(rows)).length,
-              trueDataPending: rows.filter((row) => row.assessmentDisposition === "TRUE_DATA_PENDING").length,
-              outOfScope: rows.filter((row) => row.dexNumber < 1 || row.dexNumber > 721).length,
-            };
-            console.log("GEN6_PREFLIGHT_COUNTS=" + JSON.stringify(result));
-            await prisma.$disconnect();
+            async function main() {
+              const prisma = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: process.env.DATABASE_URL! }) });
+              try {
+                const rows = await getDashboardRows();
+                const result = {
+                  pokemonSpecies: await prisma.pokemonSpecies.count(),
+                  pokemonForms: await prisma.pokemonForm.count(),
+                  battleVariants: await prisma.battleVariant.count(),
+                  sourceReferences: await prisma.sourceReference.count(),
+                  rawEvaluationData: await prisma.rawEvaluationData.count(),
+                  retentionEvaluations: await prisma.retentionEvaluation.count(),
+                  categoryEvaluations: await prisma.categoryEvaluation.count(),
+                  ivRecommendations: await prisma.ivRecommendation.count(),
+                  dashboardRows: rows.length,
+                  families: buildFamilyOverviews(buildFormOverviews(rows)).length,
+                  trueDataPending: rows.filter((row) => row.assessmentDisposition === "TRUE_DATA_PENDING").length,
+                  outOfScope: rows.filter((row) => row.dexNumber < 1 || row.dexNumber > 721).length,
+                };
+                console.log("GEN6_PREFLIGHT_COUNTS=" + JSON.stringify(result));
+              } finally {
+                await prisma.$disconnect();
+              }
+            }
+            main().catch((error) => { console.error(error); process.exitCode = 1; });
           '
 
       - name: Restore production scope before repository tests
