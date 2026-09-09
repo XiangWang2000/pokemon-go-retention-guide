@@ -28,18 +28,18 @@
   "variantKey": "SHADOW",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
   "notesZhTw": "Serebii 當前 Shadow Pokémon 名單正面列出此 ordinary exact form 或其同型態進化鏈；缺席者不反推為未推出。",
   "decision": "KEEP",
   "assessmentDisposition": "CLEAR_USE",
   "provenance": "MANUAL_CURATED",
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "目前沒有會阻止可執行保留／傳送判斷的未解決資料依賴。",
+  "missingDataSummaryZhTw": "已確認目前保留理由；其他未完整研究的用途維持資料缺口，不代表已證實無用途。",
   "reviewed": true,
-  "updatedAt": "2026-09-04T15:00:00.000Z",
+  "updatedAt": "2026-09-07T00:00:00.000Z",
   "pvpSummaryZhTw": "GL（超級聯盟） Overall #73；招式 DRAGON_BREATH／BRUTAL_SWING／FLY；UL（高級聯盟） Overall #67；招式 DRAGON_BREATH／BRUTAL_SWING／FLY；ML（大師聯盟） Overall #43；招式 DRAGON_BREATH／BRUTAL_SWING／FLY",
   "pveSummaryZhTw": "暗影三首惡龍搭配 Bite／Brutal Swing 目前為惡系 S Tier #6；來源明確指出 Elite Charged TM 值得投入，屬核心暗影 PvE 候選。",
   "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -47,8 +47,8 @@
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
   "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-  "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-  "requiredMovesSummaryZhTw": "依固定 PvPoke 快照優先核對：DRAGON_BREATH／BRUTAL_SWING／FLY",
+  "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+  "requiredMovesSummaryZhTw": "固定 PvPoke 招式：DRAGON_BREATH／BRUTAL_SWING／FLY；PvE 投資條件：暗影三首惡龍搭配 Bite／Brutal Swing 目前為惡系 S Tier #6；來源明確指出 Elite Charged TM 值得投入，屬核心暗影 PvE 候選。",
   "recommendedIvStrategyZhTw": "GL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。；暗影標準較寬；15攻優先，不設硬性最低IV。高價值暗影不得只因攻擊或總IV偏低而傳送或淨化；只有一隻或取得稀有時原則上至少保留一隻。淨化不可逆。",
   "ivRecommendations": [
     {
@@ -457,9 +457,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "VERIFIED",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
+      "summaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -471,7 +471,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -490,7 +490,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -509,7 +509,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -528,7 +528,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -547,11 +547,11 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "CORE_INVESTMENT",
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": [
         {
           "id": "GEN5-PVE-9cb3f3483c8f7fd7",
-          "title": "https://db.pokemongohub.net/pokemon/635-Shadow",
+          "title": "Shadow Hydreigon: Best Moveset, Counters & Max CP | Pokémon GO",
           "url": "https://db.pokemongohub.net/pokemon/635-Shadow",
           "usageZhTw": "日期化 exact-variant PvE evidence。"
         }
@@ -573,7 +573,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": [
         {
           "id": "SECONDARY-SEREBII-SHADOW-ROSTER-20260904",
@@ -617,7 +617,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     }
   ],
@@ -642,11 +642,11 @@
       "extractionMethod": "日期化 exact-variant PvE evidence。",
       "reproducible": false,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "GEN5-PVE-9cb3f3483c8f7fd7",
         "name": "Pokémon GO Hub",
-        "title": "https://db.pokemongohub.net/pokemon/635-Shadow",
+        "title": "Shadow Hydreigon: Best Moveset, Counters & Max CP | Pokémon GO",
         "url": "https://db.pokemongohub.net/pokemon/635-Shadow"
       }
     },
@@ -674,7 +674,7 @@
       "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "pvpoke-gl-20260901",
         "name": "PvPoke fixed ranking snapshot",
@@ -706,7 +706,7 @@
       "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "pvpoke-ml-20260901",
         "name": "PvPoke fixed ranking snapshot",
@@ -738,7 +738,7 @@
       "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "pvpoke-ul-20260901",
         "name": "PvPoke fixed ranking snapshot",
@@ -751,7 +751,7 @@
     {
       "id": "GEN5-PVE-9cb3f3483c8f7fd7",
       "name": "Pokémon GO Hub",
-      "title": "https://db.pokemongohub.net/pokemon/635-Shadow",
+      "title": "Shadow Hydreigon: Best Moveset, Counters & Max CP | Pokémon GO",
       "url": "https://db.pokemongohub.net/pokemon/635-Shadow",
       "type": "PVE",
       "accessedAt": "2026-09-04T15:00:00.000Z",
@@ -772,7 +772,7 @@
       "title": "PvPoke GL（超級聯盟） Open League Overall Rankings",
       "url": "https://pvpoke.com/rankings/all/1500/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-04T15:00:00.000Z",
+      "accessedAt": "2026-09-07T00:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
     },
     {
@@ -781,7 +781,7 @@
       "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
       "url": "https://pvpoke.com/rankings/all/10000/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-04T15:00:00.000Z",
+      "accessedAt": "2026-09-07T00:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
     },
     {
@@ -790,7 +790,7 @@
       "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
       "url": "https://pvpoke.com/rankings/all/2500/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-04T15:00:00.000Z",
+      "accessedAt": "2026-09-07T00:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
     }
   ],

@@ -96,7 +96,7 @@ function category(row: DashboardRow, key: string) {
 function assessmentRows(rows: DashboardRow[]) {
   const released = rows.filter((row) => row.isReleased && row.releaseStatus === "RELEASED");
   const heldUnknown = rows.filter(
-    (row) => row.decision === "HOLD_FOR_NOW" && row.releaseStatus !== "UNRELEASED",
+    (row) => row.decision === "HOLD_FOR_NOW" && (row.releaseStatus === "RELEASED" || row.variantKey === "NORMAL" && row.releaseStatus === "UNKNOWN"),
   );
   return released.length
     ? [...released, ...heldUnknown.filter((row) => !released.includes(row))]
@@ -652,7 +652,7 @@ function buildRetentionReason(rows: DashboardRow[], decision: DashboardRow["deci
       ...new Set(holdRows.map((row) => variantShortLabelZhTw(row.variantKey, row.formId))),
     ].join("、");
     return evolutionOnly
-      ? `保留適合進化的個體；${heldVariants}版本推出狀態未確認，先暫時保留。`
+      ? `保留適合進化的個體；${heldVariants}版本關鍵資料未確認，先暫時保留。`
       : `依已確認用途挑選個體；${heldVariants}版本關鍵資料未確認，先暫時保留。`;
   }
   if (decision === "TRANSFER_CANDIDATE") return "一般重複個體通常可傳送。";

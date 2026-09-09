@@ -109,8 +109,8 @@ describe("review batch coverage", () => {
     };
     const runner = readFileSync("scripts/review/generate-all-reviews.ts", "utf8");
 
-    expect(pkg.scripts["review:generate"]).toBe("tsx scripts/review/generate-all-reviews.ts");
-    expect(pkg.scripts["data:import:batch"]).toBe("tsx scripts/data/import-batch.ts");
+    expect(pkg.scripts["review:generate"]).toBe("node --import tsx scripts/review/generate-all-reviews.ts");
+    expect(pkg.scripts["data:import:batch"]).toBe("node --import tsx scripts/data/import-batch.ts");
     expect(Object.keys(pkg.scripts).filter((name) => name.startsWith("data:import:"))).toEqual([
       "data:import:batch",
     ]);

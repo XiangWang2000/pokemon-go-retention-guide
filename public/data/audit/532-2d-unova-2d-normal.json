@@ -18,7 +18,7 @@
       "fromFormId": "532-unova",
       "toFormId": "533-unova",
       "requiresEvent": false,
-      "verifiedAt": "2026-09-04T15:00:00.000Z",
+      "verifiedAt": "2026-09-07T00:00:00.000Z",
       "isEvolutionStub": false,
       "targetUseLevel": null,
       "targetNameEn": "Gurdurr",
@@ -42,18 +42,18 @@
   "variantKey": "NORMAL",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
   "notesZhTw": "GO Hub 當前合眾 Pokédex 對此 exact Pokémon GO form 明確標示 Released: Yes；包含普通／洗翠裙兒小姐與野蠻鱸魚各條紋型態。",
-  "decision": "TRANSFER_CANDIDATE",
-  "assessmentDisposition": "NO_SIGNIFICANT_USE",
+  "decision": "CONDITIONAL_KEEP",
+  "assessmentDisposition": "LIMITED_USE",
   "provenance": "MANUAL_CURATED",
-  "confidence": "HIGH",
-  "dataStatus": "DATA_UNAVAILABLE",
+  "confidence": "MEDIUM",
+  "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "目前沒有會阻止可執行保留／傳送判斷的未解決資料依賴。",
+  "missingDataSummaryZhTw": "已確認目前保留理由；其他未完整研究的用途維持資料缺口，不代表已證實無用途。",
   "reviewed": true,
-  "updatedAt": "2026-09-04T15:00:00.000Z",
+  "updatedAt": "2026-09-07T00:00:00.000Z",
   "pvpSummaryZhTw": "GL（超級聯盟） Overall #436；招式 LOW_KICK／BRICK_BREAK／ROCK_TOMB",
   "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
   "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -61,9 +61,9 @@
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
   "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-  "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-  "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-  "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+  "evolutionSummaryZhTw": "進化候選 534-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。修建老匠目前約為 A Tier #22 格鬥系攻擊手，仍具可靠團戰用途，但在更高階格鬥手存在下列為可用／預算型投資。 進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
+  "requiredMovesSummaryZhTw": "進化候選 534-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。修建老匠目前約為 A Tier #22 格鬥系攻擊手，仍具可靠團戰用途，但在更高階格鬥手存在下列為可用／預算型投資。 進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
+  "recommendedIvStrategyZhTw": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
   "ivRecommendations": [
     {
       "id": "iv-global-evolution",
@@ -456,7 +456,7 @@
       "rulesVersion": "2026.09.02-v3"
     }
   ],
-  "reasonZhTw": "目前受控證據沒有確認主要戰鬥用途；一般重複個體可優先列為傳送候選。",
+  "reasonZhTw": "只選留適合作進化的個體；進化候選 534-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。修建老匠目前約為 A Tier #22 格鬥系攻擊手，仍具可靠團戰用途，但在更高階格鬥手存在下列為可用／預算型投資。 進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
   "evaluationId": "gen5-524-553-eval-532-unova-normal",
   "rulesVersion": "2026.08.06-v7",
   "reviewNotesZhTw": "由 Gen5 524-553 formal publication importer 依 candidate evidence 產生。",
@@ -471,10 +471,10 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "VERIFIED",
+      "status": "PARTIALLY_VERIFIED",
       "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-      "materialToDecision": false,
+      "summaryZhTw": "進化候選 534-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。修建老匠目前約為 A Tier #22 格鬥系攻擊手，仍具可靠團戰用途，但在更高階格鬥手存在下列為可用／預算型投資。 進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
+      "materialToDecision": true,
       "rocketRating": null,
       "rocketRoles": [],
       "maxTypeRank": null,
@@ -485,8 +485,27 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
-      "sources": []
+      "checkedAt": "2026-09-07T00:00:00.000Z",
+      "sources": [
+        {
+          "id": "GEN5-PVE-a7441b016718ffe5",
+          "title": "https://db.pokemongohub.net/pokemon/534",
+          "url": "https://db.pokemongohub.net/pokemon/534",
+          "usageZhTw": "僅供進化至 534-unova-normal 的候選用途；不宣稱前階自身戰力。"
+        },
+        {
+          "id": "pvpoke-ml-20260901",
+          "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
+          "url": "https://pvpoke.com/rankings/all/10000/overall/",
+          "usageZhTw": "僅供進化至 534-unova-normal 的候選用途；不宣稱前階自身戰力。"
+        },
+        {
+          "id": "pvpoke-ul-20260901",
+          "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
+          "url": "https://pvpoke.com/rankings/all/2500/overall/",
+          "usageZhTw": "僅供進化至 534-unova-normal 的候選用途；不宣稱前階自身戰力。"
+        }
+      ]
     },
     {
       "category": "GYM",
@@ -504,7 +523,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -523,7 +542,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -542,7 +561,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -559,9 +578,9 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -580,7 +599,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": [
         {
           "id": "SECONDARY-GOHUB-UNOVA-ROSTER-20260904",
@@ -612,7 +631,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     }
   ],
@@ -641,7 +660,7 @@
       "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "pvpoke-gl-20260901",
         "name": "PvPoke fixed ranking snapshot",
@@ -651,6 +670,15 @@
     }
   ],
   "sources": [
+    {
+      "id": "GEN5-PVE-a7441b016718ffe5",
+      "name": "Pokémon GO Hub",
+      "title": "https://db.pokemongohub.net/pokemon/534",
+      "url": "https://db.pokemongohub.net/pokemon/534",
+      "type": "PVE",
+      "accessedAt": "2026-09-03T15:00:00.000Z",
+      "usageZhTw": "僅供進化至 534-unova-normal 的候選用途；不宣稱前階自身戰力。"
+    },
     {
       "id": "SECONDARY-GOHUB-UNOVA-ROSTER-20260904",
       "name": "Pokémon GO Hub",
@@ -666,17 +694,42 @@
       "title": "PvPoke GL（超級聯盟） Open League Overall Rankings",
       "url": "https://pvpoke.com/rankings/all/1500/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-04T15:00:00.000Z",
+      "accessedAt": "2026-09-07T00:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
+    },
+    {
+      "id": "pvpoke-ml-20260901",
+      "name": "PvPoke fixed ranking snapshot",
+      "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
+      "url": "https://pvpoke.com/rankings/all/10000/overall/",
+      "type": "PVP",
+      "accessedAt": "2026-09-07T00:00:00.000Z",
+      "usageZhTw": "僅供進化至 534-unova-normal 的候選用途；不宣稱前階自身戰力。"
+    },
+    {
+      "id": "pvpoke-ul-20260901",
+      "name": "PvPoke fixed ranking snapshot",
+      "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
+      "url": "https://pvpoke.com/rankings/all/2500/overall/",
+      "type": "PVP",
+      "accessedAt": "2026-09-07T00:00:00.000Z",
+      "usageZhTw": "僅供進化至 534-unova-normal 的候選用途；不宣稱前階自身戰力。"
     }
   ],
   "traces": [
     {
-      "ruleKey": "LOW_GENERAL_VALUE",
-      "priority": 100,
+      "ruleKey": "CONDITIONAL_USE",
+      "priority": 700,
       "matched": true,
-      "resultDecision": "TRANSFER_CANDIDATE",
+      "resultDecision": "CONDITIONAL_KEEP",
       "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
+    },
+    {
+      "ruleKey": "VALUABLE_EVOLUTION",
+      "priority": 650,
+      "matched": true,
+      "resultDecision": "CONDITIONAL_KEEP",
+      "explanationZhTw": "進化候選 534-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。修建老匠目前約為 A Tier #22 格鬥系攻擊手，仍具可靠團戰用途，但在更高階格鬥手存在下列為可用／預算型投資。 進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。"
     }
   ],
   "moves": []

@@ -36,6 +36,7 @@ const npm = process.platform === "win32" ? "npm.cmd" : "npm";
 const npx = process.platform === "win32" ? "npx.cmd" : "npx";
 
 async function run(command: string, args: string[]) {
+  if (args[0] === "tsx") { command = process.execPath; args = ["--import", "tsx", ...args.slice(1)]; }
   await new Promise<void>((resolve, reject) => {
     const child = spawn(command, args, {
       stdio: "inherit",
@@ -67,8 +68,17 @@ if (seedBatches.length !== 1 || !recomputeMaxDex || postRecomputeBatches.length 
 }
 assertBatchRegistry();
 
+async function publishedVariantsBefore(minDex: number) {
+  const guard = new PrismaClient({ adapter: new PrismaBetterSqlite3({ url: databaseUrl }) });
+  try { return await guard.battleVariant.findMany({ where: { pokemonForm: { species: { dexNumber: { lt: minDex } } } }, select: { id: true } }); }
+  finally { await guard.$disconnect(); }
+}
 async function runBatchImport(batch: (typeof BATCH_REGISTRY)[number]) {
+  const before = await publishedVariantsBefore(batch.minDex);
   await run(npx, ["tsx", "scripts/data/import-batch.ts", batch.key]);
+  const after = new Set((await publishedVariantsBefore(batch.minDex)).map((row) => row.id));
+  const lost = before.filter((row) => !after.has(row.id));
+  if (lost.length) throw new Error(`Batch ${batch.key} removed earlier published variants: ${lost.map((row) => row.id).join(", ")}`);
 }
 
 await run(npx, ["prisma", "db", "push"]);

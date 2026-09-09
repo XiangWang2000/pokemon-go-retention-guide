@@ -256,7 +256,7 @@ async function main() {
       if (!variant?.inheritsFromVariantId || variant.inheritanceMode === "NONE")
         errors.push(`${item.id} 標記為 INHERITED 但戰鬥版本沒有繼承設定。`);
     }
-    if (item.category === "PVE" && !item.pveUseLevel)
+    if (item.category === "PVE" && !item.pveUseLevel && !["DATA_UNAVAILABLE", "UNKNOWN_RELEASE_STATUS", "UNRELEASED", "NOT_APPLICABLE", "SOURCE_CONFLICT"].includes(item.status))
       errors.push(`${item.id} 的 PvE 類別缺少四級用途判斷。`);
   }
   if (

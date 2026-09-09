@@ -26,7 +26,7 @@ describe("repository organization", () => {
     };
 
     expect(packageJson.scripts["data:materialize-iv"]).toBe(
-      "tsx scripts/data/materialize-structured-iv.ts",
+      "node --import tsx scripts/data/materialize-structured-iv.ts",
     );
     expect(packageJson.scripts["data:backfill-iv"]).toBeUndefined();
     expect(files("scripts/data")).not.toContain("backfill-structured-iv.ts");

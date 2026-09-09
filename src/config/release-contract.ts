@@ -24,7 +24,7 @@ export const CURRENT_RELEASE_CONTRACT = {
     battleVariants: 3105,
     families: 409,
     ivRecommendations: 13,
-    trueDataPending: 0,
+    trueDataPending: 598,
   },
   snapshot: {
     databaseUrl: "file:./rebuild-ci.db",

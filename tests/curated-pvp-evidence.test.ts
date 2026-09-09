@@ -119,7 +119,7 @@ describe("independent curated PvP evidence", () => {
       "utf8",
     );
 
-    expect(packageJson.scripts["data:recompute"]).toBe("tsx scripts/data/recompute-retention.ts");
+    expect(packageJson.scripts["data:recompute"]).toBe("node --import tsx scripts/data/recompute-retention.ts");
     expect(
       Object.keys(packageJson.scripts).filter((name) => name.startsWith("data:recompute:")),
     ).toEqual([]);

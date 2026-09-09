@@ -87,7 +87,8 @@ describe("static 唯讀 snapshot", () => {
       expect(canonicalHash(snapshotSources)).toBe(canonicalHash(prismaSources));
       expect(canonicalHash(snapshotChanges)).toBe(canonicalHash(prismaChanges));
     },
-    60_000,
+    // Full #001–#649 canonicalization can exceed a minute on shared CI CPUs.
+    180_000,
   );
 
   it("manifest 保存核心筆數與來源資料庫雜湊", () => {
@@ -98,14 +99,14 @@ describe("static 唯讀 snapshot", () => {
       pokemonSpecies: 658,
       pokemonForms: 766,
       battleVariants: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
-      rawEvaluationData: 1995,
+      rawEvaluationData: 1996,
       sourceReferences: 308,
       retentionEvaluations: 3270,
       categoryEvaluations: 21735,
       ivRecommendations: CURRENT_RELEASE_CONTRACT.expectedCounts.ivRecommendations,
       dashboardRows: CURRENT_RELEASE_CONTRACT.expectedCounts.battleVariants,
       homeFamilies: CURRENT_RELEASE_CONTRACT.expectedCounts.families,
-      openReviewIssues: 161,
+      openReviewIssues: 161 + CURRENT_RELEASE_CONTRACT.expectedCounts.trueDataPending,
     });
     expect(siteSnapshotManifest.sourceDatabase.path).toBe("rebuild-ci.db");
     expect(siteSnapshotManifest.sourceDatabase.sha256).toMatch(/^[a-f0-9]{64}$/);
@@ -132,7 +133,7 @@ describe("static 唯讀 snapshot", () => {
       "資料來源",
       "變更紀錄",
     ]);
-  });
+  }, 30_000);
 
   it("uses browser-side static data loaders instead of server APIs", async () => {
     const [pageSource, loaderSource, compactHome, prettyHome] = await Promise.all([

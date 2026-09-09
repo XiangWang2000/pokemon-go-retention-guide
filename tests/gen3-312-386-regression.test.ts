@@ -25,7 +25,7 @@ describe("Gen3 #312-#386 canonical and graph regression", () => {
     const packageJson = JSON.parse(
       readFileSync(new URL("../package.json", import.meta.url), "utf8"),
     ) as { scripts: Record<string, string> };
-    expect(packageJson.scripts["data:import:batch"]).toBe("tsx scripts/data/import-batch.ts");
+    expect(packageJson.scripts["data:import:batch"]).toBe("node --import tsx scripts/data/import-batch.ts");
     expect(packageJson.scripts["data:import:312-386"]).toBeUndefined();
     expect(packageJson.scripts["data:import:312-341"]).toBeUndefined();
     expect(packageJson.scripts["data:import:342-371"]).toBeUndefined();

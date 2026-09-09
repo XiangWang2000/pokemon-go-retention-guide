@@ -393,6 +393,9 @@ function isUsefulVariant(variant: FormOverview["variants"][number]) {
 }
 
 function isVariantTruePending(variant: FormOverview["variants"][number]) {
+  // An unconfirmed special version stays pending on its own detail row, but
+  // cannot make an already assessed ordinary family unusable for cleanup.
+  if (variant.row.releaseStatus === "UNKNOWN" && variant.row.variantKey !== "NORMAL") return false;
   return (
     isTrueDataPending(variant.row.assessmentDisposition) ||
     (!variant.row.assessmentDisposition &&
@@ -506,6 +509,7 @@ function materialIssueMessages(members: FamilyMemberSummary[]) {
                 "POSSIBLE_SPECIES_MISMATCH",
                 "UNKNOWN_RELEASE_STATUS",
                 "RULE_NOT_COVERED",
+                "MATERIAL_DATA_GAP",
               ].includes(issue.issueType),
           )
           .map((issue) => issue.messageZhTw);
@@ -566,7 +570,7 @@ export function buildFamilyHoldReasons(
     add("MAX_DATA_PENDING", "Max Battle 資料待補");
   }
 
-  if (rows.some((row) => !row.isReleased || row.releaseStatus === "UNRELEASED")) {
+  if (rows.some((row) => row.releaseStatus === "UNRELEASED")) {
     add("UNRELEASED_VARIANT", "尚未推出版本");
   }
 

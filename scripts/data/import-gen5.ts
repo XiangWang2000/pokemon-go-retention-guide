@@ -2,15 +2,16 @@ import "dotenv/config";
 import { createHash } from "node:crypto";
 import { readFile, readFileSync } from "node:fs";
 import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
-import { PrismaClient } from "../../generated/prisma/client";
+import { PrismaClient, type Prisma } from "../../generated/prisma/client";
 import { getBatchByKey } from "../../src/config/batch-registry";
 import { getGen5BatchDefinition } from "../../src/data/batch-gen5";
 import { buildGen5ImportPlan, type Gen5ImportPlanRow, type Gen5PlanLeague, type Gen5PvpRankingRow, type Gen5RankingSnapshots } from "../../src/data/gen5-import-plan";
+import { validateCandidateEvidenceSource, candidateSourceObservations, type CandidateSourceManifest } from "../../src/data/candidate-source-validation";
 import { assertEvolutionPathEndpoints, upsertEvolutionPath } from "../../src/data/evolution-path";
 import { assertDisposableDatabase, getDatabaseUrl } from "../../src/lib/database";
 import { RULES_VERSION } from "../../src/rules/rules";
 
-const checkedAt = new Date("2026-09-05T00:00:00+09:00");
+const checkedAt = new Date("2026-09-07T00:00:00+00:00");
 const pvpokeCommit = "7b96d91fb553780653190ad32de001b5d9086a7f";
 const pvpokeSnapshotRoot = "data/sources/pvpoke/2026-09-01";
 const categories = ["PVP", "PVE", "ROCKET", "GYM", "MEGA", "MAX_BATTLE", "EVOLUTION_VALUE"] as const;
@@ -25,6 +26,8 @@ type ResearchSource = {
   sourceName?: string;
   sourceType?: string;
   sourceTitleOriginal?: string;
+  title?: string;
+  metadataCheckedAt?: string;
   sourceLanguage?: string;
   sourceUrl: string;
   accessedAt?: string;
@@ -55,13 +58,13 @@ async function upsertSource(prisma: PrismaClient, source: ResearchSource, fallba
     sourceName: source.sourceName ?? "Pokémon GO Hub",
     sourceUrl: source.sourceUrl,
     sourceType: (source.sourceType ?? fallbackType) as never,
-    sourceTitleOriginal: source.sourceTitleOriginal ?? source.sourceName ?? source.sourceUrl,
+    sourceTitleOriginal: source.sourceTitleOriginal ?? source.title ?? source.sourceName ?? source.sourceUrl,
     sourceLanguage: source.sourceLanguage ?? "en",
     sourceSummaryZhTw: summary,
     accessedAt,
     publishedAt: optionalDate(source.publishedAt),
     dataVersion: `accessed-${source.accessedAt ?? fallbackCheckedAt}`,
-    notes: "Imported from dated Gen5 candidate evidence during formal publication.",
+    notes: source.metadataCheckedAt ? `Imported dated battle evidence; page title metadata checked ${source.metadataCheckedAt}, not a new battle assessment.` : "Imported dated evidence; missing original title metadata remains unverified.",
   };
   const canonical = await prisma.sourceReference.findFirst({
     where: { sourceUrl: source.sourceUrl, accessedAt },
@@ -109,9 +112,29 @@ function pvpSummary(row: Gen5ImportPlanRow) {
   if (!row.ranks.length) return "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。";
   return row.ranks.map((rank) => `${leagueMeta[rank.league].label} Overall #${rank.rank}${rank.mappingMode === "SHARED_UNDIFFERENTIATED" ? "（共享物種級 mapping，非 exact-form rank）" : ""}${rank.moves.length ? `；招式 ${rank.moves.join("／")}` : ""}`).join("；");
 }
+function evolutionSummary(row: Gen5ImportPlanRow) {
+  return row.evolutionCandidates.length
+    ? row.evolutionCandidates.map((candidate) => `進化候選 ${candidate.targetVariantId}：${candidate.conditionsZhTw}`).join("；")
+    : "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。";
+}
+function missingSummary(row: Gen5ImportPlanRow) {
+  if (row.releaseStatus === "UNKNOWN") return "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。";
+  if (row.initialDecision === "HOLD_FOR_NOW") return "此 exact variant 的用途證據尚不足以支持傳送；先補查自身用途及進化候選，無法判斷，暫時不要傳。";
+  return "已確認目前保留理由；其他未完整研究的用途維持資料缺口，不代表已證實無用途。";
+}
+function moveSummary(row: Gen5ImportPlanRow) {
+  const ranks = row.ranks.filter((rank) => rank.rank <= 250).flatMap((rank) => rank.moves);
+  return [ranks.length ? `固定 PvPoke 招式：${[...new Set(ranks)].join("／")}` : "",
+    row.pveEvidence ? `PvE 投資條件：${row.pveEvidence.summaryZhTw}` : "",
+    row.maxEvidence ? `Max 投資條件：${row.maxEvidence.summaryZhTw}` : "",
+    row.evolutionCandidates.length ? evolutionSummary(row) : "",
+  ].filter(Boolean).join("；") || "尚未確認必要招式；不可把缺資料當成不需要限定招式。";
+}
 function reason(row: Gen5ImportPlanRow) {
   if (row.releaseStatus === "UNRELEASED") return "此 exact BattleVariant 已有明確未推出證據，不構成現有個體的保留理由。";
   if (row.releaseStatus === "UNKNOWN") return "此 exact BattleVariant 的推出狀態尚未由受控證據確認；不把普通版或其他 form 的價值回灌。";
+  if (row.initialDecision === "HOLD_FOR_NOW") return missingSummary(row);
+  if (row.evolutionCandidates.length && row.initialDecision === "CONDITIONAL_KEEP" && !row.pveEvidence && !row.maxEvidence && (row.bestPvpRank === null || row.bestPvpRank > 250)) return `只選留適合作進化的個體；${evolutionSummary(row)}`;
   if (row.initialDecision === "KEEP") return "目前已有明確 PvP、PvE 或 Max Battle 核心用途，支持保留此 exact BattleVariant。";
   if (row.initialDecision === "CONDITIONAL_KEEP") return "目前有可用但非核心的 PvP／PvE／Max 證據，只需選擇性保留。";
   return "目前受控證據沒有確認主要戰鬥用途；一般重複個體可優先列為傳送候選。";
@@ -172,8 +195,8 @@ async function writeBattleVariants(prisma: PrismaClient, plan: readonly Gen5Impo
   }
 }
 
-async function writeEvidence(prisma: PrismaClient, definition: ReturnType<typeof getGen5BatchDefinition>, pveSourceByUrl: Map<string, string>, plan: readonly Gen5ImportPlanRow[], knownSources: Set<string>) {
-  const raw: Array<Record<string, unknown>> = [];
+async function writeEvidence(prisma: PrismaClient, definition: ReturnType<typeof getGen5BatchDefinition>, pveSourceByUrl: Map<string, string>, plan: readonly Gen5ImportPlanRow[], knownSources: Set<string>, pveManifest: CandidateSourceManifest) {
+  const raw: Prisma.RawEvaluationDataCreateManyInput[] = [];
   for (const row of plan) {
     for (const rank of row.ranks) raw.push({
       id: `raw-gen5-${definition.key}-${row.id}-${rank.league.toLowerCase()}`, battleVariantId: row.id, category: "PVP", status: rank.mappingMode === "EXACT" ? "VERIFIED" : "PARTIALLY_VERIFIED",
@@ -195,7 +218,16 @@ async function writeEvidence(prisma: PrismaClient, definition: ReturnType<typeof
       sourceId: pveSourceByUrl.get(row.maxEvidence.sourceUrl)!, checkedAt,
     });
   }
-  if (raw.length) await prisma.rawEvaluationData.createMany({ data: raw as never[] });
+  for (const row of plan) {
+    for (const observation of candidateSourceObservations(pveManifest, row.id, ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey) ? "MAX" : "PVE")) raw.push({
+      id: `raw-gen5-${definition.key}-${row.id}-observation`, battleVariantId: row.id,
+      category: observation.category === "MAX" ? "MAX_BATTLE" : "PVE", status: "DATA_UNAVAILABLE", league: "NOT_APPLICABLE",
+      formKey: row.formId, variantKey: row.variantKey, recommendedMoves: "[]", rawNotes: observation.summaryZhTw,
+      seasonOrVersion: `GO Hub accessed ${observation.checkedAt}`, extractionMethod: `Saved observation ${observation.outcome}; not an audited negative verdict.`,
+      reproducible: false, sourceId: pveSourceByUrl.get(observation.sourceUrl)!, checkedAt,
+    });
+  }
+  if (raw.length) await prisma.rawEvaluationData.createMany({ data: raw });
 
   const categoryRows = plan.flatMap((row) => categories.map((category) => {
     const unavailable = row.releaseStatus === "UNKNOWN" ? "UNKNOWN_RELEASE_STATUS" : row.releaseStatus === "UNRELEASED" ? "UNRELEASED" : null;
@@ -210,7 +242,7 @@ async function writeEvidence(prisma: PrismaClient, definition: ReturnType<typeof
       else if (row.ranks.length) { status = row.ranks.every((rank) => rank.mappingMode === "EXACT") ? "VERIFIED" : "PARTIALLY_VERIFIED"; provenance = "SOURCE_VERIFIED"; summaryZhTw = pvpSummary(row); materialToDecision = row.ranks.some((rank) => rank.rank <= 250); }
       else { status = "UNRANKED"; summaryZhTw = pvpSummary(row); }
     } else if (category === "PVE") {
-      pveUseLevel = row.pveEvidence?.level ?? "NO_SIGNIFICANT_USE";
+      pveUseLevel = row.pveEvidence?.level ?? null;
       if (unavailable) { status = unavailable; summaryZhTw = row.releaseNotesZhTw; }
       else if (["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey)) { status = "NOT_APPLICABLE"; summaryZhTw = "Max Battle 用途在 MAX_BATTLE 類別獨立評估。"; }
       else if (row.pveEvidence) { status = "PARTIALLY_VERIFIED"; provenance = "SOURCE_VERIFIED"; summaryZhTw = row.pveEvidence.summaryZhTw; materialToDecision = true; }
@@ -219,17 +251,21 @@ async function writeEvidence(prisma: PrismaClient, definition: ReturnType<typeof
       if (!["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey)) { status = row.releaseStatus === "RELEASED" ? "NOT_APPLICABLE" : unavailable!; summaryZhTw = "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。"; }
       else if (unavailable) { status = unavailable; summaryZhTw = row.releaseNotesZhTw; }
       else if (row.maxEvidence) { status = "PARTIALLY_VERIFIED"; provenance = "SOURCE_VERIFIED"; summaryZhTw = row.maxEvidence.summaryZhTw; materialToDecision = true; }
-      else { status = "VERIFIED"; summaryZhTw = "此 Max 版本已推出，但目前沒有形成主要保留理由的正向 Max 投資證據。"; }
+      else { status = "DATA_UNAVAILABLE"; provenance = "DATA_UNAVAILABLE"; summaryZhTw = "此 Max 版本已推出，但用途證據尚不足；推出名單不等於用途審查。"; }
     } else if (category === "MEGA") {
       if (row.variantKey !== "MEGA") { status = row.releaseStatus === "RELEASED" ? "NOT_APPLICABLE" : unavailable!; summaryZhTw = "此 exact BattleVariant 不是 Mega。"; }
       else { status = row.releaseStatus === "RELEASED" ? "VERIFIED" : "UNRELEASED"; summaryZhTw = row.releaseNotesZhTw; materialToDecision = row.releaseStatus === "RELEASED"; }
     } else if (category === "EVOLUTION_VALUE") {
-      const connected = definition.evolutionPairs.some(([from, to]) => from === row.formId || to === row.formId);
-      status = connected ? "VERIFIED" : "NOT_APPLICABLE"; summaryZhTw = connected ? "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。" : "目前沒有與此 exact form 相連的正式進化邊。";
+      status = unavailable ?? (row.evolutionCandidates.length ? "PARTIALLY_VERIFIED" : "DATA_UNAVAILABLE");
+      provenance = row.evolutionCandidates.length ? "MANUAL_CURATED" : "DATA_UNAVAILABLE";
+      summaryZhTw = unavailable ? row.releaseNotesZhTw : evolutionSummary(row);
+      materialToDecision = row.evolutionCandidates.length > 0;
     } else {
       status = unavailable ?? "DATA_UNAVAILABLE"; provenance = unavailable ? "MANUAL_CURATED" : "DATA_UNAVAILABLE";
       summaryZhTw = category === "ROCKET" ? "目前沒有逐 exact-form 火箭隊排名；此資料缺口不單獨覆蓋其他結論。" : "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。";
     }
+    if (row.initialDecision === "HOLD_FOR_NOW" && (status === "UNKNOWN_RELEASE_STATUS" ||
+      (status === "DATA_UNAVAILABLE" && ["PVE", "MAX_BATTLE", "EVOLUTION_VALUE"].includes(category)))) materialToDecision = true;
     return {
       id: `category-${row.id}-${category.toLowerCase()}`, battleVariantId: row.id, category, status: status as never, provenance: provenance as never,
       summaryZhTw, materialToDecision, rocketRating: category === "ROCKET" ? "DATA_UNAVAILABLE" as const : null, rocketRoles: "[]",
@@ -248,19 +284,40 @@ async function writeEvidence(prisma: PrismaClient, definition: ReturnType<typeof
     rocketSummaryZhTw: "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。", gymSummaryZhTw: "未列為主要道館保留用途。", gymRating: "NOT_APPLICABLE" as const,
     megaSummaryZhTw: row.variantKey === "MEGA" ? row.releaseNotesZhTw : "Mega 與此 exact BattleVariant 分開評估。",
     maxBattleSummaryZhTw: ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey) ? (row.maxEvidence?.summaryZhTw ?? row.releaseNotesZhTw) : "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-    evolutionSummaryZhTw: "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-    requiredMovesSummaryZhTw: row.ranks.some((rank) => rank.rank <= 250) ? `依固定 PvPoke 快照優先核對：${[...new Set(row.ranks.filter((rank) => rank.rank <= 250).flatMap((rank) => rank.moves))].join("／")}` : "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
+    evolutionSummaryZhTw: evolutionSummary(row),
+    requiredMovesSummaryZhTw: moveSummary(row),
     recommendedIvStrategyZhTw: row.variantKey === "SHADOW" ? "暗影標準較寬；15攻優先但不是硬門檻，並結合招式、等級與耐久斷點。" : "依實際用途分開篩選；PvP 看同聯盟 IV Rank，PvE 先看招式、等級／CP與既有投入，15攻不是硬性淘汰線。",
-    reasonZhTw: reason(row), confidence: "HIGH" as const, rulesVersion: RULES_VERSION, generatedAt: checkedAt, reviewed: true, reviewedAt: checkedAt, reviewStatus: "RESOLVED" as const,
-    missingDataSummaryZhTw: row.releaseStatus === "UNKNOWN" ? "推出狀態仍為 UNKNOWN，但不影響目前不把此 variant 當作現有保留理由。" : "目前沒有會阻止可執行保留／傳送判斷的未解決資料依賴。",
+    reasonZhTw: reason(row), confidence: row.initialDecision === "HOLD_FOR_NOW" ? "LOW" as const : "MEDIUM" as const, rulesVersion: RULES_VERSION, generatedAt: checkedAt, reviewed: row.initialDecision !== "HOLD_FOR_NOW", reviewedAt: row.initialDecision === "HOLD_FOR_NOW" ? null : checkedAt, reviewStatus: row.initialDecision === "HOLD_FOR_NOW" ? "DATA_PENDING" as const : "RESOLVED" as const,
+    missingDataSummaryZhTw: missingSummary(row),
     assessmentDisposition: row.initialDisposition, reviewNotesZhTw: `由 Gen5 ${definition.key} formal publication importer 依 candidate evidence 產生。`,
   }));
   await prisma.retentionEvaluation.createMany({ data: evaluations });
+  for (const row of plan) {
+    const id = `gen5-audit-${row.id}`;
+    const pending = row.initialDecision === "HOLD_FOR_NOW";
+    const data = {
+      pokemonFormId: row.formId, battleVariantId: row.id, batchKey: definition.key,
+      issueType: row.releaseStatus === "UNKNOWN" ? "UNKNOWN_RELEASE_STATUS" as const : "MATERIAL_DATA_GAP" as const,
+      status: pending ? "OPEN" as const : "RESOLVED" as const,
+      affectsFinalDecision: pending, provisionalDecision: row.initialDecision,
+      messageZhTw: missingSummary(row), suggestedActionZhTw: "補查 exact variant 的推出、用途與進化條件；保留可追溯來源。",
+      suggestedResearchActionZhTw: "分開查核 ordinary／Shadow／Purified／Mega／Max；不由正向 map 缺席推斷無用途。",
+      lastResearchedAt: checkedAt, detectedAt: checkedAt, resolvedAt: pending ? null : checkedAt,
+    };
+    if (pending) await prisma.dataIssue.upsert({ where: { id }, create: { id, ...data }, update: data });
+    else await prisma.dataIssue.updateMany({ where: { id }, data });
+  }
   await prisma.evaluationRuleTrace.createMany({ data: plan.map((row) => ({
     id: `gen5-${definition.key}-trace-${row.id}`, evaluationId: `gen5-${definition.key}-eval-${row.id}`,
-    ruleKey: row.releaseStatus === "UNKNOWN" ? "UNKNOWN_RELEASE_VARIANT" : row.releaseStatus === "UNRELEASED" ? "UNRELEASED_VARIANT" : row.initialDecision === "KEEP" ? "MAJOR_BATTLE_VALUE" : row.initialDecision === "CONDITIONAL_KEEP" ? "CONDITIONAL_USE" : "LOW_GENERAL_VALUE",
+    ruleKey: row.releaseStatus === "UNKNOWN" ? "UNKNOWN_RELEASE_VARIANT" : row.releaseStatus === "UNRELEASED" ? "UNRELEASED_VARIANT" : row.initialDecision === "HOLD_FOR_NOW" ? "MATERIAL_DATA_GAP" : row.initialDecision === "KEEP" ? "MAJOR_BATTLE_VALUE" : row.initialDecision === "CONDITIONAL_KEEP" ? "CONDITIONAL_USE" : "LOW_GENERAL_VALUE",
     ruleVersion: RULES_VERSION, priority: row.releaseStatus === "RELEASED" ? (row.initialDecision === "KEEP" ? 900 : row.initialDecision === "CONDITIONAL_KEEP" ? 700 : 100) : 950,
     matched: true, resultDecision: row.initialDecision, explanationZhTw: "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。",
+  })) });
+
+  await prisma.evaluationRuleTrace.createMany({ data: plan.filter((row) => row.evolutionCandidates.length > 0).map((row) => ({
+    id: `gen5-${definition.key}-evolution-trace-${row.id}`, evaluationId: `gen5-${definition.key}-eval-${row.id}`,
+    ruleKey: "VALUABLE_EVOLUTION", ruleVersion: RULES_VERSION, priority: 650, matched: true,
+    resultDecision: "CONDITIONAL_KEEP" as const, explanationZhTw: evolutionSummary(row),
   })) });
 
   const categorySources: Array<{ categoryEvaluationId: string; sourceId: string; usageZhTw: string }> = [];
@@ -273,8 +330,18 @@ async function writeEvidence(prisma: PrismaClient, definition: ReturnType<typeof
     if (!seenEvaluation.has(`${e}|${sourceId}`)) { seenEvaluation.add(`${e}|${sourceId}`); evaluationSources.push({ evaluationId: e, sourceId, usageZhTw }); }
   };
   for (const row of plan) {
+    for (const observation of candidateSourceObservations(pveManifest, row.id, ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey) ? "MAX" : "PVE")) {
+      add(row, pveSourceByUrl.get(observation.sourceUrl)!, observation.category === "MAX" ? "max_battle" : "pve", `日期化用途審查：${observation.summaryZhTw}；未當作已確認無用途。`);
+    }
     for (const rank of row.ranks) add(row, leagueMeta[rank.league].sourceId, "pvp", "固定 PvPoke Open／Overall ranking snapshot。" );
     if (row.pveEvidence) add(row, pveSourceByUrl.get(row.pveEvidence.sourceUrl)!, "pve", "日期化 exact-variant PvE evidence。" );
+    for (const candidate of row.evolutionCandidates) {
+      for (const url of candidate.sourceUrls) {
+        const sourceId = pveSourceByUrl.get(url) ?? Object.values(leagueMeta).find((meta) => url === `https://pvpoke.com/rankings/all/${meta.cp}/overall/`)?.sourceId;
+        if (!sourceId) throw new Error(`Missing evolution evidence source: ${candidate.targetVariantId} ${url}`);
+        add(row, sourceId, "evolution_value", `僅供進化至 ${candidate.targetVariantId} 的候選用途；不宣稱前階自身戰力。`);
+      }
+    }
     if (row.maxEvidence) add(row, pveSourceByUrl.get(row.maxEvidence.sourceUrl)!, "max_battle", "日期化 exact Max Battle evidence。" );
     for (const sourceId of row.releaseSourceIds) add(row, sourceId, row.variantKey === "MEGA" ? "mega" : ["DYNAMAX", "GIGANTAMAX"].includes(row.variantKey) ? "max_battle" : "pvp", "exact BattleVariant release-state evidence。" );
   }
@@ -294,13 +361,21 @@ export async function runImportGen5(batch: string, databaseUrl = getDatabaseUrl(
     const knownSources = new Set<string>();
     for (const source of [...identity.sources, ...release.sources]) knownSources.add(await upsertSource(prisma, source, release.checkedAt ?? "2026-09-05"));
     const pveSourceByUrl = new Map<string, string>();
-    for (const source of pve.sources) { const id = await upsertSource(prisma, source, pve.checkedAt ?? "2026-09-05", "PVE"); knownSources.add(id); pveSourceByUrl.set(source.sourceUrl, id); }
+    for (const key of ["494-523", "524-553", "554-583", "584-613", "614-643", "644-649"]) {
+      const manifest = key === batch ? pve : readManifest(`research_notes/sources/pve-${key}.json`);
+      for (const source of manifest.sources) { const id = await upsertSource(prisma, source, manifest.checkedAt ?? "2026-09-05", "PVE"); knownSources.add(id); pveSourceByUrl.set(source.sourceUrl, id); }
+    }
     await upsertPvPokeSources(prisma); Object.values(leagueMeta).forEach((meta) => knownSources.add(meta.sourceId));
     await upsertSpeciesAndForms(prisma, definition);
     await materializeEvolutionPaths(prisma, definition);
     const plan = buildGen5ImportPlan(definition, await readRankings());
+    const pveManifest = JSON.parse(readFileSync(`research_notes/sources/pve-${batch}.json`, "utf8")) as CandidateSourceManifest;
+    for (const row of plan) {
+      if (row.pveEvidence) validateCandidateEvidenceSource(pveManifest, row.id, "PVE", row.pveEvidence);
+      if (row.maxEvidence) validateCandidateEvidenceSource(pveManifest, row.id, "MAX", row.maxEvidence);
+    }
     await writeBattleVariants(prisma, plan);
-    await writeEvidence(prisma, definition, pveSourceByUrl, plan, knownSources);
+    await writeEvidence(prisma, definition, pveSourceByUrl, plan, knownSources, pveManifest);
     const changeLogSourceUrl = identity.sources[0]?.sourceUrl ?? release.sources[0]?.sourceUrl;
     if (!changeLogSourceUrl) throw new Error(`Missing identity/release source for ${batch}.`);
     const changeLogSource = await prisma.sourceReference.findFirst({

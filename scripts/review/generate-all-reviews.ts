@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { spawn } from "node:child_process";
 import { BATCH_REGISTRY, batchReviewArgs } from "../../src/config/batch-registry";
 
-const npmCommand = process.platform === "win32" ? "npm.cmd" : "npm";
+
 
 async function run(command: string, args: string[]) {
   await new Promise<void>((resolve, reject) => {
@@ -40,7 +40,7 @@ async function main() {
     }
 
     console.log(`Generating review batch ${batch} with ${generator}`);
-    await run(npmCommand, ["exec", "--", "tsx", ...batchReviewArgs(entry)]);
+    await run(process.execPath, ["--import", "tsx", ...batchReviewArgs(entry)]);
     await assertReviewOutput(entry);
   }
 }

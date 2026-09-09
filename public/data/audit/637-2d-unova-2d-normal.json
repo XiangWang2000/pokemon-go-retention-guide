@@ -28,18 +28,18 @@
   "variantKey": "NORMAL",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
   "notesZhTw": "GO Hub 當前合眾 Pokédex 對此 exact Pokémon GO form 明確標示 Released: Yes；普通／伽勒爾泥巴魚、普通／洗翠勇士雄鷹及龍捲雲／雷電雲化身與靈獸型態逐 form 判定。",
   "decision": "KEEP",
   "assessmentDisposition": "CLEAR_USE",
   "provenance": "MANUAL_CURATED",
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "目前沒有會阻止可執行保留／傳送判斷的未解決資料依賴。",
+  "missingDataSummaryZhTw": "已確認目前保留理由；其他未完整研究的用途維持資料缺口，不代表已證實無用途。",
   "reviewed": true,
-  "updatedAt": "2026-09-04T15:00:00.000Z",
+  "updatedAt": "2026-09-07T00:00:00.000Z",
   "pvpSummaryZhTw": "UL（高級聯盟） Overall #798；招式 FIRE_SPIN／OVERHEAT／HURRICANE；ML（大師聯盟） Overall #268；招式 FIRE_SPIN／OVERHEAT／HURRICANE",
   "pveSummaryZhTw": "火神蛾目前為蟲系 S Tier #8、火系 A Tier #27，來源明確評價 400 糖果進化成本仍值得，且可兼任兩種團戰輸出，支持核心 PvE 投資。",
   "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -47,8 +47,8 @@
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
   "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-  "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-  "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
+  "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+  "requiredMovesSummaryZhTw": "PvE 投資條件：火神蛾目前為蟲系 S Tier #8、火系 A Tier #27，來源明確評價 400 糖果進化成本仍值得，且可兼任兩種團戰輸出，支持核心 PvE 投資。",
   "recommendedIvStrategyZhTw": "PvE 一般投資門檻：先確認物種、型態與招式確實有用途。總 IV 91%以上可投入；96%以上且15攻優先用於長期、XL或滿等投資。15攻是同種候選的優先條件，不是硬性淘汰門檻；14攻高整體IV亦可留。低於91%不是自動傳送線，只有急用、唯一候選、已高等或實測斷點合適時再投入。",
   "ivRecommendations": [
     {
@@ -457,9 +457,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "VERIFIED",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
+      "summaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -471,7 +471,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -490,7 +490,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -509,7 +509,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -528,7 +528,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -547,11 +547,11 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": "CORE_INVESTMENT",
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": [
         {
           "id": "GEN5-PVE-3229a9992638158c",
-          "title": "https://db.pokemongohub.net/pokemon/637",
+          "title": "Volcarona: Best Moveset, Counters & Max CP | Pokémon GO",
           "url": "https://db.pokemongohub.net/pokemon/637",
           "usageZhTw": "日期化 exact-variant PvE evidence。"
         }
@@ -573,7 +573,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": [
         {
           "id": "SECONDARY-GOHUB-UNOVA-ROSTER-20260904",
@@ -611,7 +611,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     }
   ],
@@ -636,11 +636,11 @@
       "extractionMethod": "日期化 exact-variant PvE evidence。",
       "reproducible": false,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "GEN5-PVE-3229a9992638158c",
         "name": "Pokémon GO Hub",
-        "title": "https://db.pokemongohub.net/pokemon/637",
+        "title": "Volcarona: Best Moveset, Counters & Max CP | Pokémon GO",
         "url": "https://db.pokemongohub.net/pokemon/637"
       }
     },
@@ -668,7 +668,7 @@
       "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "pvpoke-ml-20260901",
         "name": "PvPoke fixed ranking snapshot",
@@ -700,7 +700,7 @@
       "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "pvpoke-ul-20260901",
         "name": "PvPoke fixed ranking snapshot",
@@ -713,7 +713,7 @@
     {
       "id": "GEN5-PVE-3229a9992638158c",
       "name": "Pokémon GO Hub",
-      "title": "https://db.pokemongohub.net/pokemon/637",
+      "title": "Volcarona: Best Moveset, Counters & Max CP | Pokémon GO",
       "url": "https://db.pokemongohub.net/pokemon/637",
       "type": "PVE",
       "accessedAt": "2026-09-04T15:00:00.000Z",
@@ -734,7 +734,7 @@
       "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
       "url": "https://pvpoke.com/rankings/all/10000/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-04T15:00:00.000Z",
+      "accessedAt": "2026-09-07T00:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
     },
     {
@@ -743,7 +743,7 @@
       "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
       "url": "https://pvpoke.com/rankings/all/2500/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-04T15:00:00.000Z",
+      "accessedAt": "2026-09-07T00:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
     }
   ],

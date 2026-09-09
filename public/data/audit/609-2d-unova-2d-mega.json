@@ -28,18 +28,18 @@
   "variantKey": "MEGA",
   "isReleased": false,
   "releaseStatus": "UNRELEASED",
-  "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
   "notesZhTw": "GO Hub 當前合眾 Pokédex 對 Mega Chandelure 明確標示 Released: No。",
   "decision": "TRANSFER_CANDIDATE",
   "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
   "provenance": "MANUAL_CURATED",
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "dataStatus": "VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "目前沒有會阻止可執行保留／傳送判斷的未解決資料依賴。",
+  "missingDataSummaryZhTw": "已確認目前保留理由；其他未完整研究的用途維持資料缺口，不代表已證實無用途。",
   "reviewed": true,
-  "updatedAt": "2026-09-04T15:00:00.000Z",
+  "updatedAt": "2026-09-07T00:00:00.000Z",
   "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
   "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
   "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -47,8 +47,8 @@
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "GO Hub 當前合眾 Pokédex 對 Mega Chandelure 明確標示 Released: No。",
   "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-  "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-  "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
+  "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+  "requiredMovesSummaryZhTw": "尚未確認必要招式；不可把缺資料當成不需要限定招式。",
   "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
   "ivRecommendations": [
     {
@@ -457,9 +457,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "VERIFIED",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
+      "status": "UNRELEASED",
+      "provenance": "DATA_UNAVAILABLE",
+      "summaryZhTw": "GO Hub 當前合眾 Pokédex 對 Mega Chandelure 明確標示 Released: No。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -471,7 +471,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -490,7 +490,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -509,7 +509,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -528,7 +528,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": [
         {
           "id": "SECONDARY-GOHUB-UNOVA-ROSTER-20260904",
@@ -552,9 +552,9 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -573,7 +573,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -592,7 +592,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     }
   ],

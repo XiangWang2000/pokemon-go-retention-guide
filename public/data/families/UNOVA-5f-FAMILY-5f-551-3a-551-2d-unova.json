@@ -25,7 +25,7 @@
             "fromFormId": "551-unova",
             "toFormId": "552-unova",
             "requiresEvent": false,
-            "verifiedAt": "2026-09-04T15:00:00.000Z",
+            "verifiedAt": "2026-09-07T00:00:00.000Z",
             "isEvolutionStub": false,
             "targetUseLevel": null,
             "targetNameEn": "Krokorok",
@@ -69,7 +69,7 @@
                   "fromFormId": "551-unova",
                   "toFormId": "552-unova",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-09-04T15:00:00.000Z",
+                  "verifiedAt": "2026-09-07T00:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Krokorok",
@@ -94,18 +94,18 @@
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "GO Hub 當前合眾 Pokédex 對此 exact Pokémon GO form 明確標示 Released: Yes；包含普通／洗翠裙兒小姐與野蠻鱸魚各條紋型態。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NO_SIGNIFICANT_USE",
+              "decision": "CONDITIONAL_KEEP",
+              "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
-              "dataStatus": "DATA_UNAVAILABLE",
+              "confidence": "MEDIUM",
+              "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "目前沒有會阻止可執行保留／傳送判斷的未解決資料依賴。",
+              "missingDataSummaryZhTw": "已確認目前保留理由；其他未完整研究的用途維持資料缺口，不代表已證實無用途。",
               "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -113,11 +113,11 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "進化候選 553-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
+              "requiredMovesSummaryZhTw": "進化候選 553-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
+              "recommendedIvStrategyZhTw": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
               "ivRecommendations": [],
-              "reasonZhTw": "目前受控證據沒有確認主要戰鬥用途；一般重複個體可優先列為傳送候選。",
+              "reasonZhTw": "只選留適合作進化的個體；進化候選 553-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
               "evaluationId": "gen5-524-553-eval-551-unova-normal",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "由 Gen5 524-553 formal publication importer 依 candidate evidence 產生。",
@@ -132,10 +132,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
+                  "status": "PARTIALLY_VERIFIED",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "summaryZhTw": "進化候選 553-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -146,7 +146,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -165,7 +165,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -184,7 +184,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -203,7 +203,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -220,9 +220,9 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
+                  "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -241,7 +241,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -260,7 +260,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -274,25 +274,43 @@
                   "type": "SECONDARY",
                   "accessedAt": "2026-09-03T15:00:00.000Z",
                   "usageZhTw": "exact BattleVariant release-state evidence。"
+                },
+                {
+                  "id": "pvpoke-ml-20260901",
+                  "name": "PvPoke fixed ranking snapshot",
+                  "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
+                  "url": "https://pvpoke.com/rankings/all/10000/overall/",
+                  "type": "PVP",
+                  "accessedAt": "2026-09-07T00:00:00.000Z",
+                  "usageZhTw": "僅供進化至 553-unova-normal 的候選用途；不宣稱前階自身戰力。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
+                },
+                {
+                  "ruleKey": "VALUABLE_EVOLUTION",
+                  "priority": 650,
+                  "matched": true,
+                  "resultDecision": "CONDITIONAL_KEEP",
+                  "explanationZhTw": "進化候選 553-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。"
                 }
               ],
               "moves": []
             },
-            "primaryUses": [],
+            "primaryUses": [
+              "後續進化"
+            ],
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
+            "shortReason": "主要價值來自後續進化，不是本體戰力。"
           },
           {
             "row": {
@@ -315,7 +333,7 @@
                   "fromFormId": "551-unova",
                   "toFormId": "552-unova",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-09-04T15:00:00.000Z",
+                  "verifiedAt": "2026-09-07T00:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Krokorok",
@@ -340,18 +358,28 @@
               "variantKey": "SHADOW",
               "isReleased": null,
               "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "decision": "HOLD_FOR_NOW",
+              "assessmentDisposition": "TRUE_DATA_PENDING",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
+              "confidence": "LOW",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
-              "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
-              "missingDataSummaryZhTw": "推出狀態仍為 UNKNOWN，但不影響目前不把此 variant 當作現有保留理由。",
-              "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "reviewStatus": "DATA_PENDING",
+              "reviewIssues": [
+                {
+                  "id": "gen5-audit-551-unova-shadow",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+                  "affectsFinalDecision": true,
+                  "provisionalDecision": "HOLD_FOR_NOW",
+                  "suggestedResearchActionZhTw": "分開查核 ordinary／Shadow／Purified／Mega／Max；不由正向 map 缺席推斷無用途。",
+                  "lastResearchedAt": "2026-09-07T00:00:00.000Z"
+                }
+              ],
+              "missingDataSummaryZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+              "reviewed": false,
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -359,9 +387,9 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+              "requiredMovesSummaryZhTw": "尚未確認必要招式；不可把缺資料當成不需要限定招式。",
+              "recommendedIvStrategyZhTw": "先保留一隻；關鍵用途確認前不以IV篩除。",
               "ivRecommendations": [],
               "reasonZhTw": "此 exact BattleVariant 的推出狀態尚未由受控證據確認；不把普通版或其他 form 的價值回灌。",
               "evaluationId": "gen5-524-553-eval-551-unova-shadow",
@@ -378,10 +406,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "DATA_UNAVAILABLE",
+                  "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -392,7 +420,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -400,7 +428,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -411,7 +439,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -419,7 +447,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -430,7 +458,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -438,7 +466,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "此 exact BattleVariant 不是 Mega。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -449,7 +477,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -457,26 +485,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
-                  "materialToDecision": false,
-                  "rocketRating": null,
-                  "rocketRoles": [],
-                  "maxTypeRank": null,
-                  "maxTypeTier": null,
-                  "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
-                  "sources": []
-                },
-                {
-                  "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -487,7 +496,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
+                  "sources": []
+                },
+                {
+                  "category": "PVP",
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
+                  "materialToDecision": true,
+                  "rocketRating": null,
+                  "rocketRoles": [],
+                  "maxTypeRank": null,
+                  "maxTypeTier": null,
+                  "maxTypeKey": null,
+                  "maxOverallRating": null,
+                  "maxInvestmentRating": null,
+                  "maxUseCaseBreadth": null,
+                  "pveUseLevel": null,
+                  "assessmentDisposition": null,
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -495,7 +523,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有逐 exact-form 火箭隊排名；此資料缺口不單獨覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -506,7 +534,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -517,7 +545,7 @@
                   "ruleKey": "UNKNOWN_RELEASE_VARIANT",
                   "priority": 950,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "HOLD_FOR_NOW",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
                 }
               ],
@@ -527,8 +555,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "先保留一隻；關鍵用途確認前不以IV篩除。",
+            "shortReason": "關鍵資料補齊前先保留一隻，不要大量投入資源。"
           },
           {
             "row": {
@@ -551,7 +579,7 @@
                   "fromFormId": "551-unova",
                   "toFormId": "552-unova",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-09-04T15:00:00.000Z",
+                  "verifiedAt": "2026-09-07T00:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Krokorok",
@@ -576,18 +604,28 @@
               "variantKey": "PURIFIED",
               "isReleased": null,
               "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "decision": "HOLD_FOR_NOW",
+              "assessmentDisposition": "TRUE_DATA_PENDING",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
+              "confidence": "LOW",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
-              "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
-              "missingDataSummaryZhTw": "推出狀態仍為 UNKNOWN，但不影響目前不把此 variant 當作現有保留理由。",
-              "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "reviewStatus": "DATA_PENDING",
+              "reviewIssues": [
+                {
+                  "id": "gen5-audit-551-unova-purified",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+                  "affectsFinalDecision": true,
+                  "provisionalDecision": "HOLD_FOR_NOW",
+                  "suggestedResearchActionZhTw": "分開查核 ordinary／Shadow／Purified／Mega／Max；不由正向 map 缺席推斷無用途。",
+                  "lastResearchedAt": "2026-09-07T00:00:00.000Z"
+                }
+              ],
+              "missingDataSummaryZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+              "reviewed": false,
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -595,9 +633,9 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+              "requiredMovesSummaryZhTw": "尚未確認必要招式；不可把缺資料當成不需要限定招式。",
+              "recommendedIvStrategyZhTw": "先保留一隻；關鍵用途確認前不以IV篩除。",
               "ivRecommendations": [],
               "reasonZhTw": "此 exact BattleVariant 的推出狀態尚未由受控證據確認；不把普通版或其他 form 的價值回灌。",
               "evaluationId": "gen5-524-553-eval-551-unova-purified",
@@ -614,10 +652,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "DATA_UNAVAILABLE",
+                  "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -628,7 +666,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -636,7 +674,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -647,7 +685,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -655,7 +693,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -666,7 +704,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -674,7 +712,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "此 exact BattleVariant 不是 Mega。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -685,7 +723,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -693,26 +731,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
-                  "materialToDecision": false,
-                  "rocketRating": null,
-                  "rocketRoles": [],
-                  "maxTypeRank": null,
-                  "maxTypeTier": null,
-                  "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
-                  "sources": []
-                },
-                {
-                  "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -723,7 +742,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
+                  "sources": []
+                },
+                {
+                  "category": "PVP",
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
+                  "materialToDecision": true,
+                  "rocketRating": null,
+                  "rocketRoles": [],
+                  "maxTypeRank": null,
+                  "maxTypeTier": null,
+                  "maxTypeKey": null,
+                  "maxOverallRating": null,
+                  "maxInvestmentRating": null,
+                  "maxUseCaseBreadth": null,
+                  "pveUseLevel": null,
+                  "assessmentDisposition": null,
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -731,7 +769,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有逐 exact-form 火箭隊排名；此資料缺口不單獨覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -742,7 +780,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -753,7 +791,7 @@
                   "ruleKey": "UNKNOWN_RELEASE_VARIANT",
                   "priority": 950,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "HOLD_FOR_NOW",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
                 }
               ],
@@ -763,8 +801,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "先保留一隻；關鍵用途確認前不以IV篩除。",
+            "shortReason": "關鍵資料補齊前先保留一隻，不要大量投入資源。"
           },
           {
             "row": {
@@ -787,7 +825,7 @@
                   "fromFormId": "551-unova",
                   "toFormId": "552-unova",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-09-04T15:00:00.000Z",
+                  "verifiedAt": "2026-09-07T00:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Krokorok",
@@ -812,18 +850,28 @@
               "variantKey": "DYNAMAX",
               "isReleased": null,
               "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "decision": "HOLD_FOR_NOW",
+              "assessmentDisposition": "TRUE_DATA_PENDING",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
+              "confidence": "LOW",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
-              "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
-              "missingDataSummaryZhTw": "推出狀態仍為 UNKNOWN，但不影響目前不把此 variant 當作現有保留理由。",
-              "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "reviewStatus": "DATA_PENDING",
+              "reviewIssues": [
+                {
+                  "id": "gen5-audit-551-unova-dynamax",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+                  "affectsFinalDecision": true,
+                  "provisionalDecision": "HOLD_FOR_NOW",
+                  "suggestedResearchActionZhTw": "分開查核 ordinary／Shadow／Purified／Mega／Max；不由正向 map 缺席推斷無用途。",
+                  "lastResearchedAt": "2026-09-07T00:00:00.000Z"
+                }
+              ],
+              "missingDataSummaryZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+              "reviewed": false,
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -831,9 +879,9 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+              "requiredMovesSummaryZhTw": "尚未確認必要招式；不可把缺資料當成不需要限定招式。",
+              "recommendedIvStrategyZhTw": "先保留一隻；關鍵用途確認前不以IV篩除。",
               "ivRecommendations": [],
               "reasonZhTw": "此 exact BattleVariant 的推出狀態尚未由受控證據確認；不把普通版或其他 form 的價值回灌。",
               "evaluationId": "gen5-524-553-eval-551-unova-dynamax",
@@ -850,10 +898,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "DATA_UNAVAILABLE",
+                  "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -864,7 +912,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -872,7 +920,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -883,7 +931,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -891,7 +939,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -902,7 +950,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -910,7 +958,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "此 exact BattleVariant 不是 Mega。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -921,7 +969,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -929,26 +977,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-                  "materialToDecision": false,
-                  "rocketRating": null,
-                  "rocketRoles": [],
-                  "maxTypeRank": null,
-                  "maxTypeTier": null,
-                  "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
-                  "sources": []
-                },
-                {
-                  "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -959,7 +988,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
+                  "sources": []
+                },
+                {
+                  "category": "PVP",
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
+                  "materialToDecision": true,
+                  "rocketRating": null,
+                  "rocketRoles": [],
+                  "maxTypeRank": null,
+                  "maxTypeTier": null,
+                  "maxTypeKey": null,
+                  "maxOverallRating": null,
+                  "maxInvestmentRating": null,
+                  "maxUseCaseBreadth": null,
+                  "pveUseLevel": null,
+                  "assessmentDisposition": null,
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -967,7 +1015,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有逐 exact-form 火箭隊排名；此資料缺口不單獨覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -978,7 +1026,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -989,7 +1037,7 @@
                   "ruleKey": "UNKNOWN_RELEASE_VARIANT",
                   "priority": 950,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "HOLD_FOR_NOW",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
                 }
               ],
@@ -999,8 +1047,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "先保留一隻；關鍵用途確認前不以IV篩除。",
+            "shortReason": "關鍵資料補齊前先保留一隻，不要大量投入資源。"
           }
         ],
         "variantKeys": [
@@ -1017,8 +1065,9 @@
           "tone": "NONE"
         },
         "pve": {
-          "label": "無顯著用途",
-          "tone": "LOW"
+          "label": "可用／預算型",
+          "detail": "後續世代進化",
+          "tone": "MEDIUM"
         },
         "gym": {
           "label": "—",
@@ -1028,18 +1077,20 @@
           "label": "—",
           "tone": "NONE"
         },
-        "decision": "TRANSFER_CANDIDATE",
-        "decisionReason": "一般重複個體通常可傳送。",
+        "decision": "CONDITIONAL_KEEP",
+        "decisionReason": "本體用途有限；依目標進化結果的數字門檻保留個體。",
         "ivRecommendations": [],
         "ivShortLabels": [],
-        "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-        "primaryUses": [],
+        "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
+        "primaryUses": [
+          "後續進化"
+        ],
         "primaryUseKeys": [],
         "hasRocketUse": false,
-        "hasEvolutionUse": false,
-        "hasDataIssues": false,
+        "hasEvolutionUse": true,
+        "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-09-04T15:00:00.000Z",
+        "updatedAt": "2026-09-07T00:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -1109,7 +1160,7 @@
             "fromFormId": "552-unova",
             "toFormId": "553-unova",
             "requiresEvent": false,
-            "verifiedAt": "2026-09-04T15:00:00.000Z",
+            "verifiedAt": "2026-09-07T00:00:00.000Z",
             "isEvolutionStub": false,
             "targetUseLevel": null,
             "targetNameEn": "Krookodile",
@@ -1153,7 +1204,7 @@
                   "fromFormId": "552-unova",
                   "toFormId": "553-unova",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-09-04T15:00:00.000Z",
+                  "verifiedAt": "2026-09-07T00:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Krookodile",
@@ -1178,18 +1229,18 @@
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "GO Hub 當前合眾 Pokédex 對此 exact Pokémon GO form 明確標示 Released: Yes；包含普通／洗翠裙兒小姐與野蠻鱸魚各條紋型態。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NO_SIGNIFICANT_USE",
+              "decision": "CONDITIONAL_KEEP",
+              "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
-              "dataStatus": "DATA_UNAVAILABLE",
+              "confidence": "MEDIUM",
+              "dataStatus": "PARTIALLY_VERIFIED",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "目前沒有會阻止可執行保留／傳送判斷的未解決資料依賴。",
+              "missingDataSummaryZhTw": "已確認目前保留理由；其他未完整研究的用途維持資料缺口，不代表已證實無用途。",
               "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #811；招式 MUD_SLAP／CRUNCH／EARTHQUAKE",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -1197,11 +1248,11 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "進化候選 553-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
+              "requiredMovesSummaryZhTw": "進化候選 553-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
+              "recommendedIvStrategyZhTw": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
               "ivRecommendations": [],
-              "reasonZhTw": "目前受控證據沒有確認主要戰鬥用途；一般重複個體可優先列為傳送候選。",
+              "reasonZhTw": "只選留適合作進化的個體；進化候選 553-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
               "evaluationId": "gen5-524-553-eval-552-unova-normal",
               "rulesVersion": "2026.08.06-v7",
               "reviewNotesZhTw": "由 Gen5 524-553 formal publication importer 依 candidate evidence 產生。",
@@ -1216,10 +1267,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
+                  "status": "PARTIALLY_VERIFIED",
                   "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "summaryZhTw": "進化候選 553-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1230,7 +1281,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1249,7 +1300,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1268,7 +1319,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1287,7 +1338,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1304,9 +1355,9 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
+                  "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1325,7 +1376,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1344,7 +1395,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -1373,7 +1424,7 @@
                   "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "source": {
                     "id": "pvpoke-gl-20260901",
                     "name": "PvPoke fixed ranking snapshot",
@@ -1398,27 +1449,45 @@
                   "title": "PvPoke GL（超級聯盟） Open League Overall Rankings",
                   "url": "https://pvpoke.com/rankings/all/1500/overall/",
                   "type": "PVP",
-                  "accessedAt": "2026-09-04T15:00:00.000Z",
+                  "accessedAt": "2026-09-07T00:00:00.000Z",
                   "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
+                },
+                {
+                  "id": "pvpoke-ml-20260901",
+                  "name": "PvPoke fixed ranking snapshot",
+                  "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
+                  "url": "https://pvpoke.com/rankings/all/10000/overall/",
+                  "type": "PVP",
+                  "accessedAt": "2026-09-07T00:00:00.000Z",
+                  "usageZhTw": "僅供進化至 553-unova-normal 的候選用途；不宣稱前階自身戰力。"
                 }
               ],
               "traces": [
                 {
-                  "ruleKey": "LOW_GENERAL_VALUE",
-                  "priority": 100,
+                  "ruleKey": "CONDITIONAL_USE",
+                  "priority": 700,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "CONDITIONAL_KEEP",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
+                },
+                {
+                  "ruleKey": "VALUABLE_EVOLUTION",
+                  "priority": 650,
+                  "matched": true,
+                  "resultDecision": "CONDITIONAL_KEEP",
+                  "explanationZhTw": "進化候選 553-unova-normal：僅作同版本進化候選；進化前確認糖果、進化條件與目標所需招式。進化後需依適用聯盟確認 CP 上限、個體 IV 與招式。"
                 }
               ],
               "moves": []
             },
-            "primaryUses": [],
+            "primaryUses": [
+              "後續進化"
+            ],
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
+            "shortReason": "主要價值來自後續進化，不是本體戰力。"
           },
           {
             "row": {
@@ -1441,7 +1510,7 @@
                   "fromFormId": "552-unova",
                   "toFormId": "553-unova",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-09-04T15:00:00.000Z",
+                  "verifiedAt": "2026-09-07T00:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Krookodile",
@@ -1466,18 +1535,28 @@
               "variantKey": "SHADOW",
               "isReleased": null,
               "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "decision": "HOLD_FOR_NOW",
+              "assessmentDisposition": "TRUE_DATA_PENDING",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
+              "confidence": "LOW",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
-              "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
-              "missingDataSummaryZhTw": "推出狀態仍為 UNKNOWN，但不影響目前不把此 variant 當作現有保留理由。",
-              "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "reviewStatus": "DATA_PENDING",
+              "reviewIssues": [
+                {
+                  "id": "gen5-audit-552-unova-shadow",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+                  "affectsFinalDecision": true,
+                  "provisionalDecision": "HOLD_FOR_NOW",
+                  "suggestedResearchActionZhTw": "分開查核 ordinary／Shadow／Purified／Mega／Max；不由正向 map 缺席推斷無用途。",
+                  "lastResearchedAt": "2026-09-07T00:00:00.000Z"
+                }
+              ],
+              "missingDataSummaryZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+              "reviewed": false,
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -1485,9 +1564,9 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+              "requiredMovesSummaryZhTw": "尚未確認必要招式；不可把缺資料當成不需要限定招式。",
+              "recommendedIvStrategyZhTw": "先保留一隻；關鍵用途確認前不以IV篩除。",
               "ivRecommendations": [],
               "reasonZhTw": "此 exact BattleVariant 的推出狀態尚未由受控證據確認；不把普通版或其他 form 的價值回灌。",
               "evaluationId": "gen5-524-553-eval-552-unova-shadow",
@@ -1504,10 +1583,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "DATA_UNAVAILABLE",
+                  "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1518,7 +1597,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1526,7 +1605,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1537,7 +1616,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1545,7 +1624,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1556,7 +1635,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1564,7 +1643,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "此 exact BattleVariant 不是 Mega。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1575,7 +1654,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1583,26 +1662,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
-                  "materialToDecision": false,
-                  "rocketRating": null,
-                  "rocketRoles": [],
-                  "maxTypeRank": null,
-                  "maxTypeTier": null,
-                  "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
-                  "sources": []
-                },
-                {
-                  "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1613,7 +1673,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
+                  "sources": []
+                },
+                {
+                  "category": "PVP",
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
+                  "materialToDecision": true,
+                  "rocketRating": null,
+                  "rocketRoles": [],
+                  "maxTypeRank": null,
+                  "maxTypeTier": null,
+                  "maxTypeKey": null,
+                  "maxOverallRating": null,
+                  "maxInvestmentRating": null,
+                  "maxUseCaseBreadth": null,
+                  "pveUseLevel": null,
+                  "assessmentDisposition": null,
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1621,7 +1700,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有逐 exact-form 火箭隊排名；此資料缺口不單獨覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1632,7 +1711,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -1643,7 +1722,7 @@
                   "ruleKey": "UNKNOWN_RELEASE_VARIANT",
                   "priority": 950,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "HOLD_FOR_NOW",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
                 }
               ],
@@ -1653,8 +1732,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "先保留一隻；關鍵用途確認前不以IV篩除。",
+            "shortReason": "關鍵資料補齊前先保留一隻，不要大量投入資源。"
           },
           {
             "row": {
@@ -1677,7 +1756,7 @@
                   "fromFormId": "552-unova",
                   "toFormId": "553-unova",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-09-04T15:00:00.000Z",
+                  "verifiedAt": "2026-09-07T00:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Krookodile",
@@ -1702,18 +1781,28 @@
               "variantKey": "PURIFIED",
               "isReleased": null,
               "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "decision": "HOLD_FOR_NOW",
+              "assessmentDisposition": "TRUE_DATA_PENDING",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
+              "confidence": "LOW",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
-              "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
-              "missingDataSummaryZhTw": "推出狀態仍為 UNKNOWN，但不影響目前不把此 variant 當作現有保留理由。",
-              "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "reviewStatus": "DATA_PENDING",
+              "reviewIssues": [
+                {
+                  "id": "gen5-audit-552-unova-purified",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+                  "affectsFinalDecision": true,
+                  "provisionalDecision": "HOLD_FOR_NOW",
+                  "suggestedResearchActionZhTw": "分開查核 ordinary／Shadow／Purified／Mega／Max；不由正向 map 缺席推斷無用途。",
+                  "lastResearchedAt": "2026-09-07T00:00:00.000Z"
+                }
+              ],
+              "missingDataSummaryZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+              "reviewed": false,
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -1721,9 +1810,9 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+              "requiredMovesSummaryZhTw": "尚未確認必要招式；不可把缺資料當成不需要限定招式。",
+              "recommendedIvStrategyZhTw": "先保留一隻；關鍵用途確認前不以IV篩除。",
               "ivRecommendations": [],
               "reasonZhTw": "此 exact BattleVariant 的推出狀態尚未由受控證據確認；不把普通版或其他 form 的價值回灌。",
               "evaluationId": "gen5-524-553-eval-552-unova-purified",
@@ -1740,10 +1829,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "DATA_UNAVAILABLE",
+                  "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1754,7 +1843,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1762,7 +1851,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1773,7 +1862,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1781,7 +1870,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1792,7 +1881,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1800,7 +1889,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "此 exact BattleVariant 不是 Mega。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1811,7 +1900,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1819,26 +1908,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
-                  "materialToDecision": false,
-                  "rocketRating": null,
-                  "rocketRoles": [],
-                  "maxTypeRank": null,
-                  "maxTypeTier": null,
-                  "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
-                  "sources": []
-                },
-                {
-                  "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1849,7 +1919,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
+                  "sources": []
+                },
+                {
+                  "category": "PVP",
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
+                  "materialToDecision": true,
+                  "rocketRating": null,
+                  "rocketRoles": [],
+                  "maxTypeRank": null,
+                  "maxTypeTier": null,
+                  "maxTypeKey": null,
+                  "maxOverallRating": null,
+                  "maxInvestmentRating": null,
+                  "maxUseCaseBreadth": null,
+                  "pveUseLevel": null,
+                  "assessmentDisposition": null,
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1857,7 +1946,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有逐 exact-form 火箭隊排名；此資料缺口不單獨覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1868,7 +1957,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -1879,7 +1968,7 @@
                   "ruleKey": "UNKNOWN_RELEASE_VARIANT",
                   "priority": 950,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "HOLD_FOR_NOW",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
                 }
               ],
@@ -1889,8 +1978,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "先保留一隻；關鍵用途確認前不以IV篩除。",
+            "shortReason": "關鍵資料補齊前先保留一隻，不要大量投入資源。"
           },
           {
             "row": {
@@ -1913,7 +2002,7 @@
                   "fromFormId": "552-unova",
                   "toFormId": "553-unova",
                   "requiresEvent": false,
-                  "verifiedAt": "2026-09-04T15:00:00.000Z",
+                  "verifiedAt": "2026-09-07T00:00:00.000Z",
                   "isEvolutionStub": false,
                   "targetUseLevel": null,
                   "targetNameEn": "Krookodile",
@@ -1938,18 +2027,28 @@
               "variantKey": "DYNAMAX",
               "isReleased": null,
               "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "decision": "HOLD_FOR_NOW",
+              "assessmentDisposition": "TRUE_DATA_PENDING",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
+              "confidence": "LOW",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
-              "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
-              "missingDataSummaryZhTw": "推出狀態仍為 UNKNOWN，但不影響目前不把此 variant 當作現有保留理由。",
-              "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "reviewStatus": "DATA_PENDING",
+              "reviewIssues": [
+                {
+                  "id": "gen5-audit-552-unova-dynamax",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+                  "affectsFinalDecision": true,
+                  "provisionalDecision": "HOLD_FOR_NOW",
+                  "suggestedResearchActionZhTw": "分開查核 ordinary／Shadow／Purified／Mega／Max；不由正向 map 缺席推斷無用途。",
+                  "lastResearchedAt": "2026-09-07T00:00:00.000Z"
+                }
+              ],
+              "missingDataSummaryZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+              "reviewed": false,
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -1957,9 +2056,9 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+              "requiredMovesSummaryZhTw": "尚未確認必要招式；不可把缺資料當成不需要限定招式。",
+              "recommendedIvStrategyZhTw": "先保留一隻；關鍵用途確認前不以IV篩除。",
               "ivRecommendations": [],
               "reasonZhTw": "此 exact BattleVariant 的推出狀態尚未由受控證據確認；不把普通版或其他 form 的價值回灌。",
               "evaluationId": "gen5-524-553-eval-552-unova-dynamax",
@@ -1976,10 +2075,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "DATA_UNAVAILABLE",
+                  "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -1990,7 +2089,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -1998,7 +2097,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2009,7 +2108,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2017,7 +2116,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2028,7 +2127,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2036,7 +2135,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "此 exact BattleVariant 不是 Mega。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2047,7 +2146,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2055,26 +2154,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-                  "materialToDecision": false,
-                  "rocketRating": null,
-                  "rocketRoles": [],
-                  "maxTypeRank": null,
-                  "maxTypeTier": null,
-                  "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
-                  "sources": []
-                },
-                {
-                  "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2085,7 +2165,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
+                  "sources": []
+                },
+                {
+                  "category": "PVP",
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
+                  "materialToDecision": true,
+                  "rocketRating": null,
+                  "rocketRoles": [],
+                  "maxTypeRank": null,
+                  "maxTypeTier": null,
+                  "maxTypeKey": null,
+                  "maxOverallRating": null,
+                  "maxInvestmentRating": null,
+                  "maxUseCaseBreadth": null,
+                  "pveUseLevel": null,
+                  "assessmentDisposition": null,
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2093,7 +2192,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有逐 exact-form 火箭隊排名；此資料缺口不單獨覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2104,7 +2203,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -2115,7 +2214,7 @@
                   "ruleKey": "UNKNOWN_RELEASE_VARIANT",
                   "priority": 950,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "HOLD_FOR_NOW",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
                 }
               ],
@@ -2125,8 +2224,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "先保留一隻；關鍵用途確認前不以IV篩除。",
+            "shortReason": "關鍵資料補齊前先保留一隻，不要大量投入資源。"
           }
         ],
         "variantKeys": [
@@ -2144,8 +2243,9 @@
           "tone": "LOW"
         },
         "pve": {
-          "label": "無顯著用途",
-          "tone": "LOW"
+          "label": "可用／預算型",
+          "detail": "後續世代進化",
+          "tone": "MEDIUM"
         },
         "gym": {
           "label": "—",
@@ -2155,18 +2255,20 @@
           "label": "—",
           "tone": "NONE"
         },
-        "decision": "TRANSFER_CANDIDATE",
-        "decisionReason": "一般重複個體通常可傳送。",
+        "decision": "CONDITIONAL_KEEP",
+        "decisionReason": "本體用途有限；依目標進化結果的數字門檻保留個體。",
         "ivRecommendations": [],
         "ivShortLabels": [],
-        "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-        "primaryUses": [],
+        "ivDirection": "依目標進化結果套用 GL／UL 個體Rank；PvE／Mega先看物種、招式、等級／CP與既有投入，15攻優先，14攻高整體IV亦可留；Max依角色分開。",
+        "primaryUses": [
+          "後續進化"
+        ],
         "primaryUseKeys": [],
         "hasRocketUse": false,
-        "hasEvolutionUse": false,
-        "hasDataIssues": false,
+        "hasEvolutionUse": true,
+        "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-09-04T15:00:00.000Z",
+        "updatedAt": "2026-09-07T00:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -2275,18 +2377,18 @@
               "variantKey": "NORMAL",
               "isReleased": true,
               "releaseStatus": "RELEASED",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "GO Hub 當前合眾 Pokédex 對此 exact Pokémon GO form 明確標示 Released: Yes；包含普通／洗翠裙兒小姐與野蠻鱸魚各條紋型態。",
               "decision": "CONDITIONAL_KEEP",
               "assessmentDisposition": "LIMITED_USE",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
+              "confidence": "MEDIUM",
               "dataStatus": "DATA_UNAVAILABLE",
               "reviewStatus": "RESOLVED",
               "reviewIssues": [],
-              "missingDataSummaryZhTw": "目前沒有會阻止可執行保留／傳送判斷的未解決資料依賴。",
+              "missingDataSummaryZhTw": "已確認目前保留理由；其他未完整研究的用途維持資料缺口，不代表已證實無用途。",
               "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "GL（超級聯盟） Overall #625；招式 MUD_SLAP／SAND_TOMB／CRUNCH；UL（高級聯盟） Overall #500；招式 MUD_SLAP／SAND_TOMB／CRUNCH；ML（大師聯盟） Overall #233；招式 MUD_SLAP／CRUNCH／SAND_TOMB",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -2294,8 +2396,8 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "依固定 PvPoke 快照優先核對：MUD_SLAP／CRUNCH／SAND_TOMB",
+              "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+              "requiredMovesSummaryZhTw": "固定 PvPoke 招式：MUD_SLAP／CRUNCH／SAND_TOMB",
               "recommendedIvStrategyZhTw": "ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
               "ivRecommendations": [],
               "reasonZhTw": "目前有可用但非核心的 PvP／PvE／Max 證據，只需選擇性保留。",
@@ -2313,9 +2415,9 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
+                  "status": "DATA_UNAVAILABLE",
+                  "provenance": "DATA_UNAVAILABLE",
+                  "summaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
                   "materialToDecision": false,
                   "rocketRating": null,
                   "rocketRoles": [],
@@ -2327,7 +2429,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2346,7 +2448,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2365,7 +2467,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2384,7 +2486,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2401,9 +2503,9 @@
                   "maxOverallRating": null,
                   "maxInvestmentRating": null,
                   "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
+                  "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2422,7 +2524,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2441,7 +2543,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -2470,7 +2572,7 @@
                   "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "source": {
                     "id": "pvpoke-gl-20260901",
                     "name": "PvPoke fixed ranking snapshot",
@@ -2502,7 +2604,7 @@
                   "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "source": {
                     "id": "pvpoke-ml-20260901",
                     "name": "PvPoke fixed ranking snapshot",
@@ -2534,7 +2636,7 @@
                   "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
                   "reproducible": true,
                   "migrationNote": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "source": {
                     "id": "pvpoke-ul-20260901",
                     "name": "PvPoke fixed ranking snapshot",
@@ -2559,7 +2661,7 @@
                   "title": "PvPoke GL（超級聯盟） Open League Overall Rankings",
                   "url": "https://pvpoke.com/rankings/all/1500/overall/",
                   "type": "PVP",
-                  "accessedAt": "2026-09-04T15:00:00.000Z",
+                  "accessedAt": "2026-09-07T00:00:00.000Z",
                   "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
                 },
                 {
@@ -2568,7 +2670,7 @@
                   "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
                   "url": "https://pvpoke.com/rankings/all/10000/overall/",
                   "type": "PVP",
-                  "accessedAt": "2026-09-04T15:00:00.000Z",
+                  "accessedAt": "2026-09-07T00:00:00.000Z",
                   "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
                 },
                 {
@@ -2577,7 +2679,7 @@
                   "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
                   "url": "https://pvpoke.com/rankings/all/2500/overall/",
                   "type": "PVP",
-                  "accessedAt": "2026-09-04T15:00:00.000Z",
+                  "accessedAt": "2026-09-07T00:00:00.000Z",
                   "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
                 }
               ],
@@ -2667,18 +2769,28 @@
               "variantKey": "SHADOW",
               "isReleased": null,
               "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "decision": "HOLD_FOR_NOW",
+              "assessmentDisposition": "TRUE_DATA_PENDING",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
+              "confidence": "LOW",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
-              "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
-              "missingDataSummaryZhTw": "推出狀態仍為 UNKNOWN，但不影響目前不把此 variant 當作現有保留理由。",
-              "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "reviewStatus": "DATA_PENDING",
+              "reviewIssues": [
+                {
+                  "id": "gen5-audit-553-unova-shadow",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+                  "affectsFinalDecision": true,
+                  "provisionalDecision": "HOLD_FOR_NOW",
+                  "suggestedResearchActionZhTw": "分開查核 ordinary／Shadow／Purified／Mega／Max；不由正向 map 缺席推斷無用途。",
+                  "lastResearchedAt": "2026-09-07T00:00:00.000Z"
+                }
+              ],
+              "missingDataSummaryZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+              "reviewed": false,
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -2686,9 +2798,9 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+              "requiredMovesSummaryZhTw": "尚未確認必要招式；不可把缺資料當成不需要限定招式。",
+              "recommendedIvStrategyZhTw": "先保留一隻；關鍵用途確認前不以IV篩除。",
               "ivRecommendations": [],
               "reasonZhTw": "此 exact BattleVariant 的推出狀態尚未由受控證據確認；不把普通版或其他 form 的價值回灌。",
               "evaluationId": "gen5-524-553-eval-553-unova-shadow",
@@ -2705,10 +2817,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "DATA_UNAVAILABLE",
+                  "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2719,7 +2831,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2727,7 +2839,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2738,7 +2850,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2746,7 +2858,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2757,7 +2869,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2765,7 +2877,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "此 exact BattleVariant 不是 Mega。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2776,7 +2888,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2784,26 +2896,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
-                  "materialToDecision": false,
-                  "rocketRating": null,
-                  "rocketRoles": [],
-                  "maxTypeRank": null,
-                  "maxTypeTier": null,
-                  "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
-                  "sources": []
-                },
-                {
-                  "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2814,7 +2907,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
+                  "sources": []
+                },
+                {
+                  "category": "PVP",
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "目前沒有本批受控正面證據確認此 exact form 的 Shadow 已推出；名單缺席保持 UNKNOWN。",
+                  "materialToDecision": true,
+                  "rocketRating": null,
+                  "rocketRoles": [],
+                  "maxTypeRank": null,
+                  "maxTypeTier": null,
+                  "maxTypeKey": null,
+                  "maxOverallRating": null,
+                  "maxInvestmentRating": null,
+                  "maxUseCaseBreadth": null,
+                  "pveUseLevel": null,
+                  "assessmentDisposition": null,
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2822,7 +2934,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有逐 exact-form 火箭隊排名；此資料缺口不單獨覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2833,7 +2945,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -2844,7 +2956,7 @@
                   "ruleKey": "UNKNOWN_RELEASE_VARIANT",
                   "priority": 950,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "HOLD_FOR_NOW",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
                 }
               ],
@@ -2854,8 +2966,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "先保留一隻；關鍵用途確認前不以IV篩除。",
+            "shortReason": "關鍵資料補齊前先保留一隻，不要大量投入資源。"
           },
           {
             "row": {
@@ -2888,18 +3000,28 @@
               "variantKey": "PURIFIED",
               "isReleased": null,
               "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "decision": "HOLD_FOR_NOW",
+              "assessmentDisposition": "TRUE_DATA_PENDING",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
+              "confidence": "LOW",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
-              "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
-              "missingDataSummaryZhTw": "推出狀態仍為 UNKNOWN，但不影響目前不把此 variant 當作現有保留理由。",
-              "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "reviewStatus": "DATA_PENDING",
+              "reviewIssues": [
+                {
+                  "id": "gen5-audit-553-unova-purified",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+                  "affectsFinalDecision": true,
+                  "provisionalDecision": "HOLD_FOR_NOW",
+                  "suggestedResearchActionZhTw": "分開查核 ordinary／Shadow／Purified／Mega／Max；不由正向 map 缺席推斷無用途。",
+                  "lastResearchedAt": "2026-09-07T00:00:00.000Z"
+                }
+              ],
+              "missingDataSummaryZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+              "reviewed": false,
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -2907,9 +3029,9 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+              "requiredMovesSummaryZhTw": "尚未確認必要招式；不可把缺資料當成不需要限定招式。",
+              "recommendedIvStrategyZhTw": "先保留一隻；關鍵用途確認前不以IV篩除。",
               "ivRecommendations": [],
               "reasonZhTw": "此 exact BattleVariant 的推出狀態尚未由受控證據確認；不把普通版或其他 form 的價值回灌。",
               "evaluationId": "gen5-524-553-eval-553-unova-purified",
@@ -2926,10 +3048,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "DATA_UNAVAILABLE",
+                  "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2940,7 +3062,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2948,7 +3070,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2959,7 +3081,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2967,7 +3089,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "普通、暗影、淨化或 Mega 個體不能替代 Max 個體。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2978,7 +3100,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -2986,7 +3108,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "此 exact BattleVariant 不是 Mega。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -2997,7 +3119,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3005,26 +3127,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
-                  "materialToDecision": false,
-                  "rocketRating": null,
-                  "rocketRoles": [],
-                  "maxTypeRank": null,
-                  "maxTypeTier": null,
-                  "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
-                  "sources": []
-                },
-                {
-                  "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -3035,7 +3138,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
+                  "sources": []
+                },
+                {
+                  "category": "PVP",
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "同 exact form 的 Shadow 尚未確認，因此 Purified 不自行推定。",
+                  "materialToDecision": true,
+                  "rocketRating": null,
+                  "rocketRoles": [],
+                  "maxTypeRank": null,
+                  "maxTypeTier": null,
+                  "maxTypeKey": null,
+                  "maxOverallRating": null,
+                  "maxInvestmentRating": null,
+                  "maxUseCaseBreadth": null,
+                  "pveUseLevel": null,
+                  "assessmentDisposition": null,
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3043,7 +3165,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有逐 exact-form 火箭隊排名；此資料缺口不單獨覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -3054,7 +3176,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -3065,7 +3187,7 @@
                   "ruleKey": "UNKNOWN_RELEASE_VARIANT",
                   "priority": 950,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "HOLD_FOR_NOW",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
                 }
               ],
@@ -3075,8 +3197,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "先保留一隻；關鍵用途確認前不以IV篩除。",
+            "shortReason": "關鍵資料補齊前先保留一隻，不要大量投入資源。"
           },
           {
             "row": {
@@ -3109,18 +3231,28 @@
               "variantKey": "DYNAMAX",
               "isReleased": null,
               "releaseStatus": "UNKNOWN",
-              "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+              "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
               "notesZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-              "decision": "TRANSFER_CANDIDATE",
-              "assessmentDisposition": "NOT_APPLICABLE_OR_UNRELEASED",
+              "decision": "HOLD_FOR_NOW",
+              "assessmentDisposition": "TRUE_DATA_PENDING",
               "provenance": "MANUAL_CURATED",
-              "confidence": "HIGH",
+              "confidence": "LOW",
               "dataStatus": "UNKNOWN_RELEASE_STATUS",
-              "reviewStatus": "RESOLVED",
-              "reviewIssues": [],
-              "missingDataSummaryZhTw": "推出狀態仍為 UNKNOWN，但不影響目前不把此 variant 當作現有保留理由。",
-              "reviewed": true,
-              "updatedAt": "2026-09-04T15:00:00.000Z",
+              "reviewStatus": "DATA_PENDING",
+              "reviewIssues": [
+                {
+                  "id": "gen5-audit-553-unova-dynamax",
+                  "issueType": "UNKNOWN_RELEASE_STATUS",
+                  "messageZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+                  "affectsFinalDecision": true,
+                  "provisionalDecision": "HOLD_FOR_NOW",
+                  "suggestedResearchActionZhTw": "分開查核 ordinary／Shadow／Purified／Mega／Max；不由正向 map 缺席推斷無用途。",
+                  "lastResearchedAt": "2026-09-07T00:00:00.000Z"
+                }
+              ],
+              "missingDataSummaryZhTw": "此版本推出狀態尚待確認；不能把 UNKNOWN 當作已確認未推出，也不推定現有普通個體具有此版本能力。",
+              "reviewed": false,
+              "updatedAt": "2026-09-07T00:00:00.000Z",
               "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
               "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
               "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -3128,9 +3260,9 @@
               "gymRating": "NOT_APPLICABLE",
               "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
               "maxBattleSummaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-              "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-              "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
-              "recommendedIvStrategyZhTw": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
+              "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+              "requiredMovesSummaryZhTw": "尚未確認必要招式；不可把缺資料當成不需要限定招式。",
+              "recommendedIvStrategyZhTw": "先保留一隻；關鍵用途確認前不以IV篩除。",
               "ivRecommendations": [],
               "reasonZhTw": "此 exact BattleVariant 的推出狀態尚未由受控證據確認；不把普通版或其他 form 的價值回灌。",
               "evaluationId": "gen5-524-553-eval-553-unova-dynamax",
@@ -3147,10 +3279,10 @@
               "categoryStatuses": [
                 {
                   "category": "EVOLUTION_VALUE",
-                  "status": "VERIFIED",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
-                  "materialToDecision": false,
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "DATA_UNAVAILABLE",
+                  "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -3161,7 +3293,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3169,7 +3301,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "未列為主要道館保留用途；次要資料缺失不覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -3180,7 +3312,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3188,7 +3320,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -3199,7 +3331,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3207,7 +3339,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "此 exact BattleVariant 不是 Mega。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -3218,7 +3350,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3226,26 +3358,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-                  "materialToDecision": false,
-                  "rocketRating": null,
-                  "rocketRoles": [],
-                  "maxTypeRank": null,
-                  "maxTypeTier": null,
-                  "maxTypeKey": null,
-                  "maxOverallRating": null,
-                  "maxInvestmentRating": null,
-                  "maxUseCaseBreadth": null,
-                  "pveUseLevel": "NO_SIGNIFICANT_USE",
-                  "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
-                  "sources": []
-                },
-                {
-                  "category": "PVP",
-                  "status": "UNKNOWN_RELEASE_STATUS",
-                  "provenance": "MANUAL_CURATED",
-                  "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": null,
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -3256,7 +3369,26 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
+                  "sources": []
+                },
+                {
+                  "category": "PVP",
+                  "status": "UNKNOWN_RELEASE_STATUS",
+                  "provenance": "MANUAL_CURATED",
+                  "summaryZhTw": "當前受控來源沒有明確確認此 exact form 的 Dynamax 版本；不因同家族或其他版本已推出而回灌。",
+                  "materialToDecision": true,
+                  "rocketRating": null,
+                  "rocketRoles": [],
+                  "maxTypeRank": null,
+                  "maxTypeTier": null,
+                  "maxTypeKey": null,
+                  "maxOverallRating": null,
+                  "maxInvestmentRating": null,
+                  "maxUseCaseBreadth": null,
+                  "pveUseLevel": null,
+                  "assessmentDisposition": null,
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 },
                 {
@@ -3264,7 +3396,7 @@
                   "status": "UNKNOWN_RELEASE_STATUS",
                   "provenance": "MANUAL_CURATED",
                   "summaryZhTw": "目前沒有逐 exact-form 火箭隊排名；此資料缺口不單獨覆蓋其他結論。",
-                  "materialToDecision": false,
+                  "materialToDecision": true,
                   "rocketRating": "DATA_UNAVAILABLE",
                   "rocketRoles": [],
                   "maxTypeRank": null,
@@ -3275,7 +3407,7 @@
                   "maxUseCaseBreadth": null,
                   "pveUseLevel": null,
                   "assessmentDisposition": null,
-                  "checkedAt": "2026-09-04T15:00:00.000Z",
+                  "checkedAt": "2026-09-07T00:00:00.000Z",
                   "sources": []
                 }
               ],
@@ -3286,7 +3418,7 @@
                   "ruleKey": "UNKNOWN_RELEASE_VARIANT",
                   "priority": 950,
                   "matched": true,
-                  "resultDecision": "TRANSFER_CANDIDATE",
+                  "resultDecision": "HOLD_FOR_NOW",
                   "explanationZhTw": "第五世代正式匯入保留 exact form／variant 邊界；UNKNOWN 不會被改寫成 UNRELEASED。"
                 }
               ],
@@ -3296,8 +3428,8 @@
             "primaryUseKeys": [],
             "ivRecommendations": [],
             "ivShortLabels": [],
-            "ivDirection": "即使100%，也不能在物種缺乏戰鬥用途時單靠IV成為保留理由。",
-            "shortReason": "目前沒有足以支持囤積的主要戰鬥用途。"
+            "ivDirection": "先保留一隻；關鍵用途確認前不以IV篩除。",
+            "shortReason": "關鍵資料補齊前先保留一隻，不要大量投入資源。"
           }
         ],
         "variantKeys": [
@@ -3316,7 +3448,7 @@
         },
         "pve": {
           "label": "無顯著用途",
-          "tone": "LOW"
+          "tone": "NONE"
         },
         "gym": {
           "label": "—",
@@ -3372,9 +3504,9 @@
         ],
         "hasRocketUse": false,
         "hasEvolutionUse": false,
-        "hasDataIssues": false,
+        "hasDataIssues": true,
         "reviewed": true,
-        "updatedAt": "2026-09-04T15:00:00.000Z",
+        "updatedAt": "2026-09-07T00:00:00.000Z",
         "detailsLoaded": true
       },
       "roles": [
@@ -3435,9 +3567,9 @@
     "tone": "MEDIUM"
   },
   "pve": {
-    "label": "無顯著用途",
-    "detail": "目前沒有已確認的 PvE 投資用途",
-    "tone": "LOW"
+    "label": "可用／預算型",
+    "detail": "後續世代進化",
+    "tone": "MEDIUM"
   },
   "gym": {
     "label": "未列為主要保留理由",
@@ -3504,13 +3636,16 @@
   ],
   "ivSummaryZhTw": "ML：15攻／98%優先",
   "primaryUses": [
+    "後續進化",
     "PvP"
   ],
   "holdReasons": [],
-  "notices": [],
-  "hasDataIssues": false,
+  "notices": [
+    "黑眼鱷、混混鱷、流氓鱷仍有暫時保留版本"
+  ],
+  "hasDataIssues": true,
   "hasCriticalDataIssues": false,
-  "updatedAt": "2026-09-04T15:00:00.000Z",
+  "updatedAt": "2026-09-07T00:00:00.000Z",
   "minDexNumber": 551,
   "maxDexNumber": 553,
   "detailsLoaded": true

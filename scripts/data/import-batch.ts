@@ -2,7 +2,7 @@ import { spawn } from "node:child_process";
 import { BATCH_REGISTRY, batchImportArgs, getBatchByKey } from "../../src/config/batch-registry";
 import { assertDisposableDatabase, getDatabaseUrl } from "../../src/lib/database";
 
-const npx = process.platform === "win32" ? "npx.cmd" : "npx";
+
 
 export function getBatchImportInvocation(batch: string) {
   const entry = getBatchByKey(batch);
@@ -36,7 +36,8 @@ async function main() {
 
   const { entry, args } = getBatchImportInvocation(batch);
   console.log(`Importing batch ${entry.key} with ${entry.import.adapter} adapter.`);
-  await run(npx, args);
+  if (args[0] === "tsx") await run(process.execPath, ["--import", "tsx", ...args.slice(1)]);
+  else await run(process.platform === "win32" ? "npx.cmd" : "npx", args);
 }
 
 const scriptPath = process.argv[1]?.replaceAll("\\", "/");

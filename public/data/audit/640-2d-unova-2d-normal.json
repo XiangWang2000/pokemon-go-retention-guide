@@ -28,18 +28,18 @@
   "variantKey": "NORMAL",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
   "notesZhTw": "GO Hub 當前合眾 Pokédex 對此 exact Pokémon GO form 明確標示 Released: Yes；普通／伽勒爾泥巴魚、普通／洗翠勇士雄鷹及龍捲雲／雷電雲化身與靈獸型態逐 form 判定。",
   "decision": "KEEP",
   "assessmentDisposition": "CLEAR_USE",
   "provenance": "MANUAL_CURATED",
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "dataStatus": "DATA_UNAVAILABLE",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "目前沒有會阻止可執行保留／傳送判斷的未解決資料依賴。",
+  "missingDataSummaryZhTw": "已確認目前保留理由；其他未完整研究的用途維持資料缺口，不代表已證實無用途。",
   "reviewed": true,
-  "updatedAt": "2026-09-04T15:00:00.000Z",
+  "updatedAt": "2026-09-07T00:00:00.000Z",
   "pvpSummaryZhTw": "UL（高級聯盟） Overall #7；招式 DOUBLE_KICK／LEAF_BLADE／SACRED_SWORD；ML（大師聯盟） Overall #111；招式 DOUBLE_KICK／LEAF_BLADE／SACRED_SWORD",
   "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
   "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -47,8 +47,8 @@
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
   "maxBattleSummaryZhTw": "Max 個體與普通／暗影／淨化／Mega 分開評估。",
-  "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-  "requiredMovesSummaryZhTw": "依固定 PvPoke 快照優先核對：DOUBLE_KICK／LEAF_BLADE／SACRED_SWORD",
+  "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+  "requiredMovesSummaryZhTw": "固定 PvPoke 招式：DOUBLE_KICK／LEAF_BLADE／SACRED_SWORD",
   "recommendedIvStrategyZhTw": "UL：目標物種與型態的個體PvP IV Rank≤100或PR≥97.5%優先；Rank 101～200條件式保留。；ML：15攻／96%以上為一般候選，15攻／98%以上優先，100%最優先；仍需確認物種特定CMP與攻防門檻。",
   "ivRecommendations": [
     {
@@ -457,9 +457,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "NOT_APPLICABLE",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "目前沒有與此 exact form 相連的正式進化邊。",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
+      "summaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -471,7 +471,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -490,7 +490,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -509,7 +509,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -528,7 +528,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -545,9 +545,9 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -566,7 +566,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": [
         {
           "id": "SECONDARY-GOHUB-UNOVA-ROSTER-20260904",
@@ -604,7 +604,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     }
   ],
@@ -633,7 +633,7 @@
       "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "pvpoke-ml-20260901",
         "name": "PvPoke fixed ranking snapshot",
@@ -665,7 +665,7 @@
       "extractionMethod": "固定 rankings JSON index + 1；mapping mode 由 Gen5 candidate evidence 鎖定。",
       "reproducible": true,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "pvpoke-ul-20260901",
         "name": "PvPoke fixed ranking snapshot",
@@ -690,7 +690,7 @@
       "title": "PvPoke ML（大師聯盟） Open League Overall Rankings",
       "url": "https://pvpoke.com/rankings/all/10000/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-04T15:00:00.000Z",
+      "accessedAt": "2026-09-07T00:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
     },
     {
@@ -699,7 +699,7 @@
       "title": "PvPoke UL（高級聯盟） Open League Overall Rankings",
       "url": "https://pvpoke.com/rankings/all/2500/overall/",
       "type": "PVP",
-      "accessedAt": "2026-09-04T15:00:00.000Z",
+      "accessedAt": "2026-09-07T00:00:00.000Z",
       "usageZhTw": "固定 PvPoke Open／Overall ranking snapshot。"
     }
   ],

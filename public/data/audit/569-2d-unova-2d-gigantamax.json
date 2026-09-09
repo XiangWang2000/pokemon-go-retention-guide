@@ -27,18 +27,18 @@
   "variantKey": "GIGANTAMAX",
   "isReleased": true,
   "releaseStatus": "RELEASED",
-  "releaseVerifiedAt": "2026-09-04T15:00:00.000Z",
+  "releaseVerifiedAt": "2026-09-07T00:00:00.000Z",
   "notesZhTw": "Pokémon GO 官方公告確認 Gigantamax Garbodor 於 2025-11-01 的 Max Battle Day 首度登場。",
   "decision": "KEEP",
   "assessmentDisposition": "CLEAR_USE",
   "provenance": "MANUAL_CURATED",
-  "confidence": "HIGH",
+  "confidence": "MEDIUM",
   "dataStatus": "PARTIALLY_VERIFIED",
   "reviewStatus": "RESOLVED",
   "reviewIssues": [],
-  "missingDataSummaryZhTw": "目前沒有會阻止可執行保留／傳送判斷的未解決資料依賴。",
+  "missingDataSummaryZhTw": "已確認目前保留理由；其他未完整研究的用途維持資料缺口，不代表已證實無用途。",
   "reviewed": true,
-  "updatedAt": "2026-09-04T15:00:00.000Z",
+  "updatedAt": "2026-09-07T00:00:00.000Z",
   "pvpSummaryZhTw": "固定 PvPoke Open／Overall 快照未提供可用排名；不由其他 form 或 variant 借值。",
   "pveSummaryZhTw": "目前沒有記錄正向 exact-variant PvE 證據。",
   "rocketSummaryZhTw": "火箭隊沒有統一逐 exact-form 排名；此欄不單獨覆蓋其他結論。",
@@ -46,8 +46,8 @@
   "gymRating": "NOT_APPLICABLE",
   "megaSummaryZhTw": "Mega 與此 exact BattleVariant 分開評估。",
   "maxBattleSummaryZhTw": "超極巨灰塵山目前為 S Tier #1 毒系 Max Battle 攻擊手，屬本批明確的核心 Gigantamax 投資候選。",
-  "evolutionSummaryZhTw": "只使用正式 evolutionPairs；季節／性別外觀、地區型態、Change Form、Fusion 與不可互換 form 不互借進化價值。",
-  "requiredMovesSummaryZhTw": "限定招式只在 exact PvE evidence 明確提及時構成投入條件。",
+  "evolutionSummaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
+  "requiredMovesSummaryZhTw": "Max 投資條件：超極巨灰塵山目前為 S Tier #1 毒系 Max Battle 攻擊手，屬本批明確的核心 Gigantamax 投資候選。",
   "recommendedIvStrategyZhTw": "Max攻擊：15攻優先；不以單一總IV百分比取代攻擊角色判斷。",
   "ivRecommendations": [
     {
@@ -456,9 +456,9 @@
   "categoryStatuses": [
     {
       "category": "EVOLUTION_VALUE",
-      "status": "VERIFIED",
-      "provenance": "MANUAL_CURATED",
-      "summaryZhTw": "正式進化圖包含此 exact form；跨 form change／Fusion 不視為進化。",
+      "status": "DATA_UNAVAILABLE",
+      "provenance": "DATA_UNAVAILABLE",
+      "summaryZhTw": "未確認可沿正式進化路徑取得的後續用途；不把型態切換或 Fusion 當成進化。",
       "materialToDecision": false,
       "rocketRating": null,
       "rocketRoles": [],
@@ -470,7 +470,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -489,7 +489,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -508,7 +508,7 @@
       "maxUseCaseBreadth": "BROAD",
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": [
         {
           "id": "GEN5-PVE-c704e44530acc15d",
@@ -540,7 +540,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -557,9 +557,9 @@
       "maxOverallRating": null,
       "maxInvestmentRating": null,
       "maxUseCaseBreadth": null,
-      "pveUseLevel": "NO_SIGNIFICANT_USE",
+      "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -578,7 +578,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     },
     {
@@ -597,7 +597,7 @@
       "maxUseCaseBreadth": null,
       "pveUseLevel": null,
       "assessmentDisposition": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "sources": []
     }
   ],
@@ -622,7 +622,7 @@
       "extractionMethod": "日期化 exact Max Battle evidence。",
       "reproducible": false,
       "migrationNote": null,
-      "checkedAt": "2026-09-04T15:00:00.000Z",
+      "checkedAt": "2026-09-07T00:00:00.000Z",
       "source": {
         "id": "GEN5-PVE-c704e44530acc15d",
         "name": "Pokémon GO Hub",

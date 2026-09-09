@@ -46,8 +46,8 @@ export async function generateGen5Review(batch: string) {
   const checks = [
     { name: "Gen5 exact form identity", result: actualFormIds.size === expectedFormIds.size && [...expectedFormIds].every((id) => actualFormIds.has(id)) ? "PASS" : "FAIL" },
     { name: "Gen5 batch boundary counts", result: new Set(rows.map((row) => row.dexNumber)).size === entry.maxDex - entry.minDex + 1 && rows.length === expected.battleVariants ? "PASS" : "FAIL" },
-    { name: "Gen5 exact release-state preservation", result: rows.filter((row) => row.releaseStatus === "RELEASED").length === expected.released && rows.filter((row) => row.releaseStatus === "UNKNOWN").length === expected.unknown ? "PASS" : "FAIL" },
-    { name: "Gen5 no TRUE_DATA_PENDING", result: rows.every((row) => row.assessmentDisposition !== "TRUE_DATA_PENDING") ? "PASS" : "FAIL" },
+    { name: "Gen5 exact release-state preservation", result: rows.every((row) => row.releaseStatus === definition.releaseEvidenceForVariant(row.formId, row.variantKey as typeof baseVariants[number] | typeof specialVariants[number]).status) && rows.filter((row) => row.releaseStatus === "RELEASED").length === expected.released && rows.filter((row) => row.releaseStatus === "UNKNOWN").length === expected.unknown ? "PASS" : "FAIL" },
+    { name: "Gen5 scoped holds have material review issues", result: rows.every((row) => row.assessmentDisposition !== "TRUE_DATA_PENDING" || (row.decision === "HOLD_FOR_NOW" && issues.some((issue) => issue.formId === row.formId && issue.variantKey === row.variantKey && issue.affectsFinalDecision))) ? "PASS" : "FAIL" },
     { name: "Gen5 owning-family coverage", result: [...expectedFormIds].every((formId) => families.some((family) => family.members.some((member) => member.form.formId === formId))) ? "PASS" : "FAIL" },
   ] as const;
   const failed = checks.filter((check) => check.result !== "PASS");
@@ -63,6 +63,7 @@ export async function generateGen5Review(batch: string) {
       trueDataPending: rows.filter((row) => row.assessmentDisposition === "TRUE_DATA_PENDING").length,
     },
     exactForms: [...actualFormIds].sort(), checks,
+    scopedHolds: families.filter((family) => family.retentionStrategy === "HOLD_FOR_NOW").map((family) => ({ familyId: family.familyId, reasonZhTw: family.handlingSummaryZhTw })),
     immediateHandling: families.map((family) => ({ familyId: family.familyId, strategy: family.retentionStrategy, conclusion: family.handlingSummaryZhTw })),
   };
   const lines = [

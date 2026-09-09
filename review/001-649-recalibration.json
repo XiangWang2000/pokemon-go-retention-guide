@@ -1,29 +1,3023 @@
 {
   "scope": "1-649",
-  "dataVersion": "2026.09.05-r32",
-  "updatedAt": "2026-09-05",
-  "generatedAt": "2026-09-04T16:00:00.000Z",
+  "dataVersion": "2026.09.07-r33",
+  "updatedAt": "2026-09-07",
+  "generatedAt": "2026-09-06T16:00:00.000Z",
   "rulesVersion": "2026.08.06-v7",
   "counts": {
     "variants": 3105,
     "decisions": {
-      "TRANSFER_CANDIDATE": 2345,
-      "CONDITIONAL_KEEP": 506,
-      "KEEP": 254
+      "TRANSFER_CANDIDATE": 1682,
+      "CONDITIONAL_KEEP": 571,
+      "KEEP": 254,
+      "HOLD_FOR_NOW": 598
     },
     "dispositions": {
-      "NO_SIGNIFICANT_USE": 1028,
+      "NO_SIGNIFICANT_USE": 760,
       "CLEAR_USE": 216,
-      "LIMITED_USE": 544,
-      "NOT_APPLICABLE_OR_UNRELEASED": 1317
+      "LIMITED_USE": 609,
+      "NOT_APPLICABLE_OR_UNRELEASED": 922,
+      "TRUE_DATA_PENDING": 598
     },
     "pveUseLevels": {
-      "NO_SIGNIFICANT_USE": 2659,
+      "NO_SIGNIFICANT_USE": 1944,
       "CORE_INVESTMENT": 171,
       "SPECIAL_USE": 180,
-      "USABLE_OR_BUDGET": 95
+      "USABLE_OR_BUDGET": 95,
+      "UNSPECIFIED": 715
     },
     "changedFields": 0
   },
-  "trueDataPending": []
+  "trueDataPending": [
+    {
+      "id": "494-unova-dynamax",
+      "formId": "494-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "494-unova-purified",
+      "formId": "494-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "494-unova-shadow",
+      "formId": "494-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "495-unova-dynamax",
+      "formId": "495-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "495-unova-normal",
+      "formId": "495-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "495-unova-purified",
+      "formId": "495-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "496-unova-dynamax",
+      "formId": "496-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "496-unova-normal",
+      "formId": "496-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "496-unova-purified",
+      "formId": "496-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "497-unova-dynamax",
+      "formId": "497-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "497-unova-normal",
+      "formId": "497-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "497-unova-purified",
+      "formId": "497-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "498-unova-dynamax",
+      "formId": "498-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "498-unova-normal",
+      "formId": "498-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "498-unova-purified",
+      "formId": "498-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "499-unova-dynamax",
+      "formId": "499-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "499-unova-normal",
+      "formId": "499-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "499-unova-purified",
+      "formId": "499-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "500-unova-dynamax",
+      "formId": "500-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "500-unova-normal",
+      "formId": "500-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "500-unova-purified",
+      "formId": "500-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "501-unova-dynamax",
+      "formId": "501-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "501-unova-purified",
+      "formId": "501-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "502-unova-dynamax",
+      "formId": "502-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "502-unova-purified",
+      "formId": "502-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "503-unova-dynamax",
+      "formId": "503-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "503-unova-purified",
+      "formId": "503-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "504-unova-dynamax",
+      "formId": "504-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "504-unova-normal",
+      "formId": "504-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "504-unova-purified",
+      "formId": "504-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "504-unova-shadow",
+      "formId": "504-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "505-unova-dynamax",
+      "formId": "505-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "505-unova-normal",
+      "formId": "505-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "505-unova-purified",
+      "formId": "505-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "505-unova-shadow",
+      "formId": "505-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "506-unova-dynamax",
+      "formId": "506-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "506-unova-normal",
+      "formId": "506-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "506-unova-purified",
+      "formId": "506-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "506-unova-shadow",
+      "formId": "506-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "507-unova-dynamax",
+      "formId": "507-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "507-unova-normal",
+      "formId": "507-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "507-unova-purified",
+      "formId": "507-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "507-unova-shadow",
+      "formId": "507-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "508-unova-dynamax",
+      "formId": "508-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "508-unova-normal",
+      "formId": "508-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "508-unova-purified",
+      "formId": "508-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "508-unova-shadow",
+      "formId": "508-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "509-unova-dynamax",
+      "formId": "509-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "509-unova-normal",
+      "formId": "509-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "509-unova-purified",
+      "formId": "509-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "509-unova-shadow",
+      "formId": "509-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "510-unova-dynamax",
+      "formId": "510-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "510-unova-normal",
+      "formId": "510-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "510-unova-purified",
+      "formId": "510-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "510-unova-shadow",
+      "formId": "510-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "511-unova-dynamax",
+      "formId": "511-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "511-unova-normal",
+      "formId": "511-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "511-unova-purified",
+      "formId": "511-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "511-unova-shadow",
+      "formId": "511-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "512-unova-dynamax",
+      "formId": "512-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "512-unova-normal",
+      "formId": "512-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "512-unova-purified",
+      "formId": "512-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "512-unova-shadow",
+      "formId": "512-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "513-unova-dynamax",
+      "formId": "513-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "513-unova-normal",
+      "formId": "513-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "513-unova-purified",
+      "formId": "513-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "513-unova-shadow",
+      "formId": "513-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "514-unova-dynamax",
+      "formId": "514-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "514-unova-normal",
+      "formId": "514-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "514-unova-purified",
+      "formId": "514-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "514-unova-shadow",
+      "formId": "514-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "515-unova-dynamax",
+      "formId": "515-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "515-unova-normal",
+      "formId": "515-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "515-unova-purified",
+      "formId": "515-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "515-unova-shadow",
+      "formId": "515-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "516-unova-dynamax",
+      "formId": "516-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "516-unova-normal",
+      "formId": "516-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "516-unova-purified",
+      "formId": "516-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "516-unova-shadow",
+      "formId": "516-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "517-unova-dynamax",
+      "formId": "517-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "517-unova-normal",
+      "formId": "517-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "517-unova-purified",
+      "formId": "517-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "517-unova-shadow",
+      "formId": "517-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "518-unova-dynamax",
+      "formId": "518-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "518-unova-normal",
+      "formId": "518-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "518-unova-purified",
+      "formId": "518-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "518-unova-shadow",
+      "formId": "518-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "519-unova-purified",
+      "formId": "519-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "520-unova-purified",
+      "formId": "520-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "521-unova-purified",
+      "formId": "521-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "522-unova-dynamax",
+      "formId": "522-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "522-unova-normal",
+      "formId": "522-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "522-unova-purified",
+      "formId": "522-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "522-unova-shadow",
+      "formId": "522-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "523-unova-dynamax",
+      "formId": "523-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "523-unova-normal",
+      "formId": "523-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "523-unova-purified",
+      "formId": "523-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "523-unova-shadow",
+      "formId": "523-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "524-unova-purified",
+      "formId": "524-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "525-unova-purified",
+      "formId": "525-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "526-unova-purified",
+      "formId": "526-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "527-unova-dynamax",
+      "formId": "527-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "527-unova-normal",
+      "formId": "527-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "527-unova-purified",
+      "formId": "527-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "527-unova-shadow",
+      "formId": "527-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "528-unova-dynamax",
+      "formId": "528-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "528-unova-normal",
+      "formId": "528-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "528-unova-purified",
+      "formId": "528-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "528-unova-shadow",
+      "formId": "528-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "529-unova-purified",
+      "formId": "529-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "530-unova-purified",
+      "formId": "530-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "531-unova-dynamax",
+      "formId": "531-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "531-unova-mega",
+      "formId": "531-unova",
+      "variantKey": "MEGA"
+    },
+    {
+      "id": "531-unova-normal",
+      "formId": "531-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "531-unova-purified",
+      "formId": "531-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "531-unova-shadow",
+      "formId": "531-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "532-unova-dynamax",
+      "formId": "532-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "532-unova-purified",
+      "formId": "532-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "533-unova-dynamax",
+      "formId": "533-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "533-unova-purified",
+      "formId": "533-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "534-unova-dynamax",
+      "formId": "534-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "534-unova-purified",
+      "formId": "534-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "535-unova-dynamax",
+      "formId": "535-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "535-unova-purified",
+      "formId": "535-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "535-unova-shadow",
+      "formId": "535-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "536-unova-dynamax",
+      "formId": "536-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "536-unova-purified",
+      "formId": "536-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "536-unova-shadow",
+      "formId": "536-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "537-unova-dynamax",
+      "formId": "537-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "537-unova-purified",
+      "formId": "537-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "537-unova-shadow",
+      "formId": "537-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "538-unova-dynamax",
+      "formId": "538-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "538-unova-purified",
+      "formId": "538-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "539-unova-dynamax",
+      "formId": "539-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "539-unova-normal",
+      "formId": "539-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "539-unova-purified",
+      "formId": "539-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "539-unova-shadow",
+      "formId": "539-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "540-unova-dynamax",
+      "formId": "540-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "540-unova-normal",
+      "formId": "540-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "540-unova-purified",
+      "formId": "540-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "540-unova-shadow",
+      "formId": "540-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "541-unova-dynamax",
+      "formId": "541-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "541-unova-normal",
+      "formId": "541-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "541-unova-purified",
+      "formId": "541-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "541-unova-shadow",
+      "formId": "541-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "542-unova-dynamax",
+      "formId": "542-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "542-unova-normal",
+      "formId": "542-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "542-unova-purified",
+      "formId": "542-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "542-unova-shadow",
+      "formId": "542-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "543-unova-dynamax",
+      "formId": "543-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "543-unova-normal",
+      "formId": "543-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "543-unova-purified",
+      "formId": "543-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "543-unova-shadow",
+      "formId": "543-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "544-unova-dynamax",
+      "formId": "544-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "544-unova-normal",
+      "formId": "544-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "544-unova-purified",
+      "formId": "544-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "544-unova-shadow",
+      "formId": "544-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "545-unova-dynamax",
+      "formId": "545-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "545-unova-normal",
+      "formId": "545-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "545-unova-purified",
+      "formId": "545-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "545-unova-shadow",
+      "formId": "545-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "546-unova-dynamax",
+      "formId": "546-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "546-unova-normal",
+      "formId": "546-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "546-unova-purified",
+      "formId": "546-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "546-unova-shadow",
+      "formId": "546-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "547-unova-dynamax",
+      "formId": "547-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "547-unova-normal",
+      "formId": "547-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "547-unova-purified",
+      "formId": "547-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "547-unova-shadow",
+      "formId": "547-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "548-unova-dynamax",
+      "formId": "548-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "548-unova-normal",
+      "formId": "548-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "548-unova-purified",
+      "formId": "548-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "548-unova-shadow",
+      "formId": "548-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "549-hisui-dynamax",
+      "formId": "549-hisui",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "549-unova-dynamax",
+      "formId": "549-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "549-hisui-normal",
+      "formId": "549-hisui",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "549-unova-normal",
+      "formId": "549-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "549-hisui-purified",
+      "formId": "549-hisui",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "549-unova-purified",
+      "formId": "549-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "549-hisui-shadow",
+      "formId": "549-hisui",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "549-unova-shadow",
+      "formId": "549-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "550-blue-striped-dynamax",
+      "formId": "550-blue-striped",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "550-red-striped-dynamax",
+      "formId": "550-red-striped",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "550-white-striped-dynamax",
+      "formId": "550-white-striped",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "550-blue-striped-normal",
+      "formId": "550-blue-striped",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "550-red-striped-normal",
+      "formId": "550-red-striped",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "550-white-striped-normal",
+      "formId": "550-white-striped",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "550-blue-striped-purified",
+      "formId": "550-blue-striped",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "550-red-striped-purified",
+      "formId": "550-red-striped",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "550-white-striped-purified",
+      "formId": "550-white-striped",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "550-blue-striped-shadow",
+      "formId": "550-blue-striped",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "550-red-striped-shadow",
+      "formId": "550-red-striped",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "550-white-striped-shadow",
+      "formId": "550-white-striped",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "551-unova-dynamax",
+      "formId": "551-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "551-unova-purified",
+      "formId": "551-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "551-unova-shadow",
+      "formId": "551-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "552-unova-dynamax",
+      "formId": "552-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "552-unova-purified",
+      "formId": "552-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "552-unova-shadow",
+      "formId": "552-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "553-unova-dynamax",
+      "formId": "553-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "553-unova-purified",
+      "formId": "553-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "553-unova-shadow",
+      "formId": "553-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "554-galar-dynamax",
+      "formId": "554-galar",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "554-galar-purified",
+      "formId": "554-galar",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "554-unova-purified",
+      "formId": "554-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "554-galar-shadow",
+      "formId": "554-galar",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "555-galar-standard-dynamax",
+      "formId": "555-galar-standard",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "555-galar-zen-dynamax",
+      "formId": "555-galar-zen",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "555-unova-zen-dynamax",
+      "formId": "555-unova-zen",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "555-galar-standard-purified",
+      "formId": "555-galar-standard",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "555-galar-zen-purified",
+      "formId": "555-galar-zen",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "555-unova-standard-purified",
+      "formId": "555-unova-standard",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "555-unova-zen-purified",
+      "formId": "555-unova-zen",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "555-galar-standard-shadow",
+      "formId": "555-galar-standard",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "555-galar-zen-shadow",
+      "formId": "555-galar-zen",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "555-unova-zen-shadow",
+      "formId": "555-unova-zen",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "556-unova-dynamax",
+      "formId": "556-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "556-unova-normal",
+      "formId": "556-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "556-unova-purified",
+      "formId": "556-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "556-unova-shadow",
+      "formId": "556-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "557-unova-dynamax",
+      "formId": "557-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "557-unova-purified",
+      "formId": "557-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "558-unova-dynamax",
+      "formId": "558-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "558-unova-purified",
+      "formId": "558-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "559-unova-dynamax",
+      "formId": "559-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "559-unova-purified",
+      "formId": "559-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "559-unova-shadow",
+      "formId": "559-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "560-unova-dynamax",
+      "formId": "560-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "560-unova-purified",
+      "formId": "560-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "560-unova-shadow",
+      "formId": "560-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "561-unova-dynamax",
+      "formId": "561-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "561-unova-normal",
+      "formId": "561-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "561-unova-purified",
+      "formId": "561-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "561-unova-shadow",
+      "formId": "561-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "562-galar-dynamax",
+      "formId": "562-galar",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "562-unova-dynamax",
+      "formId": "562-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "562-galar-normal",
+      "formId": "562-galar",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "562-galar-purified",
+      "formId": "562-galar",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "562-unova-purified",
+      "formId": "562-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "562-galar-shadow",
+      "formId": "562-galar",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "562-unova-shadow",
+      "formId": "562-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "563-unova-dynamax",
+      "formId": "563-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "563-unova-purified",
+      "formId": "563-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "563-unova-shadow",
+      "formId": "563-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "564-unova-dynamax",
+      "formId": "564-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "564-unova-normal",
+      "formId": "564-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "564-unova-purified",
+      "formId": "564-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "564-unova-shadow",
+      "formId": "564-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "565-unova-dynamax",
+      "formId": "565-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "565-unova-normal",
+      "formId": "565-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "565-unova-purified",
+      "formId": "565-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "565-unova-shadow",
+      "formId": "565-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "566-unova-dynamax",
+      "formId": "566-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "566-unova-normal",
+      "formId": "566-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "566-unova-purified",
+      "formId": "566-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "566-unova-shadow",
+      "formId": "566-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "567-unova-dynamax",
+      "formId": "567-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "567-unova-normal",
+      "formId": "567-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "567-unova-purified",
+      "formId": "567-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "567-unova-shadow",
+      "formId": "567-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "568-unova-dynamax",
+      "formId": "568-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "568-unova-normal",
+      "formId": "568-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "568-unova-purified",
+      "formId": "568-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "568-unova-shadow",
+      "formId": "568-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "569-unova-dynamax",
+      "formId": "569-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "569-unova-normal",
+      "formId": "569-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "569-unova-purified",
+      "formId": "569-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "569-unova-shadow",
+      "formId": "569-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "570-hisui-dynamax",
+      "formId": "570-hisui",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "570-unova-dynamax",
+      "formId": "570-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "570-hisui-normal",
+      "formId": "570-hisui",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "570-unova-normal",
+      "formId": "570-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "570-hisui-purified",
+      "formId": "570-hisui",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "570-unova-purified",
+      "formId": "570-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "570-hisui-shadow",
+      "formId": "570-hisui",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "570-unova-shadow",
+      "formId": "570-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "571-hisui-dynamax",
+      "formId": "571-hisui",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "571-unova-dynamax",
+      "formId": "571-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "571-hisui-normal",
+      "formId": "571-hisui",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "571-unova-normal",
+      "formId": "571-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "571-hisui-purified",
+      "formId": "571-hisui",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "571-unova-purified",
+      "formId": "571-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "571-hisui-shadow",
+      "formId": "571-hisui",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "571-unova-shadow",
+      "formId": "571-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "572-unova-dynamax",
+      "formId": "572-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "572-unova-normal",
+      "formId": "572-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "572-unova-purified",
+      "formId": "572-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "572-unova-shadow",
+      "formId": "572-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "573-unova-dynamax",
+      "formId": "573-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "573-unova-normal",
+      "formId": "573-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "573-unova-purified",
+      "formId": "573-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "573-unova-shadow",
+      "formId": "573-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "574-unova-dynamax",
+      "formId": "574-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "574-unova-normal",
+      "formId": "574-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "574-unova-purified",
+      "formId": "574-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "574-unova-shadow",
+      "formId": "574-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "575-unova-dynamax",
+      "formId": "575-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "575-unova-normal",
+      "formId": "575-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "575-unova-purified",
+      "formId": "575-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "575-unova-shadow",
+      "formId": "575-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "576-unova-dynamax",
+      "formId": "576-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "576-unova-normal",
+      "formId": "576-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "576-unova-purified",
+      "formId": "576-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "576-unova-shadow",
+      "formId": "576-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "577-unova-dynamax",
+      "formId": "577-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "577-unova-normal",
+      "formId": "577-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "577-unova-purified",
+      "formId": "577-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "577-unova-shadow",
+      "formId": "577-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "578-unova-dynamax",
+      "formId": "578-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "578-unova-normal",
+      "formId": "578-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "578-unova-purified",
+      "formId": "578-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "578-unova-shadow",
+      "formId": "578-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "579-unova-dynamax",
+      "formId": "579-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "579-unova-normal",
+      "formId": "579-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "579-unova-purified",
+      "formId": "579-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "579-unova-shadow",
+      "formId": "579-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "580-unova-dynamax",
+      "formId": "580-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "580-unova-purified",
+      "formId": "580-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "581-unova-dynamax",
+      "formId": "581-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "581-unova-purified",
+      "formId": "581-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "582-unova-dynamax",
+      "formId": "582-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "582-unova-normal",
+      "formId": "582-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "582-unova-purified",
+      "formId": "582-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "582-unova-shadow",
+      "formId": "582-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "583-unova-dynamax",
+      "formId": "583-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "583-unova-normal",
+      "formId": "583-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "583-unova-purified",
+      "formId": "583-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "583-unova-shadow",
+      "formId": "583-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "584-unova-dynamax",
+      "formId": "584-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "584-unova-normal",
+      "formId": "584-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "584-unova-purified",
+      "formId": "584-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "584-unova-shadow",
+      "formId": "584-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "585-autumn-dynamax",
+      "formId": "585-autumn",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "585-spring-dynamax",
+      "formId": "585-spring",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "585-summer-dynamax",
+      "formId": "585-summer",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "585-winter-dynamax",
+      "formId": "585-winter",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "585-autumn-normal",
+      "formId": "585-autumn",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "585-spring-normal",
+      "formId": "585-spring",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "585-summer-normal",
+      "formId": "585-summer",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "585-winter-normal",
+      "formId": "585-winter",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "585-autumn-purified",
+      "formId": "585-autumn",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "585-spring-purified",
+      "formId": "585-spring",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "585-summer-purified",
+      "formId": "585-summer",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "585-winter-purified",
+      "formId": "585-winter",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "585-autumn-shadow",
+      "formId": "585-autumn",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "585-spring-shadow",
+      "formId": "585-spring",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "585-summer-shadow",
+      "formId": "585-summer",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "585-winter-shadow",
+      "formId": "585-winter",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "586-autumn-dynamax",
+      "formId": "586-autumn",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "586-spring-dynamax",
+      "formId": "586-spring",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "586-summer-dynamax",
+      "formId": "586-summer",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "586-winter-dynamax",
+      "formId": "586-winter",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "586-autumn-normal",
+      "formId": "586-autumn",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "586-spring-normal",
+      "formId": "586-spring",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "586-summer-normal",
+      "formId": "586-summer",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "586-winter-normal",
+      "formId": "586-winter",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "586-autumn-purified",
+      "formId": "586-autumn",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "586-spring-purified",
+      "formId": "586-spring",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "586-summer-purified",
+      "formId": "586-summer",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "586-winter-purified",
+      "formId": "586-winter",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "586-autumn-shadow",
+      "formId": "586-autumn",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "586-spring-shadow",
+      "formId": "586-spring",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "586-summer-shadow",
+      "formId": "586-summer",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "586-winter-shadow",
+      "formId": "586-winter",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "587-unova-dynamax",
+      "formId": "587-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "587-unova-purified",
+      "formId": "587-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "587-unova-shadow",
+      "formId": "587-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "588-unova-dynamax",
+      "formId": "588-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "588-unova-purified",
+      "formId": "588-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "589-unova-dynamax",
+      "formId": "589-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "589-unova-purified",
+      "formId": "589-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "590-unova-dynamax",
+      "formId": "590-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "590-unova-purified",
+      "formId": "590-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "591-unova-dynamax",
+      "formId": "591-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "591-unova-purified",
+      "formId": "591-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "592-female-dynamax",
+      "formId": "592-female",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "592-male-dynamax",
+      "formId": "592-male",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "592-female-purified",
+      "formId": "592-female",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "592-male-purified",
+      "formId": "592-male",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "592-female-shadow",
+      "formId": "592-female",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "592-male-shadow",
+      "formId": "592-male",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "593-female-dynamax",
+      "formId": "593-female",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "593-male-dynamax",
+      "formId": "593-male",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "593-female-purified",
+      "formId": "593-female",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "593-male-purified",
+      "formId": "593-male",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "593-female-shadow",
+      "formId": "593-female",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "593-male-shadow",
+      "formId": "593-male",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "594-unova-dynamax",
+      "formId": "594-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "594-unova-normal",
+      "formId": "594-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "594-unova-purified",
+      "formId": "594-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "594-unova-shadow",
+      "formId": "594-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "595-unova-dynamax",
+      "formId": "595-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "595-unova-normal",
+      "formId": "595-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "595-unova-purified",
+      "formId": "595-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "595-unova-shadow",
+      "formId": "595-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "596-unova-dynamax",
+      "formId": "596-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "596-unova-normal",
+      "formId": "596-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "596-unova-purified",
+      "formId": "596-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "596-unova-shadow",
+      "formId": "596-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "597-unova-dynamax",
+      "formId": "597-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "597-unova-purified",
+      "formId": "597-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "598-unova-dynamax",
+      "formId": "598-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "598-unova-purified",
+      "formId": "598-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "599-unova-dynamax",
+      "formId": "599-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "599-unova-purified",
+      "formId": "599-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "599-unova-shadow",
+      "formId": "599-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "600-unova-dynamax",
+      "formId": "600-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "600-unova-purified",
+      "formId": "600-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "600-unova-shadow",
+      "formId": "600-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "601-unova-dynamax",
+      "formId": "601-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "601-unova-normal",
+      "formId": "601-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "601-unova-purified",
+      "formId": "601-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "601-unova-shadow",
+      "formId": "601-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "602-unova-dynamax",
+      "formId": "602-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "602-unova-normal",
+      "formId": "602-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "602-unova-purified",
+      "formId": "602-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "602-unova-shadow",
+      "formId": "602-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "603-unova-dynamax",
+      "formId": "603-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "603-unova-normal",
+      "formId": "603-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "603-unova-purified",
+      "formId": "603-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "603-unova-shadow",
+      "formId": "603-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "604-unova-dynamax",
+      "formId": "604-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "604-unova-normal",
+      "formId": "604-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "604-unova-purified",
+      "formId": "604-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "604-unova-shadow",
+      "formId": "604-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "605-unova-dynamax",
+      "formId": "605-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "605-unova-normal",
+      "formId": "605-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "605-unova-purified",
+      "formId": "605-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "605-unova-shadow",
+      "formId": "605-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "606-unova-dynamax",
+      "formId": "606-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "606-unova-normal",
+      "formId": "606-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "606-unova-purified",
+      "formId": "606-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "606-unova-shadow",
+      "formId": "606-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "607-unova-dynamax",
+      "formId": "607-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "607-unova-purified",
+      "formId": "607-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "608-unova-dynamax",
+      "formId": "608-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "608-unova-purified",
+      "formId": "608-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "609-unova-dynamax",
+      "formId": "609-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "609-unova-purified",
+      "formId": "609-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "610-unova-dynamax",
+      "formId": "610-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "610-unova-purified",
+      "formId": "610-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "611-unova-dynamax",
+      "formId": "611-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "611-unova-purified",
+      "formId": "611-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "612-unova-dynamax",
+      "formId": "612-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "612-unova-purified",
+      "formId": "612-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "613-unova-dynamax",
+      "formId": "613-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "613-unova-purified",
+      "formId": "613-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "613-unova-shadow",
+      "formId": "613-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "614-unova-dynamax",
+      "formId": "614-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "614-unova-purified",
+      "formId": "614-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "614-unova-shadow",
+      "formId": "614-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "615-unova-dynamax",
+      "formId": "615-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "615-unova-normal",
+      "formId": "615-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "615-unova-purified",
+      "formId": "615-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "615-unova-shadow",
+      "formId": "615-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "616-unova-dynamax",
+      "formId": "616-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "616-unova-normal",
+      "formId": "616-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "616-unova-purified",
+      "formId": "616-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "616-unova-shadow",
+      "formId": "616-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "617-unova-dynamax",
+      "formId": "617-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "617-unova-normal",
+      "formId": "617-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "617-unova-purified",
+      "formId": "617-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "617-unova-shadow",
+      "formId": "617-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "618-galar-dynamax",
+      "formId": "618-galar",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "618-unova-dynamax",
+      "formId": "618-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "618-galar-purified",
+      "formId": "618-galar",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "618-unova-purified",
+      "formId": "618-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "618-galar-shadow",
+      "formId": "618-galar",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "618-unova-shadow",
+      "formId": "618-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "619-unova-dynamax",
+      "formId": "619-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "619-unova-normal",
+      "formId": "619-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "619-unova-purified",
+      "formId": "619-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "619-unova-shadow",
+      "formId": "619-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "620-unova-dynamax",
+      "formId": "620-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "620-unova-normal",
+      "formId": "620-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "620-unova-purified",
+      "formId": "620-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "620-unova-shadow",
+      "formId": "620-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "621-unova-dynamax",
+      "formId": "621-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "621-unova-normal",
+      "formId": "621-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "621-unova-purified",
+      "formId": "621-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "621-unova-shadow",
+      "formId": "621-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "622-unova-dynamax",
+      "formId": "622-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "622-unova-purified",
+      "formId": "622-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "623-unova-dynamax",
+      "formId": "623-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "623-unova-purified",
+      "formId": "623-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "624-unova-dynamax",
+      "formId": "624-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "624-unova-normal",
+      "formId": "624-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "624-unova-purified",
+      "formId": "624-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "624-unova-shadow",
+      "formId": "624-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "625-unova-dynamax",
+      "formId": "625-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "625-unova-normal",
+      "formId": "625-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "625-unova-purified",
+      "formId": "625-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "625-unova-shadow",
+      "formId": "625-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "626-unova-dynamax",
+      "formId": "626-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "626-unova-normal",
+      "formId": "626-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "626-unova-purified",
+      "formId": "626-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "626-unova-shadow",
+      "formId": "626-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "627-unova-dynamax",
+      "formId": "627-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "627-unova-purified",
+      "formId": "627-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "627-unova-shadow",
+      "formId": "627-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "628-hisui-dynamax",
+      "formId": "628-hisui",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "628-unova-dynamax",
+      "formId": "628-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "628-hisui-normal",
+      "formId": "628-hisui",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "628-unova-normal",
+      "formId": "628-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "628-hisui-purified",
+      "formId": "628-hisui",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "628-unova-purified",
+      "formId": "628-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "628-hisui-shadow",
+      "formId": "628-hisui",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "628-unova-shadow",
+      "formId": "628-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "629-unova-dynamax",
+      "formId": "629-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "629-unova-purified",
+      "formId": "629-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "629-unova-shadow",
+      "formId": "629-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "630-unova-dynamax",
+      "formId": "630-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "630-unova-purified",
+      "formId": "630-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "630-unova-shadow",
+      "formId": "630-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "631-unova-dynamax",
+      "formId": "631-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "631-unova-normal",
+      "formId": "631-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "631-unova-purified",
+      "formId": "631-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "631-unova-shadow",
+      "formId": "631-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "632-unova-dynamax",
+      "formId": "632-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "632-unova-normal",
+      "formId": "632-unova",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "632-unova-purified",
+      "formId": "632-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "632-unova-shadow",
+      "formId": "632-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "633-unova-purified",
+      "formId": "633-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "634-unova-purified",
+      "formId": "634-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "635-unova-purified",
+      "formId": "635-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "636-unova-dynamax",
+      "formId": "636-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "636-unova-purified",
+      "formId": "636-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "636-unova-shadow",
+      "formId": "636-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "637-unova-dynamax",
+      "formId": "637-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "637-unova-purified",
+      "formId": "637-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "637-unova-shadow",
+      "formId": "637-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "638-unova-dynamax",
+      "formId": "638-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "638-unova-purified",
+      "formId": "638-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "638-unova-shadow",
+      "formId": "638-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "639-unova-dynamax",
+      "formId": "639-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "639-unova-purified",
+      "formId": "639-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "639-unova-shadow",
+      "formId": "639-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "640-unova-dynamax",
+      "formId": "640-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "640-unova-purified",
+      "formId": "640-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "640-unova-shadow",
+      "formId": "640-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "641-incarnate-dynamax",
+      "formId": "641-incarnate",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "641-therian-dynamax",
+      "formId": "641-therian",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "641-incarnate-normal",
+      "formId": "641-incarnate",
+      "variantKey": "NORMAL"
+    },
+    {
+      "id": "641-incarnate-purified",
+      "formId": "641-incarnate",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "641-therian-purified",
+      "formId": "641-therian",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "641-incarnate-shadow",
+      "formId": "641-incarnate",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "641-therian-shadow",
+      "formId": "641-therian",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "642-incarnate-dynamax",
+      "formId": "642-incarnate",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "642-therian-dynamax",
+      "formId": "642-therian",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "642-incarnate-purified",
+      "formId": "642-incarnate",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "642-therian-purified",
+      "formId": "642-therian",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "642-therian-shadow",
+      "formId": "642-therian",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "643-unova-dynamax",
+      "formId": "643-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "643-unova-purified",
+      "formId": "643-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "644-unova-dynamax",
+      "formId": "644-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "644-unova-purified",
+      "formId": "644-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "644-unova-shadow",
+      "formId": "644-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "645-incarnate-dynamax",
+      "formId": "645-incarnate",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "645-therian-dynamax",
+      "formId": "645-therian",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "645-incarnate-purified",
+      "formId": "645-incarnate",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "645-therian-purified",
+      "formId": "645-therian",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "645-therian-shadow",
+      "formId": "645-therian",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "646-black-dynamax",
+      "formId": "646-black",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "646-unova-dynamax",
+      "formId": "646-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "646-white-dynamax",
+      "formId": "646-white",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "646-black-purified",
+      "formId": "646-black",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "646-unova-purified",
+      "formId": "646-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "646-white-purified",
+      "formId": "646-white",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "646-black-shadow",
+      "formId": "646-black",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "646-unova-shadow",
+      "formId": "646-unova",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "646-white-shadow",
+      "formId": "646-white",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "647-ordinary-dynamax",
+      "formId": "647-ordinary",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "647-resolute-dynamax",
+      "formId": "647-resolute",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "647-ordinary-purified",
+      "formId": "647-ordinary",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "647-resolute-purified",
+      "formId": "647-resolute",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "647-ordinary-shadow",
+      "formId": "647-ordinary",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "647-resolute-shadow",
+      "formId": "647-resolute",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "648-aria-dynamax",
+      "formId": "648-aria",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "648-pirouette-dynamax",
+      "formId": "648-pirouette",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "648-aria-purified",
+      "formId": "648-aria",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "648-pirouette-purified",
+      "formId": "648-pirouette",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "648-aria-shadow",
+      "formId": "648-aria",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "648-pirouette-shadow",
+      "formId": "648-pirouette",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "649-burn-dynamax",
+      "formId": "649-burn",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "649-chill-dynamax",
+      "formId": "649-chill",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "649-douse-dynamax",
+      "formId": "649-douse",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "649-shock-dynamax",
+      "formId": "649-shock",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "649-unova-dynamax",
+      "formId": "649-unova",
+      "variantKey": "DYNAMAX"
+    },
+    {
+      "id": "649-burn-purified",
+      "formId": "649-burn",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "649-chill-purified",
+      "formId": "649-chill",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "649-douse-purified",
+      "formId": "649-douse",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "649-shock-purified",
+      "formId": "649-shock",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "649-unova-purified",
+      "formId": "649-unova",
+      "variantKey": "PURIFIED"
+    },
+    {
+      "id": "649-burn-shadow",
+      "formId": "649-burn",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "649-chill-shadow",
+      "formId": "649-chill",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "649-douse-shadow",
+      "formId": "649-douse",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "649-shock-shadow",
+      "formId": "649-shock",
+      "variantKey": "SHADOW"
+    },
+    {
+      "id": "649-unova-shadow",
+      "formId": "649-unova",
+      "variantKey": "SHADOW"
+    }
+  ]
 }

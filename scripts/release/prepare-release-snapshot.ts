@@ -9,7 +9,7 @@ export const SNAPSHOT_PROMOTION_TARGETS = [
 ] as const;
 
 const root = process.cwd();
-const npx = process.platform === "win32" ? "npx.cmd" : "npx";
+
 
 async function exists(filePath: string) {
   try {
@@ -22,7 +22,7 @@ async function exists(filePath: string) {
 
 async function runSnapshotGenerator(stagingRoot: string) {
   await new Promise<void>((resolve, reject) => {
-    const child = spawn(npx, ["tsx", "scripts/release/generate-static-snapshot.ts"], {
+    const child = spawn(process.execPath, ["--import", "tsx", "scripts/release/generate-static-snapshot.ts"], {
       cwd: root,
       env: {
         ...process.env,

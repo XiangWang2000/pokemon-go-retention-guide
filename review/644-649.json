@@ -1,9 +1,9 @@
 {
   "batch": "644-649",
-  "updatedAt": "2026-09-05",
-  "dataVersion": "2026.09.05-r32",
+  "updatedAt": "2026-09-07",
+  "dataVersion": "2026.09.07-r33",
   "rulesVersion": "2026.08.06-v7",
-  "status": "ACCEPTED",
+  "status": "ACCEPTED_WITH_SCOPED_HOLDS",
   "counts": {
     "species": 6,
     "forms": 15,
@@ -11,9 +11,9 @@
     "families": 15,
     "releasedVariants": 16,
     "unknownReleaseVariants": 43,
-    "openIssues": 0,
-    "safetyAffectingIssues": 0,
-    "trueDataPending": 0
+    "openIssues": 44,
+    "safetyAffectingIssues": 44,
+    "trueDataPending": 44
   },
   "exactForms": [
     "644-unova",
@@ -46,12 +46,18 @@
       "result": "PASS"
     },
     {
-      "name": "Gen5 no TRUE_DATA_PENDING",
+      "name": "Gen5 scoped holds have material review issues",
       "result": "PASS"
     },
     {
       "name": "Gen5 owning-family coverage",
       "result": "PASS"
+    }
+  ],
+  "scopedHolds": [
+    {
+      "familyId": "UNOVA_FAMILY_645:645-incarnate",
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     }
   ],
   "immediateHandling": [
@@ -62,8 +68,8 @@
     },
     {
       "familyId": "UNOVA_FAMILY_645:645-incarnate",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留土地雲（ML 高 IV 投資候選）；其餘不符合上述用途的普通重複個體可傳。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_645:645-therian",

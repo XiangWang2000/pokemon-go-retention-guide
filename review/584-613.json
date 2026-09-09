@@ -1,9 +1,9 @@
 {
   "batch": "584-613",
-  "updatedAt": "2026-09-05",
-  "dataVersion": "2026.09.05-r32",
+  "updatedAt": "2026-09-07",
+  "dataVersion": "2026.09.07-r33",
   "rulesVersion": "2026.08.06-v7",
-  "status": "ACCEPTED",
+  "status": "ACCEPTED_WITH_SCOPED_HOLDS",
   "counts": {
     "species": 30,
     "forms": 38,
@@ -11,9 +11,9 @@
     "families": 19,
     "releasedVariants": 66,
     "unknownReleaseVariants": 86,
-    "openIssues": 0,
-    "safetyAffectingIssues": 0,
-    "trueDataPending": 0
+    "openIssues": 120,
+    "safetyAffectingIssues": 120,
+    "trueDataPending": 120
   },
   "exactForms": [
     "584-unova",
@@ -69,7 +69,7 @@
       "result": "PASS"
     },
     {
-      "name": "Gen5 no TRUE_DATA_PENDING",
+      "name": "Gen5 scoped holds have material review issues",
       "result": "PASS"
     },
     {
@@ -77,31 +77,93 @@
       "result": "PASS"
     }
   ],
-  "immediateHandling": [
+  "scopedHolds": [
     {
       "familyId": "UNOVA_FAMILY_582:582-unova",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_585:585-autumn",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_585:585-spring",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_585:585-summer",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_585:585-winter",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_588:588-unova",
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_590:590-unova",
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_594:594-unova",
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_595:595-unova",
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_597:597-unova",
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_599:599-unova",
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_602:602-unova",
+      "reasonZhTw": "先不要大量傳送；尚未推出版本、關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_605:605-unova",
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_607:607-unova",
+      "reasonZhTw": "先不要大量傳送；尚未推出版本、關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_610:610-unova",
+      "reasonZhTw": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    }
+  ],
+  "immediateHandling": [
+    {
+      "familyId": "UNOVA_FAMILY_582:582-unova",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_585:585-autumn",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_585:585-spring",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_585:585-summer",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
+    },
+    {
+      "familyId": "UNOVA_FAMILY_585:585-winter",
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_587:587-unova",
@@ -110,13 +172,13 @@
     },
     {
       "familyId": "UNOVA_FAMILY_588:588-unova",
-      "strategy": "KEEP_TARGETS",
-      "conclusion": "保留騎士蝸牛（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_590:590-unova",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留敗露球菇（PvP（GL Rank≤100、UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_592:592-female",
@@ -130,43 +192,43 @@
     },
     {
       "familyId": "UNOVA_FAMILY_594:594-unova",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_595:595-unova",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_597:597-unova",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留堅果啞鈴（PvP（UL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_599:599-unova",
-      "strategy": "SELECTIVE_KEEP",
-      "conclusion": "保留齒輪組（PvP（GL Rank≤100））；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_602:602-unova",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；尚未推出版本、關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_605:605-unova",
-      "strategy": "MOSTLY_TRANSFER",
-      "conclusion": "沒有明確實戰保留目標；排除異色、造型與收藏需求後，普通重複可直接傳送。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_607:607-unova",
-      "strategy": "KEEP_TARGETS",
-      "conclusion": "保留水晶燈火靈（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；尚未推出版本、關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_610:610-unova",
-      "strategy": "KEEP_TARGETS",
-      "conclusion": "保留雙斧戰龍（ML 高 IV 投資候選、PvE 實戰候選、有用途的暗影版）；前階只留能進化成上述用途的候選；其餘不符合上述用途的普通重複個體可傳。"
+      "strategy": "HOLD_FOR_NOW",
+      "conclusion": "先不要大量傳送；關鍵資料待補，保留現有最佳候選，待影響結論的資料補齊後再判斷。"
     },
     {
       "familyId": "UNOVA_FAMILY_613:613-unova",

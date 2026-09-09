@@ -1,7 +1,9 @@
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { getDashboardRows } from "@/lib/data-prisma";
 import { prisma } from "@/lib/prisma";
+import { CURRENT_RELEASE_CONTRACT } from "@/config/release-contract";
 import { RULES_VERSION } from "@/rules/rules";
 
 const hasCanonicalDb = existsSync("rebuild-ci.db");
@@ -135,7 +137,7 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
     expect(evaluation?.finalDecision).not.toBe("HOLD_FOR_NOW");
   });
 
-  it("10. 所有資料庫 HOLD_FOR_NOW 都有具體中文理由", async () => {
+  it("10. #001～#030 無待查結論；Gen5 待查版本均有具體理由與問題追蹤", async () => {
     const evaluations = await prisma.retentionEvaluation.findMany({
       where: { rulesVersion: RULES_VERSION },
       orderBy: { generatedAt: "desc" },
@@ -149,8 +151,21 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
     const currentHolds = [...latestByVariant.values()].filter(
       (evaluation) => evaluation.finalDecision === "HOLD_FOR_NOW",
     );
-    expect(currentHolds).toHaveLength(0);
+    expect(currentHolds.filter((evaluation) => Number(evaluation.battleVariantId.slice(0, 3)) <= 30)).toHaveLength(0);
+    expect(currentHolds).toHaveLength(CURRENT_RELEASE_CONTRACT.expectedCounts.trueDataPending);
+    const materialIssues = await prisma.dataIssue.findMany({
+      where: { status: "OPEN", affectsFinalDecision: true },
+    });
     for (const evaluation of currentHolds) {
+      const nationalDex = Number(evaluation.battleVariantId.slice(0, 3));
+      expect(nationalDex).toBeGreaterThanOrEqual(494);
+      expect(nationalDex).toBeLessThanOrEqual(649);
+      expect(evaluation.assessmentDisposition).toBe("TRUE_DATA_PENDING");
+      expect(materialIssues.some((issue) =>
+        issue.battleVariantId === evaluation.battleVariantId &&
+        ["MATERIAL_DATA_GAP", "UNKNOWN_RELEASE_STATUS"].includes(issue.issueType) &&
+        issue.messageZhTw.length > 25,
+      )).toBe(true);
       expect(evaluation.reasonZhTw.length).toBeGreaterThan(25);
       expect(evaluation.reasonZhTw).not.toBe("資料不足");
     }
@@ -313,14 +328,23 @@ describe.skipIf(!hasCanonicalDb)("#001～#030 修正後資料一致性", () => {
     expect(pidgeotIssue).toBeNull();
   });
 
-  it("21. #001～#030 與後續批次使用各自固定的 PvPoke 快照", async () => {
+  it("21. #001～#060 的 PvPoke 排名可由目前固定快照重現", async () => {
     const [firstBatch, laterBatch, currentSource] = await Promise.all([
       prisma.rawEvaluationData.findUnique({ where: { id: "raw-001-kanto-normal-great" } }),
       prisma.rawEvaluationData.findUnique({ where: { id: "raw-r8-031-kanto-normal-great" } }),
       prisma.sourceReference.findUnique({ where: { id: "pvpoke-gl-20260901" } }),
     ]);
     expect(firstBatch?.sourceId).toBe("pvpoke-gl-20260901");
-    expect(laterBatch?.sourceId).toBe("pvpoke-gl-20260715");
+    expect(laterBatch?.sourceId).toBe("pvpoke-gl-20260901");
+    const snapshot = readFileSync("data/sources/pvpoke/2026-09-01/rankings-1500.json");
+    const rankings = JSON.parse(snapshot.toString("utf8").replace(/^\uFEFF/, "")) as Array<{ speciesId: string }>;
+    for (const evaluation of [firstBatch, laterBatch]) {
+      expect(evaluation).not.toBeNull();
+      const index = rankings.findIndex((row) => row.speciesId === evaluation?.speciesKey);
+      expect(index).toBeGreaterThanOrEqual(0);
+      expect(evaluation?.rank).toBe(index + 1);
+    }
+    expect(currentSource?.dataVersion).toContain(`sha256=${createHash("sha256").update(snapshot).digest("hex")}`);
     expect(currentSource?.dataVersion).toContain("7b96d91fb553780653190ad32de001b5d9086a7f");
   });
 
