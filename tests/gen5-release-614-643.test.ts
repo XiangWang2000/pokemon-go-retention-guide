@@ -19,7 +19,7 @@ describe("Gen5 #614-#643 candidate release evidence", () => {
   it("keeps the candidate in evidence stage without expanding production", () => {
     expect(CURRENT_DATA_MAX_DEX).toBe(649);
     expect(BATCH_REGISTRY.at(-1)?.maxDex).toBe(649);
-    expect(CANDIDATE_BATCH_REGISTRY).toHaveLength(0);
+    expect(CANDIDATE_BATCH_REGISTRY.map((entry) => entry.generation)).not.toContain(5);
   });
 
   it("resolves all 34 ordinary and special exact forms as released", () => {

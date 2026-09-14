@@ -69,3 +69,7 @@ A full Gen 1–9 publication is complete only when:
 
 The test keeps the historical notes internally consistent; it does not promote Gen 6–9 into formal
 runtime publication.
+
+## Gen6 candidate integration
+
+Gen6 #650–#721 now has three EVIDENCE candidate batches and a pure import plan. It is not registered for formal publication. UNKNOWN planned variants remain HOLD_FOR_NOW / TRUE_DATA_PENDING; candidate counts do not alter the published snapshot. The [branch integration review](branch-integration-2026-09-15.md) records excluded publication tooling, conflicting Gen5 research and remaining publication prerequisites.
