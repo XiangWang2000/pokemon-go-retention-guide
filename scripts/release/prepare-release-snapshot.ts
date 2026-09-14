@@ -30,7 +30,6 @@ async function runSnapshotGenerator(stagingRoot: string) {
         SNAPSHOT_OUTPUT_ROOT: stagingRoot,
       },
       stdio: "inherit",
-      shell: process.platform === "win32",
     });
     child.once("error", reject);
     child.once("exit", (code) =>

@@ -14,7 +14,7 @@ async function run(command: string, args: string[]) {
     const child = spawn(command, args, {
       stdio: "inherit",
       env: process.env,
-      shell: process.platform === "win32",
+      shell: process.platform === "win32" && command !== process.execPath,
     });
     child.once("error", reject);
     child.once("exit", (code) =>

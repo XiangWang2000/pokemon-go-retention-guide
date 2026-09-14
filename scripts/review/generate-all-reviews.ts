@@ -9,7 +9,6 @@ async function run(command: string, args: string[]) {
   await new Promise<void>((resolve, reject) => {
     const child = spawn(command, args, {
       stdio: "inherit",
-      shell: process.platform === "win32",
     });
     child.once("error", reject);
     child.once("exit", (code) =>
