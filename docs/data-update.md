@@ -59,9 +59,10 @@ npm run snapshot:check
 
 Artifact 只供 provenance 重現使用，不會部署到 GitHub Pages，也不取代 manifest 的 bytes 與 SHA-256 驗證。
 
-驗收除了批次範圍與資料版本，還要確認 2348 個 BattleVariants、302 個展示家族、13 個 IV
-recommendations、0 個目前有效的 `TRUE_DATA_PENDING`、`407-sinnoh`、唯一的 `315-hoenn -> 407-sinnoh`，以及不存在
-`407-other`。待補資料主要來自移除沒有正式來源的推出狀態推測；不得為恢復零待補數而重新加入圖鑑號或榜單存在性 fallback。
+驗收除了批次範圍與資料版本，還要確認目前 release contract 的 3105 個 BattleVariants、409 個展示家族、13 個 IV
+recommendations 與 598 個 `TRUE_DATA_PENDING`，以及 `407-sinnoh`、唯一的 `315-hoenn -> 407-sinnoh` 與不存在
+`407-other`。`site-data/manifest.json` 另記錄目前 snapshot 的 759 個 open review issues、來源資料庫 bytes／SHA-256
+與各 runtime artifact 雜湊。待補資料主要來自移除沒有正式來源的推出狀態推測；不得為恢復零待補數而重新加入圖鑑號或榜單存在性 fallback。
 
 #001～#030 的 Shadow、Dynamax 與 Gigantamax 推出邊界另以 2026-09-01 完整歷史名單補足：名單明列者
 視為已推出，未列者在取得使用者明確授權後視為截至該查閱日尚未推出；每筆保留名單網址、查閱日與

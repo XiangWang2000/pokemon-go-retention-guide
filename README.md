@@ -28,6 +28,12 @@ GitHub Pages 採 Next.js static export，production 不依賴 runtime Prisma／S
 
 首頁顯示的資料範圍與更新日期由上述設定產生，新增下一批寶可夢時不需要再手動修改 README 的批次數字。
 
+## 目前正式資料範圍
+
+目前正式 static snapshot 已將 National Dex **#001～#649（第一至第五世代）** 納入完整的 `PokemonForm × BattleVariant` runtime 模型；第五世代合眾資料以 `#494–#523`、`#524–#553`、`#554–#583`、`#584–#613`、`#614–#643` 與 `#644–#649` 六個 Registry 批次管理。每個型態仍分開保存推出狀態、PvP／PvE／Max 證據、進化關係、來源、審核問題與保留判定。
+
+第六至第九世代（#650～#1025）目前仍是研究審核資料，尚未進入正式 runtime、release snapshot 或 Excel 交付物。正式範圍、目前版本與產出筆數請以 `src/config/` 與 [`site-data/manifest.json`](site-data/manifest.json) 為準；兩者的差異與下一階段驗收條件記錄在 [`docs/data-coverage.md`](docs/data-coverage.md)。
+
 ## 使用介面
 
 首頁提供三種模式：
@@ -36,7 +42,7 @@ GitHub Pages 採 Next.js static export，production 不依賴 runtime Prisma／S
 - **單隻圖鑑**：依圖鑑型態逐隻查看精簡保留結論。
 - **資料審核**：檢查各 BattleVariant 的資料狀態、來源與判斷軌跡。
 
-瀏覽器先載入精簡首頁／audit summary，家族、BattleVariant 與 supplemental detail 再按需要載入對應 JSON，避免首頁一次傳送完整研究資料。
+另外提供 `/review/` 待補清單、`/sources/` 資料來源與 `/changes/` 變更紀錄頁。瀏覽器先載入精簡首頁／audit summary，家族與 BattleVariant 的詳細資料再按需要載入 `public/data/families/`、`public/data/audit/` 與 `public/data/details/`，避免首頁一次傳送完整研究資料。
 
 ## 保留決策模型
 
@@ -75,15 +81,16 @@ IV 規則的程式 source of truth 是 [`src/iv/strategy.ts`](src/iv/strategy.ts
 ## 資料與部署架構
 
 ```text
-本機 Prisma + SQLite
-  → 匯入／規則／審核／資料驗證
-  → npm run release:snapshot
-  → versioned site-data JSON + public/data JSON + 預建 XLSX
+研究證據（research_notes/sources + data/sources）
+  → Prisma schema + SQLite（dev.db 研究庫；rebuild-ci.db 可拋棄 release 庫）
+  → Registry 匯入／共用重算／審核／資料驗證
+  → npm run release:snapshot（staging → validate → promote）
+  → site-data JSON + public/data JSON + 預建 XLSX
   → Next.js static export（out/）
   → GitHub Pages
 ```
 
-`release:snapshot` 會產生 GitHub Pages 正式使用的 static snapshot。正式站只讀靜態檔案，不需要將研究資料庫部署到 production。
+`release:snapshot` 會產生 GitHub Pages 正式使用的 static snapshot。正式站只讀靜態檔案，不需要將研究資料庫部署到 production。根目錄 `dev.db` 是本機研究資料庫；正式 release 的 clean rebuild 使用可拋棄的 `rebuild-ci.db`，不可用 seed／reset 或驗證流程覆寫 `dev.db`，也不要手動修改 `site-data/`、`public/data/`、`public/exports/` 或 `out/`。
 
 ## 開發與 Pages 驗證
 
@@ -95,8 +102,15 @@ npm run db:generate
 npm run dev
 ```
 
-`dev.db` 仍是本機研究資料庫；`snapshot:check` 與 `release:verify` 會依 release contract 明確驗證
-`rebuild-ci.db`，所以不需要為了啟動開發或建置而改寫 `.env`。
+`npm run dev` 是 GitHub Pages／Next.js 路徑的預設開發入口；`dev:local`、`build:local`、`start:local` 只在需要本機 Node runtime fallback 時使用。`dev.db` 仍是本機研究資料庫；`snapshot:check` 與 `release:verify` 依 release contract 對可取得的 `rebuild-ci.db` 做來源資料庫與 snapshot 驗證，所以不需要為了啟動開發或建置而改寫 `.env`。
+
+一般程式或規則變更可執行共用驗證入口：
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\verify.ps1
+```
+
+資料、Pages runtime 或建置變更使用 `-Full`；它會另外執行整合、資料、release 與 static build 驗證，並需要相符的 disposable `rebuild-ci.db`。
 
 完整 production build／驗證：
 
@@ -110,10 +124,15 @@ npm start
 
 ## 更新資料
 
-每批資料的 import／review script 會隨資料範圍增加；請以 `package.json` 現有 scripts 為準，不要從舊文件複製已過期的批次命令。一般 release 檢查流程為：
+每批最多 30 個圖鑑編號，批次順序、範圍、匯入 adapter 與 review 輸出以 `src/config/batch-registry.ts` 為準；`npm run data:import:batch -- <batch-key>` 只適合定向匯入驗證，不能單獨產生正式 snapshot。完整來源、人工審核與 release checklist 請見 [`docs/data-update.md`](docs/data-update.md)。
+
+需要產生新的正式 snapshot 時，先使用可拋棄資料庫完成 clean rebuild，不要對根目錄 `dev.db` 重跑 seed／reset：
 
 ```powershell
-npm run data:validate
+$env:ALLOW_DESTRUCTIVE_REBUILD = "1"
+$env:DATABASE_URL = "file:./rebuild-ci.db"
+npx tsx scripts/data/verify-research-rebuild.ts
+npm run data:verify:published-integrity
 npm run review:generate
 npx tsx scripts/review/generate-current-recalibration-report.ts
 npm run release:snapshot
@@ -122,9 +141,7 @@ npm run build
 npm run pages:verify
 ```
 
-若資料庫 schema、來源匯入或規則有變更，先執行對應 migration／import／recompute，再重新產生 snapshot。
-`release:snapshot` 使用 staging → validate → promote 流程；`release:verify` 是 PR、Pages deploy 與手動
-release preparation 共用的驗證入口。`site-data/manifest.json` 會記錄正式輸出的資料版本、筆數與檔案雜湊供 CI 驗證。
+若資料庫 schema、來源匯入或規則有變更，先執行對應 migration／import／recompute，再重新產生 snapshot。`release:snapshot` 使用 staging → validate → promote 流程；`release:verify` 是 PR、Pages deploy 與手動 release preparation 共用的驗證入口。`site-data/manifest.json` 會記錄正式輸出的資料版本、筆數與檔案雜湊供 CI 驗證。
 
 ## 歷史遷移紀錄
 
@@ -134,14 +151,18 @@ release preparation 共用的驗證入口。`site-data/manifest.json` 會記錄�
 
 ## 重要目錄
 
-- `src/`：網站、規則、presentation 與 runtime loader。
+- `src/app/`、`src/components/`、`src/lib/`：網站路由、介面元件與 static data loader。
+- `src/config/`、`src/rules/`、`src/iv/`、`src/presentation/`：資料範圍／release contract、保留規則、IV 策略與家族 presentation。
+- `src/data/`、`data/sources/`：資料模型周邊、canonical fixtures 與外部來源快照。
 - `prisma/`：研究資料模型與 migrations。
 - `scripts/data/`、`scripts/review/`、`scripts/release/`、`scripts/pages/`：依責任分類的資料、審核、發布與 Pages 工具；`scripts/verify.ps1` 是共用驗證入口。
-- `site-data/`：versioned snapshot 與 manifest。
+- `site-data/`：release snapshot 與 manifest。
 - `public/data/`：GitHub Pages 瀏覽器實際讀取的 runtime JSON。
+- `public/exports/`：由 snapshot 流程產生的 Excel 交付物；`out/` 是 Pages build output。
 - `review/`：目前 release 的逐批審核報告；`review/history/` 保存歷史 checkpoint 與遷移紀錄。
 - `research_notes/sources/`：可追溯的研究來源 JSON；`research_notes/history/` 保存早期人工筆記。
 - `docs/`：現行部署與維護說明；`docs/history/` 保存退休架構與歷史截圖。
+- `.github/workflows/`：PR 驗證、release snapshot 與 Pages deploy automation。
 - `tests/`：規則、資料一致性、Pages 與 regression tests。
 
 ## 非目標
