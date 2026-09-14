@@ -20,7 +20,7 @@ The Gen6 persistence importer and publication review script are excluded from th
 
 ## Conflicting Gen5 research
 
-The unchanged [PR #92 source manifest](../research_notes/history/branch-review-2026-09-15/pr92-pve-494-523.json) records alternative Shadow Serperior and Dynamax Unfezant assessments. Current evidence distinguishes limited/type-specific utility from core investment. Neither interpretation is reclassified as freshly verified by this branch review. Before changing published recommendations, compare the dated source methods, record both positions in the formal review queue, and regenerate the reviewed release through the existing pipeline.
+The unchanged [PR #92 source manifest](../research_notes/sources/branch-review-2026-09-15-pr92-pve-494-523.json) records alternative Shadow Serperior and Dynamax Unfezant assessments. Current evidence distinguishes limited/type-specific utility from core investment. Neither interpretation is reclassified as freshly verified by this branch review. Before changing published recommendations, compare the dated source methods, record both positions in the formal review queue, and regenerate the reviewed release through the existing pipeline.
 
 ## Gen6 publication prerequisites
 
