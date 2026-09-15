@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-09-05",
+  "batch": "710-721",
+  "generation": 6,
+  "status": "CANDIDATE_IDENTITY_ONLY",
+  "sources": [
+    {
+      "id": "POKEAPI-CANONICAL-KALOS-710-721",
+      "sourceName": "PokeAPI canonical dataset",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "PokeAPI data/v2 CSV canonical Pokémon dataset",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://github.com/PokeAPI/pokeapi/tree/master/data/v2/csv",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "核對 #710～#721 圖鑑編號、名稱、屬性與家族；Pokémon GO 專屬尺寸、地區型態與 Form Change 再由 GO 專屬來源核對。"
+    },
+    {
+      "id": "OFFICIAL-PUMPKABOO-GOURGEIST-SIZES-20211022",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Pokémon GO萬聖節惡作劇Part 2：恐怖至極的同行者",
+      "sourceLanguage": "zh-Hant",
+      "sourceUrl": "https://pokemongo.com/post/halloween-2021?hl=zh_hant",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "官方確認南瓜精有小、普通、大、特大四種尺寸，且由南瓜精進化的南瓜怪人會保留對應尺寸；因此只允許同尺寸 evolution edge。"
+    },
+    {
+      "id": "SEREBII-GO-HISUIAN-AVALUGG-20260905",
+      "sourceName": "Serebii.net",
+      "sourceType": "SECONDARY",
+      "sourceTitleOriginal": "Avalugg - #0713 - Pokémon GO",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://www.serebii.net/pokemongo/pokemon/713.shtml",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "Pokémon GO 分列一般與洗翠冰岩怪；一般冰岩怪可由冰寶進化，洗翠冰岩怪的取得方式獨立，因此普通冰寶不得自動連到洗翠冰岩怪。"
+    },
+    {
+      "id": "OFFICIAL-ZYGARDE-ROUTES-CELLS-2023",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "Discover the world in an all-new way with Routes!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/routes",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "官方說明 Zygarde Cells 可收集於 Routes 並用來改變基格爾德形態；10%、50%、Complete 以 exact form 建模，Cell form change 永遠不是 evolution。"
+    },
+    {
+      "id": "OFFICIAL-HOOPA-FORM-CHANGE-20211126",
+      "sourceName": "Pokémon GO",
+      "sourceType": "OFFICIAL",
+      "sourceTitleOriginal": "The Season comes to an end with the Mischief Unbound event!",
+      "sourceLanguage": "en",
+      "sourceUrl": "https://pokemongo.com/news/mischief-unbound-2021",
+      "accessedAt": "2026-09-05",
+      "sourceSummaryZhTw": "官方確認懲戒胡帕與解放胡帕可雙向變換：懲戒→解放需 50 糖果與 10,000 星塵，解放→懲戒需 10 糖果與 2,000 星塵；兩型態不建成進化。"
+    }
+  ],
+  "expected": {
+    "dexCount": 12,
+    "formCount": 22,
+    "materializedEvolutionCount": 6,
+    "pumpkabooSizeCount": 4,
+    "gourgeistSizeCount": 4,
+    "zygardeFormCount": 3,
+    "hoopaFormCount": 2,
+    "deferredEvolutionTargetCount": 0
+  },
+  "boundary": "IDENTITY ONLY: no PvP/release/PvE/Shadow/Mega/Max claim. Pumpkaboo/Gourgeist sizes evolve only within matching size; Hisuian Avalugg is isolated from ordinary Bergmite evolution; Zygarde Cells and Hoopa Form Change are never evolution edges; Mega Diancie belongs to BattleVariant rather than PokemonForm identity."
+}
